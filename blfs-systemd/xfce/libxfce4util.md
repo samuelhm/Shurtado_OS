@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 35. Xfce Desktop
 
--   [Prev](xfce-core.md "Xfce Desktop"){accesskey="p"}
+-   [Prev](xfce-core.md "Xfce Desktop")
 
     Xfce Desktop
 
--   [Next](xfconf.md "Xfconf-4.20.0"){accesskey="n"}
+-   [Next](xfconf.md "Xfconf-4.20.0")
 
     Xfconf-4.20.0
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libxfce4util}libxfce4util-4.20.1 {#libxfce4util-4.20.1 .sect1}
+# libxfce4util-4.20.1 {#libxfce4util-4.20.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libxfce4util {#introduction-to-libxfce4util .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libxfce4util {#introduction-to-libxfce4util}
 
-The [libxfce4util]{.application} package is a basic utility library for the [Xfce]{.application} desktop environment.
+The <span class="application">libxfce4util</span> package is a basic utility library for the <span class="application">Xfce</span> desktop environment.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/xfce/libxfce4util/4.20/libxfce4util-4.20.1.tar.bz2](https://archive.xfce.org/src/xfce/libxfce4util/4.20/libxfce4util-4.20.1.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/xfce/libxfce4util/4.20/libxfce4util-4.20.1.tar.bz2">https://archive.xfce.org/src/xfce/libxfce4util/4.20/libxfce4util-4.20.1.tar.bz2</a>
 
 -   Download MD5 sum: 8e30b7735333f74d80c379e15d9da145
 
@@ -44,82 +44,82 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.8 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libxfce4util Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Recommended
 
-[Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libxfce4util {#installation-of-libxfce4util .sect2}
+<div class="installation" lang="en">
+## Installation of libxfce4util {#installation-of-libxfce4util}
 
-Install [libxfce4util]{.application} by running the following commands:
+Install <span class="application">libxfce4util</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [xfce4-kiosk-query]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">xfce4-kiosk-query</span>
+</div>
 
-::: seg
-**Installed Library:** [libxfce4util.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libxfce4util.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/xfce4 and /usr/share/gtk-doc/html/libxfce4util]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/xfce4 and /usr/share/gtk-doc/html/libxfce4util</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#xfce4-kiosk-query}[[**xfce4-kiosk-query**]{.command}]{.term}   Queries the given capabilities of \<module\> for the current user and reports whether the user has the capabilities or not. This tool is mainly meant for system administrators to test their Kiosk setup
-  []{#libxfce4util-lib}[`libxfce4util.so`{.filename}]{.term}         contains basic utility functions for the [Xfce]{.application} desktop environment
+  <a id="xfce4-kiosk-query"></a><span class="command"><span class="term"><strong>xfce4-kiosk-query</strong></span></span>   Queries the given capabilities of \<module\> for the current user and reports whether the user has the capabilities or not. This tool is mainly meant for system administrators to test their Kiosk setup
+  <a id="libxfce4util-lib"></a><span class="term"><code class="filename">libxfce4util.so</code></span>         contains basic utility functions for the <span class="application">Xfce</span> desktop environment
   ------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xfce-core.md "Xfce Desktop"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xfce-core.md "Xfce Desktop")
 
     Xfce Desktop
 
--   [Next](xfconf.md "Xfconf-4.20.0"){accesskey="n"}
+-   [Next](xfconf.md "Xfconf-4.20.0")
 
     Xfconf-4.20.0
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

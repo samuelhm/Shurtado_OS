@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](liblxqt.md "liblxqt-2.4.0"){accesskey="p"}
+-   [Prev](liblxqt.md "liblxqt-2.4.0")
 
     liblxqt-2.4.0
 
--   [Next](qtxdg-tools.md "qtxdg-tools-4.4.0"){accesskey="n"}
+-   [Next](qtxdg-tools.md "qtxdg-tools-4.4.0")
 
     qtxdg-tools-4.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libsysstat}libsysstat-1.1.0 {#libsysstat-1.1.0 .sect1}
+# libsysstat-1.1.0 {#libsysstat-1.1.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libsysstat {#introduction-to-libsysstat .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libsysstat {#introduction-to-libsysstat}
 
-The [libsysstat]{.application} package contains a library used to query system information and statistics.
+The <span class="application">libsysstat</span> package contains a library used to query system information and statistics.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/libsysstat/releases/download/1.1.0/libsysstat-1.1.0.tar.xz](https://github.com/lxqt/libsysstat/releases/download/1.1.0/libsysstat-1.1.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/libsysstat/releases/download/1.1.0/libsysstat-1.1.0.tar.xz">https://github.com/lxqt/libsysstat/releases/download/1.1.0/libsysstat-1.1.0.tar.xz</a>
 
 -   Download MD5 sum: b21e0facd325c1d8e177121e2ac71e78
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.9 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libsysstat Dependencies
 
 #### Required
 
-[lxqt-build-tools-2.4.0](lxqt-build-tools.md "lxqt-build-tools-2.4.0"){.xref}
-:::::
+<a class="xref" href="lxqt-build-tools.md" title="lxqt-build-tools-2.4.0">lxqt-build-tools-2.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libsysstat {#installation-of-libsysstat .sect2}
+<div class="installation" lang="en">
+## Installation of libsysstat {#installation-of-libsysstat}
 
-Install [libsysstat]{.application} by running the following commands:
+Install <span class="application">libsysstat</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libsysstat-qt6.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libsysstat-qt6.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/sysstat-qt6 and /usr/share/cmake/sysstat-qt6]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/sysstat-qt6 and /usr/share/cmake/sysstat-qt6</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ ---------------------------------------------------------------
-  []{#libsysstat-qt6}[`libsysstat-qt6.so`{.filename}]{.term}   contains functions to query system information and statistics
+  <a id="libsysstat-qt6"></a><span class="term"><code class="filename">libsysstat-qt6.so</code></span>   contains functions to query system information and statistics
   ------------------------------------------------------------ ---------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](liblxqt.md "liblxqt-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](liblxqt.md "liblxqt-2.4.0")
 
     liblxqt-2.4.0
 
--   [Next](qtxdg-tools.md "qtxdg-tools-4.4.0"){accesskey="n"}
+-   [Next](qtxdg-tools.md "qtxdg-tools-4.4.0")
 
     qtxdg-tools-4.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

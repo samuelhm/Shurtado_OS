@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](libfm-qt.md "libfm-qt-2.4.0"){accesskey="p"}
+-   [Prev](libfm-qt.md "libfm-qt-2.4.0")
 
     libfm-qt-2.4.0
 
--   [Next](lxqt-qtplugin.md "lxqt-qtplugin-2.4.0"){accesskey="n"}
+-   [Next](lxqt-qtplugin.md "lxqt-qtplugin-2.4.0")
 
     lxqt-qtplugin-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-globalkeys}lxqt-globalkeys-2.4.0 {#lxqt-globalkeys-2.4.0 .sect1}
+# lxqt-globalkeys-2.4.0 {#lxqt-globalkeys-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-globalkeys {#introduction-to-lxqt-globalkeys .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-globalkeys {#introduction-to-lxqt-globalkeys}
 
-The [lxqt-globalkeys]{.application} package contains a daemon used to register global keyboard shortcuts as well as an editor for keyboard shortcuts.
+The <span class="application">lxqt-globalkeys</span> package contains a daemon used to register global keyboard shortcuts as well as an editor for keyboard shortcuts.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-globalkeys/releases/download/2.4.0/lxqt-globalkeys-2.4.0.tar.xz](https://github.com/lxqt/lxqt-globalkeys/releases/download/2.4.0/lxqt-globalkeys-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-globalkeys/releases/download/2.4.0/lxqt-globalkeys-2.4.0.tar.xz">https://github.com/lxqt/lxqt-globalkeys/releases/download/2.4.0/lxqt-globalkeys-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: bc6d90bfaed073da2fa9c8aa976e7f79
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### lxqt-globalkeys Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref}
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-globalkeys {#installation-of-lxqt-globalkeys .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-globalkeys {#installation-of-lxqt-globalkeys}
 
-Install [lxqt-globalkeys]{.application} by running the following commands:
+Install <span class="application">lxqt-globalkeys</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,55 +70,55 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [lxqt-config-globalkeyshortcuts and lxqt-globalkeysd]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lxqt-config-globalkeyshortcuts and lxqt-globalkeysd</span>
+</div>
 
-::: seg
-**Installed Libraries:** [liblxqt-globalkeys.so and liblxqt-globalkeys-ui.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">liblxqt-globalkeys.so and liblxqt-globalkeys-ui.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/lxqt-globalkeys{,-ui} and /usr/share/cmake/lxqt-globalkeys{,-ui}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/lxqt-globalkeys{,-ui} and /usr/share/cmake/lxqt-globalkeys{,-ui}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------------------------------- --------------------------------------------------------------
-  []{#lxqt-config-globalkeyshortcuts}[[**lxqt-config-globalkeyshortcuts**]{.command}]{.term}   is an editor for keyboard shortcuts
-  []{#lxqt-globalkeysd}[[**lxqt-globalkeysd**]{.command}]{.term}                               is the global keyboard shortcut daemon
-  []{#lxqt-globalkeys-lib}[`lxqt-globalkeys.so`{.filename}]{.term}                             contains functions to register keyboard shortcuts
-  []{#liblxqt-globalkeys-ui-lib}[`liblxqt-globalkeys-ui.so`{.filename}]{.term}                 contains functions that allow a UI to set keyboard shortcuts
+  <a id="lxqt-config-globalkeyshortcuts"></a><span class="command"><span class="term"><strong>lxqt-config-globalkeyshortcuts</strong></span></span>   is an editor for keyboard shortcuts
+  <a id="lxqt-globalkeysd"></a><span class="command"><span class="term"><strong>lxqt-globalkeysd</strong></span></span>                               is the global keyboard shortcut daemon
+  <a id="lxqt-globalkeys-lib"></a><span class="term"><code class="filename">lxqt-globalkeys.so</code></span>                             contains functions to register keyboard shortcuts
+  <a id="liblxqt-globalkeys-ui-lib"></a><span class="term"><code class="filename">liblxqt-globalkeys-ui.so</code></span>                 contains functions that allow a UI to set keyboard shortcuts
   -------------------------------------------------------------------------------------------- --------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libfm-qt.md "libfm-qt-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libfm-qt.md "libfm-qt-2.4.0")
 
     libfm-qt-2.4.0
 
--   [Next](lxqt-qtplugin.md "lxqt-qtplugin-2.4.0"){accesskey="n"}
+-   [Next](lxqt-qtplugin.md "lxqt-qtplugin-2.4.0")
 
     lxqt-qtplugin-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

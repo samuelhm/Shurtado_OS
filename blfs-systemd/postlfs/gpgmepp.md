@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](gpgme.md "gpgme-2.1.0"){accesskey="p"}
+-   [Prev](gpgme.md "gpgme-2.1.0")
 
     gpgme-2.1.0
 
--   [Next](iptables.md "iptables-1.8.13"){accesskey="n"}
+-   [Next](iptables.md "iptables-1.8.13")
 
     iptables-1.8.13
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gpgmepp}gpgmepp-2.1.0 {#gpgmepp-2.1.0 .sect1}
+# gpgmepp-2.1.0 {#gpgmepp-2.1.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to gpgmepp {#introduction-to-gpgmepp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to gpgmepp {#introduction-to-gpgmepp}
 
-The [gpgmepp]{.application} package provides a C++ wrapper to [gpgme-2.1.0](gpgme.md "gpgme-2.1.0"){.xref}.
+The <span class="application">gpgmepp</span> package provides a C++ wrapper to <a class="xref" href="gpgme.md" title="gpgme-2.1.0">gpgme-2.1.0</a>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-2.1.0.tar.xz](https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-2.1.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-2.1.0.tar.xz">https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-2.1.0.tar.xz</a>
 
 -   Download MD5 sum: f3252524ba34c6a42455f30e226de1f5
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### gpgmepp Dependencies
 
 #### Required
 
-[gpgme-2.1.0](gpgme.md "gpgme-2.1.0"){.xref}
-:::::
+<a class="xref" href="gpgme.md" title="gpgme-2.1.0">gpgme-2.1.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of gpgmepp {#installation-of-gpgmepp .sect2}
+<div class="installation" lang="en">
+## Installation of gpgmepp {#installation-of-gpgmepp}
 
-Install [gpgmepp]{.application} by running the following commands:
+Install <span class="application">gpgmepp</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,52 +68,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgpgmepp.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgpgmepp.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/lib/cmake/Gpgmepp and /usr/include/gpgme++]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/lib/cmake/Gpgmepp and /usr/include/gpgme++</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ------------------------------------------------------
-  []{#libgpgmepp}[`libgpgmepp.so`{.filename}]{.term}   contains the C++ [gpgme]{.application} API functions
+  <a id="libgpgmepp"></a><span class="term"><code class="filename">libgpgmepp.so</code></span>   contains the C++ <span class="application">gpgme</span> API functions
   ---------------------------------------------------- ------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gpgme.md "gpgme-2.1.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gpgme.md "gpgme-2.1.0")
 
     gpgme-2.1.0
 
--   [Next](iptables.md "iptables-1.8.13"){accesskey="n"}
+-   [Next](iptables.md "iptables-1.8.13")
 
     iptables-1.8.13
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

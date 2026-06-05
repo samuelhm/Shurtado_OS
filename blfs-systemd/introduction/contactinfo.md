@@ -1,37 +1,37 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 1. Welcome to BLFS
 
--   [Prev](credits.md "Credits"){accesskey="p"}
+-   [Prev](credits.md "Credits")
 
     Credits
 
--   [Next](important.md "Important Information"){accesskey="n"}
+-   [Next](important.md "Important Information")
 
     Important Information
 
--   [Up](welcome.md "Chapter 1. Welcome to BLFS"){accesskey="u"}
+-   [Up](welcome.md "Chapter 1. Welcome to BLFS")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#contactinfo}Contact Information {#contact-information .sect1}
+# Contact Information {#contact-information}
 
-::: {.sect1 lang="en"}
-Please direct your emails to one of the BLFS mailing lists. See [Mailing lists](maillists.md "Mailing Lists"){.xref} for more information on the available mailing lists.
-:::
+<div class="sect1" lang="en">
+Please direct your emails to one of the BLFS mailing lists. See <a class="xref" href="maillists.md" title="Mailing Lists">Mailing lists</a> for more information on the available mailing lists.
+</div>
 
-::: navfooter
--   [Prev](credits.md "Credits"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](credits.md "Credits")
 
     Credits
 
--   [Next](important.md "Important Information"){accesskey="n"}
+-   [Next](important.md "Important Information")
 
     Important Information
 
--   [Up](welcome.md "Chapter 1. Welcome to BLFS"){accesskey="u"}
+-   [Up](welcome.md "Chapter 1. Welcome to BLFS")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

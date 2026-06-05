@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-session.md "gnome-session-50.1"){accesskey="p"}
+-   [Prev](gnome-session.md "gnome-session-50.1")
 
     gnome-session-50.1
 
--   [Next](gnome-user-docs.md "gnome-user-docs-50.2"){accesskey="n"}
+-   [Next](gnome-user-docs.md "gnome-user-docs-50.2")
 
     gnome-user-docs-50.2
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-tweaks}gnome-tweaks-49.0 {#gnome-tweaks-49.0 .sect1}
+# gnome-tweaks-49.0 {#gnome-tweaks-49.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Tweaks {#introduction-to-gnome-tweaks .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Tweaks {#introduction-to-gnome-tweaks}
 
-[GNOME Tweaks]{.application} is a simple program used to tweak advanced [GNOME]{.application} settings.
+<span class="application">GNOME Tweaks</span> is a simple program used to tweak advanced <span class="application">GNOME</span> settings.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-tweaks/49/gnome-tweaks-49.0.tar.xz](https://download.gnome.org/sources/gnome-tweaks/49/gnome-tweaks-49.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-tweaks/49/gnome-tweaks-49.0.tar.xz">https://download.gnome.org/sources/gnome-tweaks/49/gnome-tweaks-49.0.tar.xz</a>
 
 -   Download MD5 sum: 6c8dbfcefcc5dbab6605cc6f0df1ba62
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.5 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### GNOME Tweaks Dependencies
 
 #### Required
 
-[GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, [gsettings-desktop-schemas-50.1](gsettings-desktop-schemas.md "gsettings-desktop-schemas-50.1"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, [libgudev-238](../general/libgudev.md "libgudev-238"){.xref}, [PyGObject-3.56.3](../general/python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref}, and [sound-theme-freedesktop-0.8](../multimedia/sound-theme-freedesktop.md "sound-theme-freedesktop-0.8"){.xref}
-:::::
+<a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, <a class="xref" href="gsettings-desktop-schemas.md" title="gsettings-desktop-schemas-50.1">gsettings-desktop-schemas-50.1</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, <a class="xref" href="../general/libgudev.md" title="libgudev-238">libgudev-238</a>, <a class="xref" href="../general/python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a>, and <a class="xref" href="../multimedia/sound-theme-freedesktop.md" title="sound-theme-freedesktop-0.8">sound-theme-freedesktop-0.8</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Tweaks {#installation-of-gnome-tweaks .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Tweaks {#installation-of-gnome-tweaks}
 
-Install [GNOME Tweaks]{.application} by running the following commands:
+Install <span class="application">GNOME Tweaks</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,58 +68,58 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-tweaks]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-tweaks</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/python3.14/site-packages/gtweak and /usr/share/gnome-tweaks]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/python3.14/site-packages/gtweak and /usr/share/gnome-tweaks</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------- ----------------------------------------------------------
-  []{#gnome-tweaks-prog}[[**gnome-tweaks**]{.command}]{.term}   is used to tweak advanced [GNOME]{.application} settings
+  <a id="gnome-tweaks-prog"></a><span class="command"><span class="term"><strong>gnome-tweaks</strong></span></span>   is used to tweak advanced <span class="application">GNOME</span> settings
   ------------------------------------------------------------- ----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-session.md "gnome-session-50.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-session.md "gnome-session-50.1")
 
     gnome-session-50.1
 
--   [Next](gnome-user-docs.md "gnome-user-docs-50.2"){accesskey="n"}
+-   [Next](gnome-user-docs.md "gnome-user-docs-50.2")
 
     gnome-user-docs-50.2
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

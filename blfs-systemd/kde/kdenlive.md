@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](kddockwidgets.md "KDDockWidgets-2.4.0"){accesskey="p"}
+-   [Prev](kddockwidgets.md "KDDockWidgets-2.4.0")
 
     KDDockWidgets-2.4.0
 
--   [Next](kmix.md "KMix-26.04.1"){accesskey="n"}
+-   [Next](kmix.md "KMix-26.04.1")
 
     KMix-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kdenlive}kdenlive-26.04.1 {#kdenlive-26.04.1 .sect1}
+# kdenlive-26.04.1 {#kdenlive-26.04.1}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Kdenlive {#introduction-to-kdenlive .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Kdenlive {#introduction-to-kdenlive}
 
-The [Kdenlive]{.application} package is a KDE Frameworks-based video editor that can handle numerous video and audio codecs.
+The <span class="application">Kdenlive</span> package is a KDE Frameworks-based video editor that can handle numerous video and audio codecs.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/kdenlive-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/kdenlive-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/kdenlive-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/kdenlive-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: deea1c1ea799b03f8afc43983982403d
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 387 MB
 
 -   Estimated build time: 3.5 SBU (using parallelism=4)
-:::
+</div>
 
 ### Kdenlive Dependencies
 
 #### Required
 
-[git-2.54.0](../general/git.md "Git-2.54.0"){.xref}, [KDDockWidgets-2.4.0](kddockwidgets.md "KDDockWidgets-2.4.0"){.xref}, [KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}, [MLT-7.38.0](../multimedia/mlt.md "MLT-7.38.0"){.xref}, [OpenTimelineIO-0.18.1](../general/opentimelineio.md "OpenTimelineIO-0.18.1"){.xref}, and [v4l-utils-1.32.0](../multimedia/v4l-utils.md "v4l-utils-1.32.0"){.xref} (runtime)
+<a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a>, <a class="xref" href="kddockwidgets.md" title="KDDockWidgets-2.4.0">KDDockWidgets-2.4.0</a>, <a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>, <a class="xref" href="../multimedia/mlt.md" title="MLT-7.38.0">MLT-7.38.0</a>, <a class="xref" href="../general/opentimelineio.md" title="OpenTimelineIO-0.18.1">OpenTimelineIO-0.18.1</a>, and <a class="xref" href="../multimedia/v4l-utils.md" title="v4l-utils-1.32.0">v4l-utils-1.32.0</a> (runtime)
 
 #### Recommended
 
-[breeze-icons-6.26.0](../x/breeze-icons.md "breeze-icons-6.26.0"){.xref}
+<a class="xref" href="../x/breeze-icons.md" title="breeze-icons-6.26.0">breeze-icons-6.26.0</a>
 
 #### Optional
 
-[LADSPA-SDK](https://glfs-book.github.io/slfs/general/ladspa-sdk.md){.ulink}, and [Noise-Suppression](https://glfs-book.github.io/slfs/general/noise-suppression.md){.ulink}
+<a class="ulink" href="https://glfs-book.github.io/slfs/general/ladspa-sdk.md">LADSPA-SDK</a>, and <a class="ulink" href="https://glfs-book.github.io/slfs/general/noise-suppression.md">Noise-Suppression</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for building this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before building this package.
-:::
-::::::
+An Internet connection is needed for building this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before building this package.
+</div>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Kdenlive {#installation-of-kdenlive .sect2}
+<div class="installation" lang="en">
+## Installation of Kdenlive {#installation-of-kdenlive}
 
-Install [Kdenlive]{.application} by running the following commands:
+Install <span class="application">Kdenlive</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -85,63 +85,63 @@ cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
 make
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The build process will download a Git repository of [OpenTimelineIO]{.application}, totaling around 100 MB. Configuration will seem to hang right after [**cmake**]{.command} begins running. This is normal, it is fetching that Git repository. If it hangs for a while, it's most likely due to a poor download speed during the download process. The *`-D FETCH_OTIO`* CMake option should be omitted if you have installed the [OpenTimelineIO]{.application} package.
-:::
+The build process will download a Git repository of <span class="application">OpenTimelineIO</span>, totaling around 100 MB. Configuration will seem to hang right after <span class="command"><strong>cmake</strong></span> begins running. This is normal, it is fetching that Git repository. If it hangs for a while, it's most likely due to a poor download speed during the download process. The *`-D FETCH_OTIO`* CMake option should be omitted if you have installed the <span class="application">OpenTimelineIO</span> package.
+</div>
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-::::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [kdenlive and kdenlive_render]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">kdenlive and kdenlive_render</span>
+</div>
 
-::: seg
-**Installed Libraries:** [mltpreview.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">mltpreview.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/share/doc/HTML/\*/kdenlive and \$KF6_PREFIX/share/kdenlive]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/share/doc/HTML/\*/kdenlive and \$KF6_PREFIX/share/kdenlive</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- ------------------------------------------------------------------------------------------
-  []{#kdenlive-prog}[[**kdenlive**]{.command}]{.term}            is an open source non-linear video editor which supports numerous audio and video codecs
-  []{#kdenlive_render}[[**kdenlive_render**]{.command}]{.term}   is a render program for [**kdenlive**]{.command}
+  <a id="kdenlive-prog"></a><span class="command"><span class="term"><strong>kdenlive</strong></span></span>            is an open source non-linear video editor which supports numerous audio and video codecs
+  <a id="kdenlive_render"></a><span class="command"><span class="term"><strong>kdenlive_render</strong></span></span>   is a render program for <span class="command"><strong>kdenlive</strong></span>
   -------------------------------------------------------------- ------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kddockwidgets.md "KDDockWidgets-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kddockwidgets.md "KDDockWidgets-2.4.0")
 
     KDDockWidgets-2.4.0
 
--   [Next](kmix.md "KMix-26.04.1"){accesskey="n"}
+-   [Next](kmix.md "KMix-26.04.1")
 
     KMix-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libssh2.md "libssh2-1.11.1"){accesskey="p"}
+-   [Prev](libssh2.md "libssh2-1.11.1")
 
     libssh2-1.11.1
 
--   [Next](libtasn1.md "libtasn1-4.21.0"){accesskey="n"}
+-   [Next](libtasn1.md "libtasn1-4.21.0")
 
     libtasn1-4.21.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libstatgrab}libstatgrab-0.92.1 {#libstatgrab-0.92.1 .sect1}
+# libstatgrab-0.92.1 {#libstatgrab-0.92.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libstatgrab {#introduction-to-libstatgrab .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libstatgrab {#introduction-to-libstatgrab}
 
 This is a library that provides cross platform access to statistics about the system on which it's run. It's written in C and presents a selection of useful interfaces which can be used to access key system statistics. The current list of statistics includes CPU usage, memory utilisation, disk usage, process counts, network traffic, disk I/O, and more.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/libstatgrab-0.92.1.tar.gz](https://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/libstatgrab-0.92.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/libstatgrab-0.92.1.tar.gz">https://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/libstatgrab-0.92.1.tar.gz</a>
 
 -   Download MD5 sum: af685494e985229e0ac46365bc0cd50e
 
@@ -44,85 +44,85 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.6 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (add 1.5 SBU for tests)
-:::
+</div>
 
 ### libstatgrab Dependencies
 
 #### Optional
 
-[log4cplus-2.1.2](log4cplus.md "log4cplus-2.1.2"){.xref}
-:::::
+<a class="xref" href="log4cplus.md" title="log4cplus-2.1.2">log4cplus-2.1.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libstatgrab {#installation-of-libstatgrab .sect2}
+<div class="installation" lang="en">
+## Installation of libstatgrab {#installation-of-libstatgrab}
 
-Install [libstatgrab]{.application} by running the following commands:
+Install <span class="application">libstatgrab</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr    \
             --disable-static \
             --docdir=/usr/share/doc/libstatgrab-0.92.1 &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [saidar, statgrab, statgrab-make-mrtg-config, and statgrab-make-mrtg-index]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">saidar, statgrab, statgrab-make-mrtg-config, and statgrab-make-mrtg-index</span>
+</div>
 
-::: seg
-**Installed Library:** [libstatgrab.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libstatgrab.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/libstatgrab-0.92.1]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/libstatgrab-0.92.1</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------------------- ----------------------------------------------------------------------
-  []{#saidar}[[**saidar**]{.command}]{.term}                                         is a curses-based tool for viewing system statistics
-  []{#statgrab}[[**statgrab**]{.command}]{.term}                                     is a sysctl-style interface to system statistics
-  []{#statgrab-make-mrtg-config}[[**statgrab-make-mrtg-config**]{.command}]{.term}   generates MRTG configuration
-  []{#statgrab-make-mrtg-index}[[**statgrab-make-mrtg-index**]{.command}]{.term}     generates an XHTML index page from MRTG configuration files or stdin
-  []{#libstatgrab-lib}[`libstatgrab.so`{.filename}]{.term}                           contains the [libstatgrab]{.application} API functions
+  <a id="saidar"></a><span class="command"><span class="term"><strong>saidar</strong></span></span>                                         is a curses-based tool for viewing system statistics
+  <a id="statgrab"></a><span class="command"><span class="term"><strong>statgrab</strong></span></span>                                     is a sysctl-style interface to system statistics
+  <a id="statgrab-make-mrtg-config"></a><span class="command"><span class="term"><strong>statgrab-make-mrtg-config</strong></span></span>   generates MRTG configuration
+  <a id="statgrab-make-mrtg-index"></a><span class="command"><span class="term"><strong>statgrab-make-mrtg-index</strong></span></span>     generates an XHTML index page from MRTG configuration files or stdin
+  <a id="libstatgrab-lib"></a><span class="term"><code class="filename">libstatgrab.so</code></span>                           contains the <span class="application">libstatgrab</span> API functions
   ---------------------------------------------------------------------------------- ----------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libssh2.md "libssh2-1.11.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libssh2.md "libssh2-1.11.1")
 
     libssh2-1.11.1
 
--   [Next](libtasn1.md "libtasn1-4.21.0"){accesskey="n"}
+-   [Next](libtasn1.md "libtasn1-4.21.0")
 
     libtasn1-4.21.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

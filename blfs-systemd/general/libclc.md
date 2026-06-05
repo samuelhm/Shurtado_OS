@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libbytesize.md "libbytesize-2.12"){accesskey="p"}
+-   [Prev](libbytesize.md "libbytesize-2.12")
 
     libbytesize-2.12
 
--   [Next](libcloudproviders.md "libcloudproviders-0.3.6"){accesskey="n"}
+-   [Next](libcloudproviders.md "libcloudproviders-0.3.6")
 
     libcloudproviders-0.3.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libclc}libclc-22.1.0 {#libclc-22.1.0 .sect1}
+# libclc-22.1.0 {#libclc-22.1.0}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libclc {#introduction-to-libclc .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libclc {#introduction-to-libclc}
 
-The [libclc]{.application} package contains an implementation of the library requirements of the OpenCL C programming language, as specified by the OpenCL 1.1 Specification.
+The <span class="application">libclc</span> package contains an implementation of the library requirements of the OpenCL C programming language, as specified by the OpenCL 1.1 Specification.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/llvm-project-22.1.0.src.tar.xz](https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/llvm-project-22.1.0.src.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/llvm-project-22.1.0.src.tar.xz">https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.0/llvm-project-22.1.0.src.tar.xz</a>
 
 -   Download MD5 sum: eebd30f81349347d789f04b5ddd41112
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 431 MB
 
 -   Estimated build time: 0.6 SBU (with parallelism=8)
-:::
+</div>
 
 ### libclc Dependencies
 
 #### Required
 
-[LLVM-22.1.0](llvm.md "LLVM-22.1.0"){.xref}
+<a class="xref" href="llvm.md" title="LLVM-22.1.0">LLVM-22.1.0</a>
 
 #### Recommended
 
-[SPIRV-LLVM-Translator-22.1.2](spirv-llvm-translator.md "SPIRV-LLVM-Translator-22.1.2"){.xref} (required for the iris gallium driver in [Mesa-26.0.7](../x/mesa.md "Mesa-26.0.7"){.xref})
-:::::
+<a class="xref" href="spirv-llvm-translator.md" title="SPIRV-LLVM-Translator-22.1.2">SPIRV-LLVM-Translator-22.1.2</a> (required for the iris gallium driver in <a class="xref" href="../x/mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a>)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libclc {#installation-of-libclc .sect2}
+<div class="installation" lang="en">
+## Installation of libclc {#installation-of-libclc}
 
-Install [libclc]{.application} by running the following commands:
+Install <span class="application">libclc</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir libclc/build &&
 cd    libclc/build &&
 
@@ -72,46 +72,46 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/clc and /usr/share/clc]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/clc and /usr/share/clc</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libbytesize.md "libbytesize-2.12"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libbytesize.md "libbytesize-2.12")
 
     libbytesize-2.12
 
--   [Next](libcloudproviders.md "libcloudproviders-0.3.6"){accesskey="n"}
+-   [Next](libcloudproviders.md "libcloudproviders-0.3.6")
 
     libcloudproviders-0.3.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](wayland.md "Wayland-1.25.0"){accesskey="p"}
+-   [Prev](wayland.md "Wayland-1.25.0")
 
     Wayland-1.25.0
 
--   [Next](wv.md "wv-1.2.9"){accesskey="n"}
+-   [Next](wv.md "wv-1.2.9")
 
     wv-1.2.9
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#wayland-protocols}Wayland-Protocols-1.48 {#wayland-protocols-1.48 .sect1}
+# Wayland-Protocols-1.48 {#wayland-protocols-1.48}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Wayland-Protocols {#introduction-to-wayland-protocols .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Wayland-Protocols {#introduction-to-wayland-protocols}
 
-The [Wayland-Protocols]{.application} package contains additional Wayland protocols that add functionality outside of protocols already in the Wayland core.
+The <span class="application">Wayland-Protocols</span> package contains additional Wayland protocols that add functionality outside of protocols already in the Wayland core.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.48/downloads/wayland-protocols-1.48.tar.xz](https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.48/downloads/wayland-protocols-1.48.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.48/downloads/wayland-protocols-1.48.tar.xz">https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.48/downloads/wayland-protocols-1.48.tar.xz</a>
 
 -   Download MD5 sum: 498bf2f7fa51bc1edfed89ca89ae6345
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 14 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### Wayland-protocols Dependencies
 
 #### Required
 
-[Wayland-1.25.0](wayland.md "Wayland-1.25.0"){.xref}
-:::::
+<a class="xref" href="wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Wayland-protocols {#installation-of-wayland-protocols .sect2}
+<div class="installation" lang="en">
+## Installation of Wayland-protocols {#installation-of-wayland-protocols}
 
-Install [Wayland-protocols]{.application} by running the following commands:
+Install <span class="application">Wayland-protocols</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -66,46 +66,46 @@ meson setup --prefix=/usr --buildtype=release &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/wayland-protocols]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/wayland-protocols</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](wayland.md "Wayland-1.25.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](wayland.md "Wayland-1.25.0")
 
     Wayland-1.25.0
 
--   [Next](wv.md "wv-1.2.9"){accesskey="n"}
+-   [Next](wv.md "wv-1.2.9")
 
     wv-1.2.9
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

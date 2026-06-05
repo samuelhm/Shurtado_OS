@@ -47,7 +47,7 @@ FAILED=""
 
 for s in "${SCRIPTS[@]}"; do
     CURRENT=$((CURRENT + 1))
-    SCRIPT_PATH="$SCRIPT_DIR/ch06/$s"
+    SCRIPT_PATH="$SCRIPT_DIR/$s"
 
     [ -f "$SCRIPT_PATH" ] || {
         echo -e "${RED}[ERROR]${NC} Script not found: $SCRIPT_PATH"

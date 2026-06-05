@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](liburcu.md "liburcu-0.15.6"){accesskey="p"}
+-   [Prev](liburcu.md "liburcu-0.15.6")
 
     liburcu-0.15.6
 
--   [Next](libuv.md "libuv-1.52.1"){accesskey="n"}
+-   [Next](libuv.md "libuv-1.52.1")
 
     libuv-1.52.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libusb}libusb-1.0.30 {#libusb-1.0.30 .sect1}
+# libusb-1.0.30 {#libusb-1.0.30}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libusb {#introduction-to-libusb .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libusb {#introduction-to-libusb}
 
-The [libusb]{.application} package contains a library used by some applications for USB device access.
+The <span class="application">libusb</span> package contains a library used by some applications for USB device access.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/libusb/libusb/releases/download/v1.0.30/libusb-1.0.30.tar.bz2](https://github.com/libusb/libusb/releases/download/v1.0.30/libusb-1.0.30.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/libusb/libusb/releases/download/v1.0.30/libusb-1.0.30.tar.bz2">https://github.com/libusb/libusb/releases/download/v1.0.30/libusb-1.0.30.tar.bz2</a>
 
 -   Download MD5 sum: b0b0bacc2c6919515db8e863f0517db8
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.8 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libusb Dependencies
 
 #### Optional
 
-[Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref} (for generating documentation) and [umockdev-0.19.7](umockdev.md "Umockdev-0.19.7"){.xref} (for the test suite)
-:::::
+<a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (for generating documentation) and <a class="xref" href="umockdev.md" title="Umockdev-0.19.7">umockdev-0.19.7</a> (for the test suite)
+</div>
 
-::: {.kernel lang="en"}
-## Configuring Libusb {#configuring-libusb .sect2}
+<div class="kernel" lang="en">
+## Configuring Libusb {#configuring-libusb}
 
-[]{#libusb-kernel} To access raw USB devices (those not treated as a disk by the mass-storage driver), appropriate support must be available in the kernel. Check your kernel configuration:
+<a id="libusb-kernel"></a> To access raw USB devices (those not treated as a disk by the mass-storage driver), appropriate support must be available in the kernel. Check your kernel configuration:
 
-``` screen
+```console
 Device Drivers --->
   [*] USB support --->                                             [USB_SUPPORT]
     <*/M>   Support for Host-side USB                                      [USB]
@@ -71,84 +71,84 @@ Device Drivers --->
     < /*/M> OHCI HCD (USB 1.1) support                            [USB_OHCI_HCD]
 ```
 
-For more details on setting up USB devices, see [the section called “USB Device Issues”](../postlfs/devices.md#usb-device-issues "USB Device Issues"){.xref}.
-:::
+For more details on setting up USB devices, see <a class="xref" href="../postlfs/devices.md#usb-device-issues" title="USB Device Issues">the section called “USB Device Issues”</a>.
+</div>
 
-::: {.installation lang="en"}
-## Installation of libusb {#installation-of-libusb .sect2}
+<div class="installation" lang="en">
+## Installation of libusb {#installation-of-libusb}
 
-Install [libusb]{.application} by running the following commands:
+Install <span class="application">libusb</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-If [Doxygen]{.application} is installed and you wish to build the API documentation, issue the following commands:
+If <span class="application">Doxygen</span> is installed and you wish to build the API documentation, issue the following commands:
 
-``` userinput
+```bash
 pushd doc                &&
   doxygen -u doxygen.cfg &&
   make docs              &&
 popd
 ```
 
-If you wish to run the tests, ensure that you have the [umockdev-0.19.7](umockdev.md "Umockdev-0.19.7"){.xref} package installed and then add the `--enable-tests-build`{.option} switch to configure. After doing this, issue [**make check**]{.command} to run the tests.
+If you wish to run the tests, ensure that you have the <a class="xref" href="umockdev.md" title="Umockdev-0.19.7">umockdev-0.19.7</a> package installed and then add the <code class="option">--enable-tests-build</code> switch to configure. After doing this, issue <span class="command"><strong>make check</strong></span> to run the tests.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you built the API documentation, install it using the following commands as the `root`{.systemitem} user:
+If you built the API documentation, install it using the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -d -m755 /usr/share/doc/libusb-1.0.30/apidocs &&
 install -v -m644    doc/api-1.0/* \
                     /usr/share/doc/libusb-1.0.30/apidocs
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libusb-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libusb-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libusb-1.0 and /usr/share/doc/libusb-1.0.30]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libusb-1.0 and /usr/share/doc/libusb-1.0.30</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- --------------------------------------------------------
-  []{#libusb-lib}[`libusb-1.0.so`{.filename}]{.term}   contains API functions used for accessing USB hardware
+  <a id="libusb-lib"></a><span class="term"><code class="filename">libusb-1.0.so</code></span>   contains API functions used for accessing USB hardware
   ---------------------------------------------------- --------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](liburcu.md "liburcu-0.15.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](liburcu.md "liburcu-0.15.6")
 
     liburcu-0.15.6
 
--   [Next](libuv.md "libuv-1.52.1"){accesskey="n"}
+-   [Next](libuv.md "libuv-1.52.1")
 
     libuv-1.52.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

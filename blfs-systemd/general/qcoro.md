@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](qca.md "Qca-2.3.10"){accesskey="p"}
+-   [Prev](qca.md "Qca-2.3.10")
 
     Qca-2.3.10
 
--   [Next](simdutf.md "simdutf-9.0.0"){accesskey="n"}
+-   [Next](simdutf.md "simdutf-9.0.0")
 
     simdutf-9.0.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#qcoro}qcoro-0.13.0 {#qcoro-0.13.0 .sect1}
+# qcoro-0.13.0 {#qcoro-0.13.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to qcoro {#introduction-to-qcoro .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to qcoro {#introduction-to-qcoro}
 
 This package provides a set of tools to make use of C++20 coroutines with Qt.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/danvratil/qcoro/archive/v0.13.0/qcoro-0.13.0.tar.gz](https://github.com/danvratil/qcoro/archive/v0.13.0/qcoro-0.13.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/danvratil/qcoro/archive/v0.13.0/qcoro-0.13.0.tar.gz">https://github.com/danvratil/qcoro/archive/v0.13.0/qcoro-0.13.0.tar.gz</a>
 
 -   Download MD5 sum: 1cc2b522b90d8d0842523f751e75c99b
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 31 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (Using parallelism=4; add 0.6 SBU for tests)
-:::
+</div>
 
 ### qcoro Dependencies
 
 #### Required
 
-[Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
-:::::
+<a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of qcoro {#installation-of-qcoro .sect2}
+<div class="installation" lang="en">
+## Installation of qcoro {#installation-of-qcoro}
 
-Install [qcoro]{.application} by running the following commands:
+Install <span class="application">qcoro</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -73,54 +73,54 @@ make
 
 To test this package, remove the 'BUILD_TESTING=OFF' parameter above and run:
 
-``` userinput
+```bash
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D CMAKE_BUILD_TYPE=Release`*: This switch is used to apply a higher level of compiler optimizations.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libQCoro6Core.so, libQCoro6DBus.so, libQCoro6Network.so, libQCoro6Qml.so, libQCoro6Quick.so, and libQCoro6WebSockets.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libQCoro6Core.so, libQCoro6DBus.so, libQCoro6Network.so, libQCoro6Qml.so, libQCoro6Quick.so, and libQCoro6WebSockets.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [Nine directories in \$QT6DIR/lib/cmake/ and \$QT6DIR/include/qcoro6]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">Nine directories in \$QT6DIR/lib/cmake/ and \$QT6DIR/include/qcoro6</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qca.md "Qca-2.3.10"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qca.md "Qca-2.3.10")
 
     Qca-2.3.10
 
--   [Next](simdutf.md "simdutf-9.0.0"){accesskey="n"}
+-   [Next](simdutf.md "simdutf-9.0.0")
 
     simdutf-9.0.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

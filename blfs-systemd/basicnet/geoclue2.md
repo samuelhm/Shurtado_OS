@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](curl.md "cURL-8.20.0"){accesskey="p"}
+-   [Prev](curl.md "cURL-8.20.0")
 
     cURL-8.20.0
 
--   [Next](glib-networking.md "glib-networking-2.80.1"){accesskey="n"}
+-   [Next](glib-networking.md "glib-networking-2.80.1")
 
     glib-networking-2.80.1
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#geoclue2}GeoClue-2.8.1 {#geoclue-2.8.1 .sect1}
+# GeoClue-2.8.1 {#geoclue-2.8.1}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GeoClue {#introduction-to-geoclue .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GeoClue {#introduction-to-geoclue}
 
-[GeoClue]{.application} is a modular geoinformation service built on top of the [D-Bus]{.application} messaging system. The goal of the [GeoClue]{.application} project is to make creating location-aware applications as simple as possible.
+<span class="application">GeoClue</span> is a modular geoinformation service built on top of the <span class="application">D-Bus</span> messaging system. The goal of the <span class="application">GeoClue</span> project is to make creating location-aware applications as simple as possible.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/2.8.1/geoclue-2.8.1.tar.bz2](https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/2.8.1/geoclue-2.8.1.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/2.8.1/geoclue-2.8.1.tar.bz2">https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/2.8.1/geoclue-2.8.1.tar.bz2</a>
 
 -   Download MD5 sum: a195d5300540209afb728d057fb1dea7
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.9 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### GeoClue Dependencies
 
 #### Required
 
-[JSON-GLib-1.10.8](../general/json-glib.md "JSON-GLib-1.10.8"){.xref} and [libsoup-3.6.6](libsoup3.md "libsoup-3.6.6"){.xref}
+<a class="xref" href="../general/json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a> and <a class="xref" href="libsoup3.md" title="libsoup-3.6.6">libsoup-3.6.6</a>
 
 #### Recommended
 
-[libnotify-0.8.8](../x/libnotify.md "libnotify-0.8.8"){.xref}, [ModemManager-1.24.2](../general/ModemManager.md "ModemManager-1.24.2"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../x/libnotify.md" title="libnotify-0.8.8">libnotify-0.8.8</a>, <a class="xref" href="../general/ModemManager.md" title="ModemManager-1.24.2">ModemManager-1.24.2</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[Avahi-0.8](avahi.md "Avahi-0.8"){.xref} and [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="avahi.md" title="Avahi-0.8">Avahi-0.8</a> and <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GeoClue {#installation-of-geoclue .sect2}
+<div class="installation" lang="en">
+## Installation of GeoClue {#installation-of-geoclue}
 
-Install [GeoClue]{.application} by running the following commands:
+Install <span class="application">GeoClue</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -80,48 +80,48 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D nmea-source=false`*: This switch disables the NMEA source. Remove it if you have installed the [Avahi]{.application} package and your local network has a NMEA server.
+*`-D nmea-source=false`*: This switch disables the NMEA source. Remove it if you have installed the <span class="application">Avahi</span> package and your local network has a NMEA server.
 
-`-D 3g-source=false`{.option}: This switch disables the 3G backend. Use it if you have not installed the [ModemManager]{.application} package.
+<code class="option">-D 3g-source=false</code>: This switch disables the 3G backend. Use it if you have not installed the <span class="application">ModemManager</span> package.
 
-`-D modem-gps-source=false`{.option}: This switch disables the modem GPS backend. Use it if you have not installed the [ModemManager]{.application} package.
+<code class="option">-D modem-gps-source=false</code>: This switch disables the modem GPS backend. Use it if you have not installed the <span class="application">ModemManager</span> package.
 
-`-D cdma-source=false`{.option}: This switch disables the CDMA source backend. Use it if you have not installed the [ModemManager]{.application} package.
+<code class="option">-D cdma-source=false</code>: This switch disables the CDMA source backend. Use it if you have not installed the <span class="application">ModemManager</span> package.
 
-`-D demo-agent=false`{.option}: This switch disables the demo. Use it if you have not installed the [libnotify]{.application} package.
-:::
+<code class="option">-D demo-agent=false</code>: This switch disables the demo. Use it if you have not installed the <span class="application">libnotify</span> package.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring GeoClue {#configuring-geoclue .sect2}
+<div class="configuration" lang="en">
+## Configuring GeoClue {#configuring-geoclue}
 
-::: {.sect3 lang="en"}
-### []{#geoclue2-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/geoclue/conf.d/90-lfs-google.conf`{.filename}
-:::
+<code class="filename">/etc/geoclue/conf.d/90-lfs-google.conf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
 In March of 2024, Mozilla announced the shutdown of the Mozilla Location Service. Geoclue uses this service for determining a user's location when requested by other applications. The only supported alternative by upstream is to use Google's Geolocation Service.
 
-To use Google's Geolocation Service, an API key must be used, and a configuration file must be created. [**This API key is only intended for use with LFS. Please do not use this API key if you are building for another distro or distributing binary copies. If you need an API key, you can request one at [https://www.chromium.org/developers/how-tos/api-keys](https://www.chromium.org/developers/how-tos/api-keys){.ulink}.**]{.bold}
+To use Google's Geolocation Service, an API key must be used, and a configuration file must be created. <a class="ulink" href="https://www.chromium.org/developers/how-tos/api-keys">**This API key is only intended for use with LFS. Please do not use this API key if you are building for another distro or distributing binary copies. If you need an API key, you can request one at <span class="bold">https://www.chromium.org/developers/how-tos/api-keys</a>.**</span>
 
-Create the configuration needed for using Google's Geolocation Service as the `root`{.systemitem} user:
+Create the configuration needed for using Google's Geolocation Service as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/geoclue/conf.d/90-lfs-google.conf << "EOF"
 # Begin /etc/geoclue/conf.d/90-lfs-google.conf
 
@@ -135,41 +135,41 @@ url=https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDxKL42zsPjbke5
 EOF
 ```
 
-If you do not wish to request your location from a Geolocation service, you can hardcode your location in `/etc/geolocation`{.filename} using the format described in [geoclue(5)](https://man.archlinux.org/man/geoclue){.ulink}.
-:::
-:::::
+If you do not wish to request your location from a Geolocation service, you can hardcode your location in <code class="filename">/etc/geolocation</code> using the format described in <a class="ulink" href="https://man.archlinux.org/man/geoclue">geoclue(5)</a>.
+</div>
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgeoclue-2.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgeoclue-2.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/geoclue, /usr/include/libgeoclue-2.0, /usr/libexec/geoclue-2.0, and /usr/share/gtk-doc/html/{geoclue,libgeoclue}]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/geoclue, /usr/include/libgeoclue-2.0, /usr/libexec/geoclue-2.0, and /usr/share/gtk-doc/html/{geoclue,libgeoclue}</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](curl.md "cURL-8.20.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](curl.md "cURL-8.20.0")
 
     cURL-8.20.0
 
--   [Next](glib-networking.md "glib-networking-2.80.1"){accesskey="n"}
+-   [Next](glib-networking.md "glib-networking-2.80.1")
 
     glib-networking-2.80.1
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

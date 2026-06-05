@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-openssh-askpass.md "lxqt-openssh-askpass-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-openssh-askpass.md "lxqt-openssh-askpass-2.4.0")
 
     lxqt-openssh-askpass-2.4.0
 
--   [Next](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1"){accesskey="n"}
+-   [Next](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1")
 
     lxqt-wayland-session-0.4.1
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-session}lxqt-session-2.4.0 {#lxqt-session-2.4.0 .sect1}
+# lxqt-session-2.4.0 {#lxqt-session-2.4.0}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-session {#introduction-to-lxqt-session .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-session {#introduction-to-lxqt-session}
 
-The [lxqt-session]{.application} package contains the default session manager for [LXQt]{.application}.
+The <span class="application">lxqt-session</span> package contains the default session manager for <span class="application">LXQt</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-session/releases/download/2.4.0/lxqt-session-2.4.0.tar.xz](https://github.com/lxqt/lxqt-session/releases/download/2.4.0/lxqt-session-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-session/releases/download/2.4.0/lxqt-session-2.4.0.tar.xz">https://github.com/lxqt/lxqt-session/releases/download/2.4.0/lxqt-session-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 42a340dbb742c6afb872cb3bd5a6eeda
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB
 
 -   Estimated build time: 0.5 SBU
-:::
+</div>
 
 ### lxqt-session Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref}, [qtxdg-tools-4.4.0](qtxdg-tools.md "qtxdg-tools-4.4.0"){.xref}, and [Xdg-user-dirs-0.20](../general/xdg-user-dirs.md "Xdg-user-dirs-0.20"){.xref}
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a>, <a class="xref" href="qtxdg-tools.md" title="qtxdg-tools-4.4.0">qtxdg-tools-4.4.0</a>, and <a class="xref" href="../general/xdg-user-dirs.md" title="Xdg-user-dirs-0.20">Xdg-user-dirs-0.20</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-session {#installation-of-lxqt-session .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-session {#installation-of-lxqt-session}
 
-Install [lxqt-session]{.application} by running the following commands:
+Install <span class="application">lxqt-session</span> by running the following commands:
 
-``` userinput
+```bash
 sed -e '/TryExec/s|=|=/usr/bin/|' \
     -i xsession/lxqt.desktop.in &&
 
@@ -73,67 +73,67 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -e '/TryExec/s\|=\|='/usr'/bin/\|' -i xsessions/lxqt.desktop.in**]{.command}: If you are using a display manager, the full path of the [“[TryExec]{.quote}”]{.quote} directive has to be given so that the [LXQt]{.application} desktop will appear in the sessions list.
-:::
+<span class="command"><strong>sed -e '/TryExec/s\|=\|='/usr'/bin/\|' -i xsessions/lxqt.desktop.in</strong></span>: If you are using a display manager, the full path of the <span class="quote">“<span class="quote">TryExec</span>”</span> directive has to be given so that the <span class="application">LXQt</span> desktop will appear in the sessions list.
+</div>
 
-::: {.configuration lang="en"}
-## Configuring lxqt-session {#configuring-lxqt-session .sect2}
+<div class="configuration" lang="en">
+## Configuring lxqt-session {#configuring-lxqt-session}
 
-Window Managers other than [openbox-3.6.1](../x/openbox.md "openbox-3.6.1"){.xref} may be used, e.g. [Xfwm4-4.20.0](../xfce/xfwm4.md "Xfwm4-4.20.0"){.xref}. Please note that [IceWM-4.0.0](../x/icewm.md "IceWM-4.0.0"){.xref} is not a good substitute. [Fluxbox]{.application} does work, although in this context (with [lxqt-config-2.4.0](lxqt-config.md "lxqt-config-2.4.0"){.xref}), [openbox-3.6.1](../x/openbox.md "openbox-3.6.1"){.xref} is better. The configuration file `/usr/share/lxqt/windowmanagers.conf`{.filename} comes with many examples of Window Managers and the ones which are installed will appear in a drop down list of [**lxqt-config-session**]{.command}. For the ones not included in `/usr/share/lxqt/windowmanagers.conf`{.filename}, you can use [**lxqt-config-session**]{.command}'s "search" button, e.g. for [Fluxbox-1.3.7](../x/fluxbox.md "Fluxbox-1.3.7"){.xref}, navigating through the file system until you can choose [**fluxbox**]{.command}.
-:::
+Window Managers other than <a class="xref" href="../x/openbox.md" title="openbox-3.6.1">openbox-3.6.1</a> may be used, e.g. <a class="xref" href="../xfce/xfwm4.md" title="Xfwm4-4.20.0">Xfwm4-4.20.0</a>. Please note that <a class="xref" href="../x/icewm.md" title="IceWM-4.0.0">IceWM-4.0.0</a> is not a good substitute. <span class="application">Fluxbox</span> does work, although in this context (with <a class="xref" href="lxqt-config.md" title="lxqt-config-2.4.0">lxqt-config-2.4.0</a>), <a class="xref" href="../x/openbox.md" title="openbox-3.6.1">openbox-3.6.1</a> is better. The configuration file <code class="filename">/usr/share/lxqt/windowmanagers.conf</code> comes with many examples of Window Managers and the ones which are installed will appear in a drop down list of <span class="command"><strong>lxqt-config-session</strong></span>. For the ones not included in <code class="filename">/usr/share/lxqt/windowmanagers.conf</code>, you can use <span class="command"><strong>lxqt-config-session</strong></span>'s "search" button, e.g. for <a class="xref" href="../x/fluxbox.md" title="Fluxbox-1.3.7">Fluxbox-1.3.7</a>, navigating through the file system until you can choose <span class="command"><strong>fluxbox</strong></span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [lxqt-config-session, lxqt-leave, lxqt-session, and startlxqt]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lxqt-config-session, lxqt-leave, lxqt-session, and startlxqt</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/lxqt/translations/lxqt-{leave,config-session,session}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/lxqt/translations/lxqt-{leave,config-session,session}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------------------- ---------------------------------------------------------------
-  []{#lxqt-config-session-prog}[[**lxqt-config-session**]{.command}]{.term}   is a GUI configuration tool for [**lxqt-session**]{.command}
-  []{#lxqt-leave-prog}[[**lxqt-leave**]{.command}]{.term}                     is a graphical dialog to terminate the session
-  []{#lxqt-session-prog}[[**lxqt-session**]{.command}]{.term}                 is a lightweight X session manager
-  []{#startlxqt}[[**startlxqt**]{.command}]{.term}                            is used to start the desktop session for [LXQt]{.application}
+  <a id="lxqt-config-session-prog"></a><span class="command"><span class="term"><strong>lxqt-config-session</strong></span></span>   is a GUI configuration tool for <span class="command"><strong>lxqt-session</strong></span>
+  <a id="lxqt-leave-prog"></a><span class="command"><span class="term"><strong>lxqt-leave</strong></span></span>                     is a graphical dialog to terminate the session
+  <a id="lxqt-session-prog"></a><span class="command"><span class="term"><strong>lxqt-session</strong></span></span>                 is a lightweight X session manager
+  <a id="startlxqt"></a><span class="command"><span class="term"><strong>startlxqt</strong></span></span>                            is used to start the desktop session for <span class="application">LXQt</span>
   --------------------------------------------------------------------------- ---------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-openssh-askpass.md "lxqt-openssh-askpass-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-openssh-askpass.md "lxqt-openssh-askpass-2.4.0")
 
     lxqt-openssh-askpass-2.4.0
 
--   [Next](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1"){accesskey="n"}
+-   [Next](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1")
 
     lxqt-wayland-session-0.4.1
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

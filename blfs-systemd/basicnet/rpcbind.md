@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 15. Networking Programs
 
--   [Prev](ntp.md "ntp-4.2.8p18"){accesskey="p"}
+-   [Prev](ntp.md "ntp-4.2.8p18")
 
     ntp-4.2.8p18
 
--   [Next](rsync.md "rsync-3.4.3"){accesskey="n"}
+-   [Next](rsync.md "rsync-3.4.3")
 
     rsync-3.4.3
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#rpcbind}rpcbind-1.2.9 {#rpcbind-1.2.9 .sect1}
+# rpcbind-1.2.9 {#rpcbind-1.2.9}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to rpcbind {#introduction-to-rpcbind .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to rpcbind {#introduction-to-rpcbind}
 
-The [rpcbind]{.application} program is a replacement for [portmap]{.application}. It is required for import or export of Network File System (NFS) shared directories.
+The <span class="application">rpcbind</span> program is a replacement for <span class="application">portmap</span>. It is required for import or export of Network File System (NFS) shared directories.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/rpcbind/rpcbind-1.2.9.tar.bz2](https://downloads.sourceforge.net/rpcbind/rpcbind-1.2.9.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/rpcbind/rpcbind-1.2.9.tar.bz2">https://downloads.sourceforge.net/rpcbind/rpcbind-1.2.9.tar.bz2</a>
 
 -   Download MD5 sum: f4c2d1f279aadee20871c9d7c0fc9fc5
 
@@ -44,35 +44,35 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.6 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### rpcbind Dependencies
 
 #### Required
 
-[libtirpc-1.3.7](libtirpc.md "libtirpc-1.3.7"){.xref}
-:::::
+<a class="xref" href="libtirpc.md" title="libtirpc-1.3.7">libtirpc-1.3.7</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of rpcbind {#installation-of-rpcbind .sect2}
+<div class="installation" lang="en">
+## Installation of rpcbind {#installation-of-rpcbind}
 
-There should be a dedicated user and group to take control of the [**rpcbind**]{.command} daemon after it is started. Issue the following commands as the `root`{.systemitem} user:
+There should be a dedicated user and group to take control of the <span class="command"><strong>rpcbind</strong></span> daemon after it is started. Issue the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -g 28 rpc &&
 useradd -c "RPC Bind Daemon Owner" -d /dev/null -g rpc \
         -s /bin/false -u 28 rpc
 ```
 
-In order to get [rpcbind]{.application} to work properly, first fix the package to use correct service name:
+In order to get <span class="application">rpcbind</span> to work properly, first fix the package to use correct service name:
 
-``` userinput
+```bash
 sed -i "/servname/s:rpcbind:sunrpc:" src/rpcbind.c
 ```
 
-Install [rpcbind]{.application} by running the following commands:
+Install <span class="application">rpcbind</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr       \
             --bindir=/usr/sbin  \
             --enable-warmstarts \
@@ -82,79 +82,79 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-Still as the `root`{.systemitem} user, silence a warning that is emitted by the systemd unit:
+Still as the <code class="systemitem">root</code> user, silence a warning that is emitted by the systemd unit:
 
-``` root
+```bash
 echo 'RPCBIND_OPTIONS=""' > /etc/rpcbind.conf
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--with-rpcuser=rpc`*: This switch is used so the [**rpcbind**]{.command} daemon will run as an unprivileged user instead of the `root`{.systemitem} user.
-:::
+*`--with-rpcuser=rpc`*: This switch is used so the <span class="command"><strong>rpcbind</strong></span> daemon will run as an unprivileged user instead of the <code class="systemitem">root</code> user.
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring rpcbind {#configuring-rpcbind .sect2}
+<div class="configuration" lang="en">
+## Configuring rpcbind {#configuring-rpcbind}
 
-::: {.sect3 lang="en"}
-### []{#rpcbind-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
 Enable the systemd unit installed with the package:
 
-``` root
+```bash
 systemctl enable rpcbind
 ```
-:::
-::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [rpcbind and rpcinfo]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">rpcbind and rpcinfo</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#rpcbind-prog}[[**rpcbind**]{.command}]{.term}   is a server that converts RPC program numbers into universal addresses. It must be running on the host to be able to make RPC calls on a server on that machine
-  []{#rpcinfo}[[**rpcinfo**]{.command}]{.term}        makes an RPC call to an RPC server and reports data according to the requested options
+  <a id="rpcbind-prog"></a><span class="command"><span class="term"><strong>rpcbind</strong></span></span>   is a server that converts RPC program numbers into universal addresses. It must be running on the host to be able to make RPC calls on a server on that machine
+  <a id="rpcinfo"></a><span class="command"><span class="term"><strong>rpcinfo</strong></span></span>        makes an RPC call to an RPC server and reports data according to the requested options
   --------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](ntp.md "ntp-4.2.8p18"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](ntp.md "ntp-4.2.8p18")
 
     ntp-4.2.8p18
 
--   [Next](rsync.md "rsync-3.4.3"){accesskey="n"}
+-   [Next](rsync.md "rsync-3.4.3")
 
     rsync-3.4.3
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

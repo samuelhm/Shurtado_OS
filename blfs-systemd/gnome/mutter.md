@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-control-center.md "gnome-control-center-50.2"){accesskey="p"}
+-   [Prev](gnome-control-center.md "gnome-control-center-50.2")
 
     gnome-control-center-50.2
 
--   [Next](gnome-shell.md "gnome-shell-50.2"){accesskey="n"}
+-   [Next](gnome-shell.md "gnome-shell-50.2")
 
     gnome-shell-50.2
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#mutter}Mutter-50.1 {#mutter-50.1 .sect1}
+# Mutter-50.1 {#mutter-50.1}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Mutter {#introduction-to-mutter .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Mutter {#introduction-to-mutter}
 
-[Mutter]{.application} is the window manager for [GNOME]{.application}. It is not invoked directly, but from [GNOME Session]{.application} (on a machine with a hardware accelerated video driver).
+<span class="application">Mutter</span> is the window manager for <span class="application">GNOME</span>. It is not invoked directly, but from <span class="application">GNOME Session</span> (on a machine with a hardware accelerated video driver).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/mutter/50/mutter-50.1.tar.xz](https://download.gnome.org/sources/mutter/50/mutter-50.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/mutter/50/mutter-50.1.tar.xz">https://download.gnome.org/sources/mutter/50/mutter-50.1.tar.xz</a>
 
 -   Download MD5 sum: 5e4147170db223878e2845c2ae695640
 
@@ -44,40 +44,40 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 90 MB
 
 -   Estimated build time: 0.4 SBU (Using parallelism=4; add 1.4 SBU for tests)
-:::
+</div>
 
 ### Mutter Dependencies
 
 #### Required
 
-[at-spi2-core-2.60.4](../x/at-spi2-core.md "at-spi2-core-2.60.4"){.xref}, [docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref}, [gnome-settings-daemon-50.1](gnome-settings-daemon.md "gnome-settings-daemon-50.1"){.xref}, [graphene-1.10.8](../x/graphene.md "Graphene-1.10.8"){.xref}, [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, [libei-1.6.0](../x/libei.md "libei-1.6.0"){.xref}, [libxcvt-0.1.3](../x/libxcvt.md "libxcvt-0.1.3"){.xref}, [libxkbcommon-1.13.2](../general/libxkbcommon.md "libxkbcommon-1.13.2"){.xref}, and [pipewire-1.6.6](../multimedia/pipewire.md "Pipewire-1.6.6"){.xref}
+<a class="xref" href="../x/at-spi2-core.md" title="at-spi2-core-2.60.4">at-spi2-core-2.60.4</a>, <a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a>, <a class="xref" href="gnome-settings-daemon.md" title="gnome-settings-daemon-50.1">gnome-settings-daemon-50.1</a>, <a class="xref" href="../x/graphene.md" title="Graphene-1.10.8">graphene-1.10.8</a>, <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, <a class="xref" href="../x/libei.md" title="libei-1.6.0">libei-1.6.0</a>, <a class="xref" href="../x/libxcvt.md" title="libxcvt-0.1.3">libxcvt-0.1.3</a>, <a class="xref" href="../general/libxkbcommon.md" title="libxkbcommon-1.13.2">libxkbcommon-1.13.2</a>, and <a class="xref" href="../multimedia/pipewire.md" title="Pipewire-1.6.6">pipewire-1.6.6</a>
 
 #### Recommended
 
-[desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [libdisplay-info-0.3.0](../general/libdisplay-info.md "libdisplay-info-0.3.0"){.xref}, and [startup-notification-0.12](../x/startup-notification.md "startup-notification-0.12"){.xref}
+<a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="../general/libdisplay-info.md" title="libdisplay-info-0.3.0">libdisplay-info-0.3.0</a>, and <a class="xref" href="../x/startup-notification.md" title="startup-notification-0.12">startup-notification-0.12</a>
 
 #### Recommended (Required to build the Wayland compositor)
 
-[libinput-1.31.2](../x/x7driver.md#libinput "libinput-1.31.2"){.xref}, [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref}, [wayland-protocols-1.48](../general/wayland-protocols.md "Wayland-Protocols-1.48"){.xref}, and [Xwayland-24.1.12](../x/xwayland.md "Xwayland-24.1.12"){.xref}
+<a class="xref" href="../x/x7driver.md#libinput" title="libinput-1.31.2">libinput-1.31.2</a>, <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>, <a class="xref" href="../general/wayland-protocols.md" title="Wayland-Protocols-1.48">wayland-protocols-1.48</a>, and <a class="xref" href="../x/xwayland.md" title="Xwayland-24.1.12">Xwayland-24.1.12</a>
 
 #### Optional
 
-[dbusmock-0.38.1](../general/python-modules.md#python-dbusmock "dbusmock-0.38.1"){.xref} and [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} (both required for tests), [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, [Xorg-Server-21.1.23](../x/xorg-server.md "Xorg-Server-21.1.23"){.xref} (for X11 sessions, deprecated), [bash-completion](https://github.com/scop/bash-completion/){.ulink}, [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink}, [**Xvfb**]{.command} (from [Xorg-Server-21.1.23](../x/xorg-server.md "Xorg-Server-21.1.23"){.xref} or [Xwayland-24.1.12](../x/xwayland.md "Xwayland-24.1.12"){.xref}), [xvfb-run](https://anduin.linuxfromscratch.org/BLFS/mutter/xvfb-run){.ulink}, and [zenity](https://gitlab.gnome.org/GNOME/zenity){.ulink} (the X11 tests would only run with all of the last three)
-:::::
+<a class="xref" href="../general/python-modules.md#python-dbusmock" title="dbusmock-0.38.1">dbusmock-0.38.1</a> and <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> (both required for tests), <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, <a class="xref" href="../x/xorg-server.md" title="Xorg-Server-21.1.23">Xorg-Server-21.1.23</a> (for X11 sessions, deprecated), <a class="ulink" href="https://github.com/scop/bash-completion/">bash-completion</a>, <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a>, <span class="command"><strong>Xvfb</strong></span> (from <a class="xref" href="../x/xorg-server.md" title="Xorg-Server-21.1.23">Xorg-Server-21.1.23</a> or <a class="xref" href="../x/xwayland.md" title="Xwayland-24.1.12">Xwayland-24.1.12</a>), <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/mutter/xvfb-run">xvfb-run</a>, and <a class="ulink" href="https://gitlab.gnome.org/GNOME/zenity">zenity</a> (the X11 tests would only run with all of the last three)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Mutter {#installation-of-mutter .sect2}
+<div class="installation" lang="en">
+## Installation of Mutter {#installation-of-mutter}
 
 Fix an issue with the tests that would otherwise require the package to be built with debugging information:
 
-``` userinput
+```bash
 sed "/tests_c_args =/s/$/ + ['-U', 'G_DISABLE_ASSERT']/" -i src/tests/meson.build &&
 sed "/c_args:/a '-U', 'G_DISABLE_ASSERT'," -i src/tests/cogl/unit/meson.build
 ```
 
-Install [Mutter]{.application} by running the following commands:
+Install <span class="application">Mutter</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -90,100 +90,100 @@ meson setup --prefix=/usr            \
 ninja
 ```
 
-If you want to run the test suite, ensure both [dbusmock-0.38.1](../general/python-modules.md#python-dbusmock "dbusmock-0.38.1"){.xref} and [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} are installed and issue:
+If you want to run the test suite, ensure both <a class="xref" href="../general/python-modules.md#python-dbusmock" title="dbusmock-0.38.1">dbusmock-0.38.1</a> and <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> are installed and issue:
 
-``` userinput
+```bash
 meson configure -D tests=enabled &&
 ninja test
 ```
 
-The tests require an active Wayland session. Some tests are flaky (especially if your system is under a high load), so if a test fails you can try to run a specific test again by using the [**meson test *`<test name>`***]{.command} command. A few tests may fail depending on some system configuration. Don't make any mouse or keyboard input while the test suite is running or some tests may fail. You can also test basic functions of [Mutter]{.application} following [the section called “Starting Mutter”](mutter.md#mutter-starting "Starting Mutter"){.xref} after installing this package.
+The tests require an active Wayland session. Some tests are flaky (especially if your system is under a high load), so if a test fails you can try to run a specific test again by using the <span class="command"><strong>meson test <em>`<test name>`</strong></em></span> command. A few tests may fail depending on some system configuration. Don't make any mouse or keyboard input while the test suite is running or some tests may fail. You can also test basic functions of <span class="application">Mutter</span> following <a class="xref" href="mutter.md#mutter-starting" title="Starting Mutter">the section called “Starting Mutter”</a> after installing this package.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D bash_completion=false`*: Allows building this package without the [bash-completion](https://github.com/scop/bash-completion/){.ulink} package installed.
+*`-D bash_completion=false`*: Allows building this package without the <a class="ulink" href="https://github.com/scop/bash-completion/">bash-completion</a> package installed.
 
-*`-D tests=disabled`*: Allows building this package without [dbusmock-0.38.1](../general/python-modules.md#python-dbusmock "dbusmock-0.38.1"){.xref} installed. It'll be overridden with [**meson configure**]{.command} if running the test suite.
+*`-D tests=disabled`*: Allows building this package without <a class="xref" href="../general/python-modules.md#python-dbusmock" title="dbusmock-0.38.1">dbusmock-0.38.1</a> installed. It'll be overridden with <span class="command"><strong>meson configure</strong></span> if running the test suite.
 
-*`-D profiler=false`*: Allows building this package without [Sysprof]{.application}. Remove this option if you've installed [Sysprof]{.application} and want to analyze the rendering performance of [Mutter]{.application}.
+*`-D profiler=false`*: Allows building this package without <span class="application">Sysprof</span>. Remove this option if you've installed <span class="application">Sysprof</span> and want to analyze the rendering performance of <span class="application">Mutter</span>.
 
-`-D x11=true`{.option}: Allows building this package with X11 support. X11 support is deprecated and will be removed in GNOME 50.
-:::
+<code class="option">-D x11=true</code>: Allows building this package with X11 support. X11 support is deprecated and will be removed in GNOME 50.
+</div>
 
-::: {.starting lang="en"}
-## []{#mutter-starting}Starting Mutter {#starting-mutter .sect2}
+<div class="starting" lang="en">
+## Starting Mutter {#starting-mutter}
 
-[Mutter]{.application} is normally used as a component of [gnome-shell]{.application}, but it can be used as a standalone Wayland compositor too. To run [Mutter]{.application} as a Wayland compositor, in a virtual console, issue:
+<span class="application">Mutter</span> is normally used as a component of <span class="application">gnome-shell</span>, but it can be used as a standalone Wayland compositor too. To run <span class="application">Mutter</span> as a Wayland compositor, in a virtual console, issue:
 
-``` userinput
+```bash
 mutter --wayland -- vte-2.91
 ```
 
-Replace [**vte-2.91**]{.command} with the command line for the first application you want in the Wayland session. Note that once this application exits, the Wayland session will be terminated.
+Replace <span class="command"><strong>vte-2.91</strong></span> with the command line for the first application you want in the Wayland session. Note that once this application exits, the Wayland session will be terminated.
 
-[Mutter]{.application} can also function as a nested compositor in another Wayland session. In a terminal emulator, issue:
+<span class="application">Mutter</span> can also function as a nested compositor in another Wayland session. In a terminal emulator, issue:
 
-``` userinput
+```bash
 MUTTER_DEBUG_DUMMY_MODE_SPECS=1920x1080 \
 dbus-run-session mutter --wayland --devkit -- vte-2.91
 ```
 
-There will be a 20-second delay before the nested compositor starts up because of [a known bug](https://gitlab.gnome.org/GNOME/mutter/-/issues/4159){.ulink}. Replace *`1920x1080`* with the size you want for the nested Wayland session.
-:::
+There will be a 20-second delay before the nested compositor starts up because of <a class="ulink" href="https://gitlab.gnome.org/GNOME/mutter/-/issues/4159">a known bug</a>. Replace *`1920x1080`* with the size you want for the nested Wayland session.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gdctl, gnome-service-client, and mutter]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gdctl, gnome-service-client, and mutter</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libmutter-17.so and libmutter-test-17.so (optional)]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libmutter-17.so and libmutter-test-17.so (optional)</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{lib,include,libexec/installed-tests,share/{,installed-tests}}/mutter-17]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{lib,include,libexec/installed-tests,share/{,installed-tests}}/mutter-17</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#gdctl}[[**gdctl**]{.command}]{.term}                                 controls the current monitor configuration on sessions that use Mutter as a window manager
-  []{#gnome-service-client}[[**gnome-service-client**]{.command}]{.term}   launches a Wayland client with an optional tag
-  []{#mutter-prog}[[**mutter**]{.command}]{.term}                          is a [Clutter]{.application} based compositing [GTK+]{.application} Window Manager
-  []{#libmutter}[`libmutter-16.so`{.filename}]{.term}                      contains the [Mutter]{.application} API functions
-  []{#libmutter-test}[`libmutter-test-16.so`{.filename}]{.term}            contains the [Mutter]{.application} test suite API functions; this library is only installed if the test suite of this package is run and it is needed by the [gnome-shell]{.application} test suite
+  <a id="gdctl"></a><span class="command"><span class="term"><strong>gdctl</strong></span></span>                                 controls the current monitor configuration on sessions that use Mutter as a window manager
+  <a id="gnome-service-client"></a><span class="command"><span class="term"><strong>gnome-service-client</strong></span></span>   launches a Wayland client with an optional tag
+  <a id="mutter-prog"></a><span class="command"><span class="term"><strong>mutter</strong></span></span>                          is a <span class="application">Clutter</span> based compositing <span class="application">GTK+</span> Window Manager
+  <a id="libmutter"></a><span class="term"><code class="filename">libmutter-16.so</code></span>                      contains the <span class="application">Mutter</span> API functions
+  <a id="libmutter-test"></a><span class="term"><code class="filename">libmutter-test-16.so</code></span>            contains the <span class="application">Mutter</span> test suite API functions; this library is only installed if the test suite of this package is run and it is needed by the <span class="application">gnome-shell</span> test suite
   ------------------------------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-control-center.md "gnome-control-center-50.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-control-center.md "gnome-control-center-50.2")
 
     gnome-control-center-50.2
 
--   [Next](gnome-shell.md "gnome-shell-50.2"){accesskey="n"}
+-   [Next](gnome-shell.md "gnome-shell-50.2")
 
     gnome-shell-50.2
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

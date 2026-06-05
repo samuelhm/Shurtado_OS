@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libatomic_ops.md "libatomic_ops-7.10.0"){accesskey="p"}
+-   [Prev](libatomic_ops.md "libatomic_ops-7.10.0")
 
     libatomic_ops-7.10.0
 
--   [Next](libbytesize.md "libbytesize-2.12"){accesskey="n"}
+-   [Next](libbytesize.md "libbytesize-2.12")
 
     libbytesize-2.12
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libblockdev}libblockdev-3.5.0 {#libblockdev-3.5.0 .sect1}
+# libblockdev-3.5.0 {#libblockdev-3.5.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libblockdev {#introduction-to-libblockdev .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libblockdev {#introduction-to-libblockdev}
 
 libblockdev is a C library supporting GObject Introspection for manipulation of block devices. It has a plugin-based architecture where each technology (like LVM, Btrfs, MD RAID, Swap,...) is implemented in a separate plugin, possibly with multiple implementations (e.g. using LVM CLI or the new LVM DBus API).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/storaged-project/libblockdev/releases/download/3.5.0/libblockdev-3.5.0.tar.gz](https://github.com/storaged-project/libblockdev/releases/download/3.5.0/libblockdev-3.5.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/storaged-project/libblockdev/releases/download/3.5.0/libblockdev-3.5.0.tar.gz">https://github.com/storaged-project/libblockdev/releases/download/3.5.0/libblockdev-3.5.0.tar.gz</a>
 
 -   Download MD5 sum: 68448042ea0a2073098fc4ae37b01cbf
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 19 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### libblockdev Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (GObject Introspection required for GNOME)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection required for GNOME)
 
 #### Recommended
 
-[cryptsetup-2.8.6](../postlfs/cryptsetup.md "cryptsetup-2.8.6"){.xref}, [keyutils-1.6.3](keyutils.md "keyutils-1.6.3"){.xref}, [libatasmart-0.19](libatasmart.md "libatasmart-0.19"){.xref}, [libbytesize-2.12](libbytesize.md "libbytesize-2.12"){.xref}, [libnvme-1.16.1](libnvme.md "libnvme-1.16.1"){.xref}, and [LVM2-2.03.41](../postlfs/lvm2.md "LVM2-2.03.41"){.xref}
+<a class="xref" href="../postlfs/cryptsetup.md" title="cryptsetup-2.8.6">cryptsetup-2.8.6</a>, <a class="xref" href="keyutils.md" title="keyutils-1.6.3">keyutils-1.6.3</a>, <a class="xref" href="libatasmart.md" title="libatasmart-0.19">libatasmart-0.19</a>, <a class="xref" href="libbytesize.md" title="libbytesize-2.12">libbytesize-2.12</a>, <a class="xref" href="libnvme.md" title="libnvme-1.16.1">libnvme-1.16.1</a>, and <a class="xref" href="../postlfs/lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a>
 
 #### Optional
 
-[btrfs-progs-7.0](../postlfs/btrfs-progs.md "btrfs-progs-7.0"){.xref}, [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [JSON-GLib-1.10.8](json-glib.md "JSON-GLib-1.10.8"){.xref}, [mdadm-4.6](../postlfs/mdadm.md "mdadm-4.6"){.xref}, [parted-3.7](../postlfs/parted.md "parted-3.7"){.xref}, [smartmontools-7.5](../postlfs/smartmontools.md "smartmontools-7.5"){.xref}, [volume_key](https://github.com/felixonmars/volume_key){.ulink}, [ndctl](https://github.com/pmem/ndctl){.ulink}, and [targetcli](https://github.com/Datera/targetcli){.ulink} (for tests)
-:::::
+<a class="xref" href="../postlfs/btrfs-progs.md" title="btrfs-progs-7.0">btrfs-progs-7.0</a>, <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a>, <a class="xref" href="../postlfs/mdadm.md" title="mdadm-4.6">mdadm-4.6</a>, <a class="xref" href="../postlfs/parted.md" title="parted-3.7">parted-3.7</a>, <a class="xref" href="../postlfs/smartmontools.md" title="smartmontools-7.5">smartmontools-7.5</a>, <a class="ulink" href="https://github.com/felixonmars/volume_key">volume_key</a>, <a class="ulink" href="https://github.com/pmem/ndctl">ndctl</a>, and <a class="ulink" href="https://github.com/Datera/targetcli">targetcli</a> (for tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libblockdev {#installation-of-libblockdev .sect2}
+<div class="installation" lang="en">
+## Installation of libblockdev {#installation-of-libblockdev}
 
-Install [libblockdev]{.application} by running the following commands:
+Install <span class="application">libblockdev</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr      \
             --sysconfdir=/etc  \
             --with-python3     \
@@ -80,73 +80,73 @@ Install [libblockdev]{.application} by running the following commands:
 make
 ```
 
-The test suite requires [targetcli]{.application}, which is not a part of BLFS.
+The test suite requires <span class="application">targetcli</span>, which is not a part of BLFS.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--without-escrow`*: This switch allows building [libblockdev]{.application} without volume_key installed.
+*`--without-escrow`*: This switch allows building <span class="application">libblockdev</span> without volume_key installed.
 
-*`--without-lvm`* *`--without-lvm_dbus`* *`--without-tools`*: The combination of these switches allows building [libblockdev]{.application} without [parted-3.7](../postlfs/parted.md "parted-3.7"){.xref} installed. Remove it if you've installed [parted-3.7](../postlfs/parted.md "parted-3.7"){.xref} and wish to build the [**lvm-cache-stats**]{.command} or [**vfat-resize**]{.command} utilities, or wish [libblockdev]{.application} to support logical volumes.
+*`--without-lvm`* *`--without-lvm_dbus`* *`--without-tools`*: The combination of these switches allows building <span class="application">libblockdev</span> without <a class="xref" href="../postlfs/parted.md" title="parted-3.7">parted-3.7</a> installed. Remove it if you've installed <a class="xref" href="../postlfs/parted.md" title="parted-3.7">parted-3.7</a> and wish to build the <span class="command"><strong>lvm-cache-stats</strong></span> or <span class="command"><strong>vfat-resize</strong></span> utilities, or wish <span class="application">libblockdev</span> to support logical volumes.
 
-*`--without-smartmontools`*: This switch allows building [libblockdev]{.application} without [JSON-GLib-1.10.8](json-glib.md "JSON-GLib-1.10.8"){.xref} or [smartmontools-7.5](../postlfs/smartmontools.md "smartmontools-7.5"){.xref} installed. Remove it if you have both packages installed.
+*`--without-smartmontools`*: This switch allows building <span class="application">libblockdev</span> without <a class="xref" href="json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a> or <a class="xref" href="../postlfs/smartmontools.md" title="smartmontools-7.5">smartmontools-7.5</a> installed. Remove it if you have both packages installed.
 
-`--without-btrfs --without-mdraid --without-tools`{.option}: The combination of these switches allows building [libblockdev]{.application} without [libbytesize-2.12](libbytesize.md "libbytesize-2.12"){.xref} installed. The `--without-mdraid`{.option} option will break [UDisks-2.11.1](udisks2.md "UDisks-2.11.1"){.xref}, so don't use it unless you really know what you are doing.
+<code class="option">--without-btrfs --without-mdraid --without-tools</code>: The combination of these switches allows building <span class="application">libblockdev</span> without <a class="xref" href="libbytesize.md" title="libbytesize-2.12">libbytesize-2.12</a> installed. The <code class="option">--without-mdraid</code> option will break <a class="xref" href="udisks2.md" title="UDisks-2.11.1">UDisks-2.11.1</a>, so don't use it unless you really know what you are doing.
 
-`--without-crypto`{.option}: This switch allows building [libblockdev]{.application} without [cryptsetup-2.8.6](../postlfs/cryptsetup.md "cryptsetup-2.8.6"){.xref} or [keyutils-1.6.3](keyutils.md "keyutils-1.6.3"){.xref} installed. This switch will break [UDisks-2.11.1](udisks2.md "UDisks-2.11.1"){.xref}, so don't use it unless you really know what you are doing.
+<code class="option">--without-crypto</code>: This switch allows building <span class="application">libblockdev</span> without <a class="xref" href="../postlfs/cryptsetup.md" title="cryptsetup-2.8.6">cryptsetup-2.8.6</a> or <a class="xref" href="keyutils.md" title="keyutils-1.6.3">keyutils-1.6.3</a> installed. This switch will break <a class="xref" href="udisks2.md" title="UDisks-2.11.1">UDisks-2.11.1</a>, so don't use it unless you really know what you are doing.
 
-`--without-dm --without-lvm --without-lvm_dbus --without-mpath`{.option}: The combination of these switches allows building [libblockdev]{.application} without [LVM2-2.03.41](../postlfs/lvm2.md "LVM2-2.03.41"){.xref} installed. The `--without-dm`{.option} and `--without-mpath`{.option} options are not in the instructions provided by the book because [LVM2-2.03.41](../postlfs/lvm2.md "LVM2-2.03.41"){.xref} is required for [cryptsetup-2.8.6](../postlfs/cryptsetup.md "cryptsetup-2.8.6"){.xref} and [cryptsetup-2.8.6](../postlfs/cryptsetup.md "cryptsetup-2.8.6"){.xref} is a recommended dependency of [libblockdev]{.application} anyway.
+<code class="option">--without-dm --without-lvm --without-lvm_dbus --without-mpath</code>: The combination of these switches allows building <span class="application">libblockdev</span> without <a class="xref" href="../postlfs/lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a> installed. The <code class="option">--without-dm</code> and <code class="option">--without-mpath</code> options are not in the instructions provided by the book because <a class="xref" href="../postlfs/lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a> is required for <a class="xref" href="../postlfs/cryptsetup.md" title="cryptsetup-2.8.6">cryptsetup-2.8.6</a> and <a class="xref" href="../postlfs/cryptsetup.md" title="cryptsetup-2.8.6">cryptsetup-2.8.6</a> is a recommended dependency of <span class="application">libblockdev</span> anyway.
 
-`--without-nvme`{.option}: This switch allows building [libblockdev]{.application} without [libnvme-1.16.1](libnvme.md "libnvme-1.16.1"){.xref} installed. This switch will break [UDisks-2.11.1](udisks2.md "UDisks-2.11.1"){.xref}, so don't use it unless you really know what you are doing.
-:::
+<code class="option">--without-nvme</code>: This switch allows building <span class="application">libblockdev</span> without <a class="xref" href="libnvme.md" title="libnvme-1.16.1">libnvme-1.16.1</a> installed. This switch will break <a class="xref" href="udisks2.md" title="UDisks-2.11.1">UDisks-2.11.1</a>, so don't use it unless you really know what you are doing.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [lvm-cache-stats and vfat-resize (both optional)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lvm-cache-stats and vfat-resize (both optional)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libbd_btrfs.so, libbd_crypto.so, libbd_dm.so, libbd_fs.so, libbd_loop.so, libbd_lvm.so (optional), libbd_lvm-dbus.so (optional), libbd_mdraid.so, libbd_mpath.so, libbd_nvme.so, libbd_part.so, libbd_swap.so, libbd_utils.so, and libblockdev.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libbd_btrfs.so, libbd_crypto.so, libbd_dm.so, libbd_fs.so, libbd_loop.so, libbd_lvm.so (optional), libbd_lvm-dbus.so (optional), libbd_mdraid.so, libbd_mpath.so, libbd_nvme.so, libbd_part.so, libbd_swap.so, libbd_utils.so, and libblockdev.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/libblockdev, /usr/include/blockdev, and /usr/share/gtk-doc/html/libblockdev (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/libblockdev, /usr/include/blockdev, and /usr/share/gtk-doc/html/libblockdev (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- ----------------------------------------------------
-  []{#lvm-cache-stats}[[**lvm-cache-stats**]{.command}]{.term}   prints statistics on caches on LVM Logical Volumes
-  []{#vfat-resize}[[**vfat-resize**]{.command}]{.term}           resizes `vfat`{.systemitem} file systems
+  <a id="lvm-cache-stats"></a><span class="command"><span class="term"><strong>lvm-cache-stats</strong></span></span>   prints statistics on caches on LVM Logical Volumes
+  <a id="vfat-resize"></a><span class="command"><span class="term"><strong>vfat-resize</strong></span></span>           resizes <code class="systemitem">vfat</code> file systems
   -------------------------------------------------------------- ----------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libatomic_ops.md "libatomic_ops-7.10.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libatomic_ops.md "libatomic_ops-7.10.0")
 
     libatomic_ops-7.10.0
 
--   [Next](libbytesize.md "libbytesize-2.12"){accesskey="n"}
+-   [Next](libbytesize.md "libbytesize-2.12")
 
     libbytesize-2.12
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

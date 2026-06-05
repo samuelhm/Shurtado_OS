@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](startup-notification.md "startup-notification-0.12"){accesskey="p"}
+-   [Prev](startup-notification.md "startup-notification-0.12")
 
     startup-notification-0.12
 
--   [Next](vulkan-loader.md "Vulkan-Loader-1.4.350.0"){accesskey="n"}
+-   [Next](vulkan-loader.md "Vulkan-Loader-1.4.350.0")
 
     Vulkan-Loader-1.4.350.0
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#vulkan-headers}Vulkan-Headers-1.4.350.0 {#vulkan-headers-1.4.350.0 .sect1}
+# Vulkan-Headers-1.4.350.0 {#vulkan-headers-1.4.350.0}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Vulkan-Headers {#introduction-to-vulkan-headers .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Vulkan-Headers {#introduction-to-vulkan-headers}
 
-The [Vulkan-Headers]{.application} package contains a set of header files necessary to build and link applications against the Vulkan API.
+The <span class="application">Vulkan-Headers</span> package contains a set of header files necessary to build and link applications against the Vulkan API.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.350.0/Vulkan-Headers-vulkan-sdk-1.4.350.0.tar.gz](https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.350.0/Vulkan-Headers-vulkan-sdk-1.4.350.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.350.0/Vulkan-Headers-vulkan-sdk-1.4.350.0.tar.gz">https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.350.0/Vulkan-Headers-vulkan-sdk-1.4.350.0.tar.gz</a>
 
 -   Download MD5 sum: 74d68465ca2ef442397dc159edaa3b9c
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 80 MB
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
+</div>
 
 ### Vulkan-Headers Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}
-:::::
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Vulkan-Headers {#installation-of-vulkan-headers .sect2}
+<div class="installation" lang="en">
+## Installation of Vulkan-Headers {#installation-of-vulkan-headers}
 
-Install [Vulkan-Headers]{.application} by running the following commands:
+Install <span class="application">Vulkan-Headers</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -66,46 +66,46 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr -G Ninja .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/vk_video, /usr/include/vulkan, /usr/share/cmake/VulkanHeaders, and /usr/share/vulkan]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/vk_video, /usr/include/vulkan, /usr/share/cmake/VulkanHeaders, and /usr/share/vulkan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](startup-notification.md "startup-notification-0.12"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](startup-notification.md "startup-notification-0.12")
 
     startup-notification-0.12
 
--   [Next](vulkan-loader.md "Vulkan-Loader-1.4.350.0"){accesskey="n"}
+-   [Next](vulkan-loader.md "Vulkan-Loader-1.4.350.0")
 
     Vulkan-Loader-1.4.350.0
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

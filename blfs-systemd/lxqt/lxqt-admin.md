@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-themes.md "lxqt-themes-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-themes.md "lxqt-themes-2.4.0")
 
     lxqt-themes-2.4.0
 
--   [Next](lxqt-about.md "lxqt-about-2.4.0"){accesskey="n"}
+-   [Next](lxqt-about.md "lxqt-about-2.4.0")
 
     lxqt-about-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-admin}lxqt-admin-2.4.0 {#lxqt-admin-2.4.0 .sect1}
+# lxqt-admin-2.4.0 {#lxqt-admin-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-admin {#introduction-to-lxqt-admin .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-admin {#introduction-to-lxqt-admin}
 
-The [lxqt-admin]{.application} package provides two GUI tools to adjust settings of the operating system [LXQt]{.application} is running on.
+The <span class="application">lxqt-admin</span> package provides two GUI tools to adjust settings of the operating system <span class="application">LXQt</span> is running on.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-admin/releases/download/2.4.0/lxqt-admin-2.4.0.tar.xz](https://github.com/lxqt/lxqt-admin/releases/download/2.4.0/lxqt-admin-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-admin/releases/download/2.4.0/lxqt-admin-2.4.0.tar.xz">https://github.com/lxqt/lxqt-admin/releases/download/2.4.0/lxqt-admin-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 77a73ebdfad37f8d0948fe20011c24db
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.8 MB
 
 -   Estimated build time: 0.3 SBU
-:::
+</div>
 
 ### lxqt-admin Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref} and [Polkit-127](../postlfs/polkit.md "Polkit-127"){.xref}
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a> and <a class="xref" href="../postlfs/polkit.md" title="Polkit-127">Polkit-127</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-admin {#installation-of-lxqt-admin .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-admin {#installation-of-lxqt-admin}
 
-Install [lxqt-admin]{.application} by running the following commands:
+Install <span class="application">lxqt-admin</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,53 +70,53 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [lxqt-admin-time, lxqt-admin-user, and lxqt-admin-user-helper]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">lxqt-admin-time, lxqt-admin-user, and lxqt-admin-user-helper</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- ----------------------------------------------
-  []{#lxqt-admin-time}[[**lxqt-admin-time**]{.command}]{.term}   is a GUI to adjust the current time and date
-  []{#lxqt-admin-user}[[**lxqt-admin-user**]{.command}]{.term}   is a GUI to manage users and groups
+  <a id="lxqt-admin-time"></a><span class="command"><span class="term"><strong>lxqt-admin-time</strong></span></span>   is a GUI to adjust the current time and date
+  <a id="lxqt-admin-user"></a><span class="command"><span class="term"><strong>lxqt-admin-user</strong></span></span>   is a GUI to manage users and groups
   -------------------------------------------------------------- ----------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-themes.md "lxqt-themes-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-themes.md "lxqt-themes-2.4.0")
 
     lxqt-themes-2.4.0
 
--   [Next](lxqt-about.md "lxqt-about-2.4.0"){accesskey="n"}
+-   [Next](lxqt-about.md "lxqt-about-2.4.0")
 
     lxqt-about-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

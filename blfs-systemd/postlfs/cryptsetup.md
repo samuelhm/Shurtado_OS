@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](cracklib.md "CrackLib-2.10.3"){accesskey="p"}
+-   [Prev](cracklib.md "CrackLib-2.10.3")
 
     CrackLib-2.10.3
 
--   [Next](cyrus-sasl.md "Cyrus SASL-2.1.28"){accesskey="n"}
+-   [Next](cyrus-sasl.md "Cyrus SASL-2.1.28")
 
     Cyrus SASL-2.1.28
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#cryptsetup}cryptsetup-2.8.6 {#cryptsetup-2.8.6 .sect1}
+# cryptsetup-2.8.6 {#cryptsetup-2.8.6}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to cryptsetup {#introduction-to-cryptsetup .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to cryptsetup {#introduction-to-cryptsetup}
 
 cryptsetup is used to set up transparent encryption of block devices using the kernel crypto API.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.kernel.org/pub/linux/utils/cryptsetup/v2.8/cryptsetup-2.8.6.tar.xz](https://www.kernel.org/pub/linux/utils/cryptsetup/v2.8/cryptsetup-2.8.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.kernel.org/pub/linux/utils/cryptsetup/v2.8/cryptsetup-2.8.6.tar.xz">https://www.kernel.org/pub/linux/utils/cryptsetup/v2.8/cryptsetup-2.8.6.tar.xz</a>
 
 -   Download MD5 sum: 110d3dd2dec73401a087f526f598f884
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 41 MB (add 5 MB for tests)
 
 -   Estimated build time: 0.2 SBU (add 19 SBU for tests)
-:::
+</div>
 
 ### cryptsetup Dependencies
 
 #### Required
 
-[JSON-C-0.18](../general/json-c.md "JSON-C-0.18"){.xref}, [LVM2-2.03.41](lvm2.md "LVM2-2.03.41"){.xref}, and [popt-1.19](../general/popt.md "Popt-1.19"){.xref}
+<a class="xref" href="../general/json-c.md" title="JSON-C-0.18">JSON-C-0.18</a>, <a class="xref" href="lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a>, and <a class="xref" href="../general/popt.md" title="Popt-1.19">popt-1.19</a>
 
 #### Optional
 
-[asciidoctor-2.0.26](../general/asciidoctor.md "Asciidoctor-2.0.26"){.xref}, [libpwquality-1.4.5](libpwquality.md "libpwquality-1.4.5"){.xref}, [argon2](https://github.com/P-H-C/phc-winner-argon2){.ulink}, [libssh](https://www.libssh.org/){.ulink}, [mbedtls](https://github.com/Mbed-TLS/mbedtls){.ulink}, and [passwdqc](https://www.openwall.com/passwdqc/){.ulink}
-:::::
+<a class="xref" href="../general/asciidoctor.md" title="Asciidoctor-2.0.26">asciidoctor-2.0.26</a>, <a class="xref" href="libpwquality.md" title="libpwquality-1.4.5">libpwquality-1.4.5</a>, <a class="ulink" href="https://github.com/P-H-C/phc-winner-argon2">argon2</a>, <a class="ulink" href="https://www.libssh.org/">libssh</a>, <a class="ulink" href="https://github.com/Mbed-TLS/mbedtls">mbedtls</a>, and <a class="ulink" href="https://www.openwall.com/passwdqc/">passwdqc</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#cryptsetup-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 Encrypted block devices require kernel support. To use it, the appropriate kernel configuration parameters need to be set:
 
-``` screen
+```console
 Device Drivers --->
   [*] Multiple devices driver support (RAID and LVM) --->                   [MD]
     <*/M> Device mapper support                                     [BLK_DEV_DM]
@@ -80,23 +80,23 @@ Device Drivers --->
   Userspace interface --->
     <*/M> Symmetric key cipher algorithms             [CRYPTO_USER_API_SKCIPHER]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of cryptsetup {#installation-of-cryptsetup .sect2}
+<div class="installation" lang="en">
+## Installation of cryptsetup {#installation-of-cryptsetup}
 
-Install [cryptsetup]{.application} by running the following commands:
+Install <span class="application">cryptsetup</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr       \
             --disable-ssh-token \
             --disable-asciidoc  &&
 make
 ```
 
-To test the result, issue as the `root`{.systemitem} user: [**make check**]{.command}. Some tests will fail if appropriate kernel configuration options are not set. Some additional options that may be needed for tests are:
+To test the result, issue as the <code class="systemitem">root</code> user: <span class="command"><strong>make check</strong></span>. Some tests will fail if appropriate kernel configuration options are not set. Some additional options that may be needed for tests are:
 
-``` screen
+```console
 CONFIG_SCSI_LOWLEVEL,
 CONFIG_SCSI_DEBUG,
 CONFIG_BLK_DEV_DM_BUILTIN,
@@ -117,68 +117,68 @@ CONFIG_CRYPTO_SERPENT_AVX2_X86_64, and
 CONFIG_CRYPTO_TWOFISH_X86_64
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-ssh-token`*: This switch is required if the optional libssh dependency is not installed.
 
-*`--disable-asciidoc`*: This switch disables regeneration of the man pages. Remove this switch if you have [asciidoctor-2.0.26](../general/asciidoctor.md "Asciidoctor-2.0.26"){.xref} installed and wish to regenerate the man pages. Note that even if this switch is used, the pre-generated man pages are shipped in the tarball and they'll still be installed.
-:::
+*`--disable-asciidoc`*: This switch disables regeneration of the man pages. Remove this switch if you have <a class="xref" href="../general/asciidoctor.md" title="Asciidoctor-2.0.26">asciidoctor-2.0.26</a> installed and wish to regenerate the man pages. Note that even if this switch is used, the pre-generated man pages are shipped in the tarball and they'll still be installed.
+</div>
 
-::: {.configuration lang="en"}
-## Configuring cryptsetup {#configuring-cryptsetup .sect2}
+<div class="configuration" lang="en">
+## Configuring cryptsetup {#configuring-cryptsetup}
 
-Because of the number of possible configurations, setup of encrypted volumes is beyond the scope of the BLFS book. Please see the configuration guide in the cryptsetup [FAQ](https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions#2-setup){.ulink}.
-:::
+Because of the number of possible configurations, setup of encrypted volumes is beyond the scope of the BLFS book. Please see the configuration guide in the cryptsetup <a class="ulink" href="https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions#2-setup">FAQ</a>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [cryptsetup, integritysetup, and veritysetup]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cryptsetup, integritysetup, and veritysetup</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libcryptsetup.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libcryptsetup.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/cryptsetup]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/cryptsetup</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#cryptsetup-prog}[[**cryptsetup**]{.command}]{.term}      is used to setup dm-crypt managed device-mapper mappings
-  []{#integritysetup}[[**integritysetup**]{.command}]{.term}   is a tool to manage dm-integrity (block level integrity) volumes
-  []{#veritysetup}[[**veritysetup**]{.command}]{.term}         is used to configure dm-verity managed device-mapper mappings. The Device-mapper verity target provides read-only transparent integrity checking of block devices using the kernel crypto API
+  <a id="cryptsetup-prog"></a><span class="command"><span class="term"><strong>cryptsetup</strong></span></span>      is used to setup dm-crypt managed device-mapper mappings
+  <a id="integritysetup"></a><span class="command"><span class="term"><strong>integritysetup</strong></span></span>   is a tool to manage dm-integrity (block level integrity) volumes
+  <a id="veritysetup"></a><span class="command"><span class="term"><strong>veritysetup</strong></span></span>         is used to configure dm-verity managed device-mapper mappings. The Device-mapper verity target provides read-only transparent integrity checking of block devices using the kernel crypto API
   ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](cracklib.md "CrackLib-2.10.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](cracklib.md "CrackLib-2.10.3")
 
     CrackLib-2.10.3
 
--   [Next](cyrus-sasl.md "Cyrus SASL-2.1.28"){accesskey="n"}
+-   [Next](cyrus-sasl.md "Cyrus SASL-2.1.28")
 
     Cyrus SASL-2.1.28
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](libnotify.md "libnotify-0.8.8"){accesskey="p"}
+-   [Prev](libnotify.md "libnotify-0.8.8")
 
     libnotify-0.8.8
 
--   [Next](pango.md "Pango-1.57.1"){accesskey="n"}
+-   [Next](pango.md "Pango-1.57.1")
 
     Pango-1.57.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libxklavier}libxklavier-5.4 {#libxklavier-5.4 .sect1}
+# libxklavier-5.4 {#libxklavier-5.4}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libxklavier {#introduction-to-libxklavier .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libxklavier {#introduction-to-libxklavier}
 
-The [libxklavier]{.application} package contains a utility library for [X]{.application} keyboard.
+The <span class="application">libxklavier</span> package contains a utility library for <span class="application">X</span> keyboard.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://people.freedesktop.org/\~svu/libxklavier-5.4.tar.bz2](https://people.freedesktop.org/~svu/libxklavier-5.4.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://people.freedesktop.org/~svu/libxklavier-5.4.tar.bz2">https://people.freedesktop.org/\~svu/libxklavier-5.4.tar.bz2</a>
 
 -   Download MD5 sum: 13af74dcb6011ecedf1e3ed122bd31fa
 
@@ -44,85 +44,85 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.2 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libxklavier Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (GObject Introspection recommended), [ISO Codes-4.20.1](../general/iso-codes.md "ISO Codes-4.20.1"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref} and [Xorg Libraries](x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection recommended), <a class="xref" href="../general/iso-codes.md" title="ISO Codes-4.20.1">ISO Codes-4.20.1</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a> and <a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref} and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
-:::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libxklavier {#installation-of-libxklavier .sect2}
+<div class="installation" lang="en">
+## Installation of libxklavier {#installation-of-libxklavier}
 
-Install [libxklavier]{.application} by running the following commands:
+Install <span class="application">libxklavier</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-gtk-doc`{.option}: This parameter is normally used if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation. It is broken for this package due to the use of a long deprecated gtk-doc program that is no longer available.
-:::
+<code class="option">--enable-gtk-doc</code>: This parameter is normally used if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation. It is broken for this package due to the use of a long deprecated gtk-doc program that is no longer available.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libxklavier.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libxklavier.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libxklavier and /usr/share/gtk-doc/html/libxklavier]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libxklavier and /usr/share/gtk-doc/html/libxklavier</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- --------------------------------
-  []{#libxklavier-lib}[`libxklavier.so`{.filename}]{.term}   contains XKB utility functions
+  <a id="libxklavier-lib"></a><span class="term"><code class="filename">libxklavier.so</code></span>   contains XKB utility functions
   ---------------------------------------------------------- --------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libnotify.md "libnotify-0.8.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libnotify.md "libnotify-0.8.8")
 
     libnotify-0.8.8
 
--   [Next](pango.md "Pango-1.57.1"){accesskey="n"}
+-   [Next](pango.md "Pango-1.57.1")
 
     Pango-1.57.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

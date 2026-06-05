@@ -1,24 +1,24 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 5. File Systems and Disk Management
 
--   [Prev](filesystems.md "File Systems and Disk Management"){accesskey="p"}
+-   [Prev](filesystems.md "File Systems and Disk Management")
 
     File Systems and Disk Management
 
--   [Next](btrfs-progs.md "btrfs-progs-7.0"){accesskey="n"}
+-   [Next](btrfs-progs.md "btrfs-progs-7.0")
 
     btrfs-progs-7.0
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#initramfs}About initramfs {#about-initramfs .sect1}
+# About initramfs {#about-initramfs}
 
-::::: {.sect1 lang="en"}
+<div class="sect1" lang="en">
 The only purpose of an initramfs is to mount the root filesystem. The initramfs is a complete set of directories that you would find on a normal root filesystem. It is bundled into a single cpio archive and compressed with one of several compression algorithms.
 
 At boot time, the boot loader loads the kernel and the initramfs image into memory and starts the kernel. The kernel checks for the presence of the initramfs and, if found, mounts it as / and runs /init. The init program is typically a shell script. Note that the boot process takes longer, possibly significantly longer, if an initramfs is used.
@@ -27,14 +27,14 @@ For most distributions, kernel modules are the biggest reason to have an initram
 
 There are only four primary reasons to have an initramfs in the LFS environment: loading the rootfs from a network, loading it from an LVM logical volume, having an encrypted rootfs where a password is required, or for the convenience of specifying the rootfs as a LABEL or UUID. Anything else usually means that the kernel was not configured properly.
 
-::: {.sect2 lang="en"}
-## []{#initramfs-build}Building an initramfs {#building-an-initramfs .sect2}
+<div class="sect2" lang="en">
+## Building an initramfs {#building-an-initramfs}
 
-If you do decide to build an initramfs, the following scripts will provide a basis to do it. The scripts will allow specifying a rootfs via partition UUID or partition LABEL or a rootfs on an LVM logical volume. They do not support an encrypted root file system or mounting the rootfs over a network card. For a more complete capability see [the LFS Hints](https://www.linuxfromscratch.org/hints/read.md){.ulink} or [dracut](https://fedoraproject.org/wiki/Dracut){.ulink}.
+If you do decide to build an initramfs, the following scripts will provide a basis to do it. The scripts will allow specifying a rootfs via partition UUID or partition LABEL or a rootfs on an LVM logical volume. They do not support an encrypted root file system or mounting the rootfs over a network card. For a more complete capability see <a class="ulink" href="https://www.linuxfromscratch.org/hints/read.md">the LFS Hints</a> or <a class="ulink" href="https://fedoraproject.org/wiki/Dracut">dracut</a>.
 
-To install these scripts, run the following commands as the `root`{.systemitem} user:
+To install these scripts, run the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /usr/sbin/mkinitramfs << "EOF"
 #!/bin/bash
 # This file based in part on the mkinitramfs script for the LFS LiveCD
@@ -268,7 +268,7 @@ EOF
 chmod 0755 /usr/sbin/mkinitramfs
 ```
 
-``` root
+```bash
 mkdir -p /usr/share/mkinitramfs &&
 cat > /usr/share/mkinitramfs/init.in << "EOF"
 #!/bin/sh
@@ -400,34 +400,34 @@ exec switch_root /.root "$init" "$@"
 
 EOF
 ```
-:::
+</div>
 
-::: {.sect2 lang="en"}
-## []{#initramfs-install}Using an initramfs {#using-an-initramfs .sect2}
+<div class="sect2" lang="en">
+## Using an initramfs {#using-an-initramfs}
 
 ### Required Runtime Dependency
 
-[cpio-2.15](../general/cpio.md "cpio-2.15"){.xref}
+<a class="xref" href="../general/cpio.md" title="cpio-2.15">cpio-2.15</a>
 
 ### Other Runtime Dependencies
 
-[LVM2-2.03.41](lvm2.md "LVM2-2.03.41"){.xref} and/or [mdadm-4.6](mdadm.md "mdadm-4.6"){.xref} must be installed before generating the initramfs, if the system partition uses them.
+<a class="xref" href="lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a> and/or <a class="xref" href="mdadm.md" title="mdadm-4.6">mdadm-4.6</a> must be installed before generating the initramfs, if the system partition uses them.
 
-To build an initramfs, run the following as the `root`{.systemitem} user:
+To build an initramfs, run the following as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 mkinitramfs [KERNEL VERSION]
 ```
 
-The optional argument is the directory where the appropriate kernel modules are located. This must be a subdirectory of `/lib/modules`{.filename}. If no modules are specified, then the initramfs is named [*initrd.img-no-kmods*]{.emphasis}. If a kernel version is specified, the initrd is named [*initrd.img-\$KERNEL_VERSION*]{.emphasis} and is only appropriate for the specific kernel specified. The output file will be placed in the current directory.
+The optional argument is the directory where the appropriate kernel modules are located. This must be a subdirectory of <code class="filename">/lib/modules</code>. If no modules are specified, then the initramfs is named <span class="emphasis"><em>initrd.img-no-kmods</em></span>. If a kernel version is specified, the initrd is named <span class="emphasis"><em>initrd.img-\$KERNEL_VERSION</em></span> and is only appropriate for the specific kernel specified. The output file will be placed in the current directory.
 
-If early loading of microcode is needed (see [the section called “Microcode updates for CPUs”](firmware.md#cpu-microcode "Microcode updates for CPUs"){.xref}), you can install the appropriate blob or container in `/lib/firmware`{.filename}. It will be automatically added to the initrd when running [**mkinitramfs**]{.command}.
+If early loading of microcode is needed (see <a class="xref" href="firmware.md#cpu-microcode" title="Microcode updates for CPUs">the section called “Microcode updates for CPUs”</a>), you can install the appropriate blob or container in <code class="filename">/lib/firmware</code>. It will be automatically added to the initrd when running <span class="command"><strong>mkinitramfs</strong></span>.
 
-After generating the initrd, copy it to the `/boot`{.filename} directory.
+After generating the initrd, copy it to the <code class="filename">/boot</code> directory.
 
-Now edit `/boot/grub/grub.cfg`{.filename} and add a new menuentry. Below are several examples.
+Now edit <code class="filename">/boot/grub/grub.cfg</code> and add a new menuentry. Below are several examples.
 
-``` userinput
+```bash
 # Generic initramfs and root fs identified by UUID
 menuentry "LFS Dev (LFS-7.0-Feb14) initrd, Linux 3.0.4"
 {
@@ -436,7 +436,7 @@ menuentry "LFS Dev (LFS-7.0-Feb14) initrd, Linux 3.0.4"
 }
 ```
 
-``` userinput
+```bash
 # Generic initramfs and root fs on LVM partition
 menuentry "LFS Dev (LFS-7.0-Feb18) initrd lvm, Linux 3.0.4"
 {
@@ -445,7 +445,7 @@ menuentry "LFS Dev (LFS-7.0-Feb18) initrd lvm, Linux 3.0.4"
 }
 ```
 
-``` userinput
+```bash
 # Specific initramfs and root fs identified by LABEL
 menuentry "LFS Dev (LFS-7.1-Feb20) initrd label, Linux 3.2.6"
 {
@@ -455,19 +455,19 @@ menuentry "LFS Dev (LFS-7.1-Feb20) initrd label, Linux 3.2.6"
 ```
 
 Finally, reboot the system and select the desired system.
-:::
-:::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](filesystems.md "File Systems and Disk Management"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](filesystems.md "File Systems and Disk Management")
 
     File Systems and Disk Management
 
--   [Next](btrfs-progs.md "btrfs-progs-7.0"){accesskey="n"}
+-   [Next](btrfs-progs.md "btrfs-progs-7.0")
 
     btrfs-progs-7.0
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

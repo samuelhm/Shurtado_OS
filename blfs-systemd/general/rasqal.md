@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](raptor.md "Raptor-2.0.16"){accesskey="p"}
+-   [Prev](raptor.md "Raptor-2.0.16")
 
     Raptor-2.0.16
 
--   [Next](redland.md "Redland-1.0.17"){accesskey="n"}
+-   [Next](redland.md "Redland-1.0.17")
 
     Redland-1.0.17
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#rasqal}Rasqal-0.9.33 {#rasqal-0.9.33 .sect1}
+# Rasqal-0.9.33 {#rasqal-0.9.33}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Rasqal {#introduction-to-rasqal .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Rasqal {#introduction-to-rasqal}
 
-[Rasqal]{.application} is a C library that handles Resource Description Framework (RDF) query language syntaxes, query construction, and execution of queries returning results as bindings, boolean, RDF graphs/triples or syntaxes.
+<span class="application">Rasqal</span> is a C library that handles Resource Description Framework (RDF) query language syntaxes, query construction, and execution of queries returning results as bindings, boolean, RDF graphs/triples or syntaxes.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.librdf.org/source/rasqal-0.9.33.tar.gz](https://download.librdf.org/source/rasqal-0.9.33.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.librdf.org/source/rasqal-0.9.33.tar.gz">https://download.librdf.org/source/rasqal-0.9.33.tar.gz</a>
 
 -   Download MD5 sum: 1f5def51ca0026cd192958ef07228b52
 
@@ -44,84 +44,84 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 22 MB (additional 4 MB for the tests)
 
 -   Estimated build time: 0.3 SBU (additional 0.7 SBU for the tests)
-:::
+</div>
 
 ### Rasqal Dependencies
 
 #### Required
 
-[Raptor-2.0.16](raptor.md "Raptor-2.0.16"){.xref}
+<a class="xref" href="raptor.md" title="Raptor-2.0.16">Raptor-2.0.16</a>
 
 #### Optional
 
-[libgcrypt-1.12.2](libgcrypt.md "libgcrypt-1.12.2"){.xref}
-:::::
+<a class="xref" href="libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Rasqal {#installation-of-rasqal .sect2}
+<div class="installation" lang="en">
+## Installation of Rasqal {#installation-of-rasqal}
 
-Install [Rasqal]{.application} by running the following commands:
+Install <span class="application">Rasqal</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [rasqal-config and roqet]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">rasqal-config and roqet</span>
+</div>
 
-::: seg
-**Installed Library:** [librasqal.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">librasqal.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/rasqal and /usr/share/gtk-doc/html/rasqal]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/rasqal and /usr/share/gtk-doc/html/rasqal</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- --------------------------------------------------------------------------------
-  []{#rasqal-config}[[**rasqal-config**]{.command}]{.term}   is a utility for retrieving the installation options of [Rasqal]{.application}
-  []{#roqet}[[**roqet**]{.command}]{.term}                   is an RDF query utility
+  <a id="rasqal-config"></a><span class="command"><span class="term"><strong>rasqal-config</strong></span></span>   is a utility for retrieving the installation options of <span class="application">Rasqal</span>
+  <a id="roqet"></a><span class="command"><span class="term"><strong>roqet</strong></span></span>                   is an RDF query utility
   ---------------------------------------------------------- --------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](raptor.md "Raptor-2.0.16"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](raptor.md "Raptor-2.0.16")
 
     Raptor-2.0.16
 
--   [Next](redland.md "Redland-1.0.17"){accesskey="n"}
+-   [Next](redland.md "Redland-1.0.17")
 
     Redland-1.0.17
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

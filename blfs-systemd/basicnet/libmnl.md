@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libevent.md "libevent-2.1.12"){accesskey="p"}
+-   [Prev](libevent.md "libevent-2.1.12")
 
     libevent-2.1.12
 
--   [Next](libndp.md "libndp-1.9"){accesskey="n"}
+-   [Next](libndp.md "libndp-1.9")
 
     libndp-1.9
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libmnl}libmnl-1.0.5 {#libmnl-1.0.5 .sect1}
+# libmnl-1.0.5 {#libmnl-1.0.5}
 
-:::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libmnl {#introduction-to-libmnl .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libmnl {#introduction-to-libmnl}
 
-The [libmnl]{.application} library provides a minimalistic userspace library oriented to Netlink developers. There are a lot of common tasks in the parsing, validating, and constructing of both the Netlink header and TLVs that are repetitive and easy to get wrong. This library aims to provide simple helpers that allow you to re-use code and to avoid re-inventing the wheel.
+The <span class="application">libmnl</span> library provides a minimalistic userspace library oriented to Netlink developers. There are a lot of common tasks in the parsing, validating, and constructing of both the Netlink header and TLVs that are repetitive and easy to get wrong. This library aims to provide simple helpers that allow you to re-use code and to avoid re-inventing the wheel.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://netfilter.org/projects/libmnl/files/libmnl-1.0.5.tar.bz2](https://netfilter.org/projects/libmnl/files/libmnl-1.0.5.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://netfilter.org/projects/libmnl/files/libmnl-1.0.5.tar.bz2">https://netfilter.org/projects/libmnl/files/libmnl-1.0.5.tar.bz2</a>
 
 -   Download MD5 sum: 0bbb70573119ec5d49435114583e7a49
 
@@ -44,65 +44,65 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.9 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libnma Dependencies
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libmnl {#installation-of-libmnl .sect2}
+<div class="installation" lang="en">
+## Installation of libmnl {#installation-of-libmnl}
 
-Install [libmnl]{.application} by running the following commands:
+Install <span class="application">libmnl</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Library:** [libmnl.so]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Library:** <span class="segbody">libmnl.so</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ----------------------------------------------------------------------------------------------
-  []{#libmnl-lib}[`libmnl.so`{.filename}]{.term}   provides functions for parsing, validating, constructing of both the Netlink header and TLVs
+  <a id="libmnl-lib"></a><span class="term"><code class="filename">libmnl.so</code></span>   provides functions for parsing, validating, constructing of both the Netlink header and TLVs
   ------------------------------------------------ ----------------------------------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libevent.md "libevent-2.1.12"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libevent.md "libevent-2.1.12")
 
     libevent-2.1.12
 
--   [Next](libndp.md "libndp-1.9"){accesskey="n"}
+-   [Next](libndp.md "libndp-1.9")
 
     libndp-1.9
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

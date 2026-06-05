@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 18. Text Web Browsers
 
--   [Prev](textweb.md "Text Web Browsers"){accesskey="p"}
+-   [Prev](textweb.md "Text Web Browsers")
 
     Text Web Browsers
 
--   [Next](lynx.md "Lynx-2.9.3"){accesskey="n"}
+-   [Next](lynx.md "Lynx-2.9.3")
 
     Lynx-2.9.3
 
--   [Up](textweb.md "Chapter 18. Text Web Browsers"){accesskey="u"}
+-   [Up](textweb.md "Chapter 18. Text Web Browsers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#Links}Links-2.30 {#links-2.30 .sect1}
+# Links-2.30 {#links-2.30}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Links {#introduction-to-links .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Links {#introduction-to-links}
 
-[Links]{.application} is a text and graphics mode WWW browser. It includes support for rendering tables and frames, features background downloads, can display colors and has many other features.
+<span class="application">Links</span> is a text and graphics mode WWW browser. It includes support for rendering tables and frames, features background downloads, can display colors and has many other features.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [http://links.twibright.com/download/links-2.30.tar.bz2](http://links.twibright.com/download/links-2.30.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="http://links.twibright.com/download/links-2.30.tar.bz2">http://links.twibright.com/download/links-2.30.tar.bz2</a>
 
 -   Download MD5 sum: dc56041551980c74dd354cd7c2882539
 
@@ -44,112 +44,112 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 36 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### Links Dependencies
 
 #### Recommended
 
-[libevent-2.1.12](libevent.md "libevent-2.1.12"){.xref}
+<a class="xref" href="libevent.md" title="libevent-2.1.12">libevent-2.1.12</a>
 
 #### Optional
 
-Graphics mode requires at least one of [GPM-1.20.7](../general/gpm.md "GPM-1.20.7"){.xref} (mouse support to be used with a framebuffer-based console), [SVGAlib](https://www.svgalib.org/){.ulink}, [DirectFB](https://pkgs.fedoraproject.org/repo/pkgs/directfb/){.ulink}, and [a graphical environment](../x/installing.md "Chapter 24. Graphical Environments"){.xref}
+Graphics mode requires at least one of <a class="xref" href="../general/gpm.md" title="GPM-1.20.7">GPM-1.20.7</a> (mouse support to be used with a framebuffer-based console), <a class="ulink" href="https://www.svgalib.org/">SVGAlib</a>, <a class="ulink" href="https://pkgs.fedoraproject.org/repo/pkgs/directfb/">DirectFB</a>, and <a class="xref" href="../x/installing.md" title="Chapter 24. Graphical Environments">a graphical environment</a>
 
-For decoding various image formats [Links]{.application} can utilize [libavif-1.4.2](../general/libavif.md "libavif-1.4.2"){.xref}, [libpng-1.6.58](../general/libpng.md "libpng-1.6.58"){.xref}, [libjpeg-turbo-3.1.4.1](../general/libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [librsvg-2.62.3](../general/librsvg.md "librsvg-2.62.3"){.xref}, and [libtiff-4.7.1](../general/libtiff.md "libtiff-4.7.1"){.xref}
+For decoding various image formats <span class="application">Links</span> can utilize <a class="xref" href="../general/libavif.md" title="libavif-1.4.2">libavif-1.4.2</a>, <a class="xref" href="../general/libpng.md" title="libpng-1.6.58">libpng-1.6.58</a>, <a class="xref" href="../general/libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="../general/librsvg.md" title="librsvg-2.62.3">librsvg-2.62.3</a>, and <a class="xref" href="../general/libtiff.md" title="libtiff-4.7.1">libtiff-4.7.1</a>
 
-For decompressing web pages that are compressed with Brotli, [Links]{.application} can utilize [Brotli-1.2.0](../general/brotli.md "brotli-1.2.0"){.xref}
-:::::
+For decompressing web pages that are compressed with Brotli, <span class="application">Links</span> can utilize <a class="xref" href="../general/brotli.md" title="brotli-1.2.0">Brotli-1.2.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Links {#installation-of-links .sect2}
+<div class="installation" lang="en">
+## Installation of Links {#installation-of-links}
 
 First, fix an issue introduced by glibc-2.43 and higher:
 
-``` userinput
+```bash
 sed '/*strchr/s/cast_const_char //g' -i ftp.c
 ```
 
-Install [Links]{.application} by running the following commands:
+Install <span class="application">Links</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --mandir=/usr/share/man &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -d -m755 /usr/share/doc/links-2.30 &&
 install -v -m644 doc/links_cal/* KEYS BRAILLE_HOWTO \
     /usr/share/doc/links-2.30
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`--enable-graphics`{.option}: This switch enables support for graphics mode.
-:::
+<code class="option">--enable-graphics</code>: This switch enables support for graphics mode.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Links {#configuring-links .sect2}
+<div class="configuration" lang="en">
+## Configuring Links {#configuring-links}
 
-::: {.sect3 lang="en"}
-### []{#links-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`~/.links/*`{.filename}
-:::
+<code class="filename">~/.links/*</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-[Links]{.application} stores its configuration in per-user files in the `~/.links`{.filename} directory. These files are created automatically when [**links**]{.command} is run for the first time.
-:::
-:::::
+<span class="application">Links</span> stores its configuration in per-user files in the <code class="filename">~/.links</code> directory. These files are created automatically when <span class="command"><strong>links</strong></span> is run for the first time.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [links]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">links</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/links-2.30]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/links-2.30</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------ -----------------------------------------
-  []{#links}[[**links**]{.command}]{.term}   is a text and graphics mode WWW browser
+  <a id="links"></a><span class="command"><span class="term"><strong>links</strong></span></span>   is a text and graphics mode WWW browser
   ------------------------------------------ -----------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](textweb.md "Text Web Browsers"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](textweb.md "Text Web Browsers")
 
     Text Web Browsers
 
--   [Next](lynx.md "Lynx-2.9.3"){accesskey="n"}
+-   [Next](lynx.md "Lynx-2.9.3")
 
     Lynx-2.9.3
 
--   [Up](textweb.md "Chapter 18. Text Web Browsers"){accesskey="u"}
+-   [Up](textweb.md "Chapter 18. Text Web Browsers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

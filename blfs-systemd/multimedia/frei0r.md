@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](flac.md "FLAC-1.5.0"){accesskey="p"}
+-   [Prev](flac.md "FLAC-1.5.0")
 
     FLAC-1.5.0
 
--   [Next](gavl.md "gavl-1.4.0"){accesskey="n"}
+-   [Next](gavl.md "gavl-1.4.0")
 
     gavl-1.4.0
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#frei0r}frei0r-3.1.3 {#frei0r-3.1.3 .sect1}
+# frei0r-3.1.3 {#frei0r-3.1.3}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Frei0r {#introduction-to-frei0r .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Frei0r {#introduction-to-frei0r}
 
-[Frei0r]{.application} is a minimalistic plugin API for video effects. Note that the 0 in the name is a zero, not a capital letter o.
+<span class="application">Frei0r</span> is a minimalistic plugin API for video effects. Note that the 0 in the name is a zero, not a capital letter o.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/dyne/frei0r/archive/v3.1.3/frei0r-3.1.3.tar.gz](https://github.com/dyne/frei0r/archive/v3.1.3/frei0r-3.1.3.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/dyne/frei0r/archive/v3.1.3/frei0r-3.1.3.tar.gz">https://github.com/dyne/frei0r/archive/v3.1.3/frei0r-3.1.3.tar.gz</a>
 
 -   Download MD5 sum: 286941063d19126504ca8ebfd11a7985
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 54 MB
 
 -   Estimated build time: 0.4 SBU
-:::
+</div>
 
 ### Frei0r Dependencies
 
 #### Recommended
 
-[gavl-1.4.0](gavl.md "gavl-1.4.0"){.xref} and [opencv-4.13.0](../general/opencv.md "opencv-4.13.0"){.xref}
+<a class="xref" href="gavl.md" title="gavl-1.4.0">gavl-1.4.0</a> and <a class="xref" href="../general/opencv.md" title="opencv-4.13.0">opencv-4.13.0</a>
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of frei0r {#installation-of-frei0r .sect2}
+<div class="installation" lang="en">
+## Installation of frei0r {#installation-of-frei0r}
 
-Install [Frei0r]{.application} by running the following commands:
+Install <span class="application">Frei0r</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir -vp build &&
 cd        build &&
 
@@ -75,52 +75,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`-D WITHOUT_OPENCV=TRUE`{.option}: This option instructs the make procedure to disable building plugins dependent upon opencv.
+<code class="option">-D WITHOUT_OPENCV=TRUE</code>: This option instructs the make procedure to disable building plugins dependent upon opencv.
 
-`-D WITHOUT_GAVL=TRUE`{.option}: This option instructs the make procedure to disable building plugins dependent upon gavl.
-:::
+<code class="option">-D WITHOUT_GAVL=TRUE</code>: This option instructs the make procedure to disable building plugins dependent upon gavl.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Over 150 video effects plugins]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">Over 150 video effects plugins</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/frei0r-1]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/frei0r-1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](flac.md "FLAC-1.5.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](flac.md "FLAC-1.5.0")
 
     FLAC-1.5.0
 
--   [Next](gavl.md "gavl-1.4.0"){accesskey="n"}
+-   [Next](gavl.md "gavl-1.4.0")
 
     gavl-1.4.0
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

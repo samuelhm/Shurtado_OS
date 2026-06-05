@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 44. Video Utilities
 
--   [Prev](vlc.md "VLC-3.0.23"){accesskey="p"}
+-   [Prev](vlc.md "VLC-3.0.23")
 
     VLC-3.0.23
 
--   [Next](cdwriteutils.md "CD/DVD-Writing Utilities"){accesskey="n"}
+-   [Next](cdwriteutils.md "CD/DVD-Writing Utilities")
 
     CD/DVD-Writing Utilities
 
--   [Up](videoutils.md "Chapter 44. Video Utilities"){accesskey="u"}
+-   [Up](videoutils.md "Chapter 44. Video Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xine-ui}xine-ui-0.99.14 {#xine-ui-0.99.14 .sect1}
+# xine-ui-0.99.14 {#xine-ui-0.99.14}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Xine User Interface {#introduction-to-xine-user-interface .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xine User Interface {#introduction-to-xine-user-interface}
 
-The [xine User Interface]{.application} package contains a multimedia player. It plays back CDs, DVDs and VCDs. It also decodes multimedia files like AVI, MOV, WMV, MPEG and MP3 from local disk drives, and displays multimedia streamed over the Internet.
+The <span class="application">xine User Interface</span> package contains a multimedia player. It plays back CDs, DVDs and VCDs. It also decodes multimedia files like AVI, MOV, WMV, MPEG and MP3 from local disk drives, and displays multimedia streamed over the Internet.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Although this version of xine-ui works with most files, it is unable to open encrypted (content-scrambled) DVDs with the current version of libdvdcss.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/xine/xine-ui-0.99.14.tar.xz](https://downloads.sourceforge.net/xine/xine-ui-0.99.14.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/xine/xine-ui-0.99.14.tar.xz">https://downloads.sourceforge.net/xine/xine-ui-0.99.14.tar.xz</a>
 
 -   Download MD5 sum: 86a4db9050405a91fcc33b7ad85274f5
 
@@ -52,120 +52,120 @@ Although this version of xine-ui works with most files, it is unable to open enc
 -   Estimated disk space required: 23 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### Xine User Interface Dependencies
 
 #### Required
 
-[xine-lib-1.2.13](xine-lib.md "xine-lib-1.2.13"){.xref} and [shared-mime-info-2.4](../general/shared-mime-info.md "shared-mime-info-2.4"){.xref}
+<a class="xref" href="xine-lib.md" title="xine-lib-1.2.13">xine-lib-1.2.13</a> and <a class="xref" href="../general/shared-mime-info.md" title="shared-mime-info-2.4">shared-mime-info-2.4</a>
 
 #### Optional
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}, [AAlib-1.4rc5](../general/aalib.md "AAlib-1.4rc5"){.xref}, [LIRC](https://www.lirc.org){.ulink}, and [libcaca](https://github.com/cacalabs/libcaca){.ulink}
-::::::
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="../general/aalib.md" title="AAlib-1.4rc5">AAlib-1.4rc5</a>, <a class="ulink" href="https://www.lirc.org">LIRC</a>, and <a class="ulink" href="https://github.com/cacalabs/libcaca">libcaca</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Xine User Interface {#installation-of-xine-user-interface .sect2}
+<div class="installation" lang="en">
+## Installation of Xine User Interface {#installation-of-xine-user-interface}
 
-Install [xine User Interface]{.application} by running the following commands:
+Install <span class="application">xine User Interface</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make CC="gcc -std=gnu17"
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make docsdir=/usr/share/doc/xine-ui-0.99.14 install
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-This package installs icon files into the `/usr/share/icons/hicolor`{.filename} hierarchy and desktop files into the `/usr/share/applications`{.filename} hierarchy. You can improve system performance and memory usage by updating `/usr/share/icons/hicolor/index.theme`{.filename} and `/usr/share/applications/mimeinfo.cache`{.filename}. To perform the update you must have [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} installed (for the icon cache) and [desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref} (for the desktop cache) and issue the following commands as the `root`{.systemitem} user:
+This package installs icon files into the <code class="filename">/usr/share/icons/hicolor</code> hierarchy and desktop files into the <code class="filename">/usr/share/applications</code> hierarchy. You can improve system performance and memory usage by updating <code class="filename">/usr/share/icons/hicolor/index.theme</code> and <code class="filename">/usr/share/applications/mimeinfo.cache</code>. To perform the update you must have <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> installed (for the icon cache) and <a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a> (for the desktop cache) and issue the following commands as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 gtk-update-icon-cache -qtf /usr/share/icons/hicolor &&
 update-desktop-database -q
 ```
-:::
-::::
+</div>
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`docsdir=/usr/share/doc/xine-ui-0.99.14`*: This parameter causes the [Xine UI]{.application} documentation to be installed in the versioned directory `/usr/share/doc/xine-ui-0.99.14`{.filename}, rather that the default `/usr/share/doc/xine-ui`{.filename}.
-:::
+*`docsdir=/usr/share/doc/xine-ui-0.99.14`*: This parameter causes the <span class="application">Xine UI</span> documentation to be installed in the versioned directory <code class="filename">/usr/share/doc/xine-ui-0.99.14</code>, rather that the default <code class="filename">/usr/share/doc/xine-ui</code>.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Xine User Interface {#configuring-xine-user-interface .sect2}
+<div class="configuration" lang="en">
+## Configuring Xine User Interface {#configuring-xine-user-interface}
 
-::: {.sect3 lang="en"}
-### []{#xine-ui-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`~/.xine/config`{.filename}
-:::
+<code class="filename">~/.xine/config</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-The above file is created and maintainable through the [**xine**]{.command} setup dialog box. The documentation for the configuration settings is located at `/usr/share/doc/xine-ui-0.99.14/README.config_en`{.filename}.
+The above file is created and maintainable through the <span class="command"><strong>xine</strong></span> setup dialog box. The documentation for the configuration settings is located at <code class="filename">/usr/share/doc/xine-ui-0.99.14/README.config_en</code>.
 
-If you have a DVB TV card, you can watch TV with the command [**xine dvb://**]{.command} and change channels with the scroll wheel on your mouse.
-:::
-:::::
+If you have a DVB TV card, you can watch TV with the command <span class="command"><strong>xine dvb://</strong></span> and change channels with the scroll wheel on your mouse.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [aaxine, cacaxine, fbxine, xine, xine-bugreport, xine-check, and xine-remote]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">aaxine, cacaxine, fbxine, xine, xine-bugreport, xine-check, and xine-remote</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/xine and /usr/share/doc/xine-ui-0.99.14]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/xine and /usr/share/doc/xine-ui-0.99.14</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#aaxine}[[**aaxine**]{.command}]{.term}                   is an ASCII art video player which utilizes [AAlib]{.application} as the frontend for the [xine Libraries]{.application}
-  []{#cacaxine}[[**cacaxine**]{.command}]{.term}               is a color ASCII art video player which utilizes [CACA]{.application} as the frontend for the [xine Libraries]{.application}
-  []{#fbxine}[[**fbxine**]{.command}]{.term}                   is a frame buffer interface to the [xine Libraries]{.application}
-  []{#xine}[[**xine**]{.command}]{.term}                       is a multimedia player designed to play MPEG streams (audio and video), MPEG elementary streams (MP3), MPEG transport streams, Ogg files, AVI files, ASF files, some Quicktime files, VCDs and DVDs
-  []{#xine-bugreport}[[**xine-bugreport**]{.command}]{.term}   produces a terse system description and guides you through the process of reporting a bug
-  []{#xine-check}[[**xine-check**]{.command}]{.term}           tests the [**xine**]{.command} video player installation for common problems. It tests the operating system settings, installation of plugins, CD/DVD drive settings and video support parameters
-  []{#xine-remote}[[**xine-remote**]{.command}]{.term}         is a tool to connect to a [**xine**]{.command} remote control server
+  <a id="aaxine"></a><span class="command"><span class="term"><strong>aaxine</strong></span></span>                   is an ASCII art video player which utilizes <span class="application">AAlib</span> as the frontend for the <span class="application">xine Libraries</span>
+  <a id="cacaxine"></a><span class="command"><span class="term"><strong>cacaxine</strong></span></span>               is a color ASCII art video player which utilizes <span class="application">CACA</span> as the frontend for the <span class="application">xine Libraries</span>
+  <a id="fbxine"></a><span class="command"><span class="term"><strong>fbxine</strong></span></span>                   is a frame buffer interface to the <span class="application">xine Libraries</span>
+  <a id="xine"></a><span class="command"><span class="term"><strong>xine</strong></span></span>                       is a multimedia player designed to play MPEG streams (audio and video), MPEG elementary streams (MP3), MPEG transport streams, Ogg files, AVI files, ASF files, some Quicktime files, VCDs and DVDs
+  <a id="xine-bugreport"></a><span class="command"><span class="term"><strong>xine-bugreport</strong></span></span>   produces a terse system description and guides you through the process of reporting a bug
+  <a id="xine-check"></a><span class="command"><span class="term"><strong>xine-check</strong></span></span>           tests the <span class="command"><strong>xine</strong></span> video player installation for common problems. It tests the operating system settings, installation of plugins, CD/DVD drive settings and video support parameters
+  <a id="xine-remote"></a><span class="command"><span class="term"><strong>xine-remote</strong></span></span>         is a tool to connect to a <span class="command"><strong>xine</strong></span> remote control server
   ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](vlc.md "VLC-3.0.23"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](vlc.md "VLC-3.0.23")
 
     VLC-3.0.23
 
--   [Next](cdwriteutils.md "CD/DVD-Writing Utilities"){accesskey="n"}
+-   [Next](cdwriteutils.md "CD/DVD-Writing Utilities")
 
     CD/DVD-Writing Utilities
 
--   [Up](videoutils.md "Chapter 44. Video Utilities"){accesskey="u"}
+-   [Up](videoutils.md "Chapter 44. Video Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 10. Graphics and Font Libraries
 
--   [Prev](glycin.md "glycin-2.1.1"){accesskey="p"}
+-   [Prev](glycin.md "glycin-2.1.1")
 
     glycin-2.1.1
 
--   [Next](graphite2.md "Graphite2-1.3.14"){accesskey="n"}
+-   [Next](graphite2.md "Graphite2-1.3.14")
 
     Graphite2-1.3.14
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#glycin-gtk4}libglycin-gtk4 from glycin-2.1.1 {#libglycin-gtk4-from-glycin-2.1.1 .sect1}
+# libglycin-gtk4 from glycin-2.1.1 {#libglycin-gtk4-from-glycin-2.1.1}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libglycin-gtk4 {#introduction-to-libglycin-gtk4 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libglycin-gtk4 {#introduction-to-libglycin-gtk4}
 
-The `libglycin-gtk4`{.systemitem} library provides GTK-4 integration for [glycin-2.1.1](glycin.md "glycin-2.1.1"){.xref}.
+The <code class="systemitem">libglycin-gtk4</code> library provides GTK-4 integration for <a class="xref" href="glycin.md" title="glycin-2.1.1">glycin-2.1.1</a>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/glycin/2.1/glycin-2.1.1.tar.xz](https://download.gnome.org/sources/glycin/2.1/glycin-2.1.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/glycin/2.1/glycin-2.1.1.tar.xz">https://download.gnome.org/sources/glycin/2.1/glycin-2.1.1.tar.xz</a>
 
 -   Download MD5 sum: 411550c5da777a952bb6c811fd882156
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 670 MB (with documentation)
 
 -   Estimated build time: 2.0 SBU (with documentation)
-:::
+</div>
 
 ### glycin Dependencies
 
 #### Required
 
-[glycin-2.1.1](glycin.md "glycin-2.1.1"){.xref} and [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}
+<a class="xref" href="glycin.md" title="glycin-2.1.1">glycin-2.1.1</a> and <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>
 
 #### Recommended
 
-[Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for building this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before building this package.
-:::
-::::::
+An Internet connection is needed for building this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before building this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libglycin-gtk4 {#installation-of-libglycin-gtk4 .sect2}
+<div class="installation" lang="en">
+## Installation of libglycin-gtk4 {#installation-of-libglycin-gtk4}
 
-Install `libglycin-gtk4`{.systemitem} by running the following commands:
+Install <code class="systemitem">libglycin-gtk4</code> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -83,9 +83,9 @@ meson setup --prefix=/usr               \
 ninja
 ```
 
-If you have installed [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, you can build the documentation by issuing:
+If you have installed <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, you can build the documentation by issuing:
 
-``` userinput
+```bash
 sed "/install_dir:.*doc/s|,$| / 'glycin-' + meson.project_version()&|" \
     -i ../libglycin/meson.build &&
 
@@ -95,56 +95,56 @@ ninja
 
 This package does not come with a test suite.
 
-Now as the `root`{.systemitem} user:
+Now as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D *=false`*: These parameters disable the components already installed as a part of [glycin-2.1.1](glycin.md "glycin-2.1.1"){.xref}.
+*`-D *=false`*: These parameters disable the components already installed as a part of <a class="xref" href="glycin.md" title="glycin-2.1.1">glycin-2.1.1</a>.
 
-`-D vapi=false`{.option}: This option allows building this package without [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref} installed.
-:::
+<code class="option">-D vapi=false</code>: This option allows building this package without <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a> installed.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-:::::: segmentedlist
-::::: seglistitem
-::: seg
-**Installed Library:** [libglycin-gtk4-2.so]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Library:** <span class="segbody">libglycin-gtk4-2.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/glycin-gtk4-2 and /usr/share/doc/glycin-2.1.1/libglycin-gtk-2]{.segbody}
-:::
-:::::
-::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/glycin-gtk4-2 and /usr/share/doc/glycin-2.1.1/libglycin-gtk-2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- -------------------------------------------------------------------
-  []{#libglycin-gtk4-2}[`libglycin-gtk4-2.so`{.filename}]{.term}   provides API functions to convert glycin frames to GDK 4 textures
+  <a id="libglycin-gtk4-2"></a><span class="term"><code class="filename">libglycin-gtk4-2.so</code></span>   provides API functions to convert glycin frames to GDK 4 textures
   ---------------------------------------------------------------- -------------------------------------------------------------------
-:::
-::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](glycin.md "glycin-2.1.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](glycin.md "glycin-2.1.1")
 
     glycin-2.1.1
 
--   [Next](graphite2.md "Graphite2-1.3.14"){accesskey="n"}
+-   [Next](graphite2.md "Graphite2-1.3.14")
 
     Graphite2-1.3.14
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

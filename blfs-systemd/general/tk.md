@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](swig.md "SWIG-4.4.1"){accesskey="p"}
+-   [Prev](swig.md "SWIG-4.4.1")
 
     SWIG-4.4.1
 
--   [Next](unifdef.md "unifdef-2.12"){accesskey="n"}
+-   [Next](unifdef.md "unifdef-2.12")
 
     unifdef-2.12
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#tk}Tk-8.6.18 {#tk-8.6.18 .sect1}
+# Tk-8.6.18 {#tk-8.6.18}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Tk {#introduction-to-tk .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Tk {#introduction-to-tk}
 
-The [Tk]{.application} package contains a TCL GUI Toolkit.
+The <span class="application">Tk</span> package contains a TCL GUI Toolkit.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/tcl/tk8.6.18-src.tar.gz](https://downloads.sourceforge.net/tcl/tk8.6.18-src.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/tcl/tk8.6.18-src.tar.gz">https://downloads.sourceforge.net/tcl/tk8.6.18-src.tar.gz</a>
 
 -   Download MD5 sum: 63a13111a136118ec72faee1228143e6
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 32 MB
 
 -   Estimated build time: 0.3 SBU (add 5.6 SBU for tests)
-:::
+</div>
 
 ### Tk Dependencies
 
 #### Required
 
-[Xorg Libraries](../x/x7lib.md "Xorg Libraries"){.xref}
-:::::
+<a class="xref" href="../x/x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Tk {#installation-of-tk .sect2}
+<div class="installation" lang="en">
+## Installation of Tk {#installation-of-tk}
 
-Install [Tk]{.application} by running the following commands:
+Install <span class="application">Tk</span> by running the following commands:
 
-``` userinput
+```bash
 cd unix &&
 ./configure --prefix=/usr \
             --mandir=/usr/share/man \
@@ -71,71 +71,71 @@ sed -e "s@^\(TK_SRC_DIR='\).*@\1/usr/include'@" \
     -i tkConfig.sh
 ```
 
-Running the tests is not recommended. Failures will be reported during the tests, depending on the screen resolution/capabilities, fonts installed and other X related parameters, but the end report can show 0 failures. Some tests will steal focus and some might crash your X Server. To test the results anyway, issue: [**make test**]{.command}. Ensure you run it from an X Window display device with the GLX extensions loaded, but even so, tests might hang.
+Running the tests is not recommended. Failures will be reported during the tests, depending on the screen resolution/capabilities, fonts installed and other X related parameters, but the end report can show 0 failures. Some tests will steal focus and some might crash your X Server. To test the results anyway, issue: <span class="command"><strong>make test</strong></span>. Ensure you run it from an X Window display device with the GLX extensions loaded, but even so, tests might hang.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install                      &&
 make install-private-headers      &&
 ln -v -sf wish8.6 /usr/bin/wish   &&
 chmod -v 755 /usr/lib/libtk8.6.so
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--enable-64bit`*: This switch is used to enable 64 bit support in [Tk]{.application} on 64 bit operating systems.
+*`--enable-64bit`*: This switch is used to enable 64 bit support in <span class="application">Tk</span> on 64 bit operating systems.
 
-[**make install-private-headers**]{.command}: This command is used to install the [Tk]{.application} library interface headers used by other packages if they link to the [Tk]{.application} library.
+<span class="command"><strong>make install-private-headers</strong></span>: This command is used to install the <span class="application">Tk</span> library interface headers used by other packages if they link to the <span class="application">Tk</span> library.
 
-[**ln -v -sf wish8.6 /usr/bin/wish**]{.command}: This command is used to create a compatibility symbolic link to the [**wish8.6**]{.command} file as many packages expect a file named [**wish**]{.command}.
+<span class="command"><strong>ln -v -sf wish8.6 /usr/bin/wish</strong></span>: This command is used to create a compatibility symbolic link to the <span class="command"><strong>wish8.6</strong></span> file as many packages expect a file named <span class="command"><strong>wish</strong></span>.
 
-[**sed -e ... tkConfig.sh**]{.command}: The [Tk]{.application} package expects that its source tree is preserved so that packages depending on it for their compilation can utilize it. This [**sed**]{.command} removes the references to the build directory and replaces them with saner system-wide locations.
-:::
+<span class="command"><strong>sed -e ... tkConfig.sh</strong></span>: The <span class="application">Tk</span> package expects that its source tree is preserved so that packages depending on it for their compilation can utilize it. This <span class="command"><strong>sed</strong></span> removes the references to the build directory and replaces them with saner system-wide locations.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [wish and wish8.6]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">wish and wish8.6</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libtk8.6.so and libtkstub8.6.a]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libtk8.6.so and libtkstub8.6.a</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/lib/tk8.6]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/lib/tk8.6</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
-  []{#wish}[[**wish**]{.command}]{.term}            is a symlink to the [**wish8.6**]{.command} program
-  []{#wish-eight}[[**wish8.6**]{.command}]{.term}   is a simple shell containing the [Tk]{.application} toolkit that creates a main window and then processes [Tcl]{.application} commands
-  []{#libtk}[`libtk8.6.so`{.filename}]{.term}       contains the API functions required by [Tk]{.application}
+  <a id="wish"></a><span class="command"><span class="term"><strong>wish</strong></span></span>            is a symlink to the <span class="command"><strong>wish8.6</strong></span> program
+  <a id="wish-eight"></a><span class="command"><span class="term"><strong>wish8.6</strong></span></span>   is a simple shell containing the <span class="application">Tk</span> toolkit that creates a main window and then processes <span class="application">Tcl</span> commands
+  <a id="libtk"></a><span class="term"><code class="filename">libtk8.6.so</code></span>       contains the API functions required by <span class="application">Tk</span>
   ------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](swig.md "SWIG-4.4.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](swig.md "SWIG-4.4.1")
 
     SWIG-4.4.1
 
--   [Next](unifdef.md "unifdef-2.12"){accesskey="n"}
+-   [Next](unifdef.md "unifdef-2.12")
 
     unifdef-2.12
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

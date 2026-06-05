@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 41. Other X-based Programs
 
--   [Prev](balsa.md "Balsa-2.6.5"){accesskey="p"}
+-   [Prev](balsa.md "Balsa-2.6.5")
 
     Balsa-2.6.5
 
--   [Next](fontforge.md "FontForge-20251009"){accesskey="n"}
+-   [Next](fontforge.md "FontForge-20251009")
 
     FontForge-20251009
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#feh}feh-3.12.2 {#feh-3.12.2 .sect1}
+# feh-3.12.2 {#feh-3.12.2}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to feh {#introduction-to-feh .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to feh {#introduction-to-feh}
 
-[feh]{.application} is a fast, lightweight image viewer which uses Imlib2. It is commandline-driven and supports multiple images through slideshows, thumbnail browsing or multiple windows, and montages or index prints (using TrueType fonts to display file info). Advanced features include fast dynamic zooming, progressive loading, loading via HTTP (with reload support for watching webcams), recursive file opening (slideshow of a directory hierarchy), and mouse wheel/keyboard control.
+<span class="application">feh</span> is a fast, lightweight image viewer which uses Imlib2. It is commandline-driven and supports multiple images through slideshows, thumbnail browsing or multiple windows, and montages or index prints (using TrueType fonts to display file info). Advanced features include fast dynamic zooming, progressive loading, loading via HTTP (with reload support for watching webcams), recursive file opening (slideshow of a directory hierarchy), and mouse wheel/keyboard control.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://feh.finalrewind.org/feh-3.12.2.tar.bz2](https://feh.finalrewind.org/feh-3.12.2.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://feh.finalrewind.org/feh-3.12.2.tar.bz2">https://feh.finalrewind.org/feh-3.12.2.tar.bz2</a>
 
 -   Download MD5 sum: 6cc0868b091ea3a73617be64c0a85e27
 
@@ -44,99 +44,99 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.5 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
+</div>
 
 ### feh Dependencies
 
 #### Required
 
-[libpng-1.6.58](../general/libpng.md "libpng-1.6.58"){.xref} and [imlib2-1.12.6](../x/imlib2.md "imlib2-1.12.6"){.xref} (built with [giflib-6.1.3](../general/giflib.md "giflib-6.1.3"){.xref} support, for the tests)
+<a class="xref" href="../general/libpng.md" title="libpng-1.6.58">libpng-1.6.58</a> and <a class="xref" href="../x/imlib2.md" title="imlib2-1.12.6">imlib2-1.12.6</a> (built with <a class="xref" href="../general/giflib.md" title="giflib-6.1.3">giflib-6.1.3</a> support, for the tests)
 
 #### Recommended
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>
 
 #### Optional
 
-[libexif-0.6.26](../general/libexif.md "libexif-0.6.26"){.xref}
+<a class="xref" href="../general/libexif.md" title="libexif-0.6.26">libexif-0.6.26</a>
 
 #### Optional (runtime)
 
-[libjpeg-turbo-3.1.4.1](../general/libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref} (for lossless image rotation) and [ImageMagick-7.1.2-13](../general/imagemagick.md "ImageMagick-7.1.2-13"){.xref} (to load unsupported formats)
+<a class="xref" href="../general/libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a> (for lossless image rotation) and <a class="xref" href="../general/imagemagick.md" title="ImageMagick-7.1.2-13">ImageMagick-7.1.2-13</a> (to load unsupported formats)
 
 #### Optional (test suite)
 
-[Test-Command-0.11](../general/perl-modules.md#perl-test-command "Test::Command-0.11"){.xref} (required) and [mandoc](https://mandoc.bsd.lv/){.ulink} (optional)
-:::::
+<a class="xref" href="../general/perl-modules.md#perl-test-command" title="Test::Command-0.11">Test-Command-0.11</a> (required) and <a class="ulink" href="https://mandoc.bsd.lv/">mandoc</a> (optional)
+</div>
 
-::: {.installation lang="en"}
-## Installation of feh {#installation-of-feh .sect2}
+<div class="installation" lang="en">
+## Installation of feh {#installation-of-feh}
 
-Install [feh]{.application} by running the following commands:
+Install <span class="application">feh</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i "s:doc/feh:&-3.12.2:" config.mk &&
 make PREFIX=/usr
 ```
 
-To test the results, issue: [**make test**]{.command}.
+To test the results, issue: <span class="command"><strong>make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make PREFIX=/usr install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i "s:doc/feh:&-3.12.2:" config.mk**]{.command}: This sed fixes the doc directory to a versioned one, as used in BLFS.
+<span class="command"><strong>sed -i "s:doc/feh:&-3.12.2:" config.mk</strong></span>: This sed fixes the doc directory to a versioned one, as used in BLFS.
 
-`curl=0`{.option}: Use this make flag if you don't have the cURL package installed.
+<code class="option">curl=0</code>: Use this make flag if you don't have the cURL package installed.
 
-`exif=1`{.option}: This make flag enables builtin Exif tag display support.
-:::
+<code class="option">exif=1</code>: This make flag enables builtin Exif tag display support.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [feh]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">feh</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/feh-3.12.2 and /usr/share/feh]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/feh-3.12.2 and /usr/share/feh</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------- -----------------------------------
-  []{#feh-prog}[[**feh**]{.command}]{.term}   is an image viewer and cataloguer
+  <a id="feh-prog"></a><span class="command"><span class="term"><strong>feh</strong></span></span>   is an image viewer and cataloguer
   ------------------------------------------- -----------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](balsa.md "Balsa-2.6.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](balsa.md "Balsa-2.6.5")
 
     Balsa-2.6.5
 
--   [Next](fontforge.md "FontForge-20251009"){accesskey="n"}
+-   [Next](fontforge.md "FontForge-20251009")
 
     FontForge-20251009
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](rpcsvc-proto.md "rpcsvc-proto-1.4.4"){accesskey="p"}
+-   [Prev](rpcsvc-proto.md "rpcsvc-proto-1.4.4")
 
     rpcsvc-proto-1.4.4
 
--   [Next](textweb.md "Text Web Browsers"){accesskey="n"}
+-   [Next](textweb.md "Text Web Browsers")
 
     Text Web Browsers
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#serf}Serf-1.3.10 {#serf-1.3.10 .sect1}
+# Serf-1.3.10 {#serf-1.3.10}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Serf {#introduction-to-serf .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Serf {#introduction-to-serf}
 
-The [Serf]{.application} package contains a C-based HTTP client library built upon the Apache Portable Runtime (APR) library. It multiplexes connections, running the read/write communication asynchronously. Memory copies and transformations are kept to a minimum to provide high performance operation.
+The <span class="application">Serf</span> package contains a C-based HTTP client library built upon the Apache Portable Runtime (APR) library. It multiplexes connections, running the read/write communication asynchronously. Memory copies and transformations are kept to a minimum to provide high performance operation.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.apache.org/dist/serf/serf-1.3.10.tar.bz2](https://archive.apache.org/dist/serf/serf-1.3.10.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.apache.org/dist/serf/serf-1.3.10.tar.bz2">https://archive.apache.org/dist/serf/serf-1.3.10.tar.bz2</a>
 
 -   Download MD5 sum: 5320087299084c297eff8e1dacfab1af
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.4 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Serf Dependencies
 
 #### Required
 
-[Apr-Util-1.6.3](../general/apr-util.md "Apr-Util-1.6.3"){.xref} and [SCons-4.10.1](../general/scons.md "SCons-4.10.1"){.xref}
+<a class="xref" href="../general/apr-util.md" title="Apr-Util-1.6.3">Apr-Util-1.6.3</a> and <a class="xref" href="../general/scons.md" title="SCons-4.10.1">SCons-4.10.1</a>
 
 #### Optional
 
-[MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} (for GSSAPI support)
-:::::
+<a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> (for GSSAPI support)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Serf {#installation-of-serf .sect2}
+<div class="installation" lang="en">
+## Installation of Serf {#installation-of-serf}
 
-Install [Serf]{.application} by running the following commands:
+Install <span class="application">Serf</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i "/Append/s:RPATH=libdir,::"          SConstruct &&
 sed -i "/Default/s:lib_static,::"           SConstruct &&
 sed -i "/Alias/s:install_static,::"         SConstruct &&
@@ -76,60 +76,60 @@ scons PREFIX=/usr
 
 This package does not come with a functional test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 scons PREFIX=/usr install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i "..."**]{.command}: The first command removes the runtime path from a shared library and the next two commands disable building and installing of the static library. The fourth command corrects for changes in OpenSSL-4.
+<span class="command"><strong>sed -i "..."</strong></span>: The first command removes the runtime path from a shared library and the next two commands disable building and installing of the static library. The fourth command corrects for changes in OpenSSL-4.
 
-`GSSAPI=/usr`{.option}: Use this switch if you have installed a GSSAPI library and you want [serf]{.application} to use it.
-:::
+<code class="option">GSSAPI=/usr</code>: Use this switch if you have installed a GSSAPI library and you want <span class="application">serf</span> to use it.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libserf-1.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libserf-1.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/serf-1]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/serf-1</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- -------------------------------------------------
-  []{#libserf-1}[`libserf-1.so`{.filename}]{.term}   contains the [Serf]{.application} API functions
+  <a id="libserf-1"></a><span class="term"><code class="filename">libserf-1.so</code></span>   contains the <span class="application">Serf</span> API functions
   -------------------------------------------------- -------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](rpcsvc-proto.md "rpcsvc-proto-1.4.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](rpcsvc-proto.md "rpcsvc-proto-1.4.4")
 
     rpcsvc-proto-1.4.4
 
--   [Next](textweb.md "Text Web Browsers"){accesskey="n"}
+-   [Next](textweb.md "Text Web Browsers")
 
     Text Web Browsers
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

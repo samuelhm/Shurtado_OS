@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](audiofile.md "AudioFile-0.3.6"){accesskey="p"}
+-   [Prev](audiofile.md "AudioFile-0.3.6")
 
     AudioFile-0.3.6
 
--   [Next](faac.md "faac-1.50"){accesskey="n"}
+-   [Next](faac.md "faac-1.50")
 
     faac-1.50
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dav1d}dav1d-1.5.3 {#dav1d-1.5.3 .sect1}
+# dav1d-1.5.3 {#dav1d-1.5.3}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to dav1d {#introduction-to-dav1d .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to dav1d {#introduction-to-dav1d}
 
 The dav1d package contains an AV1 decoder.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz](https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz">https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz</a>
 
 -   Download MD5 sum: e22d5377b91936ef0b43662364c8973e
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 23 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (using parallelism=4; with tests)
-:::
+</div>
 
 ### dav1d Dependencies
 
 #### Recommended
 
-[NASM-3.01](../general/nasm.md "NASM-3.01"){.xref}
+<a class="xref" href="../general/nasm.md" title="NASM-3.01">NASM-3.01</a>
 
 #### Optional
 
-[xxhash](https://xxhash.com/){.ulink}
-:::::
+<a class="ulink" href="https://xxhash.com/">xxhash</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of dav1d {#installation-of-dav1d .sect2}
+<div class="installation" lang="en">
+## Installation of dav1d {#installation-of-dav1d}
 
 Install dav1d by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,55 +70,55 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, run [**ninja test**]{.command}.
+To test the results, run <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [dav1d]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">dav1d</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libdav1d.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libdav1d.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/dav1d]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/dav1d</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ----------------------------------------------------------------------
-  []{#dav1d-app}[[**dav1d**]{.command}]{.term}     is the dav1d decoder utility
-  []{#libdav1d}[`libdav1d.so`{.filename}]{.term}   contains functions that enable decoding files that use the AV1 codec
+  <a id="dav1d-app"></a><span class="command"><span class="term"><strong>dav1d</strong></span></span>     is the dav1d decoder utility
+  <a id="libdav1d"></a><span class="term"><code class="filename">libdav1d.so</code></span>   contains functions that enable decoding files that use the AV1 codec
   ------------------------------------------------ ----------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](audiofile.md "AudioFile-0.3.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](audiofile.md "AudioFile-0.3.6")
 
     AudioFile-0.3.6
 
--   [Next](faac.md "faac-1.50"){accesskey="n"}
+-   [Next](faac.md "faac-1.50")
 
     faac-1.50
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

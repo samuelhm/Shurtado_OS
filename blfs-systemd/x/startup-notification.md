@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](qtwebengine.md "QtWebEngine-6.11.1"){accesskey="p"}
+-   [Prev](qtwebengine.md "QtWebEngine-6.11.1")
 
     QtWebEngine-6.11.1
 
--   [Next](vulkan-headers.md "Vulkan-Headers-1.4.350.0"){accesskey="n"}
+-   [Next](vulkan-headers.md "Vulkan-Headers-1.4.350.0")
 
     Vulkan-Headers-1.4.350.0
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#startup-notification}startup-notification-0.12 {#startup-notification-0.12 .sect1}
+# startup-notification-0.12 {#startup-notification-0.12}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to startup-notification {#introduction-to-startup-notification .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to startup-notification {#introduction-to-startup-notification}
 
-The [startup-notification]{.application} package contains `startup-notification`{.filename} libraries. These are useful for building a consistent manner to notify the user through the cursor that the application is loading.
+The <span class="application">startup-notification</span> package contains <code class="filename">startup-notification</code> libraries. These are useful for building a consistent manner to notify the user through the cursor that the application is loading.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.freedesktop.org/software/startup-notification/releases/startup-notification-0.12.tar.gz](https://www.freedesktop.org/software/startup-notification/releases/startup-notification-0.12.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.freedesktop.org/software/startup-notification/releases/startup-notification-0.12.tar.gz">https://www.freedesktop.org/software/startup-notification/releases/startup-notification-0.12.tar.gz</a>
 
 -   Download MD5 sum: 2cd77326d4dcaed9a5a23a1232fb38e9
 
@@ -44,81 +44,81 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### startup-notification Dependencies
 
 #### Required
 
-[Xorg Libraries](x7lib.md "Xorg Libraries"){.xref} and [xcb-util-0.4.1](xcb-util.md "xcb-util-0.4.1"){.xref}
-:::::
+<a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a> and <a class="xref" href="xcb-util.md" title="xcb-util-0.4.1">xcb-util-0.4.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of startup-notification {#installation-of-startup-notification .sect2}
+<div class="installation" lang="en">
+## Installation of startup-notification {#installation-of-startup-notification}
 
-Install [startup-notification]{.application} by running the following commands:
+Install <span class="application">startup-notification</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -m644 -D doc/startup-notification.txt \
     /usr/share/doc/startup-notification-0.12/startup-notification.txt
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libstartup-notification-1.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libstartup-notification-1.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/startup-notification-1.0 and /usr/share/doc/startup-notification-0.12]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/startup-notification-1.0 and /usr/share/doc/startup-notification-0.12</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#libstartup-notification-1}[`libstartup-notification-1.so`{.filename}]{.term}   provides the functions to assist applications in communicating with the cursor system to provide feedback to the user that the application is loading
+  <a id="libstartup-notification-1"></a><span class="term"><code class="filename">libstartup-notification-1.so</code></span>   provides the functions to assist applications in communicating with the cursor system to provide feedback to the user that the application is loading
   ---------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qtwebengine.md "QtWebEngine-6.11.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qtwebengine.md "QtWebEngine-6.11.1")
 
     QtWebEngine-6.11.1
 
--   [Next](vulkan-headers.md "Vulkan-Headers-1.4.350.0"){accesskey="n"}
+-   [Next](vulkan-headers.md "Vulkan-Headers-1.4.350.0")
 
     Vulkan-Headers-1.4.350.0
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

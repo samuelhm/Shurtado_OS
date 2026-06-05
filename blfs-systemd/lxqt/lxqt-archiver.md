@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 38. LXQt Applications
 
--   [Prev](lximage-qt.md "lximage-qt-2.4.0"){accesskey="p"}
+-   [Prev](lximage-qt.md "lximage-qt-2.4.0")
 
     lximage-qt-2.4.0
 
--   [Next](lxqt-notificationd.md "lxqt-notificationd-2.4.0"){accesskey="n"}
+-   [Next](lxqt-notificationd.md "lxqt-notificationd-2.4.0")
 
     lxqt-notificationd-2.4.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-archiver}lxqt-archiver-1.4.0 {#lxqt-archiver-1.4.0 .sect1}
+# lxqt-archiver-1.4.0 {#lxqt-archiver-1.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-archiver {#introduction-to-lxqt-archiver .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-archiver {#introduction-to-lxqt-archiver}
 
-The [lxqt-archiver]{.application} package is a simple and lightweight desktop-agnostic Qt file archiver.
+The <span class="application">lxqt-archiver</span> package is a simple and lightweight desktop-agnostic Qt file archiver.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-archiver/releases/download/1.4.0/lxqt-archiver-1.4.0.tar.xz](https://github.com/lxqt/lxqt-archiver/releases/download/1.4.0/lxqt-archiver-1.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-archiver/releases/download/1.4.0/lxqt-archiver-1.4.0.tar.xz">https://github.com/lxqt/lxqt-archiver/releases/download/1.4.0/lxqt-archiver-1.4.0.tar.xz</a>
 
 -   Download MD5 sum: 8be174a519f9fe5512a4809671b040ce
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: 0.3 SBU
-:::
+</div>
 
 ### lxqt-archiver Dependencies
 
 #### Required
 
-[libfm-qt-2.4.0](libfm-qt.md "libfm-qt-2.4.0"){.xref}, [liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref}, and [JSON-GLib-1.10.8](../general/json-glib.md "JSON-GLib-1.10.8"){.xref}
-:::::
+<a class="xref" href="libfm-qt.md" title="libfm-qt-2.4.0">libfm-qt-2.4.0</a>, <a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a>, and <a class="xref" href="../general/json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-archiver {#installation-of-lxqt-archiver .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-archiver {#installation-of-lxqt-archiver}
 
-Install [lxqt-archiver]{.application} by running the following commands:
+Install <span class="application">lxqt-archiver</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [lxqt-archiver]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lxqt-archiver</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/lxqt-archiver]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/lxqt-archiver</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------- -----------------------------
-  []{#lxqt-archiver-prog}[[**lxqt-archiver**]{.command}]{.term}   is a Qt-based file archiver
+  <a id="lxqt-archiver-prog"></a><span class="command"><span class="term"><strong>lxqt-archiver</strong></span></span>   is a Qt-based file archiver
   --------------------------------------------------------------- -----------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lximage-qt.md "lximage-qt-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lximage-qt.md "lximage-qt-2.4.0")
 
     lximage-qt-2.4.0
 
--   [Next](lxqt-notificationd.md "lxqt-notificationd-2.4.0"){accesskey="n"}
+-   [Next](lxqt-notificationd.md "lxqt-notificationd-2.4.0")
 
     lxqt-notificationd-2.4.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

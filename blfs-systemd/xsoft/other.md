@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XI. X Software
 
--   [Prev](seamonkey.md "Seamonkey-2.53.23"){accesskey="p"}
+-   [Prev](seamonkey.md "Seamonkey-2.53.23")
 
     Seamonkey-2.53.23
 
--   [Next](balsa.md "Balsa-2.6.5"){accesskey="n"}
+-   [Next](balsa.md "Balsa-2.6.5")
 
     Balsa-2.6.5
 
--   [Up](xsoft.md "Part XI. X Software"){accesskey="u"}
+-   [Up](xsoft.md "Part XI. X Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xsoft-other}Other X-based Programs {#other-x-based-programs .chapter}
+# Other X-based Programs {#other-x-based-programs}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 These programs use the X Window System and don't fit easily into any of the other chapters.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Balsa-2.6.5](balsa.md)
@@ -38,19 +38,19 @@ These programs use the X Window System and don't fit easily into any of the othe
 -   [xarchiver-0.5.4.26](xarchiver.md)
 -   [xdg-utils-1.2.1](xdg-utils.md)
 -   [XScreenSaver-6.15](xscreensaver.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](seamonkey.md "Seamonkey-2.53.23"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](seamonkey.md "Seamonkey-2.53.23")
 
     Seamonkey-2.53.23
 
--   [Next](balsa.md "Balsa-2.6.5"){accesskey="n"}
+-   [Next](balsa.md "Balsa-2.6.5")
 
     Balsa-2.6.5
 
--   [Up](xsoft.md "Part XI. X Software"){accesskey="u"}
+-   [Up](xsoft.md "Part XI. X Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 10. Graphics and Font Libraries
 
--   [Prev](openjpeg2.md "OpenJPEG-2.5.4"){accesskey="p"}
+-   [Prev](openjpeg2.md "OpenJPEG-2.5.4")
 
     OpenJPEG-2.5.4
 
--   [Next](poppler.md "Poppler-26.06.0"){accesskey="n"}
+-   [Next](poppler.md "Poppler-26.06.0")
 
     Poppler-26.06.0
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pixman}Pixman-0.46.4 {#pixman-0.46.4 .sect1}
+# Pixman-0.46.4 {#pixman-0.46.4}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Pixman {#introduction-to-pixman .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Pixman {#introduction-to-pixman}
 
-The [Pixman]{.application} package contains a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization.
+The <span class="application">Pixman</span> package contains a library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cairographics.org/releases/pixman-0.46.4.tar.gz](https://www.cairographics.org/releases/pixman-0.46.4.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cairographics.org/releases/pixman-0.46.4.tar.gz">https://www.cairographics.org/releases/pixman-0.46.4.tar.gz</a>
 
 -   Download MD5 sum: c08173c8e1d2cc79428d931c13ffda59
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 28 MB (With tests)
 
 -   Estimated build time: 0.1 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### Pixman Dependencies
 
 #### Optional
 
-[libpng-1.6.58](libpng.md "libpng-1.6.58"){.xref} and [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} (for tests and demos)
-:::::
+<a class="xref" href="libpng.md" title="libpng-1.6.58">libpng-1.6.58</a> and <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> (for tests and demos)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Pixman {#installation-of-pixman .sect2}
+<div class="installation" lang="en">
+## Installation of Pixman {#installation-of-pixman}
 
-Install [Pixman]{.application} by running the following commands:
+Install <span class="application">Pixman</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -66,60 +66,60 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libpixman-1.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libpixman-1.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/pixman-1]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/pixman-1</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------------------------------
-  []{#libpixman}[`libpixman-1.so`{.filename}]{.term}   contains functions that provide low-level pixel manipulation features
+  <a id="libpixman"></a><span class="term"><code class="filename">libpixman-1.so</code></span>   contains functions that provide low-level pixel manipulation features
   ---------------------------------------------------- -----------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](openjpeg2.md "OpenJPEG-2.5.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](openjpeg2.md "OpenJPEG-2.5.4")
 
     OpenJPEG-2.5.4
 
--   [Next](poppler.md "Poppler-26.06.0"){accesskey="n"}
+-   [Next](poppler.md "Poppler-26.06.0")
 
     Poppler-26.06.0
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

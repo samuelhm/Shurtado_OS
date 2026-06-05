@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XIII. Printing, Scanning and Typesetting
 
--   [Prev](simple-scan.md "Simple-scan-50.0"){accesskey="p"}
+-   [Prev](simple-scan.md "Simple-scan-50.0")
 
     Simple-scan-50.0
 
--   [Next](sgml-common.md "sgml-common-0.6.3"){accesskey="n"}
+-   [Next](sgml-common.md "sgml-common-0.6.3")
 
     sgml-common-0.6.3
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pst-sgml}Standard Generalized Markup Language (SGML) {#standard-generalized-markup-language-sgml .chapter}
+# Standard Generalized Markup Language (SGML) {#standard-generalized-markup-language-sgml}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains DocBook SGML document type definitions (DTDs), DocBook DSSSL Stylesheets and DocBook tools to validate, transform, format and publish DocBook documents.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [sgml-common-0.6.3](sgml-common.md)
@@ -31,19 +31,19 @@ This chapter contains DocBook SGML document type definitions (DTDs), DocBook DSS
 -   [OpenJade-1.3.2](openjade.md)
 -   [docbook-dsssl-1.79](docbook-dsssl.md)
 -   [DocBook-utils-0.6.14](docbook-utils.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](simple-scan.md "Simple-scan-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](simple-scan.md "Simple-scan-50.0")
 
     Simple-scan-50.0
 
--   [Next](sgml-common.md "sgml-common-0.6.3"){accesskey="n"}
+-   [Next](sgml-common.md "sgml-common-0.6.3")
 
     sgml-common-0.6.3
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

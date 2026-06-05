@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../gnome/snapshot.md "Snapshot-50.0"){accesskey="p"}
+-   [Prev](../gnome/snapshot.md "Snapshot-50.0")
 
     Snapshot-50.0
 
--   [Next](xfce-core.md "Xfce Desktop"){accesskey="n"}
+-   [Next](xfce-core.md "Xfce Desktop")
 
     Xfce Desktop
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xfce}Xfce {#xfce .part}
+# Xfce {#xfce}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [35. Xfce Desktop](xfce-core.md)
@@ -49,19 +49,19 @@
     -   [ristretto-0.14.0](ristretto.md)
     -   [xfce4-notifyd-0.9.7](xfce4-notifyd.md)
     -   [xfce4-pulseaudio-plugin-0.5.1](xfce4-pulseaudio-plugin.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../gnome/snapshot.md "Snapshot-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../gnome/snapshot.md "Snapshot-50.0")
 
     Snapshot-50.0
 
--   [Next](xfce-core.md "Xfce Desktop"){accesskey="n"}
+-   [Next](xfce-core.md "Xfce Desktop")
 
     Xfce Desktop
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

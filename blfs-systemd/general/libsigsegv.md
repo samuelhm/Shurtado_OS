@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libsigc3.md "libsigc++-3.6.0"){accesskey="p"}
+-   [Prev](libsigc3.md "libsigc++-3.6.0")
 
     libsigc++-3.6.0
 
--   [Next](libssh2.md "libssh2-1.11.1"){accesskey="n"}
+-   [Next](libssh2.md "libssh2-1.11.1")
 
     libssh2-1.11.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libsigsegv}libsigsegv-2.15 {#libsigsegv-2.15 .sect1}
+# libsigsegv-2.15 {#libsigsegv-2.15}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libsigsegv {#introduction-to-libsigsegv .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libsigsegv {#introduction-to-libsigsegv}
 
 libsigsegv is a library for handling page faults in user mode. A page fault occurs when a program tries to access to a region of memory that is currently not available. Catching and handling a page fault is a useful technique for implementing pageable virtual memory, memory-mapped access to persistent databases, generational garbage collectors, stack overflow handlers, and distributed shared memory.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftpmirror.gnu.org/libsigsegv/libsigsegv-2.15.tar.gz](https://ftpmirror.gnu.org/libsigsegv/libsigsegv-2.15.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftpmirror.gnu.org/libsigsegv/libsigsegv-2.15.tar.gz">https://ftpmirror.gnu.org/libsigsegv/libsigsegv-2.15.tar.gz</a>
 
 -   Download MD5 sum: c2885785b3e5d1c94b1adb22b3002ccc
 
@@ -44,77 +44,77 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.7 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libsigsegv {#installation-of-libsigsegv .sect2}
+<div class="installation" lang="en">
+## Installation of libsigsegv {#installation-of-libsigsegv}
 
-Install [libsigsegv]{.application} by running the following commands:
+Install <span class="application">libsigsegv</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr    \
             --enable-shared  \
             --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--enable-shared`*: This switch ensures that shared libraries are compiled.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libsigsegv.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libsigsegv.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ----------------------------------------------------
-  []{#libsigsegv-lib}[`libsigsegv.so`{.filename}]{.term}   is a library for handling page faults in user mode
+  <a id="libsigsegv-lib"></a><span class="term"><code class="filename">libsigsegv.so</code></span>   is a library for handling page faults in user mode
   -------------------------------------------------------- ----------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsigc3.md "libsigc++-3.6.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsigc3.md "libsigc++-3.6.0")
 
     libsigc++-3.6.0
 
--   [Next](libssh2.md "libssh2-1.11.1"){accesskey="n"}
+-   [Next](libssh2.md "libssh2-1.11.1")
 
     libssh2-1.11.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

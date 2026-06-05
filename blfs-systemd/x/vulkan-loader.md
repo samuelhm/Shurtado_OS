@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](vulkan-headers.md "Vulkan-Headers-1.4.350.0"){accesskey="p"}
+-   [Prev](vulkan-headers.md "Vulkan-Headers-1.4.350.0")
 
     Vulkan-Headers-1.4.350.0
 
--   [Next](webkitgtk.md "WebKitGTK-2.52.0"){accesskey="n"}
+-   [Next](webkitgtk.md "WebKitGTK-2.52.0")
 
     WebKitGTK-2.52.0
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#vulkan-loader}Vulkan-Loader-1.4.350.0 {#vulkan-loader-1.4.350.0 .sect1}
+# Vulkan-Loader-1.4.350.0 {#vulkan-loader-1.4.350.0}
 
-::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Vulkan-Loader {#introduction-to-vulkan-loader .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Vulkan-Loader {#introduction-to-vulkan-loader}
 
-The [Vulkan-Loader]{.application} package contains a library which provides the Vulkan API and provides core support for graphics drivers for Vulkan.
+The <span class="application">Vulkan-Loader</span> package contains a library which provides the Vulkan API and provides core support for graphics drivers for Vulkan.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.350.0/Vulkan-Loader-vulkan-sdk-1.4.350.0.tar.gz](https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.350.0/Vulkan-Loader-vulkan-sdk-1.4.350.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.350.0/Vulkan-Loader-vulkan-sdk-1.4.350.0.tar.gz">https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.350.0/Vulkan-Loader-vulkan-sdk-1.4.350.0.tar.gz</a>
 
 -   Download MD5 sum: 6ec91c673b48bbdffc923cce9d6a1a85
 
@@ -44,49 +44,49 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 143 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (with tests)
-:::
+</div>
 
 ### Vulkan-loader Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}, [Vulkan-Headers-1.4.350.0](vulkan-headers.md "Vulkan-Headers-1.4.350.0"){.xref}, and [Xorg Libraries](x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>, <a class="xref" href="vulkan-headers.md" title="Vulkan-Headers-1.4.350.0">Vulkan-Headers-1.4.350.0</a>, and <a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Recommended
 
-[Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref}
+<a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>
 
 #### Recommended (Runtime)
 
-[Mesa-26.0.7](mesa.md "Mesa-26.0.7"){.xref} (for Vulkan drivers)
+<a class="xref" href="mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a> (for Vulkan drivers)
 
 #### Optional (for testing)
 
-[git-2.54.0](../general/git.md "Git-2.54.0"){.xref}
+<a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Vulkan-Loader {#installation-of-vulkan-loader .sect2}
+<div class="installation" lang="en">
+## Installation of Vulkan-Loader {#installation-of-vulkan-loader}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If this package is being installed on a system where Mesa has already been installed previously, please rebuild [Mesa-26.0.7](mesa.md "Mesa-26.0.7"){.xref} after this package to install Vulkan graphics drivers.
-:::
+If this package is being installed on a system where Mesa has already been installed previously, please rebuild <a class="xref" href="mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a> after this package to install Vulkan graphics drivers.
+</div>
 
-Install [Vulkan-Loader]{.application} by running the following commands:
+Install <span class="application">Vulkan-Loader</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -97,9 +97,9 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja
 ```
 
-To run the test suite, issue (note that the command will use [git-2.54.0](../general/git.md "Git-2.54.0"){.xref} to download a copy of GoogleTest for building the test suite):
+To run the test suite, issue (note that the command will use <a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a> to download a copy of GoogleTest for building the test suite):
 
-``` userinput
+```bash
 sed "s/'git', 'clone'/&, '--depth=1', '-b', self.commit/" \
     -i ../scripts/update_deps.py &&
 cmake -D BUILD_TESTS=ON -D UPDATE_DEPS=ON .. &&
@@ -107,60 +107,60 @@ ninja &&
 ninja test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D CMAKE_SKIP_INSTALL_RPATH=ON`*: This switch makes [**cmake**]{.command} remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues.
+*`-D CMAKE_SKIP_INSTALL_RPATH=ON`*: This switch makes <span class="command"><strong>cmake</strong></span> remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues.
 
-`-D BUILD_WSI_WAYLAND_SUPPORT=OFF`{.option}: This option allows building without [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref} support.
-:::
+<code class="option">-D BUILD_WSI_WAYLAND_SUPPORT=OFF</code>: This option allows building without <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a> support.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libvulkan.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libvulkan.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/cmake/VulkanLoader]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/cmake/VulkanLoader</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ---------------------------------------------------------------
-  []{#libvulkan}[`libvulkan.so`{.filename}]{.term}   provides the Vulkan API and core support for graphics drivers
+  <a id="libvulkan"></a><span class="term"><code class="filename">libvulkan.so</code></span>   provides the Vulkan API and core support for graphics drivers
   -------------------------------------------------- ---------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](vulkan-headers.md "Vulkan-Headers-1.4.350.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](vulkan-headers.md "Vulkan-Headers-1.4.350.0")
 
     Vulkan-Headers-1.4.350.0
 
--   [Next](webkitgtk.md "WebKitGTK-2.52.0"){accesskey="n"}
+-   [Next](webkitgtk.md "WebKitGTK-2.52.0")
 
     WebKitGTK-2.52.0
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

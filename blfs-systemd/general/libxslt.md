@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libxmlb.md "libxmlb-0.3.27"){accesskey="p"}
+-   [Prev](libxmlb.md "libxmlb-0.3.27")
 
     libxmlb-0.3.27
 
--   [Next](libwacom.md "libwacom-2.19.0"){accesskey="n"}
+-   [Next](libwacom.md "libwacom-2.19.0")
 
     libwacom-2.19.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libxslt}libxslt-1.1.45 {#libxslt-1.1.45 .sect1}
+# libxslt-1.1.45 {#libxslt-1.1.45}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libxslt {#introduction-to-libxslt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libxslt {#introduction-to-libxslt}
 
-The [libxslt]{.application} package contains XSLT libraries used for extending `libxml2`{.filename} libraries to support XSLT files.
+The <span class="application">libxslt</span> package contains XSLT libraries used for extending <code class="filename">libxml2</code> libraries to support XSLT files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz](https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz">https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz</a>
 
 -   Download MD5 sum: 84bb3f6ba7f5ee98af5dcd72e828c73e
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 33 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### libxslt Dependencies
 
 #### Required
 
-[libxml2-2.15.3](libxml2.md "libxml2-2.15.3"){.xref}
+<a class="xref" href="libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>
 
 #### Recommended (at runtime)
 
-[docbook-xml-4.5](../pst/docbook.md "docbook-xml-4.5"){.xref} and [docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref}
+<a class="xref" href="../pst/docbook.md" title="docbook-xml-4.5">docbook-xml-4.5</a> and <a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Although it is not a direct dependency, many applications using [libxslt]{.application} will expect [docbook-xml-4.5](../pst/docbook.md "docbook-xml-4.5"){.xref} and [docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref} to be present.
-:::
+Although it is not a direct dependency, many applications using <span class="application">libxslt</span> will expect <a class="xref" href="../pst/docbook.md" title="docbook-xml-4.5">docbook-xml-4.5</a> and <a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a> to be present.
+</div>
 
 #### Optional
 
-[libgcrypt-1.12.2](libgcrypt.md "libgcrypt-1.12.2"){.xref} (only needed for the deprecated EXSLT crypto extension, see Command Explanations)
-::::::
+<a class="xref" href="libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a> (only needed for the deprecated EXSLT crypto extension, see Command Explanations)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libxslt {#installation-of-libxslt .sect2}
+<div class="installation" lang="en">
+## Installation of libxslt {#installation-of-libxslt}
 
-Install [libxslt]{.application} by running the following commands:
+Install <span class="application">libxslt</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr    \
             --disable-static \
             --without-python \
@@ -82,69 +82,69 @@ Install [libxslt]{.application} by running the following commands:
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-*`--without-python`*: Disable the Python binding of this package. The binding only works if the Python binding of [libxml2-2.15.3](libxml2.md "libxml2-2.15.3"){.xref} is installed, but we've not enabled the deprecated Python binding when we built [libxml2-2.15.3](libxml2.md "libxml2-2.15.3"){.xref}.
+*`--without-python`*: Disable the Python binding of this package. The binding only works if the Python binding of <a class="xref" href="libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a> is installed, but we've not enabled the deprecated Python binding when we built <a class="xref" href="libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>.
 
-`--with-crypto`{.option}: Enable the non-standard and deprecated EXSLT crypto extension feature. It needs [libgcrypt-1.12.2](libgcrypt.md "libgcrypt-1.12.2"){.xref} and the upstream will remove it in the future.
+<code class="option">--with-crypto</code>: Enable the non-standard and deprecated EXSLT crypto extension feature. It needs <a class="xref" href="libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a> and the upstream will remove it in the future.
 
-`--with-debug`{.option}: Enables thorough diagnostics with the `-v, --verbose`{.option} of [**xsltproc**]{.command}. Use it if you plan to debug XSLT stylesheets.
-:::
+<code class="option">--with-debug</code>: Enables thorough diagnostics with the <code class="option">-v, --verbose</code> of <span class="command"><strong>xsltproc</strong></span>. Use it if you plan to debug XSLT stylesheets.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [xslt-config and xsltproc]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">xslt-config and xsltproc</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libexslt.so, libxslt.so and optionally, libxsltmod.so [Python]{.application} module]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="application">libexslt.so, libxslt.so and optionally, libxsltmod.so <span class="segbody">Python</span> module</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libexslt, /usr/include/libxslt, /usr/lib/cmake/libxslt, /usr/lib/libxslt-plugins, /usr/share/gtk-doc/lib{xslt,exslt}, /usr/share/doc/libxslt-1.1.45, and /usr/share/doc/libxslt-python-1.1.45]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libexslt, /usr/include/libxslt, /usr/lib/cmake/libxslt, /usr/lib/libxslt-plugins, /usr/share/gtk-doc/lib{xslt,exslt}, /usr/share/doc/libxslt-1.1.45, and /usr/share/doc/libxslt-python-1.1.45</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#xslt-config}[[**xslt-config**]{.command}]{.term}   is used to find out the pre-processor, linking and compiling flags necessary to use the [libxslt]{.application} libraries in 3rd-party programs
-  []{#xsltproc}[[**xsltproc**]{.command}]{.term}         is used to apply XSLT stylesheets to XML documents
-  []{#libexslt}[`libexslt.so`{.filename}]{.term}         is used to provide extensions to XSLT functions
-  []{#libxslt-lib}[`libxslt.so`{.filename}]{.term}       provides extensions to the `libxml2`{.filename} libraries to parse files that use the XSLT format
+  <a id="xslt-config"></a><span class="command"><span class="term"><strong>xslt-config</strong></span></span>   is used to find out the pre-processor, linking and compiling flags necessary to use the <span class="application">libxslt</span> libraries in 3rd-party programs
+  <a id="xsltproc"></a><span class="command"><span class="term"><strong>xsltproc</strong></span></span>         is used to apply XSLT stylesheets to XML documents
+  <a id="libexslt"></a><span class="term"><code class="filename">libexslt.so</code></span>         is used to provide extensions to XSLT functions
+  <a id="libxslt-lib"></a><span class="term"><code class="filename">libxslt.so</code></span>       provides extensions to the <code class="filename">libxml2</code> libraries to parse files that use the XSLT format
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libxmlb.md "libxmlb-0.3.27"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libxmlb.md "libxmlb-0.3.27")
 
     libxmlb-0.3.27
 
--   [Next](libwacom.md "libwacom-2.19.0"){accesskey="n"}
+-   [Next](libwacom.md "libwacom-2.19.0")
 
     libwacom-2.19.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

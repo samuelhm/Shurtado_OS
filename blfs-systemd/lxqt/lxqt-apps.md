@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part X. LXQt
 
--   [Prev](post-install.md "LXQt Desktop Final Instructions"){accesskey="p"}
+-   [Prev](post-install.md "LXQt Desktop Final Instructions")
 
     LXQt Desktop Final Instructions
 
--   [Next](lximage-qt.md "lximage-qt-2.4.0"){accesskey="n"}
+-   [Next](lximage-qt.md "lximage-qt-2.4.0")
 
     lximage-qt-2.4.0
 
--   [Up](lxqt.md "Part X. LXQt"){accesskey="u"}
+-   [Up](lxqt.md "Part X. LXQt")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-apps}LXQt Applications {#lxqt-applications .chapter}
+# LXQt Applications {#lxqt-applications}
 
-:::: {.chapter lang="en"}
-This is a small collection of optional applications that add extra capabilities to the [LXQt]{.application} desktop.
+<div class="chapter" lang="en">
+This is a small collection of optional applications that add extra capabilities to the <span class="application">LXQt</span> desktop.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [lximage-qt-2.4.0](lximage-qt.md)
@@ -32,19 +32,19 @@ This is a small collection of optional applications that add extra capabilities 
 -   [qtermwidget-2.4.0](qtermwidget.md)
 -   [qterminal-2.4.0](qterminal.md)
 -   [screengrab-3.2.0](screengrab.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](post-install.md "LXQt Desktop Final Instructions"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](post-install.md "LXQt Desktop Final Instructions")
 
     LXQt Desktop Final Instructions
 
--   [Next](lximage-qt.md "lximage-qt-2.4.0"){accesskey="n"}
+-   [Next](lximage-qt.md "lximage-qt-2.4.0")
 
     lximage-qt-2.4.0
 
--   [Up](lxqt.md "Part X. LXQt"){accesskey="u"}
+-   [Up](lxqt.md "Part X. LXQt")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

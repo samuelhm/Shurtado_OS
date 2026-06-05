@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 38. LXQt Applications
 
--   [Prev](lxqt-apps.md "LXQt Applications"){accesskey="p"}
+-   [Prev](lxqt-apps.md "LXQt Applications")
 
     LXQt Applications
 
--   [Next](lxqt-archiver.md "lxqt-archiver-1.4.0"){accesskey="n"}
+-   [Next](lxqt-archiver.md "lxqt-archiver-1.4.0")
 
     lxqt-archiver-1.4.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lximage-qt}lximage-qt-2.4.0 {#lximage-qt-2.4.0 .sect1}
+# lximage-qt-2.4.0 {#lximage-qt-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lximage-qt {#introduction-to-lximage-qt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lximage-qt {#introduction-to-lximage-qt}
 
-The [lximage-qt]{.application} package contains a lightweight image viewer and screenshot program.
+The <span class="application">lximage-qt</span> package contains a lightweight image viewer and screenshot program.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lximage-qt/releases/download/2.4.0/lximage-qt-2.4.0.tar.xz](https://github.com/lxqt/lximage-qt/releases/download/2.4.0/lximage-qt-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lximage-qt/releases/download/2.4.0/lximage-qt-2.4.0.tar.xz">https://github.com/lxqt/lximage-qt/releases/download/2.4.0/lximage-qt-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 3bec142eec14e1c3c40927dd9ecc36f2
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: 0.5 SBU
-:::
+</div>
 
 ### lximage-qt Dependencies
 
 #### Required
 
-[libfm-qt-2.4.0](libfm-qt.md "libfm-qt-2.4.0"){.xref}
-:::::
+<a class="xref" href="libfm-qt.md" title="libfm-qt-2.4.0">libfm-qt-2.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lximage-qt {#installation-of-lximage-qt .sect2}
+<div class="installation" lang="en">
+## Installation of lximage-qt {#installation-of-lximage-qt}
 
-Install [lximage-qt]{.application} by running the following commands:
+Install <span class="application">lximage-qt</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,54 +70,54 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have [xdg-utils-1.2.1](../xsoft/xdg-utils.md "xdg-utils-1.2.1"){.xref} installed, as the `root`{.systemitem} user, run [**xdg-icon-resource forceupdate --theme hicolor**]{.command}.
-:::
+If you have <a class="xref" href="../xsoft/xdg-utils.md" title="xdg-utils-1.2.1">xdg-utils-1.2.1</a> installed, as the <code class="systemitem">root</code> user, run <span class="command"><strong>xdg-icon-resource forceupdate --theme hicolor</strong></span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [lximage-qt]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">lximage-qt</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/lximage-qt]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/lximage-qt</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#lximage-qt-prog}[[**lximage-qt**]{.command}]{.term}   is a lightweight image viewer and screenshot program. There is a menu entry in Utilities for the screenshot program. From the command line, you can obtain a full screen or window shot by running [**lximage-qt --screenshot**]{.command}
+  <a id="lximage-qt-prog"></a><span class="command"><span class="term"><strong>lximage-qt</strong></span></span>   is a lightweight image viewer and screenshot program. There is a menu entry in Utilities for the screenshot program. From the command line, you can obtain a full screen or window shot by running <span class="command"><strong>lximage-qt --screenshot</strong></span>
   --------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-apps.md "LXQt Applications"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-apps.md "LXQt Applications")
 
     LXQt Applications
 
--   [Next](lxqt-archiver.md "lxqt-archiver-1.4.0"){accesskey="n"}
+-   [Next](lxqt-archiver.md "lxqt-archiver-1.4.0")
 
     lxqt-archiver-1.4.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

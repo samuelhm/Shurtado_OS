@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 35. Xfce Desktop
 
--   [Prev](tumbler.md "tumbler-4.20.1"){accesskey="p"}
+-   [Prev](tumbler.md "tumbler-4.20.1")
 
     tumbler-4.20.1
 
--   [Next](xfce4-power-manager.md "xfce4-power-manager-4.20.0"){accesskey="n"}
+-   [Next](xfce4-power-manager.md "xfce4-power-manager-4.20.0")
 
     xfce4-power-manager-4.20.0
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xfce4-appfinder}xfce4-appfinder-4.20.0 {#xfce4-appfinder-4.20.0 .sect1}
+# xfce4-appfinder-4.20.0 {#xfce4-appfinder-4.20.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xfce4 Appfinder {#introduction-to-xfce4-appfinder .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xfce4 Appfinder {#introduction-to-xfce4-appfinder}
 
-[Xfce4 Appfinder]{.application} is a tool to find and launch installed applications by searching the .desktop files installed on your system.
+<span class="application">Xfce4 Appfinder</span> is a tool to find and launch installed applications by searching the .desktop files installed on your system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/xfce/xfce4-appfinder/4.20/xfce4-appfinder-4.20.0.tar.bz2](https://archive.xfce.org/src/xfce/xfce4-appfinder/4.20/xfce4-appfinder-4.20.0.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/xfce/xfce4-appfinder/4.20/xfce4-appfinder-4.20.0.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-appfinder/4.20/xfce4-appfinder-4.20.0.tar.bz2</a>
 
 -   Download MD5 sum: e60f6c2521a985c6cfe09057d4fb2d69
 
@@ -44,73 +44,73 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.3 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Xfce4 Appfinder Dependencies
 
 #### Required
 
-[Garcon-4.20.0](garcon.md "Garcon-4.20.0"){.xref}
-:::::
+<a class="xref" href="garcon.md" title="Garcon-4.20.0">Garcon-4.20.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Xfce4 Appfinder {#installation-of-xfce4-appfinder .sect2}
+<div class="installation" lang="en">
+## Installation of Xfce4 Appfinder {#installation-of-xfce4-appfinder}
 
-Install [Xfce4 Appfinder]{.application} by running the following commands:
+Install <span class="application">Xfce4 Appfinder</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [xfce4-appfinder and xfrun4 (symlink)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">xfce4-appfinder and xfrun4 (symlink)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#xfce4-appfinder-prog}[[**xfce4-appfinder**]{.command}]{.term}   Is a [GTK+ 3]{.application} application that enables you to quickly search through the .desktop files installed on your system looking for an application
+  <a id="xfce4-appfinder-prog"></a><span class="command"><span class="term"><strong>xfce4-appfinder</strong></span></span>   Is a <span class="application">GTK+ 3</span> application that enables you to quickly search through the .desktop files installed on your system looking for an application
   ------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](tumbler.md "tumbler-4.20.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](tumbler.md "tumbler-4.20.1")
 
     tumbler-4.20.1
 
--   [Next](xfce4-power-manager.md "xfce4-power-manager-4.20.0"){accesskey="n"}
+-   [Next](xfce4-power-manager.md "xfce4-power-manager-4.20.0")
 
     xfce4-power-manager-4.20.0
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

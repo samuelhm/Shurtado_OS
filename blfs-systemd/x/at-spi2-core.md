@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](atkmm.md "Atkmm-2.28.5"){accesskey="p"}
+-   [Prev](atkmm.md "Atkmm-2.28.5")
 
     Atkmm-2.28.5
 
--   [Next](cairo.md "Cairo-1.18.4"){accesskey="n"}
+-   [Next](cairo.md "Cairo-1.18.4")
 
     Cairo-1.18.4
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#at-spi2-core}at-spi2-core-2.60.4 {#at-spi2-core-2.60.4 .sect1}
+# at-spi2-core-2.60.4 {#at-spi2-core-2.60.4}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to At-Spi2 Core {#introduction-to-at-spi2-core .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to At-Spi2 Core {#introduction-to-at-spi2-core}
 
-The [At-Spi2 Core]{.application} package contains a comprehensive accessibility framework for the Assistive Technologies available on the [GNOME]{.application} platform. This includes a set of interfaces which are implemented by other toolkits and applications.
+The <span class="application">At-Spi2 Core</span> package contains a comprehensive accessibility framework for the Assistive Technologies available on the <span class="application">GNOME</span> platform. This includes a set of interfaces which are implemented by other toolkits and applications.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/at-spi2-core/2.60/at-spi2-core-2.60.4.tar.xz](https://download.gnome.org/sources/at-spi2-core/2.60/at-spi2-core-2.60.4.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/at-spi2-core/2.60/at-spi2-core-2.60.4.tar.xz">https://download.gnome.org/sources/at-spi2-core/2.60/at-spi2-core-2.60.4.tar.xz</a>
 
 -   Download MD5 sum: d471222e2413cced6e095a792bf3988c
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 23 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### At-Spi2 Core Dependencies
 
 #### Required
 
-[dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (GObject Introspection required for GNOME), [gsettings-desktop-schemas-50.1](../gnome/gsettings-desktop-schemas.md "gsettings-desktop-schemas-50.1"){.xref} (Runtime), and [Xorg Libraries](x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection required for GNOME), <a class="xref" href="../gnome/gsettings-desktop-schemas.md" title="gsettings-desktop-schemas-50.1">gsettings-desktop-schemas-50.1</a> (Runtime), and <a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Optional
 
-[Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} and [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref}
-:::::
+<a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> and <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of At-Spi2 Core {#installation-of-at-spi2-core .sect2}
+<div class="installation" lang="en">
+## Installation of At-Spi2 Core {#installation-of-at-spi2-core}
 
-Install [At-Spi2 Core]{.application} by running the following commands:
+Install <span class="application">At-Spi2 Core</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -73,66 +73,66 @@ meson setup ..                  \
 ninja
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-The test suite requires the glib schemas of the package to be installed already. The tests also need to run in a graphical environment. Now that the package is installed, test the results by issuing: [**dbus-run-session ninja test**]{.command}.
-:::
+The test suite requires the glib schemas of the package to be installed already. The tests also need to run in a graphical environment. Now that the package is installed, test the results by issuing: <span class="command"><strong>dbus-run-session ninja test</strong></span>.
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D docs=true`{.option}: Use this switch if you want to build the documentation. Note that you must have both [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} and [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref} installed on your system.
+<code class="option">-D docs=true</code>: Use this switch if you want to build the documentation. Note that you must have both <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> and <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a> installed on your system.
 
 *`-D gtk2_atk_adaptor=false`*: This switch disables building the GTK+-2 module for this package.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libatk-1.0.so, libatk-bridge-2.0.so, and libatspi.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libatk-1.0.so, libatk-bridge-2.0.so, and libatspi.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/atk-1.0, /usr/include/at-spi-2.0, /usr/include/at-spi2-atk, /usr/lib/gnome-settings-daemon-3.0, /usr/share/defaults/at-spi2, and /usr/share/gtk-doc/html/libatspi (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/atk-1.0, /usr/include/at-spi-2.0, /usr/include/at-spi2-atk, /usr/lib/gnome-settings-daemon-3.0, /usr/share/defaults/at-spi2, and /usr/share/gtk-doc/html/libatspi (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ --------------------------------------------------------------------------------------------------
-  []{#libatk-1.0}[`libatk-1.0.so`{.filename}]{.term}                 contains functions that are used by assistive technologies to interact with desktop applications
-  []{#libatk-bridge-2.0}[`libatk-bridge-2.0.so`{.filename}]{.term}   contains the Accessibility Toolkit GTK+ module
-  []{#libatspi}[`libatspi.so`{.filename}]{.term}                     contains the [At-Spi2]{.application} API functions
+  <a id="libatk-1.0"></a><span class="term"><code class="filename">libatk-1.0.so</code></span>                 contains functions that are used by assistive technologies to interact with desktop applications
+  <a id="libatk-bridge-2.0"></a><span class="term"><code class="filename">libatk-bridge-2.0.so</code></span>   contains the Accessibility Toolkit GTK+ module
+  <a id="libatspi"></a><span class="term"><code class="filename">libatspi.so</code></span>                     contains the <span class="application">At-Spi2</span> API functions
   ------------------------------------------------------------------ --------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](atkmm.md "Atkmm-2.28.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](atkmm.md "Atkmm-2.28.5")
 
     Atkmm-2.28.5
 
--   [Next](cairo.md "Cairo-1.18.4"){accesskey="n"}
+-   [Next](cairo.md "Cairo-1.18.4")
 
     Cairo-1.18.4
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

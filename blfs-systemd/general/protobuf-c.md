@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](protobuf.md "Protobuf-35.0"){accesskey="p"}
+-   [Prev](protobuf.md "Protobuf-35.0")
 
     Protobuf-35.0
 
--   [Next](qca.md "Qca-2.3.10"){accesskey="n"}
+-   [Next](qca.md "Qca-2.3.10")
 
     Qca-2.3.10
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#protobuf-c}Protobuf-c-1.5.2 {#protobuf-c-1.5.2 .sect1}
+# Protobuf-c-1.5.2 {#protobuf-c-1.5.2}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Protobuf-c {#introduction-to-protobuf-c .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Protobuf-c {#introduction-to-protobuf-c}
 
-The [Protobuf-c]{.application} package contains an implementation of the Google Protocol Buffers data serialization format in C.
+The <span class="application">Protobuf-c</span> package contains an implementation of the Google Protocol Buffers data serialization format in C.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.2/protobuf-c-1.5.2.tar.gz](https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.2/protobuf-c-1.5.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.2/protobuf-c-1.5.2.tar.gz">https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.2/protobuf-c-1.5.2.tar.gz</a>
 
 -   Download MD5 sum: 0612ee47cccaaf4ad1c4f0c8bdc13abf
 
@@ -44,99 +44,99 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 56 MB
 
 -   Estimated build time: 0.6 SBU (with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/protobuf-c-1.5.2-protobuf34_fix-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/protobuf-c-1.5.2-protobuf34_fix-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/protobuf-c-1.5.2-protobuf34_fix-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/protobuf-c-1.5.2-protobuf34_fix-1.patch</a>
+</div>
 
 ### Protobuf-c Dependencies
 
 #### Required
 
-[Protobuf-35.0](protobuf.md "Protobuf-35.0"){.xref}
+<a class="xref" href="protobuf.md" title="Protobuf-35.0">Protobuf-35.0</a>
 
 #### Optional
 
-[Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}
-::::::
+<a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Protobuf-c {#installation-of-protobuf-c .sect2}
+<div class="installation" lang="en">
+## Installation of Protobuf-c {#installation-of-protobuf-c}
 
 First fix issues caused by protobuf-34 and later:
 
-``` userinput
+```bash
 patch -Np1 -i ../protobuf-c-1.5.2-protobuf34_fix-1.patch
 ```
 
-Install [Protobuf-c]{.application} by running the following commands:
+Install <span class="application">Protobuf-c</span> by running the following commands:
 
-``` userinput
+```bash
 CXXFLAGS="${CXXFLAGS:--O2 -g} -std=c++20" \
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`CXXFLAGS="${CXXFLAGS:--O2 -g} -std=c++20"`{.envar}: Override the default C++ standard (C++ 2017) of this package, as the headers from protobuf-35 and later require C++ 2020 features.
+<code class="envar">CXXFLAGS="${CXXFLAGS:--O2 -g} -std=c++20"</code>: Override the default C++ standard (C++ 2017) of this package, as the headers from protobuf-35 and later require C++ 2020 features.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [protoc-gen-c and protoc-c (symlinked to protoc-gen-c)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">protoc-gen-c and protoc-c (symlinked to protoc-gen-c)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libprotobuf-c.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libprotobuf-c.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/google and /usr/include/protobuf-c]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/google and /usr/include/protobuf-c</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- --------------------------------------------------------------------------------------
-  []{#protoc-c}[[**protoc-c**]{.command}]{.term}             generates C descriptor code from a .proto file
-  []{#libprotobuf-c}[`libprotobuf-c.so`{.filename}]{.term}   contains a C implementation of the Google Protocol Buffers data serialization format
+  <a id="protoc-c"></a><span class="command"><span class="term"><strong>protoc-c</strong></span></span>             generates C descriptor code from a .proto file
+  <a id="libprotobuf-c"></a><span class="term"><code class="filename">libprotobuf-c.so</code></span>   contains a C implementation of the Google Protocol Buffers data serialization format
   ---------------------------------------------------------- --------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](protobuf.md "Protobuf-35.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](protobuf.md "Protobuf-35.0")
 
     Protobuf-35.0
 
--   [Next](qca.md "Qca-2.3.10"){accesskey="n"}
+-   [Next](qca.md "Qca-2.3.10")
 
     Qca-2.3.10
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

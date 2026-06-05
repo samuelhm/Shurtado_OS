@@ -1,30 +1,30 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part VIII. GNOME
 
--   [Prev](gnome.md "GNOME"){accesskey="p"}
+-   [Prev](gnome.md "GNOME")
 
     GNOME
 
--   [Next](gcr.md "Gcr-3.41.2"){accesskey="n"}
+-   [Next](gcr.md "Gcr-3.41.2")
 
     Gcr-3.41.2
 
--   [Up](gnome.md "Part VIII. GNOME"){accesskey="u"}
+-   [Up](gnome.md "Part VIII. GNOME")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-core}GNOME Libraries and Desktop {#gnome-libraries-and-desktop .chapter}
+# GNOME Libraries and Desktop {#gnome-libraries-and-desktop}
 
-:::: {.chapter lang="en"}
-The objective of this section is to build a [GNOME]{.application} desktop.
+<div class="chapter" lang="en">
+The objective of this section is to build a <span class="application">GNOME</span> desktop.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
--   [Libraries]{.dummy}
+-   <span class="dummy">Libraries</span>
 -   [Gcr-3.41.2](gcr.md)
 -   [Gcr-4.4.0.1](gcr4.md)
 -   [gsettings-desktop-schemas-50.1](gsettings-desktop-schemas.md)
@@ -50,7 +50,7 @@ The objective of this section is to build a [GNOME]{.application} desktop.
 -   [localsearch-3.11.1](localsearch.md)
 -   [GSound-1.0.3](gsound.md)
 -   [xdg-desktop-portal-gnome-50.0](xdg-desktop-portal-gnome.md)
--   [GNOME Desktop Components]{.dummy}
+-   <span class="dummy">GNOME Desktop Components</span>
 -   [DConf-0.49.0 / DConf-Editor-49.0](dconf.md)
 -   [gnome-backgrounds-50.0](gnome-backgrounds.md)
 -   [Gvfs-1.60.0](gvfs.md)
@@ -68,19 +68,19 @@ The objective of this section is to build a [GNOME]{.application} desktop.
 -   [gnome-tweaks-49.0](gnome-tweaks.md)
 -   [gnome-user-docs-50.2](gnome-user-docs.md)
 -   [Yelp-49.0](yelp.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome.md "GNOME"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome.md "GNOME")
 
     GNOME
 
--   [Next](gcr.md "Gcr-3.41.2"){accesskey="n"}
+-   [Next](gcr.md "Gcr-3.41.2")
 
     Gcr-3.41.2
 
--   [Up](gnome.md "Part VIII. GNOME"){accesskey="u"}
+-   [Up](gnome.md "Part VIII. GNOME")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

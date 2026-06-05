@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-kconfig.md "kconfig-6.26.0 for lxqt"){accesskey="p"}
+-   [Prev](lxqt-kconfig.md "kconfig-6.26.0 for lxqt")
 
     kconfig-6.26.0 for lxqt
 
--   [Next](lxqt-kidletime.md "kidletime-6.26.0 for lxqt"){accesskey="n"}
+-   [Next](lxqt-kidletime.md "kidletime-6.26.0 for lxqt")
 
     kidletime-6.26.0 for lxqt
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-solid}solid-6.26.0 for lxqt {#solid-6.26.0-for-lxqt .sect1}
+# solid-6.26.0 for lxqt {#solid-6.26.0-for-lxqt}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to solid {#introduction-to-solid .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to solid {#introduction-to-solid}
 
-[Solid]{.application} is a device integration framework. It provides a way of querying and interacting with hardware independently of the underlying operating system.
+<span class="application">Solid</span> is a device integration framework. It provides a way of querying and interacting with hardware independently of the underlying operating system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-This package is extracted from the KF6 set of packages. If [KDE Frameworks-6.26.0](../kde/frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref} is built, do [**NOT**]{.bold} also build this package as presented here.
-:::
+This package is extracted from the KF6 set of packages. If <a class="xref" href="../kde/frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a> is built, do <span class="bold"><strong>NOT</strong></span> also build this package as presented here.
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/frameworks/6.26/solid-6.26.0.tar.xz](https://download.kde.org/stable/frameworks/6.26/solid-6.26.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/frameworks/6.26/solid-6.26.0.tar.xz">https://download.kde.org/stable/frameworks/6.26/solid-6.26.0.tar.xz</a>
 
 -   Download MD5 sum: dc8d2c5864ace71f21fd4283014d9bf1
 
@@ -52,25 +52,25 @@ This package is extracted from the KF6 set of packages. If [KDE Frameworks-6.26.
 -   Estimated disk space required: 38 MB
 
 -   Estimated build time: 0.5 SBU (Using parallelism=4)
-:::
+</div>
 
 ### solid Dependencies
 
 #### Required
 
-[Extra-CMake-Modules-6.26.0](../kde/extra-cmake-modules.md "Extra-CMake-Modules-6.26.0"){.xref} and [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
+<a class="xref" href="../kde/extra-cmake-modules.md" title="Extra-CMake-Modules-6.26.0">Extra-CMake-Modules-6.26.0</a> and <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
 
 #### Optional (runtime)
 
-[UDisks-2.11.1](../general/udisks2.md "UDisks-2.11.1"){.xref}, [UPower-1.91.2](../general/upower.md "UPower-1.91.2"){.xref}, [libimobiledevice](https://libimobiledevice.org/){.ulink}, and [media-player-info](http://www.freedesktop.org/wiki/Software/media-player-info){.ulink}
-::::::
+<a class="xref" href="../general/udisks2.md" title="UDisks-2.11.1">UDisks-2.11.1</a>, <a class="xref" href="../general/upower.md" title="UPower-1.91.2">UPower-1.91.2</a>, <a class="ulink" href="https://libimobiledevice.org/">libimobiledevice</a>, and <a class="ulink" href="http://www.freedesktop.org/wiki/Software/media-player-info">media-player-info</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of solid {#installation-of-solid .sect2}
+<div class="installation" lang="en">
+## Installation of solid {#installation-of-solid}
 
-Install [solid]{.application} by running the following commands:
+Install <span class="application">solid</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -85,53 +85,53 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [solid-hardware6]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">solid-hardware6</span>
+</div>
 
-::: seg
-**Installed Library:** [libKF6Solid.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libKF6Solid.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/KF6/Solid and /usr/lib/cmake/KF6Solid]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/KF6/Solid and /usr/lib/cmake/KF6Solid</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------
-  []{#lxqt-solid-solid-hardware6}[[**solid-hardware6**]{.command}]{.term}   queries hardware information from the system
-  []{#lxqt-solid-lib}[`libKF6Solid.so`{.filename}]{.term}                   provides a way of querying and interacting with hardware independently of the underlying operating system
+  <a id="lxqt-solid-solid-hardware6"></a><span class="command"><span class="term"><strong>solid-hardware6</strong></span></span>   queries hardware information from the system
+  <a id="lxqt-solid-lib"></a><span class="term"><code class="filename">libKF6Solid.so</code></span>                   provides a way of querying and interacting with hardware independently of the underlying operating system
   ------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-kconfig.md "kconfig-6.26.0 for lxqt"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-kconfig.md "kconfig-6.26.0 for lxqt")
 
     kconfig-6.26.0 for lxqt
 
--   [Next](lxqt-kidletime.md "kidletime-6.26.0 for lxqt"){accesskey="n"}
+-   [Next](lxqt-kidletime.md "kidletime-6.26.0 for lxqt")
 
     kidletime-6.26.0 for lxqt
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

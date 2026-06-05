@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 41. Other X-based Programs
 
--   [Prev](fontforge.md "FontForge-20251009"){accesskey="p"}
+-   [Prev](fontforge.md "FontForge-20251009")
 
     FontForge-20251009
 
--   [Next](gimp.md "Gimp-3.2.4"){accesskey="n"}
+-   [Next](gimp.md "Gimp-3.2.4")
 
     Gimp-3.2.4
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#freerdp}FreeRDP-3.26.0 {#freerdp-3.26.0 .sect1}
+# FreeRDP-3.26.0 {#freerdp-3.26.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to FreeRDP {#introduction-to-freerdp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to FreeRDP {#introduction-to-freerdp}
 
-The [FreeRDP]{.application} package contains libraries and utilities for utilizing the Remote Desktop Protocol. This includes tools to run an RDP server as well as to connect to a computer using RDP. This is primarily used for connecting to Microsoft Windows computers, but can also be used on Linux and macOS.
+The <span class="application">FreeRDP</span> package contains libraries and utilities for utilizing the Remote Desktop Protocol. This includes tools to run an RDP server as well as to connect to a computer using RDP. This is primarily used for connecting to Microsoft Windows computers, but can also be used on Linux and macOS.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/freerdp/freerdp/archive/3.26.0/FreeRDP-3.26.0.tar.gz](https://github.com/freerdp/freerdp/archive/3.26.0/FreeRDP-3.26.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/freerdp/freerdp/archive/3.26.0/FreeRDP-3.26.0.tar.gz">https://github.com/freerdp/freerdp/archive/3.26.0/FreeRDP-3.26.0.tar.gz</a>
 
 -   Download MD5 sum: de6192c28713a928e961c7ec90c9f5d2
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 140 MB
 
 -   Estimated build time: 0.3 SBU (Using parallelism=4)
-:::
+</div>
 
 ### FreeRDP Dependencies
 
 #### Required
 
-[FFmpeg-8.1.1](../multimedia/ffmpeg.md "FFmpeg-8.1.1"){.xref}, [ICU-78.3](../general/icu.md "icu-78.3"){.xref}, and [Xorg Libraries](../x/x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="../multimedia/ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a>, <a class="xref" href="../general/icu.md" title="icu-78.3">ICU-78.3</a>, and <a class="xref" href="../x/x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Recommended
 
-[Cairo-1.18.4](../x/cairo.md "Cairo-1.18.4"){.xref}, [docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref}, [Fuse-3.18.2](../postlfs/fuse.md "Fuse-3.18.2"){.xref}, [JSON-C-0.18](../general/json-c.md "JSON-C-0.18"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, [libusb-1.0.30](../general/libusb.md "libusb-1.0.30"){.xref}, [libxkbcommon-1.13.2](../general/libxkbcommon.md "libxkbcommon-1.13.2"){.xref}, and [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref}
+<a class="xref" href="../x/cairo.md" title="Cairo-1.18.4">Cairo-1.18.4</a>, <a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a>, <a class="xref" href="../postlfs/fuse.md" title="Fuse-3.18.2">Fuse-3.18.2</a>, <a class="xref" href="../general/json-c.md" title="JSON-C-0.18">JSON-C-0.18</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, <a class="xref" href="../general/libusb.md" title="libusb-1.0.30">libusb-1.0.30</a>, <a class="xref" href="../general/libxkbcommon.md" title="libxkbcommon-1.13.2">libxkbcommon-1.13.2</a>, and <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>
 
 #### Optional
 
-[Cups-2.4.19](../pst/cups.md "Cups-2.4.19"){.xref}, [faac-1.50](../multimedia/faac.md "faac-1.50"){.xref}, [FAAD2-2.11.2](../multimedia/faad2.md "FAAD2-2.11.2"){.xref}, [fdk-aac-2.0.3](../multimedia/fdk-aac.md "fdk-aac-2.0.3"){.xref}, [LAME-3.100](../multimedia/lame.md "LAME-3.100"){.xref}, [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [PulseAudio-17.0](../multimedia/pulseaudio.md "PulseAudio-17.0"){.xref}, [SDL3-3.4.10](../multimedia/sdl3.md "SDL3-3.4.10"){.xref} and [SDL_ttf](https://github.com/libsdl-org/SDL_ttf){.ulink}, [cJSON](https://github.com/DaveGamble/cJSON){.ulink}, [GSM](https://www.quut.com/gsm/){.ulink}, [OpenCL-ICD-Loader](https://github.com/KhronosGroup/OpenCL-ICD-Loader){.ulink}, [mbedTLS](https://github.com/Mbed-TLS/mbedtls){.ulink}, [openh264](https://www.openh264.org/){.ulink}, [pcsclite](https://pcsclite.apdu.fr/){.ulink}, [soxr](https://github.com/chirlu/soxr){.ulink}, and [uriparser](https://github.com/uriparser/uriparser){.ulink}
-:::::
+<a class="xref" href="../pst/cups.md" title="Cups-2.4.19">Cups-2.4.19</a>, <a class="xref" href="../multimedia/faac.md" title="faac-1.50">faac-1.50</a>, <a class="xref" href="../multimedia/faad2.md" title="FAAD2-2.11.2">FAAD2-2.11.2</a>, <a class="xref" href="../multimedia/fdk-aac.md" title="fdk-aac-2.0.3">fdk-aac-2.0.3</a>, <a class="xref" href="../multimedia/lame.md" title="LAME-3.100">LAME-3.100</a>, <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="../multimedia/pulseaudio.md" title="PulseAudio-17.0">PulseAudio-17.0</a>, <a class="xref" href="../multimedia/sdl3.md" title="SDL3-3.4.10">SDL3-3.4.10</a> and <a class="ulink" href="https://github.com/libsdl-org/SDL_ttf">SDL_ttf</a>, <a class="ulink" href="https://github.com/DaveGamble/cJSON">cJSON</a>, <a class="ulink" href="https://www.quut.com/gsm/">GSM</a>, <a class="ulink" href="https://github.com/KhronosGroup/OpenCL-ICD-Loader">OpenCL-ICD-Loader</a>, <a class="ulink" href="https://github.com/Mbed-TLS/mbedtls">mbedTLS</a>, <a class="ulink" href="https://www.openh264.org/">openh264</a>, <a class="ulink" href="https://pcsclite.apdu.fr/">pcsclite</a>, <a class="ulink" href="https://github.com/chirlu/soxr">soxr</a>, and <a class="ulink" href="https://github.com/uriparser/uriparser">uriparser</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of FreeRDP {#installation-of-freerdp .sect2}
+<div class="installation" lang="en">
+## Installation of FreeRDP {#installation-of-freerdp}
 
-Install [FreeRDP]{.application} by running the following commands:
+Install <span class="application">FreeRDP</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -88,23 +88,23 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D CMAKE_SKIP_INSTALL_RPATH=ON`*: This switch makes [**cmake**]{.command} remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues.
+*`-D CMAKE_SKIP_INSTALL_RPATH=ON`*: This switch makes <span class="command"><strong>cmake</strong></span> remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues.
 
 *`-D DOCBOOKXSL_DIR=/usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2`*: This parameter points CMake to the location of the Docbook XSL stylesheets, and is needed because BLFS does not use namespaced versions of the stylesheets. This is needed to create man pages. If you do not want manpages, pass -D WITH_MANPAGES=OFF to CMake instead.
 
 *`-D WITH_CAIRO=ON`*: This parameter uses Cairo for HighDPI and window resizing support.
 
-*`-D WITH_CLIENT_SDL=OFF`*: This parameter disables using SDL to draw the window when using the FreeRDP client. This is disabled because it depends on [SDL_ttf](https://github.com/libsdl-org/SDL_ttf){.ulink}. Remove this switch if you have the SDL_ttf package installed.
+*`-D WITH_CLIENT_SDL=OFF`*: This parameter disables using SDL to draw the window when using the FreeRDP client. This is disabled because it depends on <a class="ulink" href="https://github.com/libsdl-org/SDL_ttf">SDL_ttf</a>. Remove this switch if you have the SDL_ttf package installed.
 
 *`-D WITH_FFMPEG=ON`*: This parameter enables support for using ffmpeg for the H.264 graphics rendering mode, which is required when connecting via RDP to Windows Server 2012 (or Windows 8) or later hosts.
 
@@ -116,72 +116,72 @@ ninja install
 
 *`-D WITH_SERVER_CHANNELS=ON`*: This parameter builds additional plugins for the FreeRDP server.
 
-`-D WITH_LAME=ON`{.option}: Use this option if you wish to enable support for using LAME to provide MP3 Audio Codec support.
+<code class="option">-D WITH_LAME=ON</code>: Use this option if you wish to enable support for using LAME to provide MP3 Audio Codec support.
 
-`-D WITH_FAAC=ON`{.option}: Use this option if you wish to enable support for using FAAC to provide AAC Audio Codec support.
+<code class="option">-D WITH_FAAC=ON</code>: Use this option if you wish to enable support for using FAAC to provide AAC Audio Codec support.
 
-`-D WITH_FAAD2=ON`{.option}: Use this option if you wish to enable support for using FAAD2 to provide AAC Audio Codec support.
+<code class="option">-D WITH_FAAD2=ON</code>: Use this option if you wish to enable support for using FAAD2 to provide AAC Audio Codec support.
 
-`-D WITH_FDK_AAC=ON`{.option}: Use this option if you wish to enable support for using fdk-aac to provide AAC Audio Codec support.
+<code class="option">-D WITH_FDK_AAC=ON</code>: Use this option if you wish to enable support for using fdk-aac to provide AAC Audio Codec support.
 
-`-D WITH_MBEDTLS=ON`{.option}: Use this option if you have the optional dependency [mbedTLS](https://github.com/Mbed-TLS/mbedtls){.ulink} installed and wish to use it as an alternative to OpenSSL for cryptography support.
+<code class="option">-D WITH_MBEDTLS=ON</code>: Use this option if you have the optional dependency <a class="ulink" href="https://github.com/Mbed-TLS/mbedtls">mbedTLS</a> installed and wish to use it as an alternative to OpenSSL for cryptography support.
 
-`-D WITH_OPENCL=ON`{.option}: Use this option if you have the optional dependency [OpenCL-ICD-Loader](https://github.com/KhronosGroup/OpenCL-ICD-Loader){.ulink} installed and wish to use OpenCL support. OpenCL support, however, cannot be used unless RustICL has been enabled in [Mesa-26.0.7](../x/mesa.md "Mesa-26.0.7"){.xref}.
+<code class="option">-D WITH_OPENCL=ON</code>: Use this option if you have the optional dependency <a class="ulink" href="https://github.com/KhronosGroup/OpenCL-ICD-Loader">OpenCL-ICD-Loader</a> installed and wish to use OpenCL support. OpenCL support, however, cannot be used unless RustICL has been enabled in <a class="xref" href="../x/mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a>.
 
-`-D WITH_OPENH264=ON`{.option}: Use this option if you have the optional dependency [openh264](https://www.openh264.org/){.ulink} installed and wish to use it for H.264 support instead of ffmpeg.
+<code class="option">-D WITH_OPENH264=ON</code>: Use this option if you have the optional dependency <a class="ulink" href="https://www.openh264.org/">openh264</a> installed and wish to use it for H.264 support instead of ffmpeg.
 
-`-D WITH_GSM=ON`{.option}: Use this option if you have the optional dependency [GSM](https://www.quut.com/gsm/){.ulink} installed and wish to use GSM as an audio codec.
+<code class="option">-D WITH_GSM=ON</code>: Use this option if you have the optional dependency <a class="ulink" href="https://www.quut.com/gsm/">GSM</a> installed and wish to use GSM as an audio codec.
 
-`-D WITH_SOXR=ON`{.option}: Use this option if you have the optional dependency [soxr](https://github.com/chirlu/soxr){.ulink} installed and wish to use it instead of ffmpeg for multimedia redirection.
-:::
+<code class="option">-D WITH_SOXR=ON</code>: Use this option if you have the optional dependency <a class="ulink" href="https://github.com/chirlu/soxr">soxr</a> installed and wish to use it instead of ffmpeg for multimedia redirection.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [freerdp-proxy, freerdp-shadow-cli, sfreerdp, sfreerdp-server, winpr-hash, winpr-makecert, wlfreerdp, xfreerdp]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">freerdp-proxy, freerdp-shadow-cli, sfreerdp, sfreerdp-server, winpr-hash, winpr-makecert, wlfreerdp, xfreerdp</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libfreerdp3.so, libfreerdp-client3.so, libfreerdp-server3.so, libfreerdp-server-proxy3.so, libfreerdp-shadow3.so, libfreerdp-shadow-subsystem3.so, librtdk0.so, libuwac0.so, libwinpr3.so, and libwinpr-tools3.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libfreerdp3.so, libfreerdp-client3.so, libfreerdp-server3.so, libfreerdp-server-proxy3.so, libfreerdp-shadow3.so, libfreerdp-shadow-subsystem3.so, librtdk0.so, libuwac0.so, libwinpr3.so, and libwinpr-tools3.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/{freerdp3,rdtk0,uwac0,winpr3}, /usr/lib/cmake/{FreeRDP3,FreeRDP-Client3,FreeRDP-Proxy3,FreeRDP-Server3,rdtk0,uwac0,WinPR3,WinPR-tools3}, /usr/lib/freerdp3, /usr/share/FreeRDP]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/{freerdp3,rdtk0,uwac0,winpr3}, /usr/lib/cmake/{FreeRDP3,FreeRDP-Client3,FreeRDP-Proxy3,FreeRDP-Server3,rdtk0,uwac0,WinPR3,WinPR-tools3}, /usr/lib/freerdp3, /usr/share/FreeRDP</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- ---------------------------------------------------------------------
-  []{#freerdp-proxy}[[**freerdp-proxy**]{.command}]{.term}             configures FreeRDP to use a proxy server
-  []{#freerdp-shadow-cli}[[**freerdp-shadow-cli**]{.command}]{.term}   interfaces with the shadow functionality in FreeRDP
-  []{#sfreerdp}[[**sfreerdp**]{.command}]{.term}                       is a utility for sharing an X display over RDP
-  []{#sfreerdp-server}[[**sfreerdp-server**]{.command}]{.term}         is a utility for sharing an X display over RDP
-  []{#winpr-hash}[[**winpr-hash**]{.command}]{.term}                   creates a NTLM hash from a username and password pair
-  []{#winpr-makecert}[[**winpr-makecert**]{.command}]{.term}           creates X.509 certificates for use with FreeRDP
-  []{#wlfreerdp}[[**wlfreerdp**]{.command}]{.term}                     is a RDP client for Wayland
-  []{#xfreerdp}[[**xfreerdp**]{.command}]{.term}                       is a RDP client for X11
-  []{#libfreerdp3}[`libfreerdp3.so`{.filename}]{.term}                 contains functions that provide RDP client and server functionality
+  <a id="freerdp-proxy"></a><span class="command"><span class="term"><strong>freerdp-proxy</strong></span></span>             configures FreeRDP to use a proxy server
+  <a id="freerdp-shadow-cli"></a><span class="command"><span class="term"><strong>freerdp-shadow-cli</strong></span></span>   interfaces with the shadow functionality in FreeRDP
+  <a id="sfreerdp"></a><span class="command"><span class="term"><strong>sfreerdp</strong></span></span>                       is a utility for sharing an X display over RDP
+  <a id="sfreerdp-server"></a><span class="command"><span class="term"><strong>sfreerdp-server</strong></span></span>         is a utility for sharing an X display over RDP
+  <a id="winpr-hash"></a><span class="command"><span class="term"><strong>winpr-hash</strong></span></span>                   creates a NTLM hash from a username and password pair
+  <a id="winpr-makecert"></a><span class="command"><span class="term"><strong>winpr-makecert</strong></span></span>           creates X.509 certificates for use with FreeRDP
+  <a id="wlfreerdp"></a><span class="command"><span class="term"><strong>wlfreerdp</strong></span></span>                     is a RDP client for Wayland
+  <a id="xfreerdp"></a><span class="command"><span class="term"><strong>xfreerdp</strong></span></span>                       is a RDP client for X11
+  <a id="libfreerdp3"></a><span class="term"><code class="filename">libfreerdp3.so</code></span>                 contains functions that provide RDP client and server functionality
   -------------------------------------------------------------------- ---------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](fontforge.md "FontForge-20251009"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](fontforge.md "FontForge-20251009")
 
     FontForge-20251009
 
--   [Next](gimp.md "Gimp-3.2.4"){accesskey="n"}
+-   [Next](gimp.md "Gimp-3.2.4")
 
     Gimp-3.2.4
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

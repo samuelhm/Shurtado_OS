@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](glibmm2.md "GLibmm-2.88.0"){accesskey="p"}
+-   [Prev](glibmm2.md "GLibmm-2.88.0")
 
     GLibmm-2.88.0
 
--   [Next](gmmlib.md "gmmlib-22.10.0"){accesskey="n"}
+-   [Next](gmmlib.md "gmmlib-22.10.0")
 
     gmmlib-22.10.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gmime3}GMime-3.2.15 {#gmime-3.2.15 .sect1}
+# GMime-3.2.15 {#gmime-3.2.15}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GMime {#introduction-to-gmime .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GMime {#introduction-to-gmime}
 
-The [GMime]{.application} package contains a set of utilities for parsing and creating messages using the Multipurpose Internet Mail Extension (MIME) as defined by the applicable RFCs. See the [GMime web site](https://spruce.sourceforge.net/gmime/){.ulink} for the RFCs resourced. This is useful as it provides an API which adheres to the MIME specification as closely as possible while also providing programmers with an extremely easy to use interface to the API functions.
+The <span class="application">GMime</span> package contains a set of utilities for parsing and creating messages using the Multipurpose Internet Mail Extension (MIME) as defined by the applicable RFCs. See the <a class="ulink" href="https://spruce.sourceforge.net/gmime/">GMime web site</a> for the RFCs resourced. This is useful as it provides an API which adheres to the MIME specification as closely as possible while also providing programmers with an extremely easy to use interface to the API functions.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/jstedfast/gmime/releases/download/3.2.15/gmime-3.2.15.tar.xz](https://github.com/jstedfast/gmime/releases/download/3.2.15/gmime-3.2.15.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/jstedfast/gmime/releases/download/3.2.15/gmime-3.2.15.tar.xz">https://github.com/jstedfast/gmime/releases/download/3.2.15/gmime-3.2.15.tar.xz</a>
 
 -   Download MD5 sum: f7d6b4ad3253e73c72237fde5bced617
 
@@ -44,85 +44,85 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 23 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### GMime Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (GObject Introspection recommended) and [libgpg-error-1.61](libgpg-error.md "libgpg-error-1.61"){.xref}
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection recommended) and <a class="xref" href="libgpg-error.md" title="libgpg-error-1.61">libgpg-error-1.61</a>
 
 #### Optional
 
-[DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}, [gpgme-2.1.0](../postlfs/gpgme.md "gpgme-2.1.0"){.xref}, [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [libnsl-2.0.1](../basicnet/libnsl.md "libnsl-2.0.1"){.xref}, [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}, and [Gtk#](https://download.mono-project.com/sources/gtk-sharp/){.ulink} (requires [Mono](https://www.mono-project.com/Main_Page){.ulink})
-:::::
+<a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>, <a class="xref" href="../postlfs/gpgme.md" title="gpgme-2.1.0">gpgme-2.1.0</a>, <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="../basicnet/libnsl.md" title="libnsl-2.0.1">libnsl-2.0.1</a>, <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>, and <a class="ulink" href="https://download.mono-project.com/sources/gtk-sharp/">Gtk#</a> (requires <a class="ulink" href="https://www.mono-project.com/Main_Page">Mono</a>)
+</div>
 
-::: {.installation lang="en"}
-## Installation of GMime {#installation-of-gmime .sect2}
+<div class="installation" lang="en">
+## Installation of GMime {#installation-of-gmime}
 
-Install [GMime]{.application} by running the following commands:
+Install <span class="application">GMime</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}. Two tests, test-pgp and test-pgpmime, are known to fail.
+To test the results, issue: <span class="command"><strong>make check</strong></span>. Two tests, test-pgp and test-pgpmime, are known to fail.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-gtk-doc`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
-:::
+<code class="option">--enable-gtk-doc</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libgmime-3.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgmime-3.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gmime-3.0 and /usr/share/gtk-doc/html/gmime-3.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gmime-3.0 and /usr/share/gtk-doc/html/gmime-3.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -----------------------------------------------------------------------------------
-  []{#libgmime-3}[`libgmime-3.0.so`{.filename}]{.term}   contains API functions used by programs that need to comply to the MIME standards
+  <a id="libgmime-3"></a><span class="term"><code class="filename">libgmime-3.0.so</code></span>   contains API functions used by programs that need to comply to the MIME standards
   ------------------------------------------------------ -----------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](glibmm2.md "GLibmm-2.88.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](glibmm2.md "GLibmm-2.88.0")
 
     GLibmm-2.88.0
 
--   [Next](gmmlib.md "gmmlib-22.10.0"){accesskey="n"}
+-   [Next](gmmlib.md "gmmlib-22.10.0")
 
     gmmlib-22.10.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 38. LXQt Applications
 
--   [Prev](qterminal.md "qterminal-2.4.0"){accesskey="p"}
+-   [Prev](qterminal.md "qterminal-2.4.0")
 
     qterminal-2.4.0
 
--   [Next](../xsoft/xsoft.md "X Software"){accesskey="n"}
+-   [Next](../xsoft/xsoft.md "X Software")
 
     X Software
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#screengrab}screengrab-3.2.0 {#screengrab-3.2.0 .sect1}
+# screengrab-3.2.0 {#screengrab-3.2.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to screengrab {#introduction-to-screengrab .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to screengrab {#introduction-to-screengrab}
 
-The [screengrab]{.application} package is a cross-platform tool for making screenshots quickly.
+The <span class="application">screengrab</span> package is a cross-platform tool for making screenshots quickly.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/screengrab/releases/download/3.2.0/screengrab-3.2.0.tar.xz](https://github.com/lxqt/screengrab/releases/download/3.2.0/screengrab-3.2.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/screengrab/releases/download/3.2.0/screengrab-3.2.0.tar.xz">https://github.com/lxqt/screengrab/releases/download/3.2.0/screengrab-3.2.0.tar.xz</a>
 
 -   Download MD5 sum: 642790e122e55167414000a74cd274c6
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 10 MB
 
 -   Estimated build time: 0.4 SBU
-:::
+</div>
 
 ### screengrab Dependencies
 
 #### Required
 
-[lxqt-build-tools-2.4.0](lxqt-build-tools.md "lxqt-build-tools-2.4.0"){.xref}, [kwindowsystem-6.26.0 for lxqt](lxqt-kwindowsystem.md "kwindowsystem-6.26.0 for lxqt"){.xref}, and [libqtxdg-4.4.0](libqtxdg.md "libqtxdg-4.4.0"){.xref}
-:::::
+<a class="xref" href="lxqt-build-tools.md" title="lxqt-build-tools-2.4.0">lxqt-build-tools-2.4.0</a>, <a class="xref" href="lxqt-kwindowsystem.md" title="kwindowsystem-6.26.0 for lxqt">kwindowsystem-6.26.0 for lxqt</a>, and <a class="xref" href="libqtxdg.md" title="libqtxdg-4.4.0">libqtxdg-4.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of screengrab {#installation-of-screengrab .sect2}
+<div class="installation" lang="en">
+## Installation of screengrab {#installation-of-screengrab}
 
-Install [screengrab]{.application} by running the following commands:
+Install <span class="application">screengrab</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,54 +70,54 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have [xdg-utils-1.2.1](../xsoft/xdg-utils.md "xdg-utils-1.2.1"){.xref} installed, as the `root`{.systemitem} user, run [**xdg-icon-resource forceupdate --theme hicolor**]{.command}.
-:::
+If you have <a class="xref" href="../xsoft/xdg-utils.md" title="xdg-utils-1.2.1">xdg-utils-1.2.1</a> installed, as the <code class="systemitem">root</code> user, run <span class="command"><strong>xdg-icon-resource forceupdate --theme hicolor</strong></span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [screengrab]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">screengrab</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/screengrab and /usr/share/doc/screengrab]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/screengrab and /usr/share/doc/screengrab</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- -----------------------------------------------------------
-  []{#screengrab-prog}[[**screengrab**]{.command}]{.term}   is a cross platform tool for creating screenshots quickly
+  <a id="screengrab-prog"></a><span class="command"><span class="term"><strong>screengrab</strong></span></span>   is a cross platform tool for creating screenshots quickly
   --------------------------------------------------------- -----------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qterminal.md "qterminal-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qterminal.md "qterminal-2.4.0")
 
     qterminal-2.4.0
 
--   [Next](../xsoft/xsoft.md "X Software"){accesskey="n"}
+-   [Next](../xsoft/xsoft.md "X Software")
 
     X Software
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

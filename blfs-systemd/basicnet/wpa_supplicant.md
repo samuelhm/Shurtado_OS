@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 15. Networking Programs
 
--   [Prev](wireless_tools.md "Wireless Tools-29"){accesskey="p"}
+-   [Prev](wireless_tools.md "Wireless Tools-29")
 
     Wireless Tools-29
 
--   [Next](netutils.md "Networking Utilities"){accesskey="n"}
+-   [Next](netutils.md "Networking Utilities")
 
     Networking Utilities
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#wpa_supplicant}wpa_supplicant-2.11 {#wpa_supplicant-2.11 .sect1}
+# wpa_supplicant-2.11 {#wpa_supplicant-2.11}
 
-:::::::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to WPA Supplicant {#introduction-to-wpa-supplicant .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to WPA Supplicant {#introduction-to-wpa-supplicant}
 
-[WPA Supplicant]{.application} is a Wi-Fi Protected Access (WPA) client and IEEE 802.1X supplicant. It implements WPA key negotiation with a WPA Authenticator and Extensible Authentication Protocol (EAP) authentication with an Authentication Server. In addition, it controls the roaming and IEEE 802.11 authentication/association of the wireless LAN driver. This is useful for connecting to a password protected wireless access point.
+<span class="application">WPA Supplicant</span> is a Wi-Fi Protected Access (WPA) client and IEEE 802.1X supplicant. It implements WPA key negotiation with a WPA Authenticator and Extensible Authentication Protocol (EAP) authentication with an Authentication Server. In addition, it controls the roaming and IEEE 802.11 authentication/association of the wireless LAN driver. This is useful for connecting to a password protected wireless access point.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://w1.fi/releases/wpa_supplicant-2.11.tar.gz](https://w1.fi/releases/wpa_supplicant-2.11.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://w1.fi/releases/wpa_supplicant-2.11.tar.gz">https://w1.fi/releases/wpa_supplicant-2.11.tar.gz</a>
 
 -   Download MD5 sum: 72a4a00eddb7a499a58113c3361ab094
 
@@ -44,41 +44,41 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 35 MB
 
 -   Estimated build time: 0.3 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-2.11-openssl_4_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-2.11-openssl_4_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-2.11-openssl_4_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-2.11-openssl_4_fixes-1.patch</a>
+</div>
 
 ### WPA Supplicant Dependencies
 
 #### Required (Runtime)
 
-[Configuring the Linux Kernel for Wireless](wireless-kernel.md "Configuring the Linux Kernel for Wireless"){.xref}
+<a class="xref" href="wireless-kernel.md" title="Configuring the Linux Kernel for Wireless">Configuring the Linux Kernel for Wireless</a>
 
 #### Recommended
 
-[libnl-3.12.0](libnl.md "libnl-3.12.0"){.xref}
+<a class="xref" href="libnl.md" title="libnl-3.12.0">libnl-3.12.0</a>
 
 #### Optional
 
-[libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}
-::::::
+<a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#wpa_supplicant-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-To use [wpa_supplicant]{.application}, the kernel must have the appropriate drivers and other support available. Read [Configuring the Linux Kernel for Wireless](wireless-kernel.md "Configuring the Linux Kernel for Wireless"){.xref} for details.
-:::
+To use <span class="application">wpa_supplicant</span>, the kernel must have the appropriate drivers and other support available. Read <a class="xref" href="wireless-kernel.md" title="Configuring the Linux Kernel for Wireless">Configuring the Linux Kernel for Wireless</a> for details.
+</div>
 
-:::: {.installation lang="en"}
-## Installation of WPA Supplicant {#installation-of-wpa-supplicant .sect2}
+<div class="installation" lang="en">
+## Installation of WPA Supplicant {#installation-of-wpa-supplicant}
 
-First you will need to create an initial configuration file for the build process. You can read `wpa_supplicant/README`{.filename} and `wpa_supplicant/defconfig`{.filename} for the explanation of the following options as well as other options that can be used. Create a build configuration file that should work for standard WiFi setups by running the following command:
+First you will need to create an initial configuration file for the build process. You can read <code class="filename">wpa_supplicant/README</code> and <code class="filename">wpa_supplicant/defconfig</code> for the explanation of the following options as well as other options that can be used. Create a build configuration file that should work for standard WiFi setups by running the following command:
 
-``` userinput
+```bash
 cat > wpa_supplicant/.config << "EOF"
 CONFIG_BACKEND=file
 CONFIG_CTRL_IFACE=y
@@ -108,9 +108,9 @@ CFLAGS += -I/usr/include/libnl3
 EOF
 ```
 
-If you wish to use [WPA Supplicant]{.application} with [NetworkManager-1.56.1](networkmanager.md "NetworkManager-1.56.1"){.xref}, add the following options to the [WPA Supplicant]{.application} build configuration file by running the following command:
+If you wish to use <span class="application">WPA Supplicant</span> with <a class="xref" href="networkmanager.md" title="NetworkManager-1.56.1">NetworkManager-1.56.1</a>, add the following options to the <span class="application">WPA Supplicant</span> build configuration file by running the following command:
 
-``` userinput
+```bash
 cat >> wpa_supplicant/.config << "EOF"
 CONFIG_CTRL_IFACE_DBUS=y
 CONFIG_CTRL_IFACE_DBUS_NEW=y
@@ -120,36 +120,36 @@ EOF
 
 Next, fix building with OpenSSL-4:
 
-``` userinput
+```bash
 patch -Np1 -i ../wpa_supplicant-2.11-openssl_4_fixes-1.patch
 ```
 
-Install [WPA Supplicant]{.application} by running the following commands:
+Install <span class="application">WPA Supplicant</span> by running the following commands:
 
-``` userinput
+```bash
 cd wpa_supplicant &&
 make BINDIR=/usr/sbin LIBDIR=/usr/lib
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m755 wpa_{cli,passphrase,supplicant} /usr/sbin/ &&
 install -v -m644 doc/docbook/wpa_supplicant.conf.5 /usr/share/man/man5/ &&
 install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 /usr/share/man/man8/
 ```
 
-Install the [systemd]{.application} support files by running the following command as the `root`{.systemitem} user:
+Install the <span class="application">systemd</span> support files by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m644 systemd/*.service /usr/lib/systemd/system/
 ```
 
-If you have built [WPA Supplicant]{.application} with [D-Bus]{.application} support, you will need to install [D-Bus]{.application} configuration files. Install them by running the following commands as the `root`{.systemitem} user:
+If you have built <span class="application">WPA Supplicant</span> with <span class="application">D-Bus</span> support, you will need to install <span class="application">D-Bus</span> configuration files. Install them by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m644 dbus/fi.w1.wpa_supplicant1.service \
                  /usr/share/dbus-1/system-services/ &&
 install -v -d -m755 /etc/dbus-1/system.d &&
@@ -157,49 +157,49 @@ install -v -m644 dbus/dbus-wpa_supplicant.conf \
                  /etc/dbus-1/system.d/wpa_supplicant.conf
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-You will need to restart the system [D-Bus]{.application} daemon before you can use the [WPA Supplicant]{.application} [D-Bus]{.application} interface.
-:::
-::::
+You will need to restart the system <span class="application">D-Bus</span> daemon before you can use the <span class="application">WPA Supplicant</span> <span class="application">D-Bus</span> interface.
+</div>
+</div>
 
-::::::::: {.configuration lang="en"}
-## Configuring wpa_supplicant {#configuring-wpa_supplicant .sect2}
+<div class="configuration" lang="en">
+## Configuring wpa_supplicant {#configuring-wpa_supplicant}
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-If you are using WPA Supplicant with [NetworkManager-1.56.1](networkmanager.md "NetworkManager-1.56.1"){.xref} (or anything communicating with WPA Supplicant via D-Bus), this section should be skipped. Running a D-Bus connected WPA Supplicant instance and another WPA supplicant instance configured following this section simultaneously can cause subtle issues.
-:::
+If you are using WPA Supplicant with <a class="xref" href="networkmanager.md" title="NetworkManager-1.56.1">NetworkManager-1.56.1</a> (or anything communicating with WPA Supplicant via D-Bus), this section should be skipped. Running a D-Bus connected WPA Supplicant instance and another WPA supplicant instance configured following this section simultaneously can cause subtle issues.
+</div>
 
-::: {.sect3 lang="en"}
-### []{#wpa_supplicant-config}Config File {#config-file .sect3}
+<div class="sect3" lang="en">
+### Config File {#config-file}
 
-`/etc/wpa_supplicant/wpa_supplicant-*.conf`{.filename}
-:::
+<code class="filename">/etc/wpa_supplicant/wpa_supplicant-*.conf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-To connect to an access point that uses a password, you need to put the pre-shared key in [`/etc/wpa_supplicant/wpa_supplicant-`{.filename}*`wifi0`*`.conf`{.filename}.]{.phrase} SSID is the string that the access point/router transmits to identify itself. Run the following command as the `root`{.systemitem} user:
+To connect to an access point that uses a password, you need to put the pre-shared key in <span class="phrase"><code class="filename">/etc/wpa_supplicant/wpa_supplicant-</code><em>`wifi0`</em><code class="filename">.conf</code>.</span> SSID is the string that the access point/router transmits to identify itself. Run the following command as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 install -v -dm755 /etc/wpa_supplicant &&
 wpa_passphrase SSID | sed '/^\t#/d' > /etc/wpa_supplicant/wpa_supplicant-wifi0.conf
 ```
 
-The [**wpa_supplicant**]{.command} command will ask you to input the password of the access point.
+The <span class="command"><strong>wpa_supplicant</strong></span> command will ask you to input the password of the access point.
 
-[`/etc/wpa_supplicant/wpa_supplicant-`{.filename}*`wifi0`*`.conf`{.filename}]{.phrase} can hold the details of several access points. When [**wpa_supplicant**]{.command} is started, it will scan for the SSIDs it can see and choose the appropriate password to connect.
+<span class="phrase"><code class="filename">/etc/wpa_supplicant/wpa_supplicant-</code><em>`wifi0`</em><code class="filename">.conf</code></span> can hold the details of several access points. When <span class="command"><strong>wpa_supplicant</strong></span> is started, it will scan for the SSIDs it can see and choose the appropriate password to connect.
 
-If you want to connect to an access point that isn't password protected, put an entry like this in [`/etc/wpa_supplicant/wpa_supplicant-`{.filename}*`wifi0`*`.conf`{.filename}.]{.phrase} Replace "Some-SSID" with the SSID of the access point/router.
+If you want to connect to an access point that isn't password protected, put an entry like this in <span class="phrase"><code class="filename">/etc/wpa_supplicant/wpa_supplicant-</code><em>`wifi0`</em><code class="filename">.conf</code>.</span> Replace "Some-SSID" with the SSID of the access point/router.
 
-``` screen
+```console
 network={
   ssid="Some-SSID"
   key_mgmt=NONE
@@ -208,98 +208,98 @@ network={
 
 Connecting to a new access point that is not in the configuration file can be accomplished manually via the command line, but it must be done via a privileged user. To do that, add the following to the configuration file:
 
-``` screen
+```console
 ctrl_interface=DIR=/run/wpa_supplicant GROUP=<privileged group>
 update_config=1
 ```
 
 Replace the \<privileged group\> above with a system group where members have the ability to connect to a wireless access point.
 
-There are many options that you could use to tweak how you connect to each access point. They are described in some detail in the `wpa_supplicant/wpa_supplicant.conf`{.filename} file in the source tree.
-:::
+There are many options that you could use to tweak how you connect to each access point. They are described in some detail in the <code class="filename">wpa_supplicant/wpa_supplicant.conf</code> file in the source tree.
+</div>
 
-::::: {.sect3 lang="en"}
-### Connecting to an Access Point {#connecting-to-an-access-point .sect3}
+<div class="sect3" lang="en">
+### Connecting to an Access Point {#connecting-to-an-access-point}
 
-There are 3 types of [systemd]{.application} units that were installed:
+There are 3 types of <span class="application">systemd</span> units that were installed:
 
-::: itemizedlist
+<div class="itemizedlist">
 -   wpa_supplicant@.service
 
 -   wpa_supplicant-nl80211@.service
 
 -   wpa_supplicant-wired@.service
-:::
+</div>
 
 The only difference between 3 of them is what driver is used for connecting (-D option). The first one uses the default driver, the second one uses the nl80211 driver and the third one uses the wired driver.
 
-You can connect to the wireless access point by running the following command as the `root`{.systemitem} user:
+You can connect to the wireless access point by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl start wpa_supplicant@wlan0
 ```
 
-To connect to the wireless access point at boot, simply enable the appropriate [**wpa_supplicant**]{.command} service by running the following command as the `root`{.systemitem} user:
+To connect to the wireless access point at boot, simply enable the appropriate <span class="command"><strong>wpa_supplicant</strong></span> service by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable wpa_supplicant@wlan0
 ```
 
-Depending on your setup, you can replace the `wpa_supplicant@.service`{.filename} with any other listed above.
+Depending on your setup, you can replace the <code class="filename">wpa_supplicant@.service</code> with any other listed above.
 
-To assign a network address to your wireless interface, consult the [General Network Configuration](../../../../lfs/view/systemd/chapter09/network.md){.ulink} page in LFS.
+To assign a network address to your wireless interface, consult the <a class="ulink" href="../../../../lfs/view/systemd/chapter09/network.md">General Network Configuration</a> page in LFS.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Ensure that the `systemd-networkd`{.literal} service is enabled so that the system can reach the internet.
-:::
-:::::
-:::::::::
+Ensure that the <code class="literal">systemd-networkd</code> service is enabled so that the system can reach the internet.
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [wpa_supplicant, wpa_passphrase and wpa_cli]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">wpa_supplicant, wpa_passphrase and wpa_cli</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------
-  []{#wpa_supplicant-prog}[[**wpa_supplicant**]{.command}]{.term}   is a daemon that can connect to a password protected wireless access point
-  []{#wpa_passphrase}[[**wpa_passphrase**]{.command}]{.term}        takes an SSID and a password and generates a simple configuration that [**wpa_supplicant**]{.command} can understand
-  []{#wpa_cli}[[**wpa_cli**]{.command}]{.term}                      is a command line interface used to control a running [**wpa_supplicant**]{.command} daemon
+  <a id="wpa_supplicant-prog"></a><span class="command"><span class="term"><strong>wpa_supplicant</strong></span></span>   is a daemon that can connect to a password protected wireless access point
+  <a id="wpa_passphrase"></a><span class="command"><span class="term"><strong>wpa_passphrase</strong></span></span>        takes an SSID and a password and generates a simple configuration that <span class="command"><strong>wpa_supplicant</strong></span> can understand
+  <a id="wpa_cli"></a><span class="command"><span class="term"><strong>wpa_cli</strong></span></span>                      is a command line interface used to control a running <span class="command"><strong>wpa_supplicant</strong></span> daemon
   ----------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](wireless_tools.md "Wireless Tools-29"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](wireless_tools.md "Wireless Tools-29")
 
     Wireless Tools-29
 
--   [Next](netutils.md "Networking Utilities"){accesskey="n"}
+-   [Next](netutils.md "Networking Utilities")
 
     Networking Utilities
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

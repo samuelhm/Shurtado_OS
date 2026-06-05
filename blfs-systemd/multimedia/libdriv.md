@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XII. Multimedia
 
--   [Prev](multimedia.md "Multimedia"){accesskey="p"}
+-   [Prev](multimedia.md "Multimedia")
 
     Multimedia
 
--   [Next](alsa.md "ALSA"){accesskey="n"}
+-   [Next](alsa.md "ALSA")
 
     ALSA
 
--   [Up](multimedia.md "Part XII. Multimedia"){accesskey="u"}
+-   [Up](multimedia.md "Part XII. Multimedia")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#multimedia-libdriv}Multimedia Libraries and Drivers {#multimedia-libraries-and-drivers .chapter}
+# Multimedia Libraries and Drivers {#multimedia-libraries-and-drivers}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 Many multimedia programs require libraries and/or drivers in order to function properly. The packages in this section fall into this category. Generally you only need to install these if you are installing a program which has the library listed as either a requirement, or as an option to enable it to support certain functionality.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [ALSA](alsa.md)
@@ -88,19 +88,19 @@ Many multimedia programs require libraries and/or drivers in order to function p
 -   [x265-4.2](x265.md)
 -   [xine-lib-1.2.13](xine-lib.md)
 -   [XviD-1.3.7](xvid.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](multimedia.md "Multimedia"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](multimedia.md "Multimedia")
 
     Multimedia
 
--   [Next](alsa.md "ALSA"){accesskey="n"}
+-   [Next](alsa.md "ALSA")
 
     ALSA
 
--   [Up](multimedia.md "Part XII. Multimedia"){accesskey="u"}
+-   [Up](multimedia.md "Part XII. Multimedia")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

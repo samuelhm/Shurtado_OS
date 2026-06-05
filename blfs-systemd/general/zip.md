@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](xdotool.md "xdotool-4.20260303.1"){accesskey="p"}
+-   [Prev](xdotool.md "xdotool-4.20260303.1")
 
     xdotool-4.20260303.1
 
--   [Next](hdparm.md "Hdparm-9.65"){accesskey="n"}
+-   [Next](hdparm.md "Hdparm-9.65")
 
     Hdparm-9.65
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#zip}Zip-3.0 {#zip-3.0 .sect1}
+# Zip-3.0 {#zip-3.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Zip {#introduction-to-zip .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Zip {#introduction-to-zip}
 
-The [Zip]{.application} package contains [Zip]{.application} utilities. These are useful for compressing files into `ZIP`{.filename} archives.
+The <span class="application">Zip</span> package contains <span class="application">Zip</span> utilities. These are useful for compressing files into <code class="filename">ZIP</code> archives.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/infozip/zip30.tar.gz](https://downloads.sourceforge.net/infozip/zip30.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/infozip/zip30.tar.gz">https://downloads.sourceforge.net/infozip/zip30.tar.gz</a>
 
 -   Download MD5 sum: 7b74551e63f8ee6aab6fbc86676c0d37
 
@@ -44,77 +44,77 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.4 MB
 
 -   Estimated build time: 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Zip {#installation-of-zip .sect2}
+<div class="installation" lang="en">
+## Installation of Zip {#installation-of-zip}
 
-Install [Zip]{.application} by running the following commands:
+Install <span class="application">Zip</span> by running the following commands:
 
-``` userinput
+```bash
 make -f unix/Makefile generic CC="gcc -std=gnu89"
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make prefix=/usr MANDIR=/usr/share/man/man1 -f unix/Makefile install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`CC="gcc -std=gnu89"`*: This parameter overrides the `CC`{.varname} variable that is set to [**cc**]{.command} in the `unix/Makefile`{.filename} file. On LFS [**cc**]{.command} is a symlink to [**gcc**]{.command}, and it uses `-std=gnu17`{.option} (ISO 9899:2017 with GNU extensions) as the default but Zip is a [“[legacy]{.quote}”]{.quote} package where some grammar constructs are invalid in ISO 9899:1999 and newer standards.
+*`CC="gcc -std=gnu89"`*: This parameter overrides the <code class="varname">CC</code> variable that is set to <span class="command"><strong>cc</strong></span> in the <code class="filename">unix/Makefile</code> file. On LFS <span class="command"><strong>cc</strong></span> is a symlink to <span class="command"><strong>gcc</strong></span>, and it uses <code class="option">-std=gnu17</code> (ISO 9899:2017 with GNU extensions) as the default but Zip is a <span class="quote">“<span class="quote">legacy</span>”</span> package where some grammar constructs are invalid in ISO 9899:1999 and newer standards.
 
-*`prefix=/usr`*: This parameter overrides the `prefix`{.varname} variable that is set to `/usr/local`{.filename} in the `unix/Makefile`{.filename} file.
-:::
+*`prefix=/usr`*: This parameter overrides the <code class="varname">prefix</code> variable that is set to <code class="filename">/usr/local</code> in the <code class="filename">unix/Makefile</code> file.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [zip, zipcloak, zipnote, and zipsplit]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">zip, zipcloak, zipnote, and zipsplit</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ -----------------------------------------------------------------
-  []{#zip-prog}[[**zip**]{.command}]{.term}        compresses files into a `ZIP`{.filename} archive
-  []{#zipcloak}[[**zipcloak**]{.command}]{.term}   is a utility to encrypt and decrypt a `ZIP`{.filename} archive
-  []{#zipnote}[[**zipnote**]{.command}]{.term}     reads or writes comments stored in a `ZIP`{.filename} file
-  []{#zipsplit}[[**zipsplit**]{.command}]{.term}   is a utility to split `ZIP`{.filename} files into smaller files
+  <a id="zip-prog"></a><span class="command"><span class="term"><strong>zip</strong></span></span>        compresses files into a <code class="filename">ZIP</code> archive
+  <a id="zipcloak"></a><span class="command"><span class="term"><strong>zipcloak</strong></span></span>   is a utility to encrypt and decrypt a <code class="filename">ZIP</code> archive
+  <a id="zipnote"></a><span class="command"><span class="term"><strong>zipnote</strong></span></span>     reads or writes comments stored in a <code class="filename">ZIP</code> file
+  <a id="zipsplit"></a><span class="command"><span class="term"><strong>zipsplit</strong></span></span>   is a utility to split <code class="filename">ZIP</code> files into smaller files
   ------------------------------------------------ -----------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xdotool.md "xdotool-4.20260303.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xdotool.md "xdotool-4.20260303.1")
 
     xdotool-4.20260303.1
 
--   [Next](hdparm.md "Hdparm-9.65"){accesskey="n"}
+-   [Next](hdparm.md "Hdparm-9.65")
 
     Hdparm-9.65
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

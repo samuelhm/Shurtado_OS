@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](duktape.md "duktape-2.7.0"){accesskey="p"}
+-   [Prev](duktape.md "duktape-2.7.0")
 
     duktape-2.7.0
 
--   [Next](exempi.md "Exempi-2.6.6"){accesskey="n"}
+-   [Next](exempi.md "Exempi-2.6.6")
 
     Exempi-2.6.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#enchant}enchant-2.8.16 {#enchant-2.8.16 .sect1}
+# enchant-2.8.16 {#enchant-2.8.16}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to enchant {#introduction-to-enchant .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to enchant {#introduction-to-enchant}
 
-The [enchant]{.application} package provides a generic interface into various existing spell checking libraries.
+The <span class="application">enchant</span> package provides a generic interface into various existing spell checking libraries.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/rrthomas/enchant/releases/download/v2.8.16/enchant-2.8.16.tar.gz](https://github.com/rrthomas/enchant/releases/download/v2.8.16/enchant-2.8.16.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/rrthomas/enchant/releases/download/v2.8.16/enchant-2.8.16.tar.gz">https://github.com/rrthomas/enchant/releases/download/v2.8.16/enchant-2.8.16.tar.gz</a>
 
 -   Download MD5 sum: af5a6f8e0e6379ac7b3dc1c4b02b77bb
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 70 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (add 0.8 SBU for tests)
-:::
+</div>
 
 ### enchant Dependencies
 
 #### Required
 
-[Aspell-0.60.8.2](aspell.md "Aspell-0.60.8.2"){.xref}, [GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref}, and [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="aspell.md" title="Aspell-0.60.8.2">Aspell-0.60.8.2</a>, <a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>, and <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[dbus-glib-0.114](dbus-glib.md "dbus-glib-0.114"){.xref}, [Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, [Hspell](http://hspell.ivrix.org.il/){.ulink}, [Hunspell](https://hunspell.github.io/){.ulink}, [Nuspell](https://nuspell.github.io/){.ulink}, [Voikko](https://hunspell.github.io/){.ulink}, and [unittest-cpp](https://github.com/unittest-cpp/unittest-cpp/releases){.ulink} (required for tests)
-:::::
+<a class="xref" href="dbus-glib.md" title="dbus-glib-0.114">dbus-glib-0.114</a>, <a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="ulink" href="http://hspell.ivrix.org.il/">Hspell</a>, <a class="ulink" href="https://hunspell.github.io/">Hunspell</a>, <a class="ulink" href="https://nuspell.github.io/">Nuspell</a>, <a class="ulink" href="https://hunspell.github.io/">Voikko</a>, and <a class="ulink" href="https://github.com/unittest-cpp/unittest-cpp/releases">unittest-cpp</a> (required for tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of enchant {#installation-of-enchant .sect2}
+<div class="installation" lang="en">
+## Installation of enchant {#installation-of-enchant}
 
-Install [enchant]{.application} by running the following commands:
+Install <span class="application">enchant</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr     \
             --sysconfdir=/etc \
             --disable-static  \
@@ -70,36 +70,36 @@ Install [enchant]{.application} by running the following commands:
 make
 ```
 
-To run tests, unittest-cpp must be installed and the `--enable-relocatable`{.option} option passed to configure above. If these conditions are present, the tests may be run with [**make check**]{.command}.
+To run tests, unittest-cpp must be installed and the <code class="option">--enable-relocatable</code> option passed to configure above. If these conditions are present, the tests may be run with <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring enchant {#configuring-enchant .sect2}
+<div class="configuration" lang="en">
+## Configuring enchant {#configuring-enchant}
 
-::: {.sect3 lang="en"}
-### []{#enchant-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`~/.enchant`{.filename} and `/usr/share/enchant/enchant.ordering`{.filename}
-:::
+<code class="filename">~/.enchant</code> and <code class="filename">/usr/share/enchant/enchant.ordering</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-You can test your installation and configuration by creating a test file and running the following commands (you can replace the en_GB dictionary by any other downloaded when installing [Aspell-0.60.8.2](aspell.md "Aspell-0.60.8.2"){.xref}):
+You can test your installation and configuration by creating a test file and running the following commands (you can replace the en_GB dictionary by any other downloaded when installing <a class="xref" href="aspell.md" title="Aspell-0.60.8.2">Aspell-0.60.8.2</a>):
 
-``` userinput
+```bash
 cat > /tmp/test-enchant.txt << "EOF"
 Tel me more abot linux
 Ther ar so many commads
@@ -112,50 +112,50 @@ enchant-2 -d en_GB -a /tmp/test-enchant.txt
 You will see a list of the misspelled words followed by a list of alternatives for them.
 
 See more details in the enchant manual page.
-:::
-:::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [enchant-2 and enchant-lsmod-2]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">enchant-2 and enchant-lsmod-2</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libenchant-2.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libenchant-2.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/enchant-2, /usr/lib/enchant-2, /usr/share/enchant, and /usr/share/doc/enchant-2.8.16]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/enchant-2, /usr/lib/enchant-2, /usr/share/enchant, and /usr/share/doc/enchant-2.8.16</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- -------------------------------------------------------
-  []{#enchant-2}[[**enchant-2**]{.command}]{.term}               is a spellchecker
-  []{#enchant-lsmod-2}[[**enchant-lsmod-2**]{.command}]{.term}   lists available backends, languages, and dictionaries
-  []{#libenchant-2}[`libenchant-2.so`{.filename}]{.term}         contains spell checking interface API functions
+  <a id="enchant-2"></a><span class="command"><span class="term"><strong>enchant-2</strong></span></span>               is a spellchecker
+  <a id="enchant-lsmod-2"></a><span class="command"><span class="term"><strong>enchant-lsmod-2</strong></span></span>   lists available backends, languages, and dictionaries
+  <a id="libenchant-2"></a><span class="term"><code class="filename">libenchant-2.so</code></span>         contains spell checking interface API functions
   -------------------------------------------------------------- -------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](duktape.md "duktape-2.7.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](duktape.md "duktape-2.7.0")
 
     duktape-2.7.0
 
--   [Next](exempi.md "Exempi-2.6.6"){accesskey="n"}
+-   [Next](exempi.md "Exempi-2.6.6")
 
     Exempi-2.6.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

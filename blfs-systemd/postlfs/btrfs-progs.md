@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 5. File Systems and Disk Management
 
--   [Prev](initramfs.md "About initramfs"){accesskey="p"}
+-   [Prev](initramfs.md "About initramfs")
 
     About initramfs
 
--   [Next](dosfstools.md "dosfstools-4.2"){accesskey="n"}
+-   [Next](dosfstools.md "dosfstools-4.2")
 
     dosfstools-4.2
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#btrfs-progs}btrfs-progs-7.0 {#btrfs-progs-7.0 .sect1}
+# btrfs-progs-7.0 {#btrfs-progs-7.0}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to btrfs-progs {#introduction-to-btrfs-progs .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to btrfs-progs {#introduction-to-btrfs-progs}
 
-The [btrfs-progs]{.application} package contains administration and debugging tools for the B-tree file system (btrfs).
+The <span class="application">btrfs-progs</span> package contains administration and debugging tools for the B-tree file system (btrfs).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v7.0.tar.xz](https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v7.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v7.0.tar.xz">https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v7.0.tar.xz</a>
 
 -   Download MD5 sum: 58f14462ee1da3e36d0bde684e48b9ea
 
@@ -44,32 +44,32 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 70 MB (transient files created during tests need up to 10 GB)
 
 -   Estimated build time: 0.3 SBU (with parallelism=4; add 4.6 SBU for tests, up to 14 SBU on slow disks)
-:::
+</div>
 
 ### Btrfs-progs Dependencies
 
 #### Required
 
-[LZO-2.10](../general/lzo.md "LZO-2.10"){.xref}
+<a class="xref" href="../general/lzo.md" title="LZO-2.10">LZO-2.10</a>
 
 #### Optional
 
-[LVM2-2.03.41](lvm2.md "LVM2-2.03.41"){.xref} ([**dmsetup**]{.command} is used in tests), [ntfs-3g-2026.2.25](ntfs-3g.md "ntfs-3g-2026.2.25"){.xref}, [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref} and [sphinx_rtd_theme-3.1.0](../general/python-modules.md#sphinx_rtd_theme "Sphinx_rtd_theme-3.1.0"){.xref} (required to build documentation), and [reiserfsprogs](https://mirrors.edge.kernel.org/pub/linux/kernel/people/jeffm/reiserfsprogs/){.ulink} (for tests).
-:::::
+<a class="xref" href="lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a> (<span class="command"><strong>dmsetup</strong></span> is used in tests), <a class="xref" href="ntfs-3g.md" title="ntfs-3g-2026.2.25">ntfs-3g-2026.2.25</a>, <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a> and <a class="xref" href="../general/python-modules.md#sphinx_rtd_theme" title="Sphinx_rtd_theme-3.1.0">sphinx_rtd_theme-3.1.0</a> (required to build documentation), and <a class="ulink" href="https://mirrors.edge.kernel.org/pub/linux/kernel/people/jeffm/reiserfsprogs/">reiserfsprogs</a> (for tests).
+</div>
 
-::: {.kernel lang="en"}
-## []{#btrfs-progs-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 Enable the following option in the kernel configuration and recompile the kernel:
 
-``` screen
+```console
 File systems --->
   <*/M> Btrfs filesystem support                                      [BTRFS_FS]
 ```
 
-In addition to the above and to the options required for [LVM2-2.03.41](lvm2.md "LVM2-2.03.41"){.xref}, the following options must be set for running tests. The options marked as empty should [*not*]{.emphasis} be selected because they are for developers and make some tests fail.
+In addition to the above and to the options required for <a class="xref" href="lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a>, the following options must be set for running tests. The options marked as empty should <span class="emphasis"><em>not</em></span> be selected because they are for developers and make some tests fail.
 
-``` screen
+```console
 File systems --->
   <*/M> Btrfs filesystem support                                      [BTRFS_FS]
   [*]     Btrfs POSIX Access Control Lists                  [BTRFS_FS_POSIX_ACL]
@@ -77,14 +77,14 @@ File systems --->
   [ ]     Btrfs debugging support                                  [BTRFS_DEBUG]
   [ ]     Btrfs assert support                                    [BTRFS_ASSERT]
 ```
-:::
+</div>
 
-:::: {.installation lang="en"}
-## Installation of btrfs-progs {#installation-of-btrfs-progs .sect2}
+<div class="installation" lang="en">
+## Installation of btrfs-progs {#installation-of-btrfs-progs}
 
-Install [btrfs-progs]{.application} by running the following commands:
+Install <span class="application">btrfs-progs</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr           \
             --disable-static        \
             --disable-documentation &&
@@ -93,21 +93,21 @@ make
 
 Before running tests, build a support program:
 
-``` userinput
+```bash
 make fssum
 ```
 
-Now, remove tests that are known to fail. As `root`{.systemitem}:
+Now, remove tests that are known to fail. As <code class="systemitem">root</code>:
 
-``` userinput
+```bash
 rm -rf tests/mkfs-tests/042-rootdir-contents
 rm -rf tests/misc-tests/041-subvolume-delete-during-send
 rm -rf tests/fuzz-tests/010-simple-sb
 ```
 
-To test the results, issue (as the `root`{.systemitem} user):
+To test the results, issue (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 pushd tests
    ./fsck-tests.sh
    ./mkfs-tests.sh
@@ -118,83 +118,83 @@ pushd tests
 popd
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 If the above mentioned kernel options are not enabled, some tests fail, and prevent all the remaining tests from running because the test disk image is not cleanly unmounted. Also make sure that the btrfs kernel module is loaded.
-:::
+</div>
 
-Install the package as the `root`{.systemitem} user:
+Install the package as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have passed *`--disable-documentation`* to [**configure**]{.command} and you need the manual pages, install them by running, as the `root`{.systemitem} user:
+If you have passed *`--disable-documentation`* to <span class="command"><strong>configure</strong></span> and you need the manual pages, install them by running, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 for i in 5 8; do
    install Documentation/*.$i /usr/share/man/man$i
 done
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-*`--disable-documentation`*: This switch disables rebuilding the manual pages, because it requires [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref}.
-:::
+*`--disable-documentation`*: This switch disables rebuilding the manual pages, because it requires <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [btrfs, btrfs-convert, btrfs-find-root, btrfs-image, btrfs-map-logical, btrfs-select-super, btrfsck (link to btrfs), btrfstune, fsck.btrfs, and mkfs.btrfs]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">btrfs, btrfs-convert, btrfs-find-root, btrfs-image, btrfs-map-logical, btrfs-select-super, btrfsck (link to btrfs), btrfstune, fsck.btrfs, and mkfs.btrfs</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libbtrfs.so and libbtrfsutil.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libbtrfs.so and libbtrfsutil.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/btrfs]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/btrfs</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- -----------------------------------------------------------
-  []{#btrfs-prog}[[**btrfs**]{.command}]{.term}                        is the main interface into btrfs filesystem operations
-  []{#btrfs-convert}[[**btrfs-convert**]{.command}]{.term}             converts from an ext2/3/4 or reiserfs filesystem to btrfs
-  []{#btrfs-find-root}[[**btrfs-find-root**]{.command}]{.term}         is a filter to find btrfs root
-  []{#btrfs-map-logical}[[**btrfs-map-logical**]{.command}]{.term}     maps btrfs logical extent to physical extent
-  []{#btrfs-select-super}[[**btrfs-select-super**]{.command}]{.term}   overwrites the primary superblock with a backup copy
-  []{#btrfstune}[[**btrfstune**]{.command}]{.term}                     tunes various filesystem parameters
-  []{#fsck.btrfs}[[**fsck.btrfs**]{.command}]{.term}                   does nothing, but is present for consistency with fstab
-  []{#mkfs.btrfs}[[**mkfs.btrfs**]{.command}]{.term}                   creates a btrfs file system
+  <a id="btrfs-prog"></a><span class="command"><span class="term"><strong>btrfs</strong></span></span>                        is the main interface into btrfs filesystem operations
+  <a id="btrfs-convert"></a><span class="command"><span class="term"><strong>btrfs-convert</strong></span></span>             converts from an ext2/3/4 or reiserfs filesystem to btrfs
+  <a id="btrfs-find-root"></a><span class="command"><span class="term"><strong>btrfs-find-root</strong></span></span>         is a filter to find btrfs root
+  <a id="btrfs-map-logical"></a><span class="command"><span class="term"><strong>btrfs-map-logical</strong></span></span>     maps btrfs logical extent to physical extent
+  <a id="btrfs-select-super"></a><span class="command"><span class="term"><strong>btrfs-select-super</strong></span></span>   overwrites the primary superblock with a backup copy
+  <a id="btrfstune"></a><span class="command"><span class="term"><strong>btrfstune</strong></span></span>                     tunes various filesystem parameters
+  <a id="fsck.btrfs"></a><span class="command"><span class="term"><strong>fsck.btrfs</strong></span></span>                   does nothing, but is present for consistency with fstab
+  <a id="mkfs.btrfs"></a><span class="command"><span class="term"><strong>mkfs.btrfs</strong></span></span>                   creates a btrfs file system
   -------------------------------------------------------------------- -----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](initramfs.md "About initramfs"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](initramfs.md "About initramfs")
 
     About initramfs
 
--   [Next](dosfstools.md "dosfstools-4.2"){accesskey="n"}
+-   [Next](dosfstools.md "dosfstools-4.2")
 
     dosfstools-4.2
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

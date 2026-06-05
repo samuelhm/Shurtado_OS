@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](nasm.md "NASM-3.01"){accesskey="p"}
+-   [Prev](nasm.md "NASM-3.01")
 
     NASM-3.01
 
--   [Next](perl-modules.md "Perl Modules"){accesskey="n"}
+-   [Next](perl-modules.md "Perl Modules")
 
     Perl Modules
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#patchelf}Patchelf-0.18.0 {#patchelf-0.18.0 .sect1}
+# Patchelf-0.18.0 {#patchelf-0.18.0}
 
-:::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Patchelf {#introduction-to-patchelf .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Patchelf {#introduction-to-patchelf}
 
-The [patchelf]{.application} package contains a small utility to modify the dynamic linker and RPATH of ELF executables.
+The <span class="application">patchelf</span> package contains a small utility to modify the dynamic linker and RPATH of ELF executables.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/NixOS/patchelf/releases/download/0.18.0/patchelf-0.18.0.tar.gz](https://github.com/NixOS/patchelf/releases/download/0.18.0/patchelf-0.18.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/NixOS/patchelf/releases/download/0.18.0/patchelf-0.18.0.tar.gz">https://github.com/NixOS/patchelf/releases/download/0.18.0/patchelf-0.18.0.tar.gz</a>
 
 -   Download MD5 sum: b02099b0d63f06b3fe370f4edfc0c085
 
@@ -44,60 +44,60 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 20 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Patchelf {#installation-of-patchelf .sect2}
+<div class="installation" lang="en">
+## Installation of Patchelf {#installation-of-patchelf}
 
-Install [patchelf]{.application} by running the following commands:
+Install <span class="application">patchelf</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr \
             --docdir=/usr/share/doc/patchelf-0.18.0 &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Program:** [patchelf]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">patchelf</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#patchelf-prog}[[**patchelf**]{.command}]{.term}   is a simple utility for modifying existing ELF executables and libraries; it can change the dynamic loader ("ELF interpreter") of executables and change the RPATH of executables and libraries.
+  <a id="patchelf-prog"></a><span class="command"><span class="term"><strong>patchelf</strong></span></span>   is a simple utility for modifying existing ELF executables and libraries; it can change the dynamic loader ("ELF interpreter") of executables and change the RPATH of executables and libraries.
   ----------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](nasm.md "NASM-3.01"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](nasm.md "NASM-3.01")
 
     NASM-3.01
 
--   [Next](perl-modules.md "Perl Modules"){accesskey="n"}
+-   [Next](perl-modules.md "Perl Modules")
 
     Perl Modules
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

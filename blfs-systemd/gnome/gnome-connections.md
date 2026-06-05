@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](gnome-color-manager.md "gnome-color-manager-3.36.2"){accesskey="p"}
+-   [Prev](gnome-color-manager.md "gnome-color-manager-3.36.2")
 
     gnome-color-manager-3.36.2
 
--   [Next](gnome-disk-utility.md "gnome-disk-utility-46.1"){accesskey="n"}
+-   [Next](gnome-disk-utility.md "gnome-disk-utility-46.1")
 
     gnome-disk-utility-46.1
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-connections}gnome-connections-50.0 {#gnome-connections-50.0 .sect1}
+# gnome-connections-50.0 {#gnome-connections-50.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to gnome-connections {#introduction-to-gnome-connections .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to gnome-connections {#introduction-to-gnome-connections}
 
-[gnome-connections]{.application} is a VNC and RDP client for the [GNOME]{.application} Desktop.
+<span class="application">gnome-connections</span> is a VNC and RDP client for the <span class="application">GNOME</span> Desktop.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-connections/50/gnome-connections-50.0.tar.xz](https://download.gnome.org/sources/gnome-connections/50/gnome-connections-50.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-connections/50/gnome-connections-50.0.tar.xz">https://download.gnome.org/sources/gnome-connections/50/gnome-connections-50.0.tar.xz</a>
 
 -   Download MD5 sum: 8c39ecc6125b8b15e4190aa839d2abbd
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 14 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### gnome-connections Dependencies
 
 #### Required
 
-[AppStream-1.1.2](../general/appstream.md "AppStream-1.1.2"){.xref}, [FreeRDP-3.26.0](../xsoft/freerdp.md "FreeRDP-3.26.0"){.xref}, [gtk-vnc-1.5.0](../x/gtk-vnc.md "gtk-vnc-1.5.0"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libhandy-1.8.3](../x/libhandy1.md "libhandy-1.8.3"){.xref}, [libsecret-0.21.7](libsecret.md "libsecret-0.21.7"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
-:::::
+<a class="xref" href="../general/appstream.md" title="AppStream-1.1.2">AppStream-1.1.2</a>, <a class="xref" href="../xsoft/freerdp.md" title="FreeRDP-3.26.0">FreeRDP-3.26.0</a>, <a class="xref" href="../x/gtk-vnc.md" title="gtk-vnc-1.5.0">gtk-vnc-1.5.0</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../x/libhandy1.md" title="libhandy-1.8.3">libhandy-1.8.3</a>, <a class="xref" href="libsecret.md" title="libsecret-0.21.7">libsecret-0.21.7</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of gnome-connections {#installation-of-gnome-connections .sect2}
+<div class="installation" lang="en">
+## Installation of gnome-connections {#installation-of-gnome-connections}
 
-Install [gnome-connections]{.application} by running the following commands:
+Install <span class="application">gnome-connections</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -66,54 +66,54 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-connections]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-connections</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gnome-connections, /usr/lib/gnome-connections, /usr/share/gnome-connections, and /usr/share/help/\*/gnome-connections]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gnome-connections, /usr/lib/gnome-connections, /usr/share/gnome-connections, and /usr/share/help/\*/gnome-connections</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------------- ------------------------------------------------------------------
-  []{#gnome-connections-prog}[[**gnome-connections**]{.command}]{.term}   is a remote desktop viewer for the [GNOME]{.application} Desktop
+  <a id="gnome-connections-prog"></a><span class="command"><span class="term"><strong>gnome-connections</strong></span></span>   is a remote desktop viewer for the <span class="application">GNOME</span> Desktop
   ----------------------------------------------------------------------- ------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-color-manager.md "gnome-color-manager-3.36.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-color-manager.md "gnome-color-manager-3.36.2")
 
     gnome-color-manager-3.36.2
 
--   [Next](gnome-disk-utility.md "gnome-disk-utility-46.1"){accesskey="n"}
+-   [Next](gnome-disk-utility.md "gnome-disk-utility-46.1")
 
     gnome-disk-utility-46.1
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

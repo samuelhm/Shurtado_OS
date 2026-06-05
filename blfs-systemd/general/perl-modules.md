@@ -1,30 +1,30 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](patchelf.md "Patchelf-0.18.0"){accesskey="p"}
+-   [Prev](patchelf.md "Patchelf-0.18.0")
 
     Patchelf-0.18.0
 
--   [Next](perl-deps.md "Perl Module Dependencies"){accesskey="n"}
+-   [Next](perl-deps.md "Perl Module Dependencies")
 
     Perl Module Dependencies
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#perl-modules}Perl Modules {#perl-modules .sect1}
+# Perl Modules {#perl-modules}
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sect1 lang="en"}
-:::: {.package lang="en"}
-## Introduction to Perl Modules {#introduction-to-perl-modules .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Perl Modules {#introduction-to-perl-modules}
 
-The [Perl]{.application} module packages (also referred to as Distributions, because each can contain multiple modules) add useful objects to the [Perl]{.application} language. The packages listed on this page are required or recommended for other packages in the book. If they have dependent modules, those are either on this page or else on the next page ([Perl Module Dependencies](perl-deps.md "Perl Module Dependencies"){.xref}).
+The <span class="application">Perl</span> module packages (also referred to as Distributions, because each can contain multiple modules) add useful objects to the <span class="application">Perl</span> language. The packages listed on this page are required or recommended for other packages in the book. If they have dependent modules, those are either on this page or else on the next page (<a class="xref" href="perl-deps.md" title="Perl Module Dependencies">Perl Module Dependencies</a>).
 
-In many cases, only the required or recommended dependencies are listed - there might be other modules which allow more tests to be run, but omitting them will still allow the tests to `PASS`{.literal}.
+In many cases, only the required or recommended dependencies are listed - there might be other modules which allow more tests to be run, but omitting them will still allow the tests to <code class="literal">PASS</code>.
 
 For a few modules, the BLFS editors have determined that other modules still listed as prerequisites are not required, and omitted them.
 
@@ -32,2713 +32,2713 @@ Where an alphabetically-earlier dependency of the same module pulls in a depende
 
 It is generally worth running the tests for perl modules, they often can show problems such as missing dependencies which are required to use the module. Here, the editors have attempted to separate those dependencies which are only required for running test suites, but they will not be mentioned for a module where one of its dependencies uses that module for its own test suite. That is to say, if you intend to run the test suites, please run them for each dependency of the module.
 
-It is possible to automatically install the current versions of a module and [*all*]{.emphasis} missing or too-old dependencies [*recommended by upstream*]{.emphasis} using CPAN. See [CPAN automated install of perl modules](perl-modules.md#perl-alternatives "CPAN automated install of perl modules"){.xref} at the end of this page.
+It is possible to automatically install the current versions of a module and <span class="emphasis"><em>all</em></span> missing or too-old dependencies <span class="emphasis"><em>recommended by upstream</em></span> using CPAN. See <a class="xref" href="perl-modules.md#perl-alternatives" title="CPAN automated install of perl modules">CPAN automated install of perl modules</a> at the end of this page.
 
-Most of these modules only install files below `/usr/lib/perl5/site_perl/5.xx.y`{.filename} and those will not be documented. One or two install programs (mostly, perl scripts), or a library, into `/usr/bin/`{.filename} or `/usr/lib/`{.filename} and these [*are*]{.emphasis} documented.
+Most of these modules only install files below <code class="filename">/usr/lib/perl5/site_perl/5.xx.y</code> and those will not be documented. One or two install programs (mostly, perl scripts), or a library, into <code class="filename">/usr/bin/</code> or <code class="filename">/usr/lib/</code> and these <span class="emphasis"><em>are</em></span> documented.
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/perl-modules](https://wiki.linuxfromscratch.org/blfs/wiki/perl-modules){.ulink}
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/perl-modules">https://wiki.linuxfromscratch.org/blfs/wiki/perl-modules</a>
 
-::: itemizedlist
--   [Archive-Zip-1.68](perl-modules.md#perl-archive-zip "Archive::Zip-1.68"){.xref}
+<div class="itemizedlist">
+-   <a class="xref" href="perl-modules.md#perl-archive-zip" title="Archive::Zip-1.68">Archive-Zip-1.68</a>
 
--   [autovivification-0.18](perl-modules.md#perl-autovivification "autovivification-0.18"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-autovivification" title="autovivification-0.18">autovivification-0.18</a>
 
--   [Business-ISBN-3.014](perl-modules.md#perl-business-isbn "Business::ISBN-3.014"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-business-isbn" title="Business::ISBN-3.014">Business-ISBN-3.014</a>
 
--   [Business-ISMN-1.205](perl-modules.md#perl-business-ismn "Business::ISMN-1.205"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-business-ismn" title="Business::ISMN-1.205">Business-ISMN-1.205</a>
 
--   [Business-ISSN-1.008](perl-modules.md#perl-business-issn "Business::ISSN-1.008"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-business-issn" title="Business::ISSN-1.008">Business-ISSN-1.008</a>
 
--   [Class-Accessor-0.51](perl-modules.md#perl-class-accessor "Class::Accessor-0.51"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-class-accessor" title="Class::Accessor-0.51">Class-Accessor-0.51</a>
 
--   [Data-Compare-1.29](perl-modules.md#perl-data-compare "Data::Compare-1.29"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-data-compare" title="Data::Compare-1.29">Data-Compare-1.29</a>
 
--   [Data-Dump-1.25](perl-modules.md#perl-data-dump "Data::Dump-1.25"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-data-dump" title="Data::Dump-1.25">Data-Dump-1.25</a>
 
--   [Data-Uniqid-0.12](perl-modules.md#perl-data-uniqid "Data::Uniqid-0.12"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-data-uniqid" title="Data::Uniqid-0.12">Data-Uniqid-0.12</a>
 
--   [DateTime-Calendar-Julian-0.107](perl-modules.md#perl-datetime-calendar-julian "DateTime::Calendar::Julian-0.107"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-datetime-calendar-julian" title="DateTime::Calendar::Julian-0.107">DateTime-Calendar-Julian-0.107</a>
 
--   [DateTime-Format-Builder-0.83](perl-modules.md#perl-datetime-format-builder "DateTime::Format::Builder-0.83"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-datetime-format-builder" title="DateTime::Format::Builder-0.83">DateTime-Format-Builder-0.83</a>
 
--   [Encode-EUCJPASCII-0.03](perl-modules.md#perl-encode-eucjpascii "Encode::EUCJPASCII-0.03"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-encode-eucjpascii" title="Encode::EUCJPASCII-0.03">Encode-EUCJPASCII-0.03</a>
 
--   [Encode-HanExtra-0.23](perl-modules.md#perl-encode-hanextra "Encode::HanExtra-0.23"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-encode-hanextra" title="Encode::HanExtra-0.23">Encode-HanExtra-0.23</a>
 
--   [Encode-JIS2K-0.05](perl-modules.md#perl-encode-jis2k "Encode::JIS2K-0.05"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-encode-jis2k" title="Encode::JIS2K-0.05">Encode-JIS2K-0.05</a>
 
--   [File-FcntlLock-0.22](perl-modules.md#perl-file-fcntllock "File::FcntlLock-0.22"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-file-fcntllock" title="File::FcntlLock-0.22">File-FcntlLock-0.22</a>
 
--   [File-Slurper-0.014](perl-modules.md#perl-file-slurper "File::Slurper-0.014"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-file-slurper" title="File::Slurper-0.014">File-Slurper-0.014</a>
 
--   [File-Which-1.27](perl-modules.md#perl-file-which "File::Which-1.27"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-file-which" title="File::Which-1.27">File-Which-1.27</a>
 
--   [HTML-Parser-3.85](perl-modules.md#perl-html-parser "HTML::Parser-3.85"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-html-parser" title="HTML::Parser-3.85">HTML-Parser-3.85</a>
 
--   [HTTP-Daemon-6.17](perl-modules.md#perl-http-daemon "HTTP::Daemon-6.17"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-http-daemon" title="HTTP::Daemon-6.17">HTTP-Daemon-6.17</a>
 
--   [IO-Socket-SSL-2.098](perl-modules.md#perl-io-socket-ssl "IO::Socket::SSL-2.098"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-io-socket-ssl" title="IO::Socket::SSL-2.098">IO-Socket-SSL-2.098</a>
 
--   [IO-String-1.08](perl-modules.md#perl-io-string "IO::String-1.08"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-io-string" title="IO::String-1.08">IO-String-1.08</a>
 
--   [IPC-Run3-0.049](perl-modules.md#perl-ipc-run3 "IPC::Run3-0.049"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-ipc-run3" title="IPC::Run3-0.049">IPC-Run3-0.049</a>
 
--   [libwww-perl-6.83](perl-modules.md#perl-libwww-perl "LWP (libwww-perl-6.83)"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-libwww-perl" title="LWP (libwww-perl-6.83)">libwww-perl-6.83</a>
 
--   [Lingua-Translit-0.29](perl-modules.md#perl-lingua-translit "Lingua::Translit-0.29"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-lingua-translit" title="Lingua::Translit-0.29">Lingua-Translit-0.29</a>
 
--   [List-AllUtils-0.19](perl-modules.md#perl-list-allutils "List::AllUtils-0.19"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-list-allutils" title="List::AllUtils-0.19">List-AllUtils-0.19</a>
 
--   [List-MoreUtils-0.430](perl-modules.md#perl-list-moreutils "List::MoreUtils-0.430"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-list-moreutils" title="List::MoreUtils-0.430">List-MoreUtils-0.430</a>
 
--   [Log-Log4perl-1.57](perl-modules.md#perl-log-log4perl "Log::Log4perl-1.57"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-log-log4perl" title="Log::Log4perl-1.57">Log-Log4perl-1.57</a>
 
--   [LWP-Protocol-https-6.15](perl-modules.md#perl-lwp-protocol-https "LWP::Protocol::https-6.15"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-lwp-protocol-https" title="LWP::Protocol::https-6.15">LWP-Protocol-https-6.15</a>
 
--   [Module-Build-0.4234](perl-modules.md#perl-module-build "Module::Build-0.4234"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-module-build" title="Module::Build-0.4234">Module-Build-0.4234</a>
 
--   [Net-DNS-1.54](perl-modules.md#perl-net-dns "Net::DNS-1.54"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-net-dns" title="Net::DNS-1.54">Net-DNS-1.54</a>
 
--   [Parse-RecDescent-1.967015](perl-modules.md#perl-parse-recdescent "Parse::RecDescent-1.967015"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-parse-recdescent" title="Parse::RecDescent-1.967015">Parse-RecDescent-1.967015</a>
 
--   [Parse-Yapp-1.21](perl-modules.md#perl-parse-yapp "Parse::Yapp-1.21"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-parse-yapp" title="Parse::Yapp-1.21">Parse-Yapp-1.21</a>
 
--   [PerlIO-utf8_strict-0.010](perl-modules.md#perl-perlio-utf8_strict "PerlIO::utf8_strict-0.010"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-perlio-utf8_strict" title="PerlIO::utf8_strict-0.010">PerlIO-utf8_strict-0.010</a>
 
--   [Regexp-Common-2024080801](perl-modules.md#perl-regexp-common "Regexp::Common-2024080801"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-regexp-common" title="Regexp::Common-2024080801">Regexp-Common-2024080801</a>
 
--   [SGMLSpm-1.1](perl-modules.md#perl-sgmlspm "SGMLSpm-1.1"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-sgmlspm" title="SGMLSpm-1.1">SGMLSpm-1.1</a>
 
--   [Sort-Key-1.33](perl-modules.md#perl-sort-key "Sort::Key-1.33"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-sort-key" title="Sort::Key-1.33">Sort-Key-1.33</a>
 
--   [Test-Command-0.11](perl-modules.md#perl-test-command "Test::Command-0.11"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-test-command" title="Test::Command-0.11">Test-Command-0.11</a>
 
--   [Test-Differences-0.72](perl-modules.md#perl-test-differences "Test::Differences-0.72"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-test-differences" title="Test::Differences-0.72">Test-Differences-0.72</a>
 
--   [Text-BibTeX-0.91](perl-modules.md#perl-text-bibtex "Text::BibTeX-0.91"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-text-bibtex" title="Text::BibTeX-0.91">Text-BibTeX-0.91</a>
 
--   [Text-CSV-2.06](perl-modules.md#perl-text-csv "Text::CSV-2.06"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-text-csv" title="Text::CSV-2.06">Text-CSV-2.06</a>
 
--   [Text-Roman-3.5](perl-modules.md#perl-text-roman "Text::Roman-3.5"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-text-roman" title="Text::Roman-3.5">Text-Roman-3.5</a>
 
--   [Unicode-Collate-1.31](perl-modules.md#perl-unicode-collate "Unicode::Collate-1.31"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-unicode-collate" title="Unicode::Collate-1.31">Unicode-Collate-1.31</a>
 
--   [Unicode-LineBreak-2019.001](perl-modules.md#perl-unicode-linebreak "Unicode::LineBreak-2019.001"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-unicode-linebreak" title="Unicode::LineBreak-2019.001">Unicode-LineBreak-2019.001</a>
 
--   [URI-5.34](perl-modules.md#perl-uri "URI-5.34"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-uri" title="URI-5.34">URI-5.34</a>
 
--   [XML-LibXML-Simple-1.01](perl-modules.md#perl-xml-libxml-simple "XML::LibXML::Simple-1.01"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-xml-libxml-simple" title="XML::LibXML::Simple-1.01">XML-LibXML-Simple-1.01</a>
 
--   [XML-LibXSLT-2.003000](perl-modules.md#perl-xml-libxslt "XML::LibXSLT-2.003000"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-xml-libxslt" title="XML::LibXSLT-2.003000">XML-LibXSLT-2.003000</a>
 
--   [XML-Parser-2.59](perl-modules.md#perl-xml-parser "XML::Parser-2.59"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-xml-parser" title="XML::Parser-2.59">XML-Parser-2.59</a>
 
--   [XML-Simple-2.25](perl-modules.md#perl-xml-simple "XML::Simple-2.25"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-xml-simple" title="XML::Simple-2.25">XML-Simple-2.25</a>
 
--   [XML-Writer-0.900](perl-modules.md#perl-xml-writer "XML::Writer-0.900"){.xref}
+-   <a class="xref" href="perl-modules.md#perl-xml-writer" title="XML::Writer-0.900">XML-Writer-0.900</a>
 
--   [CPAN automated install of perl modules](perl-modules.md#perl-alternatives "CPAN automated install of perl modules"){.xref}
-:::
-::::
+-   <a class="xref" href="perl-modules.md#perl-alternatives" title="CPAN automated install of perl modules">CPAN automated install of perl modules</a>
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-archive-zip}Archive::Zip-1.68 {#archivezip-1.68 .sect2}
+<div class="sect2" lang="en">
+## Archive::Zip-1.68 {#archivezip-1.68}
 
-::::: {.package lang="en"}
-### Introduction to Archive::Zip {#introduction-to-archivezip .sect3}
+<div class="package" lang="en">
+### Introduction to Archive::Zip {#introduction-to-archivezip}
 
 The Archive::Zip module allows a Perl program to create, manipulate, read, and write Zip archive files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz](https://www.cpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz">https://www.cpan.org/authors/id/P/PH/PHRED/Archive-Zip-1.68.tar.gz</a>
 
 -   Download MD5 sum: a33993309322164867c99e04a4000ee3
-:::
+</div>
 
 #### Archive::Zip Dependencies
 
 ##### Recommended (for the test suite)
 
-[libarchive-3.8.7](libarchive.md "libarchive-3.8.7"){.xref}
-:::::
+<a class="xref" href="libarchive.md" title="libarchive-3.8.7">libarchive-3.8.7</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Archive::Zip {#installation-of-archivezip .sect3}
+<div class="installation" lang="en">
+### Installation of Archive::Zip {#installation-of-archivezip}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents .sect3}
+<div class="content" lang="en">
+### Contents {#contents}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [crc32]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">crc32</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------- --------------------------------------------------------------------
-  []{#crc32-prog}[[**crc32**]{.command}]{.term}   computes and prints to stdout the CRC-32 values of the given files
+  <a id="crc32-prog"></a><span class="command"><span class="term"><strong>crc32</strong></span></span>   computes and prints to stdout the CRC-32 values of the given files
   ----------------------------------------------- --------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-autovivification}autovivification-0.18 {#autovivification-0.18 .sect2}
+<div class="sect2" lang="en">
+## autovivification-0.18 {#autovivification-0.18}
 
-::::: {.package lang="en"}
-### Introduction to the autovivification module {#introduction-to-the-autovivification-module .sect3}
+<div class="package" lang="en">
+### Introduction to the autovivification module {#introduction-to-the-autovivification-module}
 
 This module allows you disable autovivification (the automatic creation and population of new arrays and hashes whenever undefined variables are dereferenced), and optionally throw a warning or an error when it would have occurred.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz](https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz">https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz</a>
 
 -   Download MD5 sum: 8dec994e1e7d368e055f21a5777385a0
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of autovivification {#installation-of-autovivification .sect3}
+<div class="installation" lang="en">
+### Installation of autovivification {#installation-of-autovivification}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::: {.sect2 lang="en"}
-## []{#perl-business-isbn}Business::ISBN-3.014 {#businessisbn-3.014 .sect2}
+<div class="sect2" lang="en">
+## Business::ISBN-3.014 {#businessisbn-3.014}
 
-::::: {.package lang="en"}
-### Introduction to Business::ISBN {#introduction-to-businessisbn .sect3}
+<div class="package" lang="en">
+### Introduction to Business::ISBN {#introduction-to-businessisbn}
 
 The Business::ISBN module provides functions for working with International Standard Book Numbers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-3.014.tar.gz](https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-3.014.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-3.014.tar.gz">https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISBN-3.014.tar.gz</a>
 
 -   Download MD5 sum: d20dedcc798a253223bcfcba2058689e
-:::
+</div>
 
 #### Business::ISBN Dependencies
 
 ##### Required
 
-[Business-ISBN-Data-20260311.001](perl-deps.md#perl-business-isbn-data "Business::ISBN::Data-20260311.001"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-business-isbn-data" title="Business::ISBN::Data-20260311.001">Business-ISBN-Data-20260311.001</a>
+</div>
 
-:::: {.installation lang="en"}
-### Installation of Business::ISBN {#installation-of-businessisbn .sect3}
+<div class="installation" lang="en">
+### Installation of Business::ISBN {#installation-of-businessisbn}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 A harmless warning may be output during the creation of the Makefile regarding the ExtUtils::MakeMaker module. This can be safely ignored.
-:::
+</div>
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-::::
-::::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-business-ismn}Business::ISMN-1.205 {#businessismn-1.205 .sect2}
+<div class="sect2" lang="en">
+## Business::ISMN-1.205 {#businessismn-1.205}
 
-::::: {.package lang="en"}
-### Introduction to Business::ISMN {#introduction-to-businessismn .sect3}
+<div class="package" lang="en">
+### Introduction to Business::ISMN {#introduction-to-businessismn}
 
 The Business::ISMN module provides functions for working with International Standard Music Numbers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISMN-1.205.tar.gz](https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISMN-1.205.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISMN-1.205.tar.gz">https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISMN-1.205.tar.gz</a>
 
 -   Download MD5 sum: b35f42bdaeb2fd797c51bb0821ffc906
-:::
+</div>
 
 #### Business::ISMN Dependencies
 
 ##### Required
 
-[Tie-Cycle-1.233](perl-deps.md#perl-tie-cycle "Tie::Cycle-1.233"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-tie-cycle" title="Tie::Cycle-1.233">Tie-Cycle-1.233</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Business::ISMN {#installation-of-businessismn .sect3}
+<div class="installation" lang="en">
+### Installation of Business::ISMN {#installation-of-businessismn}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-business-issn}Business::ISSN-1.008 {#businessissn-1.008 .sect2}
+<div class="sect2" lang="en">
+## Business::ISSN-1.008 {#businessissn-1.008}
 
-::::: {.package lang="en"}
-### Introduction to Business::ISSN {#introduction-to-businessissn .sect3}
+<div class="package" lang="en">
+### Introduction to Business::ISSN {#introduction-to-businessissn}
 
 The Business::ISSN module provides functions for working with International Standard Serial Numbers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISSN-1.008.tar.gz](https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISSN-1.008.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISSN-1.008.tar.gz">https://www.cpan.org/authors/id/B/BR/BRIANDFOY/Business-ISSN-1.008.tar.gz</a>
 
 -   Download MD5 sum: 967e79eff741c8710d70c64fb593eda1
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Business::ISSN {#installation-of-businessissn .sect3}
+<div class="installation" lang="en">
+### Installation of Business::ISSN {#installation-of-businessissn}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-class-accessor}Class::Accessor-0.51 {#classaccessor-0.51 .sect2}
+<div class="sect2" lang="en">
+## Class::Accessor-0.51 {#classaccessor-0.51}
 
-::::: {.package lang="en"}
-### Introduction to Class::Accessor {#introduction-to-classaccessor .sect3}
+<div class="package" lang="en">
+### Introduction to Class::Accessor {#introduction-to-classaccessor}
 
 Class::Accessor generates accessors/mutators for your class.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz](https://www.cpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz">https://www.cpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz</a>
 
 -   Download MD5 sum: 1f1e5990f87cad7659b292fed7dc0407
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Class::Accessor {#installation-of-classaccessor .sect3}
+<div class="installation" lang="en">
+### Installation of Class::Accessor {#installation-of-classaccessor}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-data-compare}Data::Compare-1.29 {#datacompare-1.29 .sect2}
+<div class="sect2" lang="en">
+## Data::Compare-1.29 {#datacompare-1.29}
 
-::::: {.package lang="en"}
-### Introduction to Data::Compare {#introduction-to-datacompare .sect3}
+<div class="package" lang="en">
+### Introduction to Data::Compare {#introduction-to-datacompare}
 
-The Data::Compare module compares two [perl]{.application} data structures.
+The Data::Compare module compares two <span class="application">perl</span> data structures.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.29.tar.gz](https://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.29.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.29.tar.gz">https://www.cpan.org/authors/id/D/DC/DCANTRELL/Data-Compare-1.29.tar.gz</a>
 
 -   Download MD5 sum: ce9cb42ba6af634f5ab51f13f37e2ddb
-:::
+</div>
 
 #### Data::Compare Dependencies
 
 ##### Required
 
-[Clone-0.47](perl-deps.md#perl-clone "Clone-0.47"){.xref} and [File-Find-Rule-0.35](perl-deps.md#perl-file-find-rule "File::Find::Rule-0.35"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-clone" title="Clone-0.47">Clone-0.47</a> and <a class="xref" href="perl-deps.md#perl-file-find-rule" title="File::Find::Rule-0.35">File-Find-Rule-0.35</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Data::Compare {#installation-of-datacompare .sect3}
+<div class="installation" lang="en">
+### Installation of Data::Compare {#installation-of-datacompare}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-data-dump}Data::Dump-1.25 {#datadump-1.25 .sect2}
+<div class="sect2" lang="en">
+## Data::Dump-1.25 {#datadump-1.25}
 
-::::: {.package lang="en"}
-### Introduction to Data::Dump {#introduction-to-datadump .sect3}
+<div class="package" lang="en">
+### Introduction to Data::Dump {#introduction-to-datadump}
 
 Data::Dump provides pretty printing of data structures.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/G/GA/GARU/Data-Dump-1.25.tar.gz](https://www.cpan.org/authors/id/G/GA/GARU/Data-Dump-1.25.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/G/GA/GARU/Data-Dump-1.25.tar.gz">https://www.cpan.org/authors/id/G/GA/GARU/Data-Dump-1.25.tar.gz</a>
 
 -   Download MD5 sum: 9bd7131ef0441e1e0e001bf85e9fae31
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Data::Dump {#installation-of-datadump .sect3}
+<div class="installation" lang="en">
+### Installation of Data::Dump {#installation-of-datadump}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-data-uniqid}Data::Uniqid-0.12 {#datauniqid-0.12 .sect2}
+<div class="sect2" lang="en">
+## Data::Uniqid-0.12 {#datauniqid-0.12}
 
-::::: {.package lang="en"}
-### Introduction to Data::Uniqid {#introduction-to-datauniqid .sect3}
+<div class="package" lang="en">
+### Introduction to Data::Uniqid {#introduction-to-datauniqid}
 
 Data::Uniqid provides three simple routines for generating unique IDs.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz](https://www.cpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz">https://www.cpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz</a>
 
 -   Download MD5 sum: 6bab3b5da09fedfdf60ce2629a7367db
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Data::Uniqid {#installation-of-datauniqid .sect3}
+<div class="installation" lang="en">
+### Installation of Data::Uniqid {#installation-of-datauniqid}
 
 Although the final test fails and reports an Error, the test suite returns a status of 0. The error can safely be ignored.
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-datetime-calendar-julian}DateTime::Calendar::Julian-0.107 {#datetimecalendarjulian-0.107 .sect2}
+<div class="sect2" lang="en">
+## DateTime::Calendar::Julian-0.107 {#datetimecalendarjulian-0.107}
 
-::::: {.package lang="en"}
-### Introduction to DateTime::Calendar::Julian {#introduction-to-datetimecalendarjulian .sect3}
+<div class="package" lang="en">
+### Introduction to DateTime::Calendar::Julian {#introduction-to-datetimecalendarjulian}
 
 DateTime::Calendar::Julian implements the Julian Calendar.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/W/WY/WYANT/DateTime-Calendar-Julian-0.107.tar.gz](https://www.cpan.org/authors/id/W/WY/WYANT/DateTime-Calendar-Julian-0.107.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/W/WY/WYANT/DateTime-Calendar-Julian-0.107.tar.gz">https://www.cpan.org/authors/id/W/WY/WYANT/DateTime-Calendar-Julian-0.107.tar.gz</a>
 
 -   Download MD5 sum: abd775d1d82f0f45d4fd6214cf7bbed8
-:::
+</div>
 
 #### DateTime::Calendar::Julian Dependencies
 
 ##### Required
 
-[DateTime-1.66](perl-deps.md#perl-datetime "DateTime-1.66"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-datetime" title="DateTime-1.66">DateTime-1.66</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of DateTime::Calendar::Julian {#installation-of-datetimecalendarjulian .sect3}
+<div class="installation" lang="en">
+### Installation of DateTime::Calendar::Julian {#installation-of-datetimecalendarjulian}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-datetime-format-builder}DateTime::Format::Builder-0.83 {#datetimeformatbuilder-0.83 .sect2}
+<div class="sect2" lang="en">
+## DateTime::Format::Builder-0.83 {#datetimeformatbuilder-0.83}
 
-::::: {.package lang="en"}
-### Introduction to DateTime::Format::Builder {#introduction-to-datetimeformatbuilder .sect3}
+<div class="package" lang="en">
+### Introduction to DateTime::Format::Builder {#introduction-to-datetimeformatbuilder}
 
 DateTime::Format::Builder creates DateTime parser classes and objects.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz](https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz">https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz</a>
 
 -   Download MD5 sum: aa41917ca9ad69b3898728ce9c2fb477
-:::
+</div>
 
 #### DateTime::Format::Builder Dependencies
 
 ##### Required
 
-[DateTime-Format-Strptime-1.80](perl-deps.md#perl-datetime-format-strptime "DateTime::Format::Strptime-1.80"){.xref} and [Params-Validate-1.31](perl-deps.md#perl-params-validate "Params::Validate-1.31"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-datetime-format-strptime" title="DateTime::Format::Strptime-1.80">DateTime-Format-Strptime-1.80</a> and <a class="xref" href="perl-deps.md#perl-params-validate" title="Params::Validate-1.31">Params-Validate-1.31</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of DateTime::Format::Builder {#installation-of-datetimeformatbuilder .sect3}
+<div class="installation" lang="en">
+### Installation of DateTime::Format::Builder {#installation-of-datetimeformatbuilder}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-encode-eucjpascii}Encode::EUCJPASCII-0.03 {#encodeeucjpascii-0.03 .sect2}
+<div class="sect2" lang="en">
+## Encode::EUCJPASCII-0.03 {#encodeeucjpascii-0.03}
 
-::::: {.package lang="en"}
-### Introduction to Encode::EUCJPASCII {#introduction-to-encodeeucjpascii .sect3}
+<div class="package" lang="en">
+### Introduction to Encode::EUCJPASCII {#introduction-to-encodeeucjpascii}
 
 Encode::EUCJPASCII provides an eucJP-open (Extended Unix Code, Japanese) mapping.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/N/NE/NEZUMI/Encode-EUCJPASCII-0.03.tar.gz](https://www.cpan.org/authors/id/N/NE/NEZUMI/Encode-EUCJPASCII-0.03.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/N/NE/NEZUMI/Encode-EUCJPASCII-0.03.tar.gz">https://www.cpan.org/authors/id/N/NE/NEZUMI/Encode-EUCJPASCII-0.03.tar.gz</a>
 
 -   Download MD5 sum: 5daa65f55b7c2050bb0713d9e95f239d
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Encode::EUCJPASCII {#installation-of-encodeeucjpascii .sect3}
+<div class="installation" lang="en">
+### Installation of Encode::EUCJPASCII {#installation-of-encodeeucjpascii}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-encode-hanextra}Encode::HanExtra-0.23 {#encodehanextra-0.23 .sect2}
+<div class="sect2" lang="en">
+## Encode::HanExtra-0.23 {#encodehanextra-0.23}
 
-::::: {.package lang="en"}
-### Introduction to Encode::HanExtra {#introduction-to-encodehanextra .sect3}
+<div class="package" lang="en">
+### Introduction to Encode::HanExtra {#introduction-to-encodehanextra}
 
 The Encode::HanExtra module provides extra sets of Chinese Encodings which are not included in the core Encode module because of size issues.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/A/AU/AUDREYT/Encode-HanExtra-0.23.tar.gz](https://www.cpan.org/authors/id/A/AU/AUDREYT/Encode-HanExtra-0.23.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/A/AU/AUDREYT/Encode-HanExtra-0.23.tar.gz">https://www.cpan.org/authors/id/A/AU/AUDREYT/Encode-HanExtra-0.23.tar.gz</a>
 
 -   Download MD5 sum: e1d3bc32c1c8ee304235a06fbcd5d5a4
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Encode::HanExtra {#installation-of-encodehanextra .sect3}
+<div class="installation" lang="en">
+### Installation of Encode::HanExtra {#installation-of-encodehanextra}
 
-This module uses the 'unsafe' build and installation instructions (In [perl-5.26.0]{.application} the use of the current directory in `@INC`{.literal} was removed for security reasons and this module has not been updated) :
+This module uses the 'unsafe' build and installation instructions (In <span class="application">perl-5.26.0</span> the use of the current directory in <code class="literal">@INC</code> was removed for security reasons and this module has not been updated) :
 
-``` userinput
+```bash
 PERL_USE_UNSAFE_INC=1 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-encode-jis2k}Encode::JIS2K-0.05 {#encodejis2k-0.05 .sect2}
+<div class="sect2" lang="en">
+## Encode::JIS2K-0.05 {#encodejis2k-0.05}
 
-::::: {.package lang="en"}
-### Introduction to Encode::JIS2K {#introduction-to-encodejis2k .sect3}
+<div class="package" lang="en">
+### Introduction to Encode::JIS2K {#introduction-to-encodejis2k}
 
 The Encode::JIS2K module provides JIS X 0212 (aka JIS 2000) Encodings.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/D/DA/DANKOGAI/Encode-JIS2K-0.05.tar.gz](https://www.cpan.org/authors/id/D/DA/DANKOGAI/Encode-JIS2K-0.05.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/D/DA/DANKOGAI/Encode-JIS2K-0.05.tar.gz">https://www.cpan.org/authors/id/D/DA/DANKOGAI/Encode-JIS2K-0.05.tar.gz</a>
 
 -   Download MD5 sum: 06acd9e878d41ffc354258e265db2875
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Encode::JIS2K {#installation-of-encodejis2k .sect3}
+<div class="installation" lang="en">
+### Installation of Encode::JIS2K {#installation-of-encodejis2k}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-file-fcntllock}File::FcntlLock-0.22 {#filefcntllock-0.22 .sect2}
+<div class="sect2" lang="en">
+## File::FcntlLock-0.22 {#filefcntllock-0.22}
 
-::::: {.package lang="en"}
-### Introduction to File::FcntlLock {#introduction-to-filefcntllock .sect3}
+<div class="package" lang="en">
+### Introduction to File::FcntlLock {#introduction-to-filefcntllock}
 
-File::FcntlLock is a module to do file locking in an object oriented fashion using the [fcntl(2)](https://man.archlinux.org/man/fcntl.2){.ulink} system call. This allows locks on parts of a file as well as on the whole file and overcomes some known problems with [flock(2)](https://man.archlinux.org/man/flock.2){.ulink}, on which which Perl's `flock()`{.function} function is based per default.
+File::FcntlLock is a module to do file locking in an object oriented fashion using the <a class="ulink" href="https://man.archlinux.org/man/fcntl.2">fcntl(2)</a> system call. This allows locks on parts of a file as well as on the whole file and overcomes some known problems with <a class="ulink" href="https://man.archlinux.org/man/flock.2">flock(2)</a>, on which which Perl's <code class="function">flock()</code> function is based per default.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz](https://www.cpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz">https://www.cpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz</a>
 
 -   Download MD5 sum: 579698d735d864ee403674f1175f789d
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of File::FcntlLock {#installation-of-filefcntllock .sect3}
+<div class="installation" lang="en">
+### Installation of File::FcntlLock {#installation-of-filefcntllock}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-file-slurper}File::Slurper-0.014 {#fileslurper-0.014 .sect2}
+<div class="sect2" lang="en">
+## File::Slurper-0.014 {#fileslurper-0.014}
 
-::::: {.package lang="en"}
-### Introduction to File::Slurper {#introduction-to-fileslurper .sect3}
+<div class="package" lang="en">
+### Introduction to File::Slurper {#introduction-to-fileslurper}
 
 File::Slurper is a simple, sane and efficient module to slurp a file.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz](https://www.cpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz">https://www.cpan.org/authors/id/L/LE/LEONT/File-Slurper-0.014.tar.gz</a>
 
 -   Download MD5 sum: d43bc5f069035eff3b6b7c418b4cedc4
-:::
+</div>
 
 #### File::Slurper Dependencies
 
 ##### Recommended (required for the test suite)
 
-[Test-Warnings-0.038](perl-deps.md#perl-test-warnings "Test::Warnings-0.038"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-test-warnings" title="Test::Warnings-0.038">Test-Warnings-0.038</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of File::Slurper {#installation-of-fileslurper .sect3}
+<div class="installation" lang="en">
+### Installation of File::Slurper {#installation-of-fileslurper}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-file-which}File::Which-1.27 {#filewhich-1.27 .sect2}
+<div class="sect2" lang="en">
+## File::Which-1.27 {#filewhich-1.27}
 
-::::: {.package lang="en"}
-### Introduction to File::Which {#introduction-to-filewhich .sect3}
+<div class="package" lang="en">
+### Introduction to File::Which {#introduction-to-filewhich}
 
 File::Which provides a portable implementation of the 'which' utility.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz](https://www.cpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz">https://www.cpan.org/authors/id/P/PL/PLICEASE/File-Which-1.27.tar.gz</a>
 
 -   Download MD5 sum: d5c9154262b93398f0750ec364207639
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of File::Which {#installation-of-filewhich .sect3}
+<div class="installation" lang="en">
+### Installation of File::Which {#installation-of-filewhich}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-html-parser}HTML::Parser-3.85 {#htmlparser-3.85 .sect2}
+<div class="sect2" lang="en">
+## HTML::Parser-3.85 {#htmlparser-3.85}
 
-::::: {.package lang="en"}
-### Introduction to HTML::Parser {#introduction-to-htmlparser .sect3}
+<div class="package" lang="en">
+### Introduction to HTML::Parser {#introduction-to-htmlparser}
 
 The HTML::Parser distribution is a collection of modules that parse and extract information from HTML documents.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.85.tar.gz](https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.85.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.85.tar.gz">https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.85.tar.gz</a>
 
 -   Download MD5 sum: 400384681da1452493d36f036d9f387b
-:::
+</div>
 
 #### HTML::Parser Dependencies
 
 ##### Required
 
-[HTML-Tagset-3.24](perl-deps.md#perl-html-tagset "HTML::Tagset-3.24"){.xref} and [HTTP-Message-7.01](perl-deps.md#perl-http-message "HTTP::Message-7.01"){.xref} (strictly speaking, not required for building, but its module HTTP::Headers is required for tests and a run-time requirement for HTML::HeadParser from this distribution).
-:::::
+<a class="xref" href="perl-deps.md#perl-html-tagset" title="HTML::Tagset-3.24">HTML-Tagset-3.24</a> and <a class="xref" href="perl-deps.md#perl-http-message" title="HTTP::Message-7.01">HTTP-Message-7.01</a> (strictly speaking, not required for building, but its module HTTP::Headers is required for tests and a run-time requirement for HTML::HeadParser from this distribution).
+</div>
 
-::: {.installation lang="en"}
-### Installation of HTML::Parser {#installation-of-htmlparser .sect3}
+<div class="installation" lang="en">
+### Installation of HTML::Parser {#installation-of-htmlparser}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-http-daemon}HTTP::Daemon-6.17 {#httpdaemon-6.17 .sect2}
+<div class="sect2" lang="en">
+## HTTP::Daemon-6.17 {#httpdaemon-6.17}
 
-::::: {.package lang="en"}
-### Introduction to HTTP::Daemon {#introduction-to-httpdaemon .sect3}
+<div class="package" lang="en">
+### Introduction to HTTP::Daemon {#introduction-to-httpdaemon}
 
 Instances of the HTTP::Daemon class are HTTP/1.1 servers that listen on a socket for incoming requests. The HTTP::Daemon is a subclass of IO::Socket::INET, so you can perform socket operations directly on it too.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.17.tar.gz](https://www.cpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.17.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.17.tar.gz">https://www.cpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.17.tar.gz</a>
 
 -   Download MD5 sum: 14f98fd61159ec4740a21781b787944e
-:::
+</div>
 
 #### HTTP::Daemon Dependencies
 
 ##### Required
 
-[HTTP-Message-7.01](perl-deps.md#perl-http-message "HTTP::Message-7.01"){.xref} and [Module-Build-Tiny-0.053](perl-deps.md#perl-module-build-tiny "Module::Build::Tiny-0.053"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-http-message" title="HTTP::Message-7.01">HTTP-Message-7.01</a> and <a class="xref" href="perl-deps.md#perl-module-build-tiny" title="Module::Build::Tiny-0.053">Module-Build-Tiny-0.053</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of HTTP::Daemon {#installation-of-httpdaemon .sect3}
+<div class="installation" lang="en">
+### Installation of HTTP::Daemon {#installation-of-httpdaemon}
 
-This module is built using `Build.PL`{.filename}:
+This module is built using <code class="filename">Build.PL</code>:
 
-``` userinput
+```bash
 perl Build.PL &&
 ./Build       &&
 ./Build test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ./Build install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::::: {.sect2 lang="en"}
-## []{#perl-io-socket-ssl}IO::Socket::SSL-2.098 {#iosocketssl-2.098 .sect2}
+<div class="sect2" lang="en">
+## IO::Socket::SSL-2.098 {#iosocketssl-2.098}
 
-:::::: {.package lang="en"}
-### Introduction to IO::Socket::SSL {#introduction-to-iosocketssl .sect3}
+<div class="package" lang="en">
+### Introduction to IO::Socket::SSL {#introduction-to-iosocketssl}
 
 IO::Socket::SSL makes using SSL/TLS much easier by wrapping the necessary functionality into the familiar IO::Socket interface and providing secure defaults whenever possible.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.098.tar.gz](https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.098.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.098.tar.gz">https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.098.tar.gz</a>
 
 -   Download MD5 sum: d52c3d2dd85bfa22b722f7ae7ba90dc3
-:::
+</div>
 
 #### IO::Socket::SSL Dependencies
 
 ##### Required
 
-[make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} and [Net-SSLeay-1.96](perl-deps.md#perl-net-ssleay "Net::SSLeay-1.96"){.xref}
+<a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> and <a class="xref" href="perl-deps.md#perl-net-ssleay" title="Net::SSLeay-1.96">Net-SSLeay-1.96</a>
 
 ##### Recommended
 
-[URI-5.34](perl-modules.md#perl-uri "URI-5.34"){.xref} (to access international domain names)
+<a class="xref" href="perl-modules.md#perl-uri" title="URI-5.34">URI-5.34</a> (to access international domain names)
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of IO::Socket::SSL {#installation-of-iosocketssl .sect3}
+<div class="installation" lang="en">
+### Installation of IO::Socket::SSL {#installation-of-iosocketssl}
 
 This module uses a variant of the standard build and installation instructions:
 
-``` userinput
+```bash
 yes | perl Makefile.PL &&
 make                   &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-### Command Explanations {#command-explanations .sect3}
+<div class="commands" lang="en">
+### Command Explanations {#command-explanations}
 
-[**yes**]{.command}: Perl will ask if you wish to run external tests, which will 'fail soft' if there are network problems. The default is 'y', which will allow you to script the build.
-:::
-:::::::::
+<span class="command"><strong>yes</strong></span>: Perl will ask if you wish to run external tests, which will 'fail soft' if there are network problems. The default is 'y', which will allow you to script the build.
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-io-string}IO::String-1.08 {#iostring-1.08 .sect2}
+<div class="sect2" lang="en">
+## IO::String-1.08 {#iostring-1.08}
 
-::::: {.package lang="en"}
-### Introduction to IO::String {#introduction-to-iostring .sect3}
+<div class="package" lang="en">
+### Introduction to IO::String {#introduction-to-iostring}
 
 IO::String - Emulate file interface for in-core strings.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/G/GA/GAAS/IO-String-1.08.tar.gz](https://www.cpan.org/authors/id/G/GA/GAAS/IO-String-1.08.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/G/GA/GAAS/IO-String-1.08.tar.gz">https://www.cpan.org/authors/id/G/GA/GAAS/IO-String-1.08.tar.gz</a>
 
 -   Download MD5 sum: 250e5424f290299fc3d6b5d1e9da3835
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of IO::String {#installation-of-iostring .sect3}
+<div class="installation" lang="en">
+### Installation of IO::String {#installation-of-iostring}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-ipc-run3}IPC::Run3-0.049 {#ipcrun3-0.049 .sect2}
+<div class="sect2" lang="en">
+## IPC::Run3-0.049 {#ipcrun3-0.049}
 
-::::: {.package lang="en"}
-### Introduction to IPC::Run3 {#introduction-to-ipcrun3 .sect3}
+<div class="package" lang="en">
+### Introduction to IPC::Run3 {#introduction-to-ipcrun3}
 
 IPC::Run3 is used to run a subprocess with input/output redirection.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz](https://www.cpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz">https://www.cpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.049.tar.gz</a>
 
 -   Download MD5 sum: 569393ca56dfb78dedd79e93c0439159
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of IPC::Run3 {#installation-of-ipcrun3 .sect3}
+<div class="installation" lang="en">
+### Installation of IPC::Run3 {#installation-of-ipcrun3}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-lingua-translit}Lingua::Translit-0.29 {#linguatranslit-0.29 .sect2}
+<div class="sect2" lang="en">
+## Lingua::Translit-0.29 {#linguatranslit-0.29}
 
-::::: {.package lang="en"}
-### Introduction to Lingua::Translit {#introduction-to-linguatranslit .sect3}
+<div class="package" lang="en">
+### Introduction to Lingua::Translit {#introduction-to-linguatranslit}
 
-Lingua::Translit and its [**translit**]{.command} program transliterate text between writing systems.
+Lingua::Translit and its <span class="command"><strong>translit</strong></span> program transliterate text between writing systems.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/A/AL/ALINKE/Lingua-Translit-0.29.tar.gz](https://www.cpan.org/authors/id/A/AL/ALINKE/Lingua-Translit-0.29.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/A/AL/ALINKE/Lingua-Translit-0.29.tar.gz">https://www.cpan.org/authors/id/A/AL/ALINKE/Lingua-Translit-0.29.tar.gz</a>
 
 -   Download MD5 sum: 605a82f06b05fef4fc18bf069b1be511
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Lingua::Translit {#installation-of-linguatranslit .sect3}
+<div class="installation" lang="en">
+### Installation of Lingua::Translit {#installation-of-linguatranslit}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents-1 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-1}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [translit]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">translit</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- ---------------------------------------------------------------------
-  []{#translit-prog}[[**translit**]{.command}]{.term}   transliterates text between writing systems using various standards
+  <a id="translit-prog"></a><span class="command"><span class="term"><strong>translit</strong></span></span>   transliterates text between writing systems using various standards
   ----------------------------------------------------- ---------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-libwww-perl}LWP (libwww-perl-6.83) {#lwp-libwww-perl-6.83 .sect2}
+<div class="sect2" lang="en">
+## LWP (libwww-perl-6.83) {#lwp-libwww-perl-6.83}
 
-::::: {.package lang="en"}
-### Introduction to LWP - The World-wide Web library for Perl {#introduction-to-lwp---the-world-wide-web-library-for-perl .sect3}
+<div class="package" lang="en">
+### Introduction to LWP - The World-wide Web library for Perl {#introduction-to-lwp---the-world-wide-web-library-for-perl}
 
 The libwww-perl collection is a set of Perl modules which provides a simple and consistent application programming interface (API) to the World-Wide Web. The main focus of the library is to provide classes and functions that allow you to write WWW clients. The library also contains modules that are of more general use and even classes that help you implement simple HTTP servers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.83.tar.gz](https://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.83.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.83.tar.gz">https://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.83.tar.gz</a>
 
 -   Download MD5 sum: dfca8f917f4727ddbdf3d81d0979172f
-:::
+</div>
 
 #### libwww-perl Dependencies
 
 ##### Required
 
-[File-Listing-6.16](perl-deps.md#perl-file-listing "File::Listing-6.16"){.xref}, [HTTP-CookieJar-0.014](perl-deps.md#perl-http-cookiejar "HTTP::CookieJar-0.014"){.xref}, [HTTP-Cookies-6.11](perl-deps.md#perl-http-cookies "HTTP::Cookies-6.11"){.xref}, [HTTP-Daemon-6.17](perl-modules.md#perl-http-daemon "HTTP::Daemon-6.17"){.xref}, [HTTP-Negotiate-6.01](perl-deps.md#perl-http-negotiate "HTTP::Negotiate-6.01"){.xref}, [HTML-Parser-3.85](perl-modules.md#perl-html-parser "HTML::Parser-3.85"){.xref}, [Net-HTTP-6.24](perl-deps.md#perl-net-http "Net::HTTP-6.24"){.xref}, [Try-Tiny-0.32](perl-deps.md#perl-try-tiny "Try::Tiny-0.32"){.xref} and [WWW-RobotRules-6.02](perl-deps.md#perl-www-robotrules "WWW::RobotRules-6.02"){.xref}
+<a class="xref" href="perl-deps.md#perl-file-listing" title="File::Listing-6.16">File-Listing-6.16</a>, <a class="xref" href="perl-deps.md#perl-http-cookiejar" title="HTTP::CookieJar-0.014">HTTP-CookieJar-0.014</a>, <a class="xref" href="perl-deps.md#perl-http-cookies" title="HTTP::Cookies-6.11">HTTP-Cookies-6.11</a>, <a class="xref" href="perl-modules.md#perl-http-daemon" title="HTTP::Daemon-6.17">HTTP-Daemon-6.17</a>, <a class="xref" href="perl-deps.md#perl-http-negotiate" title="HTTP::Negotiate-6.01">HTTP-Negotiate-6.01</a>, <a class="xref" href="perl-modules.md#perl-html-parser" title="HTML::Parser-3.85">HTML-Parser-3.85</a>, <a class="xref" href="perl-deps.md#perl-net-http" title="Net::HTTP-6.24">Net-HTTP-6.24</a>, <a class="xref" href="perl-deps.md#perl-try-tiny" title="Try::Tiny-0.32">Try-Tiny-0.32</a> and <a class="xref" href="perl-deps.md#perl-www-robotrules" title="WWW::RobotRules-6.02">WWW-RobotRules-6.02</a>
 
 ##### Recommended (required for the test suite)
 
-[Test-Fatal-0.018](perl-deps.md#perl-test-fatal "Test::Fatal-0.018"){.xref}, [Test-Needs-0.002010](perl-deps.md#perl-test-needs "Test::Needs-0.002010"){.xref} and [Test-RequiresInternet-0.05](perl-deps.md#perl-test-requiresinternet "Test::RequiresInternet-0.05"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-test-fatal" title="Test::Fatal-0.018">Test-Fatal-0.018</a>, <a class="xref" href="perl-deps.md#perl-test-needs" title="Test::Needs-0.002010">Test-Needs-0.002010</a> and <a class="xref" href="perl-deps.md#perl-test-requiresinternet" title="Test::RequiresInternet-0.05">Test-RequiresInternet-0.05</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of libwww-perl {#installation-of-libwww-perl .sect3}
+<div class="installation" lang="en">
+### Installation of libwww-perl {#installation-of-libwww-perl}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-After installing this package, if you want HTTPS protocol support install [LWP-Protocol-https-6.15](perl-modules.md#perl-lwp-protocol-https "LWP::Protocol::https-6.15"){.xref}.
-:::
+After installing this package, if you want HTTPS protocol support install <a class="xref" href="perl-modules.md#perl-lwp-protocol-https" title="LWP::Protocol::https-6.15">LWP-Protocol-https-6.15</a>.
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents-2 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-2}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [lwp-download, lwp-dump, lwp-mirror, lwp-request]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lwp-download, lwp-dump, lwp-mirror, lwp-request</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------- ---------------------------------------------------------------
-  []{#lwp-download-prog}[[**lwp-download**]{.command}]{.term}   is a script to fetch a large file from the web
-  []{#lwp-dump-prog}[[**lwp-dump**]{.command}]{.term}           is used to see what headers and content is returned for a URL
-  []{#lwp-mirror-prog}[[**lwp-mirror**]{.command}]{.term}       is a simple mirror utility
-  []{#lwp-request-prog}[[**lwp-request**]{.command}]{.term}     is a simple command line user agent
+  <a id="lwp-download-prog"></a><span class="command"><span class="term"><strong>lwp-download</strong></span></span>   is a script to fetch a large file from the web
+  <a id="lwp-dump-prog"></a><span class="command"><span class="term"><strong>lwp-dump</strong></span></span>           is used to see what headers and content is returned for a URL
+  <a id="lwp-mirror-prog"></a><span class="command"><span class="term"><strong>lwp-mirror</strong></span></span>       is a simple mirror utility
+  <a id="lwp-request-prog"></a><span class="command"><span class="term"><strong>lwp-request</strong></span></span>     is a simple command line user agent
   ------------------------------------------------------------- ---------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-list-allutils}List::AllUtils-0.19 {#listallutils-0.19 .sect2}
+<div class="sect2" lang="en">
+## List::AllUtils-0.19 {#listallutils-0.19}
 
-::::: {.package lang="en"}
-### Introduction to List::AllUtils {#introduction-to-listallutils .sect3}
+<div class="package" lang="en">
+### Introduction to List::AllUtils {#introduction-to-listallutils}
 
 The List::Allutils module combines List::Util and List::MoreUtils in one bite-sized package.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.19.tar.gz](https://www.cpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.19.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.19.tar.gz">https://www.cpan.org/authors/id/D/DR/DROLSKY/List-AllUtils-0.19.tar.gz</a>
 
 -   Download MD5 sum: 86469b1f6819ba181a8471eb932965f2
-:::
+</div>
 
 #### List::AllUtils Dependencies
 
 ##### Required
 
-[List-SomeUtils-0.59](perl-deps.md#perl-list-someutils "List::SomeUtils-0.59"){.xref} and [List-UtilsBy-0.12](perl-deps.md#perl-list-utilsby "List::UtilsBy-0.12"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-list-someutils" title="List::SomeUtils-0.59">List-SomeUtils-0.59</a> and <a class="xref" href="perl-deps.md#perl-list-utilsby" title="List::UtilsBy-0.12">List-UtilsBy-0.12</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of List::AllUtils {#installation-of-listallutils .sect3}
+<div class="installation" lang="en">
+### Installation of List::AllUtils {#installation-of-listallutils}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-list-moreutils}List::MoreUtils-0.430 {#listmoreutils-0.430 .sect2}
+<div class="sect2" lang="en">
+## List::MoreUtils-0.430 {#listmoreutils-0.430}
 
-::::: {.package lang="en"}
-### Introduction to List::MoreUtils {#introduction-to-listmoreutils .sect3}
+<div class="package" lang="en">
+### Introduction to List::MoreUtils {#introduction-to-listmoreutils}
 
 List::MoreUtils provides the stuff missing in List::Util.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.430.tar.gz](https://www.cpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.430.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.430.tar.gz">https://www.cpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-0.430.tar.gz</a>
 
 -   Download MD5 sum: daccd6310021231b827dcc943ff1c6b7
-:::
+</div>
 
 #### List::MoreUtils Dependencies
 
 ##### Required
 
-[Exporter-Tiny-1.006003](perl-deps.md#perl-exporter-tiny "Exporter::Tiny-1.006003"){.xref} and [List-MoreUtils-XS-0.430](perl-deps.md#perl-list-moreutils-xs "List::MoreUtils::XS-0.430"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-exporter-tiny" title="Exporter::Tiny-1.006003">Exporter-Tiny-1.006003</a> and <a class="xref" href="perl-deps.md#perl-list-moreutils-xs" title="List::MoreUtils::XS-0.430">List-MoreUtils-XS-0.430</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of List::MoreUtils {#installation-of-listmoreutils .sect3}
+<div class="installation" lang="en">
+### Installation of List::MoreUtils {#installation-of-listmoreutils}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-log-log4perl}Log::Log4perl-1.57 {#loglog4perl-1.57 .sect2}
+<div class="sect2" lang="en">
+## Log::Log4perl-1.57 {#loglog4perl-1.57}
 
-::::: {.package lang="en"}
-### Introduction to Log::Log4perl {#introduction-to-loglog4perl .sect3}
+<div class="package" lang="en">
+### Introduction to Log::Log4perl {#introduction-to-loglog4perl}
 
-Log::Log4perl provides a Log4j implementation for [perl]{.application}.
+Log::Log4perl provides a Log4j implementation for <span class="application">perl</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/E/ET/ETJ/Log-Log4perl-1.57.tar.gz](https://www.cpan.org/authors/id/E/ET/ETJ/Log-Log4perl-1.57.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/E/ET/ETJ/Log-Log4perl-1.57.tar.gz">https://www.cpan.org/authors/id/E/ET/ETJ/Log-Log4perl-1.57.tar.gz</a>
 
 -   Download MD5 sum: acbe29cbaf03f4478a13579a275b0011
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Log::Log4perl {#installation-of-loglog4perl .sect3}
+<div class="installation" lang="en">
+### Installation of Log::Log4perl {#installation-of-loglog4perl}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents-3 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-3}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [l4p-templ]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">l4p-templ</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------- ---------------------------------------------------------------------------------------------------------
-  []{#l4p-templ-prog}[[**l4p-templ**]{.command}]{.term}   prints out the text of a template Log4perl configuration for starting a new Log4perl configuration file
+  <a id="l4p-templ-prog"></a><span class="command"><span class="term"><strong>l4p-templ</strong></span></span>   prints out the text of a template Log4perl configuration for starting a new Log4perl configuration file
   ------------------------------------------------------- ---------------------------------------------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-lwp-protocol-https}LWP::Protocol::https-6.15 {#lwpprotocolhttps-6.15 .sect2}
+<div class="sect2" lang="en">
+## LWP::Protocol::https-6.15 {#lwpprotocolhttps-6.15}
 
-::::: {.package lang="en"}
-### Introduction to LWP::Protocol::https {#introduction-to-lwpprotocolhttps .sect3}
+<div class="package" lang="en">
+### Introduction to LWP::Protocol::https {#introduction-to-lwpprotocolhttps}
 
-LWP::Protocol::https provides https support for LWP::UserAgent (i.e. [libwww-perl-6.83](perl-modules.md#perl-libwww-perl "LWP (libwww-perl-6.83)"){.xref}). Once the module is installed LWP is able to access sites using HTTP over SSL/TLS.
+LWP::Protocol::https provides https support for LWP::UserAgent (i.e. <a class="xref" href="perl-modules.md#perl-libwww-perl" title="LWP (libwww-perl-6.83)">libwww-perl-6.83</a>). Once the module is installed LWP is able to access sites using HTTP over SSL/TLS.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.15.tar.gz](https://www.cpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.15.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.15.tar.gz">https://www.cpan.org/authors/id/O/OA/OALDERS/LWP-Protocol-https-6.15.tar.gz</a>
 
 -   Download MD5 sum: c92eb7bffeb73cf3726193ea69f6792e
-:::
+</div>
 
 #### LWP::Protocol::https Dependencies
 
 ##### Required
 
-[IO-Socket-SSL-2.098](perl-modules.md#perl-io-socket-ssl "IO::Socket::SSL-2.098"){.xref}, [libwww-perl-6.83](perl-modules.md#perl-libwww-perl "LWP (libwww-perl-6.83)"){.xref}, and [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} with `/etc/pki/tls/certs/ca-bundle.crt`{.literal}.
-:::::
+<a class="xref" href="perl-modules.md#perl-io-socket-ssl" title="IO::Socket::SSL-2.098">IO-Socket-SSL-2.098</a>, <a class="xref" href="perl-modules.md#perl-libwww-perl" title="LWP (libwww-perl-6.83)">libwww-perl-6.83</a>, and <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> with <code class="literal">/etc/pki/tls/certs/ca-bundle.crt</code>.
+</div>
 
-::: {.installation lang="en"}
-### Installation of LWP::Protocol::https {#installation-of-lwpprotocolhttps .sect3}
+<div class="installation" lang="en">
+### Installation of LWP::Protocol::https {#installation-of-lwpprotocolhttps}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-module-build}Module::Build-0.4234 {#modulebuild-0.4234 .sect2}
+<div class="sect2" lang="en">
+## Module::Build-0.4234 {#modulebuild-0.4234}
 
-::::: {.package lang="en"}
-### Introduction to Module::Build {#introduction-to-modulebuild .sect3}
+<div class="package" lang="en">
+### Introduction to Module::Build {#introduction-to-modulebuild}
 
-Module::Build allows perl modules to be built without a [**make**]{.command} command being present.
+Module::Build allows perl modules to be built without a <span class="command"><strong>make</strong></span> command being present.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz](https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz</a>
 
 -   Download MD5 sum: 0032d0c0bc36a3b68ef41c947829d5e3
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Module::Build {#installation-of-modulebuild .sect3}
+<div class="installation" lang="en">
+### Installation of Module::Build {#installation-of-modulebuild}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-Note that this module can also be built using `Build.PL`{.filename}
-:::
+Note that this module can also be built using <code class="filename">Build.PL</code>
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents-4 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-4}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [config_data]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">config_data</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------- --------------------------------------------------------------
-  []{#config-data-prog}[[**config_data**]{.command}]{.term}   is used to query or change the configuration of perl modules
+  <a id="config-data-prog"></a><span class="command"><span class="term"><strong>config_data</strong></span></span>   is used to query or change the configuration of perl modules
   ----------------------------------------------------------- --------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-net-dns}Net::DNS-1.54 {#netdns-1.54 .sect2}
+<div class="sect2" lang="en">
+## Net::DNS-1.54 {#netdns-1.54}
 
-::::: {.package lang="en"}
-### Introduction to Net::DNS {#introduction-to-netdns .sect3}
+<div class="package" lang="en">
+### Introduction to Net::DNS {#introduction-to-netdns}
 
-Net::DNS is a DNS resolver implemented in [Perl]{.application}. It can be used to perform nearly any type of DNS query from a [Perl]{.application} script.
+Net::DNS is a DNS resolver implemented in <span class="application">Perl</span>. It can be used to perform nearly any type of DNS query from a <span class="application">Perl</span> script.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.54.tar.gz](https://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.54.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.54.tar.gz">https://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.54.tar.gz</a>
 
 -   Download MD5 sum: 717ef24e9b284359d65a6af8e077362e
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Net::DNS {#installation-of-netdns .sect3}
+<div class="installation" lang="en">
+### Installation of Net::DNS {#installation-of-netdns}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-parse-recdescent}Parse::RecDescent-1.967015 {#parserecdescent-1.967015 .sect2}
+<div class="sect2" lang="en">
+## Parse::RecDescent-1.967015 {#parserecdescent-1.967015}
 
-::::: {.package lang="en"}
-### Introduction to Parse::RecDescent {#introduction-to-parserecdescent .sect3}
+<div class="package" lang="en">
+### Introduction to Parse::RecDescent {#introduction-to-parserecdescent}
 
 Parse::RecDescent incrementally generates top-down recursive-descent text parsers from simple yacc-like grammar specifications.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/J/JT/JTBRAUN/Parse-RecDescent-1.967015.tar.gz](https://www.cpan.org/authors/id/J/JT/JTBRAUN/Parse-RecDescent-1.967015.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/J/JT/JTBRAUN/Parse-RecDescent-1.967015.tar.gz">https://www.cpan.org/authors/id/J/JT/JTBRAUN/Parse-RecDescent-1.967015.tar.gz</a>
 
 -   Download MD5 sum: 7a36d45d62a9b68603edcdbd276006cc
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Parse::RecDescent {#installation-of-parserecdescent .sect3}
+<div class="installation" lang="en">
+### Installation of Parse::RecDescent {#installation-of-parserecdescent}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-parse-yapp}Parse::Yapp-1.21 {#parseyapp-1.21 .sect2}
+<div class="sect2" lang="en">
+## Parse::Yapp-1.21 {#parseyapp-1.21}
 
-::::: {.package lang="en"}
-### Introduction to Parse::Yapp {#introduction-to-parseyapp .sect3}
+<div class="package" lang="en">
+### Introduction to Parse::Yapp {#introduction-to-parseyapp}
 
 Parse::Yapp is a Perl extension for generating and using LALR parsers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz](https://www.cpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz">https://www.cpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz</a>
 
 -   Download MD5 sum: 69584d5b0f0304bb2a23cffcd982c5de
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Parse::Yapp {#installation-of-parseyapp .sect3}
+<div class="installation" lang="en">
+### Installation of Parse::Yapp {#installation-of-parseyapp}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents-5 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-5}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [yapp]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">yapp</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------- ------------------------------------------------------------------------------------------------------------
-  []{#yapp-prog}[[**yapp**]{.command}]{.term}   is a frontend to the Parse::Yapp module, which lets you create a Perl OO parser from an input grammar file
+  <a id="yapp-prog"></a><span class="command"><span class="term"><strong>yapp</strong></span></span>   is a frontend to the Parse::Yapp module, which lets you create a Perl OO parser from an input grammar file
   --------------------------------------------- ------------------------------------------------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-perlio-utf8_strict}PerlIO::utf8_strict-0.010 {#perlioutf8_strict-0.010 .sect2}
+<div class="sect2" lang="en">
+## PerlIO::utf8_strict-0.010 {#perlioutf8_strict-0.010}
 
-::::: {.package lang="en"}
-### Introduction to PerlIO::utf8_strict {#introduction-to-perlioutf8_strict .sect3}
+<div class="package" lang="en">
+### Introduction to PerlIO::utf8_strict {#introduction-to-perlioutf8_strict}
 
 PerlIO::utf8_strict provides a fast and correct UTF-8 PerlIO layer. Unlike Perl's default :utf8 layer it checks the input for correctness.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.010.tar.gz](https://www.cpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.010.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.010.tar.gz">https://www.cpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.010.tar.gz</a>
 
 -   Download MD5 sum: d90ca967f66e05ad9221c79060868346
-:::
+</div>
 
 #### PerlIO::utf8_strict Dependencies
 
 ##### Recommended (required for the test suite)
 
-[Test-Exception-0.43](perl-deps.md#perl-test-exception "Test::Exception-0.43"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-test-exception" title="Test::Exception-0.43">Test-Exception-0.43</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of PerlIO::utf8_strict {#installation-of-perlioutf8_strict .sect3}
+<div class="installation" lang="en">
+### Installation of PerlIO::utf8_strict {#installation-of-perlioutf8_strict}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-regexp-common}Regexp::Common-2024080801 {#regexpcommon-2024080801 .sect2}
+<div class="sect2" lang="en">
+## Regexp::Common-2024080801 {#regexpcommon-2024080801}
 
-::::: {.package lang="en"}
-### Introduction to Regexp::Common {#introduction-to-regexpcommon .sect3}
+<div class="package" lang="en">
+### Introduction to Regexp::Common {#introduction-to-regexpcommon}
 
 Regexp::Common provides commonly requested regular expressions.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2024080801.tar.gz](https://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2024080801.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2024080801.tar.gz">https://www.cpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2024080801.tar.gz</a>
 
 -   Download MD5 sum: 73d4b4b2a0690f9ab573d54a69c22aee
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Regexp::Common {#installation-of-regexpcommon .sect3}
+<div class="installation" lang="en">
+### Installation of Regexp::Common {#installation-of-regexpcommon}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::::::: {.sect2 lang="en"}
-## []{#perl-sgmlspm}SGMLSpm-1.1 {#sgmlspm-1.1 .sect2}
+<div class="sect2" lang="en">
+## SGMLSpm-1.1 {#sgmlspm-1.1}
 
-::::: {.package lang="en"}
-### Introduction to SGMLSpm {#introduction-to-sgmlspm .sect3}
+<div class="package" lang="en">
+### Introduction to SGMLSpm {#introduction-to-sgmlspm}
 
-The SGMLSpm module is a [Perl]{.application} library used for parsing the output from James Clark's SGMLS and NSGMLS parsers.
+The SGMLSpm module is a <span class="application">Perl</span> library used for parsing the output from James Clark's SGMLS and NSGMLS parsers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/R/RA/RAAB/SGMLSpm-1.1.tar.gz](https://www.cpan.org/authors/id/R/RA/RAAB/SGMLSpm-1.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/R/RA/RAAB/SGMLSpm-1.1.tar.gz">https://www.cpan.org/authors/id/R/RA/RAAB/SGMLSpm-1.1.tar.gz</a>
 
 -   Download MD5 sum: 746c74ae969992cedb1a2879b4168090
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of SGMLSpm {#installation-of-sgmlspm .sect3}
+<div class="installation" lang="en">
+### Installation of SGMLSpm {#installation-of-sgmlspm}
 
 Before beginning the build, issue the following command to prevent an error:
 
-``` userinput
+```bash
 chmod -v 644 MYMETA.yml
 ```
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-After the package has been installed, run the following command as the `root`{.systemitem} user:
+After the package has been installed, run the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ln -sv sgmlspl.pl /usr/bin/sgmlspl
 ```
-:::
+</div>
 
-::::::: {.content lang="en"}
-### Contents {#contents-6 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-6}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [sgmlspl.pl, sgmlspl]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">sgmlspl.pl, sgmlspl</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------
-  []{#sgmlspl.pl}[[**sgmlspl.pl**]{.command}]{.term}   is an SGML processor
-  []{#sgmlspl-prog}[[**sgmlspl**]{.command}]{.term}    is a symbolic link used during the install of [DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}
+  <a id="sgmlspl.pl"></a><span class="command"><span class="term"><strong>sgmlspl.pl</strong></span></span>   is an SGML processor
+  <a id="sgmlspl-prog"></a><span class="command"><span class="term"><strong>sgmlspl</strong></span></span>    is a symbolic link used during the install of <a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>
   ---------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::
-::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-sort-key}Sort::Key-1.33 {#sortkey-1.33 .sect2}
+<div class="sect2" lang="en">
+## Sort::Key-1.33 {#sortkey-1.33}
 
-::::: {.package lang="en"}
-### Introduction to Sort::Key {#introduction-to-sortkey .sect3}
+<div class="package" lang="en">
+### Introduction to Sort::Key {#introduction-to-sortkey}
 
 Sort::Key provides a set of functions to sort lists of values by some calculated key value.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/S/SA/SALVA/Sort-Key-1.33.tar.gz](https://www.cpan.org/authors/id/S/SA/SALVA/Sort-Key-1.33.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/S/SA/SALVA/Sort-Key-1.33.tar.gz">https://www.cpan.org/authors/id/S/SA/SALVA/Sort-Key-1.33.tar.gz</a>
 
 -   Download MD5 sum: a37ab0da0cfdc26e57b4c79e39f6d98f
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Sort::Key {#installation-of-sortkey .sect3}
+<div class="installation" lang="en">
+### Installation of Sort::Key {#installation-of-sortkey}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-test-command}Test::Command-0.11 {#testcommand-0.11 .sect2}
+<div class="sect2" lang="en">
+## Test::Command-0.11 {#testcommand-0.11}
 
-::::: {.package lang="en"}
-### Introduction to Test::Command {#introduction-to-testcommand .sect3}
+<div class="package" lang="en">
+### Introduction to Test::Command {#introduction-to-testcommand}
 
 Test::Command tests the exit status, STDOUT, or STDERR, of an external command.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/D/DA/DANBOO/Test-Command-0.11.tar.gz](https://www.cpan.org/authors/id/D/DA/DANBOO/Test-Command-0.11.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/D/DA/DANBOO/Test-Command-0.11.tar.gz">https://www.cpan.org/authors/id/D/DA/DANBOO/Test-Command-0.11.tar.gz</a>
 
 -   Download MD5 sum: 9ab83c4695961dbe92cd86efe08f0634
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Test::Command {#installation-of-testcommand .sect3}
+<div class="installation" lang="en">
+### Installation of Test::Command {#installation-of-testcommand}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-test-differences}Test::Differences-0.72 {#testdifferences-0.72 .sect2}
+<div class="sect2" lang="en">
+## Test::Differences-0.72 {#testdifferences-0.72}
 
-::::: {.package lang="en"}
-### Introduction to Test::Differences {#introduction-to-testdifferences .sect3}
+<div class="package" lang="en">
+### Introduction to Test::Differences {#introduction-to-testdifferences}
 
 Test::Differences tests strings and data structures and shows the differences if they do not match.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.72.tar.gz](https://www.cpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.72.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.72.tar.gz">https://www.cpan.org/authors/id/D/DC/DCANTRELL/Test-Differences-0.72.tar.gz</a>
 
 -   Download MD5 sum: 348ac35809a53290ac05cf0f18f673fa
-:::
+</div>
 
 #### Test::Differences Dependencies
 
 ##### Required
 
-[Text-Diff-1.45](perl-deps.md#perl-text-diff "Text::Diff-1.45"){.xref}
+<a class="xref" href="perl-deps.md#perl-text-diff" title="Text::Diff-1.45">Text-Diff-1.45</a>
 
 ##### Recommended (required for the test suite)
 
-[Capture-Tiny-0.50](perl-deps.md#perl-capture-tiny "Capture::Tiny-0.50"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-capture-tiny" title="Capture::Tiny-0.50">Capture-Tiny-0.50</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Test::Differences {#installation-of-testdifferences .sect3}
+<div class="installation" lang="en">
+### Installation of Test::Differences {#installation-of-testdifferences}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::::::::: {.sect2 lang="en"}
-## []{#perl-text-bibtex}Text::BibTeX-0.91 {#textbibtex-0.91 .sect2}
+<div class="sect2" lang="en">
+## Text::BibTeX-0.91 {#textbibtex-0.91}
 
-::::: {.package lang="en"}
-### Introduction to Text::BibTeX {#introduction-to-textbibtex .sect3}
+<div class="package" lang="en">
+### Introduction to Text::BibTeX {#introduction-to-textbibtex}
 
-Text::BibTeX provides an interface to read and parse [BibTeX]{.application} files.
+Text::BibTeX provides an interface to read and parse <span class="application">BibTeX</span> files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/A/AM/AMBS/Text-BibTeX-0.91.tar.gz](https://www.cpan.org/authors/id/A/AM/AMBS/Text-BibTeX-0.91.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/A/AM/AMBS/Text-BibTeX-0.91.tar.gz">https://www.cpan.org/authors/id/A/AM/AMBS/Text-BibTeX-0.91.tar.gz</a>
 
 -   Download MD5 sum: 437862f801cfb7598dff52aa4ff7d888
-:::
+</div>
 
 #### Text::BibTeX Dependencies
 
 ##### Required
 
-[Config-AutoConf-0.320](perl-deps.md#perl-config-autoconf "Config::AutoConf-0.320"){.xref} and [ExtUtils-LibBuilder-0.09](perl-deps.md#perl-extutils-libbuilder "ExtUtils::LibBuilder-0.09"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-config-autoconf" title="Config::AutoConf-0.320">Config-AutoConf-0.320</a> and <a class="xref" href="perl-deps.md#perl-extutils-libbuilder" title="ExtUtils::LibBuilder-0.09">ExtUtils-LibBuilder-0.09</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Text::BibTeX {#installation-of-textbibtex .sect3}
+<div class="installation" lang="en">
+### Installation of Text::BibTeX {#installation-of-textbibtex}
 
-This module is built using `Build.PL`{.filename}:
+This module is built using <code class="filename">Build.PL</code>:
 
-``` userinput
+```bash
 perl Build.PL &&
 ./Build       &&
 ./Build test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ./Build install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-### Contents {#contents-7 .sect3}
+<div class="content" lang="en">
+### Contents {#contents-7}
 
-:::::: segmentedlist
-::::: seglistitem
-::: seg
-**Installed Programs:** [biblex, bibparse, dumpnames]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">biblex, bibparse, dumpnames</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libbtparse.so]{.segbody}
-:::
-:::::
-::::::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libbtparse.so</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------
-  []{#biblex-prog}[[**biblex**]{.command}]{.term}          performs lexical analysis on a BibTeX file
-  []{#bibparse-prog}[[**bibparse**]{.command}]{.term}      parses a series of BibTeX files with command line options to control the string post-processing behavior
-  []{#dumpnames-prog}[[**dumpnames**]{.command}]{.term}    parses a BibTeX file, splitting 'author' and 'editor' fields into lists of names, and then dumps everything to stdout
-  []{#libbtparse-lib}[`libbtparse.so`{.filename}]{.term}   is a library for parsing and processing BibTeX data files
+  <a id="biblex-prog"></a><span class="command"><span class="term"><strong>biblex</strong></span></span>          performs lexical analysis on a BibTeX file
+  <a id="bibparse-prog"></a><span class="command"><span class="term"><strong>bibparse</strong></span></span>      parses a series of BibTeX files with command line options to control the string post-processing behavior
+  <a id="dumpnames-prog"></a><span class="command"><span class="term"><strong>dumpnames</strong></span></span>    parses a BibTeX file, splitting 'author' and 'editor' fields into lists of names, and then dumps everything to stdout
+  <a id="libbtparse-lib"></a><span class="term"><code class="filename">libbtparse.so</code></span>   is a library for parsing and processing BibTeX data files
   -------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------
-:::
-::::::::
-:::::::::::::
+</div>
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-text-csv}Text::CSV-2.06 {#textcsv-2.06 .sect2}
+<div class="sect2" lang="en">
+## Text::CSV-2.06 {#textcsv-2.06}
 
-::::: {.package lang="en"}
-### Introduction to Text::CSV {#introduction-to-textcsv .sect3}
+<div class="package" lang="en">
+### Introduction to Text::CSV {#introduction-to-textcsv}
 
 Text::CSV is a comma-separated values manipulator, using XS (eXternal Subroutine - for subroutines written in C or C++) or pure perl.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/I/IS/ISHIGAKI/Text-CSV-2.06.tar.gz](https://www.cpan.org/authors/id/I/IS/ISHIGAKI/Text-CSV-2.06.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/I/IS/ISHIGAKI/Text-CSV-2.06.tar.gz">https://www.cpan.org/authors/id/I/IS/ISHIGAKI/Text-CSV-2.06.tar.gz</a>
 
 -   Download MD5 sum: 620284340dfd1787c89666d22adfd463
-:::
+</div>
 
 #### Text::CSV Dependencies
 
 ##### Recommended
 
-[Text-CSV_XS-1.62](perl-deps.md#perl-text-csv_xs "Text::CSV_XS-1.62"){.xref} (required by [biber-2.21](../pst/biber.md "biber-2.21"){.xref})
-:::::
+<a class="xref" href="perl-deps.md#perl-text-csv_xs" title="Text::CSV_XS-1.62">Text-CSV_XS-1.62</a> (required by <a class="xref" href="../pst/biber.md" title="biber-2.21">biber-2.21</a>)
+</div>
 
-::: {.installation lang="en"}
-### Installation of Text::CSV {#installation-of-textcsv .sect3}
+<div class="installation" lang="en">
+### Installation of Text::CSV {#installation-of-textcsv}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-text-roman}Text::Roman-3.5 {#textroman-3.5 .sect2}
+<div class="sect2" lang="en">
+## Text::Roman-3.5 {#textroman-3.5}
 
-::::: {.package lang="en"}
-### Introduction to Text::Roman {#introduction-to-textroman .sect3}
+<div class="package" lang="en">
+### Introduction to Text::Roman {#introduction-to-textroman}
 
 Text::Roman allows conversion between Roman and Arabic algorisms (number systems, e.g. MCMXLV and 1945).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/S/SY/SYP/Text-Roman-3.5.tar.gz](https://www.cpan.org/authors/id/S/SY/SYP/Text-Roman-3.5.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/S/SY/SYP/Text-Roman-3.5.tar.gz">https://www.cpan.org/authors/id/S/SY/SYP/Text-Roman-3.5.tar.gz</a>
 
 -   Download MD5 sum: 1f6b09c0cc1f4425b565ff787a39fd83
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Text::Roman {#installation-of-textroman .sect3}
+<div class="installation" lang="en">
+### Installation of Text::Roman {#installation-of-textroman}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::: {.sect2 lang="en"}
-## []{#perl-unicode-collate}Unicode::Collate-1.31 {#unicodecollate-1.31 .sect2}
+<div class="sect2" lang="en">
+## Unicode::Collate-1.31 {#unicodecollate-1.31}
 
-:::::: {.package lang="en"}
-### Introduction to Unicode::Collate {#introduction-to-unicodecollate .sect3}
+<div class="package" lang="en">
+### Introduction to Unicode::Collate {#introduction-to-unicodecollate}
 
 Unicode::Collate provides a Unicode collation algorithm.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-This is a core module. If you are using [perl-5.28.0]{.application} or later, its version is good enough for [biber-2.21](../pst/biber.md "biber-2.21"){.xref} and you do not need to reinstall this module.
-:::
+This is a core module. If you are using <span class="application">perl-5.28.0</span> or later, its version is good enough for <a class="xref" href="../pst/biber.md" title="biber-2.21">biber-2.21</a> and you do not need to reinstall this module.
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.31.tar.gz](https://www.cpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.31.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.31.tar.gz">https://www.cpan.org/authors/id/S/SA/SADAHIRO/Unicode-Collate-1.31.tar.gz</a>
 
 -   Download MD5 sum: ee4d960d057c5e5b02ebb49d0286db8f
-:::
-::::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of Unicode::Collate {#installation-of-unicodecollate .sect3}
+<div class="installation" lang="en">
+### Installation of Unicode::Collate {#installation-of-unicodecollate}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-::::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-unicode-linebreak}Unicode::LineBreak-2019.001 {#unicodelinebreak-2019.001 .sect2}
+<div class="sect2" lang="en">
+## Unicode::LineBreak-2019.001 {#unicodelinebreak-2019.001}
 
-::::: {.package lang="en"}
-### Introduction to Unicode::LineBreak {#introduction-to-unicodelinebreak .sect3}
+<div class="package" lang="en">
+### Introduction to Unicode::LineBreak {#introduction-to-unicodelinebreak}
 
 Unicode::LineBreak provides a UAX #14 Unicode Line Breaking Algorithm.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz](https://www.cpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz">https://www.cpan.org/authors/id/N/NE/NEZUMI/Unicode-LineBreak-2019.001.tar.gz</a>
 
 -   Download MD5 sum: 003d6da7a13700e069afed9238c864b9
-:::
+</div>
 
 #### Unicode::LineBreak Dependencies
 
 ##### Required
 
-[MIME-Charset-1.013.1](perl-deps.md#perl-mime-charset "MIME::Charset-1.013.1"){.xref} and [Wget-1.25.0](../basicnet/wget.md "Wget-1.25.0"){.xref} (to download two files from unicode.org in the test suite)
+<a class="xref" href="perl-deps.md#perl-mime-charset" title="MIME::Charset-1.013.1">MIME-Charset-1.013.1</a> and <a class="xref" href="../basicnet/wget.md" title="Wget-1.25.0">Wget-1.25.0</a> (to download two files from unicode.org in the test suite)
 
 ##### Optional
 
-[libthai](https://linux.thai.net/projects/libthai/){.ulink} (to break Thai words into segments)
-:::::
+<a class="ulink" href="https://linux.thai.net/projects/libthai/">libthai</a> (to break Thai words into segments)
+</div>
 
-::: {.installation lang="en"}
-### Installation of Unicode::LineBreak {#installation-of-unicodelinebreak .sect3}
+<div class="installation" lang="en">
+### Installation of Unicode::LineBreak {#installation-of-unicodelinebreak}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-uri}URI-5.34 {#uri-5.34 .sect2}
+<div class="sect2" lang="en">
+## URI-5.34 {#uri-5.34}
 
-::::: {.package lang="en"}
-### Introduction to URI {#introduction-to-uri .sect3}
+<div class="package" lang="en">
+### Introduction to URI {#introduction-to-uri}
 
 This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732). A Uniform Resource Identifier is a compact string of characters that identifies an abstract or physical resource. A Uniform Resource Identifier can be further classified as either a Uniform Resource Locator (URL) or a Uniform Resource Name (URN). The distinction between URL and URN does not matter to the URI class interface. A "URI-reference" is a URI that may have additional information attached in the form of a fragment identifier.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.34.tar.gz](https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.34.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.34.tar.gz">https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.34.tar.gz</a>
 
 -   Download MD5 sum: 3736f3d6efe1710176a753a7029b7606
-:::
+</div>
 
 #### URI Dependencies
 
 ##### Required
 
-[MIME-Base32-1.303](perl-deps.md#perl-mime-base32 "MIME::Base32-1.303"){.xref}
+<a class="xref" href="perl-deps.md#perl-mime-base32" title="MIME::Base32-1.303">MIME-Base32-1.303</a>
 
 ##### Recommended (required for the test suite)
 
-[Test-Fatal-0.018](perl-deps.md#perl-test-fatal "Test::Fatal-0.018"){.xref}, [Test-Needs-0.002010](perl-deps.md#perl-test-needs "Test::Needs-0.002010"){.xref}, and [Test-Warnings-0.038](perl-deps.md#perl-test-warnings "Test::Warnings-0.038"){.xref}
+<a class="xref" href="perl-deps.md#perl-test-fatal" title="Test::Fatal-0.018">Test-Fatal-0.018</a>, <a class="xref" href="perl-deps.md#perl-test-needs" title="Test::Needs-0.002010">Test-Needs-0.002010</a>, and <a class="xref" href="perl-deps.md#perl-test-warnings" title="Test::Warnings-0.038">Test-Warnings-0.038</a>
 
 ##### Optional
 
-[Business-ISBN-3.014](perl-modules.md#perl-business-isbn "Business::ISBN-3.014"){.xref}
-:::::
+<a class="xref" href="perl-modules.md#perl-business-isbn" title="Business::ISBN-3.014">Business-ISBN-3.014</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of URI {#installation-of-uri .sect3}
+<div class="installation" lang="en">
+### Installation of URI {#installation-of-uri}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-xml-libxml-simple}XML::LibXML::Simple-1.01 {#xmllibxmlsimple-1.01 .sect2}
+<div class="sect2" lang="en">
+## XML::LibXML::Simple-1.01 {#xmllibxmlsimple-1.01}
 
-::::: {.package lang="en"}
-### Introduction to XML::LibXML::Simple {#introduction-to-xmllibxmlsimple .sect3}
+<div class="package" lang="en">
+### Introduction to XML::LibXML::Simple {#introduction-to-xmllibxmlsimple}
 
-The XML::LibXML::Simple module is a rewrite of XML::Simple to use the XML::LibXML parser for XML structures, instead of the plain [Perl]{.application} or SAX parsers.
+The XML::LibXML::Simple module is a rewrite of XML::Simple to use the XML::LibXML parser for XML structures, instead of the plain <span class="application">Perl</span> or SAX parsers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/M/MA/MARKOV/XML-LibXML-Simple-1.01.tar.gz](https://www.cpan.org/authors/id/M/MA/MARKOV/XML-LibXML-Simple-1.01.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/M/MA/MARKOV/XML-LibXML-Simple-1.01.tar.gz">https://www.cpan.org/authors/id/M/MA/MARKOV/XML-LibXML-Simple-1.01.tar.gz</a>
 
 -   Download MD5 sum: faad5ed26cd83998f6514be199c56c38
-:::
+</div>
 
 #### XML::LibXML::Simple Dependencies
 
 ##### Required
 
-[XML-LibXML-2.0213](perl-deps.md#perl-xml-libxml "XML::LibXML-2.0213"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-xml-libxml" title="XML::LibXML-2.0213">XML-LibXML-2.0213</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of XML::LibXML::Simple {#installation-of-xmllibxmlsimple .sect3}
+<div class="installation" lang="en">
+### Installation of XML::LibXML::Simple {#installation-of-xmllibxmlsimple}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-xml-libxslt}XML::LibXSLT-2.003000 {#xmllibxslt-2.003000 .sect2}
+<div class="sect2" lang="en">
+## XML::LibXSLT-2.003000 {#xmllibxslt-2.003000}
 
-::::: {.package lang="en"}
-### Introduction to XML::LibXSLT {#introduction-to-xmllibxslt .sect3}
+<div class="package" lang="en">
+### Introduction to XML::LibXSLT {#introduction-to-xmllibxslt}
 
-XML-LibXSLT provides an interface to [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref}
+XML-LibXSLT provides an interface to <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-2.003000.tar.gz](https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-2.003000.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-2.003000.tar.gz">https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-2.003000.tar.gz</a>
 
 -   Download MD5 sum: 632dce587b3c405edd4e622364750191
-:::
+</div>
 
 #### XML::LibXSLT Dependencies
 
 ##### Required
 
-[libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref} and [XML-LibXML-2.0213](perl-deps.md#perl-xml-libxml "XML::LibXML-2.0213"){.xref}
-:::::
+<a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> and <a class="xref" href="perl-deps.md#perl-xml-libxml" title="XML::LibXML-2.0213">XML-LibXML-2.0213</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of XML::LibXSLT {#installation-of-xmllibxslt .sect3}
+<div class="installation" lang="en">
+### Installation of XML::LibXSLT {#installation-of-xmllibxslt}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-xml-parser}XML::Parser-2.59 {#xmlparser-2.59 .sect2}
+<div class="sect2" lang="en">
+## XML::Parser-2.59 {#xmlparser-2.59}
 
-::::: {.package lang="en"}
-### Introduction to XML::Parser {#introduction-to-xmlparser .sect3}
+<div class="package" lang="en">
+### Introduction to XML::Parser {#introduction-to-xmlparser}
 
 The XML::Parser module is a Perl interface to James Clark's XML parser. It is built on top of XML::Parser::Expat, which is a lower level interface to the expat library. Each call to one of the parsing methods creates a new instance of XML::Parser::Expat which is then used to parse the document.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/T/TO/TODDR/XML-Parser-2.59.tar.gz](https://www.cpan.org/authors/id/T/TO/TODDR/XML-Parser-2.59.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/T/TO/TODDR/XML-Parser-2.59.tar.gz">https://www.cpan.org/authors/id/T/TO/TODDR/XML-Parser-2.59.tar.gz</a>
 
 -   Download MD5 sum: f483e6b8541d60a84e4bf50803e476bc
-:::
+</div>
 
 #### XML::Parser Dependencies
 
 ##### Required
 
-[File-ShareDir-1.118](perl-deps.md#perl-file-sharedir "File::ShareDir-1.118"){.xref}
-:::::
+<a class="xref" href="perl-deps.md#perl-file-sharedir" title="File::ShareDir-1.118">File-ShareDir-1.118</a>
+</div>
 
-::: {.installation lang="en"}
-### Installation of XML::Parser {#installation-of-xmlparser .sect3}
+<div class="installation" lang="en">
+### Installation of XML::Parser {#installation-of-xmlparser}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::::::: {.sect2 lang="en"}
-## []{#perl-xml-simple}XML::Simple-2.25 {#xmlsimple-2.25 .sect2}
+<div class="sect2" lang="en">
+## XML::Simple-2.25 {#xmlsimple-2.25}
 
-::::: {.package lang="en"}
-### Introduction to XML::Simple {#introduction-to-xmlsimple .sect3}
+<div class="package" lang="en">
+### Introduction to XML::Simple {#introduction-to-xmlsimple}
 
 XML::Simple provides an easy API to read and write XML (especially config files). It is deprecated and its use is discouraged.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz](https://www.cpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz">https://www.cpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz</a>
 
 -   Download MD5 sum: bb841dce889a26c89a1c2739970e9fbc
-:::
+</div>
 
 #### XML::Simple Dependencies
 
 ##### Recommended
 
-[XML-Parser-2.59](perl-modules.md#perl-xml-parser "XML::Parser-2.59"){.xref}
+<a class="xref" href="perl-modules.md#perl-xml-parser" title="XML::Parser-2.59">XML-Parser-2.59</a>
 
 ##### Optional
 
-[XML-SAX-1.02](perl-deps.md#perl-xml-sax "XML::SAX-1.02"){.xref} (for an alternative parser which will be used if available)
-:::::
+<a class="xref" href="perl-deps.md#perl-xml-sax" title="XML::SAX-1.02">XML-SAX-1.02</a> (for an alternative parser which will be used if available)
+</div>
 
-:::: {.installation lang="en"}
-### Installation of XML::Simple {#installation-of-xmlsimple .sect3}
+<div class="installation" lang="en">
+### Installation of XML::Simple {#installation-of-xmlsimple}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-During the configuration process, the build system will complain about missing the [XML::SAX::Expat]{.application} module. If [XML::SAX]{.application} is installed, this module is not necessary as [XML::SAX]{.application} will use the [libxml2]{.application} package instead. However, if it is not installed, [XML-Parser-2.59](perl-modules.md#perl-xml-parser "XML::Parser-2.59"){.xref} will get used instead.
-:::
+During the configuration process, the build system will complain about missing the <span class="application">XML::SAX::Expat</span> module. If <span class="application">XML::SAX</span> is installed, this module is not necessary as <span class="application">XML::SAX</span> will use the <span class="application">libxml2</span> package instead. However, if it is not installed, <a class="xref" href="perl-modules.md#perl-xml-parser" title="XML::Parser-2.59">XML-Parser-2.59</a> will get used instead.
+</div>
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-::::
-::::::::
+</div>
+</div>
 
-::::::: {.sect2 lang="en"}
-## []{#perl-xml-writer}XML::Writer-0.900 {#xmlwriter-0.900 .sect2}
+<div class="sect2" lang="en">
+## XML::Writer-0.900 {#xmlwriter-0.900}
 
-::::: {.package lang="en"}
-### Introduction to XML::Writer {#introduction-to-xmlwriter .sect3}
+<div class="package" lang="en">
+### Introduction to XML::Writer {#introduction-to-xmlwriter}
 
-XML::Writer provides a [Perl]{.application} extension for writing XML documents.
+XML::Writer provides a <span class="application">Perl</span> extension for writing XML documents.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 #### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.900.tar.gz](https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.900.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.900.tar.gz">https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.900.tar.gz</a>
 
 -   Download MD5 sum: 2457214360cefda445742a608dd6195e
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-### Installation of XML::Writer {#installation-of-xmlwriter .sect3}
+<div class="installation" lang="en">
+### Installation of XML::Writer {#installation-of-xmlwriter}
 
 This module uses the standard build and installation instructions:
 
-``` userinput
+```bash
 perl Makefile.PL &&
 make             &&
 make test
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
-:::::::
+</div>
+</div>
 
-:::: {.sect2 lang="en"}
-## []{#perl-alternatives}CPAN automated install of perl modules {#cpan-automated-install-of-perl-modules .sect2}
+<div class="sect2" lang="en">
+## CPAN automated install of perl modules {#cpan-automated-install-of-perl-modules}
 
-::: {.installation lang="en"}
-### []{#perl-auto-install} Automatic Installation of Perl Modules. {#automatic-installation-of-perl-modules. .sect3}
+<div class="installation" lang="en">
+### Automatic Installation of Perl Modules. {#automatic-installation-of-perl-modules.}
 
-There is an alternate way of installing the modules using the [**cpan**]{.command} shell [**install**]{.command} command. The command automatically downloads the latest source from the CPAN archive for the module and any missing prerequisite modules listed by upstream. Then for each module it extracts it, runs the compilation, the tests and installs it.
+There is an alternate way of installing the modules using the <span class="command"><strong>cpan</strong></span> shell <span class="command"><strong>install</strong></span> command. The command automatically downloads the latest source from the CPAN archive for the module and any missing prerequisite modules listed by upstream. Then for each module it extracts it, runs the compilation, the tests and installs it.
 
-You still need to install any non-perl dependencies before running the automated installation method. You may wish to clean out the `build/`{.filename} directory after installing, to free up the space. If any post-install actions such as creating a symlink are mentioned, you should also do those.
+You still need to install any non-perl dependencies before running the automated installation method. You may wish to clean out the <code class="filename">build/</code> directory after installing, to free up the space. If any post-install actions such as creating a symlink are mentioned, you should also do those.
 
-The first time you run [**cpan**]{.command}, you'll be prompted to enter some information regarding download locations and methods. This information is retained in files located in `~/.cpan`{.filename}.
+The first time you run <span class="command"><strong>cpan</strong></span>, you'll be prompted to enter some information regarding download locations and methods. This information is retained in files located in <code class="filename">~/.cpan</code>.
 
-In particular, you may wish to configure it so that [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} is used for the installs, allowing you to build and test as a regular user. The following examples have not used that approach.
+In particular, you may wish to configure it so that <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> is used for the installs, allowing you to build and test as a regular user. The following examples have not used that approach.
 
-Start the [**cpan**]{.command} shell by issuing '[**cpan**]{.command}' as the `root`{.systemitem} user. Any module may now be installed from the [`cpan> `{.prompt}]{.underlined} prompt with the command:
+Start the <span class="command"><strong>cpan</strong></span> shell by issuing '<span class="command"><strong>cpan</strong></span>' as the <code class="systemitem">root</code> user. Any module may now be installed from the <span class="underlined"><code class="prompt">cpan> </code></span> prompt with the command:
 
-``` root
+```bash
 install <Module::Name>
 ```
 
-For additional commands and help, issue '[**help**]{.command}' from the [`cpan> `{.prompt}]{.underlined} prompt.
+For additional commands and help, issue '<span class="command"><strong>help</strong></span>' from the <span class="underlined"><code class="prompt">cpan> </code></span> prompt.
 
-Alternatively, for scripted or non-interactive installations, use the following syntax as the `root`{.systemitem} user to install one or more modules:
+Alternatively, for scripted or non-interactive installations, use the following syntax as the <code class="systemitem">root</code> user to install one or more modules:
 
-``` root
+```bash
 cpan -i <Module1::Name> <Module2::Name>
 ```
 
-Review the `cpan.1`{.filename} man page for additional parameters you can pass to [**cpan**]{.command} on the command line.
-:::
-::::
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Review the <code class="filename">cpan.1</code> man page for additional parameters you can pass to <span class="command"><strong>cpan</strong></span> on the command line.
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](patchelf.md "Patchelf-0.18.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](patchelf.md "Patchelf-0.18.0")
 
     Patchelf-0.18.0
 
--   [Next](perl-deps.md "Perl Module Dependencies"){accesskey="n"}
+-   [Next](perl-deps.md "Perl Module Dependencies")
 
     Perl Module Dependencies
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

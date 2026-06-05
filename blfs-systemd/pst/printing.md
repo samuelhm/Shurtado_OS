@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XIII. Printing, Scanning and Typesetting
 
--   [Prev](pst.md "Printing, Scanning and Typesetting"){accesskey="p"}
+-   [Prev](pst.md "Printing, Scanning and Typesetting")
 
     Printing, Scanning and Typesetting
 
--   [Next](cups.md "Cups-2.4.19"){accesskey="n"}
+-   [Next](cups.md "Cups-2.4.19")
 
     Cups-2.4.19
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pst-printing}Printing {#printing .chapter}
+# Printing {#printing}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains spooling printer management systems and ghostscript applications to render PostScript for display on terminals or paper.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Cups-2.4.19](cups.md)
@@ -31,19 +31,19 @@ This chapter contains spooling printer management systems and ghostscript applic
 -   [Gutenprint-5.3.5](gutenprint.md)
 -   [libcupsfilters-2.1.1](libcupsfilters.md)
 -   [libppd-2.1.1](libppd.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](pst.md "Printing, Scanning and Typesetting"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](pst.md "Printing, Scanning and Typesetting")
 
     Printing, Scanning and Typesetting
 
--   [Next](cups.md "Cups-2.4.19"){accesskey="n"}
+-   [Next](cups.md "Cups-2.4.19")
 
     Cups-2.4.19
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

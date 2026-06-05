@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 5. File Systems and Disk Management
 
--   [Prev](btrfs-progs.md "btrfs-progs-7.0"){accesskey="p"}
+-   [Prev](btrfs-progs.md "btrfs-progs-7.0")
 
     btrfs-progs-7.0
 
--   [Next](fuse.md "Fuse-3.18.2"){accesskey="n"}
+-   [Next](fuse.md "Fuse-3.18.2")
 
     Fuse-3.18.2
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dosfstools}dosfstools-4.2 {#dosfstools-4.2 .sect1}
+# dosfstools-4.2 {#dosfstools-4.2}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to dosfstools {#introduction-to-dosfstools .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to dosfstools {#introduction-to-dosfstools}
 
-The [dosfstools]{.application} package contains various utilities for use with the FAT family of file systems.
+The <span class="application">dosfstools</span> package contains various utilities for use with the FAT family of file systems.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz](https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz">https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz</a>
 
 -   Download MD5 sum: 49c8e457327dc61efab5b115a27b087a
 
@@ -44,32 +44,32 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.5 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.kernel lang="en"}
-## []{#dosfstools-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 Enable the following option in the kernel configuration and recompile the kernel if you need to mount a FAT-family filesystem:
 
-``` screen
+```console
 File systems --->
   DOS/FAT/EXFAT/NT Filesystems --->
     < /*/M> MSDOS fs support                                          [MSDOS_FS]
     <*/M>   VFAT (Windows-95) fs support                               [VFAT_FS]
 ```
 
-Note that `CONFIG_MSDOS_FS`{.option} deliberately does not support long file names. `CONFIG_VFAT_FS`{.option} should be used instead unless you really want to enforce the DOS-style [“[8.3]{.quote}”]{.quote} file names.
+Note that <code class="option">CONFIG_MSDOS_FS</code> deliberately does not support long file names. <code class="option">CONFIG_VFAT_FS</code> should be used instead unless you really want to enforce the DOS-style <span class="quote">“<span class="quote">8.3</span>”</span> file names.
 
 You can mount a FAT-family filesystem once the kernel supports it. If you don't need to create, check, or relabel a FAT-family system, you may skip this package.
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of dosfstools {#installation-of-dosfstools .sect2}
+<div class="installation" lang="en">
+## Installation of dosfstools {#installation-of-dosfstools}
 
-Install [dosfstools]{.application} by running the following commands:
+Install <span class="application">dosfstools</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr            \
             --enable-compat-symlinks \
             --mandir=/usr/share/man  \
@@ -77,54 +77,54 @@ Install [dosfstools]{.application} by running the following commands:
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--enable-compat-symlinks`*: This switch creates the [dosfsck]{.application}, [dosfslabel]{.application}, [fsck.msdos]{.application}, [fsck.vfat]{.application}, [mkdosfs]{.application}, [mkfs.msdos]{.application}, and [mkfs.vfat]{.application} symlinks required by some programs.
-:::
+*`--enable-compat-symlinks`*: This switch creates the <span class="application">dosfsck</span>, <span class="application">dosfslabel</span>, <span class="application">fsck.msdos</span>, <span class="application">fsck.vfat</span>, <span class="application">mkdosfs</span>, <span class="application">mkfs.msdos</span>, and <span class="application">mkfs.vfat</span> symlinks required by some programs.
+</div>
 
-::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [fatlabel, fsck.fat, and mkfs.fat]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">fatlabel, fsck.fat, and mkfs.fat</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ------------------------------------------------------------
-  []{#fatlabel}[[**fatlabel**]{.command}]{.term}   sets or gets a MS-DOS filesystem label from a given device
-  []{#fsckfat}[[**fsck.fat**]{.command}]{.term}    checks and repairs MS-DOS filesystems
-  []{#mkfsfat}[[**mkfs.fat**]{.command}]{.term}    creates an MS-DOS filesystem under Linux
+  <a id="fatlabel"></a><span class="command"><span class="term"><strong>fatlabel</strong></span></span>   sets or gets a MS-DOS filesystem label from a given device
+  <a id="fsckfat"></a><span class="command"><span class="term"><strong>fsck.fat</strong></span></span>    checks and repairs MS-DOS filesystems
+  <a id="mkfsfat"></a><span class="command"><span class="term"><strong>mkfs.fat</strong></span></span>    creates an MS-DOS filesystem under Linux
   ------------------------------------------------ ------------------------------------------------------------
-:::
-:::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](btrfs-progs.md "btrfs-progs-7.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](btrfs-progs.md "btrfs-progs-7.0")
 
     btrfs-progs-7.0
 
--   [Next](fuse.md "Fuse-3.18.2"){accesskey="n"}
+-   [Next](fuse.md "Fuse-3.18.2")
 
     Fuse-3.18.2
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](dbus.md "dbus-1.16.2"){accesskey="p"}
+-   [Prev](dbus.md "dbus-1.16.2")
 
     dbus-1.16.2
 
--   [Next](gpm.md "GPM-1.20.7"){accesskey="n"}
+-   [Next](gpm.md "GPM-1.20.7")
 
     GPM-1.20.7
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#fcron}Fcron-3.4.0 {#fcron-3.4.0 .sect1}
+# Fcron-3.4.0 {#fcron-3.4.0}
 
-::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Fcron {#introduction-to-fcron .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Fcron {#introduction-to-fcron}
 
-The [Fcron]{.application} package contains a periodical command scheduler which aims at replacing [Vixie Cron]{.application}.
+The <span class="application">Fcron</span> package contains a periodical command scheduler which aims at replacing <span class="application">Vixie Cron</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [http://fcron.free.fr/archives/fcron-3.4.0.src.tar.gz](http://fcron.free.fr/archives/fcron-3.4.0.src.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="http://fcron.free.fr/archives/fcron-3.4.0.src.tar.gz">http://fcron.free.fr/archives/fcron-3.4.0.src.tar.gz</a>
 
 -   Download MD5 sum: 5732a766df42a090749c0c96a6afd42b
 
@@ -44,34 +44,34 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.2 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Fcron Dependencies
 
 #### Optional
 
-An [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref}, [text editor](../postlfs/editors.md){.ulink} (default is [**vi**]{.command} from the [Vim-9.2.0567](../postlfs/vim.md "Vim-9.2.0567"){.xref} package), [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, and [DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}
-:::::
+An <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a>, <a class="ulink" href="../postlfs/editors.md">text editor</a> (default is <span class="command"><strong>vi</strong></span> from the <a class="xref" href="../postlfs/vim.md" title="Vim-9.2.0567">Vim-9.2.0567</a> package), <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, and <a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Fcron {#installation-of-fcron .sect2}
+<div class="installation" lang="en">
+## Installation of Fcron {#installation-of-fcron}
 
-For security reasons, an unprivileged user and group for [Fcron]{.application} should be created (perform as the `root`{.systemitem} user):
+For security reasons, an unprivileged user and group for <span class="application">Fcron</span> should be created (perform as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 groupadd -g 22 fcron &&
 useradd -d /dev/null -c "Fcron User" -g fcron -s /bin/false -u 22 fcron
 ```
 
 Now fix some locations hard coded in the documentation:
 
-``` userinput
+```bash
 find doc -type f -exec sed -i 's:/usr/local::g' {} \;
 ```
 
-Install [Fcron]{.application} by running the following commands:
+Install <span class="application">Fcron</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr        \
             --sysconfdir=/etc    \
             --localstatedir=/var \
@@ -83,52 +83,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-DESTDIR install must be done as `root`{.systemitem} user. Furthermore, if PAM configuration files should be installed in `/etc/pam.d`{.filename}, you have to create this directory in the DESTDIR before doing the install.
-:::
+DESTDIR install must be done as <code class="systemitem">root</code> user. Furthermore, if PAM configuration files should be installed in <code class="filename">/etc/pam.d</code>, you have to create this directory in the DESTDIR before doing the install.
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--without-sendmail`*: By default, [Fcron]{.application} will attempt to use the [**sendmail**]{.command} command from an [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref} package to email you the results of the [**fcron**]{.command} script. This switch is used to disable default email notification. Omit the switch to enable the default. Alternatively, you can use the `--with-sendmail=`{.option}*`</path/to/MTA command>`* to use a different mailer command.
+*`--without-sendmail`*: By default, <span class="application">Fcron</span> will attempt to use the <span class="command"><strong>sendmail</strong></span> command from an <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a> package to email you the results of the <span class="command"><strong>fcron</strong></span> script. This switch is used to disable default email notification. Omit the switch to enable the default. Alternatively, you can use the <code class="option">--with-sendmail=</code>*`</path/to/MTA command>`* to use a different mailer command.
 
 *`--with-boot-install=no`*: This prevents installation of the bootscript included with the package.
 
 *`--with-piddir=/run`*: This fixes the systemd unit to use the proper directory for PID files so that systemctl does not hang and the unit starts correctly.
 
-`--with-editor=`{.option}*`</path/to/editor>`*: This switch allows you to set the default text editor.
+<code class="option">--with-editor=</code>*`</path/to/editor>`*: This switch allows you to set the default text editor.
 
-`--with-dsssl-dir=`{.option}*`</path/to/dsssl-stylesheets>`*: May be used if you have [DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref} installed. Currently, the dsssl stylesheets are located at `/usr/share/sgml/docbook/dsssl-stylesheets-1.79`{.filename}.
-:::
+<code class="option">--with-dsssl-dir=</code>*`</path/to/dsssl-stylesheets>`*: May be used if you have <a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a> installed. Currently, the dsssl stylesheets are located at <code class="filename">/usr/share/sgml/docbook/dsssl-stylesheets-1.79</code>.
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring Fcron {#configuring-fcron .sect2}
+<div class="configuration" lang="en">
+## Configuring Fcron {#configuring-fcron}
 
-::: {.sect3 lang="en"}
-### []{#fcron-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/fcron.conf`{.filename}, `/etc/fcron.allow`{.filename}, and `/etc/fcron.deny`{.filename}
-:::
+<code class="filename">/etc/fcron.conf</code>, <code class="filename">/etc/fcron.allow</code>, and <code class="filename">/etc/fcron.deny</code>
+</div>
 
-::: {.sect3 lang="en"}
-### []{#run-parts}Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-There are no required changes in any of the config files. Configuration information can be found in the man page for `fcron.conf`{.filename}.
+There are no required changes in any of the config files. Configuration information can be found in the man page for <code class="filename">fcron.conf</code>.
 
-[**fcron**]{.command} scripts are written using [**fcrontab**]{.command}. Refer to the [**fcrontab**]{.command} man page for proper parameters to address your situation.
+<span class="command"><strong>fcron</strong></span> scripts are written using <span class="command"><strong>fcrontab</strong></span>. Refer to the <span class="command"><strong>fcrontab</strong></span> man page for proper parameters to address your situation.
 
-[]{#fcron-pam} If [Linux-PAM]{.application} is installed, two PAM configuration files are installed in `etc/pam.d`{.filename}. Alternatively if `etc/pam.d`{.filename} is not used, the installation will append two configuration sections to the existing `/etc/pam.conf`{.filename} file. You should ensure the files match your preferences. Modify them as required to suit your needs.
+<a id="fcron-pam"></a> If <span class="application">Linux-PAM</span> is installed, two PAM configuration files are installed in <code class="filename">etc/pam.d</code>. Alternatively if <code class="filename">etc/pam.d</code> is not used, the installation will append two configuration sections to the existing <code class="filename">/etc/pam.conf</code> file. You should ensure the files match your preferences. Modify them as required to suit your needs.
 
 #### Periodic Jobs
 
-If you would like to set up a periodic hierarchy for the root user, first issue the following commands (as the `root`{.systemitem} user) to create the `/usr/bin/run-parts`{.filename} script:
+If you would like to set up a periodic hierarchy for the root user, first issue the following commands (as the <code class="systemitem">root</code> user) to create the <code class="filename">/usr/bin/run-parts</code> script:
 
-``` root
+```bash
 cat > /usr/bin/run-parts << "EOF" &&
 #!/bin/sh
 # run-parts:  Runs all the scripts found in a directory.
@@ -182,15 +182,15 @@ EOF
 chmod -v 755 /usr/bin/run-parts
 ```
 
-Next, create the directory layout for the periodic jobs (again as the `root`{.systemitem} user):
+Next, create the directory layout for the periodic jobs (again as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 install -vdm754 /etc/cron.{hourly,daily,weekly,monthly}
 ```
 
-Finally, add the [**run-parts**]{.command} to the system fcrontab (while still the `root`{.systemitem} user):
+Finally, add the <span class="command"><strong>run-parts</strong></span> to the system fcrontab (while still the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 cat > /var/spool/fcron/systab.orig << "EOF"
 &bootrun 01 * * * * root run-parts /etc/cron.hourly
 &bootrun 02 4 * * * root run-parts /etc/cron.daily
@@ -198,68 +198,68 @@ cat > /var/spool/fcron/systab.orig << "EOF"
 &bootrun 42 4 1 * * root run-parts /etc/cron.monthly
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#fcron-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-Enable [fcron]{.application} to start at boot using the previously installed systemd unit.
+Enable <span class="application">fcron</span> to start at boot using the previously installed systemd unit.
 
-``` root
+```bash
 systemctl enable fcron
 ```
 
-Finally, again as the `root`{.systemitem} user, start fcron and generate the `/var/spool/fcron/systab`{.filename} file:
+Finally, again as the <code class="systemitem">root</code> user, start fcron and generate the <code class="filename">/var/spool/fcron/systab</code> file:
 
-``` root
+```bash
 systemctl start fcron &&
 fcrontab -z -u systab
 ```
-:::
-::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [fcron, fcrondyn, fcronsighup, and fcrontab]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">fcron, fcrondyn, fcronsighup, and fcrontab</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/fcron-3.4.0 and /var/spool/fcron]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/fcron-3.4.0 and /var/spool/fcron</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------
-  []{#fcron-prog}[[**fcron**]{.command}]{.term}          is the scheduling daemon
-  []{#fcrondyn}[[**fcrondyn**]{.command}]{.term}         is a user tool intended to interact with a running [**fcron**]{.command} daemon
-  []{#fcronsighup}[[**fcronsighup**]{.command}]{.term}   instructs [**fcron**]{.command} to reread the [Fcron]{.application} tables
-  []{#fcrontab}[[**fcrontab**]{.command}]{.term}         is a program used to install, edit, list and remove the tables used by [**fcron**]{.command}
+  <a id="fcron-prog"></a><span class="command"><span class="term"><strong>fcron</strong></span></span>          is the scheduling daemon
+  <a id="fcrondyn"></a><span class="command"><span class="term"><strong>fcrondyn</strong></span></span>         is a user tool intended to interact with a running <span class="command"><strong>fcron</strong></span> daemon
+  <a id="fcronsighup"></a><span class="command"><span class="term"><strong>fcronsighup</strong></span></span>   instructs <span class="command"><strong>fcron</strong></span> to reread the <span class="application">Fcron</span> tables
+  <a id="fcrontab"></a><span class="command"><span class="term"><strong>fcrontab</strong></span></span>         is a program used to install, edit, list and remove the tables used by <span class="command"><strong>fcron</strong></span>
   ------------------------------------------------------ ----------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](dbus.md "dbus-1.16.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](dbus.md "dbus-1.16.2")
 
     dbus-1.16.2
 
--   [Next](gpm.md "GPM-1.20.7"){accesskey="n"}
+-   [Next](gpm.md "GPM-1.20.7")
 
     GPM-1.20.7
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

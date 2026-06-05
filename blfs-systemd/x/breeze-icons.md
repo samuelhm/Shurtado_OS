@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 28. Icons
 
--   [Prev](adwaita-icon-theme.md "adwaita-icon-theme-50.0"){accesskey="p"}
+-   [Prev](adwaita-icon-theme.md "adwaita-icon-theme-50.0")
 
     adwaita-icon-theme-50.0
 
--   [Next](gnome-icon-theme.md "gnome-icon-theme-3.12.0"){accesskey="n"}
+-   [Next](gnome-icon-theme.md "gnome-icon-theme-3.12.0")
 
     gnome-icon-theme-3.12.0
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#breeze-icons}breeze-icons-6.26.0 {#breeze-icons-6.26.0 .sect1}
+# breeze-icons-6.26.0 {#breeze-icons-6.26.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Breeze Icons {#introduction-to-breeze-icons .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Breeze Icons {#introduction-to-breeze-icons}
 
-The [Breeze Icons]{.application} package contains the default icons for [KDE Plasma]{.application} applications, but it can be used for other window environments.
+The <span class="application">Breeze Icons</span> package contains the default icons for <span class="application">KDE Plasma</span> applications, but it can be used for other window environments.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/frameworks/6.26/breeze-icons-6.26.0.tar.xz](https://download.kde.org/stable/frameworks/6.26/breeze-icons-6.26.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/frameworks/6.26/breeze-icons-6.26.0.tar.xz">https://download.kde.org/stable/frameworks/6.26/breeze-icons-6.26.0.tar.xz</a>
 
 -   Download MD5 sum: 0a8a87904eab97f3f3c8dffb82756db1
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 141 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### Breeze Icons Dependencies
 
 #### Required
 
-[Extra-CMake-Modules-6.26.0](../kde/extra-cmake-modules.md "Extra-CMake-Modules-6.26.0"){.xref} and [Qt-6.11.1](qt6.md "Qt-6.11.1"){.xref}
+<a class="xref" href="../kde/extra-cmake-modules.md" title="Extra-CMake-Modules-6.26.0">Extra-CMake-Modules-6.26.0</a> and <a class="xref" href="qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
 
 #### Optional
 
-[KDE Frameworks-6.26.0](../kde/frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, and [lxml-6.1.1](../general/python-modules.md#lxml "lxml-6.1.1"){.xref}
-:::::
+<a class="xref" href="../kde/frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, and <a class="xref" href="../general/python-modules.md#lxml" title="lxml-6.1.1">lxml-6.1.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Breeze Icons {#installation-of-breeze-icons .sect2}
+<div class="installation" lang="en">
+## Installation of Breeze Icons {#installation-of-breeze-icons}
 
-Install [Breeze Icons]{.application} by running the following commands:
+Install <span class="application">Breeze Icons</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -75,52 +75,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D BUILD_TESTING=OFF`*: This parameter disables building the testing framework, which requires some modules from [KDE Frameworks-6.26.0](../kde/frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}.
+*`-D BUILD_TESTING=OFF`*: This parameter disables building the testing framework, which requires some modules from <a class="xref" href="../kde/frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>.
 
-*`-D WITH_ICON_GENERATION=OFF`*: This parameter disables generation of 24x24 dark icons, which requires the [lxml-6.1.1](../general/python-modules.md#lxml "lxml-6.1.1"){.xref} python module. This parameter can be removed if [lxml-6.1.1](../general/python-modules.md#lxml "lxml-6.1.1"){.xref} is installed.
-:::
+*`-D WITH_ICON_GENERATION=OFF`*: This parameter disables generation of 24x24 dark icons, which requires the <a class="xref" href="../general/python-modules.md#lxml" title="lxml-6.1.1">lxml-6.1.1</a> python module. This parameter can be removed if <a class="xref" href="../general/python-modules.md#lxml" title="lxml-6.1.1">lxml-6.1.1</a> is installed.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libKF6BreezeIcons.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libKF6BreezeIcons.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/KF6/BreezeIcons, /usr/lib/cmake/KF6BreezeIcons, and /usr/share/icons/breeze{,-dark}]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/KF6/BreezeIcons, /usr/lib/cmake/KF6BreezeIcons, and /usr/share/icons/breeze{,-dark}</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](adwaita-icon-theme.md "adwaita-icon-theme-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](adwaita-icon-theme.md "adwaita-icon-theme-50.0")
 
     adwaita-icon-theme-50.0
 
--   [Next](gnome-icon-theme.md "gnome-icon-theme-3.12.0"){accesskey="n"}
+-   [Next](gnome-icon-theme.md "gnome-icon-theme-3.12.0")
 
     gnome-icon-theme-3.12.0
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

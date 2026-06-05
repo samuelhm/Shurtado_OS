@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 29. Introduction to KDE
 
--   [Prev](kdeintro.md "KDE Preliminaries"){accesskey="p"}
+-   [Prev](kdeintro.md "KDE Preliminaries")
 
     KDE Preliminaries
 
--   [Next](phonon.md "Phonon-4.12.0"){accesskey="n"}
+-   [Next](phonon.md "Phonon-4.12.0")
 
     Phonon-4.12.0
 
--   [Up](introduction.md "Chapter 29. Introduction to KDE"){accesskey="u"}
+-   [Up](introduction.md "Chapter 29. Introduction to KDE")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#extra-cmake-modules}Extra-CMake-Modules-6.26.0 {#extra-cmake-modules-6.26.0 .sect1}
+# Extra-CMake-Modules-6.26.0 {#extra-cmake-modules-6.26.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Extra CMake Modules {#introduction-to-extra-cmake-modules .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Extra CMake Modules {#introduction-to-extra-cmake-modules}
 
-The [Extra CMake Modules]{.application} package contains extra [CMake]{.application} modules used by [KDE Frameworks]{.application} and other packages.
+The <span class="application">Extra CMake Modules</span> package contains extra <span class="application">CMake</span> modules used by <span class="application">KDE Frameworks</span> and other packages.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/frameworks/6.26/extra-cmake-modules-6.26.0.tar.xz](https://download.kde.org/stable/frameworks/6.26/extra-cmake-modules-6.26.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/frameworks/6.26/extra-cmake-modules-6.26.0.tar.xz">https://download.kde.org/stable/frameworks/6.26/extra-cmake-modules-6.26.0.tar.xz</a>
 
 -   Download MD5 sum: 05432f3fcbc3ee0de5765413f5c8b436
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.4 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Extra CMake Modules Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
 
 #### Recommended
 
-[Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
+<a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
 
 #### Optional
 
-[sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref} (for building documentation) and [ReuseTool](https://github.com/fsfe/reuse-tool/){.ulink} (for running internal tests)
-:::::
+<a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a> (for building documentation) and <a class="ulink" href="https://github.com/fsfe/reuse-tool/">ReuseTool</a> (for running internal tests)
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Extra CMake Modules {#installation-of-extra-cmake-modules .sect2}
+<div class="installation" lang="en">
+## Installation of Extra CMake Modules {#installation-of-extra-cmake-modules}
 
-Install [Extra CMake Modules]{.application} by running the following commands:
+Install <span class="application">Extra CMake Modules</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i '/"lib64"/s/64//' kde-modules/KDEInstallDirsCommon.cmake &&
 
 sed -e '/PACKAGE_INIT/i set(SAVE_PACKAGE_PREFIX_DIR "${PACKAGE_PREFIX_DIR}")' \
@@ -85,62 +85,62 @@ make
 
 This package does not come with a test suite.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Unlike other KF6 packages, this module is installed in /usr because it can be used by some non-KF6 packages.
-:::
+</div>
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed ... Modules/KDEInstallDirs.cmake**]{.command}: This command disables applications using CMake from attempting to install files in a `lib64`{.filename} sub-directory.
+<span class="command"><strong>sed ... Modules/KDEInstallDirs.cmake</strong></span>: This command disables applications using CMake from attempting to install files in a <code class="filename">lib64</code> sub-directory.
 
-[**sed ... ECMConfig.cmake.in**]{.command}: This command protects the global [CMake]{.application} variable `PACKAGE_PREFIX_DIR`{.envar} from being changed when checking for the presence of ECM. Since we install ECM into `/usr`{.filename}, the check would set that variable to `/usr`{.filename}, but most KDE packages expect it to be set to `/opt/kf6`{.filename} and they will fail to build if it is set to something else.
+<span class="command"><strong>sed ... ECMConfig.cmake.in</strong></span>: This command protects the global <span class="application">CMake</span> variable <code class="envar">PACKAGE_PREFIX_DIR</code> from being changed when checking for the presence of ECM. Since we install ECM into <code class="filename">/usr</code>, the check would set that variable to <code class="filename">/usr</code>, but most KDE packages expect it to be set to <code class="filename">/opt/kf6</code> and they will fail to build if it is set to something else.
 
-*`-D DOC_INSTALL-DIR=/usr/share/doc/extra...`*: This switch allows installing the documentation (which is built if [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref} is installed) into a versioned directory.
-:::
+*`-D DOC_INSTALL-DIR=/usr/share/doc/extra...`*: This switch allows installing the documentation (which is built if <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a> is installed) into a versioned directory.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/ECM and /usr/share/doc/extra-cmake-modules-6.26.0 (if documentation was built)]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/ECM and /usr/share/doc/extra-cmake-modules-6.26.0 (if documentation was built)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kdeintro.md "KDE Preliminaries"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kdeintro.md "KDE Preliminaries")
 
     KDE Preliminaries
 
--   [Next](phonon.md "Phonon-4.12.0"){accesskey="n"}
+-   [Next](phonon.md "Phonon-4.12.0")
 
     Phonon-4.12.0
 
--   [Up](introduction.md "Chapter 29. Introduction to KDE"){accesskey="u"}
+-   [Up](introduction.md "Chapter 29. Introduction to KDE")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

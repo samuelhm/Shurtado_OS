@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libsigsegv.md "libsigsegv-2.15"){accesskey="p"}
+-   [Prev](libsigsegv.md "libsigsegv-2.15")
 
     libsigsegv-2.15
 
--   [Next](libstatgrab.md "libstatgrab-0.92.1"){accesskey="n"}
+-   [Next](libstatgrab.md "libstatgrab-0.92.1")
 
     libstatgrab-0.92.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libssh2}libssh2-1.11.1 {#libssh2-1.11.1 .sect1}
+# libssh2-1.11.1 {#libssh2-1.11.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libssh2 {#introduction-to-libssh2 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libssh2 {#introduction-to-libssh2}
 
-[Libssh2]{.application} package is a client-side C library implementing the SSH2 protocol.
+<span class="application">Libssh2</span> package is a client-side C library implementing the SSH2 protocol.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.libssh2.org/download/libssh2-1.11.1.tar.gz](https://www.libssh2.org/download/libssh2-1.11.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.libssh2.org/download/libssh2-1.11.1.tar.gz">https://www.libssh2.org/download/libssh2-1.11.1.tar.gz</a>
 
 -   Download MD5 sum: 38857d10b5c5deb198d6989dacace2e6
 
@@ -44,83 +44,83 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 15 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### libssh2 Dependencies
 
 #### Optional
 
-[CMake-4.3.3](cmake.md "CMake-4.3.3"){.xref} (can be used instead of the [**configure**]{.command} script), [libgcrypt-1.12.2](libgcrypt.md "libgcrypt-1.12.2"){.xref} (can be used instead of OpenSSL), [OpenSSH-10.3p1](../postlfs/openssh.md "OpenSSH-10.3p1"){.xref} (for some tests), and [Docker](https://www.docker.com){.ulink} (for some tests)
-:::::
+<a class="xref" href="cmake.md" title="CMake-4.3.3">CMake-4.3.3</a> (can be used instead of the <span class="command"><strong>configure</strong></span> script), <a class="xref" href="libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a> (can be used instead of OpenSSL), <a class="xref" href="../postlfs/openssh.md" title="OpenSSH-10.3p1">OpenSSH-10.3p1</a> (for some tests), and <a class="ulink" href="https://www.docker.com">Docker</a> (for some tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libssh2 {#installation-of-libssh2 .sect2}
+<div class="installation" lang="en">
+## Installation of libssh2 {#installation-of-libssh2}
 
-Install [libssh2]{.application} by running the following commands:
+Install <span class="application">libssh2</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr          \
             --disable-docker-tests \
             --disable-static       &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-docker-tests`*: Disable the tests requiring Docker, which is beyond the scope of BLFS. Remove this switch if you've installed Docker and you wish to run the test suite.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libssh2.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libssh2.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ---------------------------------------------
-  []{#libssh2-lib}[`libssh2.so`{.filename}]{.term}   contains functions to use the SSH2 protocol
+  <a id="libssh2-lib"></a><span class="term"><code class="filename">libssh2.so</code></span>   contains functions to use the SSH2 protocol
   -------------------------------------------------- ---------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsigsegv.md "libsigsegv-2.15"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsigsegv.md "libsigsegv-2.15")
 
     libsigsegv-2.15
 
--   [Next](libstatgrab.md "libstatgrab-0.92.1"){accesskey="n"}
+-   [Next](libstatgrab.md "libstatgrab-0.92.1")
 
     libstatgrab-0.92.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

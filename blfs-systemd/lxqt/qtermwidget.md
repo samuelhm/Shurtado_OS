@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 38. LXQt Applications
 
--   [Prev](qps.md "qps-2.13.0"){accesskey="p"}
+-   [Prev](qps.md "qps-2.13.0")
 
     qps-2.13.0
 
--   [Next](qterminal.md "qterminal-2.4.0"){accesskey="n"}
+-   [Next](qterminal.md "qterminal-2.4.0")
 
     qterminal-2.4.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#qtermwidget}qtermwidget-2.4.0 {#qtermwidget-2.4.0 .sect1}
+# qtermwidget-2.4.0 {#qtermwidget-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to qtermwidget {#introduction-to-qtermwidget .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to qtermwidget {#introduction-to-qtermwidget}
 
-As the name suggests, the [qtermwidget]{.application} package is a terminal widget for [Qt]{.application}.
+As the name suggests, the <span class="application">qtermwidget</span> package is a terminal widget for <span class="application">Qt</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/qtermwidget/releases/download/2.4.0/qtermwidget-2.4.0.tar.xz](https://github.com/lxqt/qtermwidget/releases/download/2.4.0/qtermwidget-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/qtermwidget/releases/download/2.4.0/qtermwidget-2.4.0.tar.xz">https://github.com/lxqt/qtermwidget/releases/download/2.4.0/qtermwidget-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 033823bc2599813ad02b1cfcabcefec9
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.5 MB
 
 -   Estimated build time: 0.5 SBU
-:::
+</div>
 
 ### qtermwidget Dependencies
 
 #### Required
 
-[Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
-:::::
+<a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of qtermwidget {#installation-of-qtermwidget .sect2}
+<div class="installation" lang="en">
+## Installation of qtermwidget {#installation-of-qtermwidget}
 
-Install [qtermwidget]{.application} by running the following commands:
+Install <span class="application">qtermwidget</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libqtermwidget6.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libqtermwidget6.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/qtermwidget6, /usr/lib/cmake/qtermwidget6, and /usr/share/qtermwidget6]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/qtermwidget6, /usr/lib/cmake/qtermwidget6, and /usr/share/qtermwidget6</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ ------------------------------------
-  []{#libqtermwidget6-lib}[`libqtermwidget6.so`{.filename}]{.term}   provides a terminal widget for Qt6
+  <a id="libqtermwidget6-lib"></a><span class="term"><code class="filename">libqtermwidget6.so</code></span>   provides a terminal widget for Qt6
   ------------------------------------------------------------------ ------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qps.md "qps-2.13.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qps.md "qps-2.13.0")
 
     qps-2.13.0
 
--   [Next](qterminal.md "qterminal-2.4.0"){accesskey="n"}
+-   [Next](qterminal.md "qterminal-2.4.0")
 
     qterminal-2.4.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

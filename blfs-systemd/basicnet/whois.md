@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 16. Networking Utilities
 
--   [Prev](traceroute.md "Traceroute-2.1.6"){accesskey="p"}
+-   [Prev](traceroute.md "Traceroute-2.1.6")
 
     Traceroute-2.1.6
 
--   [Next](wireshark.md "Wireshark-4.6.6"){accesskey="n"}
+-   [Next](wireshark.md "Wireshark-4.6.6")
 
     Wireshark-4.6.6
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#whois}Whois-5.6.6 {#whois-5.6.6 .sect1}
+# Whois-5.6.6 {#whois-5.6.6}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Whois {#introduction-to-whois .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Whois {#introduction-to-whois}
 
-[Whois]{.application} is a client-side application which queries the whois directory service for information pertaining to a particular domain name. This package will install two programs by default: [**whois**]{.command} and [**mkpasswd**]{.command}. The [**mkpasswd**]{.command} command is also installed by the expect package in LFS.
+<span class="application">Whois</span> is a client-side application which queries the whois directory service for information pertaining to a particular domain name. This package will install two programs by default: <span class="command"><strong>whois</strong></span> and <span class="command"><strong>mkpasswd</strong></span>. The <span class="command"><strong>mkpasswd</strong></span> command is also installed by the expect package in LFS.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/rfc1036/whois/archive/v5.6.6/whois-5.6.6.tar.gz](https://github.com/rfc1036/whois/archive/v5.6.6/whois-5.6.6.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/rfc1036/whois/archive/v5.6.6/whois-5.6.6.tar.gz">https://github.com/rfc1036/whois/archive/v5.6.6/whois-5.6.6.tar.gz</a>
 
 -   Download MD5 sum: a2a62d1184603d4f32e9934c7642b0ad
 
@@ -44,81 +44,81 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.0 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Whois Dependencies
 
 #### Optional
 
-[libidn-1.43](../general/libidn.md "libidn-1.43"){.xref} or [libidn2-2.3.8](../general/libidn2.md "libidn2-2.3.8"){.xref}
-:::::
+<a class="xref" href="../general/libidn.md" title="libidn-1.43">libidn-1.43</a> or <a class="xref" href="../general/libidn2.md" title="libidn2-2.3.8">libidn2-2.3.8</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Whois {#installation-of-whois .sect2}
+<div class="installation" lang="en">
+## Installation of Whois {#installation-of-whois}
 
 Build the application with:
 
-``` userinput
+```bash
 make
 ```
 
-You can install the [**whois**]{.command} program, the [**mkpasswd**]{.command} program, and the locale files independently. Control your choice of what is installed with the following commands issued as the `root`{.systemitem} user:
+You can install the <span class="command"><strong>whois</strong></span> program, the <span class="command"><strong>mkpasswd</strong></span> program, and the locale files independently. Control your choice of what is installed with the following commands issued as the <code class="systemitem">root</code> user:
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Installing this version of [**mkpasswd**]{.command} will overwrite the same command installed in LFS.
-:::
+Installing this version of <span class="command"><strong>mkpasswd</strong></span> will overwrite the same command installed in LFS.
+</div>
 
-``` root
+```bash
 make prefix=/usr install-whois
 make prefix=/usr install-mkpasswd
 make prefix=/usr install-pos
 ```
-::::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [whois and mkpasswd]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">whois and mkpasswd</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------
-  []{#whois-prog}[[**whois**]{.command}]{.term}          is a client-side application which queries the whois directory service for information pertaining to a particular domain name
-  []{#mkpasswd-whois}[[**mkpasswd**]{.command}]{.term}   generates a new password, and optionally applies it to a user
+  <a id="whois-prog"></a><span class="command"><span class="term"><strong>whois</strong></span></span>          is a client-side application which queries the whois directory service for information pertaining to a particular domain name
+  <a id="mkpasswd-whois"></a><span class="command"><span class="term"><strong>mkpasswd</strong></span></span>   generates a new password, and optionally applies it to a user
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](traceroute.md "Traceroute-2.1.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](traceroute.md "Traceroute-2.1.6")
 
     Traceroute-2.1.6
 
--   [Next](wireshark.md "Wireshark-4.6.6"){accesskey="n"}
+-   [Next](wireshark.md "Wireshark-4.6.6")
 
     Wireshark-4.6.6
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

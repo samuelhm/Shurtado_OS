@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 49. Extensible Markup Language (XML)
 
--   [Prev](docbook.md "docbook-xml-4.5"){accesskey="p"}
+-   [Prev](docbook.md "docbook-xml-4.5")
 
     docbook-xml-4.5
 
--   [Next](docbook-xsl.md "docbook-xsl-nons-1.79.2"){accesskey="n"}
+-   [Next](docbook-xsl.md "docbook-xsl-nons-1.79.2")
 
     docbook-xsl-nons-1.79.2
 
--   [Up](xml.md "Chapter 49. Extensible Markup Language (XML)"){accesskey="u"}
+-   [Up](xml.md "Chapter 49. Extensible Markup Language (XML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#docbook5}docbook-xml-5.0 {#docbook-xml-5.0 .sect1}
+# docbook-xml-5.0 {#docbook-xml-5.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to DocBook XML DTD and Schemas 5.0 {#introduction-to-docbook-xml-dtd-and-schemas-5.0 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to DocBook XML DTD and Schemas 5.0 {#introduction-to-docbook-xml-dtd-and-schemas-5.0}
 
-The [DocBook XML DTD and Schemas]{.application}-5.0 package contains document type definitions and schemas for verification of XML data files against the DocBook rule set. These are useful for structuring books and software documentation to a standard allowing you to utilize transformations already written for that standard. In addition to providing a DTD, version 5 introduced the RelaxNG schema and Schematron rules, and is incompatible with previous versions of DocBook XML.
+The <span class="application">DocBook XML DTD and Schemas</span>-5.0 package contains document type definitions and schemas for verification of XML data files against the DocBook rule set. These are useful for structuring books and software documentation to a standard allowing you to utilize transformations already written for that standard. In addition to providing a DTD, version 5 introduced the RelaxNG schema and Schematron rules, and is incompatible with previous versions of DocBook XML.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.docbook.org/xml/5.0/docbook-5.0.zip](https://archive.docbook.org/xml/5.0/docbook-5.0.zip){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.docbook.org/xml/5.0/docbook-5.0.zip">https://archive.docbook.org/xml/5.0/docbook-5.0.zip</a>
 
 -   Download MD5 sum: 2411c19ed4fb141f3fa3d389fae40736
 
@@ -44,28 +44,28 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.2 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### DocBook XML DTD and Schemas 5.0 Dependencies
 
 #### Required
 
-[libarchive-3.8.7](../general/libarchive.md "libarchive-3.8.7"){.xref} and [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}
-:::::
+<a class="xref" href="../general/libarchive.md" title="libarchive-3.8.7">libarchive-3.8.7</a> and <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of DocBook XML DTD and Schemas 5.0 {#installation-of-docbook-xml-dtd-and-schemas-5.0 .sect2}
+<div class="installation" lang="en">
+## Installation of DocBook XML DTD and Schemas 5.0 {#installation-of-docbook-xml-dtd-and-schemas-5.0}
 
-Install [DocBook XML DTD and Schemas]{.application} by running the following commands as the `root`{.systemitem} user:
+Install <span class="application">DocBook XML DTD and Schemas</span> by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -vdm755 /usr/share/xml/docbook/xml-5.0 &&
 cp -rv catalog.xml dtd rng sch xsd /usr/share/xml/docbook/xml-5.0
 ```
 
-Create (or update) and populate the system XML catalog (`/etc/xml/catalog`{.filename}) by running the following commands as the `root`{.systemitem} user:
+Create (or update) and populate the system XML catalog (<code class="filename">/etc/xml/catalog</code>) by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 if [ ! -e /etc/xml/catalog ]; then
     install -v -d -m755 /etc/xml &&
     xmlcatalog --noout --create /etc/xml/catalog
@@ -86,55 +86,55 @@ xmlcatalog --noout --add "delegateURI"                \
   "file:///usr/share/xml/docbook/xml-5.0/catalog.xml" \
   /etc/xml/catalog
 ```
-:::
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring DocBook XML DTD and Schemas 5.0 {#configuring-docbook-xml-dtd-and-schemas-5.0 .sect2}
+<div class="configuration" lang="en">
+## Configuring DocBook XML DTD and Schemas 5.0 {#configuring-docbook-xml-dtd-and-schemas-5.0}
 
-::: {.sect3 lang="en"}
-### []{#docbook5-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/xml/catalog`{.filename}
-:::
-::::
+<code class="filename">/etc/xml/catalog</code>
+</div>
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-:::::: segmentedlist
-::::: seglistitem
-::: seg
-**Installed Files:** [DTD, RNC, RNG, SCH and XSD files]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Files:** <span class="segbody">DTD, RNC, RNG, SCH and XSD files</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/xml and /usr/share/xml/docbook/xml-5.0]{.segbody}
-:::
-:::::
-::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/xml and /usr/share/xml/docbook/xml-5.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#DTD5-files}[`DTD files`{.filename}]{.term}                    contain the DocBook 5.0 document type definitions which define the element types and the attribute lists that can be used in the corresponding `XML`{.filename} files
-  []{#Schema5-files}[`RNC, RNG, and SCH files`{.filename}]{.term}   contain the Docbook 5.0 RelaxNG, RelaxNG Compact, and Schematron schema definitions
-  []{#XSD5-files}[`XSD files`{.filename}]{.term}                    files contain DocBook-5.0 Schematron rules
+  <a id="DTD5-files"></a><span class="term"><code class="filename">DTD files</code></span>                    contain the DocBook 5.0 document type definitions which define the element types and the attribute lists that can be used in the corresponding <code class="filename">XML</code> files
+  <a id="Schema5-files"></a><span class="term"><code class="filename">RNC, RNG, and SCH files</code></span>   contain the Docbook 5.0 RelaxNG, RelaxNG Compact, and Schematron schema definitions
+  <a id="XSD5-files"></a><span class="term"><code class="filename">XSD files</code></span>                    files contain DocBook-5.0 Schematron rules
   ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](docbook.md "docbook-xml-4.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](docbook.md "docbook-xml-4.5")
 
     docbook-xml-4.5
 
--   [Next](docbook-xsl.md "docbook-xsl-nons-1.79.2"){accesskey="n"}
+-   [Next](docbook-xsl.md "docbook-xsl-nons-1.79.2")
 
     docbook-xsl-nons-1.79.2
 
--   [Up](xml.md "Chapter 49. Extensible Markup Language (XML)"){accesskey="u"}
+-   [Up](xml.md "Chapter 49. Extensible Markup Language (XML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 6. Text Editors
 
--   [Prev](kate.md "kate-26.04.1"){accesskey="p"}
+-   [Prev](kate.md "kate-26.04.1")
 
     kate-26.04.1
 
--   [Next](nano.md "Nano-9.0"){accesskey="n"}
+-   [Next](nano.md "Nano-9.0")
 
     Nano-9.0
 
--   [Up](editors.md "Chapter 6. Text Editors"){accesskey="u"}
+-   [Up](editors.md "Chapter 6. Text Editors")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#mousepad}mousepad-0.7.0 {#mousepad-0.7.0 .sect1}
+# mousepad-0.7.0 {#mousepad-0.7.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Mousepad {#introduction-to-mousepad .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Mousepad {#introduction-to-mousepad}
 
-[Mousepad]{.application} is a simple GTK text editor for the [Xfce]{.application} desktop environment.
+<span class="application">Mousepad</span> is a simple GTK text editor for the <span class="application">Xfce</span> desktop environment.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/apps/mousepad/0.7/mousepad-0.7.0.tar.xz](https://archive.xfce.org/src/apps/mousepad/0.7/mousepad-0.7.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/apps/mousepad/0.7/mousepad-0.7.0.tar.xz">https://archive.xfce.org/src/apps/mousepad/0.7/mousepad-0.7.0.tar.xz</a>
 
 -   Download MD5 sum: 96c09736fd02da599ffedf215313328f
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 9.2 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Mousepad Dependencies
 
 #### Required
 
-[gtksourceview4-4.8.4](../x/gtksourceview4.md "gtksourceview4-4.8.4"){.xref} and [libxfce4ui-4.20.2](../xfce/libxfce4ui.md "libxfce4ui-4.20.2"){.xref}
+<a class="xref" href="../x/gtksourceview4.md" title="gtksourceview4-4.8.4">gtksourceview4-4.8.4</a> and <a class="xref" href="../xfce/libxfce4ui.md" title="libxfce4ui-4.20.2">libxfce4ui-4.20.2</a>
 
 #### Recommended
 
-[gspell-1.14.3](../general/gspell.md "gspell-1.14.3"){.xref}
-:::::
+<a class="xref" href="../general/gspell.md" title="gspell-1.14.3">gspell-1.14.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Mousepad {#installation-of-mousepad .sect2}
+<div class="installation" lang="en">
+## Installation of Mousepad {#installation-of-mousepad}
 
-Install [Mousepad]{.application} by running the following commands:
+Install <span class="application">Mousepad</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -75,58 +75,58 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`-D gspell-plugin=no`{.option}: Use this option to disable building the [gspell-1.14.3](../general/gspell.md "gspell-1.14.3"){.xref} plugin if you have not installed [gspell]{.application}.
-:::
+<code class="option">-D gspell-plugin=no</code>: Use this option to disable building the <a class="xref" href="../general/gspell.md" title="gspell-1.14.3">gspell-1.14.3</a> plugin if you have not installed <span class="application">gspell</span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [mousepad]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">mousepad</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libmousepad.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libmousepad.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- -----------------------------
-  []{#mousepad-prog}[[**mousepad**]{.command}]{.term}   is a simple GTK text editor
+  <a id="mousepad-prog"></a><span class="command"><span class="term"><strong>mousepad</strong></span></span>   is a simple GTK text editor
   ----------------------------------------------------- -----------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kate.md "kate-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kate.md "kate-26.04.1")
 
     kate-26.04.1
 
--   [Next](nano.md "Nano-9.0"){accesskey="n"}
+-   [Next](nano.md "Nano-9.0")
 
     Nano-9.0
 
--   [Up](editors.md "Chapter 6. Text Editors"){accesskey="u"}
+-   [Up](editors.md "Chapter 6. Text Editors")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

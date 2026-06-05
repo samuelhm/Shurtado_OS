@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libatasmart.md "libatasmart-0.19"){accesskey="p"}
+-   [Prev](libatasmart.md "libatasmart-0.19")
 
     libatasmart-0.19
 
--   [Next](libblockdev.md "libblockdev-3.5.0"){accesskey="n"}
+-   [Next](libblockdev.md "libblockdev-3.5.0")
 
     libblockdev-3.5.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libatomic_ops}libatomic_ops-7.10.0 {#libatomic_ops-7.10.0 .sect1}
+# libatomic_ops-7.10.0 {#libatomic_ops-7.10.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libatomic_ops {#introduction-to-libatomic_ops .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libatomic_ops {#introduction-to-libatomic_ops}
 
-[libatomic_ops]{.application} provides implementations for atomic memory update operations on a number of architectures. This allows direct use of these in reasonably portable code. Unlike earlier similar packages, this one explicitly considers memory barrier semantics, and allows the construction of code that involves minimum overhead across a variety of architectures.
+<span class="application">libatomic_ops</span> provides implementations for atomic memory update operations on a number of architectures. This allows direct use of these in reasonably portable code. Unlike earlier similar packages, this one explicitly considers memory barrier semantics, and allows the construction of code that involves minimum overhead across a variety of architectures.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/bdwgc/libatomic_ops/releases/download/v7.10.0/libatomic_ops-7.10.0.tar.gz](https://github.com/bdwgc/libatomic_ops/releases/download/v7.10.0/libatomic_ops-7.10.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/bdwgc/libatomic_ops/releases/download/v7.10.0/libatomic_ops-7.10.0.tar.gz">https://github.com/bdwgc/libatomic_ops/releases/download/v7.10.0/libatomic_ops-7.10.0.tar.gz</a>
 
 -   Download MD5 sum: 1de9631daa0781a8c5a8457053d57cf0
 
@@ -44,15 +44,15 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.2 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libatomic_ops {#installation-of-libatomic_ops .sect2}
+<div class="installation" lang="en">
+## Installation of libatomic_ops {#installation-of-libatomic_ops}
 
-Install [libatomic_ops]{.application} by running the following commands:
+Install <span class="application">libatomic_ops</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr    \
             --enable-shared  \
             --disable-static \
@@ -60,62 +60,62 @@ Install [libatomic_ops]{.application} by running the following commands:
 make
 ```
 
-To check the results, issue [**make check**]{.command}.
+To check the results, issue <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--enable-shared`*: This switch enables building of the `libatomic_ops`{.filename} shared libraries.
+*`--enable-shared`*: This switch enables building of the <code class="filename">libatomic_ops</code> shared libraries.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libatomic_ops.so and libatomic_ops_gpl.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libatomic_ops.so and libatomic_ops_gpl.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/libatomic_ops and /usr/share/doc/libatomic_ops-7.10.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/libatomic_ops and /usr/share/doc/libatomic_ops-7.10.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- -------------------------------------------------
-  []{#libatomic_ops-lib}[`libatomic_ops.so`{.filename}]{.term}   contains functions for atomic memory operations
+  <a id="libatomic_ops-lib"></a><span class="term"><code class="filename">libatomic_ops.so</code></span>   contains functions for atomic memory operations
   -------------------------------------------------------------- -------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libatasmart.md "libatasmart-0.19"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libatasmart.md "libatasmart-0.19")
 
     libatasmart-0.19
 
--   [Next](libblockdev.md "libblockdev-3.5.0"){accesskey="n"}
+-   [Next](libblockdev.md "libblockdev-3.5.0")
 
     libblockdev-3.5.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

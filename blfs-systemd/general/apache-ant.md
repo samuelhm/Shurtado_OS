@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](ojdk-conf.md "Configuring the Java environment"){accesskey="p"}
+-   [Prev](ojdk-conf.md "Configuring the Java environment")
 
     Configuring the Java environment
 
--   [Next](../basicnet/basicnet.md "Networking"){accesskey="n"}
+-   [Next](../basicnet/basicnet.md "Networking")
 
     Networking
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#apache-ant}apache-ant-1.10.17 {#apache-ant-1.10.17 .sect1}
+# apache-ant-1.10.17 {#apache-ant-1.10.17}
 
-::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Apache Ant {#introduction-to-apache-ant .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Apache Ant {#introduction-to-apache-ant}
 
-The [Apache Ant]{.application} package is a [Java]{.application}-based build tool. In theory, it is like the [**make**]{.command} command, but without [**make**]{.command}'s wrinkles. [Ant]{.application} is different. Instead of a model that is extended with shell-based commands, [Ant]{.application} is extended using [Java]{.application} classes. Instead of writing shell commands, the configuration files are XML-based, calling out a target tree that executes various tasks. Each task is run by an object that implements a particular task interface.
+The <span class="application">Apache Ant</span> package is a <span class="application">Java</span>-based build tool. In theory, it is like the <span class="command"><strong>make</strong></span> command, but without <span class="command"><strong>make</strong></span>'s wrinkles. <span class="application">Ant</span> is different. Instead of a model that is extended with shell-based commands, <span class="application">Ant</span> is extended using <span class="application">Java</span> classes. Instead of writing shell commands, the configuration files are XML-based, calling out a target tree that executes various tasks. Each task is run by an object that implements a particular task interface.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.apache.org/dist/ant/source/apache-ant-1.10.17-src.tar.xz](https://archive.apache.org/dist/ant/source/apache-ant-1.10.17-src.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.apache.org/dist/ant/source/apache-ant-1.10.17-src.tar.xz">https://archive.apache.org/dist/ant/source/apache-ant-1.10.17-src.tar.xz</a>
 
 -   Download MD5 sum: 218213b1db69824923c2439461213527
 
@@ -44,76 +44,76 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 328 MB
 
 -   Estimated build time: 0.2 SBU (excluding download time)
-:::
+</div>
 
 ### Apache Ant Dependencies
 
 #### Required
 
-A JDK ([Java Binary](java.md#java-bin "Binary JDK Information"){.xref} or [OpenJDK-21.0.10](openjdk.md "OpenJDK-21.0.10"){.xref}) and [GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref}
+A JDK (<a class="xref" href="java.md#java-bin" title="Binary JDK Information">Java Binary</a> or <a class="xref" href="openjdk.md" title="OpenJDK-21.0.10">OpenJDK-21.0.10</a>) and <a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for building this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before building this package.
-:::
-::::::
+An Internet connection is needed for building this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before building this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Apache Ant {#installation-of-apache-ant .sect2}
+<div class="installation" lang="en">
+## Installation of Apache Ant {#installation-of-apache-ant}
 
-Build a limited bootstrap version of [Apache Ant]{.application} using the following command:
+Build a limited bootstrap version of <span class="application">Apache Ant</span> using the following command:
 
-``` userinput
+```bash
 ./bootstrap.sh
 ```
 
-Download the runtime dependencies using the `fetch.xml`{.filename} ant build script:
+Download the runtime dependencies using the <code class="filename">fetch.xml</code> ant build script:
 
-``` userinput
+```bash
 bootstrap/bin/ant -f fetch.xml -Ddest=optional
 ```
 
-Build [Apache Ant]{.application} by running the following command:
+Build <span class="application">Apache Ant</span> by running the following command:
 
-``` userinput
+```bash
 ./build.sh -Ddist.dir=$PWD/ant-1.10.17 dist
 ```
 
-Install, as the `root`{.systemitem} user:
+Install, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cp -rv ant-1.10.17 /opt/            &&
 chown -R root:root /opt/ant-1.10.17 &&
 ln -sfv ant-1.10.17 /opt/ant
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**bootstrap/bin/ant -f fetch.xml -Ddest=optional**]{.command}: Downloads the missing dependencies to the user's home directory, and copies them into the source tree (in the `lib/optional`{.filename} directory, where [**ant**]{.command} picks them up at build time).
+<span class="command"><strong>bootstrap/bin/ant -f fetch.xml -Ddest=optional</strong></span>: Downloads the missing dependencies to the user's home directory, and copies them into the source tree (in the <code class="filename">lib/optional</code> directory, where <span class="command"><strong>ant</strong></span> picks them up at build time).
 
-[**./build.sh -Ddist.dir=\$PWD/ant-1.10.17 dist**]{.command}: This command builds, tests, then installs the package into a temporary directory.
-:::
+<span class="command"><strong>./build.sh -Ddist.dir=\$PWD/ant-1.10.17 dist</strong></span>: This command builds, tests, then installs the package into a temporary directory.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Apache Ant {#configuring-apache-ant .sect2}
+<div class="configuration" lang="en">
+## Configuring Apache Ant {#configuring-apache-ant}
 
-::: {.sect3 lang="en"}
-### []{#apache-ant-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/ant/ant.conf`{.filename}, `~/.ant/ant.conf`{.filename}, and `~/.antrc`{.filename}
-:::
+<code class="filename">/etc/ant/ant.conf</code>, <code class="filename">~/.ant/ant.conf</code>, and <code class="filename">~/.antrc</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Some packages will require [**ant**]{.command} to be in the search path and the `ANT_HOME`{.envar} environment variable defined. Satisfy these requirements by issuing, as the `root`{.systemitem} user:
+Some packages will require <span class="command"><strong>ant</strong></span> to be in the search path and the <code class="envar">ANT_HOME</code> environment variable defined. Satisfy these requirements by issuing, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/profile.d/ant.sh << EOF
 # Begin /etc/profile.d/ant.sh
 
@@ -124,55 +124,55 @@ export ANT_HOME=/opt/ant
 EOF
 ```
 
-The above instructions assume you have configured your system as described in [The Bash Shell Startup Files](../postlfs/profile.md "The Bash Shell Startup Files"){.xref}.
-:::
-:::::
+The above instructions assume you have configured your system as described in <a class="xref" href="../postlfs/profile.md" title="The Bash Shell Startup Files">The Bash Shell Startup Files</a>.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ant, antRun, antRun.pl, complete-ant-cmd.pl, runant.pl, and runant.py]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ant, antRun, antRun.pl, complete-ant-cmd.pl, runant.pl, and runant.py</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Numerous `ant*.jar`{.filename} and dependent libraries in `$ANT_HOME`{.envar}`/lib`{.filename}]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">Numerous <code class="filename">ant*.jar</code> and dependent libraries in <code class="envar">$ANT_HOME</code><code class="filename">/lib</code></span>
+</div>
 
-::: seg
-**Installed Directories:** [/opt/ant-1.10.17]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/opt/ant-1.10.17</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------
-  []{#ant}[[**ant**]{.command}]{.term}                                   is a [Java]{.application} based build tool used by many packages instead of the conventional [**make**]{.command} program
-  []{#antRun}[[**antRun**]{.command}]{.term}                             is a support script used to start [**ant**]{.command} build scripts in a given directory
-  []{#antRun.pl}[[**antRun.pl**]{.command}]{.term}                       is a [Perl]{.application} script that provides similar functionality offered by the [**antRun**]{.command} script
-  []{#complete-ant-cmd.pl}[[**complete-ant-cmd.pl**]{.command}]{.term}   is a [Perl]{.application} script that allows [Bash]{.application} to complete an [**ant**]{.command} command-line
-  []{#runant.pl}[[**runant.pl**]{.command}]{.term}                       is a [Perl]{.application} wrapper script used to invoke [**ant**]{.command}
-  []{#runant.py}[[**runant.py**]{.command}]{.term}                       is a [Python]{.application} wrapper script used to invoke [**ant**]{.command}
-  []{#ant-star}[`ant*.jar`{.filename}]{.term}                            files are the [Apache Ant]{.application} [Java]{.application} class libraries
+  <a id="ant"></a><span class="command"><span class="term"><strong>ant</strong></span></span>                                   is a <span class="application">Java</span> based build tool used by many packages instead of the conventional <span class="command"><strong>make</strong></span> program
+  <a id="antRun"></a><span class="command"><span class="term"><strong>antRun</strong></span></span>                             is a support script used to start <span class="command"><strong>ant</strong></span> build scripts in a given directory
+  <a id="antRun.pl"></a><span class="command"><span class="term"><strong>antRun.pl</strong></span></span>                       is a <span class="application">Perl</span> script that provides similar functionality offered by the <span class="command"><strong>antRun</strong></span> script
+  <a id="complete-ant-cmd.pl"></a><span class="command"><span class="term"><strong>complete-ant-cmd.pl</strong></span></span>   is a <span class="application">Perl</span> script that allows <span class="application">Bash</span> to complete an <span class="command"><strong>ant</strong></span> command-line
+  <a id="runant.pl"></a><span class="command"><span class="term"><strong>runant.pl</strong></span></span>                       is a <span class="application">Perl</span> wrapper script used to invoke <span class="command"><strong>ant</strong></span>
+  <a id="runant.py"></a><span class="command"><span class="term"><strong>runant.py</strong></span></span>                       is a <span class="application">Python</span> wrapper script used to invoke <span class="command"><strong>ant</strong></span>
+  <a id="ant-star"></a><span class="term"><code class="filename">ant*.jar</code></span>                            files are the <span class="application">Apache Ant</span> <span class="application">Java</span> class libraries
   ---------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](ojdk-conf.md "Configuring the Java environment"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](ojdk-conf.md "Configuring the Java environment")
 
     Configuring the Java environment
 
--   [Next](../basicnet/basicnet.md "Networking"){accesskey="n"}
+-   [Next](../basicnet/basicnet.md "Networking")
 
     Networking
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

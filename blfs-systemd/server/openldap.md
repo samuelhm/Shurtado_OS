@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 23. Other Server Software
 
--   [Prev](other.md "Other Server Software"){accesskey="p"}
+-   [Prev](other.md "Other Server Software")
 
     Other Server Software
 
--   [Next](../x/x.md "Graphical Components"){accesskey="n"}
+-   [Next](../x/x.md "Graphical Components")
 
     Graphical Components
 
--   [Up](other.md "Chapter 23. Other Server Software"){accesskey="u"}
+-   [Up](other.md "Chapter 23. Other Server Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#openldap}OpenLDAP-2.6.13 {#openldap-2.6.13 .sect1}
+# OpenLDAP-2.6.13 {#openldap-2.6.13}
 
-::::::::::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to OpenLDAP {#introduction-to-openldap .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to OpenLDAP {#introduction-to-openldap}
 
-The [OpenLDAP]{.application} package provides an open source implementation of the Lightweight Directory Access Protocol.
+The <span class="application">OpenLDAP</span> package provides an open source implementation of the Lightweight Directory Access Protocol.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.13.tgz](https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.13.tgz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.13.tgz">https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.13.tgz</a>
 
 -   Download MD5 sum: 761be850c8ff85dbf5031af7c6c6da44
 
@@ -44,44 +44,44 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 100 MB (client and server)
 
 -   Estimated build time: 0.3 SBU (client), 0.8 SBU (server)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/openldap-2.6.13-consolidated-1.patch</a>
+</div>
 
 ### OpenLDAP Dependencies
 
 #### Recommended
 
-[Cyrus SASL-2.1.28](../postlfs/cyrus-sasl.md "Cyrus SASL-2.1.28"){.xref}
+<a class="xref" href="../postlfs/cyrus-sasl.md" title="Cyrus SASL-2.1.28">Cyrus SASL-2.1.28</a>
 
 #### Optional
 
-[GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref}, [unixODBC-2.3.14](../general/unixodbc.md "unixODBC-2.3.14"){.xref}, [MariaDB-12.3.2](mariadb.md "MariaDB-12.3.2"){.xref} or [PostgreSQL-18.4](postgresql.md "PostgreSQL-18.4"){.xref} or [MySQL](https://www.mysql.com/){.ulink}, [OpenSLP](http://www.openslp.org/){.ulink}, [WiredTiger](https://docs.mongodb.com/manual/core/wiredtiger/){.ulink}, and [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated) (for slapd, also deprecated)
-::::::
+<a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a>, <a class="xref" href="../general/unixodbc.md" title="unixODBC-2.3.14">unixODBC-2.3.14</a>, <a class="xref" href="mariadb.md" title="MariaDB-12.3.2">MariaDB-12.3.2</a> or <a class="xref" href="postgresql.md" title="PostgreSQL-18.4">PostgreSQL-18.4</a> or <a class="ulink" href="https://www.mysql.com/">MySQL</a>, <a class="ulink" href="http://www.openslp.org/">OpenSLP</a>, <a class="ulink" href="https://docs.mongodb.com/manual/core/wiredtiger/">WiredTiger</a>, and <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated) (for slapd, also deprecated)
+</div>
 
-:::: {.installation lang="en"}
-## Installation of OpenLDAP {#installation-of-openldap .sect2}
+<div class="installation" lang="en">
+## Installation of OpenLDAP {#installation-of-openldap}
 
 Whether you need the client or the server, first apply a fix to build with OpenSSL-4:
 
-``` userinput
+```bash
 sed -e 's/cn->length/ASN1_STRING_length(cn)/g'  \
     -e 's/cn->data/ASN1_STRING_get0_data(cn)/g' \
     -i libraries/libldap/tls_o.c
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you only need to install the client side [**ldap\***]{.command} binaries, corresponding man pages, libraries and header files (referred to as a [“[client-only]{.quote}”]{.quote} install), issue these commands instead of the following ones (no test suite available):
+If you only need to install the client side <span class="command"><strong>ldap\</strong>*</span> binaries, corresponding man pages, libraries and header files (referred to as a <span class="quote">“<span class="quote">client-only</span>”</span> install), issue these commands instead of the following ones (no test suite available):
 
-``` userinput
+```bash
 patch -Np1 -i ../openldap-2.6.13-consolidated-1.patch &&
 autoconf &&
 
@@ -96,25 +96,25 @@ make depend &&
 make
 ```
 
-Then, as the `root`{.systemitem} user:
+Then, as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 make install
 ```
-:::
+</div>
 
-There should be a dedicated user and group to take control of the [**slapd**]{.command} daemon after it is started. Issue the following commands as the `root`{.systemitem} user:
+There should be a dedicated user and group to take control of the <span class="command"><strong>slapd</strong></span> daemon after it is started. Issue the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -g 83 ldap &&
 useradd  -c "OpenLDAP Daemon Owner" \
          -d /var/lib/openldap -u 83 \
          -g ldap -s /bin/false ldap
 ```
 
-Install [OpenLDAP]{.application} by running the following commands:
+Install <span class="application">OpenLDAP</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../openldap-2.6.13-consolidated-1.patch &&
 autoconf &&
 
@@ -142,11 +142,11 @@ make depend &&
 make
 ```
 
-The tests are fragile, and errors may cause the tests to abort prior to finishing. Some errors may happen due to timing problems. The tests take around an hour, and the time is CPU independent due to delays in the tests. On most systems, the tests will run up to the `test065-proxyauth for mdb`{.filename} test. To test the results, issue: [**make test**]{.command}.
+The tests are fragile, and errors may cause the tests to abort prior to finishing. Some errors may happen due to timing problems. The tests take around an hour, and the time is CPU independent due to delays in the tests. On most systems, the tests will run up to the <code class="filename">test065-proxyauth for mdb</code> test. To test the results, issue: <span class="command"><strong>make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 
 sed -e "s/\.la/.so/" -i /etc/openldap/slapd.{conf,ldif}{,.default} &&
@@ -161,20 +161,20 @@ install -v -dm755 /usr/share/doc/openldap-2.6.13 &&
 cp      -vfr      doc/{drafts,rfc,guide} \
                   /usr/share/doc/openldap-2.6.13
 ```
-::::
+</div>
 
-:::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-*`--disable-debug`*: This switch disables the debugging code in [OpenLDAP]{.application}.
+*`--disable-debug`*: This switch disables the debugging code in <span class="application">OpenLDAP</span>.
 
-*`--enable-dynamic`*: This switch forces the [OpenLDAP]{.application} libraries to be dynamically linked to the executable programs.
+*`--enable-dynamic`*: This switch forces the <span class="application">OpenLDAP</span> libraries to be dynamically linked to the executable programs.
 
-*`--enable-crypt`*: This switch enables using [crypt(3)](https://man.archlinux.org/man/crypt.3){.ulink} passwords.
+*`--enable-crypt`*: This switch enables using <a class="ulink" href="https://man.archlinux.org/man/crypt.3">crypt(3)</a> passwords.
 
-*`--enable-spasswd`*: This switch enables [SASL]{.application} password verification.
+*`--enable-spasswd`*: This switch enables <span class="application">SASL</span> password verification.
 
 *`--enable-modules`*: This switch enables dynamic module support.
 
@@ -190,98 +190,98 @@ cp      -vfr      doc/{drafts,rfc,guide} \
 
 *`--without-systemd`*: This switch explicitly disables the bundled systemd units from being installed. These units do not work correctly because of configuration assumptions that are overridden by the consolidated patch, and also do not install a working basic configuration file like the BLFS systemd units provide.
 
-*`--libexecdir=/usr/lib`*: This switch controls where the `/usr/lib/openldap`{.filename} directory is installed. Everything in that directory is a library, so it belongs under `/usr/lib`{.filename} instead of `/usr/libexec`{.filename}.
+*`--libexecdir=/usr/lib`*: This switch controls where the <code class="filename">/usr/lib/openldap</code> directory is installed. Everything in that directory is a library, so it belongs under <code class="filename">/usr/lib</code> instead of <code class="filename">/usr/libexec</code>.
 
-`--enable-slp`{.option}: This switch enables SLPv2 support. Use it if you have installed [OpenSLP](http://www.openslp.org/){.ulink}.
+<code class="option">--enable-slp</code>: This switch enables SLPv2 support. Use it if you have installed <a class="ulink" href="http://www.openslp.org/">OpenSLP</a>.
 
-`--disable-versioning`{.option}: This switch disables symbol versioning in the [OpenLDAP]{.application} libraries. The default is to have symbol versioning. Note that if you have built applications using this package with symbol versioning, and remove the symbols, the applications may fail to run.
+<code class="option">--disable-versioning</code>: This switch disables symbol versioning in the <span class="application">OpenLDAP</span> libraries. The default is to have symbol versioning. Note that if you have built applications using this package with symbol versioning, and remove the symbols, the applications may fail to run.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-You can run [**./configure --help**]{.command} to see if there are other switch you can pass to the [**configure**]{.command} command to enable other options or dependency packages.
-:::
+You can run <span class="command"><strong>./configure --help</strong></span> to see if there are other switch you can pass to the <span class="command"><strong>configure</strong></span> command to enable other options or dependency packages.
+</div>
 
-[**install ...**]{.command}, [**chown ...**]{.command}, and [**chmod ...**]{.command}: Having slapd configuration files and ldap databases in /var/lib/openldap readable by anyone is a SECURITY ISSUE, especially since a file stores the admin password in PLAIN TEXT. That's why mode 640 and root:ldap ownership were used. The owner is root, so only root can modify the file, and group is ldap, so that the group which owns slapd daemon could read but not modify the file in case of a security breach.
-::::
+<span class="command"><strong>install ...</strong></span>, <span class="command"><strong>chown ...</strong></span>, and <span class="command"><strong>chmod ...</strong></span>: Having slapd configuration files and ldap databases in /var/lib/openldap readable by anyone is a SECURITY ISSUE, especially since a file stores the admin password in PLAIN TEXT. That's why mode 640 and root:ldap ownership were used. The owner is root, so only root can modify the file, and group is ldap, so that the group which owns slapd daemon could read but not modify the file in case of a security breach.
+</div>
 
-::::::::::: {.configuration lang="en"}
-## Configuring OpenLDAP {#configuring-openldap .sect2}
+<div class="configuration" lang="en">
+## Configuring OpenLDAP {#configuring-openldap}
 
-:::: {.sect3 lang="en"}
-### []{#openldap-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-::: itemizedlist
--   For LDAP client: `/etc/openldap/ldap.conf`{.filename} and `~/.ldaprc`{.filename}
+<div class="itemizedlist">
+-   For LDAP client: <code class="filename">/etc/openldap/ldap.conf</code> and <code class="filename">~/.ldaprc</code>
 
--   For LDAP server, two configuration mechanisms are used: a legacy `/etc/openldap/slapd.conf`{.filename} configuration file and the recommended [*slapd-config*]{.emphasis} system, using an LDIF database stored in `/etc/openldap/slapd.d`{.filename}.
-:::
-::::
+-   For LDAP server, two configuration mechanisms are used: a legacy <code class="filename">/etc/openldap/slapd.conf</code> configuration file and the recommended <span class="emphasis"><em>slapd-config</em></span> system, using an LDIF database stored in <code class="filename">/etc/openldap/slapd.d</code>.
+</div>
+</div>
 
-::::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Configuring the [**slapd**]{.command} servers can be complex. Securing the LDAP directory, especially if you are storing non-public data such as password databases, can also be a challenging task. In order to set up [OpenLDAP]{.application}, you'll need to modify either the `/etc/openldap/slapd.conf`{.filename} file (old method), or the `/etc/openldap/slapd.ldif`{.filename} file and then use [**ldapadd**]{.command} to create the LDAP configuration database in `/etc/openldap/slapd.d`{.filename} (recommended by the OpenLDAP documentation).
+Configuring the <span class="command"><strong>slapd</strong></span> servers can be complex. Securing the LDAP directory, especially if you are storing non-public data such as password databases, can also be a challenging task. In order to set up <span class="application">OpenLDAP</span>, you'll need to modify either the <code class="filename">/etc/openldap/slapd.conf</code> file (old method), or the <code class="filename">/etc/openldap/slapd.ldif</code> file and then use <span class="command"><strong>ldapadd</strong></span> to create the LDAP configuration database in <code class="filename">/etc/openldap/slapd.d</code> (recommended by the OpenLDAP documentation).
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
-The instructions above install an empty LDAP structure and a default `/etc/openldap/slapd.conf`{.filename} file, which are suitable for testing the build and other packages using LDAP. Do not use them on a production server.
-:::
+The instructions above install an empty LDAP structure and a default <code class="filename">/etc/openldap/slapd.conf</code> file, which are suitable for testing the build and other packages using LDAP. Do not use them on a production server.
+</div>
 
-Resources to assist you with topics such as choosing a directory configuration, backend and database definitions, access control settings, running as a user other than `root`{.systemitem} and setting a [**chroot**]{.command} environment include:
+Resources to assist you with topics such as choosing a directory configuration, backend and database definitions, access control settings, running as a user other than <code class="systemitem">root</code> and setting a <span class="command"><strong>chroot</strong></span> environment include:
 
-::: itemizedlist
--   The [slapd(8)](https://man.archlinux.org/man/slapd.8){.ulink} man page.
+<div class="itemizedlist">
+-   The <a class="ulink" href="https://man.archlinux.org/man/slapd.8">slapd(8)</a> man page.
 
--   The [slapd.conf(5)](https://man.archlinux.org/man/slapd.conf.5){.ulink} and [slapd-config(5)](https://man.archlinux.org/man/slapd-config.5){.ulink} man pages.
+-   The <a class="ulink" href="https://man.archlinux.org/man/slapd.conf.5">slapd.conf(5)</a> and <a class="ulink" href="https://man.archlinux.org/man/slapd-config.5">slapd-config(5)</a> man pages.
 
--   The [OpenLDAP 2.6 Administrator's Guide](https://www.openldap.org/doc/admin26/){.ulink} (also installed locally in `/usr/share/doc/openldap-2.6.13/guide/admin`{.filename}).
+-   The <a class="ulink" href="https://www.openldap.org/doc/admin26/">OpenLDAP 2.6 Administrator's Guide</a> (also installed locally in <code class="filename">/usr/share/doc/openldap-2.6.13/guide/admin</code>).
 
--   Documents located at [https://www.openldap.org/pub/](https://www.openldap.org/pub/){.ulink}.
-:::
-:::::
+-   Documents located at <a class="ulink" href="https://www.openldap.org/pub/">https://www.openldap.org/pub/</a>.
+</div>
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#openldap-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-To automate the startup of the LDAP server at system bootup, install the [`slapd.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package using the following command:
+To automate the startup of the LDAP server at system bootup, install the <span class="phrase"><code class="filename">slapd.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package using the following command:
 
-``` root
+```bash
 make install-slapd
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-You'll need to modify [`/etc/default/slapd`{.filename}]{.phrase} to include the parameters needed for your specific configuration. See the [**slapd**]{.command} man page for parameter information.
-:::
-::::
+You'll need to modify <span class="phrase"><code class="filename">/etc/default/slapd</code></span> to include the parameters needed for your specific configuration. See the <span class="command"><strong>slapd</strong></span> man page for parameter information.
+</div>
+</div>
 
-::: {.sect3 lang="en"}
-### Testing the Configuration {#testing-the-configuration .sect3}
+<div class="sect3" lang="en">
+### Testing the Configuration {#testing-the-configuration}
 
-Start the LDAP server using [systemctl:]{.phrase}
+Start the LDAP server using <span class="phrase">systemctl:</span>
 
-``` root
+```bash
 systemctl start slapd
 ```
 
 Verify access to the LDAP server with the following command:
 
-``` userinput
+```bash
 ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts
 ```
 
 The expected result is:
 
-``` screen
+```console
 # extended LDIF
 #
 # LDAPv3
@@ -301,71 +301,71 @@ result: 0 Success
 # numResponses: 2
 # numEntries: 1
 ```
-:::
-:::::::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ldapadd, ldapcompare, ldapdelete, ldapexop, ldapmodify, ldapmodrdn, ldappasswd, ldapsearch, ldapurl, ldapvc, ldapwhoami, slapacl, slapadd, slapauth, slapcat, slapd, slapdn, slapindex, slapmodify, slappasswd, slapschema, and slaptest]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ldapadd, ldapcompare, ldapdelete, ldapexop, ldapmodify, ldapmodrdn, ldappasswd, ldapsearch, ldapurl, ldapvc, ldapwhoami, slapacl, slapadd, slapauth, slapcat, slapd, slapdn, slapindex, slapmodify, slappasswd, slapschema, and slaptest</span>
+</div>
 
-::: seg
-**Installed Libraries:** [liblber.so, libldap.so, and several under /usr/lib/openldap]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">liblber.so, libldap.so, and several under /usr/lib/openldap</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/openldap, /{usr,var}/lib/openldap, and /usr/share/doc/openldap-2.6.13]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/openldap, /{usr,var}/lib/openldap, and /usr/share/doc/openldap-2.6.13</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#ldapadd}[[**ldapadd**]{.command}]{.term}           opens a connection to an LDAP server, binds and adds entries
-  []{#ldapcompare}[[**ldapcompare**]{.command}]{.term}   opens a connection to an LDAP server, binds and performs a compare using specified parameters
-  []{#ldapdelete}[[**ldapdelete**]{.command}]{.term}     opens a connection to an LDAP server, binds and deletes one or more entries
-  []{#ldapexop}[[**ldapexop**]{.command}]{.term}         issues the LDAP extended operation specified by oid or one of the special keywords whoami, cancel, or refresh
-  []{#ldapmodify}[[**ldapmodify**]{.command}]{.term}     opens a connection to an LDAP server, binds and modifies entries
-  []{#ldapmodrdn}[[**ldapmodrdn**]{.command}]{.term}     opens a connection to an LDAP server, binds and modifies the RDN of entries
-  []{#ldappasswd}[[**ldappasswd**]{.command}]{.term}     is a tool used to set the password of an LDAP user
-  []{#ldapsearch}[[**ldapsearch**]{.command}]{.term}     opens a connection to an LDAP server, binds and performs a search using specified parameters
-  []{#ldapurl}[[**ldapurl**]{.command}]{.term}           is a command that allows to either compose or decompose LDAP URIs
-  []{#ldapvc}[[**ldapvc**]{.command}]{.term}             verifies LDAP credentials
-  []{#ldapwhoami}[[**ldapwhoami**]{.command}]{.term}     opens a connection to an LDAP server, binds and displays whoami information
-  []{#slapacl}[[**slapacl**]{.command}]{.term}           is used to check the behavior of slapd by verifying access to directory data according to the access control list directives defined in its configuration
-  []{#slapadd}[[**slapadd**]{.command}]{.term}           is used to add entries specified in LDAP Directory Interchange Format (LDIF) to an LDAP database
-  []{#slapauth}[[**slapauth**]{.command}]{.term}         is used to check the behavior of the slapd in mapping identities for authentication and authorization purposes, as specified in slapd.conf
-  []{#slapcat}[[**slapcat**]{.command}]{.term}           is used to generate an LDAP LDIF output based upon the contents of a slapd database
-  []{#slapd}[[**slapd**]{.command}]{.term}               is the standalone LDAP server
-  []{#slapdn}[[**slapdn**]{.command}]{.term}             checks a list of string-represented DNs based on schema syntax
-  []{#slapindex}[[**slapindex**]{.command}]{.term}       is used to regenerate slapd indexes based upon the current contents of a database
-  []{#slapmodify}[[**slapmodify**]{.command}]{.term}     modifies entries in a slapd database
-  []{#slappasswd}[[**slappasswd**]{.command}]{.term}     is an [OpenLDAP]{.application} password utility
-  []{#slapschema}[[**slapschema**]{.command}]{.term}     is used to check schema compliance of the contents of a slapd database
-  []{#slaptest}[[**slaptest**]{.command}]{.term}         checks the sanity of the `slapd.conf`{.filename} file
-  []{#liblber}[`liblber.so`{.filename}]{.term}           is a set of Lightweight Basic Encoding Rules routines. These routines are used by the LDAP library routines to encode and decode LDAP protocol elements using the (slightly simplified) Basic Encoding Rules defined by LDAP. They are not normally used directly by an LDAP application program except in the handling of controls and extended operations
-  []{#libldap}[`libldap.so`{.filename}]{.term}           supports the LDAP programs and provide functionality for other programs interacting with LDAP
+  <a id="ldapadd"></a><span class="command"><span class="term"><strong>ldapadd</strong></span></span>           opens a connection to an LDAP server, binds and adds entries
+  <a id="ldapcompare"></a><span class="command"><span class="term"><strong>ldapcompare</strong></span></span>   opens a connection to an LDAP server, binds and performs a compare using specified parameters
+  <a id="ldapdelete"></a><span class="command"><span class="term"><strong>ldapdelete</strong></span></span>     opens a connection to an LDAP server, binds and deletes one or more entries
+  <a id="ldapexop"></a><span class="command"><span class="term"><strong>ldapexop</strong></span></span>         issues the LDAP extended operation specified by oid or one of the special keywords whoami, cancel, or refresh
+  <a id="ldapmodify"></a><span class="command"><span class="term"><strong>ldapmodify</strong></span></span>     opens a connection to an LDAP server, binds and modifies entries
+  <a id="ldapmodrdn"></a><span class="command"><span class="term"><strong>ldapmodrdn</strong></span></span>     opens a connection to an LDAP server, binds and modifies the RDN of entries
+  <a id="ldappasswd"></a><span class="command"><span class="term"><strong>ldappasswd</strong></span></span>     is a tool used to set the password of an LDAP user
+  <a id="ldapsearch"></a><span class="command"><span class="term"><strong>ldapsearch</strong></span></span>     opens a connection to an LDAP server, binds and performs a search using specified parameters
+  <a id="ldapurl"></a><span class="command"><span class="term"><strong>ldapurl</strong></span></span>           is a command that allows to either compose or decompose LDAP URIs
+  <a id="ldapvc"></a><span class="command"><span class="term"><strong>ldapvc</strong></span></span>             verifies LDAP credentials
+  <a id="ldapwhoami"></a><span class="command"><span class="term"><strong>ldapwhoami</strong></span></span>     opens a connection to an LDAP server, binds and displays whoami information
+  <a id="slapacl"></a><span class="command"><span class="term"><strong>slapacl</strong></span></span>           is used to check the behavior of slapd by verifying access to directory data according to the access control list directives defined in its configuration
+  <a id="slapadd"></a><span class="command"><span class="term"><strong>slapadd</strong></span></span>           is used to add entries specified in LDAP Directory Interchange Format (LDIF) to an LDAP database
+  <a id="slapauth"></a><span class="command"><span class="term"><strong>slapauth</strong></span></span>         is used to check the behavior of the slapd in mapping identities for authentication and authorization purposes, as specified in slapd.conf
+  <a id="slapcat"></a><span class="command"><span class="term"><strong>slapcat</strong></span></span>           is used to generate an LDAP LDIF output based upon the contents of a slapd database
+  <a id="slapd"></a><span class="command"><span class="term"><strong>slapd</strong></span></span>               is the standalone LDAP server
+  <a id="slapdn"></a><span class="command"><span class="term"><strong>slapdn</strong></span></span>             checks a list of string-represented DNs based on schema syntax
+  <a id="slapindex"></a><span class="command"><span class="term"><strong>slapindex</strong></span></span>       is used to regenerate slapd indexes based upon the current contents of a database
+  <a id="slapmodify"></a><span class="command"><span class="term"><strong>slapmodify</strong></span></span>     modifies entries in a slapd database
+  <a id="slappasswd"></a><span class="command"><span class="term"><strong>slappasswd</strong></span></span>     is an <span class="application">OpenLDAP</span> password utility
+  <a id="slapschema"></a><span class="command"><span class="term"><strong>slapschema</strong></span></span>     is used to check schema compliance of the contents of a slapd database
+  <a id="slaptest"></a><span class="command"><span class="term"><strong>slaptest</strong></span></span>         checks the sanity of the <code class="filename">slapd.conf</code> file
+  <a id="liblber"></a><span class="term"><code class="filename">liblber.so</code></span>           is a set of Lightweight Basic Encoding Rules routines. These routines are used by the LDAP library routines to encode and decode LDAP protocol elements using the (slightly simplified) Basic Encoding Rules defined by LDAP. They are not normally used directly by an LDAP application program except in the handling of controls and extended operations
+  <a id="libldap"></a><span class="term"><code class="filename">libldap.so</code></span>           supports the LDAP programs and provide functionality for other programs interacting with LDAP
   ------------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](other.md "Other Server Software"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](other.md "Other Server Software")
 
     Other Server Software
 
--   [Next](../x/x.md "Graphical Components"){accesskey="n"}
+-   [Next](../x/x.md "Graphical Components")
 
     Graphical Components
 
--   [Up](other.md "Chapter 23. Other Server Software"){accesskey="u"}
+-   [Up](other.md "Chapter 23. Other Server Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

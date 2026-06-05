@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](gst-plugins-rs.md "gst-plugins-rs-1.28.3"){accesskey="p"}
+-   [Prev](gst-plugins-rs.md "gst-plugins-rs-1.28.3")
 
     gst-plugins-rs-1.28.3
 
--   [Next](id3lib.md "id3lib-3.8.3"){accesskey="n"}
+-   [Next](id3lib.md "id3lib-3.8.3")
 
     id3lib-3.8.3
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gst10-libav}gst-libav-1.28.3 {#gst-libav-1.28.3 .sect1}
+# gst-libav-1.28.3 {#gst-libav-1.28.3}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GStreamer Libav {#introduction-to-gstreamer-libav .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GStreamer Libav {#introduction-to-gstreamer-libav}
 
-The [GStreamer Libav]{.application} package contains [GStreamer]{.application} plugins for [Libav]{.application} (a fork of [FFmpeg]{.application}).
+The <span class="application">GStreamer Libav</span> package contains <span class="application">GStreamer</span> plugins for <span class="application">Libav</span> (a fork of <span class="application">FFmpeg</span>).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.3.tar.xz](https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.3.tar.xz">https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.3.tar.xz</a>
 
 -   Download MD5 sum: 08dd58cc1721c174958a34d3083017f6
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### GStreamer Libav Dependencies
 
 #### Required
 
-[FFmpeg-8.1.1](ffmpeg.md "FFmpeg-8.1.1"){.xref} and [gst-plugins-base-1.28.3](gst10-plugins-base.md "gst-plugins-base-1.28.3"){.xref}
+<a class="xref" href="ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a> and <a class="xref" href="gst10-plugins-base.md" title="gst-plugins-base-1.28.3">gst-plugins-base-1.28.3</a>
 
 #### Recommended
 
-[yasm-1.3.0](../general/yasm.md "yasm-1.3.0"){.xref}
+<a class="xref" href="../general/yasm.md" title="yasm-1.3.0">yasm-1.3.0</a>
 
 #### Optional
 
-[hotdoc](https://pypi.org/project/hotdoc/){.ulink}
-:::::
+<a class="ulink" href="https://pypi.org/project/hotdoc/">hotdoc</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GStreamer Libav {#installation-of-gstreamer-libav .sect2}
+<div class="installation" lang="en">
+## Installation of GStreamer Libav {#installation-of-gstreamer-libav}
 
-Install [GStreamer Libav]{.application} by running the following commands:
+Install <span class="application">GStreamer Libav</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -76,52 +76,52 @@ meson setup ..            \
 ninja
 ```
 
-To run the tests, issue: [**ninja test**]{.command}.
+To run the tests, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libgstlibav.so in /usr/lib/gstreamer-1.0]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgstlibav.so in /usr/lib/gstreamer-1.0</span>
+</div>
 
-::: seg
-**Installed Directory:** [None]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gst-plugins-rs.md "gst-plugins-rs-1.28.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gst-plugins-rs.md "gst-plugins-rs-1.28.3")
 
     gst-plugins-rs-1.28.3
 
--   [Next](id3lib.md "id3lib-3.8.3"){accesskey="n"}
+-   [Next](id3lib.md "id3lib-3.8.3")
 
     id3lib-3.8.3
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

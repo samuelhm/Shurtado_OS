@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part II. Post LFS Configuration and Extra Software
 
--   [Prev](efibootmgr.md "efibootmgr-18"){accesskey="p"}
+-   [Prev](efibootmgr.md "efibootmgr-18")
 
     efibootmgr-18
 
--   [Next](bluefish.md "Bluefish-2.4.1"){accesskey="n"}
+-   [Next](bluefish.md "Bluefish-2.4.1")
 
     Bluefish-2.4.1
 
--   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software"){accesskey="u"}
+-   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#postlfs-editors}Text Editors {#text-editors .chapter}
+# Text Editors {#text-editors}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter is referenced in the LFS book for those wishing to use other editors on their LFS system. You're also shown how some LFS installed programs benefit from being recompiled after GUI libraries have been installed.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Bluefish-2.4.1](bluefish.md)
@@ -32,19 +32,19 @@ This chapter is referenced in the LFS book for those wishing to use other editor
 -   [mousepad-0.7.0](mousepad.md)
 -   [Nano-9.0](nano.md)
 -   [Vim-9.2.0567](vim.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](efibootmgr.md "efibootmgr-18"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](efibootmgr.md "efibootmgr-18")
 
     efibootmgr-18
 
--   [Next](bluefish.md "Bluefish-2.4.1"){accesskey="n"}
+-   [Next](bluefish.md "Bluefish-2.4.1")
 
     Bluefish-2.4.1
 
--   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software"){accesskey="u"}
+-   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

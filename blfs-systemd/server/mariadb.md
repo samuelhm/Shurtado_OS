@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 22. Databases
 
--   [Prev](lmdb.md "lmdb-0.9.35"){accesskey="p"}
+-   [Prev](lmdb.md "lmdb-0.9.35")
 
     lmdb-0.9.35
 
--   [Next](postgresql.md "PostgreSQL-18.4"){accesskey="n"}
+-   [Next](postgresql.md "PostgreSQL-18.4")
 
     PostgreSQL-18.4
 
--   [Up](databases.md "Chapter 22. Databases"){accesskey="u"}
+-   [Up](databases.md "Chapter 22. Databases")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#mariadb}MariaDB-12.3.2 {#mariadb-12.3.2 .sect1}
+# MariaDB-12.3.2 {#mariadb-12.3.2}
 
-:::::::::::::::::::::::::: {.sect1 lang="en"}
-:::::::: {.package lang="en"}
-## Introduction to MariaDB {#introduction-to-mariadb .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to MariaDB {#introduction-to-mariadb}
 
-[MariaDB]{.application} is a community-developed fork and a drop-in replacement for the [MySQL]{.application} relational database management system.
+<span class="application">MariaDB</span> is a community-developed fork and a drop-in replacement for the <span class="application">MySQL</span> relational database management system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.mariadb.org/interstitial/mariadb-12.3.2/source/mariadb-12.3.2.tar.gz](https://downloads.mariadb.org/interstitial/mariadb-12.3.2/source/mariadb-12.3.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.mariadb.org/interstitial/mariadb-12.3.2/source/mariadb-12.3.2.tar.gz">https://downloads.mariadb.org/interstitial/mariadb-12.3.2/source/mariadb-12.3.2.tar.gz</a>
 
 -   Download MD5 sum: e6ec06ab51a7afa581562499616624a4
 
@@ -44,80 +44,80 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.5 GB (832 MB installed)
 
 -   Estimated build time: 4.3 SBU (with parallelism=8, add 2.6 SBU for tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/mariadb-12.3.2-openssl4_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/mariadb-12.3.2-openssl4_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/mariadb-12.3.2-openssl4_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/mariadb-12.3.2-openssl4_fixes-1.patch</a>
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The installed size of MariaDB is 778 MB, but this can be reduced by about 270 MB, if desired, by removing the `/usr/share/mariadb/test`{.filename} directory after installation.
-:::
+The installed size of MariaDB is 778 MB, but this can be reduced by about 270 MB, if desired, by removing the <code class="filename">/usr/share/mariadb/test</code> directory after installation.
+</div>
 
-::: {.admon .caution}
+<div class="admon caution">
 ![\[Caution\]](../images/caution.png)
 
 ### Caution
 
-If you are upgrading an existing database, please see the [MariaDB Release Notes](https://mariadb.com/docs/release-notes/community-server/12.3/mariadb-12.3-changes-and-improvements){.ulink} for additional information, and use the instructions after the Configuration Information section to ensure a safe upgrade.
-:::
+If you are upgrading an existing database, please see the <a class="ulink" href="https://mariadb.com/docs/release-notes/community-server/12.3/mariadb-12.3-changes-and-improvements">MariaDB Release Notes</a> for additional information, and use the instructions after the Configuration Information section to ensure a safe upgrade.
+</div>
 
 ### MariaDB Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
 
 #### Recommended
 
-[libevent-2.1.12](../basicnet/libevent.md "libevent-2.1.12"){.xref}
+<a class="xref" href="../basicnet/libevent.md" title="libevent-2.1.12">libevent-2.1.12</a>
 
 #### Optional
 
-[Boost-1.91.0-1](../general/boost.md "boost-1.91.0-1"){.xref}, [fmt-12.1.0](../general/fmt.md "fmt-12.1.0"){.xref}, [git-2.54.0](../general/git.md "Git-2.54.0"){.xref}, [Java-21.0.10](../general/java.md "Java-21.0.10"){.xref}, [libaio-0.3.113](../general/libaio.md "libaio-0.3.113"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [LZO-2.10](../general/lzo.md "LZO-2.10"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, [Ruby-4.0.5](../general/ruby.md "Ruby-4.0.5"){.xref}, [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref}, [unixODBC-2.3.14](../general/unixodbc.md "unixODBC-2.3.14"){.xref}, [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}, [Groonga](https://groonga.org/){.ulink}, [KyTea](https://www.phontron.com/kytea/){.ulink}, [Judy](https://sourceforge.net/projects/judy/){.ulink}, [libstemmer](https://snowballstem.org/){.ulink}, [MeCab](https://taku910.github.io/mecab){.ulink}, [MessagePack](https://msgpack.org/){.ulink}, [mruby](https://www.mruby.org/){.ulink}, [MyRocks](https://mariadb.com/kb/en/myrocks/){.ulink}, [Snappy](https://github.com/google/snappy){.ulink}, and [ZeroMQ](https://zeromq.org/){.ulink}
-::::::::
+<a class="xref" href="../general/boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a>, <a class="xref" href="../general/fmt.md" title="fmt-12.1.0">fmt-12.1.0</a>, <a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a>, <a class="xref" href="../general/java.md" title="Java-21.0.10">Java-21.0.10</a>, <a class="xref" href="../general/libaio.md" title="libaio-0.3.113">libaio-0.3.113</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="../general/lzo.md" title="LZO-2.10">LZO-2.10</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, <a class="xref" href="../general/ruby.md" title="Ruby-4.0.5">Ruby-4.0.5</a>, <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a>, <a class="xref" href="../general/unixodbc.md" title="unixODBC-2.3.14">unixODBC-2.3.14</a>, <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>, <a class="ulink" href="https://groonga.org/">Groonga</a>, <a class="ulink" href="https://www.phontron.com/kytea/">KyTea</a>, <a class="ulink" href="https://sourceforge.net/projects/judy/">Judy</a>, <a class="ulink" href="https://snowballstem.org/">libstemmer</a>, <a class="ulink" href="https://taku910.github.io/mecab">MeCab</a>, <a class="ulink" href="https://msgpack.org/">MessagePack</a>, <a class="ulink" href="https://www.mruby.org/">mruby</a>, <a class="ulink" href="https://mariadb.com/kb/en/myrocks/">MyRocks</a>, <a class="ulink" href="https://github.com/google/snappy">Snappy</a>, and <a class="ulink" href="https://zeromq.org/">ZeroMQ</a>
+</div>
 
-::::: {.installation lang="en"}
-## Installation of MariaDB {#installation-of-mariadb .sect2}
+<div class="installation" lang="en">
+## Installation of MariaDB {#installation-of-mariadb}
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
 MariaDB and MySQL cannot be installed on the same system without extensive changes to the build configuration of one of the two applications.
-:::
+</div>
 
-::: {.admon .caution}
+<div class="admon caution">
 ![\[Caution\]](../images/caution.png)
 
 ### Caution
 
 If you are upgrading MariaDB from 11.x to 12.x, please pay special attention to the upgrade notes later in this page. Users of existing MariaDB installations may want to consider staying on the 11.8.x LTS branch instead, especially if they rely on the Galera functionality which was removed from MariaDB-12.x.
-:::
+</div>
 
-For security reasons, running the server as an unprivileged user and group is strongly encouraged. Issue the following (as `root`{.systemitem}) to create the user and group:
+For security reasons, running the server as an unprivileged user and group is strongly encouraged. Issue the following (as <code class="systemitem">root</code>) to create the user and group:
 
-``` root
+```bash
 groupadd -g 40 mariadb &&
 useradd -c "MariaDB Server" -d /srv/mariadb -g mariadb -s /bin/false -u 40 mariadb
 ```
 
 Fix runtime issues with OpenSSL-4.0 and later:
 
-``` userinput
+```bash
 patch -Np1 -i ../mariadb-12.3.2-openssl4_fixes-1.patch
 ```
 
-Install [MariaDB]{.application} by running the following commands:
+Install <span class="application">MariaDB</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -147,52 +147,52 @@ cmake -D CMAKE_BUILD_TYPE=Release                       \
 make
 ```
 
-To test the results, issue: [**make test**]{.command}. Two tests, my_tzinfo and test-connect, are known to fail.
+To test the results, issue: <span class="command"><strong>make test</strong></span>. Two tests, my_tzinfo and test-connect, are known to fail.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::::
+</div>
 
-:::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D WITH_EMBEDDED_SERVER=ON`*: This switch enables compiling the embedded server library needed by certain applications, such as [Amarok]{.application}.
+*`-D WITH_EMBEDDED_SERVER=ON`*: This switch enables compiling the embedded server library needed by certain applications, such as <span class="application">Amarok</span>.
 
 *`-D WITH_EXTRA_CHARSETS=complex`*: This switch enables support for the complex character sets.
 
 *`-D SKIP_TESTS=ON`*: This switch disables tests for MariaDB Connector/C which are not supported without additional setup.
 
-`-D WITHOUT_SERVER=ON`{.option}: Use this :wqswitch if you don't want the server and would like to build the client only.
+<code class="option">-D WITHOUT_SERVER=ON</code>: Use this :wqswitch if you don't want the server and would like to build the client only.
 
 *`-W no-dev`*: This switch turns off some warnings that are only useful for developers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-There are numerous options available to [**cmake**]{.command}. Check the output of the [**cmake . -LH**]{.command} for additional customization options.
-:::
-::::
+There are numerous options available to <span class="command"><strong>cmake</strong></span>. Check the output of the <span class="command"><strong>cmake . -LH</strong></span> for additional customization options.
+</div>
+</div>
 
-::::::: {.configuration lang="en"}
-## Configuring MariaDB {#configuring-mariadb .sect2}
+<div class="configuration" lang="en">
+## Configuring MariaDB {#configuring-mariadb}
 
-::: {.sect3 lang="en"}
-### []{#mariadb-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/my.cnf`{.filename} and `~/.my.cnf`{.filename}
-:::
+<code class="filename">/etc/my.cnf</code> and <code class="filename">~/.my.cnf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Create a basic `/etc/my.cnf`{.filename} file using the following command as the `root`{.systemitem} user:
+Create a basic <code class="filename">/etc/my.cnf</code> file using the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/my.cnf << "EOF"
 # Begin /etc/my.cnf
 
@@ -265,153 +265,153 @@ interactive-timeout
 EOF
 ```
 
-You can now install a database and change the ownership to the unprivileged user and group (perform as the `root`{.systemitem} user):
+You can now install a database and change the ownership to the unprivileged user and group (perform as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 mariadb-install-db --basedir=/usr --datadir=/srv/mariadb --user=mariadb &&
 chown -R mariadb:mariadb /srv/mariadb
 ```
 
-Further configuration requires that the [MariaDB]{.application} server is running. Start the server using the following commands as the `root`{.systemitem} user:
+Further configuration requires that the <span class="application">MariaDB</span> server is running. Start the server using the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m755 -o mariadb -g mariadb -d /run/mariadb &&
 mariadbd-safe --user=mariadb 2>&1 >/dev/null &
 ```
 
-A default installation does not set up a password for the administrator, so use the following command as the `root`{.systemitem} user to set one.
+A default installation does not set up a password for the administrator, so use the following command as the <code class="systemitem">root</code> user to set one.
 
-``` root
+```bash
 mariadb-admin -u root password
 ```
 
-Configuration of the server is now finished. Shut the server down using the following command as the `root`{.systemitem} user:
+Configuration of the server is now finished. Shut the server down using the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 mariadb-admin -p shutdown
 ```
-:::
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#mariadb-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-Install the [`mariadb.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package as the `root`{.systemitem} user to start the [MariaDB]{.application} server during system boot-up.
+Install the <span class="phrase"><code class="filename">mariadb.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package as the <code class="systemitem">root</code> user to start the <span class="application">MariaDB</span> server during system boot-up.
 
-``` root
+```bash
 make install-mariadb
 ```
 
-::: {.admon .caution}
+<div class="admon caution">
 ![\[Caution\]](../images/caution.png)
 
 ### Caution
 
-Upgrading MariaDB from version 11 to 12 requires a full backup, a clean shutdown, uninstalling the old binaries, installing the version 12 binaries, restarting the server, and running the [**mariadb-upgrade**]{.command} command to update system tables. Skipping this backup can result in unrecoverable data.
-:::
-::::
-:::::::
+Upgrading MariaDB from version 11 to 12 requires a full backup, a clean shutdown, uninstalling the old binaries, installing the version 12 binaries, restarting the server, and running the <span class="command"><strong>mariadb-upgrade</strong></span> command to update system tables. Skipping this backup can result in unrecoverable data.
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [aria_chk, aria_dump_log, aria_ftdump, aria_pack, aria_read_log, aria_s3_copy, galera_new_cluster, galera_recovery, innochecksum, mariabackup, mariadb, mariadbd, mariadb-access, mariadb-admin, mariadb-backup, mariadb-binlog, mariadb-check, mariadb-client-test, mariadb-client-test-embedded, mariadb-conv, mariadb-convert-table-format, mariadb-find-rows, mariadbd-multi, mariadbd-safe, mariadbd-safe-helper, mariadb-dump, mariadb-dumpslow, mariadb-embedded, mariadb-fix-extensions, mariadb-hotcopy, mariadb-import, mariadb-install-db, mariadb-ldb, mariadb-plugin, mariadb-secure-installation, mariadb-setpermission, mariadb-service-convert, mariadb-show, mariadb-slap, mariadb-test, mariadb-test-embedded, mariadb-tzinfo-to-sql, mariadb-upgrade, mariadb-waitpid, mariadb_config, mbstream, msql2mysql, my_print_defaults, myisamchk, myisam_ftdump, myisamlog, myisampack, mysql_config, mytop, perror, replace, resolve_stack_dump, resolveip, sst_dump, wsrep_sst_common, wsrep_sst_mariabackup, wsrep_sst_mysqldump, and wsrep_sst_rsync]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">aria_chk, aria_dump_log, aria_ftdump, aria_pack, aria_read_log, aria_s3_copy, galera_new_cluster, galera_recovery, innochecksum, mariabackup, mariadb, mariadbd, mariadb-access, mariadb-admin, mariadb-backup, mariadb-binlog, mariadb-check, mariadb-client-test, mariadb-client-test-embedded, mariadb-conv, mariadb-convert-table-format, mariadb-find-rows, mariadbd-multi, mariadbd-safe, mariadbd-safe-helper, mariadb-dump, mariadb-dumpslow, mariadb-embedded, mariadb-fix-extensions, mariadb-hotcopy, mariadb-import, mariadb-install-db, mariadb-ldb, mariadb-plugin, mariadb-secure-installation, mariadb-setpermission, mariadb-service-convert, mariadb-show, mariadb-slap, mariadb-test, mariadb-test-embedded, mariadb-tzinfo-to-sql, mariadb-upgrade, mariadb-waitpid, mariadb_config, mbstream, msql2mysql, my_print_defaults, myisamchk, myisam_ftdump, myisamlog, myisampack, mysql_config, mytop, perror, replace, resolve_stack_dump, resolveip, sst_dump, wsrep_sst_common, wsrep_sst_mariabackup, wsrep_sst_mysqldump, and wsrep_sst_rsync</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libmariadb.a, libmariadb.so, libmariadbclient.a, libmariadbd.a, libmariadbd.so, libmariadb.so.3, libmysqlclient.a, libmysqlclient.so, libmysqlclient_r.a, libmysqlclient_r.so, libmysqld.a, libmysqld.so, libmysqlservices.a, and about 70 modules under /usr/lib/mysql/plugin/]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libmariadb.a, libmariadb.so, libmariadbclient.a, libmariadbd.a, libmariadbd.so, libmariadb.so.3, libmysqlclient.a, libmysqlclient.so, libmysqlclient_r.a, libmysqlclient_r.so, libmysqld.a, libmysqld.so, libmysqlservices.a, and about 70 modules under /usr/lib/mysql/plugin/</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{include,lib,share}/mysql, /usr/share/groonga{,-normalizer-mysql}, and /usr/share/doc/mariadb-12.3.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{include,lib,share}/mysql, /usr/share/groonga{,-normalizer-mysql}, and /usr/share/doc/mariadb-12.3.2</span>
+</div>
+</div>
+</div>
 
 ### Short Descriptions
 
 There are several symlinks from mysql\* to their mariadb counterparts. These are maintained for compatibility.
 
-The [Perl]{.application} DBI modules must be installed for some of the [MariaDB]{.application} support programs to function properly.
+The <span class="application">Perl</span> DBI modules must be installed for some of the <span class="application">MariaDB</span> support programs to function properly.
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#aria_chk-mariadb}[[**aria_chk**]{.command}]{.term}                                           is used to check, repair, optimize, sort and get information about Aria tables
-  []{#aria_dump_log-mariadb}[[**aria_dump_log**]{.command}]{.term}                                 is a tool to dump the contents of Aria log pages
-  []{#aria_ftdump-mariadb}[[**aria_ftdump**]{.command}]{.term}                                     displays full-text index information
-  []{#aria_pack-mariadb}[[**aria_pack**]{.command}]{.term}                                         is a tool to generate compressed, read-only Aria tables
-  []{#aria_read_log-mariadb}[[**aria_read_log**]{.command}]{.term}                                 displays Aria log file contents
-  []{#aria_s3_copy-mariadb}[[**aria_s3_copy**]{.command}]{.term}                                   copies an aria table to and from AWS S3
-  []{#galera_new_cluster-mariadb}[[**galera_new_cluster**]{.command}]{.term}                       bootstraps a new Galera cluster
-  []{#galera_recovery-mariadb}[[**galera_recovery**]{.command}]{.term}                             recovers data from a Galera cluster
-  []{#innochecksum-mariadb}[[**innochecksum**]{.command}]{.term}                                   prints checksums for InnoDB files
-  []{#mariabackup-mariadb}[[**mariabackup**]{.command}]{.term}                                     is an open source backup tool for InnoDB and XtraDB
-  []{#mariadb-mariadb}[[**mariadb**]{.command}]{.term}                                             is a simple SQL shell with input line editing capabilities
-  []{#mariadbd-mariadb}[[**mariadbd**]{.command}]{.term}                                           is the MySQL server daemon
-  []{#mariadb-access-mariadb}[[**mariadb-access**]{.command}]{.term}                               checks the access privileges for a host name, user name, and database combination
-  []{#mariadb-admin-mariadb}[[**mariadb-admin**]{.command}]{.term}                                 is a client for performing administrative operations
-  []{#mariadb-binlog-mariadb}[[**mariadb-binlog**]{.command}]{.term}                               reads binary log files
-  []{#mariadb-check-mariadb}[[**mariadb-check**]{.command}]{.term}                                 performs table maintenance: It checks, repairs, optimizes, or analyzes tables
-  []{#mariadb-client-test-mariadb}[[**mariadb-client-test**]{.command}]{.term}                     is used for testing aspects of the MySQL client API that cannot be tested using mariadb-test and its test language
-  []{#mariadb-client-test-embedded-mariadb}[[**mariadb-client-test-embedded**]{.command}]{.term}   is a tool to test the client API for the embedded server
-  []{#mariadb-conv-mariadb}[[**mariadb-conv**]{.command}]{.term}                                   converts character sets for use with MariaDB
-  []{#mariadb-convert-table-format-mariadb}[[**mariadb-convert-table-format**]{.command}]{.term}   converts the tables in a database to use a particular storage engine
-  []{#mariadbd-multi-mariadb}[[**mariadbd-multi**]{.command}]{.term}                               is designed to manage several mariadb processes that listen for connections on different Unix socket files and TCP/IP ports
-  []{#mariadbd-safe-mariadb}[[**mariadbd-safe**]{.command}]{.term}                                 is the recommended way to start a mariadb server on Unix and NetWare
-  []{#mariadb-dump-mariadb}[[**mariadb-dump**]{.command}]{.term}                                   is a backup program
-  []{#mariadb-dumpslow-mariadb}[[**mariadb-dumpslow**]{.command}]{.term}                           parses MySQL slow query log files and prints a summary of their contents
-  []{#mariadb-embedded-mariadb}[[**mariadb-embedded**]{.command}]{.term}                           is a MySQL client statically linked to libmariadbd
-  []{#mariadb-find-rows-mariadb}[[**mariadb-find-rows**]{.command}]{.term}                         reads files containing SQL statements and extracts statements that match a given regular expression or that contain USE db_name or SET statements
-  []{#mariadb-fix-extensions-mariadb}[[**mariadb-fix-extensions**]{.command}]{.term}               converts the extensions for MyISAM (or ISAM) table files to their canonical forms
-  []{#mariadb-hotcopy-mariadb}[[**mariadb-hotcopy**]{.command}]{.term}                             locks the table, flushes the table and then performs a copy of the database
-  []{#mariadb-import-mariadb}[[**mariadb-import**]{.command}]{.term}                               reads a range of data formats, and inserts the data into a database
-  []{#mariadb-install-db-mariadb}[[**mariadb-install-db**]{.command}]{.term}                       initializes the MySQL data directory and creates the system tables that it contains, if they do not exist
-  []{#mariadb-ldb-mariadb}[[**mariadb-ldb**]{.command}]{.term}                                     is the RocksDB tool
-  []{#mariadb-plugin-mariadb}[[**mariadb-plugin**]{.command}]{.term}                               is a utility that enables MySQL administrators to manage which plugins a MySQL server loads
-  []{#mariadb-secure-installation-mariadb}[[**mariadb-secure-installation**]{.command}]{.term}     is a tool to improve MySQL installation security
-  []{#mariadb-service-convert-mariadb}[[**mariadb-service-convert**]{.command}]{.term}             generates a systemd unit based on the current mariadb settings
-  []{#mariadb-setpermission-mariadb}[[**mariadb-setpermission**]{.command}]{.term}                 sets permissions in the MySQL grant tables
-  []{#mariadb-show-mariadb}[[**mariadb-show**]{.command}]{.term}                                   shows the structure of a MariaDB database
-  []{#mariadb-slap-mariadb}[[**mariadb-slap**]{.command}]{.term}                                   is a diagnostic program designed to emulate client load for a MySQL server and to report the timing of each stage
-  []{#mariadb-test-mariadb}[[**mariadb-test**]{.command}]{.term}                                   runs a test case against a MySQL server and optionally compares the output with a result file
-  []{#mariadb-test-embedded-mariadb}[[**mariadb-test-embedded**]{.command}]{.term}                 is similar to the [**mariadb-test**]{.command} command but is built with support for the libmariadbd embedded server
-  []{#mariadb-tzinfo-to-sql-mariadb}[[**mariadb-tzinfo-to-sql**]{.command}]{.term}                 loads the time zone tables in the mariadb database
-  []{#mariadb-upgrade-mariadb}[[**mariadb-upgrade**]{.command}]{.term}                             examines all tables in all databases for incompatibilities with the current version of MySQL Server
-  []{#mariadb-waitpid-mariadb}[[**mariadb-waitpid**]{.command}]{.term}                             signals a process to terminate and waits for the process to exit
-  []{#mariadb_config-mariadb}[[**mariadb_config**]{.command}]{.term}                               gets compiler flags for using the MariaDB Connector/C
-  []{#mbstream-mariadb}[[**mbstream**]{.command}]{.term}                                           is a utility for sending InnoDB and XTraDB backups over a stream
-  []{#msql2mysql-mariadb}[[**msql2mysql**]{.command}]{.term}                                       is a tool to convert mSQL programs for use with MySQL
-  []{#my_print_defaults-mariadb}[[**my_print_defaults**]{.command}]{.term}                         displays the options from option groups of option files
-  []{#myisam_ftdump-mariadb}[[**myisam_ftdump**]{.command}]{.term}                                 displays information about FULLTEXT indexes in MyISAM tables
-  []{#myisamchk-mariadb}[[**myisamchk**]{.command}]{.term}                                         gets information about your database tables or checks, repairs, or optimizes them
-  []{#myisamlog-mariadb}[[**myisamlog**]{.command}]{.term}                                         displays MyISAM log file contents
-  []{#myisampack-mariadb}[[**myisampack**]{.command}]{.term}                                       is a tool for compressing MyISAM tables
-  []{#mysql_config-mariadb}[[**mysql_config**]{.command}]{.term}                                   provides you with useful information for compiling your MySQL client and connecting it to MySQL
-  []{#mytop-mariadb}[[**mytop**]{.command}]{.term}                                                 is a console-based tool for monitoring the threads and overall performance of a MySQL server
-  []{#perror-mariadb}[[**perror**]{.command}]{.term}                                               is a utility that displays descriptions for system or storage engine error codes
-  []{#replace-mariadb}[[**replace**]{.command}]{.term}                                             is a MariaDB/MySQL extension to the SQL standard
-  []{#resolve_stack_dump-mariadb}[[**resolve_stack_dump**]{.command}]{.term}                       resolves a numeric stack dump to symbols
-  []{#resolveip-mariadb}[[**resolveip**]{.command}]{.term}                                         is a utility for resolving IP addresses to host names and vice versa
-  []{#sst_sump-mariadb}[[**sst_sump**]{.command}]{.term}                                           dumps the content of sst files (the format used by RocksDB)
+  <a id="aria_chk-mariadb"></a><span class="command"><span class="term"><strong>aria_chk</strong></span></span>                                           is used to check, repair, optimize, sort and get information about Aria tables
+  <a id="aria_dump_log-mariadb"></a><span class="command"><span class="term"><strong>aria_dump_log</strong></span></span>                                 is a tool to dump the contents of Aria log pages
+  <a id="aria_ftdump-mariadb"></a><span class="command"><span class="term"><strong>aria_ftdump</strong></span></span>                                     displays full-text index information
+  <a id="aria_pack-mariadb"></a><span class="command"><span class="term"><strong>aria_pack</strong></span></span>                                         is a tool to generate compressed, read-only Aria tables
+  <a id="aria_read_log-mariadb"></a><span class="command"><span class="term"><strong>aria_read_log</strong></span></span>                                 displays Aria log file contents
+  <a id="aria_s3_copy-mariadb"></a><span class="command"><span class="term"><strong>aria_s3_copy</strong></span></span>                                   copies an aria table to and from AWS S3
+  <a id="galera_new_cluster-mariadb"></a><span class="command"><span class="term"><strong>galera_new_cluster</strong></span></span>                       bootstraps a new Galera cluster
+  <a id="galera_recovery-mariadb"></a><span class="command"><span class="term"><strong>galera_recovery</strong></span></span>                             recovers data from a Galera cluster
+  <a id="innochecksum-mariadb"></a><span class="command"><span class="term"><strong>innochecksum</strong></span></span>                                   prints checksums for InnoDB files
+  <a id="mariabackup-mariadb"></a><span class="command"><span class="term"><strong>mariabackup</strong></span></span>                                     is an open source backup tool for InnoDB and XtraDB
+  <a id="mariadb-mariadb"></a><span class="command"><span class="term"><strong>mariadb</strong></span></span>                                             is a simple SQL shell with input line editing capabilities
+  <a id="mariadbd-mariadb"></a><span class="command"><span class="term"><strong>mariadbd</strong></span></span>                                           is the MySQL server daemon
+  <a id="mariadb-access-mariadb"></a><span class="command"><span class="term"><strong>mariadb-access</strong></span></span>                               checks the access privileges for a host name, user name, and database combination
+  <a id="mariadb-admin-mariadb"></a><span class="command"><span class="term"><strong>mariadb-admin</strong></span></span>                                 is a client for performing administrative operations
+  <a id="mariadb-binlog-mariadb"></a><span class="command"><span class="term"><strong>mariadb-binlog</strong></span></span>                               reads binary log files
+  <a id="mariadb-check-mariadb"></a><span class="command"><span class="term"><strong>mariadb-check</strong></span></span>                                 performs table maintenance: It checks, repairs, optimizes, or analyzes tables
+  <a id="mariadb-client-test-mariadb"></a><span class="command"><span class="term"><strong>mariadb-client-test</strong></span></span>                     is used for testing aspects of the MySQL client API that cannot be tested using mariadb-test and its test language
+  <a id="mariadb-client-test-embedded-mariadb"></a><span class="command"><span class="term"><strong>mariadb-client-test-embedded</strong></span></span>   is a tool to test the client API for the embedded server
+  <a id="mariadb-conv-mariadb"></a><span class="command"><span class="term"><strong>mariadb-conv</strong></span></span>                                   converts character sets for use with MariaDB
+  <a id="mariadb-convert-table-format-mariadb"></a><span class="command"><span class="term"><strong>mariadb-convert-table-format</strong></span></span>   converts the tables in a database to use a particular storage engine
+  <a id="mariadbd-multi-mariadb"></a><span class="command"><span class="term"><strong>mariadbd-multi</strong></span></span>                               is designed to manage several mariadb processes that listen for connections on different Unix socket files and TCP/IP ports
+  <a id="mariadbd-safe-mariadb"></a><span class="command"><span class="term"><strong>mariadbd-safe</strong></span></span>                                 is the recommended way to start a mariadb server on Unix and NetWare
+  <a id="mariadb-dump-mariadb"></a><span class="command"><span class="term"><strong>mariadb-dump</strong></span></span>                                   is a backup program
+  <a id="mariadb-dumpslow-mariadb"></a><span class="command"><span class="term"><strong>mariadb-dumpslow</strong></span></span>                           parses MySQL slow query log files and prints a summary of their contents
+  <a id="mariadb-embedded-mariadb"></a><span class="command"><span class="term"><strong>mariadb-embedded</strong></span></span>                           is a MySQL client statically linked to libmariadbd
+  <a id="mariadb-find-rows-mariadb"></a><span class="command"><span class="term"><strong>mariadb-find-rows</strong></span></span>                         reads files containing SQL statements and extracts statements that match a given regular expression or that contain USE db_name or SET statements
+  <a id="mariadb-fix-extensions-mariadb"></a><span class="command"><span class="term"><strong>mariadb-fix-extensions</strong></span></span>               converts the extensions for MyISAM (or ISAM) table files to their canonical forms
+  <a id="mariadb-hotcopy-mariadb"></a><span class="command"><span class="term"><strong>mariadb-hotcopy</strong></span></span>                             locks the table, flushes the table and then performs a copy of the database
+  <a id="mariadb-import-mariadb"></a><span class="command"><span class="term"><strong>mariadb-import</strong></span></span>                               reads a range of data formats, and inserts the data into a database
+  <a id="mariadb-install-db-mariadb"></a><span class="command"><span class="term"><strong>mariadb-install-db</strong></span></span>                       initializes the MySQL data directory and creates the system tables that it contains, if they do not exist
+  <a id="mariadb-ldb-mariadb"></a><span class="command"><span class="term"><strong>mariadb-ldb</strong></span></span>                                     is the RocksDB tool
+  <a id="mariadb-plugin-mariadb"></a><span class="command"><span class="term"><strong>mariadb-plugin</strong></span></span>                               is a utility that enables MySQL administrators to manage which plugins a MySQL server loads
+  <a id="mariadb-secure-installation-mariadb"></a><span class="command"><span class="term"><strong>mariadb-secure-installation</strong></span></span>     is a tool to improve MySQL installation security
+  <a id="mariadb-service-convert-mariadb"></a><span class="command"><span class="term"><strong>mariadb-service-convert</strong></span></span>             generates a systemd unit based on the current mariadb settings
+  <a id="mariadb-setpermission-mariadb"></a><span class="command"><span class="term"><strong>mariadb-setpermission</strong></span></span>                 sets permissions in the MySQL grant tables
+  <a id="mariadb-show-mariadb"></a><span class="command"><span class="term"><strong>mariadb-show</strong></span></span>                                   shows the structure of a MariaDB database
+  <a id="mariadb-slap-mariadb"></a><span class="command"><span class="term"><strong>mariadb-slap</strong></span></span>                                   is a diagnostic program designed to emulate client load for a MySQL server and to report the timing of each stage
+  <a id="mariadb-test-mariadb"></a><span class="command"><span class="term"><strong>mariadb-test</strong></span></span>                                   runs a test case against a MySQL server and optionally compares the output with a result file
+  <a id="mariadb-test-embedded-mariadb"></a><span class="command"><span class="term"><strong>mariadb-test-embedded</strong></span></span>                 is similar to the <span class="command"><strong>mariadb-test</strong></span> command but is built with support for the libmariadbd embedded server
+  <a id="mariadb-tzinfo-to-sql-mariadb"></a><span class="command"><span class="term"><strong>mariadb-tzinfo-to-sql</strong></span></span>                 loads the time zone tables in the mariadb database
+  <a id="mariadb-upgrade-mariadb"></a><span class="command"><span class="term"><strong>mariadb-upgrade</strong></span></span>                             examines all tables in all databases for incompatibilities with the current version of MySQL Server
+  <a id="mariadb-waitpid-mariadb"></a><span class="command"><span class="term"><strong>mariadb-waitpid</strong></span></span>                             signals a process to terminate and waits for the process to exit
+  <a id="mariadb_config-mariadb"></a><span class="command"><span class="term"><strong>mariadb_config</strong></span></span>                               gets compiler flags for using the MariaDB Connector/C
+  <a id="mbstream-mariadb"></a><span class="command"><span class="term"><strong>mbstream</strong></span></span>                                           is a utility for sending InnoDB and XTraDB backups over a stream
+  <a id="msql2mysql-mariadb"></a><span class="command"><span class="term"><strong>msql2mysql</strong></span></span>                                       is a tool to convert mSQL programs for use with MySQL
+  <a id="my_print_defaults-mariadb"></a><span class="command"><span class="term"><strong>my_print_defaults</strong></span></span>                         displays the options from option groups of option files
+  <a id="myisam_ftdump-mariadb"></a><span class="command"><span class="term"><strong>myisam_ftdump</strong></span></span>                                 displays information about FULLTEXT indexes in MyISAM tables
+  <a id="myisamchk-mariadb"></a><span class="command"><span class="term"><strong>myisamchk</strong></span></span>                                         gets information about your database tables or checks, repairs, or optimizes them
+  <a id="myisamlog-mariadb"></a><span class="command"><span class="term"><strong>myisamlog</strong></span></span>                                         displays MyISAM log file contents
+  <a id="myisampack-mariadb"></a><span class="command"><span class="term"><strong>myisampack</strong></span></span>                                       is a tool for compressing MyISAM tables
+  <a id="mysql_config-mariadb"></a><span class="command"><span class="term"><strong>mysql_config</strong></span></span>                                   provides you with useful information for compiling your MySQL client and connecting it to MySQL
+  <a id="mytop-mariadb"></a><span class="command"><span class="term"><strong>mytop</strong></span></span>                                                 is a console-based tool for monitoring the threads and overall performance of a MySQL server
+  <a id="perror-mariadb"></a><span class="command"><span class="term"><strong>perror</strong></span></span>                                               is a utility that displays descriptions for system or storage engine error codes
+  <a id="replace-mariadb"></a><span class="command"><span class="term"><strong>replace</strong></span></span>                                             is a MariaDB/MySQL extension to the SQL standard
+  <a id="resolve_stack_dump-mariadb"></a><span class="command"><span class="term"><strong>resolve_stack_dump</strong></span></span>                       resolves a numeric stack dump to symbols
+  <a id="resolveip-mariadb"></a><span class="command"><span class="term"><strong>resolveip</strong></span></span>                                         is a utility for resolving IP addresses to host names and vice versa
+  <a id="sst_sump-mariadb"></a><span class="command"><span class="term"><strong>sst_sump</strong></span></span>                                           dumps the content of sst files (the format used by RocksDB)
   ------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lmdb.md "lmdb-0.9.35"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lmdb.md "lmdb-0.9.35")
 
     lmdb-0.9.35
 
--   [Next](postgresql.md "PostgreSQL-18.4"){accesskey="n"}
+-   [Next](postgresql.md "PostgreSQL-18.4")
 
     PostgreSQL-18.4
 
--   [Up](databases.md "Chapter 22. Databases"){accesskey="u"}
+-   [Up](databases.md "Chapter 22. Databases")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

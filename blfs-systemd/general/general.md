@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../postlfs/qemu.md "qemu-11.0.1"){accesskey="p"}
+-   [Prev](../postlfs/qemu.md "qemu-11.0.1")
 
     qemu-11.0.1
 
--   [Next](genlib.md "General Libraries"){accesskey="n"}
+-   [Next](genlib.md "General Libraries")
 
     General Libraries
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#general}General Libraries and Utilities {#general-libraries-and-utilities .part}
+# General Libraries and Utilities {#general-libraries-and-utilities}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [9. General Libraries](genlib.md)
@@ -236,7 +236,7 @@
     -   [Which-2.25 and Alternatives](which.md)
     -   [xdotool-4.20260303.1](xdotool.md)
     -   [Zip-3.0](zip.md)
-    -   [Hardware Utilities]{.dummy}
+    -   <span class="dummy">Hardware Utilities</span>
     -   [Hdparm-9.65](hdparm.md)
     -   [lm-sensors-3-6-2](lm-sensors.md)
     -   [pciutils-3.15.0](pciutils.md)
@@ -285,24 +285,24 @@
     -   [Vala-0.56.19](vala.md)
     -   [Valgrind-3.27.1](valgrind.md)
     -   [yasm-1.3.0](yasm.md)
-    -   [Java]{.dummy}
+    -   <span class="dummy">Java</span>
     -   [Java-21.0.10](java.md)
     -   [OpenJDK-21.0.10](openjdk.md)
     -   [Configuring the Java environment](ojdk-conf.md)
     -   [apache-ant-1.10.17](apache-ant.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../postlfs/qemu.md "qemu-11.0.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../postlfs/qemu.md "qemu-11.0.1")
 
     qemu-11.0.1
 
--   [Next](genlib.md "General Libraries"){accesskey="n"}
+-   [Next](genlib.md "General Libraries")
 
     General Libraries
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

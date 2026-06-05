@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](libgweather.md "libgweather-4.6.0"){accesskey="p"}
+-   [Prev](libgweather.md "libgweather-4.6.0")
 
     libgweather-4.6.0
 
--   [Next](libshumate.md "libshumate-1.6.1"){accesskey="n"}
+-   [Next](libshumate.md "libshumate-1.6.1")
 
     libshumate-1.6.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libpeas}libpeas-1.38.1 {#libpeas-1.38.1 .sect1}
+# libpeas-1.38.1 {#libpeas-1.38.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libpeas {#introduction-to-libpeas .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libpeas {#introduction-to-libpeas}
 
-[libpeas]{.application} is a GObject based plugins engine, and is targeted at giving every application the chance to assume its own extensibility.
+<span class="application">libpeas</span> is a GObject based plugins engine, and is targeted at giving every application the chance to assume its own extensibility.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libpeas/1.38/libpeas-1.38.1.tar.xz](https://download.gnome.org/sources/libpeas/1.38/libpeas-1.38.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libpeas/1.38/libpeas-1.38.1.tar.xz">https://download.gnome.org/sources/libpeas/1.38/libpeas-1.38.1.tar.xz</a>
 
 -   Download MD5 sum: 5e2388cd39322cd121be67ef398297d6
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 13 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### libpeas Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection) and [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection) and <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>
 
 #### Recommended
 
-[libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}
+<a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>
 
 #### Optional
 
-[Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, [Glade](https://glade.gnome.org/){.ulink}, [embed](https://pypi.org/project/embed){.ulink}, [LGI](https://github.com/pavouk/lgi){.ulink} (for LUA bindings, built with LUA-5.1), with either [luajit-20260213](../general/luajit.md "luajit-20260213"){.xref} or [LUA-5.1](https://www.lua.org/ftp/lua-5.1.5.tar.gz){.ulink}
-:::::
+<a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, <a class="ulink" href="https://glade.gnome.org/">Glade</a>, <a class="ulink" href="https://pypi.org/project/embed">embed</a>, <a class="ulink" href="https://github.com/pavouk/lgi">LGI</a> (for LUA bindings, built with LUA-5.1), with either <a class="xref" href="../general/luajit.md" title="luajit-20260213">luajit-20260213</a> or <a class="ulink" href="https://www.lua.org/ftp/lua-5.1.5.tar.gz">LUA-5.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libpeas {#installation-of-libpeas .sect2}
+<div class="installation" lang="en">
+## Installation of libpeas {#installation-of-libpeas}
 
-Install [libpeas]{.application} by running the following commands:
+Install <span class="application">libpeas</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -78,79 +78,79 @@ meson setup --prefix=/usr          \
 ninja
 ```
 
-If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to build the API documentation for this package, issue:
+If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to build the API documentation for this package, issue:
 
-``` userinput
+```bash
 sed "/docs_dir =/s@\$@/ 'libpeas-1.38.1'@" \
     -i ../docs/reference/meson.build       &&
 meson configure -D gtk_doc=true            &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. An active graphical session with bus address is necessary to run the tests.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. An active graphical session with bus address is necessary to run the tests.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`--wrap-mode=nofallback`*: This switch prevents [**meson**]{.command} from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
+*`--wrap-mode=nofallback`*: This switch prevents <span class="command"><strong>meson</strong></span> from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
 
 *`-D python3=false`*: This switch disables the Python plugin loader because it is incompatible with pygobject-3.52.x, and it will cause applications which load Python plugins to hang indefinitely.
 
-`-D vapi=true`{.option}: Add this switch if you wish to generate vapi (vala) data.
+<code class="option">-D vapi=true</code>: Add this switch if you wish to generate vapi (vala) data.
 
-`-D demos=false`{.option}: Add this switch if you do not wish to build the demo programs.
-:::
+<code class="option">-D demos=false</code>: Add this switch if you do not wish to build the demo programs.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [peas-demo]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">peas-demo</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libpeas-1.0.so and libpeas-gtk-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libpeas-1.0.so and libpeas-gtk-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libpeas-1.0, /usr/lib/libpeas-1.0, /usr/lib/peas-demo and /usr/share/gtk-doc/html/libpeas (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libpeas-1.0, /usr/lib/libpeas-1.0, /usr/lib/peas-demo and /usr/share/gtk-doc/html/libpeas (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ -------------------------------------------------------------------
-  []{#peas-demo}[[**peas-demo**]{.command}]{.term}             is the Peas demo program
-  []{#libpeas-1}[`libpeas-1.0.so`{.filename}]{.term}           contains the [libpeas]{.application} API functions
-  []{#libpeas-gtk-1}[`libpeas-gtk-1.0.so`{.filename}]{.term}   contains the [libpeas]{.application} [GTK+]{.application} widgets
+  <a id="peas-demo"></a><span class="command"><span class="term"><strong>peas-demo</strong></span></span>             is the Peas demo program
+  <a id="libpeas-1"></a><span class="term"><code class="filename">libpeas-1.0.so</code></span>           contains the <span class="application">libpeas</span> API functions
+  <a id="libpeas-gtk-1"></a><span class="term"><code class="filename">libpeas-gtk-1.0.so</code></span>   contains the <span class="application">libpeas</span> <span class="application">GTK+</span> widgets
   ------------------------------------------------------------ -------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libgweather.md "libgweather-4.6.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libgweather.md "libgweather-4.6.0")
 
     libgweather-4.6.0
 
--   [Next](libshumate.md "libshumate-1.6.1"){accesskey="n"}
+-   [Next](libshumate.md "libshumate-1.6.1")
 
     libshumate-1.6.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

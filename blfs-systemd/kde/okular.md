@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](kio-extras.md "kio-extras-26.04.1"){accesskey="p"}
+-   [Prev](kio-extras.md "kio-extras-26.04.1")
 
     kio-extras-26.04.1
 
--   [Next](libkdcraw.md "libkdcraw-26.04.1"){accesskey="n"}
+-   [Next](libkdcraw.md "libkdcraw-26.04.1")
 
     libkdcraw-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#okular}okular-26.04.1 {#okular-26.04.1 .sect1}
+# okular-26.04.1 {#okular-26.04.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Okular {#introduction-to-okular .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Okular {#introduction-to-okular}
 
 Okular is a document viewer for KDE. It can view documents of many types including PDF, PostScript, TIFF, DjVu, DVI, XPS, and ePub.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/okular-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/okular-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/okular-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/okular-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: b67f0b8e8bafe845a7dbf5e56326dea9
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 99 MB
 
 -   Estimated build time: 1.1 SBU (using parallelism=4)
-:::
+</div>
 
 ### Okular Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref} and [plasma-activities-6.6.5](plasma-activities.md "plasma-activities-6.6.5"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a> and <a class="xref" href="plasma-activities.md" title="plasma-activities-6.6.5">plasma-activities-6.6.5</a>
 
 #### Recommended
 
-[libkexiv2-26.04.1](libkexiv2.md "libkexiv2-26.04.1"){.xref}, [libtiff-4.7.1](../general/libtiff.md "libtiff-4.7.1"){.xref}, [phonon-4.12.0](phonon.md "Phonon-4.12.0"){.xref}, and [Poppler-26.06.0](../general/poppler.md "Poppler-26.06.0"){.xref} (built with Qt6, required for PDF support)
+<a class="xref" href="libkexiv2.md" title="libkexiv2-26.04.1">libkexiv2-26.04.1</a>, <a class="xref" href="../general/libtiff.md" title="libtiff-4.7.1">libtiff-4.7.1</a>, <a class="xref" href="phonon.md" title="Phonon-4.12.0">phonon-4.12.0</a>, and <a class="xref" href="../general/poppler.md" title="Poppler-26.06.0">Poppler-26.06.0</a> (built with Qt6, required for PDF support)
 
 #### Optional
 
-[qca-2.3.10](../general/qca.md "Qca-2.3.10"){.xref}, [discount](https://www.pell.portland.or.us/~orc/Code/discount/){.ulink}, [DjVuLibre](https://djvu.sourceforge.net/){.ulink}, [libspectre](https://libspectre.freedesktop.org/){.ulink}, [libepub](https://sourceforge.net/projects/ebook-tools){.ulink}, and [LibZip](https://libzip.org){.ulink}
-:::::
+<a class="xref" href="../general/qca.md" title="Qca-2.3.10">qca-2.3.10</a>, <a class="ulink" href="https://www.pell.portland.or.us/~orc/Code/discount/">discount</a>, <a class="ulink" href="https://djvu.sourceforge.net/">DjVuLibre</a>, <a class="ulink" href="https://libspectre.freedesktop.org/">libspectre</a>, <a class="ulink" href="https://sourceforge.net/projects/ebook-tools">libepub</a>, and <a class="ulink" href="https://libzip.org">LibZip</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Okular {#installation-of-okular .sect2}
+<div class="installation" lang="en">
+## Installation of Okular {#installation-of-okular}
 
-Install [Okular]{.application} by running the following commands:
+Install <span class="application">Okular</span> by running the following commands:
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 If any of the optional dependencies are installed, remove the associated reference in the SKIP_OPTIONAL environment variable.
-:::
+</div>
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -90,52 +90,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-::::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [okular]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">okular</span>
+</div>
 
-::: seg
-**Installed Library:** [Okular6Core.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">Okular6Core.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/include/okular, \$KF6_PREFIX/lib/cmake/Okular6, \$KF6_PREFIX/lib/plugins/okular, \$KF6_PREFIX/share/okular, and \$KF6_PREFIX/share/doc/HTML/\*/okular]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/include/okular, \$KF6_PREFIX/lib/cmake/Okular6, \$KF6_PREFIX/lib/plugins/okular, \$KF6_PREFIX/share/okular, and \$KF6_PREFIX/share/doc/HTML/\*/okular</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------- ------------------------------
-  []{#okular-prog}[[**okular**]{.command}]{.term}   is a document viewer for KDE
+  <a id="okular-prog"></a><span class="command"><span class="term"><strong>okular</strong></span></span>   is a document viewer for KDE
   ------------------------------------------------- ------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kio-extras.md "kio-extras-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kio-extras.md "kio-extras-26.04.1")
 
     kio-extras-26.04.1
 
--   [Next](libkdcraw.md "libkdcraw-26.04.1"){accesskey="n"}
+-   [Next](libkdcraw.md "libkdcraw-26.04.1")
 
     libkdcraw-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

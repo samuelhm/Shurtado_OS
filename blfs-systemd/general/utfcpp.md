@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](umockdev.md "Umockdev-0.19.7"){accesskey="p"}
+-   [Prev](umockdev.md "Umockdev-0.19.7")
 
     Umockdev-0.19.7
 
--   [Next](wayland.md "Wayland-1.25.0"){accesskey="n"}
+-   [Next](wayland.md "Wayland-1.25.0")
 
     Wayland-1.25.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#utfcpp}utfcpp-4.1.1 {#utfcpp-4.1.1 .sect1}
+# utfcpp-4.1.1 {#utfcpp-4.1.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to utfcpp {#introduction-to-utfcpp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to utfcpp {#introduction-to-utfcpp}
 
-The [utfcpp]{.application} package contains a set of include files to provide UTF-8 with C++ in a Portable Way.
+The <span class="application">utfcpp</span> package contains a set of include files to provide UTF-8 with C++ in a Portable Way.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/nemtrif/utfcpp/archive/v4.1.1/utfcpp-4.1.1.tar.gz](https://github.com/nemtrif/utfcpp/archive/v4.1.1/utfcpp-4.1.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/nemtrif/utfcpp/archive/v4.1.1/utfcpp-4.1.1.tar.gz">https://github.com/nemtrif/utfcpp/archive/v4.1.1/utfcpp-4.1.1.tar.gz</a>
 
 -   Download MD5 sum: 2b439bf8f222cd85bac0d2603265a246
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 716 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### utfcpp Dependencies
 
 #### Required
 
-[CMake-4.3.3](cmake.md "CMake-4.3.3"){.xref}
-:::::
+<a class="xref" href="cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of utfcpp {#installation-of-utfcpp .sect2}
+<div class="installation" lang="en">
+## Installation of utfcpp {#installation-of-utfcpp}
 
-Install [utfcpp]{.application} by running the following commands:
+Install <span class="application">utfcpp</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -67,44 +67,44 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr ..
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/utf8cpp and /usr/share/utf8cpp]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/utf8cpp and /usr/share/utf8cpp</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](umockdev.md "Umockdev-0.19.7"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](umockdev.md "Umockdev-0.19.7")
 
     Umockdev-0.19.7
 
--   [Next](wayland.md "Wayland-1.25.0"){accesskey="n"}
+-   [Next](wayland.md "Wayland-1.25.0")
 
     Wayland-1.25.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

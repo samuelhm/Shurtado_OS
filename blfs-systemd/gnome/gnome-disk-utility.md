@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](gnome-connections.md "gnome-connections-50.0"){accesskey="p"}
+-   [Prev](gnome-connections.md "gnome-connections-50.0")
 
     gnome-connections-50.0
 
--   [Next](gnome-logs.md "gnome-logs-45.0"){accesskey="n"}
+-   [Next](gnome-logs.md "gnome-logs-45.0")
 
     gnome-logs-45.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-disk-utility}gnome-disk-utility-46.1 {#gnome-disk-utility-46.1 .sect1}
+# gnome-disk-utility-46.1 {#gnome-disk-utility-46.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Disk Utility {#introduction-to-gnome-disk-utility .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Disk Utility {#introduction-to-gnome-disk-utility}
 
-The [GNOME Disk Utility]{.application} package provides applications used for dealing with storage devices.
+The <span class="application">GNOME Disk Utility</span> package provides applications used for dealing with storage devices.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-disk-utility/46/gnome-disk-utility-46.1.tar.xz](https://download.gnome.org/sources/gnome-disk-utility/46/gnome-disk-utility-46.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-disk-utility/46/gnome-disk-utility-46.1.tar.xz">https://download.gnome.org/sources/gnome-disk-utility/46/gnome-disk-utility-46.1.tar.xz</a>
 
 -   Download MD5 sum: bfc4d0cfbf186ba5bd487f3fddbf07d2
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 29 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### GNOME Disk Utility Dependencies
 
 #### Required
 
-[gnome-settings-daemon-50.1](gnome-settings-daemon.md "gnome-settings-daemon-50.1"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libdvdread-7.0.1](../multimedia/libdvdread.md "libdvdread-7.0.1"){.xref}, [libhandy-1.8.3](../x/libhandy1.md "libhandy-1.8.3"){.xref}, [libpwquality-1.4.5](../postlfs/libpwquality.md "libpwquality-1.4.5"){.xref}, [libsecret-0.21.7](libsecret.md "libsecret-0.21.7"){.xref}, and [UDisks-2.11.1](../general/udisks2.md "UDisks-2.11.1"){.xref}
+<a class="xref" href="gnome-settings-daemon.md" title="gnome-settings-daemon-50.1">gnome-settings-daemon-50.1</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../multimedia/libdvdread.md" title="libdvdread-7.0.1">libdvdread-7.0.1</a>, <a class="xref" href="../x/libhandy1.md" title="libhandy-1.8.3">libhandy-1.8.3</a>, <a class="xref" href="../postlfs/libpwquality.md" title="libpwquality-1.4.5">libpwquality-1.4.5</a>, <a class="xref" href="libsecret.md" title="libsecret-0.21.7">libsecret-0.21.7</a>, and <a class="xref" href="../general/udisks2.md" title="UDisks-2.11.1">UDisks-2.11.1</a>
 
 #### Optional
 
-[appstream-glib-0.8.3](../general/appstream-glib.md "appstream-glib-0.8.3"){.xref}
-:::::
+<a class="xref" href="../general/appstream-glib.md" title="appstream-glib-0.8.3">appstream-glib-0.8.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Disk Utility {#installation-of-gnome-disk-utility .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Disk Utility {#installation-of-gnome-disk-utility}
 
-Install [GNOME Disk Utility]{.application} by running the following commands:
+Install <span class="application">GNOME Disk Utility</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,53 +72,53 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-disk-image-mounter and gnome-disks]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-disk-image-mounter and gnome-disks</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------------------- -----------------------------------------------------------------------------
-  []{#gnome-disk-image-mounter}[[**gnome-disk-image-mounter**]{.command}]{.term}   is used to set up disk images
-  []{#gnome-disks}[[**gnome-disks**]{.command}]{.term}                             is used to inspect, format, partition and configure disks and block devices
+  <a id="gnome-disk-image-mounter"></a><span class="command"><span class="term"><strong>gnome-disk-image-mounter</strong></span></span>   is used to set up disk images
+  <a id="gnome-disks"></a><span class="command"><span class="term"><strong>gnome-disks</strong></span></span>                             is used to inspect, format, partition and configure disks and block devices
   -------------------------------------------------------------------------------- -----------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-connections.md "gnome-connections-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-connections.md "gnome-connections-50.0")
 
     gnome-connections-50.0
 
--   [Next](gnome-logs.md "gnome-logs-45.0"){accesskey="n"}
+-   [Next](gnome-logs.md "gnome-logs-45.0")
 
     gnome-logs-45.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

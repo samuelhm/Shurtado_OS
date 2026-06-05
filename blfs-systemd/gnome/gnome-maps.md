@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](gnome-logs.md "gnome-logs-45.0"){accesskey="p"}
+-   [Prev](gnome-logs.md "gnome-logs-45.0")
 
     gnome-logs-45.0
 
--   [Next](gnome-nettool.md "gnome-nettool-42.0"){accesskey="n"}
+-   [Next](gnome-nettool.md "gnome-nettool-42.0")
 
     gnome-nettool-42.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-maps}gnome-maps-50.1 {#gnome-maps-50.1 .sect1}
+# gnome-maps-50.1 {#gnome-maps-50.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Maps {#introduction-to-gnome-maps .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Maps {#introduction-to-gnome-maps}
 
-[GNOME Maps]{.application} is a map application for [GNOME]{.application}.
+<span class="application">GNOME Maps</span> is a map application for <span class="application">GNOME</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.1.tar.xz](https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.1.tar.xz">https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.1.tar.xz</a>
 
 -   Download MD5 sum: 060157a736d1966af0e1f893957d3437
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 18 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### GNOME Maps Dependencies
 
 #### Required
 
-[blueprint-compiler-0.20.4](../general/python-modules.md#blueprint-compiler "blueprint-compiler-0.20.4"){.xref}, [desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref}, [GeoClue-2.8.1](../basicnet/geoclue2.md "GeoClue-2.8.1"){.xref}, [geocode-glib-3.26.4](geocode-glib.md "geocode-glib-3.26.4"){.xref}, [Gjs-1.88.0](gjs.md "Gjs-1.88.0"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, [libgweather-4.6.0](libgweather.md "libgweather-4.6.0"){.xref}, [libportal-0.9.1](../general/libportal.md "libportal-0.9.1"){.xref}, [librest-0.10.2](librest.md "librest-0.10.2"){.xref}, and [libshumate-1.6.1](libshumate.md "libshumate-1.6.1"){.xref}
-:::::
+<a class="xref" href="../general/python-modules.md#blueprint-compiler" title="blueprint-compiler-0.20.4">blueprint-compiler-0.20.4</a>, <a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a>, <a class="xref" href="../basicnet/geoclue2.md" title="GeoClue-2.8.1">GeoClue-2.8.1</a>, <a class="xref" href="geocode-glib.md" title="geocode-glib-3.26.4">geocode-glib-3.26.4</a>, <a class="xref" href="gjs.md" title="Gjs-1.88.0">Gjs-1.88.0</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, <a class="xref" href="libgweather.md" title="libgweather-4.6.0">libgweather-4.6.0</a>, <a class="xref" href="../general/libportal.md" title="libportal-0.9.1">libportal-0.9.1</a>, <a class="xref" href="librest.md" title="librest-0.10.2">librest-0.10.2</a>, and <a class="xref" href="libshumate.md" title="libshumate-1.6.1">libshumate-1.6.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Maps {#installation-of-gnome-maps .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Maps {#installation-of-gnome-maps}
 
-Install [GNOME Maps]{.application} by running the following commands:
+Install <span class="application">GNOME Maps</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -66,54 +66,54 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-maps (symlink)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-maps (symlink)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgnome-maps.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgnome-maps.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/gnome-maps and /usr/share/gnome-maps]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/gnome-maps and /usr/share/gnome-maps</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- ------------------------------------------------
-  []{#gnome-maps-prog}[[**gnome-maps**]{.command}]{.term}   is a map application for [GNOME]{.application}
+  <a id="gnome-maps-prog"></a><span class="command"><span class="term"><strong>gnome-maps</strong></span></span>   is a map application for <span class="application">GNOME</span>
   --------------------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-logs.md "gnome-logs-45.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-logs.md "gnome-logs-45.0")
 
     gnome-logs-45.0
 
--   [Next](gnome-nettool.md "gnome-nettool-42.0"){accesskey="n"}
+-   [Next](gnome-nettool.md "gnome-nettool-42.0")
 
     gnome-nettool-42.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

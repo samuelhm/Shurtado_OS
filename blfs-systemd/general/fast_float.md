@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](exempi.md "Exempi-2.6.6"){accesskey="p"}
+-   [Prev](exempi.md "Exempi-2.6.6")
 
     Exempi-2.6.6
 
--   [Next](fftw.md "fftw-3.3.11"){accesskey="n"}
+-   [Next](fftw.md "fftw-3.3.11")
 
     fftw-3.3.11
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#fast_float}fast_float-8.2.6 {#fast_float-8.2.6 .sect1}
+# fast_float-8.2.6 {#fast_float-8.2.6}
 
-:::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Fast_float {#introduction-to-fast_float .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Fast_float {#introduction-to-fast_float}
 
-[Fast_float]{.application} provides a set of C++ header files for efficient string to float operations.
+<span class="application">Fast_float</span> provides a set of C++ header files for efficient string to float operations.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/fastfloat/fast_float/archive/v8.2.6/fast_float-8.2.6.tar.gz](https://github.com/fastfloat/fast_float/archive/v8.2.6/fast_float-8.2.6.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/fastfloat/fast_float/archive/v8.2.6/fast_float-8.2.6.tar.gz">https://github.com/fastfloat/fast_float/archive/v8.2.6/fast_float-8.2.6.tar.gz</a>
 
 -   Download MD5 sum: 2dd9de13bb1c2bf22017e5d12c537123
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.5 MB (add 620 MB for tests)
 
 -   Estimated build time: less than 0.1 SBU (add 0.3 SBU for tests, depending on network connection)
-:::
+</div>
 
 ### Fast_float Dependencies
 
 #### Required
 
-[CMake-4.3.3](cmake.md "CMake-4.3.3"){.xref}
+<a class="xref" href="cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
 
 #### Optional
 
-[git-2.54.0](git.md "Git-2.54.0"){.xref} (for downloading some tests) and [doctest](https://github.com/doctest/doctest){.ulink}
+<a class="xref" href="git.md" title="Git-2.54.0">git-2.54.0</a> (for downloading some tests) and <a class="ulink" href="https://github.com/doctest/doctest">doctest</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Fast_float {#installation-of-fast_float .sect2}
+<div class="installation" lang="en">
+## Installation of Fast_float {#installation-of-fast_float}
 
-Install [fast_float]{.application} by running the following commands:
+Install <span class="application">fast_float</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -79,46 +79,46 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -G Ninja ..
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-To test the results, issue: [**cmake .. -D FASTFLOAT_TEST=ON && ninja && ninja test**]{.command}. Note that the tests download some test files and the external doctest test framework from the Internet, and the doctest package would have been installed if the test suite had run before [**ninja install**]{.command}, so don't run the test suite before installation.
-:::
+To test the results, issue: <span class="command"><strong>cmake .. -D FASTFLOAT_TEST=ON && ninja && ninja test</strong></span>. Note that the tests download some test files and the external doctest test framework from the Internet, and the doctest package would have been installed if the test suite had run before <span class="command"><strong>ninja install</strong></span>, so don't run the test suite before installation.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/fast_float and /usr/share/cmake/FastFloat]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/fast_float and /usr/share/cmake/FastFloat</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](exempi.md "Exempi-2.6.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](exempi.md "Exempi-2.6.6")
 
     Exempi-2.6.6
 
--   [Next](fftw.md "fftw-3.3.11"){accesskey="n"}
+-   [Next](fftw.md "fftw-3.3.11")
 
     fftw-3.3.11
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

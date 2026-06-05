@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libksba.md "libksba-1.8.0"){accesskey="p"}
+-   [Prev](libksba.md "libksba-1.8.0")
 
     libksba-1.8.0
 
--   [Next](libmbim.md "libmbim-1.34.0"){accesskey="n"}
+-   [Next](libmbim.md "libmbim-1.34.0")
 
     libmbim-1.34.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#liblinear}liblinear-250 {#liblinear-250 .sect1}
+# liblinear-250 {#liblinear-250}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to liblinear {#introduction-to-liblinear .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to liblinear {#introduction-to-liblinear}
 
 This package provides a library for learning linear classifiers for large scale applications. It supports Support Vector Machines (SVM) with L2 and L1 loss, logistic regression, multi class classification and also Linear Programming Machines (L1-regularized SVMs). Its computational complexity scales linearly with the number of training examples making it one of the fastest SVM solvers around.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-After updating this package from [liblinear-247]{.application} or earlier, you need to reinstall [Nmap-7.99](../basicnet/nmap.md "Nmap-7.99"){.xref} in order to link to the new library.
-:::
+After updating this package from <span class="application">liblinear-247</span> or earlier, you need to reinstall <a class="xref" href="../basicnet/nmap.md" title="Nmap-7.99">Nmap-7.99</a> in order to link to the new library.
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/cjlin1/liblinear/archive/v250/liblinear-250.tar.gz](https://github.com/cjlin1/liblinear/archive/v250/liblinear-250.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/cjlin1/liblinear/archive/v250/liblinear-250.tar.gz">https://github.com/cjlin1/liblinear/archive/v250/liblinear-250.tar.gz</a>
 
 -   Download MD5 sum: 53ffb394295c7f766adc200a603d6e0d
 
@@ -52,68 +52,68 @@ After updating this package from [liblinear-247]{.application} or earlier, you n
 -   Estimated disk space required: 712 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
-::::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of liblinear {#installation-of-liblinear .sect2}
+<div class="installation" lang="en">
+## Installation of liblinear {#installation-of-liblinear}
 
-Install [liblinear]{.application} by running the following commands:
+Install <span class="application">liblinear</span> by running the following commands:
 
-``` userinput
+```bash
 make lib
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -vm644 linear.h /usr/include   &&
 install -vm755 liblinear.so.6 /usr/lib &&
 ln -sfv liblinear.so.6 /usr/lib/liblinear.so
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [liblinear.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">liblinear.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ------------------------------------------
-  []{#liblinear-lib}[`liblinear.so`{.filename}]{.term}   is a large linear classification library
+  <a id="liblinear-lib"></a><span class="term"><code class="filename">liblinear.so</code></span>   is a large linear classification library
   ------------------------------------------------------ ------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libksba.md "libksba-1.8.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libksba.md "libksba-1.8.0")
 
     libksba-1.8.0
 
--   [Next](libmbim.md "libmbim-1.34.0"){accesskey="n"}
+-   [Next](libmbim.md "libmbim-1.34.0")
 
     libmbim-1.34.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

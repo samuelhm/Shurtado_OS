@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libsigc.md "libsigc++-2.12.1"){accesskey="p"}
+-   [Prev](libsigc.md "libsigc++-2.12.1")
 
     libsigc++-2.12.1
 
--   [Next](libsigsegv.md "libsigsegv-2.15"){accesskey="n"}
+-   [Next](libsigsegv.md "libsigsegv-2.15")
 
     libsigsegv-2.15
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libsigc3}libsigc++-3.6.0 {#libsigc-3.6.0 .sect1}
+# libsigc++-3.6.0 {#libsigc-3.6.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libsigc++ {#introduction-to-libsigc .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libsigc++ {#introduction-to-libsigc}
 
-The [libsigc++]{.application} package implements a typesafe callback system for standard C++. This version is part of a new API for supporting gtkmm-4.
+The <span class="application">libsigc++</span> package implements a typesafe callback system for standard C++. This version is part of a new API for supporting gtkmm-4.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libsigc++/3.6/libsigc++-3.6.0.tar.xz](https://download.gnome.org/sources/libsigc++/3.6/libsigc++-3.6.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libsigc++/3.6/libsigc++-3.6.0.tar.xz">https://download.gnome.org/sources/libsigc++/3.6/libsigc++-3.6.0.tar.xz</a>
 
 -   Download MD5 sum: b7205d5465ac15fbc0c781d39b4011be
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (with tests)
-:::
+</div>
 
 ### libsigc++ Dependencies
 
 #### Recommended
 
-[Boost-1.91.0-1](boost.md "boost-1.91.0-1"){.xref} and [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref}
+<a class="xref" href="boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a> and <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>
 
 #### Optional
 
-[DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}, [docbook-xml-5.0](../pst/docbook5.md "docbook-xml-5.0"){.xref}, [Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, [fop-2.11](../pst/fop.md "fop-2.11"){.xref}, and [mm-common](https://download.gnome.org/sources/mm-common){.ulink}
-:::::
+<a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>, <a class="xref" href="../pst/docbook5.md" title="docbook-xml-5.0">docbook-xml-5.0</a>, <a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a>, and <a class="ulink" href="https://download.gnome.org/sources/mm-common">mm-common</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libsigc++ {#installation-of-libsigc .sect2}
+<div class="installation" lang="en">
+## Installation of libsigc++ {#installation-of-libsigc}
 
 First, fix detecting Boost when configuring this package:
 
-``` userinput
+```bash
 sed -i "s/'system',//" meson.build
 ```
 
-Install [libsigc++]{.application} by running the following commands:
+Install <span class="application">libsigc++</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir bld &&
 cd    bld &&
 
@@ -76,62 +76,62 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D build-documentation=true`{.option}: Use this switch if [Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref} is installed and you wish to build and install the API documentation.
-:::
+<code class="option">-D build-documentation=true</code>: Use this switch if <a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> is installed and you wish to build and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libsigc-3.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libsigc-3.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{include,lib}/sigc++-3.0 and /usr/share/{devhelp/books,doc}/libsigc++-3.0 (if the documentation is enabled)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{include,lib}/sigc++-3.0 and /usr/share/{devhelp/books,doc}/libsigc++-3.0 (if the documentation is enabled)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ------------------------------------------------------
-  []{#libsigc-3}[`libsigc-3.0.so`{.filename}]{.term}   provides a typesafe callback system for standard C++
+  <a id="libsigc-3"></a><span class="term"><code class="filename">libsigc-3.0.so</code></span>   provides a typesafe callback system for standard C++
   ---------------------------------------------------- ------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsigc.md "libsigc++-2.12.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsigc.md "libsigc++-2.12.1")
 
     libsigc++-2.12.1
 
--   [Next](libsigsegv.md "libsigsegv-2.15"){accesskey="n"}
+-   [Next](libsigsegv.md "libsigsegv-2.15")
 
     libsigsegv-2.15
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

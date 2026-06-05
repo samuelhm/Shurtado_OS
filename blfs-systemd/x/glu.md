@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](glslang.md "glslang-16.3.0"){accesskey="p"}
+-   [Prev](glslang.md "glslang-16.3.0")
 
     glslang-16.3.0
 
--   [Next](goffice010.md "GOffice-0.10.61"){accesskey="n"}
+-   [Next](goffice010.md "GOffice-0.10.61")
 
     GOffice-0.10.61
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#glu}GLU-9.0.3 {#glu-9.0.3 .sect1}
+# GLU-9.0.3 {#glu-9.0.3}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to GLU {#introduction-to-glu .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GLU {#introduction-to-glu}
 
 This package provides the Mesa OpenGL Utility library.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you have installed [libglvnd](https://glfs-book.github.io/glfs/shareddeps/libglvnd.md){.ulink}, please install the GLFS version of [GLU](https://glfs-book.github.io/glfs/shareddeps/glu.md){.ulink} instead so that the library functions as expected.
-:::
+If you have installed <a class="ulink" href="https://glfs-book.github.io/glfs/shareddeps/libglvnd.md">libglvnd</a>, please install the GLFS version of <a class="ulink" href="https://glfs-book.github.io/glfs/shareddeps/glu.md">GLU</a> instead so that the library functions as expected.
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz](https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz">https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz</a>
 
 -   Download MD5 sum: 06a4fff9179a98ea32ef41b6d83f6b19
 
@@ -52,21 +52,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.9 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### GLU Dependencies
 
 #### Required
 
-[Mesa-26.0.7](mesa.md "Mesa-26.0.7"){.xref}
-::::::
+<a class="xref" href="mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GLU {#installation-of-glu .sect2}
+<div class="installation" lang="en">
+## Installation of GLU {#installation-of-glu}
 
-Install [GLU]{.application} by running the following commands:
+Install <span class="application">GLU</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -80,58 +80,58 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D default_library=shared`*: This switch prevents building and installing the static library.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libGLU.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libGLU.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------- ----------------------------------------------------
-  []{#libGLU}[`libGLU.so`{.filename}]{.term}   is the [Mesa]{.application} OpenGL Utility library
+  <a id="libGLU"></a><span class="term"><code class="filename">libGLU.so</code></span>   is the <span class="application">Mesa</span> OpenGL Utility library
   -------------------------------------------- ----------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](glslang.md "glslang-16.3.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](glslang.md "glslang-16.3.0")
 
     glslang-16.3.0
 
--   [Next](goffice010.md "GOffice-0.10.61"){accesskey="n"}
+-   [Next](goffice010.md "GOffice-0.10.61")
 
     GOffice-0.10.61
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

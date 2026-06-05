@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libpaper.md "libpaper-2.2.8"){accesskey="p"}
+-   [Prev](libpaper.md "libpaper-2.2.8")
 
     libpaper-2.2.8
 
--   [Next](libproxy.md "libproxy-0.5.12"){accesskey="n"}
+-   [Next](libproxy.md "libproxy-0.5.12")
 
     libproxy-0.5.12
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libportal}libportal-0.9.1 {#libportal-0.9.1 .sect1}
+# libportal-0.9.1 {#libportal-0.9.1}
 
-::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libportal {#introduction-to-libportal .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libportal {#introduction-to-libportal}
 
-The [libportal]{.application} package provides a library that contains GIO-style async APIs for most Flatpak portals.
+The <span class="application">libportal</span> package provides a library that contains GIO-style async APIs for most Flatpak portals.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz](https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz">https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz</a>
 
 -   Download MD5 sum: 0c63ee25d2e2986ce4df544fe8149046
 
@@ -44,60 +44,60 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.0 MB (with tests; add 9 MB for docs)
 
 -   Estimated build time: less than 0.1 SBU (add 0.6 SBU for tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/libportal-0.9.1-qt6.9_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/libportal-0.9.1-qt6.9_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/libportal-0.9.1-qt6.9_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/libportal-0.9.1-qt6.9_fixes-1.patch</a>
+</div>
 
 ### libportal Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Recommended
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} and [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> and <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>
 
 #### Recommended (Runtime)
 
-To make this package really useful, install [xdg-desktop-portal-1.20.4](../x/xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){.xref}, [xdg-desktop-portal-gtk-1.15.3](../x/xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3"){.xref}, [xdg-desktop-portal-gnome-50.0](../gnome/xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){.xref} (if running a GNOME desktop environment), and [xdg-desktop-portal-lxqt-1.4.0](../lxqt/xdg-desktop-portal-lxqt.md "xdg-desktop-portal-lxqt-1.4.0"){.xref} (if running a LXQt desktop environment). They are not needed if only using this package to satisfy a build dependency.
+To make this package really useful, install <a class="xref" href="../x/xdg-desktop-portal.md" title="xdg-desktop-portal-1.20.4">xdg-desktop-portal-1.20.4</a>, <a class="xref" href="../x/xdg-desktop-portal-gtk.md" title="xdg-desktop-portal-gtk-1.15.3">xdg-desktop-portal-gtk-1.15.3</a>, <a class="xref" href="../gnome/xdg-desktop-portal-gnome.md" title="xdg-desktop-portal-gnome-50.0">xdg-desktop-portal-gnome-50.0</a> (if running a GNOME desktop environment), and <a class="xref" href="../lxqt/xdg-desktop-portal-lxqt.md" title="xdg-desktop-portal-lxqt-1.4.0">xdg-desktop-portal-lxqt-1.4.0</a> (if running a LXQt desktop environment). They are not needed if only using this package to satisfy a build dependency.
 
 #### Optional
 
-[Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} (for documentation), [dbusmock-0.38.1](python-modules.md#python-dbusmock "dbusmock-0.38.1"){.xref} and [pytest-9.0.3](python-modules.md#pytest "Pytest-9.0.3"){.xref} (for testing), [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}, and [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}
-::::::
+<a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> (for documentation), <a class="xref" href="python-modules.md#python-dbusmock" title="dbusmock-0.38.1">dbusmock-0.38.1</a> and <a class="xref" href="python-modules.md#pytest" title="Pytest-9.0.3">pytest-9.0.3</a> (for testing), <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>, and <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of libportal {#installation-of-libportal .sect2}
+<div class="installation" lang="en">
+## Installation of libportal {#installation-of-libportal}
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
-If a previous version of libportal is installed, move the headers out of the way so that later packages do not encounter conflicts (as the `root`{.systemitem} user):
+If a previous version of libportal is installed, move the headers out of the way so that later packages do not encounter conflicts (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 if [ -e /usr/include/libportal ]; then
     rm -rf /usr/include/libportal.old &&
     mv -vf /usr/include/libportal{,.old}
 fi
 ```
-:::
+</div>
 
 First, apply a patch to fix building against Qt 6.9 and later:
 
-``` userinput
+```bash
 patch -Np1 -i ../libportal-0.9.1-qt6.9_fixes-1.patch
 ```
 
-Install [libportal]{.application} by running the following commands:
+Install <span class="application">libportal</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -109,75 +109,75 @@ meson setup --prefix=/usr       \
 ninja
 ```
 
-If you have [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to build the API documentation for this package, issue:
+If you have <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to build the API documentation for this package, issue:
 
-``` userinput
+```bash
 sed -i "/output/s/-1/-0.9.1/" ../doc/meson.build &&
 meson configure -D docs=true                     &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. Note that additional `dbus-daemon`{.filename} processes may need to be killed after the tests are run.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. Note that additional <code class="filename">dbus-daemon</code> processes may need to be killed after the tests are run.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D vapi=false`*: This parameter disables using [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}. Remove this parameter if you have it installed.
+*`-D vapi=false`*: This parameter disables using <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>. Remove this parameter if you have it installed.
 
-*`-D docs=false`*: Allow building this package without [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed. If you have [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and you wish to rebuild and install the API documentation, a [**meson configure**]{.command} command will reset this option.
-:::
+*`-D docs=false`*: Allow building this package without <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed. If you have <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and you wish to rebuild and install the API documentation, a <span class="command"><strong>meson configure</strong></span> command will reset this option.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libportal.so, libportal-gtk3.so, libportal-gtk4.so, and libportal-qt6.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libportal.so, libportal-gtk3.so, libportal-gtk4.so, and libportal-qt6.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libportal and /usr/share/gtk-doc/html/libportal]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libportal and /usr/share/gtk-doc/html/libportal</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ -------------------------------------------------------------------------
-  []{#libportal-lib}[`libportal.so`{.filename}]{.term}         provides GIO-style async APIs for most Flatpak portals
-  []{#libportal-gtk3}[`libportal-gtk3.so`{.filename}]{.term}   provides GTK+-3 specific functions for interacting with Flatpak portals
-  []{#libportal-gtk4}[`libportal-gtk4.so`{.filename}]{.term}   provides GTK-4 specific functions for interacting with Flatpak portals
-  []{#libportal-qt6}[`libportal-qt6.so`{.filename}]{.term}     provides Qt6-specific functions for interacting with Flatpak portals
+  <a id="libportal-lib"></a><span class="term"><code class="filename">libportal.so</code></span>         provides GIO-style async APIs for most Flatpak portals
+  <a id="libportal-gtk3"></a><span class="term"><code class="filename">libportal-gtk3.so</code></span>   provides GTK+-3 specific functions for interacting with Flatpak portals
+  <a id="libportal-gtk4"></a><span class="term"><code class="filename">libportal-gtk4.so</code></span>   provides GTK-4 specific functions for interacting with Flatpak portals
+  <a id="libportal-qt6"></a><span class="term"><code class="filename">libportal-qt6.so</code></span>     provides Qt6-specific functions for interacting with Flatpak portals
   ------------------------------------------------------------ -------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libpaper.md "libpaper-2.2.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libpaper.md "libpaper-2.2.8")
 
     libpaper-2.2.8
 
--   [Next](libproxy.md "libproxy-0.5.12"){accesskey="n"}
+-   [Next](libproxy.md "libproxy-0.5.12")
 
     libproxy-0.5.12
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

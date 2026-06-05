@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](dolphin.md "dolphin-26.04.1"){accesskey="p"}
+-   [Prev](dolphin.md "dolphin-26.04.1")
 
     dolphin-26.04.1
 
--   [Next](kddockwidgets.md "KDDockWidgets-2.4.0"){accesskey="n"}
+-   [Next](kddockwidgets.md "KDDockWidgets-2.4.0")
 
     KDDockWidgets-2.4.0
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dolphin-plugins}dolphin-plugins-26.04.1 {#dolphin-plugins-26.04.1 .sect1}
+# dolphin-plugins-26.04.1 {#dolphin-plugins-26.04.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to dolphin-plugins {#introduction-to-dolphin-plugins .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to dolphin-plugins {#introduction-to-dolphin-plugins}
 
-The [dolphin-plugins]{.application} package provides extra plugins for the dolphin file manager.
+The <span class="application">dolphin-plugins</span> package provides extra plugins for the dolphin file manager.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/dolphin-plugins-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/dolphin-plugins-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/dolphin-plugins-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/dolphin-plugins-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: 637868449572455b2b05b5608b9c7268
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 28 MB
 
 -   Estimated build time: 0.2 SBU (using parallelism=4)
-:::
+</div>
 
 ### dolphin-plugins Dependencies
 
 #### Required
 
-[dolphin-26.04.1](dolphin.md "dolphin-26.04.1"){.xref}
-:::::
+<a class="xref" href="dolphin.md" title="dolphin-26.04.1">dolphin-26.04.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of dolphin-plugins {#installation-of-dolphin-plugins .sect2}
+<div class="installation" lang="en">
+## Installation of dolphin-plugins {#installation-of-dolphin-plugins}
 
-Install [dolphin-plugins]{.application} by running the following commands:
+Install <span class="application">dolphin-plugins</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -71,44 +71,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [In \$KF6_PREFIX/lib/plugins/dolphin/vcs/: fileviewsvnplugin.so, fileviewgitplugin.so, fileviewbazaarplugin.so, fileviewdropboxplugin.so, fileviewhgplugin.so, makefileactions.so, and mountisoaction.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">In \$KF6_PREFIX/lib/plugins/dolphin/vcs/: fileviewsvnplugin.so, fileviewgitplugin.so, fileviewbazaarplugin.so, fileviewdropboxplugin.so, fileviewhgplugin.so, makefileactions.so, and mountisoaction.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](dolphin.md "dolphin-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](dolphin.md "dolphin-26.04.1")
 
     dolphin-26.04.1
 
--   [Next](kddockwidgets.md "KDDockWidgets-2.4.0"){accesskey="n"}
+-   [Next](kddockwidgets.md "KDDockWidgets-2.4.0")
 
     KDDockWidgets-2.4.0
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

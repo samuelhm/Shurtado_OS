@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](pango.md "Pango-1.57.1"){accesskey="p"}
+-   [Prev](pango.md "Pango-1.57.1")
 
     Pango-1.57.1
 
--   [Next](pangomm2.md "Pangomm-2.56.1"){accesskey="n"}
+-   [Next](pangomm2.md "Pangomm-2.56.1")
 
     Pangomm-2.56.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pangomm}Pangomm-2.46.4 {#pangomm-2.46.4 .sect1}
+# Pangomm-2.46.4 {#pangomm-2.46.4}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Pangomm {#introduction-to-pangomm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Pangomm {#introduction-to-pangomm}
 
-The [Pangomm]{.application} package provides a C++ interface to [Pango]{.application}.
+The <span class="application">Pangomm</span> package provides a C++ interface to <span class="application">Pango</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.4.tar.xz](https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.4.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.4.tar.xz">https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.4.tar.xz</a>
 
 -   Download MD5 sum: 5947d35899db62813531d7ea8faee60c
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.9 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### Pangomm Dependencies
 
 #### Required
 
-[libcairomm-1.14.5](cairomm-1.0.md "libcairomm-1.0 (cairomm-1.14.5)"){.xref}, [GLibmm-2.66.8](../general/glibmm.md "GLibmm-2.66.8"){.xref} and [Pango-1.57.1](pango.md "Pango-1.57.1"){.xref}
-:::::
+<a class="xref" href="cairomm-1.0.md" title="libcairomm-1.0 (cairomm-1.14.5)">libcairomm-1.14.5</a>, <a class="xref" href="../general/glibmm.md" title="GLibmm-2.66.8">GLibmm-2.66.8</a> and <a class="xref" href="pango.md" title="Pango-1.57.1">Pango-1.57.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Pangomm {#installation-of-pangomm .sect2}
+<div class="installation" lang="en">
+## Installation of Pangomm {#installation-of-pangomm}
 
-Install [Pangomm]{.application} by running the following commands:
+Install <span class="application">Pangomm</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,52 +68,52 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libpangomm-1.4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libpangomm-1.4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/pangomm-1.4, /usr/lib/pangomm-1.4, and /usr/share/{devhelp/books/pangomm-1.4,doc/pangomm-2.46.4}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/pangomm-1.4, /usr/lib/pangomm-1.4, and /usr/share/{devhelp/books/pangomm-1.4,doc/pangomm-2.46.4}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- ------------------------------------------------
-  []{#libpangomm-1}[`libpangomm-1.4.so`{.filename}]{.term}   contains the [Pango]{.application} API classes
+  <a id="libpangomm-1"></a><span class="term"><code class="filename">libpangomm-1.4.so</code></span>   contains the <span class="application">Pango</span> API classes
   ---------------------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](pango.md "Pango-1.57.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](pango.md "Pango-1.57.1")
 
     Pango-1.57.1
 
--   [Next](pangomm2.md "Pangomm-2.56.1"){accesskey="n"}
+-   [Next](pangomm2.md "Pangomm-2.56.1")
 
     Pangomm-2.56.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](file-roller.md "File-Roller-44.6"){accesskey="p"}
+-   [Prev](file-roller.md "File-Roller-44.6")
 
     File-Roller-44.6
 
--   [Next](gnome-color-manager.md "gnome-color-manager-3.36.2"){accesskey="n"}
+-   [Next](gnome-color-manager.md "gnome-color-manager-3.36.2")
 
     gnome-color-manager-3.36.2
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-calculator}gnome-calculator-50.0 {#gnome-calculator-50.0 .sect1}
+# gnome-calculator-50.0 {#gnome-calculator-50.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Calculator {#introduction-to-gnome-calculator .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Calculator {#introduction-to-gnome-calculator}
 
-[GNOME Calculator]{.application} is a powerful graphical calculator with financial, logical and scientific modes. It uses a multiple precision package to do its arithmetic to give a high degree of accuracy.
+<span class="application">GNOME Calculator</span> is a powerful graphical calculator with financial, logical and scientific modes. It uses a multiple precision package to do its arithmetic to give a high degree of accuracy.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-calculator/50/gnome-calculator-50.0.tar.xz](https://download.gnome.org/sources/gnome-calculator/50/gnome-calculator-50.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-calculator/50/gnome-calculator-50.0.tar.xz">https://download.gnome.org/sources/gnome-calculator/50/gnome-calculator-50.0.tar.xz</a>
 
 -   Download MD5 sum: db7f8f49762a51c5c658f1b4c0ed74d8
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 44 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (with tests)
-:::
+</div>
 
 ### GNOME Calculator Dependencies
 
 #### Required
 
-[blueprint-compiler-0.20.4](../general/python-modules.md#blueprint-compiler "blueprint-compiler-0.20.4"){.xref}, [gtksourceview5-5.20.0](../x/gtksourceview5.md "gtksourceview5-5.20.0"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, [libgee-0.20.8](libgee.md "libgee-0.20.8"){.xref}, and [libsoup-3.6.6](../basicnet/libsoup3.md "libsoup-3.6.6"){.xref}
+<a class="xref" href="../general/python-modules.md#blueprint-compiler" title="blueprint-compiler-0.20.4">blueprint-compiler-0.20.4</a>, <a class="xref" href="../x/gtksourceview5.md" title="gtksourceview5-5.20.0">gtksourceview5-5.20.0</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, <a class="xref" href="libgee.md" title="libgee-0.20.8">libgee-0.20.8</a>, and <a class="xref" href="../basicnet/libsoup3.md" title="libsoup-3.6.6">libsoup-3.6.6</a>
 
 #### Recommended
 
-[Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
-:::::
+<a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Calculator {#installation-of-gnome-calculator .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Calculator {#installation-of-gnome-calculator}
 
-Install [GNOME Calculator]{.application} by running the following commands:
+Install <span class="application">GNOME Calculator</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,55 +70,55 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gcalccmd and gnome-calculator]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gcalccmd and gnome-calculator</span>
+</div>
 
-::: seg
-**Installed Library:** [libgcalc-2.so and libgci-1.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgcalc-2.so and libgci-1.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gcalc-2, /usr/include/gci-2, /usr/share/devhelp/books/{GCalc-2,GCi-1}, and /usr/share/help/\*/gnome-calculator]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gcalc-2, /usr/include/gci-2, /usr/share/devhelp/books/{GCalc-2,GCi-1}, and /usr/share/help/\*/gnome-calculator</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------------- -----------------------------------------------------------------
-  []{#gnome-calculator-prog}[[**gnome-calculator**]{.command}]{.term}   is the official calculator of the [GNOME]{.application} Desktop
-  []{#gcalccmd}[[**gcalccmd**]{.command}]{.term}                        is a command line version of [gnome-calculator]{.application}
+  <a id="gnome-calculator-prog"></a><span class="command"><span class="term"><strong>gnome-calculator</strong></span></span>   is the official calculator of the <span class="application">GNOME</span> Desktop
+  <a id="gcalccmd"></a><span class="command"><span class="term"><strong>gcalccmd</strong></span></span>                        is a command line version of <span class="application">gnome-calculator</span>
   --------------------------------------------------------------------- -----------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](file-roller.md "File-Roller-44.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](file-roller.md "File-Roller-44.6")
 
     File-Roller-44.6
 
--   [Next](gnome-color-manager.md "gnome-color-manager-3.36.2"){accesskey="n"}
+-   [Next](gnome-color-manager.md "gnome-color-manager-3.36.2")
 
     gnome-color-manager-3.36.2
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

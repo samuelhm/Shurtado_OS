@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](libsysstat.md "libsysstat-1.1.0"){accesskey="p"}
+-   [Prev](libsysstat.md "libsysstat-1.1.0")
 
     libsysstat-1.1.0
 
--   [Next](libfm-extra.md "libfm-extra-1.3.2"){accesskey="n"}
+-   [Next](libfm-extra.md "libfm-extra-1.3.2")
 
     libfm-extra-1.3.2
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#qtxdg-tools}qtxdg-tools-4.4.0 {#qtxdg-tools-4.4.0 .sect1}
+# qtxdg-tools-4.4.0 {#qtxdg-tools-4.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to qtxdg-tools {#introduction-to-qtxdg-tools .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to qtxdg-tools {#introduction-to-qtxdg-tools}
 
-The [qtxdg-tools]{.application} contains a CLI MIME tool for handling file associations and opening files with their default applications.
+The <span class="application">qtxdg-tools</span> contains a CLI MIME tool for handling file associations and opening files with their default applications.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/qtxdg-tools/releases/download/4.4.0/qtxdg-tools-4.4.0.tar.xz](https://github.com/lxqt/qtxdg-tools/releases/download/4.4.0/qtxdg-tools-4.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/qtxdg-tools/releases/download/4.4.0/qtxdg-tools-4.4.0.tar.xz">https://github.com/lxqt/qtxdg-tools/releases/download/4.4.0/qtxdg-tools-4.4.0.tar.xz</a>
 
 -   Download MD5 sum: e5d4680526ed7751eb2ee8068c14cf50
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.1 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### qtxdg-tools Dependencies
 
 #### Required
 
-[libqtxdg-4.4.0](libqtxdg.md "libqtxdg-4.4.0"){.xref}
-:::::
+<a class="xref" href="libqtxdg.md" title="libqtxdg-4.4.0">libqtxdg-4.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of qtxdg-tools {#installation-of-qtxdg-tools .sect2}
+<div class="installation" lang="en">
+## Installation of qtxdg-tools {#installation-of-qtxdg-tools}
 
-Install [qtxdg-tools]{.application} by running the following commands:
+Install <span class="application">qtxdg-tools</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [qtxdg-mat]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">qtxdg-mat</span>
+</div>
 
-::: seg
-**Installed Library:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/cmake/qtxdg-tools]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/cmake/qtxdg-tools</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------
-  []{#qtxdg-mat}[[**qtxdg-mat**]{.command}]{.term}   queries and modifies defaults for applications, such as the default terminal, web browser, email client, and file manager
+  <a id="qtxdg-mat"></a><span class="command"><span class="term"><strong>qtxdg-mat</strong></span></span>   queries and modifies defaults for applications, such as the default terminal, web browser, email client, and file manager
   -------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsysstat.md "libsysstat-1.1.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsysstat.md "libsysstat-1.1.0")
 
     libsysstat-1.1.0
 
--   [Next](libfm-extra.md "libfm-extra-1.3.2"){accesskey="n"}
+-   [Next](libfm-extra.md "libfm-extra-1.3.2")
 
     libfm-extra-1.3.2
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

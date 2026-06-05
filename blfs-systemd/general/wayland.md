@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](utfcpp.md "utfcpp-4.1.1"){accesskey="p"}
+-   [Prev](utfcpp.md "utfcpp-4.1.1")
 
     utfcpp-4.1.1
 
--   [Next](wayland-protocols.md "Wayland-Protocols-1.48"){accesskey="n"}
+-   [Next](wayland-protocols.md "Wayland-Protocols-1.48")
 
     Wayland-Protocols-1.48
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#wayland}Wayland-1.25.0 {#wayland-1.25.0 .sect1}
+# Wayland-1.25.0 {#wayland-1.25.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Wayland {#introduction-to-wayland .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Wayland {#introduction-to-wayland}
 
-[Wayland]{.application} is a project to define a protocol for a compositor to talk to its clients as well as a library implementation of the protocol.
+<span class="application">Wayland</span> is a project to define a protocol for a compositor to talk to its clients as well as a library implementation of the protocol.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.25.0/downloads/wayland-1.25.0.tar.xz](https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.25.0/downloads/wayland-1.25.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.25.0/downloads/wayland-1.25.0.tar.xz">https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.25.0/downloads/wayland-1.25.0.tar.xz</a>
 
 -   Download MD5 sum: bdc1ad361f85cc41b85be99a3bf3d002
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 9.0 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
+</div>
 
 ### Wayland Dependencies
 
 #### Required
 
-[libxml2-2.15.3](libxml2.md "libxml2-2.15.3"){.xref}
+<a class="xref" href="libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>
 
 #### Optional
 
-[Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, [Graphviz-15.0.0](graphviz.md "Graphviz-15.0.0"){.xref} and [xmlto-0.0.29](../pst/xmlto.md "xmlto-0.0.29"){.xref} (to build the API documentation) and [docbook-xml-4.5](../pst/docbook.md "docbook-xml-4.5"){.xref}, [docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref} and [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref} (to build the manual pages)
-:::::
+<a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="graphviz.md" title="Graphviz-15.0.0">Graphviz-15.0.0</a> and <a class="xref" href="../pst/xmlto.md" title="xmlto-0.0.29">xmlto-0.0.29</a> (to build the API documentation) and <a class="xref" href="../pst/docbook.md" title="docbook-xml-4.5">docbook-xml-4.5</a>, <a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a> and <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> (to build the manual pages)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Wayland {#installation-of-wayland .sect2}
+<div class="installation" lang="en">
+## Installation of Wayland {#installation-of-wayland}
 
-Install [Wayland]{.application} by running the following commands:
+Install <span class="application">Wayland</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -73,64 +73,64 @@ meson setup ..            \
 ninja
 ```
 
-To test the results, issue: [**env -u XDG_RUNTIME_DIR ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>env -u XDG_RUNTIME_DIR ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D documentation=false`*: This switch is used to disable building of the API documentation. Remove it if you have installed optional dependencies.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [wayland-scanner]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">wayland-scanner</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libwayland-client.so, libwayland-cursor.so, libwayland-egl.so, and libwayland-server.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libwayland-client.so, libwayland-cursor.so, libwayland-egl.so, and libwayland-server.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/wayland]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/wayland</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ ------------------------------------------------------------------------------------------------
-  []{#wayland-scanner}[[**wayland-scanner**]{.command}]{.term}       is a tool to generate proxy methods in wayland-client-protocol.h and wayland-server-protocol.h
-  []{#libwayland-client}[`libwayland-client.so`{.filename}]{.term}   contains API functions for writing [Wayland]{.application} applications
-  []{#libwayland-cursor}[`libwayland-cursor.so`{.filename}]{.term}   contains API functions for managing cursors in [Wayland]{.application} applications
-  []{#libwayland-egl}[`libwayland-egl.so`{.filename}]{.term}         contains API functions for handling OpenGL calls in [Wayland]{.application} applications
-  []{#libwayland-server}[`libwayland-server.so`{.filename}]{.term}   contains API functions for writing [Wayland]{.application} compositors
+  <a id="wayland-scanner"></a><span class="command"><span class="term"><strong>wayland-scanner</strong></span></span>       is a tool to generate proxy methods in wayland-client-protocol.h and wayland-server-protocol.h
+  <a id="libwayland-client"></a><span class="term"><code class="filename">libwayland-client.so</code></span>   contains API functions for writing <span class="application">Wayland</span> applications
+  <a id="libwayland-cursor"></a><span class="term"><code class="filename">libwayland-cursor.so</code></span>   contains API functions for managing cursors in <span class="application">Wayland</span> applications
+  <a id="libwayland-egl"></a><span class="term"><code class="filename">libwayland-egl.so</code></span>         contains API functions for handling OpenGL calls in <span class="application">Wayland</span> applications
+  <a id="libwayland-server"></a><span class="term"><code class="filename">libwayland-server.so</code></span>   contains API functions for writing <span class="application">Wayland</span> compositors
   ------------------------------------------------------------------ ------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](utfcpp.md "utfcpp-4.1.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](utfcpp.md "utfcpp-4.1.1")
 
     utfcpp-4.1.1
 
--   [Next](wayland-protocols.md "Wayland-Protocols-1.48"){accesskey="n"}
+-   [Next](wayland-protocols.md "Wayland-Protocols-1.48")
 
     Wayland-Protocols-1.48
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

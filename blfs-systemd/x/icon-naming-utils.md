@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 28. Icons
 
--   [Prev](hicolor-icon-theme.md "hicolor-icon-theme-0.18"){accesskey="p"}
+-   [Prev](hicolor-icon-theme.md "hicolor-icon-theme-0.18")
 
     hicolor-icon-theme-0.18
 
--   [Next](lxde-icon-theme.md "lxde-icon-theme-0.5.1"){accesskey="n"}
+-   [Next](lxde-icon-theme.md "lxde-icon-theme-0.5.1")
 
     lxde-icon-theme-0.5.1
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#icon-naming-utils}icon-naming-utils-0.8.90 {#icon-naming-utils-0.8.90 .sect1}
+# icon-naming-utils-0.8.90 {#icon-naming-utils-0.8.90}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to icon-naming-utils {#introduction-to-icon-naming-utils .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to icon-naming-utils {#introduction-to-icon-naming-utils}
 
-The [icon-naming-utils]{.application} package contains a [Perl]{.application} script used for maintaining backwards compatibility with current desktop icon themes, while migrating to the names specified in the [Icon Naming Specification](https://specifications.freedesktop.org/icon-naming-spec/latest/){.ulink}.
+The <span class="application">icon-naming-utils</span> package contains a <span class="application">Perl</span> script used for maintaining backwards compatibility with current desktop icon themes, while migrating to the names specified in the <a class="ulink" href="https://specifications.freedesktop.org/icon-naming-spec/latest/">Icon Naming Specification</a>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.bz2](https://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.bz2">https://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.bz2</a>
 
 -   Download MD5 sum: dd8108b56130b9eedc4042df634efa66
 
@@ -44,73 +44,73 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 440 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### icon-naming-utils Dependencies
 
 #### Required
 
-[XML-Simple-2.25](../general/perl-modules.md#perl-xml-simple "XML::Simple-2.25"){.xref}
-:::::
+<a class="xref" href="../general/perl-modules.md#perl-xml-simple" title="XML::Simple-2.25">XML-Simple-2.25</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of icon-naming-utils {#installation-of-icon-naming-utils .sect2}
+<div class="installation" lang="en">
+## Installation of icon-naming-utils {#installation-of-icon-naming-utils}
 
-Install [icon-naming-utils]{.application} by running the following commands:
+Install <span class="application">icon-naming-utils</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [icon-name-mapping]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">icon-name-mapping</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/dtds and /usr/share/icon-naming-utils]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/dtds and /usr/share/icon-naming-utils</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#icon-name-mapping}[[**icon-name-mapping**]{.command}]{.term}   is a [Perl]{.application} script used for maintaining backwards compatibility with current desktop icon themes, while migrating to the names specified in the Icon Naming Specification
+  <a id="icon-name-mapping"></a><span class="command"><span class="term"><strong>icon-name-mapping</strong></span></span>   is a <span class="application">Perl</span> script used for maintaining backwards compatibility with current desktop icon themes, while migrating to the names specified in the Icon Naming Specification
   ------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](hicolor-icon-theme.md "hicolor-icon-theme-0.18"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](hicolor-icon-theme.md "hicolor-icon-theme-0.18")
 
     hicolor-icon-theme-0.18
 
--   [Next](lxde-icon-theme.md "lxde-icon-theme-0.5.1"){accesskey="n"}
+-   [Next](lxde-icon-theme.md "lxde-icon-theme-0.5.1")
 
     lxde-icon-theme-0.5.1
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

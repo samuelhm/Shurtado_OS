@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](tk.md "Tk-8.6.18"){accesskey="p"}
+-   [Prev](tk.md "Tk-8.6.18")
 
     Tk-8.6.18
 
--   [Next](vala.md "Vala-0.56.19"){accesskey="n"}
+-   [Next](vala.md "Vala-0.56.19")
 
     Vala-0.56.19
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#unifdef}unifdef-2.12 {#unifdef-2.12 .sect1}
+# unifdef-2.12 {#unifdef-2.12}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to unifdef {#introduction-to-unifdef .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to unifdef {#introduction-to-unifdef}
 
-The [unifdef]{.application} package contains a utility that is useful for removing preprocessor conditionals from code.
+The <span class="application">unifdef</span> package contains a utility that is useful for removing preprocessor conditionals from code.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://dotat.at/prog/unifdef/unifdef-2.12.tar.gz](https://dotat.at/prog/unifdef/unifdef-2.12.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://dotat.at/prog/unifdef/unifdef-2.12.tar.gz">https://dotat.at/prog/unifdef/unifdef-2.12.tar.gz</a>
 
 -   Download MD5 sum: b225312c110cd2600ca7166bd0419751
 
@@ -44,79 +44,79 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.9 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of unifdef {#installation-of-unifdef .sect2}
+<div class="installation" lang="en">
+## Installation of unifdef {#installation-of-unifdef}
 
 First, fix a problem when building with gcc-15:
 
-``` userinput
+```bash
 sed -i 's/constexpr/unifdef_&/g' unifdef.c
 ```
 
 Now fix a problem if reinstalling the package:
 
-``` userinput
+```bash
 sed -i 's/ln -s/ln -sf/' Makefile
 ```
 
-Install [unifdef]{.application} by running the following commands:
+Install <span class="application">unifdef</span> by running the following commands:
 
-``` userinput
+```bash
 make
 ```
 
-To test the results, issue: [**LC_ALL=C make test**]{.command}.
+To test the results, issue: <span class="command"><strong>LC_ALL=C make test</strong></span>.
 
-Finally, finish the installation as the `root`{.systemitem} user:
+Finally, finish the installation as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make prefix=/usr install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [unifdef and unifdefall]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">unifdef and unifdefall</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------------------------
-  []{#unifdef-prog}[[**unifdef**]{.command}]{.term}    removes preprocessor conditionals from code
-  []{#unifdefall}[[**unifdefall**]{.command}]{.term}   removes preprocessor conditionals from code across a whole tree
+  <a id="unifdef-prog"></a><span class="command"><span class="term"><strong>unifdef</strong></span></span>    removes preprocessor conditionals from code
+  <a id="unifdefall"></a><span class="command"><span class="term"><strong>unifdefall</strong></span></span>   removes preprocessor conditionals from code across a whole tree
   ---------------------------------------------------- -----------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](tk.md "Tk-8.6.18"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](tk.md "Tk-8.6.18")
 
     Tk-8.6.18
 
--   [Next](vala.md "Vala-0.56.19"){accesskey="n"}
+-   [Next](vala.md "Vala-0.56.19")
 
     Vala-0.56.19
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

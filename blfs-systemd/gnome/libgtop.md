@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](libgee.md "libgee-0.20.8"){accesskey="p"}
+-   [Prev](libgee.md "libgee-0.20.8")
 
     libgee-0.20.8
 
--   [Next](gweather-locations.md "gweather-locations-2026.2"){accesskey="n"}
+-   [Next](gweather-locations.md "gweather-locations-2026.2")
 
     gweather-locations-2026.2
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libgtop}libgtop-2.41.3 {#libgtop-2.41.3 .sect1}
+# libgtop-2.41.3 {#libgtop-2.41.3}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libgtop {#introduction-to-libgtop .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libgtop {#introduction-to-libgtop}
 
-The [libgtop]{.application} package contains a library for accessing system performance data.
+The <span class="application">libgtop</span> package contains a library for accessing system performance data.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libgtop/2.41/libgtop-2.41.3.tar.xz](https://download.gnome.org/sources/libgtop/2.41/libgtop-2.41.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libgtop/2.41/libgtop-2.41.3.tar.xz">https://download.gnome.org/sources/libgtop/2.41/libgtop-2.41.3.tar.xz</a>
 
 -   Download MD5 sum: 465db9f4f695c298d9c48dcf7f32a9c0
 
@@ -44,85 +44,85 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 19 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### libgtop Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (GObject Introspection recommended) and [Xorg Libraries](../x/x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection recommended) and <a class="xref" href="../x/x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libgtop {#installation-of-libgtop .sect2}
+<div class="installation" lang="en">
+## Installation of libgtop {#installation-of-libgtop}
 
-Install [libgtop]{.application} by running the following commands:
+Install <span class="application">libgtop</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-gtk-doc`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
-:::
+<code class="option">--enable-gtk-doc</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [libgtop_daemon2 and libgtop_server2]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">libgtop_daemon2 and libgtop_server2</span>
+</div>
 
-::: seg
-**Installed Library:** [libgtop-2.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgtop-2.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libgtop-2.0 and /usr/share/gtk-doc/html/libgtop]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libgtop-2.0 and /usr/share/gtk-doc/html/libgtop</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------------------------
-  []{#libgtop-2}[`libgtop-2.0.so`{.filename}]{.term}   contains functions that allow access to system performance data
+  <a id="libgtop-2"></a><span class="term"><code class="filename">libgtop-2.0.so</code></span>   contains functions that allow access to system performance data
   ---------------------------------------------------- -----------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libgee.md "libgee-0.20.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libgee.md "libgee-0.20.8")
 
     libgee-0.20.8
 
--   [Next](gweather-locations.md "gweather-locations-2026.2"){accesskey="n"}
+-   [Next](gweather-locations.md "gweather-locations-2026.2")
 
     gweather-locations-2026.2
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

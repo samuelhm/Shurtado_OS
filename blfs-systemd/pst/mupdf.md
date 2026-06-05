@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 50. PostScript
 
--   [Prev](fop.md "fop-2.11"){accesskey="p"}
+-   [Prev](fop.md "fop-2.11")
 
     fop-2.11
 
--   [Next](paps.md "paps-0.8.0"){accesskey="n"}
+-   [Next](paps.md "paps-0.8.0")
 
     paps-0.8.0
 
--   [Up](ps.md "Chapter 50. PostScript"){accesskey="u"}
+-   [Up](ps.md "Chapter 50. PostScript")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#mupdf}MuPDF-1.26.12 {#mupdf-1.26.12 .sect1}
+# MuPDF-1.26.12 {#mupdf-1.26.12}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to MuPDF {#introduction-to-mupdf .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to MuPDF {#introduction-to-mupdf}
 
-[MuPDF]{.application} is a lightweight PDF and XPS viewer.
+<span class="application">MuPDF</span> is a lightweight PDF and XPS viewer.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.mupdf.com/downloads/archive/mupdf-1.26.12-source.tar.gz](https://www.mupdf.com/downloads/archive/mupdf-1.26.12-source.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.mupdf.com/downloads/archive/mupdf-1.26.12-source.tar.gz">https://www.mupdf.com/downloads/archive/mupdf-1.26.12-source.tar.gz</a>
 
 -   Download MD5 sum: d10eb7e1ef0f4a44f5c14a29b9d6f906
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 295 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### MuPDF Dependencies
 
 #### Required
 
-[Xorg Libraries](../x/x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="../x/x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Recommended
 
-[Brotli-1.2.0](../general/brotli.md "brotli-1.2.0"){.xref}, [Freeglut-3.8.0](../x/freeglut.md "Freeglut-3.8.0"){.xref}, [harfBuzz-14.2.1](../general/harfbuzz.md "harfBuzz-14.2.1"){.xref}, [libjpeg-turbo-3.1.4.1](../general/libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [OpenJPEG-2.5.4](../general/openjpeg2.md "OpenJPEG-2.5.4"){.xref}, and [cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}
+<a class="xref" href="../general/brotli.md" title="brotli-1.2.0">Brotli-1.2.0</a>, <a class="xref" href="../x/freeglut.md" title="Freeglut-3.8.0">Freeglut-3.8.0</a>, <a class="xref" href="../general/harfbuzz.md" title="harfBuzz-14.2.1">harfBuzz-14.2.1</a>, <a class="xref" href="../general/libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="../general/openjpeg2.md" title="OpenJPEG-2.5.4">OpenJPEG-2.5.4</a>, and <a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>
 
 #### Optional
 
-[zxing-cpp-3.0.2](../general/zxing-cpp.md "zxing-cpp-3.0.2"){.xref}, [xdg-utils-1.2.1](../xsoft/xdg-utils.md "xdg-utils-1.2.1"){.xref} (runtime), [jbig2dec](https://jbig2dec.com){.ulink}, and [MuJS](https://mujs.com/){.ulink}
+<a class="xref" href="../general/zxing-cpp.md" title="zxing-cpp-3.0.2">zxing-cpp-3.0.2</a>, <a class="xref" href="../xsoft/xdg-utils.md" title="xdg-utils-1.2.1">xdg-utils-1.2.1</a> (runtime), <a class="ulink" href="https://jbig2dec.com">jbig2dec</a>, and <a class="ulink" href="https://mujs.com/">MuJS</a>
 
 #### Required (runtime)
 
-[a graphical environment](../x/installing.md "Chapter 24. Graphical Environments"){.xref}
-:::::
+<a class="xref" href="../x/installing.md" title="Chapter 24. Graphical Environments">a graphical environment</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of MuPDF {#installation-of-mupdf .sect2}
+<div class="installation" lang="en">
+## Installation of MuPDF {#installation-of-mupdf}
 
-Install [MuPDF]{.application} by running the following commands:
+Install <span class="application">MuPDF</span> by running the following commands:
 
-``` userinput
+```bash
 cat > user.make << EOF &&
 USE_SYSTEM_BROTLI := yes
 USE_SYSTEM_FREETYPE := yes
@@ -94,9 +94,9 @@ unset XCFLAGS
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make prefix=/usr                         \
      shared=yes                          \
      docdir=/usr/share/doc/mupdf-1.26.12 \
@@ -108,60 +108,60 @@ chmod 755 /usr/lib/libmupdf.so.26.12              &&
 
 ln -sfv mupdf-x11 /usr/bin/mupdf
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**ln -sfv mupdf-x11 /usr/bin/mupdf**]{.command} : This symbolic link chooses between [**mupdf-gl**]{.command} and [**mupdf-x11**]{.command} when running [**mupdf**]{.command}.
+<span class="command"><strong>ln -sfv mupdf-x11 /usr/bin/mupdf</strong></span> : This symbolic link chooses between <span class="command"><strong>mupdf-gl</strong></span> and <span class="command"><strong>mupdf-x11</strong></span> when running <span class="command"><strong>mupdf</strong></span>.
 
-`barcode=yes`{.option}: Pass this option to [**make**]{.command} if you want barcode support. This will use the [zxing-cpp]{.application} library included in the package. If you want to use the system [zxing-cpp-3.0.2](../general/zxing-cpp.md "zxing-cpp-3.0.2"){.xref}, you should add [**USE_SYSTEM_ZXINGCPP := yes**]{.command} to `user.make`{.filename}.
-:::
+<code class="option">barcode=yes</code>: Pass this option to <span class="command"><strong>make</strong></span> if you want barcode support. This will use the <span class="application">zxing-cpp</span> library included in the package. If you want to use the system <a class="xref" href="../general/zxing-cpp.md" title="zxing-cpp-3.0.2">zxing-cpp-3.0.2</a>, you should add <span class="command"><strong>USE_SYSTEM_ZXINGCPP := yes</strong></span> to <code class="filename">user.make</code>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [mupdf (symlink), mupdf-gl, mupdf-x11, mupdf-x11-curl, muraster, and mutool]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">mupdf (symlink), mupdf-gl, mupdf-x11, mupdf-x11-curl, muraster, and mutool</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libmupdf.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libmupdf.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/mupdf, /usr/share/doc/mupdf-1.26.12]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/mupdf, /usr/share/doc/mupdf-1.26.12</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------
-  []{#mupdf-prog}[[**mupdf**]{.command}]{.term}      is a program for viewing PDF, XPS, EPUB, and CBZ documents, and various image formats such as PNG, JPEG, GIFF, and TIFF
-  []{#mupdf-gl}[[**mupdf-gl**]{.command}]{.term}     same as [**mupdf**]{.command}, using an opengl renderer
-  []{#mupdf-x11}[[**mupdf-x11**]{.command}]{.term}   same as [**mupdf**]{.command}, using an X Window renderer
-  []{#muraster}[[**muraster**]{.command}]{.term}     is a program used to perform rasterization tasks with PDF documents
-  []{#mutool}[[**mutool**]{.command}]{.term}         is a program to perform various operations on PDF files, such as merging and cleaning PDF documents
-  []{#libmupdf}[`libmupdf.so`{.filename}]{.term}     contains the mupdf API functions
+  <a id="mupdf-prog"></a><span class="command"><span class="term"><strong>mupdf</strong></span></span>      is a program for viewing PDF, XPS, EPUB, and CBZ documents, and various image formats such as PNG, JPEG, GIFF, and TIFF
+  <a id="mupdf-gl"></a><span class="command"><span class="term"><strong>mupdf-gl</strong></span></span>     same as <span class="command"><strong>mupdf</strong></span>, using an opengl renderer
+  <a id="mupdf-x11"></a><span class="command"><span class="term"><strong>mupdf-x11</strong></span></span>   same as <span class="command"><strong>mupdf</strong></span>, using an X Window renderer
+  <a id="muraster"></a><span class="command"><span class="term"><strong>muraster</strong></span></span>     is a program used to perform rasterization tasks with PDF documents
+  <a id="mutool"></a><span class="command"><span class="term"><strong>mutool</strong></span></span>         is a program to perform various operations on PDF files, such as merging and cleaning PDF documents
+  <a id="libmupdf"></a><span class="term"><code class="filename">libmupdf.so</code></span>     contains the mupdf API functions
   -------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](fop.md "fop-2.11"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](fop.md "fop-2.11")
 
     fop-2.11
 
--   [Next](paps.md "paps-0.8.0"){accesskey="n"}
+-   [Next](paps.md "paps-0.8.0")
 
     paps-0.8.0
 
--   [Up](ps.md "Chapter 50. PostScript"){accesskey="u"}
+-   [Up](ps.md "Chapter 50. PostScript")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

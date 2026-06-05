@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](desktop-file-utils.md "desktop-file-utils-0.28"){accesskey="p"}
+-   [Prev](desktop-file-utils.md "desktop-file-utils-0.28")
 
     desktop-file-utils-0.28
 
--   [Next](editorconfig-core-c.md "editorconfig-core-c-0.12.11"){accesskey="n"}
+-   [Next](editorconfig-core-c.md "editorconfig-core-c-0.12.11")
 
     editorconfig-core-c-0.12.11
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dos2unix}dos2unix-7.5.6 {#dos2unix-7.5.6 .sect1}
+# dos2unix-7.5.6 {#dos2unix-7.5.6}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to dos2unix {#introduction-to-dos2unix .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to dos2unix {#introduction-to-dos2unix}
 
-The [dos2unix]{.application} package contains an any-to-any text format converter.
+The <span class="application">dos2unix</span> package contains an any-to-any text format converter.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/dos2unix/dos2unix-7.5.6.tar.gz](https://downloads.sourceforge.net/dos2unix/dos2unix-7.5.6.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/dos2unix/dos2unix-7.5.6.tar.gz">https://downloads.sourceforge.net/dos2unix/dos2unix-7.5.6.tar.gz</a>
 
 -   Download MD5 sum: 0cda65d5e461b1d8162bf1194a669531
 
@@ -44,69 +44,69 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.9 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of dos2unix {#installation-of-dos2unix .sect2}
+<div class="installation" lang="en">
+## Installation of dos2unix {#installation-of-dos2unix}
 
-Build [dos2unix]{.application} by running the following commands:
+Build <span class="application">dos2unix</span> by running the following commands:
 
-``` userinput
+```bash
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [dos2unix, mac2unix, unix2dos, and unix2mac]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">dos2unix, mac2unix, unix2dos, and unix2mac</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/dos2unix-7.5.6]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/dos2unix-7.5.6</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- --------------------------------------------------------
-  []{#dos2unix-prog}[[**dos2unix**]{.command}]{.term}   converts plain text files in DOS format to Unix format
-  []{#mac2unix}[[**mac2unix**]{.command}]{.term}        converts plain text files in Mac format to Unix format
-  []{#unix2dos}[[**unix2dos**]{.command}]{.term}        converts plain text files in Unix format to DOS format
-  []{#unix2mac}[[**unix2mac**]{.command}]{.term}        converts plain text files in Unix format to Mac format
+  <a id="dos2unix-prog"></a><span class="command"><span class="term"><strong>dos2unix</strong></span></span>   converts plain text files in DOS format to Unix format
+  <a id="mac2unix"></a><span class="command"><span class="term"><strong>mac2unix</strong></span></span>        converts plain text files in Mac format to Unix format
+  <a id="unix2dos"></a><span class="command"><span class="term"><strong>unix2dos</strong></span></span>        converts plain text files in Unix format to DOS format
+  <a id="unix2mac"></a><span class="command"><span class="term"><strong>unix2mac</strong></span></span>        converts plain text files in Unix format to Mac format
   ----------------------------------------------------- --------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](desktop-file-utils.md "desktop-file-utils-0.28"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](desktop-file-utils.md "desktop-file-utils-0.28")
 
     desktop-file-utils-0.28
 
--   [Next](editorconfig-core-c.md "editorconfig-core-c-0.12.11"){accesskey="n"}
+-   [Next](editorconfig-core-c.md "editorconfig-core-c-0.12.11")
 
     editorconfig-core-c-0.12.11
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

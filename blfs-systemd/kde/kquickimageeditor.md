@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 32. KDE Plasma
 
--   [Prev](qtkeychain.md "qtkeychain-0.16.0"){accesskey="p"}
+-   [Prev](qtkeychain.md "qtkeychain-0.16.0")
 
     qtkeychain-0.16.0
 
--   [Next](bolt.md "bolt-0.9.11"){accesskey="n"}
+-   [Next](bolt.md "bolt-0.9.11")
 
     bolt-0.9.11
 
--   [Up](plasma.md "Chapter 32. KDE Plasma"){accesskey="u"}
+-   [Up](plasma.md "Chapter 32. KDE Plasma")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kquickimageeditor}kquickimageeditor-0.6.1 {#kquickimageeditor-0.6.1 .sect1}
+# kquickimageeditor-0.6.1 {#kquickimageeditor-0.6.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to kquickimageeditor {#introduction-to-kquickimageeditor .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to kquickimageeditor {#introduction-to-kquickimageeditor}
 
 This package provides a set of QtQuick components providing basic image editing capabilities.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/KDE/kquickimageeditor/archive/v0.6.1/kquickimageeditor-0.6.1.tar.gz](https://github.com/KDE/kquickimageeditor/archive/v0.6.1/kquickimageeditor-0.6.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/KDE/kquickimageeditor/archive/v0.6.1/kquickimageeditor-0.6.1.tar.gz">https://github.com/KDE/kquickimageeditor/archive/v0.6.1/kquickimageeditor-0.6.1.tar.gz</a>
 
 -   Download MD5 sum: 26e15ed5f8da5b938c8db52b63830588
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 22 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### kquickimageeditor Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>
 
 #### Optional
 
-[opencv-4.13.0](../general/opencv.md "opencv-4.13.0"){.xref}
-:::::
+<a class="xref" href="../general/opencv.md" title="opencv-4.13.0">opencv-4.13.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of kquickimageeditor {#installation-of-kquickimageeditor .sect2}
+<div class="installation" lang="en">
+## Installation of kquickimageeditor {#installation-of-kquickimageeditor}
 
-Install [kquickimageeditor]{.application} by running the following commands:
+Install <span class="application">kquickimageeditor</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -75,44 +75,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libKQuickImageEditor.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libKQuickImageEditor.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/include/KQuickImageEditor, \$KF6_PREFIX/include/kquickimageeditor, \$KF6_PREFIX/lib/cmake/KQuickImageEditor, and \$KF6_PREFIX/lib/qml/org/kde/kquickimageeditor]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/include/KQuickImageEditor, \$KF6_PREFIX/include/kquickimageeditor, \$KF6_PREFIX/lib/cmake/KQuickImageEditor, and \$KF6_PREFIX/lib/qml/org/kde/kquickimageeditor</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qtkeychain.md "qtkeychain-0.16.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qtkeychain.md "qtkeychain-0.16.0")
 
     qtkeychain-0.16.0
 
--   [Next](bolt.md "bolt-0.9.11"){accesskey="n"}
+-   [Next](bolt.md "bolt-0.9.11")
 
     bolt-0.9.11
 
--   [Up](plasma.md "Chapter 32. KDE Plasma"){accesskey="u"}
+-   [Up](plasma.md "Chapter 32. KDE Plasma")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

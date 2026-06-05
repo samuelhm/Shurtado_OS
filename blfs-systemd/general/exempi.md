@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](enchant.md "enchant-2.8.16"){accesskey="p"}
+-   [Prev](enchant.md "enchant-2.8.16")
 
     enchant-2.8.16
 
--   [Next](fast_float.md "fast_float-8.2.6"){accesskey="n"}
+-   [Next](fast_float.md "fast_float-8.2.6")
 
     fast_float-8.2.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#exempi}Exempi-2.6.6 {#exempi-2.6.6 .sect1}
+# Exempi-2.6.6 {#exempi-2.6.6}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Exempi {#introduction-to-exempi .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Exempi {#introduction-to-exempi}
 
-[Exempi]{.application} is an implementation of XMP (Adobe's Extensible Metadata Platform).
+<span class="application">Exempi</span> is an implementation of XMP (Adobe's Extensible Metadata Platform).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://libopenraw.freedesktop.org/download/exempi-2.6.6.tar.xz](https://libopenraw.freedesktop.org/download/exempi-2.6.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://libopenraw.freedesktop.org/download/exempi-2.6.6.tar.xz">https://libopenraw.freedesktop.org/download/exempi-2.6.6.tar.xz</a>
 
 -   Download MD5 sum: f955e63dbd7b91c016f802c678e0e773
 
@@ -44,91 +44,91 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 319 MB (add 245 MB for tests)
 
 -   Estimated build time: 0.4 SBU (add 0.5 SBU for tests; both using parallelism=4)
-:::
+</div>
 
 ### Exempi Dependencies
 
 #### Required
 
-[Boost-1.91.0-1](boost.md "boost-1.91.0-1"){.xref}
+<a class="xref" href="boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a>
 
 #### Optional
 
-[Valgrind-3.27.1](valgrind.md "Valgrind-3.27.1"){.xref}
-:::::
+<a class="xref" href="valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Exempi {#installation-of-exempi .sect2}
+<div class="installation" lang="en">
+## Installation of Exempi {#installation-of-exempi}
 
 If you intend to run the regression tests, first remove a test that depends on a proprietary Adobe SDK:
 
-``` userinput
+```bash
 sed -i -r '/^\s?testadobesdk/d' exempi/Makefile.am &&
 autoreconf -fiv
 ```
 
-Install [Exempi]{.application} by running the following commands:
+Install <span class="application">Exempi</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [exempi]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">exempi</span>
+</div>
 
-::: seg
-**Installed Library:** [libexempi.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libexempi.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/exempi-2.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/exempi-2.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ---------------------------------------------------
-  []{#exempi-prog}[[**exempi**]{.command}]{.term}    is a command line tool to manipulate XMP metadata
-  []{#libexempi}[`libexempi.so`{.filename}]{.term}   is a library used to parse XMP metadata
+  <a id="exempi-prog"></a><span class="command"><span class="term"><strong>exempi</strong></span></span>    is a command line tool to manipulate XMP metadata
+  <a id="libexempi"></a><span class="term"><code class="filename">libexempi.so</code></span>   is a library used to parse XMP metadata
   -------------------------------------------------- ---------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](enchant.md "enchant-2.8.16"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](enchant.md "enchant-2.8.16")
 
     enchant-2.8.16
 
--   [Next](fast_float.md "fast_float-8.2.6"){accesskey="n"}
+-   [Next](fast_float.md "fast_float-8.2.6")
 
     fast_float-8.2.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

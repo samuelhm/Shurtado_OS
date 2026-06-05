@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 22. Databases
 
--   [Prev](mariadb.md "MariaDB-12.3.2"){accesskey="p"}
+-   [Prev](mariadb.md "MariaDB-12.3.2")
 
     MariaDB-12.3.2
 
--   [Next](other.md "Other Server Software"){accesskey="n"}
+-   [Next](other.md "Other Server Software")
 
     Other Server Software
 
--   [Up](databases.md "Chapter 22. Databases"){accesskey="u"}
+-   [Up](databases.md "Chapter 22. Databases")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#postgresql}PostgreSQL-18.4 {#postgresql-18.4 .sect1}
+# PostgreSQL-18.4 {#postgresql-18.4}
 
-:::::::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to PostgreSQL {#introduction-to-postgresql .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to PostgreSQL {#introduction-to-postgresql}
 
-[PostgreSQL]{.application} is an advanced object-relational database management system (ORDBMS), derived from the Berkeley Postgres database management system.
+<span class="application">PostgreSQL</span> is an advanced object-relational database management system (ORDBMS), derived from the Berkeley Postgres database management system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftp.postgresql.org/pub/source/v18.4/postgresql-18.4.tar.bz2](https://ftp.postgresql.org/pub/source/v18.4/postgresql-18.4.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftp.postgresql.org/pub/source/v18.4/postgresql-18.4.tar.bz2">https://ftp.postgresql.org/pub/source/v18.4/postgresql-18.4.tar.bz2</a>
 
 -   Download MD5 sum: f985597ebb8e71f338beb2bef974b6ed
 
@@ -44,43 +44,43 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 348 MB (with tests)
 
 -   Estimated build time: 1.0 SBU (with parallelism=4, add 0.1 SBU for tests)
-:::
+</div>
 
 ### PostgreSQL Dependencies
 
 #### Optional
 
-[ICU-78.3](../general/icu.md "icu-78.3"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref}, [OpenLDAP-2.6.13](openldap.md "OpenLDAP-2.6.13"){.xref}, [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} and [Bonjour](https://developer.apple.com/bonjour/){.ulink}
+<a class="xref" href="../general/icu.md" title="icu-78.3">ICU-78.3</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, <a class="xref" href="openldap.md" title="OpenLDAP-2.6.13">OpenLDAP-2.6.13</a>, <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> and <a class="ulink" href="https://developer.apple.com/bonjour/">Bonjour</a>
 
 #### Optional (To Generate Documentation)
 
-[fop-2.11](../pst/fop.md "fop-2.11"){.xref}, [docbook-4.5-dtd](../pst/docbook-4.5-dtd.md "docbook-4.5-dtd"){.xref}, [docbook-dsssl-1.79](../pst/docbook-dsssl.md "docbook-dsssl-1.79"){.xref}, [DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}, [OpenJade-1.3.2](../pst/openjade.md "OpenJade-1.3.2"){.xref}, and [SGMLSpm-1.1](../general/perl-modules.md#perl-sgmlspm "SGMLSpm-1.1"){.xref}
+<a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a>, <a class="xref" href="../pst/docbook-4.5-dtd.md" title="docbook-4.5-dtd">docbook-4.5-dtd</a>, <a class="xref" href="../pst/docbook-dsssl.md" title="docbook-dsssl-1.79">docbook-dsssl-1.79</a>, <a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>, <a class="xref" href="../pst/openjade.md" title="OpenJade-1.3.2">OpenJade-1.3.2</a>, and <a class="xref" href="../general/perl-modules.md#perl-sgmlspm" title="SGMLSpm-1.1">SGMLSpm-1.1</a>
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/postgresql](https://wiki.linuxfromscratch.org/blfs/wiki/postgresql){.ulink}
-:::::
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/postgresql">https://wiki.linuxfromscratch.org/blfs/wiki/postgresql</a>
+</div>
 
-::::::: {.installation lang="en"}
-## Installation of PostgreSQL {#installation-of-postgresql .sect2}
+<div class="installation" lang="en">
+## Installation of PostgreSQL {#installation-of-postgresql}
 
-For enhanced security, it is better to have a dedicated group and user for running the PostgreSQL server. First, issue as the `root`{.systemitem} user:
+For enhanced security, it is better to have a dedicated group and user for running the PostgreSQL server. First, issue as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -g 41 postgres &&
 useradd -c "PostgreSQL Server" -g postgres -d /srv/pgsql/data \
         -u 41 postgres
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-There are several configuration items that add additional functionality with optional packages to [PostgreSQL]{.application}. Use [**./configure --help**]{.command} to see a list.
-:::
+There are several configuration items that add additional functionality with optional packages to <span class="application">PostgreSQL</span>. Use <span class="command"><strong>./configure --help</strong></span> to see a list.
+</div>
 
-Install [PostgreSQL]{.application} with the following commands:
+Install <span class="application">PostgreSQL</span> with the following commands:
 
-``` userinput
+```bash
 sed -e '/DEFAULT_PGSOCKET_DIR/s@/tmp@/run/postgresql@' \
     -i src/include/pg_config_manual.h                  &&
 
@@ -89,44 +89,44 @@ sed -e '/DEFAULT_PGSOCKET_DIR/s@/tmp@/run/postgresql@' \
 make
 ```
 
-There are a number of programs in the `contrib/`{.filename} directory. If you are going to run this installation as a server and wish to build some of them, enter [**make -C contrib**]{.command} or [**make -C contrib/*`<SUBDIR-NAME>`***]{.command} for each subdirectory.
+There are a number of programs in the <code class="filename">contrib/</code> directory. If you are going to run this installation as a server and wish to build some of them, enter <span class="command"><strong>make -C contrib</strong></span> or <span class="command"><strong>make -C contrib/<em>`<SUBDIR-NAME>`</strong></em></span> for each subdirectory.
 
-Tests must be run as an unprivileged user because they need to start a temporary server and this is prevented as the root user. For the same reason, you need to stop all PostgreSQL servers if any are running. If a previous version of PostgreSQL is installed, it may be necessary to use [**--disable-rpath**]{.command} with [**configure**]{.command} to avoid failures, but [*installing the binaries created using this switch is not recommended*]{.emphasis}. To test the results, issue: [**make check**]{.command}.
+Tests must be run as an unprivileged user because they need to start a temporary server and this is prevented as the root user. For the same reason, you need to stop all PostgreSQL servers if any are running. If a previous version of PostgreSQL is installed, it may be necessary to use <span class="command"><strong>--disable-rpath</strong></span> with <span class="command"><strong>configure</strong></span> to avoid failures, but <span class="emphasis"><em>installing the binaries created using this switch is not recommended</em></span>. To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-:::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you are installing [PostgreSQL]{.application} to upgrade an existing installation, there are important steps that you need to follow. If the major version of the new build is greater than the previous version, there is a chance that the data file format has changed. New software cannot use the existing data files. In this case, the server will not start because the old programs have been overwritten, so the data is unavailable until it's file format has been converted.
+If you are installing <span class="application">PostgreSQL</span> to upgrade an existing installation, there are important steps that you need to follow. If the major version of the new build is greater than the previous version, there is a chance that the data file format has changed. New software cannot use the existing data files. In this case, the server will not start because the old programs have been overwritten, so the data is unavailable until it's file format has been converted.
 
-Before upgrading an existing installation of PostgreSQL, check the documentation for any considerations that you must keep in mind during the upgrade. Note that new major versions might use a different binary format in the data objects, causing potential incompatibilities. For more information, please review upstream's documentation about upgrading PostgreSQL here: [https://www.postgresql.org/docs/current/upgrading.html](https://www.postgresql.org/docs/current/upgrading.md){.ulink}.
+Before upgrading an existing installation of PostgreSQL, check the documentation for any considerations that you must keep in mind during the upgrade. Note that new major versions might use a different binary format in the data objects, causing potential incompatibilities. For more information, please review upstream's documentation about upgrading PostgreSQL here: <a class="ulink" href="https://www.postgresql.org/docs/current/upgrading.md">https://www.postgresql.org/docs/current/upgrading.html</a>.
 
 At this point, you may have both the old and the new binaries installed on your filesystem. These binaries can be used to perform an upgrade of your existing database files. For the following instructions it is assumed that
 
-::: itemizedlist
--   The actual data files are stored in `/srv/pgsql/data`{.filename}
+<div class="itemizedlist">
+-   The actual data files are stored in <code class="filename">/srv/pgsql/data</code>
 
--   The upgraded data files will be stored in `/srv/pgsql/newdata`{.filename}
+-   The upgraded data files will be stored in <code class="filename">/srv/pgsql/newdata</code>
 
 -   There is enough disk space to hold the actual data files twice. The upgrade is not an inline upgrade but it will copy the data to new database files.
-:::
+</div>
 
 First, do a temporary install which makes access to the new binaries much easier:
 
-``` userinput
+```bash
 make DESTDIR=$(pwd)/DESTDIR install
 ```
 
-Next, create a directory which is writable by the `postgres`{.systemitem} user, as the `root`{.systemitem} user:
+Next, create a directory which is writable by the <code class="systemitem">postgres</code> user, as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 install -d -o postgres $(pwd)/DESTDIR/tmp
 ```
 
-Now, stop the existing instance of [PostgreSQL]{.application} and start the upgrade process as the `root`{.systemitem} user:
+Now, stop the existing instance of <span class="application">PostgreSQL</span> and start the upgrade process as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 pushd $(pwd)/DESTDIR/tmp
 systemctl stop postgresql
 su postgres -c "../usr/bin/initdb -D /srv/pgsql/newdata"
@@ -136,115 +136,115 @@ su postgres -c "../usr/bin/pg_upgrade \
 popd
 ```
 
-At this point, your database files are available in two locations on disk. The old data is located in `/srv/pgsql/data`{.filename}, and the new data is in `/srv/pgsql/newdata`{.filename}. Backing up the old database files is recommended before continuing.
+At this point, your database files are available in two locations on disk. The old data is located in <code class="filename">/srv/pgsql/data</code>, and the new data is in <code class="filename">/srv/pgsql/newdata</code>. Backing up the old database files is recommended before continuing.
 
-Next, remove the old database files, and rename the new data directory as the `root`{.systemitem} user:
+Next, remove the old database files, and rename the new data directory as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 rm -rf /srv/pgsql/data
 mv /srv/pgsql/newdata /srv/pgsql/data
 ```
-::::
+</div>
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you had the optional dependencies installed that are needed to generate the documentation, install it as the `root`{.systemitem} user:
+If you had the optional dependencies installed that are needed to generate the documentation, install it as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install-docs
 ```
 
-If you made any of the `contrib/`{.filename} programs, as the `root`{.systemitem} user:
+If you made any of the <code class="filename">contrib/</code> programs, as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 make -C contrib/<SUBDIR-NAME> install
 ```
 
-::: {.admon .tip}
+<div class="admon tip">
 ![\[Tip\]](../images/tip.png)
 
 ### Tip
 
-If you only intend to use [PostgreSQL]{.application} as a client to connect to a server on another machine, your installation is complete and you should not run the remaining commands.
-:::
+If you only intend to use <span class="application">PostgreSQL</span> as a client to connect to a server on another machine, your installation is complete and you should not run the remaining commands.
+</div>
 
-If you have upgraded an existing database, skip the rest of the commands because your database is ready to use. If this is the first time you install [PostgreSQL]{.application}, continue with the initialization.
+If you have upgraded an existing database, skip the rest of the commands because your database is ready to use. If this is the first time you install <span class="application">PostgreSQL</span>, continue with the initialization.
 
-Initialize a database cluster with the following commands issued by the `root`{.systemitem} user:
+Initialize a database cluster with the following commands issued by the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -dm700 /srv/pgsql/data &&
 install -v -dm755 /run/postgresql &&
 chown -Rv postgres:postgres /srv/pgsql /run/postgresql
 ```
 
-Now, initialize the database as the `root`{.systemitem} user:
+Now, initialize the database as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 su - postgres -c '/usr/bin/initdb -D /srv/pgsql/data'
 ```
-:::::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i ...**]{.command}: This sed changes the server socket location from `/tmp`{.filename} to `/run/postgresql`{.filename}.
+<span class="command"><strong>sed -i ...</strong></span>: This sed changes the server socket location from <code class="filename">/tmp</code> to <code class="filename">/run/postgresql</code>.
 
-`--with-openssl`{.option}: builds the package with support for [OpenSSL]{.application} encrypted connections.
+<code class="option">--with-openssl</code>: builds the package with support for <span class="application">OpenSSL</span> encrypted connections.
 
-`--with-perl`{.option}: builds the PL/Perl server-side language.
+<code class="option">--with-perl</code>: builds the PL/Perl server-side language.
 
-`--with-python`{.option}: builds the PL/Python server-side language.
+<code class="option">--with-python</code>: builds the PL/Python server-side language.
 
-`--with-tcl`{.option}: builds the PL/Tcl server-side language.
-:::
+<code class="option">--with-tcl</code>: builds the PL/Tcl server-side language.
+</div>
 
-::::::: {.configuration lang="en"}
-## Configuring PostgreSQL {#configuring-postgresql .sect2}
+<div class="configuration" lang="en">
+## Configuring PostgreSQL {#configuring-postgresql}
 
-::: {.sect3 lang="en"}
-### []{#postgresql-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`$PGDATA/pg_ident.con`{.filename}, `$PGDATA/pg_hba.conf`{.filename}, and `$PGDATA/postgresql.conf`{.filename}
+<code class="filename">$PGDATA/pg_ident.con</code>, <code class="filename">$PGDATA/pg_hba.conf</code>, and <code class="filename">$PGDATA/postgresql.conf</code>
 
-The `PGDATA`{.envar} environment variable is used to distinguish database clusters from one another by setting it to the value of the directory which contains the cluster desired. The three configuration files exist in every `PGDATA/`{.filename} directory. Details on the format of the files and the options that can be set in each can be found in `/usr/share/doc/postgresql-18.4/html/index.html`{.filename}.
-:::
+The <code class="envar">PGDATA</code> environment variable is used to distinguish database clusters from one another by setting it to the value of the directory which contains the cluster desired. The three configuration files exist in every <code class="filename">PGDATA/</code> directory. Details on the format of the files and the options that can be set in each can be found in <code class="filename">/usr/share/doc/postgresql-18.4/html/index.html</code>.
+</div>
 
-::: {.sect3 lang="en"}
-### []{#postgresql-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-Install the [`postgresql.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package:
+Install the <span class="phrase"><code class="filename">postgresql.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package:
 
-``` root
+```bash
 make install-postgresql
 ```
-:::
+</div>
 
-:::: {.sect3 lang="en"}
-### Starting the PostgreSQL Server and Creating a Sample Database {#starting-the-postgresql-server-and-creating-a-sample-database .sect3}
+<div class="sect3" lang="en">
+### Starting the PostgreSQL Server and Creating a Sample Database {#starting-the-postgresql-server-and-creating-a-sample-database}
 
-The database server can be manually started with the following command (as the `root`{.systemitem} user):
+The database server can be manually started with the following command (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 su - postgres -c '/usr/bin/postgres -D /srv/pgsql/data > \
                   /srv/pgsql/data/logfile 2>&1 &'
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you are scripting this part, you should wait for the server to start before going on, by adding for example [**sleep 2**]{.command} after the above command.
-:::
+If you are scripting this part, you should wait for the server to start before going on, by adding for example <span class="command"><strong>sleep 2</strong></span> after the above command.
+</div>
 
-The instructions below show how to create a database, add a table to it, insert some rows into the table and select them, to verify that the installation is working properly. Still as user `root`{.systemitem}, issue:
+The instructions below show how to create a database, add a table to it, insert some rows into the table and select them, to verify that the installation is working properly. Still as user <code class="systemitem">root</code>, issue:
 
-``` root
+```bash
 su - postgres -c '/usr/bin/createdb test' &&
 echo "create table t1 ( name varchar(20), state_province varchar(20) );" \
     | (su - postgres -c '/usr/bin/psql test ') &&
@@ -257,95 +257,95 @@ echo "insert into t1 values ('Jesse', 'Ontario');" \
 echo "select * from t1;" | (su - postgres -c '/usr/bin/psql test')
 ```
 
-When you are done with testing, you can shut down the server, by issuing as `root`{.systemitem}:
+When you are done with testing, you can shut down the server, by issuing as <code class="systemitem">root</code>:
 
-``` root
+```bash
 su - postgres -c "/usr/bin/pg_ctl stop -D /srv/pgsql/data"
 ```
-::::
-:::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [clusterdb, createdb, createuser, dropdb, dropuser, ecpg, initdb, pg_amcheck, pg_archivecleanup, pg_basebackup, pg_checksums, pg_config, pg_controldata, pg_ctl, pg_dump, pg_dumpall, pg_isready, pg_receivewal, pg_recvlogical, pg_resetwal, pg_restore, pg_rewind, pg_test_fsync, pg_test_timing, pg_upgrade, pg_verifybackup, pg_waldump, pgbench, postgres, psql, reindexdb, vacuumdb, optionally, if Tcl support has been built, pltcl_delmod, pltcl_listmod, pltcl_loadmod, and optionally (in contrib/) oid2name, pg_standby, vacuumlo, and many others]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">clusterdb, createdb, createuser, dropdb, dropuser, ecpg, initdb, pg_amcheck, pg_archivecleanup, pg_basebackup, pg_checksums, pg_config, pg_controldata, pg_ctl, pg_dump, pg_dumpall, pg_isready, pg_receivewal, pg_recvlogical, pg_resetwal, pg_restore, pg_rewind, pg_test_fsync, pg_test_timing, pg_upgrade, pg_verifybackup, pg_waldump, pgbench, postgres, psql, reindexdb, vacuumdb, optionally, if Tcl support has been built, pltcl_delmod, pltcl_listmod, pltcl_loadmod, and optionally (in contrib/) oid2name, pg_standby, vacuumlo, and many others</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libecpg.{so,a}, libecpg_compat.{so,a}, libpgcommon.a, libpgcommon_shlib.a, libpgfeutils.a, libpgport.a, libpgport_shlib.a, libpgtypes.{so,a}, libpq.{so,a}, various charset modules and optionally programming language modules under /usr/lib/postgresql]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libecpg.{so,a}, libecpg_compat.{so,a}, libpgcommon.a, libpgcommon_shlib.a, libpgfeutils.a, libpgport.a, libpgport_shlib.a, libpgtypes.{so,a}, libpq.{so,a}, various charset modules and optionally programming language modules under /usr/lib/postgresql</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/{libpq,postgresql}, /usr/lib/postgresql, /usr/share/{doc/postgresql-18.4,postgresql}, and /srv/pgsql]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/{libpq,postgresql}, /usr/lib/postgresql, /usr/share/{doc/postgresql-18.4,postgresql}, and /srv/pgsql</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#clusterdb}[[**clusterdb**]{.command}]{.term}                   is a utility for reclustering tables in a [PostgreSQL]{.application} database
-  []{#createdb}[[**createdb**]{.command}]{.term}                     creates a new [PostgreSQL]{.application} database
-  []{#createuser}[[**createuser**]{.command}]{.term}                 defines a new [PostgreSQL]{.application} user account
-  []{#dropdb}[[**dropdb**]{.command}]{.term}                         removes a [PostgreSQL]{.application} database
-  []{#dropuser}[[**dropuser**]{.command}]{.term}                     removes a [PostgreSQL]{.application} user account
-  []{#ecpg}[[**ecpg**]{.command}]{.term}                             is the embedded SQL preprocessor
-  []{#initdb}[[**initdb**]{.command}]{.term}                         creates a new database cluster
-  []{#oid2name}[[**oid2name**]{.command}]{.term}                     resolves OIDs (Object IDs) and file nodes in a PostgreSQL data directory
-  []{#pg_amcheck}[[**pg_amcheck**]{.command}]{.term}                 checks for corruption in one or more PostgreSQL databases
-  []{#pg_archivecleanup}[[**pg_archivecleanup**]{.command}]{.term}   cleans up PostgreSQL WAL (write-ahead log) archive files
-  []{#pg_basebackup}[[**pg_basebackup**]{.command}]{.term}           takes base backups of a running [PostgreSQL]{.application} cluster
-  []{#pg_checksums}[[**pg_checksums**]{.command}]{.term}             enables, disables, or checks data checksums in a [PostgreSQL]{.application} database cluster
-  []{#pg_config}[[**pg_config**]{.command}]{.term}                   retrieves [PostgreSQL]{.application} version information
-  []{#pg_controldata}[[**pg_controldata**]{.command}]{.term}         returns information initialized during [**initdb**]{.command}, such as the catalog version and server locale
-  []{#pg_ctl}[[**pg_ctl**]{.command}]{.term}                         controls stopping and starting the database server
-  []{#pg_dump}[[**pg_dump**]{.command}]{.term}                       dumps database data and metadata into scripts which are used to recreate the database
-  []{#pg_dumpall}[[**pg_dumpall**]{.command}]{.term}                 recursively calls [**pg_dump**]{.command} for each database in a cluster
-  []{#pg_isready}[[**pg_isready**]{.command}]{.term}                 checks the connection status of a PostgreSQL server
-  []{#pg_receivewal}[[**pg_receivewal**]{.command}]{.term}           is used to stream write-ahead logs from a PostgreSQL server
-  []{#pg_recvlogical}[[**pg_recvlogical**]{.command}]{.term}         controls PostgreSQL logical decoding streams
-  []{#pg_resetwal}[[**pg_resetwal**]{.command}]{.term}               resets the write-ahead log and other control information of a PostgreSQL database cluster
-  []{#pg_restore}[[**pg_restore**]{.command}]{.term}                 creates databases from dump files created by [**pg_dump**]{.command}
-  []{#pg_rewind}[[**pg_rewind**]{.command}]{.term}                   synchronizes a PostgreSQL data directory with another data directory that was forked from the first one
-  []{#pg_standby}[[**pg_standby**]{.command}]{.term}                 supports the creation of a PostgreSQL warm standby server
-  []{#pg_test_fsync}[[**pg_test_fsync**]{.command}]{.term}           determines the fastest wal_sync method for PostgreSQL
-  []{#pg_test_timing}[[**pg_test_timing**]{.command}]{.term}         measures timing overhead
-  []{#pg_upgrade}[[**pg_upgrade**]{.command}]{.term}                 upgrades a PostgreSQL server instance
-  []{#pg_verifybackup}[[**pg_verifybackup**]{.command}]{.term}       verifies the integrity of a base backup of a PostgreSQL cluster
-  []{#pg_waldump}[[**pg_waldump**]{.command}]{.term}                 displays a human-readable rendering of the write-ahead log of a PostgreSQL database cluster
-  []{#pgbench}[[**pgbench**]{.command}]{.term}                       runs a benchmark test on PostgreSQL
-  []{#pltcl_delmod}[[**pltcl_delmod**]{.command}]{.term}             is a support script used to delete a module from a PL/[Tcl]{.application} table. The command requires the [Pgtcl](https://flightaware.github.io/Pgtcl/){.ulink} package to be installed
-  []{#pltcl_listmod}[[**pltcl_listmod**]{.command}]{.term}           is a support script used to list the modules in a PL/[Tcl]{.application} table. The command requires the [Pgtcl](https://flightaware.github.io/Pgtcl/){.ulink} package to be installed
-  []{#pltcl_loadmod}[[**pltcl_loadmod**]{.command}]{.term}           is a support script used to load a module into a PL/[Tcl]{.application} table. The command requires the [Pgtcl](https://flightaware.github.io/Pgtcl/){.ulink} package to be installed
-  []{#postgres}[[**postgres**]{.command}]{.term}                     is the PostgreSQL database server
-  []{#psql}[[**psql**]{.command}]{.term}                             is a console based database shell
-  []{#reindexdb}[[**reindexdb**]{.command}]{.term}                   is a utility for rebuilding indexes in a database
-  []{#vacuumdb}[[**vacuumdb**]{.command}]{.term}                     compacts databases and generates statistics for the query analyzer
-  []{#vacuumlo}[[**vacuumlo**]{.command}]{.term}                     removes orphaned large objects from a PostgreSQL database
-  []{#libecpg}[`libecpg.{so,a}`{.filename}]{.term}                   contains functions to support embedded SQL in C programs
-  []{#libecpg_compat}[`libecpg_compat.{so,a}`{.filename}]{.term}     is the ecpg compatibility library
-  []{#libgport}[`libgport.a`{.filename}]{.term}                      is the port-specific subsystem of the Postgres backend
-  []{#libpgtypes}[`libpgtypes.{so,a}`{.filename}]{.term}             contains functions for dealing with Postgres data types
-  []{#libpq}[`libpq.{so,a}`{.filename}]{.term}                       is the C programmer's API to Postgres
+  <a id="clusterdb"></a><span class="command"><span class="term"><strong>clusterdb</strong></span></span>                   is a utility for reclustering tables in a <span class="application">PostgreSQL</span> database
+  <a id="createdb"></a><span class="command"><span class="term"><strong>createdb</strong></span></span>                     creates a new <span class="application">PostgreSQL</span> database
+  <a id="createuser"></a><span class="command"><span class="term"><strong>createuser</strong></span></span>                 defines a new <span class="application">PostgreSQL</span> user account
+  <a id="dropdb"></a><span class="command"><span class="term"><strong>dropdb</strong></span></span>                         removes a <span class="application">PostgreSQL</span> database
+  <a id="dropuser"></a><span class="command"><span class="term"><strong>dropuser</strong></span></span>                     removes a <span class="application">PostgreSQL</span> user account
+  <a id="ecpg"></a><span class="command"><span class="term"><strong>ecpg</strong></span></span>                             is the embedded SQL preprocessor
+  <a id="initdb"></a><span class="command"><span class="term"><strong>initdb</strong></span></span>                         creates a new database cluster
+  <a id="oid2name"></a><span class="command"><span class="term"><strong>oid2name</strong></span></span>                     resolves OIDs (Object IDs) and file nodes in a PostgreSQL data directory
+  <a id="pg_amcheck"></a><span class="command"><span class="term"><strong>pg_amcheck</strong></span></span>                 checks for corruption in one or more PostgreSQL databases
+  <a id="pg_archivecleanup"></a><span class="command"><span class="term"><strong>pg_archivecleanup</strong></span></span>   cleans up PostgreSQL WAL (write-ahead log) archive files
+  <a id="pg_basebackup"></a><span class="command"><span class="term"><strong>pg_basebackup</strong></span></span>           takes base backups of a running <span class="application">PostgreSQL</span> cluster
+  <a id="pg_checksums"></a><span class="command"><span class="term"><strong>pg_checksums</strong></span></span>             enables, disables, or checks data checksums in a <span class="application">PostgreSQL</span> database cluster
+  <a id="pg_config"></a><span class="command"><span class="term"><strong>pg_config</strong></span></span>                   retrieves <span class="application">PostgreSQL</span> version information
+  <a id="pg_controldata"></a><span class="command"><span class="term"><strong>pg_controldata</strong></span></span>         returns information initialized during <span class="command"><strong>initdb</strong></span>, such as the catalog version and server locale
+  <a id="pg_ctl"></a><span class="command"><span class="term"><strong>pg_ctl</strong></span></span>                         controls stopping and starting the database server
+  <a id="pg_dump"></a><span class="command"><span class="term"><strong>pg_dump</strong></span></span>                       dumps database data and metadata into scripts which are used to recreate the database
+  <a id="pg_dumpall"></a><span class="command"><span class="term"><strong>pg_dumpall</strong></span></span>                 recursively calls <span class="command"><strong>pg_dump</strong></span> for each database in a cluster
+  <a id="pg_isready"></a><span class="command"><span class="term"><strong>pg_isready</strong></span></span>                 checks the connection status of a PostgreSQL server
+  <a id="pg_receivewal"></a><span class="command"><span class="term"><strong>pg_receivewal</strong></span></span>           is used to stream write-ahead logs from a PostgreSQL server
+  <a id="pg_recvlogical"></a><span class="command"><span class="term"><strong>pg_recvlogical</strong></span></span>         controls PostgreSQL logical decoding streams
+  <a id="pg_resetwal"></a><span class="command"><span class="term"><strong>pg_resetwal</strong></span></span>               resets the write-ahead log and other control information of a PostgreSQL database cluster
+  <a id="pg_restore"></a><span class="command"><span class="term"><strong>pg_restore</strong></span></span>                 creates databases from dump files created by <span class="command"><strong>pg_dump</strong></span>
+  <a id="pg_rewind"></a><span class="command"><span class="term"><strong>pg_rewind</strong></span></span>                   synchronizes a PostgreSQL data directory with another data directory that was forked from the first one
+  <a id="pg_standby"></a><span class="command"><span class="term"><strong>pg_standby</strong></span></span>                 supports the creation of a PostgreSQL warm standby server
+  <a id="pg_test_fsync"></a><span class="command"><span class="term"><strong>pg_test_fsync</strong></span></span>           determines the fastest wal_sync method for PostgreSQL
+  <a id="pg_test_timing"></a><span class="command"><span class="term"><strong>pg_test_timing</strong></span></span>         measures timing overhead
+  <a id="pg_upgrade"></a><span class="command"><span class="term"><strong>pg_upgrade</strong></span></span>                 upgrades a PostgreSQL server instance
+  <a id="pg_verifybackup"></a><span class="command"><span class="term"><strong>pg_verifybackup</strong></span></span>       verifies the integrity of a base backup of a PostgreSQL cluster
+  <a id="pg_waldump"></a><span class="command"><span class="term"><strong>pg_waldump</strong></span></span>                 displays a human-readable rendering of the write-ahead log of a PostgreSQL database cluster
+  <a id="pgbench"></a><span class="command"><span class="term"><strong>pgbench</strong></span></span>                       runs a benchmark test on PostgreSQL
+  <a id="pltcl_delmod"></a><span class="command"><span class="term"><strong>pltcl_delmod</strong></span></span>             is a support script used to delete a module from a PL/<span class="application">Tcl</span> table. The command requires the <a class="ulink" href="https://flightaware.github.io/Pgtcl/">Pgtcl</a> package to be installed
+  <a id="pltcl_listmod"></a><span class="command"><span class="term"><strong>pltcl_listmod</strong></span></span>           is a support script used to list the modules in a PL/<span class="application">Tcl</span> table. The command requires the <a class="ulink" href="https://flightaware.github.io/Pgtcl/">Pgtcl</a> package to be installed
+  <a id="pltcl_loadmod"></a><span class="command"><span class="term"><strong>pltcl_loadmod</strong></span></span>           is a support script used to load a module into a PL/<span class="application">Tcl</span> table. The command requires the <a class="ulink" href="https://flightaware.github.io/Pgtcl/">Pgtcl</a> package to be installed
+  <a id="postgres"></a><span class="command"><span class="term"><strong>postgres</strong></span></span>                     is the PostgreSQL database server
+  <a id="psql"></a><span class="command"><span class="term"><strong>psql</strong></span></span>                             is a console based database shell
+  <a id="reindexdb"></a><span class="command"><span class="term"><strong>reindexdb</strong></span></span>                   is a utility for rebuilding indexes in a database
+  <a id="vacuumdb"></a><span class="command"><span class="term"><strong>vacuumdb</strong></span></span>                     compacts databases and generates statistics for the query analyzer
+  <a id="vacuumlo"></a><span class="command"><span class="term"><strong>vacuumlo</strong></span></span>                     removes orphaned large objects from a PostgreSQL database
+  <a id="libecpg"></a><span class="term"><code class="filename">libecpg.{so,a}</code></span>                   contains functions to support embedded SQL in C programs
+  <a id="libecpg_compat"></a><span class="term"><code class="filename">libecpg_compat.{so,a}</code></span>     is the ecpg compatibility library
+  <a id="libgport"></a><span class="term"><code class="filename">libgport.a</code></span>                      is the port-specific subsystem of the Postgres backend
+  <a id="libpgtypes"></a><span class="term"><code class="filename">libpgtypes.{so,a}</code></span>             contains functions for dealing with Postgres data types
+  <a id="libpq"></a><span class="term"><code class="filename">libpq.{so,a}</code></span>                       is the C programmer's API to Postgres
   ------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](mariadb.md "MariaDB-12.3.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](mariadb.md "MariaDB-12.3.2")
 
     MariaDB-12.3.2
 
--   [Next](other.md "Other Server Software"){accesskey="n"}
+-   [Next](other.md "Other Server Software")
 
     Other Server Software
 
--   [Up](databases.md "Chapter 22. Databases"){accesskey="u"}
+-   [Up](databases.md "Chapter 22. Databases")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

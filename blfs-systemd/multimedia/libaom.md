@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libao.md "Libao-1.2.0"){accesskey="p"}
+-   [Prev](libao.md "Libao-1.2.0")
 
     Libao-1.2.0
 
--   [Next](libass.md "libass-0.17.4"){accesskey="n"}
+-   [Next](libass.md "libass-0.17.4")
 
     libass-0.17.4
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libaom}libaom-3.14.1 {#libaom-3.14.1 .sect1}
+# libaom-3.14.1 {#libaom-3.14.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libaom {#introduction-to-libaom .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libaom {#introduction-to-libaom}
 
-The [libaom]{.application} package contains a reference version of the Alliance for Open Media video codec. This codec is a patent free alternative to H.265, and is starting to be used throughout the internet.
+The <span class="application">libaom</span> package contains a reference version of the Alliance for Open Media video codec. This codec is a patent free alternative to H.265, and is starting to be used throughout the internet.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://storage.googleapis.com/aom-releases/libaom-3.14.1.tar.gz](https://storage.googleapis.com/aom-releases/libaom-3.14.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://storage.googleapis.com/aom-releases/libaom-3.14.1.tar.gz">https://storage.googleapis.com/aom-releases/libaom-3.14.1.tar.gz</a>
 
 -   Download MD5 sum: 4a689bbc27ec095d253ed8d241077ad5
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 124 MB
 
 -   Estimated build time: 0.8 SBU (with parallelism=4)
-:::
+</div>
 
 ### libaom Dependencies
 
 #### Recommended
 
-[yasm-1.3.0](../general/yasm.md "yasm-1.3.0"){.xref} (or [NASM-3.01](../general/nasm.md "NASM-3.01"){.xref})
+<a class="xref" href="../general/yasm.md" title="yasm-1.3.0">yasm-1.3.0</a> (or <a class="xref" href="../general/nasm.md" title="NASM-3.01">NASM-3.01</a>)
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libaom {#installation-of-libaom .sect2}
+<div class="installation" lang="en">
+## Installation of libaom {#installation-of-libaom}
 
 Prevent installing static versions of the libraries:
 
-``` userinput
+```bash
 sed -i 's/aom aom_static/aom/' cmake/aom_install.cmake
 ```
 
-Install [libaom]{.application} by running the following commands:
+Install <span class="application">libaom</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir aom-build &&
 cd    aom-build &&
 
@@ -82,64 +82,64 @@ ninja
 
 This package does not come with a working test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D BUILD_SHARED_LIBS=1`*: This switch builds shared versions of the libraries.
 
-*`-D ENABLE_DOCS=no`*: This switch disables building the documentation because it fails due to an incompatibility with the latest version of [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}.
+*`-D ENABLE_DOCS=no`*: This switch disables building the documentation because it fails due to an incompatibility with the latest version of <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>.
 
-`-D ENABLE_NASM=yes`{.option}: Use this switch if you have both [yasm-1.3.0](../general/yasm.md "yasm-1.3.0"){.xref} and [NASM-3.01](../general/nasm.md "NASM-3.01"){.xref} installed and wish to use nasm instead of yasm.
-:::
+<code class="option">-D ENABLE_NASM=yes</code>: Use this switch if you have both <a class="xref" href="../general/yasm.md" title="yasm-1.3.0">yasm-1.3.0</a> and <a class="xref" href="../general/nasm.md" title="NASM-3.01">NASM-3.01</a> installed and wish to use nasm instead of yasm.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [aomdec and aomenc]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">aomdec and aomenc</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libaom.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libaom.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/aom]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/aom</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ -----------------------------------------------------------------------------
-  []{#aomdec}[[**aomdec**]{.command}]{.term}       provides various decoders supported by this package, including one for AV1
-  []{#aomenc}[[**aomenc**]{.command}]{.term}       provides various encoders supported by this package, including one for AV1
-  []{#libaom-lib}[`libaom.so`{.filename}]{.term}   contains functions that provide a reference implementation of the AV1 codec
+  <a id="aomdec"></a><span class="command"><span class="term"><strong>aomdec</strong></span></span>       provides various decoders supported by this package, including one for AV1
+  <a id="aomenc"></a><span class="command"><span class="term"><strong>aomenc</strong></span></span>       provides various encoders supported by this package, including one for AV1
+  <a id="libaom-lib"></a><span class="term"><code class="filename">libaom.so</code></span>   contains functions that provide a reference implementation of the AV1 codec
   ------------------------------------------------ -----------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libao.md "Libao-1.2.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libao.md "Libao-1.2.0")
 
     Libao-1.2.0
 
--   [Next](libass.md "libass-0.17.4"){accesskey="n"}
+-   [Next](libass.md "libass-0.17.4")
 
     libass-0.17.4
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

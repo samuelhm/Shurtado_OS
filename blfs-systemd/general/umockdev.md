@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](uchardet.md "Uchardet-0.0.8"){accesskey="p"}
+-   [Prev](uchardet.md "Uchardet-0.0.8")
 
     Uchardet-0.0.8
 
--   [Next](utfcpp.md "utfcpp-4.1.1"){accesskey="n"}
+-   [Next](utfcpp.md "utfcpp-4.1.1")
 
     utfcpp-4.1.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#umockdev}Umockdev-0.19.7 {#umockdev-0.19.7 .sect1}
+# Umockdev-0.19.7 {#umockdev-0.19.7}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Umockdev {#introduction-to-umockdev .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Umockdev {#introduction-to-umockdev}
 
-The [Umockdev]{.application} package contains a framework that allows a developer to mock devices for use in unit testing.
+The <span class="application">Umockdev</span> package contains a framework that allows a developer to mock devices for use in unit testing.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/martinpitt/umockdev/releases/download/0.19.7/umockdev-0.19.7.tar.xz](https://github.com/martinpitt/umockdev/releases/download/0.19.7/umockdev-0.19.7.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/martinpitt/umockdev/releases/download/0.19.7/umockdev-0.19.7.tar.xz">https://github.com/martinpitt/umockdev/releases/download/0.19.7/umockdev-0.19.7.tar.xz</a>
 
 -   Download MD5 sum: c673fd819d8850d28692736956feea79
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.0 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### Umockdev Dependencies
 
 #### Required
 
-[libgudev-238](libgudev.md "libgudev-238"){.xref}, [libpcap-1.10.6](../basicnet/libpcap.md "libpcap-1.10.6"){.xref}, and [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="libgudev.md" title="libgudev-238">libgudev-238</a>, <a class="xref" href="../basicnet/libpcap.md" title="libpcap-1.10.6">libpcap-1.10.6</a>, and <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [PyGObject-3.56.3](python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref} (for tests), [Valgrind-3.27.1](valgrind.md "Valgrind-3.27.1"){.xref} (for tests), and [libgphoto2](http://www.gphoto.org/){.ulink} (for tests)
-:::::
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a> (for tests), <a class="xref" href="valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a> (for tests), and <a class="ulink" href="http://www.gphoto.org/">libgphoto2</a> (for tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Umockdev {#installation-of-umockdev .sect2}
+<div class="installation" lang="en">
+## Installation of Umockdev {#installation-of-umockdev}
 
-Install [Umockdev]{.application} by running the following commands:
+Install <span class="application">Umockdev</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,63 +70,63 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue as the `root`{.systemitem} user: [**ninja test**]{.command}. One test needs to be run in an X session.
+To test the results, issue as the <code class="systemitem">root</code> user: <span class="command"><strong>ninja test</strong></span>. One test needs to be run in an X session.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`-D gtk_doc=true`{.option}: Use this switch if you have [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref} installed and wish to rebuild and install the API documentation.
-:::
+<code class="option">-D gtk_doc=true</code>: Use this switch if you have <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> installed and wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [umockdev-record, umockdev-run, and umockdev-wrapper]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">umockdev-record, umockdev-run, and umockdev-wrapper</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libumockdev-preload.so and libumockdev.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libumockdev-preload.so and libumockdev.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/umockdev-1.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/umockdev-1.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- ------------------------------------------------------------------------------------------
-  []{#umockdev-record}[[**umockdev-record**]{.command}]{.term}     records Linux devices and their ancestors from sysfs/udev or records ioctls for a device
-  []{#umockdev-run}[[**umockdev-run**]{.command}]{.term}           runs a program under an [umockdev]{.application} testbed
-  []{#umockdev-wrapper}[[**umockdev-wrapper**]{.command}]{.term}   wraps a program around `libumockdev-preload.so.0`{.filename} through LD_PRELOAD
-  []{#libumockdev}[`libumockdev.so`{.filename}]{.term}             provides API functions that allow mocking hardware devices for unit testing
+  <a id="umockdev-record"></a><span class="command"><span class="term"><strong>umockdev-record</strong></span></span>     records Linux devices and their ancestors from sysfs/udev or records ioctls for a device
+  <a id="umockdev-run"></a><span class="command"><span class="term"><strong>umockdev-run</strong></span></span>           runs a program under an <span class="application">umockdev</span> testbed
+  <a id="umockdev-wrapper"></a><span class="command"><span class="term"><strong>umockdev-wrapper</strong></span></span>   wraps a program around <code class="filename">libumockdev-preload.so.0</code> through LD_PRELOAD
+  <a id="libumockdev"></a><span class="term"><code class="filename">libumockdev.so</code></span>             provides API functions that allow mocking hardware devices for unit testing
   ---------------------------------------------------------------- ------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](uchardet.md "Uchardet-0.0.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](uchardet.md "Uchardet-0.0.8")
 
     Uchardet-0.0.8
 
--   [Next](utfcpp.md "utfcpp-4.1.1"){accesskey="n"}
+-   [Next](utfcpp.md "utfcpp-4.1.1")
 
     utfcpp-4.1.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

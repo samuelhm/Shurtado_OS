@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](clucene.md "CLucene-2.3.3.4"){accesskey="p"}
+-   [Prev](clucene.md "CLucene-2.3.3.4")
 
     CLucene-2.3.3.4
 
--   [Next](double-conversion.md "Double-conversion-3.4.0"){accesskey="n"}
+-   [Next](double-conversion.md "Double-conversion-3.4.0")
 
     Double-conversion-3.4.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dbus-glib}dbus-glib-0.114 {#dbus-glib-0.114 .sect1}
+# dbus-glib-0.114 {#dbus-glib-0.114}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to D-Bus GLib {#introduction-to-d-bus-glib .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to D-Bus GLib {#introduction-to-d-bus-glib}
 
-The [D-Bus GLib]{.application} package contains [GLib]{.application} interfaces to the [D-Bus]{.application} API.
+The <span class="application">D-Bus GLib</span> package contains <span class="application">GLib</span> interfaces to the <span class="application">D-Bus</span> API.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.114.tar.gz](https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.114.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.114.tar.gz">https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.114.tar.gz</a>
 
 -   Download MD5 sum: 188792077e880a8c0359288d7819dab3
 
@@ -44,88 +44,88 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### D-Bus GLib Dependencies
 
 #### Required
 
-[dbus-1.16.2](dbus.md "dbus-1.16.2"){.xref} and [GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref}
+<a class="xref" href="dbus.md" title="dbus-1.16.2">dbus-1.16.2</a> and <a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of D-Bus GLib {#installation-of-d-bus-glib .sect2}
+<div class="installation" lang="en">
+## Installation of D-Bus GLib {#installation-of-d-bus-glib}
 
-Install [D-Bus GLib]{.application} by running the following commands:
+Install <span class="application">D-Bus GLib</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr     \
             --sysconfdir=/etc \
             --disable-static  &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}. Note that more comprehensive tests can be run by following the same method used in [D-Bus]{.application} instructions, which requires building the package twice.
+To test the results, issue: <span class="command"><strong>make check</strong></span>. Note that more comprehensive tests can be run by following the same method used in <span class="application">D-Bus</span> instructions, which requires building the package twice.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-gtk-doc`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
-:::
+<code class="option">--enable-gtk-doc</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [dbus-binding-tool]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">dbus-binding-tool</span>
+</div>
 
-::: seg
-**Installed Library:** [libdbus-glib-1.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libdbus-glib-1.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/gtk-doc/html/dbus-glib]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/gtk-doc/html/dbus-glib</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------------- ------------------------------------------------------------------------------------
-  []{#glib-dbus-binding-tool}[[**dbus-binding-tool**]{.command}]{.term}   is a tool used to interface with the D-Bus API
-  []{#libdbus-glib-1}[`libdbus-glib-1.so`{.filename}]{.term}              contains [GLib]{.application} interface functions to the [D-Bus]{.application} API
+  <a id="glib-dbus-binding-tool"></a><span class="command"><span class="term"><strong>dbus-binding-tool</strong></span></span>   is a tool used to interface with the D-Bus API
+  <a id="libdbus-glib-1"></a><span class="term"><code class="filename">libdbus-glib-1.so</code></span>              contains <span class="application">GLib</span> interface functions to the <span class="application">D-Bus</span> API
   ----------------------------------------------------------------------- ------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](clucene.md "CLucene-2.3.3.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](clucene.md "CLucene-2.3.3.4")
 
     CLucene-2.3.3.4
 
--   [Next](double-conversion.md "Double-conversion-3.4.0"){accesskey="n"}
+-   [Next](double-conversion.md "Double-conversion-3.4.0")
 
     Double-conversion-3.4.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

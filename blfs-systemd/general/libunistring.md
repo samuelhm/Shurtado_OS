@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libtasn1.md "libtasn1-4.21.0"){accesskey="p"}
+-   [Prev](libtasn1.md "libtasn1-4.21.0")
 
     libtasn1-4.21.0
 
--   [Next](libunwind.md "libunwind-1.8.3"){accesskey="n"}
+-   [Next](libunwind.md "libunwind-1.8.3")
 
     libunwind-1.8.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libunistring}libunistring-1.4.2 {#libunistring-1.4.2 .sect1}
+# libunistring-1.4.2 {#libunistring-1.4.2}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libunistring {#introduction-to-libunistring .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libunistring {#introduction-to-libunistring}
 
-[libunistring]{.application} is a library that provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard.
+<span class="application">libunistring</span> is a library that provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.xz](https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.xz">https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.xz</a>
 
 -   Download MD5 sum: e033195d90d0803063f3fecc77148124
 
@@ -44,81 +44,81 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 58 MB (add 46 MB for tests)
 
 -   Estimated build time: 0.6 SBU (add 0.3 SBU for tests; both using parallelism=4)
-:::
+</div>
 
 ### libunistring Dependencies
 
 #### Optional
 
-[texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} (or [install-tl-unx](../pst/tl-installer.md "install-tl-unx"){.xref}) (to rebuild the documentation)
-:::::
+<a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> (or <a class="xref" href="../pst/tl-installer.md" title="install-tl-unx">install-tl-unx</a>) (to rebuild the documentation)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libunistring {#installation-of-libunistring .sect2}
+<div class="installation" lang="en">
+## Installation of libunistring {#installation-of-libunistring}
 
-Install [libunistring]{.application} by running the following commands:
+Install <span class="application">libunistring</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr    \
             --disable-static \
             --docdir=/usr/share/doc/libunistring-1.4.2 &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libunistring.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libunistring.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/unistring and /usr/share/doc/libunistring-1.4.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/unistring and /usr/share/doc/libunistring-1.4.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------- -----------------------------------------
-  []{#libunistring-lib}[[**libunistring.so**]{.command}]{.term}   provides the unicode string library API
+  <a id="libunistring-lib"></a><span class="command"><span class="term"><strong>libunistring.so</strong></span></span>   provides the unicode string library API
   --------------------------------------------------------------- -----------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libtasn1.md "libtasn1-4.21.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libtasn1.md "libtasn1-4.21.0")
 
     libtasn1-4.21.0
 
--   [Next](libunwind.md "libunwind-1.8.3"){accesskey="n"}
+-   [Next](libunwind.md "libunwind-1.8.3")
 
     libunwind-1.8.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

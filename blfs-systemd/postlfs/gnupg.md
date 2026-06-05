@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](cyrus-sasl.md "Cyrus SASL-2.1.28"){accesskey="p"}
+-   [Prev](cyrus-sasl.md "Cyrus SASL-2.1.28")
 
     Cyrus SASL-2.1.28
 
--   [Next](gnutls.md "GnuTLS-3.8.13"){accesskey="n"}
+-   [Next](gnutls.md "GnuTLS-3.8.13")
 
     GnuTLS-3.8.13
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnupg2}GnuPG-2.5.20 {#gnupg-2.5.20 .sect1}
+# GnuPG-2.5.20 {#gnupg-2.5.20}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GnuPG {#introduction-to-gnupg .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GnuPG {#introduction-to-gnupg}
 
-The [GnuPG]{.application} package is GNU's tool for secure communication and data storage. It can be used to encrypt data and to create digital signatures. It includes an advanced key management facility and is compliant with the proposed OpenPGP Internet standard as described in RFC2440 and the S/MIME standard as described by several RFCs. GnuPG 2 is the stable version of GnuPG integrating support for OpenPGP and S/MIME.
+The <span class="application">GnuPG</span> package is GNU's tool for secure communication and data storage. It can be used to encrypt data and to create digital signatures. It includes an advanced key management facility and is compliant with the proposed OpenPGP Internet standard as described in RFC2440 and the S/MIME standard as described by several RFCs. GnuPG 2 is the stable version of GnuPG integrating support for OpenPGP and S/MIME.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.20.tar.bz2](https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.20.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.20.tar.bz2">https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.20.tar.bz2</a>
 
 -   Download MD5 sum: 93d6d891254b43138bb9a2a777dc2de7
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 180 MB (with tests)
 
 -   Estimated build time: 0.7 SBU (with tests; both using parallelism=4)
-:::
+</div>
 
 ### GnuPG 2 Dependencies
 
 #### Required
 
-[libassuan-3.0.2](../general/libassuan.md "libassuan-3.0.2"){.xref}, [libgcrypt-1.12.2](../general/libgcrypt.md "libgcrypt-1.12.2"){.xref}, [libksba-1.8.0](../general/libksba.md "libksba-1.8.0"){.xref}, [npth-1.8](../general/npth.md "npth-1.8"){.xref}, and [OpenLDAP-2.6.13](../server/openldap.md "OpenLDAP-2.6.13"){.xref}
+<a class="xref" href="../general/libassuan.md" title="libassuan-3.0.2">libassuan-3.0.2</a>, <a class="xref" href="../general/libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a>, <a class="xref" href="../general/libksba.md" title="libksba-1.8.0">libksba-1.8.0</a>, <a class="xref" href="../general/npth.md" title="npth-1.8">npth-1.8</a>, and <a class="xref" href="../server/openldap.md" title="OpenLDAP-2.6.13">OpenLDAP-2.6.13</a>
 
 #### Recommended
 
-[GnuTLS-3.8.13](gnutls.md "GnuTLS-3.8.13"){.xref} (required to communicate with keyservers using https or hkps protocol) and [pinentry-1.3.2](../general/pinentry.md "pinentry-1.3.2"){.xref} (Run-time requirement for most of the package's functionality)
+<a class="xref" href="gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a> (required to communicate with keyservers using https or hkps protocol) and <a class="xref" href="../general/pinentry.md" title="pinentry-1.3.2">pinentry-1.3.2</a> (Run-time requirement for most of the package's functionality)
 
 #### Optional
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}, [Fuse-3.18.2](fuse.md "Fuse-3.18.2"){.xref}, [ImageMagick-7.1.2-13](../general/imagemagick.md "ImageMagick-7.1.2-13"){.xref} (for the [**convert**]{.command} utility, used for generating the documentation), [libusb-1.0.30](../general/libusb.md "libusb-1.0.30"){.xref}, an [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref}, [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} (or [install-tl-unx](../pst/tl-installer.md "install-tl-unx"){.xref}), [fig2dev](https://mcj.sourceforge.net/){.ulink} (for generating documentation), and [GNU adns](https://www.chiark.greenend.org.uk/~ian/adns/){.ulink}
-:::::
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="fuse.md" title="Fuse-3.18.2">Fuse-3.18.2</a>, <a class="xref" href="../general/imagemagick.md" title="ImageMagick-7.1.2-13">ImageMagick-7.1.2-13</a> (for the <span class="command"><strong>convert</strong></span> utility, used for generating the documentation), <a class="xref" href="../general/libusb.md" title="libusb-1.0.30">libusb-1.0.30</a>, an <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a>, <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> (or <a class="xref" href="../pst/tl-installer.md" title="install-tl-unx">install-tl-unx</a>), <a class="ulink" href="https://mcj.sourceforge.net/">fig2dev</a> (for generating documentation), and <a class="ulink" href="https://www.chiark.greenend.org.uk/~ian/adns/">GNU adns</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GnuPG {#installation-of-gnupg .sect2}
+<div class="installation" lang="en">
+## Installation of GnuPG {#installation-of-gnupg}
 
-Install [GnuPG]{.application} by running the following commands:
+Install <span class="application">GnuPG</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -81,17 +81,17 @@ makeinfo --plaintext       -I doc -o doc/gnupg.txt           ../doc/gnupg.texi &
 make -C doc html
 ```
 
-If you have [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} installed and you wish to create documentation in the pdf format, issue the following command:
+If you have <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> installed and you wish to create documentation in the pdf format, issue the following command:
 
-``` userinput
+```bash
 make -C doc pdf
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 
 install -v -m755 -d /usr/share/doc/gnupg-2.5.20/html            &&
@@ -103,84 +103,84 @@ install -v -m644    doc/gnupg.html/* \
                     /usr/share/doc/gnupg-2.5.20/html
 ```
 
-If you created the pdf format of the documentation, install them using the following command as the `root`{.systemitem} user:
+If you created the pdf format of the documentation, install them using the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m644 doc/gnupg.pdf \
                  /usr/share/doc/gnupg-2.5.20
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**mkdir build && cd build**]{.command}: the GnuPG developers recommend building the package in a dedicated directory.
+<span class="command"><strong>mkdir build && cd build</strong></span>: the GnuPG developers recommend building the package in a dedicated directory.
 
-*`--docdir=/usr/share/doc/gnupg-2.5.20`*: This switch changes the default docdir to `/usr/share/doc/gnupg-2.5.20`{.filename}.
+*`--docdir=/usr/share/doc/gnupg-2.5.20`*: This switch changes the default docdir to <code class="filename">/usr/share/doc/gnupg-2.5.20</code>.
 
-`--enable-all-tests`{.option}: This switch allows more tests to be run with [**make check**]{.command}.
+<code class="option">--enable-all-tests</code>: This switch allows more tests to be run with <span class="command"><strong>make check</strong></span>.
 
-`--enable-g13`{.option}: This switch enables building the g13 program.
-:::
+<code class="option">--enable-g13</code>: This switch enables building the g13 program.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [addgnupghome, applygnupgdefaults, dirmngr, dirmngr-client, g13 (optional), gpg-agent, gpg-card, gpg-connect-agent, gpg, gpgconf, gpgparsemail, gpgscm, gpgsm, gpgsplit, gpgtar, gpgv, gpg-wks-client, gpg-wks-server, kbxutil, and watchgnupg]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">addgnupghome, applygnupgdefaults, dirmngr, dirmngr-client, g13 (optional), gpg-agent, gpg-card, gpg-connect-agent, gpg, gpgconf, gpgparsemail, gpgscm, gpgsm, gpgsplit, gpgtar, gpgv, gpg-wks-client, gpg-wks-server, kbxutil, and watchgnupg</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/gnupg-2.5.20 and /usr/share/gnupg]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/gnupg-2.5.20 and /usr/share/gnupg</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#addgnupghome}[[**addgnupghome**]{.command}]{.term}               is used to create and populate a user's `~/.gnupg`{.filename} directories
-  []{#applygnupgdefaults}[[**applygnupgdefaults**]{.command}]{.term}   is a wrapper script used to run [**gpgconf**]{.command} with the *`--apply-defaults`* parameter on all user's GnuPG home directories
-  []{#dirmngr}[[**dirmngr**]{.command}]{.term}                         is a tool that takes care of accessing the OpenPGP keyservers
-  []{#dirmngr-client}[[**dirmngr-client**]{.command}]{.term}           is a tool to contact a running dirmngr and test whether a certificate has been revoked
-  []{#g13}[[**g13**]{.command}]{.term}                                 is a tool to create, mount or unmount an encrypted file system container (optional)
-  []{#gpg-agent}[[**gpg-agent**]{.command}]{.term}                     is a daemon used to manage secret (private) keys independently from any protocol. It is used as a backend for [**gpg**]{.command} and [**gpgsm**]{.command} as well as for a couple of other utilities
-  []{#gpg-card}[[**gpg-card**]{.command}]{.term}                       is a tool to manage smart cards and tokens
-  []{#gpg-connect-agent}[[**gpg-connect-agent**]{.command}]{.term}     is a utility used to communicate with a running [**gpg-agent**]{.command}
-  []{#gpg}[[**gpg**]{.command}]{.term}                                 is the OpenPGP part of the GNU Privacy Guard (GnuPG). It is a tool used to provide digital encryption and signing services using the OpenPGP standard
-  []{#gpgconf}[[**gpgconf**]{.command}]{.term}                         is a utility used to automatically and reasonably safely query and modify configuration files in the `~/.gnupg`{.filename} home directory. It is designed not to be invoked manually by the user, but automatically by graphical user interfaces
-  []{#gpgparsemail}[[**gpgparsemail**]{.command}]{.term}               is a utility currently only useful for debugging. Run it with *`--help`* for usage information
-  []{#gpgscm}[[**gpgscm**]{.command}]{.term}                           executes the given scheme program or spawns an interactive shell
-  []{#gpgsm}[[**gpgsm**]{.command}]{.term}                             is a tool similar to [**gpg**]{.command} used to provide digital encryption and signing services on X.509 certificates and the CMS protocol. It is mainly used as a backend for S/MIME mail processing
-  []{#gpgsplit}[[**gpgsplit**]{.command}]{.term}                       splits an OpenPGP message into packets
-  []{#gpgtar}[[**gpgtar**]{.command}]{.term}                           is a tool to encrypt or sign files into an archive
-  []{#gpgv}[[**gpgv**]{.command}]{.term}                               is a verify only version of [**gpg**]{.command}
-  []{#gpg-wks-client}[[**gpg-wks-client**]{.command}]{.term}           is a client for the [Web Key Service]{.application} protocol
-  []{#gpg-wks-server}[[**gpg-wks-server**]{.command}]{.term}           provides a server for the [Web Key Service]{.application} protocol
-  []{#kbxutil}[[**kbxutil**]{.command}]{.term}                         is used to list, export and import Keybox data
-  []{#watchgnupg}[[**watchgnupg**]{.command}]{.term}                   is used to listen to a Unix Domain socket created by any of the GnuPG tools
+  <a id="addgnupghome"></a><span class="command"><span class="term"><strong>addgnupghome</strong></span></span>               is used to create and populate a user's <code class="filename">~/.gnupg</code> directories
+  <a id="applygnupgdefaults"></a><span class="command"><span class="term"><strong>applygnupgdefaults</strong></span></span>   is a wrapper script used to run <span class="command"><strong>gpgconf</strong></span> with the *`--apply-defaults`* parameter on all user's GnuPG home directories
+  <a id="dirmngr"></a><span class="command"><span class="term"><strong>dirmngr</strong></span></span>                         is a tool that takes care of accessing the OpenPGP keyservers
+  <a id="dirmngr-client"></a><span class="command"><span class="term"><strong>dirmngr-client</strong></span></span>           is a tool to contact a running dirmngr and test whether a certificate has been revoked
+  <a id="g13"></a><span class="command"><span class="term"><strong>g13</strong></span></span>                                 is a tool to create, mount or unmount an encrypted file system container (optional)
+  <a id="gpg-agent"></a><span class="command"><span class="term"><strong>gpg-agent</strong></span></span>                     is a daemon used to manage secret (private) keys independently from any protocol. It is used as a backend for <span class="command"><strong>gpg</strong></span> and <span class="command"><strong>gpgsm</strong></span> as well as for a couple of other utilities
+  <a id="gpg-card"></a><span class="command"><span class="term"><strong>gpg-card</strong></span></span>                       is a tool to manage smart cards and tokens
+  <a id="gpg-connect-agent"></a><span class="command"><span class="term"><strong>gpg-connect-agent</strong></span></span>     is a utility used to communicate with a running <span class="command"><strong>gpg-agent</strong></span>
+  <a id="gpg"></a><span class="command"><span class="term"><strong>gpg</strong></span></span>                                 is the OpenPGP part of the GNU Privacy Guard (GnuPG). It is a tool used to provide digital encryption and signing services using the OpenPGP standard
+  <a id="gpgconf"></a><span class="command"><span class="term"><strong>gpgconf</strong></span></span>                         is a utility used to automatically and reasonably safely query and modify configuration files in the <code class="filename">~/.gnupg</code> home directory. It is designed not to be invoked manually by the user, but automatically by graphical user interfaces
+  <a id="gpgparsemail"></a><span class="command"><span class="term"><strong>gpgparsemail</strong></span></span>               is a utility currently only useful for debugging. Run it with *`--help`* for usage information
+  <a id="gpgscm"></a><span class="command"><span class="term"><strong>gpgscm</strong></span></span>                           executes the given scheme program or spawns an interactive shell
+  <a id="gpgsm"></a><span class="command"><span class="term"><strong>gpgsm</strong></span></span>                             is a tool similar to <span class="command"><strong>gpg</strong></span> used to provide digital encryption and signing services on X.509 certificates and the CMS protocol. It is mainly used as a backend for S/MIME mail processing
+  <a id="gpgsplit"></a><span class="command"><span class="term"><strong>gpgsplit</strong></span></span>                       splits an OpenPGP message into packets
+  <a id="gpgtar"></a><span class="command"><span class="term"><strong>gpgtar</strong></span></span>                           is a tool to encrypt or sign files into an archive
+  <a id="gpgv"></a><span class="command"><span class="term"><strong>gpgv</strong></span></span>                               is a verify only version of <span class="command"><strong>gpg</strong></span>
+  <a id="gpg-wks-client"></a><span class="command"><span class="term"><strong>gpg-wks-client</strong></span></span>           is a client for the <span class="application">Web Key Service</span> protocol
+  <a id="gpg-wks-server"></a><span class="command"><span class="term"><strong>gpg-wks-server</strong></span></span>           provides a server for the <span class="application">Web Key Service</span> protocol
+  <a id="kbxutil"></a><span class="command"><span class="term"><strong>kbxutil</strong></span></span>                         is used to list, export and import Keybox data
+  <a id="watchgnupg"></a><span class="command"><span class="term"><strong>watchgnupg</strong></span></span>                   is used to listen to a Unix Domain socket created by any of the GnuPG tools
   -------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](cyrus-sasl.md "Cyrus SASL-2.1.28"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](cyrus-sasl.md "Cyrus SASL-2.1.28")
 
     Cyrus SASL-2.1.28
 
--   [Next](gnutls.md "GnuTLS-3.8.13"){accesskey="n"}
+-   [Next](gnutls.md "GnuTLS-3.8.13")
 
     GnuTLS-3.8.13
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

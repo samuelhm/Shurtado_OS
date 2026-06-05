@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../server/openldap.md "OpenLDAP-2.6.13"){accesskey="p"}
+-   [Prev](../server/openldap.md "OpenLDAP-2.6.13")
 
     OpenLDAP-2.6.13
 
--   [Next](installing.md "Graphical Environments"){accesskey="n"}
+-   [Next](installing.md "Graphical Environments")
 
     Graphical Environments
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#x}Graphical Components {#graphical-components .part}
+# Graphical Components {#graphical-components}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [24. Graphical Environments](installing.md)
@@ -123,19 +123,19 @@
     -   [icon-naming-utils-0.8.90](icon-naming-utils.md)
     -   [lxde-icon-theme-0.5.1](lxde-icon-theme.md)
     -   [oxygen-icons-6.1.0](oxygen-icons.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../server/openldap.md "OpenLDAP-2.6.13"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../server/openldap.md "OpenLDAP-2.6.13")
 
     OpenLDAP-2.6.13
 
--   [Next](installing.md "Graphical Environments"){accesskey="n"}
+-   [Next](installing.md "Graphical Environments")
 
     Graphical Environments
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

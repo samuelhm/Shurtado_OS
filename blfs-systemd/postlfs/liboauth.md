@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](linux-pam.md "Linux-PAM-1.7.2"){accesskey="p"}
+-   [Prev](linux-pam.md "Linux-PAM-1.7.2")
 
     Linux-PAM-1.7.2
 
--   [Next](libpwquality.md "libpwquality-1.4.5"){accesskey="n"}
+-   [Next](libpwquality.md "libpwquality-1.4.5")
 
     libpwquality-1.4.5
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#liboauth}liboauth-1.0.3 {#liboauth-1.0.3 .sect1}
+# liboauth-1.0.3 {#liboauth-1.0.3}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to liboauth {#introduction-to-liboauth .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to liboauth {#introduction-to-liboauth}
 
-[liboauth]{.application} is a collection of POSIX-C functions implementing the OAuth Core RFC 5849 standard. Liboauth provides functions to escape and encode parameters according to OAuth specification and offers high-level functionality to sign requests or verify OAuth signatures as well as perform HTTP requests.
+<span class="application">liboauth</span> is a collection of POSIX-C functions implementing the OAuth Core RFC 5849 standard. Liboauth provides functions to escape and encode parameters according to OAuth specification and offers high-level functionality to sign requests or verify OAuth signatures as well as perform HTTP requests.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz](https://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz">https://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz</a>
 
 -   Download MD5 sum: 689b46c2b3ab1a39735ac33f714c4f7f
 
@@ -44,110 +44,110 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.5 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch for use with openssl: [https://www.linuxfromscratch.org/patches/blfs/svn/liboauth-1.0.3-openssl-1.1.0-3.patch](https://www.linuxfromscratch.org/patches/blfs/svn/liboauth-1.0.3-openssl-1.1.0-3.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch for use with openssl: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/liboauth-1.0.3-openssl-1.1.0-3.patch">https://www.linuxfromscratch.org/patches/blfs/svn/liboauth-1.0.3-openssl-1.1.0-3.patch</a>
+</div>
 
 ### liboauth Dependencies
 
 #### Required
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>
 
 #### Optional
 
-[nss-3.124](nss.md "NSS-3.124"){.xref} and [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} (to build documentation)
-::::::
+<a class="xref" href="nss.md" title="NSS-3.124">nss-3.124</a> and <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (to build documentation)
+</div>
 
-::: {.installation lang="en"}
-## Installation of liboauth {#installation-of-liboauth .sect2}
+<div class="installation" lang="en">
+## Installation of liboauth {#installation-of-liboauth}
 
 Apply a patch for the current version of openssl:
 
-``` userinput
+```bash
 patch -Np1 -i ../liboauth-1.0.3-openssl-1.1.0-3.patch
 ```
 
-Install [liboauth]{.application} by running the following commands:
+Install <span class="application">liboauth</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-If you wish to build the documentation (needs [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}), issue:
+If you wish to build the documentation (needs <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>), issue:
 
-``` userinput
+```bash
 make dox
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have previously built the documentation, install it by running the following commands as the `root`{.systemitem} user:
+If you have previously built the documentation, install it by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -dm755 /usr/share/doc/liboauth-1.0.3 &&
 cp -rv doc/html/* /usr/share/doc/liboauth-1.0.3
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-nss`{.option}: Use this switch if you want to use Mozilla NSS instead of [OpenSSL]{.application}.
-:::
+<code class="option">--enable-nss</code>: Use this switch if you want to use Mozilla NSS instead of <span class="application">OpenSSL</span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [liboauth.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">liboauth.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/liboauth-1.0.3]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/liboauth-1.0.3</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#liboauth-lib}[`liboauth.so`{.filename}]{.term}   provides functions to escape and encode strings according to OAuth specifications and offers high-level functionality built on top to sign requests or verify signatures using either NSS or OpenSSL for calculating the hash/signatures
+  <a id="liboauth-lib"></a><span class="term"><code class="filename">liboauth.so</code></span>   provides functions to escape and encode strings according to OAuth specifications and offers high-level functionality built on top to sign requests or verify signatures using either NSS or OpenSSL for calculating the hash/signatures
   ---------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](linux-pam.md "Linux-PAM-1.7.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](linux-pam.md "Linux-PAM-1.7.2")
 
     Linux-PAM-1.7.2
 
--   [Next](libpwquality.md "libpwquality-1.4.5"){accesskey="n"}
+-   [Next](libpwquality.md "libpwquality-1.4.5")
 
     libpwquality-1.4.5
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

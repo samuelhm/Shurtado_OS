@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](libxklavier.md "libxklavier-5.4"){accesskey="p"}
+-   [Prev](libxklavier.md "libxklavier-5.4")
 
     libxklavier-5.4
 
--   [Next](pangomm.md "Pangomm-2.46.4"){accesskey="n"}
+-   [Next](pangomm.md "Pangomm-2.46.4")
 
     Pangomm-2.46.4
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pango}Pango-1.57.1 {#pango-1.57.1 .sect1}
+# Pango-1.57.1 {#pango-1.57.1}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Pango {#introduction-to-pango .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Pango {#introduction-to-pango}
 
-[Pango]{.application} is a library for laying out and rendering text, with an emphasis on internationalization. It can be used anywhere that text layout is needed, though most of the work on [Pango]{.application} so far has been done in the context of the [GTK+]{.application} widget toolkit.
+<span class="application">Pango</span> is a library for laying out and rendering text, with an emphasis on internationalization. It can be used anywhere that text layout is needed, though most of the work on <span class="application">Pango</span> so far has been done in the context of the <span class="application">GTK+</span> widget toolkit.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/pango/1.57/pango-1.57.1.tar.xz](https://download.gnome.org/sources/pango/1.57/pango-1.57.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/pango/1.57/pango-1.57.1.tar.xz">https://download.gnome.org/sources/pango/1.57/pango-1.57.1.tar.xz</a>
 
 -   Download MD5 sum: dce053460f7f648018a7afbf36720421
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 64 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### Pango Dependencies
 
 #### Required
 
-[Fontconfig-2.18.1](../general/fontconfig.md "Fontconfig-2.18.1"){.xref} (must be built with [FreeType-2.14.3](../general/freetype2.md "FreeType-2.14.3"){.xref} using [harfBuzz-14.2.1](../general/harfbuzz.md "harfBuzz-14.2.1"){.xref}), [FriBidi-1.0.16](../general/fribidi.md "FriBidi-1.0.16"){.xref}, and [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (GObject Introspection required for GNOME)
+<a class="xref" href="../general/fontconfig.md" title="Fontconfig-2.18.1">Fontconfig-2.18.1</a> (must be built with <a class="xref" href="../general/freetype2.md" title="FreeType-2.14.3">FreeType-2.14.3</a> using <a class="xref" href="../general/harfbuzz.md" title="harfBuzz-14.2.1">harfBuzz-14.2.1</a>), <a class="xref" href="../general/fribidi.md" title="FriBidi-1.0.16">FriBidi-1.0.16</a>, and <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection required for GNOME)
 
 #### Recommended
 
-[Cairo-1.18.4](cairo.md "Cairo-1.18.4"){.xref} (built after [harfBuzz-14.2.1](../general/harfbuzz.md "harfBuzz-14.2.1"){.xref}) and [Xorg Libraries](x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="cairo.md" title="Cairo-1.18.4">Cairo-1.18.4</a> (built after <a class="xref" href="../general/harfbuzz.md" title="harfBuzz-14.2.1">harfBuzz-14.2.1</a>) and <a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Optional
 
-[docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref} (to generate manual pages), [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} (to generate documentation), [help2man](https://ftpmirror.gnu.org/gnu/help2man){.ulink}, [libthai](https://linux.thai.net/projects/libthai){.ulink}, and [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink}
-:::::
+<a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> (to generate manual pages), <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> (to generate documentation), <a class="ulink" href="https://ftpmirror.gnu.org/gnu/help2man">help2man</a>, <a class="ulink" href="https://linux.thai.net/projects/libthai">libthai</a>, and <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Pango {#installation-of-pango .sect2}
+<div class="installation" lang="en">
+## Installation of Pango {#installation-of-pango}
 
-Install [Pango]{.application} by running the following commands:
+Install <span class="application">Pango</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -78,92 +78,92 @@ meson setup --prefix=/usr            \
 ninja
 ```
 
-If you have [docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref} installed and wish to build the manual pages for the installed programs, issue:
+If you have <a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> installed and wish to build the manual pages for the installed programs, issue:
 
-``` userinput
+```bash
 meson configure -D man-pages=true &&
 ninja
 ```
 
-If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to build the API documentation for this package, issue:
+If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to build the API documentation for this package, issue:
 
-``` userinput
+```bash
 sed "/docs_dir =/s@\$@ / 'pango-1.57.1'@" -i ../docs/meson.build &&
 meson configure -D documentation=true                            &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. Three tests, test-font-data, test-font, and test-layout are known to fail due to missing font data.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. Three tests, test-font-data, test-font, and test-layout are known to fail due to missing font data.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D introspection=disabled`{.option}: Use this switch if you do not want to use GObject Introspection.
+<code class="option">-D introspection=disabled</code>: Use this switch if you do not want to use GObject Introspection.
 
-*`--wrap-mode=nofallback`*: This switch prevents [**meson**]{.command} from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
-:::
+*`--wrap-mode=nofallback`*: This switch prevents <span class="command"><strong>meson</strong></span> from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring Pango {#configuring-pango .sect2}
+<div class="configuration" lang="en">
+## Configuring Pango {#configuring-pango}
 
-::: {.sect3 lang="en"}
-### []{#pango-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/pango/pangorc`{.filename}, `~/.pangorc`{.filename} and the file specified in the environment variable `PANGO_RC_FILE`{.envar}
-:::
-::::
+<code class="filename">/etc/pango/pangorc</code>, <code class="filename">~/.pangorc</code> and the file specified in the environment variable <code class="envar">PANGO_RC_FILE</code>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [pango-list, pango-segmentation, and pango-view]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">pango-list, pango-segmentation, and pango-view</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libpango-1.0.so, libpangocairo-1.0.so, libpangoft2-1.0.so, and libpangoxft-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libpango-1.0.so, libpangocairo-1.0.so, libpangoft2-1.0.so, and libpangoxft-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/pango-1.0 and /usr/share/doc/pango-1.57.1 (if gi-docgen is available)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/pango-1.0 and /usr/share/doc/pango-1.57.1 (if gi-docgen is available)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#pango-list}[[**pango-list**]{.command}]{.term}                   displays a list of fonts that [Pango]{.application} can use that are currently installed on the system
-  []{#pango-segmentation}[[**pango-segmentation**]{.command}]{.term}   shows text segmentation as determined by Pango.
-  []{#pango-view}[[**pango-view**]{.command}]{.term}                   renders a given text file through [Pango]{.application} for viewing purposes
-  []{#libpango-1}[`libpango-1.0.so`{.filename}]{.term}                 contains low level layout rendering routines, a high level driver for laying out entire blocks of text, and routines to assist in editing internationalized text
+  <a id="pango-list"></a><span class="command"><span class="term"><strong>pango-list</strong></span></span>                   displays a list of fonts that <span class="application">Pango</span> can use that are currently installed on the system
+  <a id="pango-segmentation"></a><span class="command"><span class="term"><strong>pango-segmentation</strong></span></span>   shows text segmentation as determined by Pango.
+  <a id="pango-view"></a><span class="command"><span class="term"><strong>pango-view</strong></span></span>                   renders a given text file through <span class="application">Pango</span> for viewing purposes
+  <a id="libpango-1"></a><span class="term"><code class="filename">libpango-1.0.so</code></span>                 contains low level layout rendering routines, a high level driver for laying out entire blocks of text, and routines to assist in editing internationalized text
   -------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libxklavier.md "libxklavier-5.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libxklavier.md "libxklavier-5.4")
 
     libxklavier-5.4
 
--   [Next](pangomm.md "Pangomm-2.46.4"){accesskey="n"}
+-   [Next](pangomm.md "Pangomm-2.46.4")
 
     Pangomm-2.46.4
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](baobab.md "Baobab-50.0"){accesskey="p"}
+-   [Prev](baobab.md "Baobab-50.0")
 
     Baobab-50.0
 
--   [Next](evince.md "Evince-48.4"){accesskey="n"}
+-   [Next](evince.md "Evince-48.4")
 
     Evince-48.4
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#brasero}Brasero-3.12.3 {#brasero-3.12.3 .sect1}
+# Brasero-3.12.3 {#brasero-3.12.3}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Brasero {#introduction-to-brasero .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Brasero {#introduction-to-brasero}
 
-[Brasero]{.application} is an application used to burn CDs and DVDs on the [GNOME]{.application} Desktop. It is designed to be as simple as possible and has some unique features that enable users to create their discs easily and quickly.
+<span class="application">Brasero</span> is an application used to burn CDs and DVDs on the <span class="application">GNOME</span> Desktop. It is designed to be as simple as possible and has some unique features that enable users to create their discs easily and quickly.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/brasero/3.12/brasero-3.12.3.tar.xz](https://download.gnome.org/sources/brasero/3.12/brasero-3.12.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/brasero/3.12/brasero-3.12.3.tar.xz">https://download.gnome.org/sources/brasero/3.12/brasero-3.12.3.tar.xz</a>
 
 -   Download MD5 sum: ae48248dd36f89282d573eb7a0a1391f
 
@@ -44,49 +44,49 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 105 MB
 
 -   Estimated build time: 1.0 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/brasero-3.12.3-upstream_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/brasero-3.12.3-upstream_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/brasero-3.12.3-upstream_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/brasero-3.12.3-upstream_fixes-1.patch</a>
+</div>
 
 ### Brasero Dependencies
 
 #### Required
 
-[gst-plugins-base-1.28.3](../multimedia/gst10-plugins-base.md "gst-plugins-base-1.28.3"){.xref}, [Intltool-0.51.0](../general/intltool.md "Intltool-0.51.0"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libcanberra-0.30](../multimedia/libcanberra.md "libcanberra-0.30"){.xref}, and [libnotify-0.8.8](../x/libnotify.md "libnotify-0.8.8"){.xref}
+<a class="xref" href="../multimedia/gst10-plugins-base.md" title="gst-plugins-base-1.28.3">gst-plugins-base-1.28.3</a>, <a class="xref" href="../general/intltool.md" title="Intltool-0.51.0">Intltool-0.51.0</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../multimedia/libcanberra.md" title="libcanberra-0.30">libcanberra-0.30</a>, and <a class="xref" href="../x/libnotify.md" title="libnotify-0.8.8">libnotify-0.8.8</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [libburn-1.5.8](../multimedia/libburn.md "libburn-1.5.8"){.xref}, [libisoburn-1.5.8.pl02](../multimedia/libisoburn.md "libisoburn-1.5.8.pl02"){.xref}, and [libisofs-1.5.8.pl02](../multimedia/libisofs.md "libisofs-1.5.8.pl02"){.xref}, [Nautilus-50.2.2](nautilus.md "Nautilus-50.2.2"){.xref}, [tinysparql-3.11.1](tinysparql.md "tinysparql-3.11.1"){.xref}, and [totem-pl-parser-3.26.7](totem-pl-parser.md "totem-pl-parser-3.26.7"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="../multimedia/libburn.md" title="libburn-1.5.8">libburn-1.5.8</a>, <a class="xref" href="../multimedia/libisoburn.md" title="libisoburn-1.5.8.pl02">libisoburn-1.5.8.pl02</a>, and <a class="xref" href="../multimedia/libisofs.md" title="libisofs-1.5.8.pl02">libisofs-1.5.8.pl02</a>, <a class="xref" href="nautilus.md" title="Nautilus-50.2.2">Nautilus-50.2.2</a>, <a class="xref" href="tinysparql.md" title="tinysparql-3.11.1">tinysparql-3.11.1</a>, and <a class="xref" href="totem-pl-parser.md" title="totem-pl-parser-3.26.7">totem-pl-parser-3.26.7</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
 
 #### Recommended (Runtime)
 
-[dvd+rw-tools-7.1](../multimedia/dvd-rw-tools.md "dvd+rw-tools-7.1"){.xref} and [Gvfs-1.60.0](gvfs.md "Gvfs-1.60.0"){.xref}
+<a class="xref" href="../multimedia/dvd-rw-tools.md" title="dvd+rw-tools-7.1">dvd+rw-tools-7.1</a> and <a class="xref" href="gvfs.md" title="Gvfs-1.60.0">Gvfs-1.60.0</a>
 
 #### Optional (Runtime)
 
-[Cdrdao-1.2.6](../multimedia/cdrdao.md "Cdrdao-1.2.6"){.xref}, [libdvdcss-1.5.0](../multimedia/libdvdcss.md "libdvdcss-1.5.0"){.xref}, [Cdrtools-3.02a09](../multimedia/cdrtools.md "Cdrtools-3.02a09"){.xref}, and [VCDImager](https://ftpmirror.gnu.org/gnu/vcdimager/){.ulink}
-::::::
+<a class="xref" href="../multimedia/cdrdao.md" title="Cdrdao-1.2.6">Cdrdao-1.2.6</a>, <a class="xref" href="../multimedia/libdvdcss.md" title="libdvdcss-1.5.0">libdvdcss-1.5.0</a>, <a class="xref" href="../multimedia/cdrtools.md" title="Cdrtools-3.02a09">Cdrtools-3.02a09</a>, and <a class="ulink" href="https://ftpmirror.gnu.org/gnu/vcdimager/">VCDImager</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Brasero {#installation-of-brasero .sect2}
+<div class="installation" lang="en">
+## Installation of Brasero {#installation-of-brasero}
 
 First, fix a build issue that occurs with GCC-14:
 
-``` userinput
+```bash
 patch -Np1 -i ../brasero-3.12.3-upstream_fixes-1.patch
 ```
 
-Install [Brasero]{.application} by running the following commands:
+Install <span class="application">Brasero</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr                \
             --enable-compile-warnings=no \
             --enable-cxx-warnings=no     \
@@ -96,65 +96,65 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--enable-*-warnings=no`*: These switches fix build problems under GCC-6.x compilers.
 
 *`--disable-nautilus`*: This switch disables building the Nautilus extension since it is incompatible with the gtk4 version of Nautilus.
 
-`--enable-gtk-doc`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
-:::
+<code class="option">--enable-gtk-doc</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [brasero]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">brasero</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libbrasero-{burn,media,utils}3.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libbrasero-{burn,media,utils}3.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/brasero3, /usr/lib/brasero3, /usr/share/brasero, /usr/share/gtk-doc/html/libbrasero-{burn,media}, and /usr/share/help/\*/brasero]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/brasero3, /usr/lib/brasero3, /usr/share/brasero, /usr/share/gtk-doc/html/libbrasero-{burn,media}, and /usr/share/help/\*/brasero</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ ----------------------------------------------------------------------------------------------
-  []{#brasero-prog}[[**brasero**]{.command}]{.term}                  is a simple and easy to use CD/DVD burning application for the [GNOME]{.application} Desktop
-  []{#libbrasero-burn3}[`libbrasero-burn3.so`{.filename}]{.term}     contains the Burning API functions
-  []{#libbrasero-media3}[`libbrasero-media3.so`{.filename}]{.term}   contains the Media API functions
-  []{#libbrasero-utils3}[`libbrasero-utils3.so`{.filename}]{.term}   contains the [Brasero]{.application} API functions
+  <a id="brasero-prog"></a><span class="command"><span class="term"><strong>brasero</strong></span></span>                  is a simple and easy to use CD/DVD burning application for the <span class="application">GNOME</span> Desktop
+  <a id="libbrasero-burn3"></a><span class="term"><code class="filename">libbrasero-burn3.so</code></span>     contains the Burning API functions
+  <a id="libbrasero-media3"></a><span class="term"><code class="filename">libbrasero-media3.so</code></span>   contains the Media API functions
+  <a id="libbrasero-utils3"></a><span class="term"><code class="filename">libbrasero-utils3.so</code></span>   contains the <span class="application">Brasero</span> API functions
   ------------------------------------------------------------------ ----------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](baobab.md "Baobab-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](baobab.md "Baobab-50.0")
 
     Baobab-50.0
 
--   [Next](evince.md "Evince-48.4"){accesskey="n"}
+-   [Next](evince.md "Evince-48.4")
 
     Evince-48.4
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,63 +1,63 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](subversion.md "Subversion-1.14.5"){accesskey="p"}
+-   [Prev](subversion.md "Subversion-1.14.5")
 
     Subversion-1.14.5
 
--   [Next](swig.md "SWIG-4.4.1"){accesskey="n"}
+-   [Next](swig.md "SWIG-4.4.1")
 
     SWIG-4.4.1
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#svnserver}Running a Subversion Server {#running-a-subversion-server .sect1}
+# Running a Subversion Server {#running-a-subversion-server}
 
-::::::::::: {.sect1 lang="en"}
-::: {.package lang="en"}
-## Running a Subversion Server {#running-a-subversion-server-1 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Running a Subversion Server {#running-a-subversion-server-1}
 
-This section will describe how to set up, administer and secure a [Subversion]{.application} server.
+This section will describe how to set up, administer and secure a <span class="application">Subversion</span> server.
 
 ### Subversion Server Dependencies
 
 #### Required
 
-[Subversion-1.14.5](subversion.md "Subversion-1.14.5"){.xref} and [OpenSSH-10.3p1](../postlfs/openssh.md "OpenSSH-10.3p1"){.xref}
-:::
+<a class="xref" href="subversion.md" title="Subversion-1.14.5">Subversion-1.14.5</a> and <a class="xref" href="../postlfs/openssh.md" title="OpenSSH-10.3p1">OpenSSH-10.3p1</a>
+</div>
 
-::::::::: {.configuration lang="en"}
-## Setting up a Subversion Server. {#setting-up-a-subversion-server. .sect2}
+<div class="configuration" lang="en">
+## Setting up a Subversion Server. {#setting-up-a-subversion-server.}
 
-The following instructions will install a [Subversion]{.application} server, which will be set up to use [OpenSSH]{.application} as the secure remote access method, with [**svnserve**]{.command} available for anonymous access.
+The following instructions will install a <span class="application">Subversion</span> server, which will be set up to use <span class="application">OpenSSH</span> as the secure remote access method, with <span class="command"><strong>svnserve</strong></span> available for anonymous access.
 
-Configuration of the [Subversion]{.application} server consists of the following steps:
+Configuration of the <span class="application">Subversion</span> server consists of the following steps:
 
-:::: {.sect3 lang="en"}
-### 1. Set Uup Users, Groups, and Permissions {#set-uup-users-groups-and-permissions .sect3}
+<div class="sect3" lang="en">
+### 1. Set Uup Users, Groups, and Permissions {#set-uup-users-groups-and-permissions}
 
-You'll need to be user `root`{.systemitem} for the initial portion of configuration. Create the `svn`{.systemitem} user and group with the following commands:
+You'll need to be user <code class="systemitem">root</code> for the initial portion of configuration. Create the <code class="systemitem">svn</code> user and group with the following commands:
 
-``` root
+```bash
 groupadd -g 56 svn &&
 useradd -c "SVN Owner" -d /home/svn -m -g svn -s /bin/false -u 56 svn
 ```
 
-If you plan to have multiple repositories, you should have a group dedicated to each repository for ease of administration. Create the `svntest`{.systemitem} group for the test repository and add the `svn`{.systemitem} user to that group with the following commands:
+If you plan to have multiple repositories, you should have a group dedicated to each repository for ease of administration. Create the <code class="systemitem">svntest</code> group for the test repository and add the <code class="systemitem">svn</code> user to that group with the following commands:
 
-``` root
+```bash
 groupadd -g 57 svntest &&
 usermod -G svntest -a svn
 ```
 
-Additionally you should set [**umask 002**]{.command} while working with a repository so that all new files will be writable by owner and group. This is made mandatory by creating a wrapper script for [**svn**]{.command} and [**svnserve**]{.command}:
+Additionally you should set <span class="command"><strong>umask 002</strong></span> while working with a repository so that all new files will be writable by owner and group. This is made mandatory by creating a wrapper script for <span class="command"><strong>svn</strong></span> and <span class="command"><strong>svnserve</strong></span>:
 
-``` root
+```bash
 mv /usr/bin/svn /usr/bin/svn.orig &&
 mv /usr/bin/svnserve /usr/bin/svnserve.orig &&
 cat >> /usr/bin/svn << "EOF"
@@ -73,31 +73,31 @@ EOF
 chmod 0755 /usr/bin/svn{,serve}
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you use [Apache]{.application} for working with the repository over HTTP, even for anonymous access, you should wrap [**/usr/sbin/httpd**]{.command} in a similar script.
-:::
-::::
+If you use <span class="application">Apache</span> for working with the repository over HTTP, even for anonymous access, you should wrap <span class="command"><strong>/usr/sbin/httpd</strong></span> in a similar script.
+</div>
+</div>
 
-:::: {.sect3 lang="en"}
-### 2. Create a Subversion repository. {#create-a-subversion-repository. .sect3}
+<div class="sect3" lang="en">
+### 2. Create a Subversion repository. {#create-a-subversion-repository.}
 
-There are several ways to set up a subversion repository. It is recommended to have a look at the [SVN Book](https://svnbook.red-bean.com/nightly/en/svn.reposadmin.md){.ulink} corresponding chapter. A basic repository can be set up with the instructions below.
+There are several ways to set up a subversion repository. It is recommended to have a look at the <a class="ulink" href="https://svnbook.red-bean.com/nightly/en/svn.reposadmin.md">SVN Book</a> corresponding chapter. A basic repository can be set up with the instructions below.
 
-Create a new [Subversion]{.application} repository with the following commands (as the `root`{.systemitem} user):
+Create a new <span class="application">Subversion</span> repository with the following commands (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 install -v -m 0755 -d /srv/svn &&
 install -v -m 0755 -o svn -g svn -d /srv/svn/repositories &&
 svnadmin create /srv/svn/repositories/svntest
 ```
 
-Now that the repository is created, it should be populated with something useful. You'll need to have a predefined directory layout set up exactly as you want your repository to look. For example, here is a sample BLFS layout setup with a root of `svntest/`{.filename}. You'll need to set up a directory tree similar to the following:
+Now that the repository is created, it should be populated with something useful. You'll need to have a predefined directory layout set up exactly as you want your repository to look. For example, here is a sample BLFS layout setup with a root of <code class="filename">svntest/</code>. You'll need to set up a directory tree similar to the following:
 
-``` screen
+```console
 svntest/            # The name of the repository
    trunk/           # Contains the existing source tree
       BOOK/
@@ -111,48 +111,48 @@ svntest/            # The name of the repository
 
 Once you've created your directory layout as shown above, you are ready to do the initial import:
 
-``` root
+```bash
 svn import -m "Initial import." \
     </path/to/source/tree>      \
     file:///srv/svn/repositories/svntest
 ```
 
-Now change owner and group information on the repository, and add an unprivileged user to the `svn`{.systemitem} and `svntest`{.systemitem} groups:
+Now change owner and group information on the repository, and add an unprivileged user to the <code class="systemitem">svn</code> and <code class="systemitem">svntest</code> groups:
 
-``` root
+```bash
 chown -R svn:svntest /srv/svn/repositories/svntest    &&
 chmod -R g+w         /srv/svn/repositories/svntest    &&
 chmod g+s            /srv/svn/repositories/svntest/db &&
 usermod -G svn,svntest -a <username>
 ```
 
-`svntest`{.systemitem} is the group assigned to the svntest repository. As mentioned earlier, this eases administration of multiple repositories when using [OpenSSH]{.application} for authentication. Going forward, you'll need to add your unprivileged user, and any additional users that you wish to have write access to the repository, to the `svn`{.systemitem} and `svntest`{.systemitem} groups.
+<code class="systemitem">svntest</code> is the group assigned to the svntest repository. As mentioned earlier, this eases administration of multiple repositories when using <span class="application">OpenSSH</span> for authentication. Going forward, you'll need to add your unprivileged user, and any additional users that you wish to have write access to the repository, to the <code class="systemitem">svn</code> and <code class="systemitem">svntest</code> groups.
 
-In addition, you'll notice that the new repository's `db`{.filename} directory is set-groupID. If the reasoning is not immediately obvious, when using any external authentication method (such as [**ssh**]{.command}), the sticky bit is set so that all new files will be owned by the user, but group of `svntest`{.systemitem}. Anyone in the `svntest`{.systemitem} group can create files, but still give the entire group write access to those files. This avoids locking out other users from the repository.
+In addition, you'll notice that the new repository's <code class="filename">db</code> directory is set-groupID. If the reasoning is not immediately obvious, when using any external authentication method (such as <span class="command"><strong>ssh</strong></span>), the sticky bit is set so that all new files will be owned by the user, but group of <code class="systemitem">svntest</code>. Anyone in the <code class="systemitem">svntest</code> group can create files, but still give the entire group write access to those files. This avoids locking out other users from the repository.
 
-Now, return to an unprivileged user account, and take a look at the new repository using [**svnlook**]{.command}:
+Now, return to an unprivileged user account, and take a look at the new repository using <span class="command"><strong>svnlook</strong></span>:
 
-``` userinput
+```bash
 svnlook tree /srv/svn/repositories/svntest/
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-You may need to log out and back in again to refresh your group memberships. [**su *`<username>`***]{.command} should work as well.
-:::
-::::
+You may need to log out and back in again to refresh your group memberships. <span class="command"><strong>su <em>`<username>`</strong></em></span> should work as well.
+</div>
+</div>
 
-::: {.sect3 lang="en"}
-### 3. Configure the Server {#configure-the-server .sect3}
+<div class="sect3" lang="en">
+### 3. Configure the Server {#configure-the-server}
 
-As mentioned previously, these instructions will configure the server to use only [**ssh**]{.command} for write access to the repository and to provide anonymous access using [**svnserve**]{.command}. There are several other ways to provide access to the repository. These additional configurations are best explained at [https://svnbook.red-bean.com/](https://svnbook.red-bean.com/){.ulink}.
+As mentioned previously, these instructions will configure the server to use only <span class="command"><strong>ssh</strong></span> for write access to the repository and to provide anonymous access using <span class="command"><strong>svnserve</strong></span>. There are several other ways to provide access to the repository. These additional configurations are best explained at <a class="ulink" href="https://svnbook.red-bean.com/">https://svnbook.red-bean.com/</a>.
 
-Access configuration needs to be done for each repository. Create the `svnserve.conf`{.filename} file for the svntest repository using the following commands:
+Access configuration needs to be done for each repository. Create the <code class="filename">svnserve.conf</code> file for the svntest repository using the following commands:
 
-``` root
+```bash
 cp /srv/svn/repositories/svntest/conf/svnserve.conf \
    /srv/svn/repositories/svntest/conf/svnserve.conf.default &&
 
@@ -163,40 +163,40 @@ auth-access = write
 EOF
 ```
 
-There is not a lot to the configuration file at all. You'll notice that only the general section is required. Take a look at the `svnserve.conf.default`{.filename} file for information on using [**svnserve**]{.command}'s built-in authentication method.
-:::
+There is not a lot to the configuration file at all. You'll notice that only the general section is required. Take a look at the <code class="filename">svnserve.conf.default</code> file for information on using <span class="command"><strong>svnserve</strong></span>'s built-in authentication method.
+</div>
 
-::: {.sect3 lang="en"}
-### []{#svnserver-init}4. Starting the Server {#starting-the-server .sect3}
+<div class="sect3" lang="en">
+### 4. Starting the Server {#starting-the-server}
 
-To start the server at boot time, install the `svnserve.service`{.filename} unit from the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package:
+To start the server at boot time, install the <code class="filename">svnserve.service</code> unit from the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package:
 
-``` root
+```bash
 make install-svnserve
 ```
 
-Additionally, the instructions above require that svn server uses [**umask 002**]{.command} so that all new files will be writable by owner and group. This can be achieved by creating a systemd unit override file by running the following command:
+Additionally, the instructions above require that svn server uses <span class="command"><strong>umask 002</strong></span> so that all new files will be writable by owner and group. This can be achieved by creating a systemd unit override file by running the following command:
 
-``` root
+```bash
 mkdir -p /etc/systemd/system/svnserve.service.d
 echo "UMask=0002" > /etc/systemd/system/svnserve.service.d/99-user.conf
 ```
 
-Options which are passed to [**svnserve**]{.command} daemon can be changed in `/etc/default/svnserve`{.filename}.
-:::
-:::::::::
-:::::::::::
+Options which are passed to <span class="command"><strong>svnserve</strong></span> daemon can be changed in <code class="filename">/etc/default/svnserve</code>.
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](subversion.md "Subversion-1.14.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](subversion.md "Subversion-1.14.5")
 
     Subversion-1.14.5
 
--   [Next](swig.md "SWIG-4.4.1"){accesskey="n"}
+-   [Next](swig.md "SWIG-4.4.1")
 
     SWIG-4.4.1
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

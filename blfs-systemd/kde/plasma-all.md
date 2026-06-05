@@ -1,40 +1,40 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 32. KDE Plasma
 
--   [Prev](bolt.md "bolt-0.9.11"){accesskey="p"}
+-   [Prev](bolt.md "bolt-0.9.11")
 
     bolt-0.9.11
 
--   [Next](../gnome/gnome.md "GNOME"){accesskey="n"}
+-   [Next](../gnome/gnome.md "GNOME")
 
     GNOME
 
--   [Up](plasma.md "Chapter 32. KDE Plasma"){accesskey="u"}
+-   [Up](plasma.md "Chapter 32. KDE Plasma")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#plasma-build}Building Plasma {#building-plasma .sect1}
+# Building Plasma {#building-plasma}
 
-::::::::::::::::::::: {.sect1 lang="en"}
+<div class="sect1" lang="en">
 KDE Plasma is a collection of packages based on top of KDE Frameworks and QML. They implement the KDE Display Environment (Plasma).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 The instructions below build all of the Plasma packages in one step by using a bash script.
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/plasma/6.6.5](https://download.kde.org/stable/plasma/6.6.5){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/plasma/6.6.5">https://download.kde.org/stable/plasma/6.6.5</a>
 
 -   Download MD5 sum: See Below
 
@@ -43,32 +43,32 @@ The instructions below build all of the Plasma packages in one step by using a b
 -   Estimated disk space required: 3.1 GB (742 MB installed)
 
 -   Estimated build time: 20 SBU (using parallelism=8)
-:::
+</div>
 
 ### Plasma Dependencies
 
 #### Required
 
-[Boost-1.91.0-1](../general/boost.md "boost-1.91.0-1"){.xref}, [FFmpeg-8.1.1](../multimedia/ffmpeg.md "FFmpeg-8.1.1"){.xref}, [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}, [kirigami-addons-1.12.1](kirigami-addons.md "kirigami-addons-1.12.1"){.xref}, [kquickimageeditor-0.6.1](kquickimageeditor.md "kquickimageeditor-0.6.1"){.xref}, [libdisplay-info-0.3.0](../general/libdisplay-info.md "libdisplay-info-0.3.0"){.xref}, [libpwquality-1.4.5](../postlfs/libpwquality.md "libpwquality-1.4.5"){.xref}, [libqalculate-5.11.0](../general/libqalculate.md "libqalculate-5.11.0"){.xref}, [libnl-3.12.0](../basicnet/libnl.md "libnl-3.12.0"){.xref}, [libxcvt-0.1.3](../x/libxcvt.md "libxcvt-0.1.3"){.xref}, [libxkbcommon-1.13.2](../general/libxkbcommon.md "libxkbcommon-1.13.2"){.xref}, [Mesa-26.0.7](../x/mesa.md "Mesa-26.0.7"){.xref} built with [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref}, [opencv-4.13.0](../general/opencv.md "opencv-4.13.0"){.xref}, [phonon-4.12.0](phonon.md "Phonon-4.12.0"){.xref}, [pipewire-1.6.6](../multimedia/pipewire.md "Pipewire-1.6.6"){.xref}, [pulseaudio-qt-1.8.1](pulseaudio-qt.md "pulseaudio-qt-1.8.1"){.xref}, [qca-2.3.10](../general/qca.md "Qca-2.3.10"){.xref}, [qcoro-0.13.0](../general/qcoro.md "qcoro-0.13.0"){.xref}, [qtkeychain-0.16.0](qtkeychain.md "qtkeychain-0.16.0"){.xref}, [sassc-3.6.2](../general/sassc.md "sassc-3.6.2"){.xref}, [taglib-2.3](../multimedia/taglib.md "Taglib-2.3"){.xref}, [xdotool-4.20260303.1](../general/xdotool.md "xdotool-4.20260303.1"){.xref}, and [Xorg Evdev Driver-2.11.0](../x/x7driver.md#xorg-evdev-driver "Xorg Evdev Driver-2.11.0"){.xref}
+<a class="xref" href="../general/boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a>, <a class="xref" href="../multimedia/ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a>, <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>, <a class="xref" href="kirigami-addons.md" title="kirigami-addons-1.12.1">kirigami-addons-1.12.1</a>, <a class="xref" href="kquickimageeditor.md" title="kquickimageeditor-0.6.1">kquickimageeditor-0.6.1</a>, <a class="xref" href="../general/libdisplay-info.md" title="libdisplay-info-0.3.0">libdisplay-info-0.3.0</a>, <a class="xref" href="../postlfs/libpwquality.md" title="libpwquality-1.4.5">libpwquality-1.4.5</a>, <a class="xref" href="../general/libqalculate.md" title="libqalculate-5.11.0">libqalculate-5.11.0</a>, <a class="xref" href="../basicnet/libnl.md" title="libnl-3.12.0">libnl-3.12.0</a>, <a class="xref" href="../x/libxcvt.md" title="libxcvt-0.1.3">libxcvt-0.1.3</a>, <a class="xref" href="../general/libxkbcommon.md" title="libxkbcommon-1.13.2">libxkbcommon-1.13.2</a>, <a class="xref" href="../x/mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a> built with <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>, <a class="xref" href="../general/opencv.md" title="opencv-4.13.0">opencv-4.13.0</a>, <a class="xref" href="phonon.md" title="Phonon-4.12.0">phonon-4.12.0</a>, <a class="xref" href="../multimedia/pipewire.md" title="Pipewire-1.6.6">pipewire-1.6.6</a>, <a class="xref" href="pulseaudio-qt.md" title="pulseaudio-qt-1.8.1">pulseaudio-qt-1.8.1</a>, <a class="xref" href="../general/qca.md" title="Qca-2.3.10">qca-2.3.10</a>, <a class="xref" href="../general/qcoro.md" title="qcoro-0.13.0">qcoro-0.13.0</a>, <a class="xref" href="qtkeychain.md" title="qtkeychain-0.16.0">qtkeychain-0.16.0</a>, <a class="xref" href="../general/sassc.md" title="sassc-3.6.2">sassc-3.6.2</a>, <a class="xref" href="../multimedia/taglib.md" title="Taglib-2.3">taglib-2.3</a>, <a class="xref" href="../general/xdotool.md" title="xdotool-4.20260303.1">xdotool-4.20260303.1</a>, and <a class="xref" href="../x/x7driver.md#xorg-evdev-driver" title="Xorg Evdev Driver-2.11.0">Xorg Evdev Driver-2.11.0</a>
 
 #### Recommended
 
-[bolt-0.9.11](bolt.md "bolt-0.9.11"){.xref}, [gsettings-desktop-schemas-50.1](../gnome/gsettings-desktop-schemas.md "gsettings-desktop-schemas-50.1"){.xref}, [libcanberra-0.30](../multimedia/libcanberra.md "libcanberra-0.30"){.xref}, [libinput-1.31.2](../x/x7driver.md#libinput "libinput-1.31.2"){.xref}, [libpcap-1.10.6](../basicnet/libpcap.md "libpcap-1.10.6"){.xref}, [libwacom-2.19.0](../general/libwacom.md "libwacom-2.19.0"){.xref} and [Xorg Wacom Driver-1.2.4](../x/x7driver.md#xorg-wacom-driver "Xorg Wacom Driver-1.2.4"){.xref} (for wacomtablet), [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [lm-sensors-3-6-2](../general/lm-sensors.md "lm-sensors-3-6-2"){.xref}, [oxygen-icons-6.1.0](../x/oxygen-icons.md "oxygen-icons-6.1.0"){.xref}, [pciutils-3.15.0](../general/pciutils.md "pciutils-3.15.0"){.xref}, [power-profiles-daemon-0.30](../general/power-profiles-daemon.md "Power-profiles-daemon-0.30"){.xref}, and the following Python modules: [psutil-7.2.2](../general/python-modules.md#psutil "psutil-7.2.2"){.xref}, [pygdbmi-0.11.0.0](../general/python-modules.md#pygdbmi "pygdbmi-0.11.0.0"){.xref}, [sentry-sdk-2.53.0](../general/python-modules.md#sentry-sdk "sentry-sdk-2.53.0"){.xref}, [urllib3-2.7.0](../general/python-dependencies.md#urllib3 "Urllib3-2.7.0"){.xref} (if they are not installed, they will be downloaded and installed by the drkonqi build procedure)
+<a class="xref" href="bolt.md" title="bolt-0.9.11">bolt-0.9.11</a>, <a class="xref" href="../gnome/gsettings-desktop-schemas.md" title="gsettings-desktop-schemas-50.1">gsettings-desktop-schemas-50.1</a>, <a class="xref" href="../multimedia/libcanberra.md" title="libcanberra-0.30">libcanberra-0.30</a>, <a class="xref" href="../x/x7driver.md#libinput" title="libinput-1.31.2">libinput-1.31.2</a>, <a class="xref" href="../basicnet/libpcap.md" title="libpcap-1.10.6">libpcap-1.10.6</a>, <a class="xref" href="../general/libwacom.md" title="libwacom-2.19.0">libwacom-2.19.0</a> and <a class="xref" href="../x/x7driver.md#xorg-wacom-driver" title="Xorg Wacom Driver-1.2.4">Xorg Wacom Driver-1.2.4</a> (for wacomtablet), <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="../general/lm-sensors.md" title="lm-sensors-3-6-2">lm-sensors-3-6-2</a>, <a class="xref" href="../x/oxygen-icons.md" title="oxygen-icons-6.1.0">oxygen-icons-6.1.0</a>, <a class="xref" href="../general/pciutils.md" title="pciutils-3.15.0">pciutils-3.15.0</a>, <a class="xref" href="../general/power-profiles-daemon.md" title="Power-profiles-daemon-0.30">power-profiles-daemon-0.30</a>, and the following Python modules: <a class="xref" href="../general/python-modules.md#psutil" title="psutil-7.2.2">psutil-7.2.2</a>, <a class="xref" href="../general/python-modules.md#pygdbmi" title="pygdbmi-0.11.0.0">pygdbmi-0.11.0.0</a>, <a class="xref" href="../general/python-modules.md#sentry-sdk" title="sentry-sdk-2.53.0">sentry-sdk-2.53.0</a>, <a class="xref" href="../general/python-dependencies.md#urllib3" title="Urllib3-2.7.0">urllib3-2.7.0</a> (if they are not installed, they will be downloaded and installed by the drkonqi build procedure)
 
 #### Recommended (runtime)
 
-[AccountsService-23.13.9](../general/accountsservice.md "AccountsService-23.13.9"){.xref}, [breeze-icons-6.26.0](../x/breeze-icons.md "breeze-icons-6.26.0"){.xref}, [kio-extras-26.04.1](kio-extras.md "kio-extras-26.04.1"){.xref}, [smartmontools-7.5](../postlfs/smartmontools.md "smartmontools-7.5"){.xref}, [xdg-desktop-portal-1.20.4](../x/xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){.xref}, and [Xwayland-24.1.12](../x/xwayland.md "Xwayland-24.1.12"){.xref}
+<a class="xref" href="../general/accountsservice.md" title="AccountsService-23.13.9">AccountsService-23.13.9</a>, <a class="xref" href="../x/breeze-icons.md" title="breeze-icons-6.26.0">breeze-icons-6.26.0</a>, <a class="xref" href="kio-extras.md" title="kio-extras-26.04.1">kio-extras-26.04.1</a>, <a class="xref" href="../postlfs/smartmontools.md" title="smartmontools-7.5">smartmontools-7.5</a>, <a class="xref" href="../x/xdg-desktop-portal.md" title="xdg-desktop-portal-1.20.4">xdg-desktop-portal-1.20.4</a>, and <a class="xref" href="../x/xwayland.md" title="Xwayland-24.1.12">Xwayland-24.1.12</a>
 
 #### Optional
 
-[AppStream-1.1.2](../general/appstream.md "AppStream-1.1.2"){.xref} (build with -qt=true), [GLU-9.0.3](../x/glu.md "GLU-9.0.3"){.xref}, [ibus-1.5.34](../general/ibus.md "ibus-1.5.34"){.xref}, [qtwebengine-6.11.1](../x/qtwebengine.md "QtWebEngine-6.11.1"){.xref}, [KDevPlatform](https://www.kdevelop.org/){.ulink}, [libgps](https://gpsd.gitlab.io/gpsd/){.ulink}, [libhybris](https://github.com/libhybris/libhybris){.ulink}, [packagekit-qt](https://www.freedesktop.org/software/PackageKit/releases/){.ulink}, [Qapt](https://launchpad.net/qapt){.ulink}, [SCIM](https://github.com/osiam/osiam){.ulink}, and [socat](http://www.dest-unreach.org/socat/){.ulink} (for pam_kwallet)
+<a class="xref" href="../general/appstream.md" title="AppStream-1.1.2">AppStream-1.1.2</a> (build with -qt=true), <a class="xref" href="../x/glu.md" title="GLU-9.0.3">GLU-9.0.3</a>, <a class="xref" href="../general/ibus.md" title="ibus-1.5.34">ibus-1.5.34</a>, <a class="xref" href="../x/qtwebengine.md" title="QtWebEngine-6.11.1">qtwebengine-6.11.1</a>, <a class="ulink" href="https://www.kdevelop.org/">KDevPlatform</a>, <a class="ulink" href="https://gpsd.gitlab.io/gpsd/">libgps</a>, <a class="ulink" href="https://github.com/libhybris/libhybris">libhybris</a>, <a class="ulink" href="https://www.freedesktop.org/software/PackageKit/releases/">packagekit-qt</a>, <a class="ulink" href="https://launchpad.net/qapt">Qapt</a>, <a class="ulink" href="https://github.com/osiam/osiam">SCIM</a>, and <a class="ulink" href="http://www.dest-unreach.org/socat/">socat</a> (for pam_kwallet)
 
-::: {.sect2 lang="en"}
-## Downloading KDE Plasma {#downloading-kde-plasma .sect2}
+<div class="sect2" lang="en">
+## Downloading KDE Plasma {#downloading-kde-plasma}
 
-The easiest way to get the KDE Plasma packages is to use a single [**wget**]{.command} to fetch them all at once:
+The easiest way to get the KDE Plasma packages is to use a single <span class="command"><strong>wget</strong></span> to fetch them all at once:
 
-``` userinput
+```bash
 url=https://download.kde.org/stable/plasma/6.6.5/
 wget -r -nH -nd -A '*.xz' -np $url
 
@@ -79,14 +79,14 @@ The options used here are:
   -A '*.xz'     just get the *.xz files
   -np           don't get parent directories
 ```
-:::
+</div>
 
-::::: {.sect2 lang="en"}
-## Setting Package Order {#setting-package-order .sect2}
+<div class="sect2" lang="en">
+## Setting Package Order {#setting-package-order}
 
 The order of building files is important due to internal dependencies. Create the list of files in the proper order as follows:
 
-``` userinput
+```bash
 cat > plasma-6.6.5.md5 << "EOF"
 25a9cbe5025e2ad58bfb6a4c5fc9427a  kdecoration-6.6.5.tar.xz
 84c079431cc0997e392198dfd6e1ca5d  libkscreen-6.6.5.tar.xz
@@ -164,21 +164,21 @@ b481182e12e3438774c72d8f073b96ff  plasma-thunderbolt-6.6.5.tar.xz
 EOF
 ```
 
-:::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### About Commented Out Packages
 
 In the above list, several files are commented out with a hash (#) character.
 
-::: itemizedlist
+<div class="itemizedlist">
 -   The plasma-sdk package is optional and used for software development.
 
--   The discover package requires [AppStream-1.1.2](../general/appstream.md "AppStream-1.1.2"){.xref} to be built with the -D qt=true switch.
+-   The discover package requires <a class="xref" href="../general/appstream.md" title="AppStream-1.1.2">AppStream-1.1.2</a> to be built with the -D qt=true switch.
 
--   The breeze-grub, breeze-plymouth, and plymouth-kcm packages above are all for customized support of [Plymouth](https://www.freedesktop.org/wiki/Software/Plymouth/){.ulink} which is designed to be run within an initial ram disk during boot (see [the section called “About initramfs”](../postlfs/initramfs.md "About initramfs"){.xref}).
+-   The breeze-grub, breeze-plymouth, and plymouth-kcm packages above are all for customized support of <a class="ulink" href="https://www.freedesktop.org/wiki/Software/Plymouth/">Plymouth</a> which is designed to be run within an initial ram disk during boot (see <a class="xref" href="../postlfs/initramfs.md" title="About initramfs">the section called “About initramfs”</a>).
 
--   The plasma-browser-integration package is designed to implement browser integration for Plasma into Mozilla Firefox and Google Chrome. The package does build, but is only useful if you want these browsers to be integrated into the shell in a way that lets you see (and control) downloads from Plasma's notifications area, as well as allowing you to search browser history in the KDE Runner. Note that you must also install a browser extension for this to work. For more details, see [the KDE Plasma wiki page about browser integration.](https://community.kde.org/Plasma/Browser_Integration){.ulink}
+-   The plasma-browser-integration package is designed to implement browser integration for Plasma into Mozilla Firefox and Google Chrome. The package does build, but is only useful if you want these browsers to be integrated into the shell in a way that lets you see (and control) downloads from Plasma's notifications area, as well as allowing you to search browser history in the KDE Runner. Note that you must also install a browser extension for this to work. For more details, see <a class="ulink" href="https://community.kde.org/Plasma/Browser_Integration">the KDE Plasma wiki page about browser integration.</a>
 
 -   The krdp package is used to allow an RDP server to be run while using Plasma. This feature requires the 2.x version of FreeRDP, which is not in BLFS.
 
@@ -191,31 +191,31 @@ In the above list, several files are commented out with a hash (#) character.
 -   The kwayland-integration application requires plasma5 support.
 
 -   The plasma-login-manager application provides a display manager for KDE Plasma, forked from SDDM and with an new frontend providing a greeter, wallpaper plugin integration and System Settings module (KCM).
-:::
-::::
-:::::
+</div>
+</div>
+</div>
 
-::::: {.installation lang="en"}
-## Installation of Plasma {#installation-of-plasma .sect2}
+<div class="installation" lang="en">
+## Installation of Plasma {#installation-of-plasma}
 
-:::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 When installing multiple packages in a script, the installation needs to be done as the root user. There are three general options that can be used to do this:
 
-::: orderedlist
+<div class="orderedlist">
 1.  Run the entire script as the root user (not recommended).
 
-2.  Use the [**sudo**]{.command} command from the [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} package.
+2.  Use the <span class="command"><strong>sudo</strong></span> command from the <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> package.
 
-3.  Use [**su -c "command arguments"**]{.command} (quotes required) which will ask for the root password for every iteration of the loop.
-:::
+3.  Use <span class="command"><strong>su -c "command arguments"</strong></span> (quotes required) which will ask for the root password for every iteration of the loop.
+</div>
 
-One way to handle this situation is to create a short [**bash**]{.command} function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
+One way to handle this situation is to create a short <span class="command"><strong>bash</strong></span> function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
 
-``` userinput
+```bash
 as_root()
 {
   if   [ $EUID = 0 ];        then $*
@@ -226,17 +226,17 @@ as_root()
 
 export -f as_root
 ```
-::::
+</div>
 
 First, start a subshell that will exit on error:
 
-``` userinput
+```bash
 bash -e
 ```
 
 Install all of the packages by running the following commands:
 
-``` userinput
+```bash
 while read -r line; do
 
     # Get the file name, ignoring comments and blank lines
@@ -273,9 +273,9 @@ done < plasma-6.6.5.md5
 exit
 ```
 
-If you did not set `$KF6_PREFIX`{.envar} to `/usr`{.filename}, create symlinks to allow display managers to find [Plasma]{.application}, and to allow the XDG Desktop Portal to be detected. As the `root`{.systemitem} user:
+If you did not set <code class="envar">$KF6_PREFIX</code> to <code class="filename">/usr</code>, create symlinks to allow display managers to find <span class="application">Plasma</span>, and to allow the XDG Desktop Portal to be detected. As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 # Setup xsessions (X11 sessions)
 install -dvm 755 /usr/share/xsessions
 cd /usr/share/xsessions
@@ -304,17 +304,17 @@ cd /usr/share/xdg-desktop-portal/portals
 [ -e kde.portal ] ||
 ln -sfv $KF6_PREFIX/share/xdg-desktop-portal/portals/kde.portal
 ```
-:::::
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring Plasma {#configuring-plasma .sect2}
+<div class="configuration" lang="en">
+## Configuring Plasma {#configuring-plasma}
 
-::: {.sect3 lang="en"}
-### Linux PAM Configuration {#linux-pam-configuration .sect3}
+<div class="sect3" lang="en">
+### Linux PAM Configuration {#linux-pam-configuration}
 
-If you built Plasma with the recommended [Linux PAM]{.application} support, create necessary configuration files by running the following commands as the `root`{.systemitem} user:
+If you built Plasma with the recommended <span class="application">Linux PAM</span> support, create necessary configuration files by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/pam.d/kde << "EOF"
 # Begin /etc/pam.d/kde
 
@@ -356,17 +356,17 @@ account include system-account
 # End /etc/pam.d/kscreensaver
 EOF
 ```
-:::
-::::
+</div>
+</div>
 
-::: {.starting lang="en"}
-## Starting Plasma {#starting-plasma .sect2}
+<div class="starting" lang="en">
+## Starting Plasma {#starting-plasma}
 
-You can start [Plasma]{.application} from a TTY, using [xinit-1.4.4](../x/xinit.md "xinit-1.4.4"){.xref}.
+You can start <span class="application">Plasma</span> from a TTY, using <a class="xref" href="../x/xinit.md" title="xinit-1.4.4">xinit-1.4.4</a>.
 
-To start [Plasma]{.application} using [xinit-1.4.4](../x/xinit.md "xinit-1.4.4"){.xref}, run the following commands:
+To start <span class="application">Plasma</span> using <a class="xref" href="../x/xinit.md" title="xinit-1.4.4">xinit-1.4.4</a>, run the following commands:
 
-``` userinput
+```bash
 cat > ~/.xinitrc << "EOF"
 dbus-launch --exit-with-x11 $KF6_PREFIX/bin/startplasma-x11
 EOF
@@ -374,46 +374,46 @@ EOF
 startx
 ```
 
-The X session starts on the first unused virtual terminal, normally vt7. You can switch to another vt[*n*]{.emphasis} simultaneously pressing the keys Ctrl-Alt-F[*n*]{.emphasis} ([*n*]{.emphasis}=1, 2, ...). To switch back to the X session, normally started at vt7, use Ctrl-Alt-F7. The vt where the command [**startx**]{.command} was executed will display many messages, including X starting messages, applications automatically started with the session, and eventually, some warning and error messages. You may prefer to redirect those messages to a log file, which not only will keep the initial vt uncluttered, but can also be used for debugging purposes. This can be done starting X with:
+The X session starts on the first unused virtual terminal, normally vt7. You can switch to another vt<span class="emphasis"><em>n</em></span> simultaneously pressing the keys Ctrl-Alt-F<span class="emphasis"><em>n</em></span> (<span class="emphasis"><em>n</em></span>=1, 2, ...). To switch back to the X session, normally started at vt7, use Ctrl-Alt-F7. The vt where the command <span class="command"><strong>startx</strong></span> was executed will display many messages, including X starting messages, applications automatically started with the session, and eventually, some warning and error messages. You may prefer to redirect those messages to a log file, which not only will keep the initial vt uncluttered, but can also be used for debugging purposes. This can be done starting X with:
 
-``` userinput
+```bash
 startx &> ~/x-session-errors
 ```
 
 When shutting down or rebooting, the shutdown messages appear on the vt where X was running. If you wish to see those messages, simultaneously press keys Alt-F7 (assuming that X was running on vt7).
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [There are too many plasma programs (over 50 in /opt/kf6/bin) to list separately here.]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">There are too many plasma programs (over 50 in /opt/kf6/bin) to list separately here.</span>
+</div>
 
-::: seg
-**Installed Libraries:** [There are too many plasma libraries (over 250 in /opt/kf6/lib) to list separately here.]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">There are too many plasma libraries (over 250 in /opt/kf6/lib) to list separately here.</span>
+</div>
 
-::: seg
-**Installed Directories:** [There are too many plasma directories (over 2700 in /opt/kf6) to list separately here.]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">There are too many plasma directories (over 2700 in /opt/kf6) to list separately here.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](bolt.md "bolt-0.9.11"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](bolt.md "bolt-0.9.11")
 
     bolt-0.9.11
 
--   [Next](../gnome/gnome.md "GNOME"){accesskey="n"}
+-   [Next](../gnome/gnome.md "GNOME")
 
     GNOME
 
--   [Up](plasma.md "Chapter 32. KDE Plasma"){accesskey="u"}
+-   [Up](plasma.md "Chapter 32. KDE Plasma")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

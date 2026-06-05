@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 28. Icons
 
--   [Prev](gnome-icon-theme-extras.md "gnome-icon-theme-extras-3.12.0"){accesskey="p"}
+-   [Prev](gnome-icon-theme-extras.md "gnome-icon-theme-extras-3.12.0")
 
     gnome-icon-theme-extras-3.12.0
 
--   [Next](gnome-themes-extra.md "gnome-themes-extra-3.28"){accesskey="n"}
+-   [Next](gnome-themes-extra.md "gnome-themes-extra-3.28")
 
     gnome-themes-extra-3.28
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-icon-theme-symbolic}gnome-icon-theme-symbolic-3.12.0 {#gnome-icon-theme-symbolic-3.12.0 .sect1}
+# gnome-icon-theme-symbolic-3.12.0 {#gnome-icon-theme-symbolic-3.12.0}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Icon Theme Symbolic {#introduction-to-gnome-icon-theme-symbolic .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Icon Theme Symbolic {#introduction-to-gnome-icon-theme-symbolic}
 
-The [GNOME Icon Theme Symbolic]{.application} package contains symbolic icons for the default [GNOME]{.application} icon theme.
+The <span class="application">GNOME Icon Theme Symbolic</span> package contains symbolic icons for the default <span class="application">GNOME</span> icon theme.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-icon-theme-symbolic/3.12/gnome-icon-theme-symbolic-3.12.0.tar.xz](https://download.gnome.org/sources/gnome-icon-theme-symbolic/3.12/gnome-icon-theme-symbolic-3.12.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-icon-theme-symbolic/3.12/gnome-icon-theme-symbolic-3.12.0.tar.xz">https://download.gnome.org/sources/gnome-icon-theme-symbolic/3.12/gnome-icon-theme-symbolic-3.12.0.tar.xz</a>
 
 -   Download MD5 sum: 3c9c0e6b9fa04b3cbbb84da825a26fd9
 
@@ -44,69 +44,69 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.8 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### GNOME Icon Theme Symbolic Dependencies
 
 #### Required
 
-[gnome-icon-theme-3.12.0](gnome-icon-theme.md "gnome-icon-theme-3.12.0"){.xref}
+<a class="xref" href="gnome-icon-theme.md" title="gnome-icon-theme-3.12.0">gnome-icon-theme-3.12.0</a>
 
 #### Optional
 
-[git-2.54.0](../general/git.md "Git-2.54.0"){.xref} and [Inkscape-1.4.4](../xsoft/inkscape.md "Inkscape-1.4.4"){.xref}
-:::::
+<a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a> and <a class="xref" href="../xsoft/inkscape.md" title="Inkscape-1.4.4">Inkscape-1.4.4</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Icon Theme Symbolic {#installation-of-gnome-icon-theme-symbolic .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Icon Theme Symbolic {#installation-of-gnome-icon-theme-symbolic}
 
-Install [GNOME Icon Theme Symbolic]{.application} by running the following commands:
+Install <span class="application">GNOME Icon Theme Symbolic</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/icons/gnome/scalable]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/icons/gnome/scalable</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-icon-theme-extras.md "gnome-icon-theme-extras-3.12.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-icon-theme-extras.md "gnome-icon-theme-extras-3.12.0")
 
     gnome-icon-theme-extras-3.12.0
 
--   [Next](gnome-themes-extra.md "gnome-themes-extra-3.28"){accesskey="n"}
+-   [Next](gnome-themes-extra.md "gnome-themes-extra-3.28")
 
     gnome-themes-extra-3.28
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

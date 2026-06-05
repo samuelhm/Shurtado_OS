@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](libshumate.md "libshumate-1.6.1"){accesskey="p"}
+-   [Prev](libshumate.md "libshumate-1.6.1")
 
     libshumate-1.6.1
 
--   [Next](tinysparql.md "tinysparql-3.11.1"){accesskey="n"}
+-   [Next](tinysparql.md "tinysparql-3.11.1")
 
     tinysparql-3.11.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#evolution-data-server}evolution-data-server-3.60.2 {#evolution-data-server-3.60.2 .sect1}
+# evolution-data-server-3.60.2 {#evolution-data-server-3.60.2}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Evolution Data Server {#introduction-to-evolution-data-server .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Evolution Data Server {#introduction-to-evolution-data-server}
 
-The [Evolution Data Server]{.application} package provides a unified backend for programs that work with contacts, tasks, and calendar information. It was originally developed for [Evolution]{.application} (hence the name), but is now used by other packages as well.
+The <span class="application">Evolution Data Server</span> package provides a unified backend for programs that work with contacts, tasks, and calendar information. It was originally developed for <span class="application">Evolution</span> (hence the name), but is now used by other packages as well.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/evolution-data-server/3.60/evolution-data-server-3.60.2.tar.xz](https://download.gnome.org/sources/evolution-data-server/3.60/evolution-data-server-3.60.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/evolution-data-server/3.60/evolution-data-server-3.60.2.tar.xz">https://download.gnome.org/sources/evolution-data-server/3.60/evolution-data-server-3.60.2.tar.xz</a>
 
 -   Download MD5 sum: 933c4804d9d2ba99f93fc26005282a3f
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 150 (with tests)
 
 -   Estimated build time: 0.7 SBU (With tests; both using parallelism=4)
-:::
+</div>
 
 ### Evolution Data Server Dependencies
 
 #### Required
 
-[libical-4.0.2](../general/libical.md "libical-4.0.2"){.xref}, [libsecret-0.21.7](libsecret.md "libsecret-0.21.7"){.xref}, and [nss-3.124](../postlfs/nss.md "NSS-3.124"){.xref}
+<a class="xref" href="../general/libical.md" title="libical-4.0.2">libical-4.0.2</a>, <a class="xref" href="libsecret.md" title="libsecret-0.21.7">libsecret-0.21.7</a>, and <a class="xref" href="../postlfs/nss.md" title="NSS-3.124">nss-3.124</a>
 
 #### Recommended
 
-[gnome-online-accounts-3.58.1](gnome-online-accounts.md "gnome-online-accounts-3.58.1"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, [ICU-78.3](../general/icu.md "icu-78.3"){.xref}, [libcanberra-0.30](../multimedia/libcanberra.md "libcanberra-0.30"){.xref}, [libgweather-4.6.0](libgweather.md "libgweather-4.6.0"){.xref}, [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}, and [WebKitGTK-2.52.0](../x/webkitgtk.md "WebKitGTK-2.52.0"){.xref}
+<a class="xref" href="gnome-online-accounts.md" title="gnome-online-accounts-3.58.1">gnome-online-accounts-3.58.1</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, <a class="xref" href="../general/icu.md" title="icu-78.3">ICU-78.3</a>, <a class="xref" href="../multimedia/libcanberra.md" title="libcanberra-0.30">libcanberra-0.30</a>, <a class="xref" href="libgweather.md" title="libgweather-4.6.0">libgweather-4.6.0</a>, <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>, and <a class="xref" href="../x/webkitgtk.md" title="WebKitGTK-2.52.0">WebKitGTK-2.52.0</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, a [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref} (that provides a [**sendmail**]{.command} command), [OpenLDAP-2.6.13](../server/openldap.md "OpenLDAP-2.6.13"){.xref}, [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated), and [libphonenumber](https://github.com/googlei18n/libphonenumber/){.ulink}
-:::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, a <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a> (that provides a <span class="command"><strong>sendmail</strong></span> command), <a class="xref" href="../server/openldap.md" title="OpenLDAP-2.6.13">OpenLDAP-2.6.13</a>, <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated), and <a class="ulink" href="https://github.com/googlei18n/libphonenumber/">libphonenumber</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Evolution Data Server {#installation-of-evolution-data-server .sect2}
+<div class="installation" lang="en">
+## Installation of Evolution Data Server {#installation-of-evolution-data-server}
 
-Install [Evolution Data Server]{.application} by running the following commands:
+Install <span class="application">Evolution Data Server</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -83,86 +83,86 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-To test the results, issue: [**ninja test**]{.command}. One test, test-book-client-custom-summary, is known to fail.
-:::
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. One test, test-book-client-custom-summary, is known to fail.
+</div>
 
-:::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D ENABLE_VALA_BINDINGS=ON`*: This switch enables building the Vala bindings. Remove it if you don't have [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref} installed.
+*`-D ENABLE_VALA_BINDINGS=ON`*: This switch enables building the Vala bindings. Remove it if you don't have <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a> installed.
 
 *`-D ENABLE_GTK_DOC=OFF`*: This switch disables building the API documentation. It is broken for this package due to the use of a long deprecated gtk-doc program that is no longer available.
 
-*`-D WITH_KRB5=OFF`*: This switch allows building this package without [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}. If you need Kerberos support in this package, for example to connect to a corporate network, change this switch from OFF to ON.
+*`-D WITH_KRB5=OFF`*: This switch allows building this package without <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>. If you need Kerberos support in this package, for example to connect to a corporate network, change this switch from OFF to ON.
 
-*`-D WITH_LIBDB=OFF`*: This switch allows building this package without [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated). sqlite is used for normal operation.
+*`-D WITH_LIBDB=OFF`*: This switch allows building this package without <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated). sqlite is used for normal operation.
 
-`-D ENABLE_OAUTH2_WEBKITGTK4=OFF`{.option}: Use this switch if you did not build [WebKitGTK-2.52.0](../x/webkitgtk.md "WebKitGTK-2.52.0"){.xref} with GTK-4.
+<code class="option">-D ENABLE_OAUTH2_WEBKITGTK4=OFF</code>: Use this switch if you did not build <a class="xref" href="../x/webkitgtk.md" title="WebKitGTK-2.52.0">WebKitGTK-2.52.0</a> with GTK-4.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-To enable many of the optional dependencies, review the information from [**cmake -L CMakeLists.txt**]{.command} for the necessary parameters you must pass to the [**cmake**]{.command} command.
-:::
-::::
+To enable many of the optional dependencies, review the information from <span class="command"><strong>cmake -L CMakeLists.txt</strong></span> for the necessary parameters you must pass to the <span class="command"><strong>cmake</strong></span> command.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libcamel-1.2.so, libebackend-1.2.so, libebook-1.2.so, libebook-contacts-1.2.so, libecal-2.0.so, libedata-book-1.2.so, libedata-cal-2.0.so, libedataserver-1.2.so, libedataserverui-1.2.so, libedataserverui4-1.0.so, and libetestserverutils.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libcamel-1.2.so, libebackend-1.2.so, libebook-1.2.so, libebook-contacts-1.2.so, libecal-2.0.so, libedata-book-1.2.so, libedata-cal-2.0.so, libedataserver-1.2.so, libedataserverui-1.2.so, libedataserverui4-1.0.so, and libetestserverutils.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/evolution-data-server, /usr/lib{,exec}/evolution-data-server, /usr/share/evolution-data-server, /usr/share/installed-tests/evolution-data-server, and /usr/share/pixmaps/evolution-data-server]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/evolution-data-server, /usr/lib{,exec}/evolution-data-server, /usr/share/evolution-data-server, /usr/share/installed-tests/evolution-data-server, and /usr/share/pixmaps/evolution-data-server</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------ ----------------------------------------------------------------------------------
-  []{#libcamel-1}[`libcamel-1.2.so`{.filename}]{.term}                     is the [Evolution]{.application} MIME message handling library
-  []{#libebackend-1}[`libebackend-1.2.so`{.filename}]{.term}               is the utility library for [Evolution Data Server]{.application} Backends
-  []{#libebook-1}[`libebook-1.2.so`{.filename}]{.term}                     is the client library for [Evolution]{.application} address books
-  []{#libebook-contacts-1}[`libebook-contacts-1.2.so`{.filename}]{.term}   is the client library for [Evolution]{.application} contacts
-  []{#libecal-1}[`libecal-1.2.so`{.filename}]{.term}                       is the client library for [Evolution]{.application} calendars
-  []{#libedata-book-1}[`libedata-book-1.2.so`{.filename}]{.term}           is the backend library for [Evolution]{.application} address books
-  []{#libedata-cal-1}[`libedata-cal-1.2.so`{.filename}]{.term}             is the backend library for [Evolution]{.application} calendars
-  []{#libedataserver-1}[`libedataserver-1.2.so`{.filename}]{.term}         is the utility library for [Evolution Data Server]{.application}
-  []{#libedataserverui-3}[`libedataserverui-3.0.so`{.filename}]{.term}     is the GUI utility library for [Evolution Data Server]{.application}
-  []{#libedataserverui4-1}[`libedataserverui4-1.0.so`{.filename}]{.term}   is the GTK-4 based GUI utility library for [Evolution Data Server]{.application}
-  []{#libetestserverutils-1}[`libetestserverutils.so`{.filename}]{.term}   is the server test utility library for [Evolution Data Server]{.application}
+  <a id="libcamel-1"></a><span class="term"><code class="filename">libcamel-1.2.so</code></span>                     is the <span class="application">Evolution</span> MIME message handling library
+  <a id="libebackend-1"></a><span class="term"><code class="filename">libebackend-1.2.so</code></span>               is the utility library for <span class="application">Evolution Data Server</span> Backends
+  <a id="libebook-1"></a><span class="term"><code class="filename">libebook-1.2.so</code></span>                     is the client library for <span class="application">Evolution</span> address books
+  <a id="libebook-contacts-1"></a><span class="term"><code class="filename">libebook-contacts-1.2.so</code></span>   is the client library for <span class="application">Evolution</span> contacts
+  <a id="libecal-1"></a><span class="term"><code class="filename">libecal-1.2.so</code></span>                       is the client library for <span class="application">Evolution</span> calendars
+  <a id="libedata-book-1"></a><span class="term"><code class="filename">libedata-book-1.2.so</code></span>           is the backend library for <span class="application">Evolution</span> address books
+  <a id="libedata-cal-1"></a><span class="term"><code class="filename">libedata-cal-1.2.so</code></span>             is the backend library for <span class="application">Evolution</span> calendars
+  <a id="libedataserver-1"></a><span class="term"><code class="filename">libedataserver-1.2.so</code></span>         is the utility library for <span class="application">Evolution Data Server</span>
+  <a id="libedataserverui-3"></a><span class="term"><code class="filename">libedataserverui-3.0.so</code></span>     is the GUI utility library for <span class="application">Evolution Data Server</span>
+  <a id="libedataserverui4-1"></a><span class="term"><code class="filename">libedataserverui4-1.0.so</code></span>   is the GTK-4 based GUI utility library for <span class="application">Evolution Data Server</span>
+  <a id="libetestserverutils-1"></a><span class="term"><code class="filename">libetestserverutils.so</code></span>   is the server test utility library for <span class="application">Evolution Data Server</span>
   ------------------------------------------------------------------------ ----------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libshumate.md "libshumate-1.6.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libshumate.md "libshumate-1.6.1")
 
     libshumate-1.6.1
 
--   [Next](tinysparql.md "tinysparql-3.11.1"){accesskey="n"}
+-   [Next](tinysparql.md "tinysparql-3.11.1")
 
     tinysparql-3.11.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

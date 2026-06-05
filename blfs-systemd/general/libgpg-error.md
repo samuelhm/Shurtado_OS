@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libgcrypt.md "libgcrypt-1.12.2"){accesskey="p"}
+-   [Prev](libgcrypt.md "libgcrypt-1.12.2")
 
     libgcrypt-1.12.2
 
--   [Next](libgsf.md "libgsf-1.14.58"){accesskey="n"}
+-   [Next](libgsf.md "libgsf-1.14.58")
 
     libgsf-1.14.58
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libgpg-error}libgpg-error-1.61 {#libgpg-error-1.61 .sect1}
+# libgpg-error-1.61 {#libgpg-error-1.61}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libgpg-error {#introduction-to-libgpg-error .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libgpg-error {#introduction-to-libgpg-error}
 
-The [libgpg-error]{.application} package contains a library that defines common error values for all [GnuPG]{.application} components.
+The <span class="application">libgpg-error</span> package contains a library that defines common error values for all <span class="application">GnuPG</span> components.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2](https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2">https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2</a>
 
 -   Download MD5 sum: c89a8c6825cb64c527d5c1c0fb36f245
 
@@ -44,71 +44,71 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 15 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libgpg-error {#installation-of-libgpg-error .sect2}
+<div class="installation" lang="en">
+## Installation of libgpg-error {#installation-of-libgpg-error}
 
-Install [libgpg-error]{.application} by running the following commands:
+Install <span class="application">libgpg-error</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --sysconfdir=/etc &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -m644 -D README /usr/share/doc/libgpg-error-1.61/README
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gpg-error, gpgrt-config, and yat2m]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gpg-error, gpgrt-config, and yat2m</span>
+</div>
 
-::: seg
-**Installed Library:** [libgpg-error.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgpg-error.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/common-lisp/source/gpg-error, /usr/share/libgpg-error, and /usr/share/doc/libgpg-error-1.61]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/common-lisp/source/gpg-error, /usr/share/libgpg-error, and /usr/share/doc/libgpg-error-1.61</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------
-  []{#gpg-error}[[**gpg-error**]{.command}]{.term}             is used to determine [libgpg-error]{.application} error codes
-  []{#gpgrt-config}[[**gpgrt-config**]{.command}]{.term}       is a [**pkg-config**]{.command} style tool for querying the information about installed version of libgpg-error
-  []{#yat2m}[[**yat2m**]{.command}]{.term}                     extracts man pages from a Texinfo source
-  []{#libgpg-error-lib}[`libgpg-error.so`{.filename}]{.term}   contains the [libgpg-error]{.application} API functions
+  <a id="gpg-error"></a><span class="command"><span class="term"><strong>gpg-error</strong></span></span>             is used to determine <span class="application">libgpg-error</span> error codes
+  <a id="gpgrt-config"></a><span class="command"><span class="term"><strong>gpgrt-config</strong></span></span>       is a <span class="command"><strong>pkg-config</strong></span> style tool for querying the information about installed version of libgpg-error
+  <a id="yat2m"></a><span class="command"><span class="term"><strong>yat2m</strong></span></span>                     extracts man pages from a Texinfo source
+  <a id="libgpg-error-lib"></a><span class="term"><code class="filename">libgpg-error.so</code></span>   contains the <span class="application">libgpg-error</span> API functions
   ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libgcrypt.md "libgcrypt-1.12.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libgcrypt.md "libgcrypt-1.12.2")
 
     libgcrypt-1.12.2
 
--   [Next](libgsf.md "libgsf-1.14.58"){accesskey="n"}
+-   [Next](libgsf.md "libgsf-1.14.58")
 
     libgsf-1.14.58
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

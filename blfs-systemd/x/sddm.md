@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 26. Display Managers
 
--   [Prev](lightdm.md "lightdm-1.32.0"){accesskey="p"}
+-   [Prev](lightdm.md "lightdm-1.32.0")
 
     lightdm-1.32.0
 
--   [Next](wm.md "Window Managers"){accesskey="n"}
+-   [Next](wm.md "Window Managers")
 
     Window Managers
 
--   [Up](dm.md "Chapter 26. Display Managers"){accesskey="u"}
+-   [Up](dm.md "Chapter 26. Display Managers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#sddm}sddm-0.21.0 {#sddm-0.21.0 .sect1}
+# sddm-0.21.0 {#sddm-0.21.0}
 
-:::::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to sddm {#introduction-to-sddm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to sddm {#introduction-to-sddm}
 
-The [sddm]{.application} package contains a lightweight display manager based upon [Qt]{.application} and QML.
+The <span class="application">sddm</span> package contains a lightweight display manager based upon <span class="application">Qt</span> and QML.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/sddm/sddm/archive/v0.21.0/sddm-0.21.0.tar.gz](https://github.com/sddm/sddm/archive/v0.21.0/sddm-0.21.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/sddm/sddm/archive/v0.21.0/sddm-0.21.0.tar.gz">https://github.com/sddm/sddm/archive/v0.21.0/sddm-0.21.0.tar.gz</a>
 
 -   Download MD5 sum: e32a35c282d9be3360737eefbe25b5fa
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 24 MB
 
 -   Estimated build time: 0.3 SBU (Using parallelism=4)
-:::
+</div>
 
 ### SDDM Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}, [Extra-CMake-Modules-6.26.0](../kde/extra-cmake-modules.md "Extra-CMake-Modules-6.26.0"){.xref}, and [Qt-6.11.1](qt6.md "Qt-6.11.1"){.xref}
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>, <a class="xref" href="../kde/extra-cmake-modules.md" title="Extra-CMake-Modules-6.26.0">Extra-CMake-Modules-6.26.0</a>, and <a class="xref" href="qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
 
 #### Recommended
 
-[docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref} (for the man pages), [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, and [UPower-1.91.2](../general/upower.md "UPower-1.91.2"){.xref}
-:::::
+<a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> (for the man pages), <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, and <a class="xref" href="../general/upower.md" title="UPower-1.91.2">UPower-1.91.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of SDDM {#installation-of-sddm .sect2}
+<div class="installation" lang="en">
+## Installation of SDDM {#installation-of-sddm}
 
-First, create a dedicated user and group to take control of the [**sddm**]{.command} daemon after it is started. Issue the following commands as the `root`{.systemitem} user:
+First, create a dedicated user and group to take control of the <span class="command"><strong>sddm</strong></span> daemon after it is started. Issue the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -g 64 sddm &&
 useradd  -c "sddm Daemon" \
          -d /var/lib/sddm \
@@ -70,9 +70,9 @@ useradd  -c "sddm Daemon" \
          -s /bin/false sddm
 ```
 
-Install [sddm]{.application} by running the following commands:
+Install <span class="application">sddm</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -90,90 +90,90 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -dm755 -o sddm -g sddm /var/lib/sddm
 /usr/bin/sddm --example-config > /etc/sddm.conf
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D CMAKE_BUILD_TYPE=Release`*: This switch is used to apply additional compiler optimizations.
 
 *`-D CMAKE_POLICY_VERSION_MINIMUM=3.5`*: This switch allows building this package with cmake-4.0 or newer.
 
-*`-D DBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf`*: This switch prevents the file `/etc/dbus-1/system.d/org.freedesktop.DisplayManager.conf`{.filename} from being overwritten, as it may be used by other DM's.
+*`-D DBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf`*: This switch prevents the file <code class="filename">/etc/dbus-1/system.d/org.freedesktop.DisplayManager.conf</code> from being overwritten, as it may be used by other DM's.
 
 *`-D BUILD_MAN_PAGES=ON`*: This switch is used to build and install man pages.
-:::
+</div>
 
-::::::::: {.configuration lang="en"}
-## Configuring SDDM {#configuring-sddm .sect2}
+<div class="configuration" lang="en">
+## Configuring SDDM {#configuring-sddm}
 
-::: {.sect3 lang="en"}
-### []{#sddm-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
 /etc/sddm.config
 
-Normally, you want to edit this file. For example, if Xorg is installed in /opt, use your preferred editor as the `root`{.systemitem} user to replace the default [*XauthPath*]{.emphasis} value by [*/opt/xorg/bin/xauth*]{.emphasis}. Or, as the `root`{.systemitem} user, issue:
+Normally, you want to edit this file. For example, if Xorg is installed in /opt, use your preferred editor as the <code class="systemitem">root</code> user to replace the default <span class="emphasis"><em>XauthPath</em></span> value by <span class="emphasis"><em>/opt/xorg/bin/xauth</em></span>. Or, as the <code class="systemitem">root</code> user, issue:
 
-``` userinput
+```bash
 sed -i.orig '/ServerPath/ s|usr|opt/xorg|' /etc/sddm.conf
 ```
 
-This command will do the substitution and create a copy of the original file with name `/etc/sddm.conf.orig`{.filename}.
+This command will do the substitution and create a copy of the original file with name <code class="filename">/etc/sddm.conf.orig</code>.
 
-From now on, we will describe how to modify configurations using sed. Of course, you may instead use your preferred editor as the `root`{.systemitem} user.
+From now on, we will describe how to modify configurations using sed. Of course, you may instead use your preferred editor as the <code class="systemitem">root</code> user.
 
-For security reasons, you normally want the default [*ServerArguments=-nolisten tcp*]{.emphasis}, unless a remote machine needs access to the local X server. In that case, as the `root`{.systemitem} user, issue:
+For security reasons, you normally want the default <span class="emphasis"><em>ServerArguments=-nolisten tcp</em></span>, unless a remote machine needs access to the local X server. In that case, as the <code class="systemitem">root</code> user, issue:
 
-``` userinput
+```bash
 sed -i 's/-nolisten tcp//' /etc/sddm.conf
 ```
 
-Desktop (Notebook) users, normally want the Num Lock key on (off). For that, as `root`{.systemitem}, issue:
+Desktop (Notebook) users, normally want the Num Lock key on (off). For that, as <code class="systemitem">root</code>, issue:
 
-``` root
+```bash
 sed -i '/Numlock/s/none/on/' /etc/sddm.conf
 ```
 
 for Desktop users. For Notebook users, replace /on/ by /off/ in the command above.
 
-By default, a virtual keyboard is presented for the user. If this is not desired, run as `root`{.systemitem}:
+By default, a virtual keyboard is presented for the user. If this is not desired, run as <code class="systemitem">root</code>:
 
-``` root
+```bash
 sed -i 's/qtvirtualkeyboard//' /etc/sddm.conf
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#sddm-bootscript}Boot Script {#boot-script .sect3}
+<div class="sect3" lang="en">
+### Boot Script {#boot-script}
 
-Enable the pre-installed systemd unit by running the following command as the `root`{.systemitem} user:
+Enable the pre-installed systemd unit by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable sddm
 ```
-:::
+</div>
 
-:::: {.sect3 lang="en"}
-### Linux PAM Configuration {#linux-pam-configuration .sect3}
+<div class="sect3" lang="en">
+### Linux PAM Configuration {#linux-pam-configuration}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 The install procedure above installed a set of PAM configuration files. These procedures overwrite them and use versions compatible with a BLFS environment.
-:::
+</div>
 
-If you have built [sddm]{.application} with [Linux PAM]{.application} support, create the necessary configuration files by running the following commands as the `root`{.systemitem} user:
+If you have built <span class="application">sddm</span> with <span class="application">Linux PAM</span> support, create the necessary configuration files by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/pam.d/sddm << "EOF" &&
 # Begin /etc/pam.d/sddm
 
@@ -225,67 +225,67 @@ session  required       pam_unix.so
 # End /etc/pam.d/sddm-greeter
 EOF
 ```
-::::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#sddm-sessions}Available Sessions {#available-sessions .sect3}
+<div class="sect3" lang="en">
+### Available Sessions {#available-sessions}
 
-The greeter offers a list of available sessions, depending on the Window Managers and Desktop Environments installed. The list includes sessions which have a corresponding `.desktop`{.filename} file installed under `/usr/share/xsessions`{.filename} or `/usr/share/wayland-sessions`{.filename}. Most of the Window Managers and Desktop Environments automatically provide those files, but if necessary, you may include a custom one.
-:::
+The greeter offers a list of available sessions, depending on the Window Managers and Desktop Environments installed. The list includes sessions which have a corresponding <code class="filename">.desktop</code> file installed under <code class="filename">/usr/share/xsessions</code> or <code class="filename">/usr/share/wayland-sessions</code>. Most of the Window Managers and Desktop Environments automatically provide those files, but if necessary, you may include a custom one.
+</div>
 
-::: {.sect3 lang="en"}
-### []{#sddm-themes}Themes {#themes .sect3}
+<div class="sect3" lang="en">
+### Themes {#themes}
 
-Three themes are installed at `/usr/share/sddm/themes`{.filename}: elarun, maldives, and maya. There is also a default theme, which is not present in that directory. You can install other themes in that directory. In order to change the theme, you need to edit `/etc/sddm.conf`{.filename}, to change the default (empty) theme, replacing `Current=`{.literal} with `Current=`{.literal}*`<new theme>`*, e.g. `Current=maldives`{.literal}.
+Three themes are installed at <code class="filename">/usr/share/sddm/themes</code>: elarun, maldives, and maya. There is also a default theme, which is not present in that directory. You can install other themes in that directory. In order to change the theme, you need to edit <code class="filename">/etc/sddm.conf</code>, to change the default (empty) theme, replacing <code class="literal">Current=</code> with <code class="literal">Current=</code>*`<new theme>`*, e.g. <code class="literal">Current=maldives</code>.
 
 In order to see the theme without leaving the session, issue:
 
-``` userinput
+```bash
 sddm-greeter --test-mode --theme <theme path>
 ```
-:::
-:::::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [sddm and sddm-greeter]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">sddm and sddm-greeter</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/sddm and /var/lib/sddm]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/sddm and /var/lib/sddm</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#sddm-prog}[[**sddm**]{.command}]{.term}              is a display and login manager based on [Qt]{.application} libraries.
-  []{#sddm-greeter}[[**sddm-greeter**]{.command}]{.term}   is an auxiliary process that displays the greeter, a graphical user interface that performs user authentication and initiates the selected window manager or display environment.
+  <a id="sddm-prog"></a><span class="command"><span class="term"><strong>sddm</strong></span></span>              is a display and login manager based on <span class="application">Qt</span> libraries.
+  <a id="sddm-greeter"></a><span class="command"><span class="term"><strong>sddm-greeter</strong></span></span>   is an auxiliary process that displays the greeter, a graphical user interface that performs user authentication and initiates the selected window manager or display environment.
   -------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lightdm.md "lightdm-1.32.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lightdm.md "lightdm-1.32.0")
 
     lightdm-1.32.0
 
--   [Next](wm.md "Window Managers"){accesskey="n"}
+-   [Next](wm.md "Window Managers")
 
     Window Managers
 
--   [Up](dm.md "Chapter 26. Display Managers"){accesskey="u"}
+-   [Up](dm.md "Chapter 26. Display Managers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

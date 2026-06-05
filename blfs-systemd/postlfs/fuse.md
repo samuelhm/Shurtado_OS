@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 5. File Systems and Disk Management
 
--   [Prev](dosfstools.md "dosfstools-4.2"){accesskey="p"}
+-   [Prev](dosfstools.md "dosfstools-4.2")
 
     dosfstools-4.2
 
--   [Next](jfsutils.md "jfsutils-1.1.15"){accesskey="n"}
+-   [Next](jfsutils.md "jfsutils-1.1.15")
 
     jfsutils-1.1.15
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#fuse3}Fuse-3.18.2 {#fuse-3.18.2 .sect1}
+# Fuse-3.18.2 {#fuse-3.18.2}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Fuse {#introduction-to-fuse .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Fuse {#introduction-to-fuse}
 
-[FUSE]{.application} (Filesystem in Userspace) is a simple interface for userspace programs to export a virtual filesystem to the Linux kernel. [Fuse]{.application} also aims to provide a secure method for non privileged users to create and mount their own filesystem implementations.
+<span class="application">FUSE</span> (Filesystem in Userspace) is a simple interface for userspace programs to export a virtual filesystem to the Linux kernel. <span class="application">Fuse</span> also aims to provide a secure method for non privileged users to create and mount their own filesystem implementations.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-3.18.2.tar.gz](https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-3.18.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-3.18.2.tar.gz">https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-3.18.2.tar.gz</a>
 
 -   Download MD5 sum: 43c6f6cd2c1368d916f6fb080eb39cbb
 
@@ -44,40 +44,40 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 97 MB (with tests and documentation)
 
 -   Estimated build time: 0.1 SBU (add 1.0 SBU for tests)
-:::
+</div>
 
 ### Fuse Dependencies
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} (to rebuild the API documentation), [pytest-9.0.3](../general/python-modules.md#pytest "Pytest-9.0.3"){.xref} (required for tests), [Which-2.25](../general/which.md "Which-2.25 and Alternatives"){.xref} (required for tests), and [looseversion](https://pypi.org/project/looseversion/){.ulink} (for tests)
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (to rebuild the API documentation), <a class="xref" href="../general/python-modules.md#pytest" title="Pytest-9.0.3">pytest-9.0.3</a> (required for tests), <a class="xref" href="../general/which.md" title="Which-2.25 and Alternatives">Which-2.25</a> (required for tests), and <a class="ulink" href="https://pypi.org/project/looseversion/">looseversion</a> (for tests)
+</div>
 
-::: {.kernel lang="en"}
-## []{#fuse-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 Enable the following options in the kernel configuration and recompile the kernel if necessary:
 
-``` screen
+```console
 File systems --->
   <*/M> FUSE (Filesystem in Userspace) support                         [FUSE_FS]
 ```
 
 Character devices in userspace should be enabled too for running the tests:
 
-``` screen
+```console
 File systems --->
   <*/M> FUSE (Filesystem in Userspace) support                         [FUSE_FS]
   <*/M>   Character device in Userspace support                           [CUSE]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of Fuse {#installation-of-fuse .sect2}
+<div class="installation" lang="en">
+## Installation of Fuse {#installation-of-fuse}
 
-Install [Fuse]{.application} by running the following commands:
+Install <span class="application">Fuse</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i '/^udev/,$ s/^/#/' util/meson.build &&
 
 mkdir build &&
@@ -87,17 +87,17 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-The API documentation is included in the package, but if you have [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} installed and wish to rebuild it, issue:
+The API documentation is included in the package, but if you have <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> installed and wish to rebuild it, issue:
 
-``` userinput
+```bash
 pushd .. &&
   doxygen doc/Doxyfile &&
 popd
 ```
 
-To test the results, issue the following commands (as the `root`{.systemitem} user):
+To test the results, issue the following commands (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 python3 -m venv --system-site-packages testenv &&
 source testenv/bin/activate                    &&
 pip3 install looseversion                      &&
@@ -105,11 +105,11 @@ python3 -m pytest
 deactivate
 ```
 
-The [pytest-9.0.3](../general/python-modules.md#pytest "Pytest-9.0.3"){.xref} Python module is required for the tests. One test named `test_cuse`{.filename} will fail if the *`CONFIG_CUSE`* configuration item was not enabled when the kernel was built. One test, `test/util.py`{.filename}, will output a warning due to the usage of an unknown mark in pytest.
+The <a class="xref" href="../general/python-modules.md#pytest" title="Pytest-9.0.3">pytest-9.0.3</a> Python module is required for the tests. One test named <code class="filename">test_cuse</code> will fail if the *`CONFIG_CUSE`* configuration item was not enabled when the kernel was built. One test, <code class="filename">test/util.py</code>, will output a warning due to the usage of an unknown mark in pytest.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install                  &&
 chmod u+s /usr/bin/fusermount3 &&
 
@@ -118,27 +118,27 @@ cp -Rv doc/html -T /usr/share/doc/fuse-3.18.2 &&
 install -v -m644   doc/{README.NFS,kernel.txt} \
                    /usr/share/doc/fuse-3.18.2
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed ... util/meson.build**]{.command}: This command disables the installation of a boot script and udev rule that are not needed.
+<span class="command"><strong>sed ... util/meson.build</strong></span>: This command disables the installation of a boot script and udev rule that are not needed.
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`--system-site-packages`*: Allow the [Python3]{.application} venv module to access the system-installed `/usr/lib/python3.14/site-packages`{.filename} directory.
-:::
+*`--system-site-packages`*: Allow the <span class="application">Python3</span> venv module to access the system-installed <code class="filename">/usr/lib/python3.14/site-packages</code> directory.
+</div>
 
-:::: {.configuration lang="en"}
-## []{#fuse-configuration}Configuring fuse {#configuring-fuse .sect2}
+<div class="configuration" lang="en">
+## Configuring fuse {#configuring-fuse}
 
-::: {.sect3 lang="en"}
-### []{#fuse-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-Some options regarding mount policy can be set in the file `/etc/fuse.conf`{.filename}. To install the file run the following command as the `root`{.systemitem} user:
+Some options regarding mount policy can be set in the file <code class="filename">/etc/fuse.conf</code>. To install the file run the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/fuse.conf << "EOF"
 # Set the maximum number of FUSE mounts allowed to non-root users.
 # The default is 1000.
@@ -153,50 +153,50 @@ EOF
 ```
 
 Additional information about the meaning of the configuration options are found in the man page.
-:::
-::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [fusermount3 and mount.fuse3]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">fusermount3 and mount.fuse3</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libfuse3.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libfuse3.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/fuse3 and /usr/share/doc/fuse-3.18.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/fuse3 and /usr/share/doc/fuse-3.18.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -----------------------------------------------------------------------
-  []{#fusermount3}[[**fusermount3**]{.command}]{.term}   is a suid root program to mount and unmount Fuse filesystems
-  []{#mount.fuse3}[[**mount.fuse3**]{.command}]{.term}   is the command [**mount**]{.command} calls to mount a Fuse filesystem
-  []{#libfuse3}[`libfuse3.so`{.filename}]{.term}         contains the [FUSE]{.application} API functions
+  <a id="fusermount3"></a><span class="command"><span class="term"><strong>fusermount3</strong></span></span>   is a suid root program to mount and unmount Fuse filesystems
+  <a id="mount.fuse3"></a><span class="command"><span class="term"><strong>mount.fuse3</strong></span></span>   is the command <span class="command"><strong>mount</strong></span> calls to mount a Fuse filesystem
+  <a id="libfuse3"></a><span class="term"><code class="filename">libfuse3.so</code></span>         contains the <span class="application">FUSE</span> API functions
   ------------------------------------------------------ -----------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](dosfstools.md "dosfstools-4.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](dosfstools.md "dosfstools-4.2")
 
     dosfstools-4.2
 
--   [Next](jfsutils.md "jfsutils-1.1.15"){accesskey="n"}
+-   [Next](jfsutils.md "jfsutils-1.1.15")
 
     jfsutils-1.1.15
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

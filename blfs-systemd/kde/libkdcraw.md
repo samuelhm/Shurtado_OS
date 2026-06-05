@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](okular.md "okular-26.04.1"){accesskey="p"}
+-   [Prev](okular.md "okular-26.04.1")
 
     okular-26.04.1
 
--   [Next](gwenview.md "gwenview-26.04.1"){accesskey="n"}
+-   [Next](gwenview.md "gwenview-26.04.1")
 
     gwenview-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libkdcraw}libkdcraw-26.04.1 {#libkdcraw-26.04.1 .sect1}
+# libkdcraw-26.04.1 {#libkdcraw-26.04.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libkdcraw {#introduction-to-libkdcraw .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libkdcraw {#introduction-to-libkdcraw}
 
-[Libkdcraw]{.application} is a KDE wrapper around the [libraw-0.22.1](../general/libraw.md "libraw-0.22.1"){.xref} library for manipulating image metadata.
+<span class="application">Libkdcraw</span> is a KDE wrapper around the <a class="xref" href="../general/libraw.md" title="libraw-0.22.1">libraw-0.22.1</a> library for manipulating image metadata.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/libkdcraw-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/libkdcraw-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/libkdcraw-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/libkdcraw-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: 17bdcb0897ab7791f9a10db7f2e642c3
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.1 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libkdcraw Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref} and [libraw-0.22.1](../general/libraw.md "libraw-0.22.1"){.xref}
-:::::
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a> and <a class="xref" href="../general/libraw.md" title="libraw-0.22.1">libraw-0.22.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libkdcraw {#installation-of-libkdcraw .sect2}
+<div class="installation" lang="en">
+## Installation of libkdcraw {#installation-of-libkdcraw}
 
-Install [libkdcraw]{.application} by running the following commands:
+Install <span class="application">libkdcraw</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,44 +72,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libKDcrawQt6.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libKDcrawQt6.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/include/KDcrawQt6 and \$KF6_PREFIX/lib/cmake/KDcrawQt6]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/include/KDcrawQt6 and \$KF6_PREFIX/lib/cmake/KDcrawQt6</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](okular.md "okular-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](okular.md "okular-26.04.1")
 
     okular-26.04.1
 
--   [Next](gwenview.md "gwenview-26.04.1"){accesskey="n"}
+-   [Next](gwenview.md "gwenview-26.04.1")
 
     gwenview-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

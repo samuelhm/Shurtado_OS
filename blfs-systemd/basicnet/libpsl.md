@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libpcap.md "libpcap-1.10.6"){accesskey="p"}
+-   [Prev](libpcap.md "libpcap-1.10.6")
 
     libpcap-1.10.6
 
--   [Next](libslirp.md "libslirp-4.9.3"){accesskey="n"}
+-   [Next](libslirp.md "libslirp-4.9.3")
 
     libslirp-4.9.3
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libpsl}libpsl-0.21.5 {#libpsl-0.21.5 .sect1}
+# libpsl-0.21.5 {#libpsl-0.21.5}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libpsl {#introduction-to-libpsl .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libpsl {#introduction-to-libpsl}
 
-The [libpsl]{.application} package provides a library for accessing and resolving information from the Public Suffix List (PSL). The PSL is a set of domain names beyond the standard suffixes, such as .com.
+The <span class="application">libpsl</span> package provides a library for accessing and resolving information from the Public Suffix List (PSL). The PSL is a set of domain names beyond the standard suffixes, such as .com.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz](https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz">https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz</a>
 
 -   Download MD5 sum: 870a798ee9860b6e77896548428dba7b
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 50 MB
 
 -   Estimated build time: less than 0.1 SBU (including tests)
-:::
+</div>
 
 ### libpsl Dependencies
 
 #### Recommended
 
-[libidn2-2.3.8](../general/libidn2.md "libidn2-2.3.8"){.xref} and [libunistring-1.4.2](../general/libunistring.md "libunistring-1.4.2"){.xref}
+<a class="xref" href="../general/libidn2.md" title="libidn2-2.3.8">libidn2-2.3.8</a> and <a class="xref" href="../general/libunistring.md" title="libunistring-1.4.2">libunistring-1.4.2</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref} (for documentation), [ICU-78.3](../general/icu.md "icu-78.3"){.xref} (may be used instead of libidn2), [libidn-1.43](../general/libidn.md "libidn-1.43"){.xref} (may be used instead of libidn2), [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref} (for tests)
-:::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> (for documentation), <a class="xref" href="../general/icu.md" title="icu-78.3">ICU-78.3</a> (may be used instead of libidn2), <a class="xref" href="../general/libidn.md" title="libidn-1.43">libidn-1.43</a> (may be used instead of libidn2), <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a> (for tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libpsl {#installation-of-libpsl .sect2}
+<div class="installation" lang="en">
+## Installation of libpsl {#installation-of-libpsl}
 
-Install [libpsl]{.application} by running the following commands:
+Install <span class="application">libpsl</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -71,61 +71,61 @@ meson setup --prefix=/usr --buildtype=release &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [psl]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">psl</span>
+</div>
 
-::: seg
-**Installed Library:** [libpsl.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libpsl.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ----------------------------------------------------------
-  []{#psl}[[**psl**]{.command}]{.term}             queries the Public Suffix List
-  []{#libpsl-lib}[`libpsl.so`{.filename}]{.term}   contains a library used to access the Public Suffix List
+  <a id="psl"></a><span class="command"><span class="term"><strong>psl</strong></span></span>             queries the Public Suffix List
+  <a id="libpsl-lib"></a><span class="term"><code class="filename">libpsl.so</code></span>   contains a library used to access the Public Suffix List
   ------------------------------------------------ ----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libpcap.md "libpcap-1.10.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libpcap.md "libpcap-1.10.6")
 
     libpcap-1.10.6
 
--   [Next](libslirp.md "libslirp-4.9.3"){accesskey="n"}
+-   [Next](libslirp.md "libslirp-4.9.3")
 
     libslirp-4.9.3
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

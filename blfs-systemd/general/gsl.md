@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](gmmlib.md "gmmlib-22.10.0"){accesskey="p"}
+-   [Prev](gmmlib.md "gmmlib-22.10.0")
 
     gmmlib-22.10.0
 
--   [Next](gspell.md "gspell-1.14.3"){accesskey="n"}
+-   [Next](gspell.md "gspell-1.14.3")
 
     gspell-1.14.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gsl}gsl-2.8 {#gsl-2.8 .sect1}
+# gsl-2.8 {#gsl-2.8}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Gsl {#introduction-to-gsl .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Gsl {#introduction-to-gsl}
 
 The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. It provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftpmirror.gnu.org/gsl/gsl-2.8.tar.gz](https://ftpmirror.gnu.org/gsl/gsl-2.8.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftpmirror.gnu.org/gsl/gsl-2.8.tar.gz">https://ftpmirror.gnu.org/gsl/gsl-2.8.tar.gz</a>
 
 -   Download MD5 sum: 182ec03204f164e67238c9116591a37d
 
@@ -44,96 +44,96 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 223 MB (with tests, without docs)
 
 -   Estimated build time: 1.0 SBU (Using parallelism=4; with tests, without docs)
-:::
+</div>
 
 ### Gsl Dependencies
 
 #### Optional
 
-[sphinx_rtd_theme-3.1.0](python-modules.md#sphinx_rtd_theme "Sphinx_rtd_theme-3.1.0"){.xref}
-:::::
+<a class="xref" href="python-modules.md#sphinx_rtd_theme" title="Sphinx_rtd_theme-3.1.0">sphinx_rtd_theme-3.1.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Gsl {#installation-of-gsl .sect2}
+<div class="installation" lang="en">
+## Installation of Gsl {#installation-of-gsl}
 
-Install [Gsl]{.application} by running the following commands:
+Install <span class="application">Gsl</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-If you have [sphinx_rtd_theme-3.1.0](python-modules.md#sphinx_rtd_theme "Sphinx_rtd_theme-3.1.0"){.xref} installed, build the documentation with:
+If you have <a class="xref" href="python-modules.md#sphinx_rtd_theme" title="Sphinx_rtd_theme-3.1.0">sphinx_rtd_theme-3.1.0</a> installed, build the documentation with:
 
-``` userinput
+```bash
 make html
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you built the documentation, install it (as `root`{.systemitem}) with:
+If you built the documentation, install it (as <code class="systemitem">root</code>) with:
 
-``` root
+```bash
 mkdir                   /usr/share/doc/gsl-2.8 &&
 cp -R doc/_build/html/* /usr/share/doc/gsl-2.8
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gsl-config, gsl-histogram, and gsl-randist]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gsl-config, gsl-histogram, and gsl-randist</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgslcblas.so and libgsl.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgslcblas.so and libgsl.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/gsl and /usr/share/doc/gsl-2.8]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/gsl and /usr/share/doc/gsl-2.8</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------
-  []{#gsl-config}[[**gsl-config**]{.command}]{.term}         is a shell script to get the version number and compiler flags of the installed [Gsl]{.application} library
-  []{#gsl-histogram}[[**gsl-histogram**]{.command}]{.term}   is a demonstration program for the GNU Scientific Library that computes a histogram from data taken from stdin
-  []{#gsl-randist}[[**gsl-randist**]{.command}]{.term}       is a demonstration program for the GNU Scientific Library that generates random samples from various distributions
-  []{#libgslcblas}[`libgslcblas.so`{.filename}]{.term}       contains functions that implement a C interface to Basic Linear Algebra Subprograms
-  []{#libgsl.so}[`libgsl.so`{.filename}]{.term}              contains functions that provide a collection of numerical routines for scientific computing
+  <a id="gsl-config"></a><span class="command"><span class="term"><strong>gsl-config</strong></span></span>         is a shell script to get the version number and compiler flags of the installed <span class="application">Gsl</span> library
+  <a id="gsl-histogram"></a><span class="command"><span class="term"><strong>gsl-histogram</strong></span></span>   is a demonstration program for the GNU Scientific Library that computes a histogram from data taken from stdin
+  <a id="gsl-randist"></a><span class="command"><span class="term"><strong>gsl-randist</strong></span></span>       is a demonstration program for the GNU Scientific Library that generates random samples from various distributions
+  <a id="libgslcblas"></a><span class="term"><code class="filename">libgslcblas.so</code></span>       contains functions that implement a C interface to Basic Linear Algebra Subprograms
+  <a id="libgsl.so"></a><span class="term"><code class="filename">libgsl.so</code></span>              contains functions that provide a collection of numerical routines for scientific computing
   ---------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gmmlib.md "gmmlib-22.10.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gmmlib.md "gmmlib-22.10.0")
 
     gmmlib-22.10.0
 
--   [Next](gspell.md "gspell-1.14.3"){accesskey="n"}
+-   [Next](gspell.md "gspell-1.14.3")
 
     gspell-1.14.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

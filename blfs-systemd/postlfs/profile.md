@@ -1,54 +1,54 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 3. After LFS Configuration Issues
 
--   [Prev](users.md "About System Users and Groups"){accesskey="p"}
+-   [Prev](users.md "About System Users and Groups")
 
     About System Users and Groups
 
--   [Next](vimrc.md "The /etc/vimrc and ~/.vimrc Files"){accesskey="n"}
+-   [Next](vimrc.md "The /etc/vimrc and ~/.vimrc Files")
 
     The /etc/vimrc and \~/.vimrc Files
 
--   [Up](config.md "Chapter 3. After LFS Configuration Issues"){accesskey="u"}
+-   [Up](config.md "Chapter 3. After LFS Configuration Issues")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#postlfs-config-profile}The Bash Shell Startup Files {#the-bash-shell-startup-files .sect1}
+# The Bash Shell Startup Files {#the-bash-shell-startup-files}
 
-:::::::::::::::::: {.sect1 lang="en"}
-The shell program `/bin/bash`{.filename} (hereafter referred to as just "the shell") uses a collection of startup files to help create an environment. Each file has a specific use and may affect login and interactive environments differently. The files in the `/etc`{.filename} directory generally provide global settings. If an equivalent file exists in your home directory it may override the global settings.
+<div class="sect1" lang="en">
+The shell program <code class="filename">/bin/bash</code> (hereafter referred to as just "the shell") uses a collection of startup files to help create an environment. Each file has a specific use and may affect login and interactive environments differently. The files in the <code class="filename">/etc</code> directory generally provide global settings. If an equivalent file exists in your home directory it may override the global settings.
 
-An interactive login shell is started after a successful login, using `/bin/login`{.filename}, by reading the `/etc/passwd`{.filename} file. This shell invocation normally reads `/etc/profile`{.filename} and its private equivalent `~/.bash_profile`{.filename} (or `~/.profile`{.filename} if called as [**/bin/sh**]{.command}) upon startup.
+An interactive login shell is started after a successful login, using <code class="filename">/bin/login</code>, by reading the <code class="filename">/etc/passwd</code> file. This shell invocation normally reads <code class="filename">/etc/profile</code> and its private equivalent <code class="filename">~/.bash_profile</code> (or <code class="filename">~/.profile</code> if called as <span class="command"><strong>/bin/sh</strong></span>) upon startup.
 
-An interactive non-login shell is normally started at the command-line using a shell program (e.g., `[prompt]$`{.prompt}[**/bin/bash**]{.command}) or by the [**/bin/su**]{.command} command. An interactive non-login shell is also started with a terminal program such as [**xterm**]{.command} or [**konsole**]{.command} from within a graphical environment. This type of shell invocation normally copies the parent environment and then reads the user's `~/.bashrc`{.filename} file for additional startup configuration instructions.
+An interactive non-login shell is normally started at the command-line using a shell program (e.g., <code class="prompt">[prompt]$</code><span class="command"><strong>/bin/bash</strong></span>) or by the <span class="command"><strong>/bin/su</strong></span> command. An interactive non-login shell is also started with a terminal program such as <span class="command"><strong>xterm</strong></span> or <span class="command"><strong>konsole</strong></span> from within a graphical environment. This type of shell invocation normally copies the parent environment and then reads the user's <code class="filename">~/.bashrc</code> file for additional startup configuration instructions.
 
 A non-interactive shell is usually present when a shell script is running. It is non-interactive because it is processing a script and not waiting for user input between commands. For these shell invocations, only the environment inherited from the parent shell is used.
 
-The file `~/.bash_logout`{.filename} is not used for an invocation of the shell. It is read and executed when a user exits from an interactive login shell.
+The file <code class="filename">~/.bash_logout</code> is not used for an invocation of the shell. It is read and executed when a user exits from an interactive login shell.
 
-Many distributions use `/etc/bashrc`{.filename} for system wide initialization of non-login shells. This file is usually called from the user's `~/.bashrc`{.filename} file and is not built directly into [**bash**]{.command} itself. This convention is followed in this section.
+Many distributions use <code class="filename">/etc/bashrc</code> for system wide initialization of non-login shells. This file is usually called from the user's <code class="filename">~/.bashrc</code> file and is not built directly into <span class="command"><strong>bash</strong></span> itself. This convention is followed in this section.
 
-For more information see [**info bash**]{.command} -- [**Nodes: Bash Startup Files and Interactive Shells**]{.strong}.
+For more information see <span class="command"><strong>info bash</strong></span> -- <span class="strong"><strong>Nodes: Bash Startup Files and Interactive Shells</strong></span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Most of the instructions below are used to create files located in the `/etc`{.filename} directory structure which requires you to execute the commands as the `root`{.systemitem} user. If you elect to create the files in user's home directories instead, you should run the commands as an unprivileged user.
-:::
+Most of the instructions below are used to create files located in the <code class="filename">/etc</code> directory structure which requires you to execute the commands as the <code class="systemitem">root</code> user. If you elect to create the files in user's home directories instead, you should run the commands as an unprivileged user.
+</div>
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/bash-shell-startup-files](https://wiki.linuxfromscratch.org/blfs/wiki/bash-shell-startup-files){.ulink}
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/bash-shell-startup-files">https://wiki.linuxfromscratch.org/blfs/wiki/bash-shell-startup-files</a>
 
-:::::::::: {.sect2 lang="en"}
-## []{#etc-profile-profile}/etc/profile {#etcprofile .sect2}
+<div class="sect2" lang="en">
+## /etc/profile {#etcprofile}
 
-Here is a base `/etc/profile`{.filename}. This file starts by setting up some helper functions and some basic parameters. It specifies some [**bash**]{.command} history parameters and, for security purposes, disables keeping a permanent history file for the `root`{.systemitem} user. It then calls small, single purpose scripts in the `/etc/profile.d`{.filename} directory to provide most of the initialization.
+Here is a base <code class="filename">/etc/profile</code>. This file starts by setting up some helper functions and some basic parameters. It specifies some <span class="command"><strong>bash</strong></span> history parameters and, for security purposes, disables keeping a permanent history file for the <code class="systemitem">root</code> user. It then calls small, single purpose scripts in the <code class="filename">/etc/profile.d</code> directory to provide most of the initialization.
 
-``` root
+```bash
 cat > /etc/profile << "EOF"
 # Begin /etc/profile
 # Written for Beyond Linux From Scratch
@@ -128,22 +128,22 @@ unset script
 EOF
 ```
 
-::: {.sect3 lang="en"}
-### []{#etc-profile.d}The /etc/profile.d Directory {#the-etcprofile.d-directory .sect3}
+<div class="sect3" lang="en">
+### The /etc/profile.d Directory {#the-etcprofile.d-directory}
 
-Now create the `/etc/profile.d`{.filename} directory, where the individual initialization scripts are placed:
+Now create the <code class="filename">/etc/profile.d</code> directory, where the individual initialization scripts are placed:
 
-``` root
+```bash
 install --directory --mode=0755 --owner=root --group=root /etc/profile.d
 ```
-:::
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#extrapaths.sh}/etc/profile.d/extrapaths.sh {#etcprofile.dextrapaths.sh .sect3}
+<div class="sect3" lang="en">
+### /etc/profile.d/extrapaths.sh {#etcprofile.dextrapaths.sh}
 
-This script adds some useful paths to the `PATH`{.envar} and can be used to customize other PATH related environment variables (e.g. LD_LIBRARY_PATH, etc) that may be needed for all users.
+This script adds some useful paths to the <code class="envar">PATH</code> and can be used to customize other PATH related environment variables (e.g. LD_LIBRARY_PATH, etc) that may be needed for all users.
 
-``` root
+```bash
 cat > /etc/profile.d/extrapaths.sh << "EOF"
 if [ -d /usr/local/lib/pkgconfig ] ; then
         pathappend /usr/local/lib/pkgconfig PKG_CONFIG_PATH
@@ -164,21 +164,21 @@ pathappend /usr/share/info INFOPATH
 EOF
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The [**man**]{.command} program automatically deduces the search path for man pages by examining the content of the `PATH`{.envar} variable, see [manpath(5)](https://man.archlinux.org/man/manpath.5){.ulink} for details. Setting the `MANPATH`{.envar} variable may override the automatic deduction, so the BLFS editors do not recommend setting it. If you must set it for any reason, it's better to start its value with a colon (`:`{.literal}), for example [**MANPATH=:/opt/somepkg/share/man:/opt/otherpkg/share/man**]{.command} so the paths listed in the `MANPATH`{.envar} variable will be appended to the automatically deduced value instead of overriding it.
-:::
-::::
+The <span class="command"><strong>man</strong></span> program automatically deduces the search path for man pages by examining the content of the <code class="envar">PATH</code> variable, see <a class="ulink" href="https://man.archlinux.org/man/manpath.5">manpath(5)</a> for details. Setting the <code class="envar">MANPATH</code> variable may override the automatic deduction, so the BLFS editors do not recommend setting it. If you must set it for any reason, it's better to start its value with a colon (<code class="literal">:</code>), for example <span class="command"><strong>MANPATH=:/opt/somepkg/share/man:/opt/otherpkg/share/man</strong></span> so the paths listed in the <code class="envar">MANPATH</code> variable will be appended to the automatically deduced value instead of overriding it.
+</div>
+</div>
 
-::: {.sect3 lang="en"}
-### []{#readline.sh}/etc/profile.d/readline.sh {#etcprofile.dreadline.sh .sect3}
+<div class="sect3" lang="en">
+### /etc/profile.d/readline.sh {#etcprofile.dreadline.sh}
 
-This script sets up the default `inputrc`{.filename} configuration file. If the user does not have individual settings, it uses the global file.
+This script sets up the default <code class="filename">inputrc</code> configuration file. If the user does not have individual settings, it uses the global file.
 
-``` root
+```bash
 cat > /etc/profile.d/readline.sh << "EOF"
 # Set up the INPUTRC environment variable.
 if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ] ; then
@@ -187,14 +187,14 @@ fi
 export INPUTRC
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#umask.sh}/etc/profile.d/umask.sh {#etcprofile.dumask.sh .sect3}
+<div class="sect3" lang="en">
+### /etc/profile.d/umask.sh {#etcprofile.dumask.sh}
 
-Setting the [**umask**]{.command} value is important for security. Here the default group write permissions are turned off for system users and when the user name and group name are not the same.
+Setting the <span class="command"><strong>umask</strong></span> value is important for security. Here the default group write permissions are turned off for system users and when the user name and group name are not the same.
 
-``` root
+```bash
 cat > /etc/profile.d/umask.sh << "EOF"
 # By default, the umask should be set.
 if [ "$(id -gn)" = "$(id -un)" -a $EUID -gt 99 ] ; then
@@ -204,14 +204,14 @@ else
 fi
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#i18n.sh}/etc/profile.d/i18n.sh {#etcprofile.di18n.sh .sect3}
+<div class="sect3" lang="en">
+### /etc/profile.d/i18n.sh {#etcprofile.di18n.sh}
 
-This script sets an environment variable necessary for native language support. A full discussion on determining this variable can be found on the [Configuring the System Locale](../../../../lfs/view/systemd/chapter09/locale.md){.ulink} page.
+This script sets an environment variable necessary for native language support. A full discussion on determining this variable can be found on the <a class="ulink" href="../../../../lfs/view/systemd/chapter09/locale.md">Configuring the System Locale</a> page.
 
-``` root
+```bash
 cat > /etc/profile.d/i18n.sh << "EOF"
 # Set up i18n variables
 for i in $(locale); do
@@ -232,21 +232,21 @@ else
 fi
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### Other Initialization Values {#other-initialization-values .sect3}
+<div class="sect3" lang="en">
+### Other Initialization Values {#other-initialization-values}
 
-Other initialization can easily be added to the `profile`{.filename} by adding additional scripts to the `/etc/profile.d`{.filename} directory.
-:::
-::::::::::
+Other initialization can easily be added to the <code class="filename">profile</code> by adding additional scripts to the <code class="filename">/etc/profile.d</code> directory.
+</div>
+</div>
 
-::: {.sect2 lang="en"}
-## []{#etc-bashrc-profile}/etc/bashrc {#etcbashrc .sect2}
+<div class="sect2" lang="en">
+## /etc/bashrc {#etcbashrc}
 
-Here is a base `/etc/bashrc`{.filename}. Comments in the file should explain everything you need.
+Here is a base <code class="filename">/etc/bashrc</code>. Comments in the file should explain everything you need.
 
-``` root
+```bash
 cat > /etc/bashrc << "EOF"
 # Begin /etc/bashrc
 # Written for Beyond Linux From Scratch
@@ -299,17 +299,17 @@ $(tty &>/dev/null) && export GPG_TTY=$(tty)
 EOF
 ```
 
-The script above uses the `~/.dircolors`{.filename} and `/etc/dircolors`{.filename} files to control the colors of file names in a directory listing. They control colorized output of things like [**ls --color**]{.command}. The explanation of how to initialize these files is at the end of this section. The setting also depends on the terminal being used, so it needs to be set for each interactive shell, instead of only the login shell.
+The script above uses the <code class="filename">~/.dircolors</code> and <code class="filename">/etc/dircolors</code> files to control the colors of file names in a directory listing. They control colorized output of things like <span class="command"><strong>ls --color</strong></span>. The explanation of how to initialize these files is at the end of this section. The setting also depends on the terminal being used, so it needs to be set for each interactive shell, instead of only the login shell.
 
-For more information on the escape sequences you can use for your prompt (i.e., the `PS1`{.envar} environment variable) see [**info bash**]{.command} -- [**Node: Printing a Prompt**]{.strong}.
-:::
+For more information on the escape sequences you can use for your prompt (i.e., the <code class="envar">PS1</code> environment variable) see <span class="command"><strong>info bash</strong></span> -- <span class="strong"><strong>Node: Printing a Prompt</strong></span>.
+</div>
 
-::: {.sect2 lang="en"}
-## []{#bash_profile-profile}\~/.bash_profile {#bash_profile .sect2}
+<div class="sect2" lang="en">
+## \~/.bash_profile {#bash_profile}
 
-Here is a base `~/.bash_profile`{.filename}. If you want each new user to have this file automatically, just change the output of the command to `/etc/skel/.bash_profile`{.filename} and check the permissions after the command is run. You can then copy `/etc/skel/.bash_profile`{.filename} to the home directories of already existing users, including `root`{.systemitem}, and set the owner and group appropriately.
+Here is a base <code class="filename">~/.bash_profile</code>. If you want each new user to have this file automatically, just change the output of the command to <code class="filename">/etc/skel/.bash_profile</code> and check the permissions after the command is run. You can then copy <code class="filename">/etc/skel/.bash_profile</code> to the home directories of already existing users, including <code class="systemitem">root</code>, and set the owner and group appropriately.
 
-``` userinput
+```bash
 cat > ~/.bash_profile << "EOF"
 # Begin ~/.bash_profile
 # Written for Beyond Linux From Scratch
@@ -338,14 +338,14 @@ fi
 # End ~/.bash_profile
 EOF
 ```
-:::
+</div>
 
-::: {.sect2 lang="en"}
-## []{#dot_profile-profile}\~/.profile {#profile .sect2}
+<div class="sect2" lang="en">
+## \~/.profile {#profile}
 
-Here is a base `~/.profile`{.filename}. The comments and instructions for using `/etc/skel`{.filename} for `.bash_profile`{.filename} above also apply here. Only the target file names are different.
+Here is a base <code class="filename">~/.profile</code>. The comments and instructions for using <code class="filename">/etc/skel</code> for <code class="filename">.bash_profile</code> above also apply here. Only the target file names are different.
 
-``` userinput
+```bash
 cat > ~/.profile << "EOF"
 # Begin ~/.profile
 # Personal environment variables and startup programs.
@@ -360,14 +360,14 @@ fi
 # End ~/.profile
 EOF
 ```
-:::
+</div>
 
-::: {.sect2 lang="en"}
-## []{#bashrc-profile}\~/.bashrc {#bashrc .sect2}
+<div class="sect2" lang="en">
+## \~/.bashrc {#bashrc}
 
-Here is a base `~/.bashrc`{.filename}.
+Here is a base <code class="filename">~/.bashrc</code>.
 
-``` userinput
+```bash
 cat > ~/.bashrc << "EOF"
 # Begin ~/.bashrc
 # Written for Beyond Linux From Scratch
@@ -390,14 +390,14 @@ fi
 # End ~/.bashrc
 EOF
 ```
-:::
+</div>
 
-::: {.sect2 lang="en"}
-## []{#bash_logout-profile}\~/.bash_logout {#bash_logout .sect2}
+<div class="sect2" lang="en">
+## \~/.bash_logout {#bash_logout}
 
-This is an empty `~/.bash_logout`{.filename} that can be used as a template. You will notice that the base `~/.bash_logout`{.filename} does not include a **`clear`** command. This is because the clear is handled in the `/etc/issue`{.filename} file.
+This is an empty <code class="filename">~/.bash_logout</code> that can be used as a template. You will notice that the base <code class="filename">~/.bash_logout</code> does not include a **`clear`** command. This is because the clear is handled in the <code class="filename">/etc/issue</code> file.
 
-``` userinput
+```bash
 cat > ~/.bash_logout << "EOF"
 # Begin ~/.bash_logout
 # Written for Beyond Linux From Scratch
@@ -408,33 +408,33 @@ cat > ~/.bash_logout << "EOF"
 # End ~/.bash_logout
 EOF
 ```
-:::
+</div>
 
-::: {.sect2 lang="en"}
-## []{#etc-dircolors-profile}/etc/dircolors {#etcdircolors .sect2}
+<div class="sect2" lang="en">
+## /etc/dircolors {#etcdircolors}
 
-If you want to use the `dircolors`{.filename} capability, then run the following command. The `/etc/skel`{.filename} setup steps shown above also can be used here to provide a `~/.dircolors`{.filename} file when a new user is set up. As before, just change the output file name on the following command and assure the permissions, owner, and group are correct on the files created and/or copied.
+If you want to use the <code class="filename">dircolors</code> capability, then run the following command. The <code class="filename">/etc/skel</code> setup steps shown above also can be used here to provide a <code class="filename">~/.dircolors</code> file when a new user is set up. As before, just change the output file name on the following command and assure the permissions, owner, and group are correct on the files created and/or copied.
 
-``` root
+```bash
 dircolors -p > /etc/dircolors
 ```
 
-If you wish to customize the colors used for different file types, you can edit the `/etc/dircolors`{.filename} file. The instructions for setting the colors are embedded in the file.
+If you wish to customize the colors used for different file types, you can edit the <code class="filename">/etc/dircolors</code> file. The instructions for setting the colors are embedded in the file.
 
-Finally, Ian Macdonald has written an excellent collection of tips and tricks to enhance your shell environment. You can read it online at [https://caliban.org/bash/index.shtml](https://caliban.org/bash/index.shtml){.ulink}.
-:::
-::::::::::::::::::
+Finally, Ian Macdonald has written an excellent collection of tips and tricks to enhance your shell environment. You can read it online at <a class="ulink" href="https://caliban.org/bash/index.shtml">https://caliban.org/bash/index.shtml</a>.
+</div>
+</div>
 
-::: navfooter
--   [Prev](users.md "About System Users and Groups"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](users.md "About System Users and Groups")
 
     About System Users and Groups
 
--   [Next](vimrc.md "The /etc/vimrc and ~/.vimrc Files"){accesskey="n"}
+-   [Next](vimrc.md "The /etc/vimrc and ~/.vimrc Files")
 
     The /etc/vimrc and \~/.vimrc Files
 
--   [Up](config.md "Chapter 3. After LFS Configuration Issues"){accesskey="u"}
+-   [Up](config.md "Chapter 3. After LFS Configuration Issues")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

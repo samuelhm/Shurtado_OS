@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](doxygen.md "Doxygen-1.17.0"){accesskey="p"}
+-   [Prev](doxygen.md "Doxygen-1.17.0")
 
     Doxygen-1.17.0
 
--   [Next](gcc.md "GCC-16.1.0"){accesskey="n"}
+-   [Next](gcc.md "GCC-16.1.0")
 
     GCC-16.1.0
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dtc}dtc-1.8.1 {#dtc-1.8.1 .sect1}
+# dtc-1.8.1 {#dtc-1.8.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Dtc {#introduction-to-dtc .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Dtc {#introduction-to-dtc}
 
-The [dtc]{.application} package contains the Device Tree Compiler for working with device tree source and binary files and also libfdt, a utility library for reading and manipulating device trees in the binary format.
+The <span class="application">dtc</span> package contains the Device Tree Compiler for working with device tree source and binary files and also libfdt, a utility library for reading and manipulating device trees in the binary format.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://kernel.org/pub/software/utils/dtc/dtc-1.8.1.tar.xz](https://kernel.org/pub/software/utils/dtc/dtc-1.8.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://kernel.org/pub/software/utils/dtc/dtc-1.8.1.tar.xz">https://kernel.org/pub/software/utils/dtc/dtc-1.8.1.tar.xz</a>
 
 -   Download MD5 sum: 9753bdbf18763efef1f5ae8c0cecb5f6
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 14 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### Dtc Dependencies
 
 #### Optional
 
-[libyaml-0.2.5](libyaml.md "libyaml-0.2.5"){.xref}, [SWIG-4.4.1](swig.md "SWIG-4.4.1"){.xref}, and [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref}
-:::::
+<a class="xref" href="libyaml.md" title="libyaml-0.2.5">libyaml-0.2.5</a>, <a class="xref" href="swig.md" title="SWIG-4.4.1">SWIG-4.4.1</a>, and <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Dtc {#installation-of-dtc .sect2}
+<div class="installation" lang="en">
+## Installation of Dtc {#installation-of-dtc}
 
-Install [dtc]{.application} by running the following commands:
+Install <span class="application">dtc</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,98 +70,98 @@ meson setup ..                  \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-If you have [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} installed, you can build the PDF format of the documentation by issuing the following command:
+If you have <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> installed, you can build the PDF format of the documentation by issuing the following command:
 
-``` userinput
+```bash
 pushd ../Documentation
   latexmk -bibtex --pdf dtc-paper &&
   latexmk -bibtex --pdf dtc-paper -c
 popd
 ```
 
-To install the documentation, as the `root`{.systemitem} user issue the following command:
+To install the documentation, as the <code class="systemitem">root</code> user issue the following command:
 
-``` root
+```bash
 cp -R ../Documentation -T /usr/share/doc/dtc-1.8.1
 ```
 
-If you have installed [SWIG-4.4.1](swig.md "SWIG-4.4.1"){.xref} and you wish to install the Python 3 bindings of this package, build the Python 3 module:
+If you have installed <a class="xref" href="swig.md" title="SWIG-4.4.1">SWIG-4.4.1</a> and you wish to install the Python 3 bindings of this package, build the Python 3 module:
 
-``` userinput
+```bash
 pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir ..
 ```
 
-As the `root`{.systemitem} user, install the Python 3 module:
+As the <code class="systemitem">root</code> user, install the Python 3 module:
 
-``` userinput
+```bash
 pip3 install --no-index --find-links dist --no-user libfdt
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D python=disabled`*: This switch prevents building the Python 3 binding with the deprecated method (running [**setup.py**]{.command} directly). We will build the Python 3 binding with the [**pip3 wheel**]{.command} command separately if wanted.
+*`-D python=disabled`*: This switch prevents building the Python 3 binding with the deprecated method (running <span class="command"><strong>setup.py</strong></span> directly). We will build the Python 3 binding with the <span class="command"><strong>pip3 wheel</strong></span> command separately if wanted.
 
-`CC='gcc -Wl,-z,noexecstack'`{.envar}: This variable prevents marking the shared libraries in the test suite as requiring executable stack. Glibc 2.41 or later has stopped allowing `dlopen`{.function}ing such a shared library so the test suite would fail. But those shared libraries don't really need an executable stack, so we can use *`-Wl,-z,noexecstack`* to fix up the test suite. It's needed in the `CC`{.envar} environment for the [**meson test**]{.command} because those shared libraries are built by a test script instead of the [**meson**]{.command}/[**ninja**]{.command} building system, and the test script does not recognize other [“[common]{.quote}”]{.quote} environment variables like `LDFLAGS`{.envar}.
-:::
+<code class="envar">CC='gcc -Wl,-z,noexecstack'</code>: This variable prevents marking the shared libraries in the test suite as requiring executable stack. Glibc 2.41 or later has stopped allowing <code class="function">dlopen</code>ing such a shared library so the test suite would fail. But those shared libraries don't really need an executable stack, so we can use *`-Wl,-z,noexecstack`* to fix up the test suite. It's needed in the <code class="envar">CC</code> environment for the <span class="command"><strong>meson test</strong></span> because those shared libraries are built by a test script instead of the <span class="command"><strong>meson</strong></span>/<span class="command"><strong>ninja</strong></span> building system, and the test script does not recognize other <span class="quote">“<span class="quote">common</span>”</span> environment variables like <code class="envar">LDFLAGS</code>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [convert-dtsv0, dtc, dtdiff, fdtdump, fdtget, fdtoverlay, and fdtput]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">convert-dtsv0, dtc, dtdiff, fdtdump, fdtget, fdtoverlay, and fdtput</span>
+</div>
 
-::: seg
-**Installed Library:** [libfdt.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libfdt.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/lib/python3.14/site-packages/libfdt-1.8.1.dist-info and /usr/share/doc/dtc-1.8.1 (optionally)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/lib/python3.14/site-packages/libfdt-1.8.1.dist-info and /usr/share/doc/dtc-1.8.1 (optionally)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- -----------------------------------------------------------------------------------------------
-  []{#convert-dtsv0}[[**convert-dtsv0**]{.command}]{.term}   converts device tree v0 source to device tree v1
-  []{#dtc-prog}[[**dtc**]{.command}]{.term}                  compiles device tree source (dts) to device tree binary blob (dtb), or de-compiles dtb to dts
-  []{#dtdiff}[[**dtdiff**]{.command}]{.term}                 compares two different device trees
-  []{#fdtdump}[[**fdtdump**]{.command}]{.term}               prints a readable version of a flat device-tree file
-  []{#fdtget}[[**fdtget**]{.command}]{.term}                 reads values from device-tree
-  []{#fdtoverlay}[[**fdtoverlay**]{.command}]{.term}         applies a number of overlays to a base device tree blob
-  []{#fdtput}[[**fdtput**]{.command}]{.term}                 writes a property value to a device tree
-  []{#libfdt}[`libfdt.so`{.filename}]{.term}                 is a utility library for reading and manipulating device trees in the binary format
+  <a id="convert-dtsv0"></a><span class="command"><span class="term"><strong>convert-dtsv0</strong></span></span>   converts device tree v0 source to device tree v1
+  <a id="dtc-prog"></a><span class="command"><span class="term"><strong>dtc</strong></span></span>                  compiles device tree source (dts) to device tree binary blob (dtb), or de-compiles dtb to dts
+  <a id="dtdiff"></a><span class="command"><span class="term"><strong>dtdiff</strong></span></span>                 compares two different device trees
+  <a id="fdtdump"></a><span class="command"><span class="term"><strong>fdtdump</strong></span></span>               prints a readable version of a flat device-tree file
+  <a id="fdtget"></a><span class="command"><span class="term"><strong>fdtget</strong></span></span>                 reads values from device-tree
+  <a id="fdtoverlay"></a><span class="command"><span class="term"><strong>fdtoverlay</strong></span></span>         applies a number of overlays to a base device tree blob
+  <a id="fdtput"></a><span class="command"><span class="term"><strong>fdtput</strong></span></span>                 writes a property value to a device tree
+  <a id="libfdt"></a><span class="term"><code class="filename">libfdt.so</code></span>                 is a utility library for reading and manipulating device trees in the binary format
   ---------------------------------------------------------- -----------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](doxygen.md "Doxygen-1.17.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](doxygen.md "Doxygen-1.17.0")
 
     Doxygen-1.17.0
 
--   [Next](gcc.md "GCC-16.1.0"){accesskey="n"}
+-   [Next](gcc.md "GCC-16.1.0")
 
     GCC-16.1.0
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

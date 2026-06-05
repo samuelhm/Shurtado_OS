@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](liboauth.md "liboauth-1.0.3"){accesskey="p"}
+-   [Prev](liboauth.md "liboauth-1.0.3")
 
     liboauth-1.0.3
 
--   [Next](mitkrb.md "MIT Kerberos V5-1.22.2"){accesskey="n"}
+-   [Next](mitkrb.md "MIT Kerberos V5-1.22.2")
 
     MIT Kerberos V5-1.22.2
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libpwquality}libpwquality-1.4.5 {#libpwquality-1.4.5 .sect1}
+# libpwquality-1.4.5 {#libpwquality-1.4.5}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libpwquality {#introduction-to-libpwquality .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libpwquality {#introduction-to-libpwquality}
 
-The [libpwquality]{.application} package provides common functions for password quality checking and also scoring them based on their apparent randomness. The library also provides a function for generating random passwords with good pronounceability.
+The <span class="application">libpwquality</span> package provides common functions for password quality checking and also scoring them based on their apparent randomness. The library also provides a function for generating random passwords with good pronounceability.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/libpwquality/libpwquality/releases/download/libpwquality-1.4.5/libpwquality-1.4.5.tar.bz2](https://github.com/libpwquality/libpwquality/releases/download/libpwquality-1.4.5/libpwquality-1.4.5.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/libpwquality/libpwquality/releases/download/libpwquality-1.4.5/libpwquality-1.4.5.tar.bz2">https://github.com/libpwquality/libpwquality/releases/download/libpwquality-1.4.5/libpwquality-1.4.5.tar.bz2</a>
 
 -   Download MD5 sum: 6b70e355269aef0b9ddb2b9d17936f21
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.4 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### libpwquality Dependencies
 
 #### Required
 
-[CrackLib-2.10.3](cracklib.md "CrackLib-2.10.3"){.xref}
+<a class="xref" href="cracklib.md" title="CrackLib-2.10.3">CrackLib-2.10.3</a>
 
 #### Recommended
 
-[Linux-PAM-1.7.2](linux-pam.md "Linux-PAM-1.7.2"){.xref}
-:::::
+<a class="xref" href="linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libpwquality {#installation-of-libpwquality .sect2}
+<div class="installation" lang="en">
+## Installation of libpwquality {#installation-of-libpwquality}
 
-Install [libpwquality]{.application} by running the following commands:
+Install <span class="application">libpwquality</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr                      \
             --disable-static                   \
             --with-securedir=/usr/lib/security \
@@ -73,26 +73,26 @@ pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD/python
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 pip3 install --no-index --find-links dist --no-user pwquality
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--disable-python-bindings`*: This parameter disables building Python bindings with the deprecated [**python3 setup.py build**]{.command} command. The explicit instruction to build the Python 3 binding with the [**pip3 wheel**]{.command} command is provided.
-:::
+*`--disable-python-bindings`*: This parameter disables building Python bindings with the deprecated <span class="command"><strong>python3 setup.py build</strong></span> command. The explicit instruction to build the Python 3 binding with the <span class="command"><strong>pip3 wheel</strong></span> command is provided.
+</div>
 
-::: {.configuration lang="en"}
-## Configuring libpwquality {#configuring-libpwquality .sect2}
+<div class="configuration" lang="en">
+## Configuring libpwquality {#configuring-libpwquality}
 
-[libpwquality]{.application} is intended to be a functional replacement for the now-obsolete `pam_cracklib.so`{.filename} PAM module. To configure the system to use the `pam_pwquality`{.filename} module, execute the following commands as the `root`{.systemitem} user:
+<span class="application">libpwquality</span> is intended to be a functional replacement for the now-obsolete <code class="filename">pam_cracklib.so</code> PAM module. To configure the system to use the <code class="filename">pam_pwquality</code> module, execute the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 mv /etc/pam.d/system-password{,.orig} &&
 cat > /etc/pam.d/system-password << "EOF"
 # Begin /etc/pam.d/system-password
@@ -115,50 +115,50 @@ password  required    pam_unix.so        yescrypt shadow try_first_pass
 # End /etc/pam.d/system-password
 EOF
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [pwscore and pwmake]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">pwscore and pwmake</span>
+</div>
 
-::: seg
-**Installed Libraries:** [pam_pwquality.so and libpwquality.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">pam_pwquality.so and libpwquality.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/python3.11/site-packages/pwquality-1.4.5.dist-info]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/python3.11/site-packages/pwquality-1.4.5.dist-info</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ ---------------------------------------------------------------------------------------------------
-  []{#pwmake}[[**pwmake**]{.command}]{.term}                   is a simple configurable tool for generating random and relatively easily pronounceable passwords
-  []{#pwscore}[[**pwscore**]{.command}]{.term}                 is a simple tool for checking quality of a password
-  []{#libpwquality-lib}[`libpwquality.so`{.filename}]{.term}   contains API functions for checking the password quality
-  []{#pam_pwquality}[`pam_pwquality.so`{.filename}]{.term}     is a [Linux PAM]{.application} module used to perform password quality checking
+  <a id="pwmake"></a><span class="command"><span class="term"><strong>pwmake</strong></span></span>                   is a simple configurable tool for generating random and relatively easily pronounceable passwords
+  <a id="pwscore"></a><span class="command"><span class="term"><strong>pwscore</strong></span></span>                 is a simple tool for checking quality of a password
+  <a id="libpwquality-lib"></a><span class="term"><code class="filename">libpwquality.so</code></span>   contains API functions for checking the password quality
+  <a id="pam_pwquality"></a><span class="term"><code class="filename">pam_pwquality.so</code></span>     is a <span class="application">Linux PAM</span> module used to perform password quality checking
   ------------------------------------------------------------ ---------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](liboauth.md "liboauth-1.0.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](liboauth.md "liboauth-1.0.3")
 
     liboauth-1.0.3
 
--   [Next](mitkrb.md "MIT Kerberos V5-1.22.2"){accesskey="n"}
+-   [Next](mitkrb.md "MIT Kerberos V5-1.22.2")
 
     MIT Kerberos V5-1.22.2
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

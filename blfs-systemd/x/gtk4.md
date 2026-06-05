@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](gtk3.md "GTK-3.24.52"){accesskey="p"}
+-   [Prev](gtk3.md "GTK-3.24.52")
 
     GTK-3.24.52
 
--   [Next](gtkmm3.md "Gtkmm-3.24.10"){accesskey="n"}
+-   [Next](gtkmm3.md "Gtkmm-3.24.10")
 
     Gtkmm-3.24.10
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gtk4}GTK-4.22.4 {#gtk-4.22.4 .sect1}
+# GTK-4.22.4 {#gtk-4.22.4}
 
-::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GTK 4 {#introduction-to-gtk-4 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GTK 4 {#introduction-to-gtk-4}
 
-The [GTK 4]{.application} package contains libraries used for creating graphical user interfaces for applications.
+The <span class="application">GTK 4</span> package contains libraries used for creating graphical user interfaces for applications.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gtk/4.22/gtk-4.22.4.tar.xz](https://download.gnome.org/sources/gtk/4.22/gtk-4.22.4.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gtk/4.22/gtk-4.22.4.tar.xz">https://download.gnome.org/sources/gtk/4.22/gtk-4.22.4.tar.xz</a>
 
 -   Download MD5 sum: 2420b9b289937c1c9f97332470db1889
 
@@ -44,45 +44,45 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.4 GB (with docs and tests)
 
 -   Estimated build time: 1.5 SBU (using parallelism=4; with docs; add 2.1 SBU for tests)
-:::
+</div>
 
 ### GTK 4 Dependencies
 
 #### Required
 
-[gdk-pixbuf-2.44.6](gdk-pixbuf.md "gdk-pixbuf-2.44.6"){.xref}, [graphene-1.10.8](graphene.md "Graphene-1.10.8"){.xref}, [ISO Codes-4.20.1](../general/iso-codes.md "ISO Codes-4.20.1"){.xref}, [libepoxy-1.5.10](libepoxy.md "libepoxy-1.5.10"){.xref}, [librsvg-2.62.3](../general/librsvg.md "librsvg-2.62.3"){.xref}, [libxkbcommon-1.13.2](../general/libxkbcommon.md "libxkbcommon-1.13.2"){.xref}, [Pango-1.57.1](pango.md "Pango-1.57.1"){.xref}, [PyGObject-3.56.3](../general/python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref}, and [wayland-protocols-1.48](../general/wayland-protocols.md "Wayland-Protocols-1.48"){.xref}
+<a class="xref" href="gdk-pixbuf.md" title="gdk-pixbuf-2.44.6">gdk-pixbuf-2.44.6</a>, <a class="xref" href="graphene.md" title="Graphene-1.10.8">graphene-1.10.8</a>, <a class="xref" href="../general/iso-codes.md" title="ISO Codes-4.20.1">ISO Codes-4.20.1</a>, <a class="xref" href="libepoxy.md" title="libepoxy-1.5.10">libepoxy-1.5.10</a>, <a class="xref" href="../general/librsvg.md" title="librsvg-2.62.3">librsvg-2.62.3</a>, <a class="xref" href="../general/libxkbcommon.md" title="libxkbcommon-1.13.2">libxkbcommon-1.13.2</a>, <a class="xref" href="pango.md" title="Pango-1.57.1">Pango-1.57.1</a>, <a class="xref" href="../general/python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a>, and <a class="xref" href="../general/wayland-protocols.md" title="Wayland-Protocols-1.48">wayland-protocols-1.48</a>
 
 #### Recommended
 
-[adwaita-icon-theme-50.0](adwaita-icon-theme.md "adwaita-icon-theme-50.0"){.xref} (runtime, default for some gtk4 settings keys), [gst-plugins-bad-1.28.3](../multimedia/gst10-plugins-bad.md "gst-plugins-bad-1.28.3"){.xref}, [glslc from shaderc-2026.2](../general/glslc.md "glslc from shaderc-2026.2"){.xref}, [gst-plugins-good-1.28.3](../multimedia/gst10-plugins-good.md "gst-plugins-good-1.28.3"){.xref} (runtime, built with [libvpx-1.16.0](../multimedia/libvpx.md "libvpx-1.16.0"){.xref}), [hicolor-icon-theme-0.18](hicolor-icon-theme.md "hicolor-icon-theme-0.18"){.xref} (needed for tests and for defaults), [Vulkan-Loader-1.4.350.0](vulkan-loader.md "Vulkan-Loader-1.4.350.0"){.xref}, and [xdg-desktop-portal-1.20.4](xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){.xref} (runtime, with the backend suitable for your desktop environment, for example [xdg-desktop-portal-gnome-50.0](../gnome/xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){.xref})
+<a class="xref" href="adwaita-icon-theme.md" title="adwaita-icon-theme-50.0">adwaita-icon-theme-50.0</a> (runtime, default for some gtk4 settings keys), <a class="xref" href="../multimedia/gst10-plugins-bad.md" title="gst-plugins-bad-1.28.3">gst-plugins-bad-1.28.3</a>, <a class="xref" href="../general/glslc.md" title="glslc from shaderc-2026.2">glslc from shaderc-2026.2</a>, <a class="xref" href="../multimedia/gst10-plugins-good.md" title="gst-plugins-good-1.28.3">gst-plugins-good-1.28.3</a> (runtime, built with <a class="xref" href="../multimedia/libvpx.md" title="libvpx-1.16.0">libvpx-1.16.0</a>), <a class="xref" href="hicolor-icon-theme.md" title="hicolor-icon-theme-0.18">hicolor-icon-theme-0.18</a> (needed for tests and for defaults), <a class="xref" href="vulkan-loader.md" title="Vulkan-Loader-1.4.350.0">Vulkan-Loader-1.4.350.0</a>, and <a class="xref" href="xdg-desktop-portal.md" title="xdg-desktop-portal-1.20.4">xdg-desktop-portal-1.20.4</a> (runtime, with the backend suitable for your desktop environment, for example <a class="xref" href="../gnome/xdg-desktop-portal-gnome.md" title="xdg-desktop-portal-gnome-50.0">xdg-desktop-portal-gnome-50.0</a>)
 
 #### Recommended (Required if building GNOME)
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Optional
 
-[Avahi-0.8](../basicnet/avahi.md "Avahi-0.8"){.xref} (for some tests), [colord-1.4.8](../general/colord.md "Colord-1.4.8"){.xref}, [Cups-2.4.19](../pst/cups.md "Cups-2.4.19"){.xref}, [docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref}, [Evince-48.4](../gnome/evince.md "Evince-48.4"){.xref} (runtime for the print previewer), [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, [Highlight-4.20](../general/highlight.md "Highlight-4.20"){.xref} (runtime, only used by [**gtk4-demo**]{.command} for syntax highlighting of demo source code), [libcloudproviders-0.3.6](../general/libcloudproviders.md "libcloudproviders-0.3.6"){.xref}, [sassc-3.6.2](../general/sassc.md "sassc-3.6.2"){.xref}, [tinysparql-3.11.1](../gnome/tinysparql.md "tinysparql-3.11.1"){.xref}, [accesskit-c](https://github.com/AccessKit/accesskit-c){.ulink}, [cpdb](https://github.com/OpenPrinting/cpdb-libs){.ulink}, [pydbus](https://pypi.org/project/pydbus/){.ulink} (for some tests), and [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink}
-:::::
+<a class="xref" href="../basicnet/avahi.md" title="Avahi-0.8">Avahi-0.8</a> (for some tests), <a class="xref" href="../general/colord.md" title="Colord-1.4.8">colord-1.4.8</a>, <a class="xref" href="../pst/cups.md" title="Cups-2.4.19">Cups-2.4.19</a>, <a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a>, <a class="xref" href="../gnome/evince.md" title="Evince-48.4">Evince-48.4</a> (runtime for the print previewer), <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, <a class="xref" href="../general/highlight.md" title="Highlight-4.20">Highlight-4.20</a> (runtime, only used by <span class="command"><strong>gtk4-demo</strong></span> for syntax highlighting of demo source code), <a class="xref" href="../general/libcloudproviders.md" title="libcloudproviders-0.3.6">libcloudproviders-0.3.6</a>, <a class="xref" href="../general/sassc.md" title="sassc-3.6.2">sassc-3.6.2</a>, <a class="xref" href="../gnome/tinysparql.md" title="tinysparql-3.11.1">tinysparql-3.11.1</a>, <a class="ulink" href="https://github.com/AccessKit/accesskit-c">accesskit-c</a>, <a class="ulink" href="https://github.com/OpenPrinting/cpdb-libs">cpdb</a>, <a class="ulink" href="https://pypi.org/project/pydbus/">pydbus</a> (for some tests), and <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#gtk4-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 Some GTK-4 features need the following options in the kernel configuration. It's also needed by the test suite.
 
-``` screen
+```console
 Device Drivers --->
   DMABUF options --->
     [*] userspace dmabuf misc driver                                   [UDMABUF]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of GTK 4 {#installation-of-gtk-4 .sect2}
+<div class="installation" lang="en">
+## Installation of GTK 4 {#installation-of-gtk-4}
 
-Install [GTK 4]{.application} by running the following commands:
+Install <span class="application">GTK 4</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -95,9 +95,9 @@ meson setup --prefix=/usr            \
 ninja
 ```
 
-If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to build the API documentation for this package, issue:
+If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to build the API documentation for this package, issue:
 
-``` userinput
+```bash
 sed "s@'doc'@& / 'gtk-4.22.4'@" -i ../docs/reference/meson.build &&
 meson configure -D documentation=true                            &&
 ninja
@@ -105,24 +105,24 @@ ninja
 
 To run the tests, issue:
 
-``` userinput
+```bash
 env -u{GALLIUM_DRIVER,MESA_LOADER_DRIVER_OVERRIDE}          \
     LIBGL_ALWAYS_SOFTWARE=1 VK_LOADER_DRIVERS_SELECT='lvp*' \
     dbus-run-session meson test --setup x11                 \
                                 --no-suite=headless
 ```
 
-If you are in a Wayland session, replace the one occurrence of `x11`{.literal} with `wayland`{.literal}. Many tests will fail if `~/.config/gtk-4.0/settings.ini`{.filename} exists and the gtk-modules line is not commented out. Several other tests may fail for unknown reasons. On systems with NVIDIA graphics cards, the tests may take significantly longer.
+If you are in a Wayland session, replace the one occurrence of <code class="literal">x11</code> with <code class="literal">wayland</code>. Many tests will fail if <code class="filename">~/.config/gtk-4.0/settings.ini</code> exists and the gtk-modules line is not commented out. Several other tests may fail for unknown reasons. On systems with NVIDIA graphics cards, the tests may take significantly longer.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
@@ -130,40 +130,40 @@ ninja install
 
 *`-D introspection=enabled`*: This switch enables using GObject Introspection to generate GIR bindings of this packages. These bindings are required by GNOME.
 
-`-D cloudproviders=enabled`{.option}: Use this switch if you have [libcloudproviders-0.3.6](../general/libcloudproviders.md "libcloudproviders-0.3.6"){.xref} installed and wish to enable support for cloud providers in a file chooser window.
+<code class="option">-D cloudproviders=enabled</code>: Use this switch if you have <a class="xref" href="../general/libcloudproviders.md" title="libcloudproviders-0.3.6">libcloudproviders-0.3.6</a> installed and wish to enable support for cloud providers in a file chooser window.
 
-`-D tracker=enabled`{.option}: Use this switch if you have [tinysparql-3.11.1](../gnome/tinysparql.md "tinysparql-3.11.1"){.xref} installed and wish to use search functionality when running a file chooser.
+<code class="option">-D tracker=enabled</code>: Use this switch if you have <a class="xref" href="../gnome/tinysparql.md" title="tinysparql-3.11.1">tinysparql-3.11.1</a> installed and wish to use search functionality when running a file chooser.
 
-`-D colord=enabled`{.option}: Use this switch if you have [colord-1.4.8](../general/colord.md "Colord-1.4.8"){.xref} installed and wish to use colord with the CUPS printing backend.
+<code class="option">-D colord=enabled</code>: Use this switch if you have <a class="xref" href="../general/colord.md" title="Colord-1.4.8">colord-1.4.8</a> installed and wish to use colord with the CUPS printing backend.
 
-`-D man-pages=true`{.option}: Use this switch if you have [docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref} installed and wish to generate the man pages.
+<code class="option">-D man-pages=true</code>: Use this switch if you have <a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> installed and wish to generate the man pages.
 
-`-D sysprof=enabled`{.option}: Use this switch if you have [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink} installed and wish to enable tracing support for GTK4-based applications.
+<code class="option">-D sysprof=enabled</code>: Use this switch if you have <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a> installed and wish to enable tracing support for GTK4-based applications.
 
-`-D vulkan=disabled`{.option}: Use this switch instead of *`-D vulkan=enabled`* if you don't have [Vulkan-Loader-1.4.350.0](vulkan-loader.md "Vulkan-Loader-1.4.350.0"){.xref} or [glslc from shaderc-2026.2](../general/glslc.md "glslc from shaderc-2026.2"){.xref} installed. It will disable the Vulkan backend that the upstream prefers to use on Wayland-based graphical environments.
+<code class="option">-D vulkan=disabled</code>: Use this switch instead of *`-D vulkan=enabled`* if you don't have <a class="xref" href="vulkan-loader.md" title="Vulkan-Loader-1.4.350.0">Vulkan-Loader-1.4.350.0</a> or <a class="xref" href="../general/glslc.md" title="glslc from shaderc-2026.2">glslc from shaderc-2026.2</a> installed. It will disable the Vulkan backend that the upstream prefers to use on Wayland-based graphical environments.
 
-`LIBGL_ALWAYS_SOFTWARE=1`{.envar} and `VK_LOADER_DRIVERS_SELECT='lvp*'`{.envar}: Force the test suite to use the softpipe or llvmpipe Gallium driver and the lavapipe Vulkan driver from Mesa. The test suite is so sensitive that the minor differences caused by a different Mesa driver can trigger test failures.
+<code class="envar">LIBGL_ALWAYS_SOFTWARE=1</code> and <code class="envar">VK_LOADER_DRIVERS_SELECT='lvp*'</code>: Force the test suite to use the softpipe or llvmpipe Gallium driver and the lavapipe Vulkan driver from Mesa. The test suite is so sensitive that the minor differences caused by a different Mesa driver can trigger test failures.
 
-[**env -u{GALLIUM_DRIVER,MESA_LOADER_DRIVER_OVERRIDE}**]{.command}: Unset variables which may conflict with `LIBGL_ALWAYS_SOFTWARE=1`{.envar}.
+<span class="command"><strong>env -u{GALLIUM_DRIVER,MESA_LOADER_DRIVER_OVERRIDE}</strong></span>: Unset variables which may conflict with <code class="envar">LIBGL_ALWAYS_SOFTWARE=1</code>.
 
 *`--no-suite=headless`*: Disable the tests requiring the external dependency pydbus.
-:::
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring GTK 4 {#configuring-gtk-4 .sect2}
+<div class="configuration" lang="en">
+## Configuring GTK 4 {#configuring-gtk-4}
 
-::: {.sect3 lang="en"}
-### []{#gtk4-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`~/.config/gtk-4.0/settings.ini`{.filename} and `/usr/share/gtk-4.0/settings.ini`{.filename}
-:::
+<code class="filename">~/.config/gtk-4.0/settings.ini</code> and <code class="filename">/usr/share/gtk-4.0/settings.ini</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-[GTK 4]{.application} themes change the way a [GTK 4]{.application} application looks. An icon theme can be used to change the icons that appear on the application's toolbar. If you have installed a [GTK 4]{.application} theme (e.g. the Adwaita theme built in [GTK 4]{.application}), an icon theme (such as [oxygen-icons-6.1.0](oxygen-icons.md "oxygen-icons-6.1.0"){.xref}) and/or a font ([Dejavu fonts](TTF-and-OTF-fonts.md#dejavu-fonts "DejaVu fonts"){.xref}), you can set your preferences in `~/.config/gtk-4.0/settings.ini`{.filename}, or the default system-wide configuration file (as the `root`{.systemitem} user), in `/usr/share/gtk-4.0/settings.ini`{.filename}. For the local user, an example is:
+<span class="application">GTK 4</span> themes change the way a <span class="application">GTK 4</span> application looks. An icon theme can be used to change the icons that appear on the application's toolbar. If you have installed a <span class="application">GTK 4</span> theme (e.g. the Adwaita theme built in <span class="application">GTK 4</span>), an icon theme (such as <a class="xref" href="oxygen-icons.md" title="oxygen-icons-6.1.0">oxygen-icons-6.1.0</a>) and/or a font (<a class="xref" href="TTF-and-OTF-fonts.md#dejavu-fonts" title="DejaVu fonts">Dejavu fonts</a>), you can set your preferences in <code class="filename">~/.config/gtk-4.0/settings.ini</code>, or the default system-wide configuration file (as the <code class="systemitem">root</code> user), in <code class="filename">/usr/share/gtk-4.0/settings.ini</code>. For the local user, an example is:
 
-``` userinput
+```bash
 mkdir -pv ~/.config/gtk-4.0
 cat > ~/.config/gtk-4.0/settings.ini << "EOF"
 [Settings]
@@ -179,63 +179,63 @@ gtk-cursor-theme-name = Adwaita
 EOF
 ```
 
-There are many settings keys, some with default values. You can find them at [Settings: GTK 4 Reference Manual](https://docs.gtk.org/gtk4/class.Settings.md#properties){.ulink}.
-:::
-:::::
+There are many settings keys, some with default values. You can find them at <a class="ulink" href="https://docs.gtk.org/gtk4/class.Settings.md#properties">Settings: GTK 4 Reference Manual</a>.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gtk4-broadwayd, gtk4-builder-tool, gtk4-demo, gtk4-demo-application, gtk4-encode-symbolic-svg, gtk4-image-tool, gtk4-launch, gtk4-node-editor, gtk4-path-editor, gtk4-print-editor, gtk4-query-settings, gtk4-rendernode-tool, gtk4-update-icon-cache, and gtk4-widget-factory]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gtk4-broadwayd, gtk4-builder-tool, gtk4-demo, gtk4-demo-application, gtk4-encode-symbolic-svg, gtk4-image-tool, gtk4-launch, gtk4-node-editor, gtk4-path-editor, gtk4-print-editor, gtk4-query-settings, gtk4-rendernode-tool, gtk4-update-icon-cache, and gtk4-widget-factory</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgtk-4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgtk-4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gtk-4.0, /usr/lib/gtk-4.0, and /usr/share/gtk-4.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gtk-4.0, /usr/lib/gtk-4.0, and /usr/share/gtk-4.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#gtk4-broadwayd}[[**gtk4-broadwayd**]{.command}]{.term}                       provides support for displaying GTK 4 applications in a web browser using HTML5 and web sockets
-  []{#gtk4-builder-tool}[[**gtk4-builder-tool**]{.command}]{.term}                 performs various operations on GtkBuilder .ui files
-  []{#gtk4-demo}[[**gtk4-demo**]{.command}]{.term}                                 is a simple program that demonstrates some of the tasks that can be done with GTK 4
-  []{#gtk4-demo-application}[[**gtk4-demo-application**]{.command}]{.term}         is a simple GTK 4 application which is useful for testing
-  []{#gtk4-encode-symbolic-svg}[[**gtk4-encode-symbolic-svg**]{.command}]{.term}   converts symbolic SVG icons into special PNG files. GTK 4 can load and recolor these PNGs, just like original SVGs, but loading them is much faster
-  []{#gtk4-image-tool}[[**gtk4-image-tool**]{.command}]{.term}                     performs various operations on images, including comparisons, conversions, listing information on the images, relabeling the images, and showing the images
-  []{#gtk4-launch}[[**gtk4-launch**]{.command}]{.term}                             launches an application using the given name. The name should match the application .desktop file name (as seen in `/usr/share/applications`{.filename}), with or without the '.desktop' extension
-  []{#gtk4-node-editor}[[**gtk4-node-editor**]{.command}]{.term}                   is a utility to show and edit render node files. Such render node files can be obtained e.g. from the GTK inspector
-  []{#gtk4-path-tool}[[**gtk4-path-tool**]{.command}]{.term}                       performs various tasks on paths, including decompositions, reversals, restrictions, rendering, displaying the path, and listing information about the paths
-  []{#gtk4-print-editor}[[**gtk4-print-editor**]{.command}]{.term}                 is a simple program to demonstrate printing using GTK 4 applications
-  []{#gtk4-query-settings}[[**gtk4-query-settings**]{.command}]{.term}             provides a complete listing of all settings related to GTK 4
-  []{#gtk4-rendernode-tool}[[**gtk4-rendernode-tool**]{.command}]{.term}           performs various tasks on GTK render nodes, including benchmarks, comparisons, extracting data URLs, displaying information about the nodes, displaying the nodes, and taking screenshots of nodes
-  []{#gtk4-update-icon-cache}[[**gtk4-update-icon-cache**]{.command}]{.term}       is an icon theme caching utility that creates mmap()able cache files for icon themes
-  []{#gtk4-widget-factory}[[**gtk4-widget-factory**]{.command}]{.term}             is a program to view GTK 4 themes and widgets
-  []{#libgtk-4}[`libgtk-4.so`{.filename}]{.term}                                   contains functions that provide an API to implement graphical user interfaces
+  <a id="gtk4-broadwayd"></a><span class="command"><span class="term"><strong>gtk4-broadwayd</strong></span></span>                       provides support for displaying GTK 4 applications in a web browser using HTML5 and web sockets
+  <a id="gtk4-builder-tool"></a><span class="command"><span class="term"><strong>gtk4-builder-tool</strong></span></span>                 performs various operations on GtkBuilder .ui files
+  <a id="gtk4-demo"></a><span class="command"><span class="term"><strong>gtk4-demo</strong></span></span>                                 is a simple program that demonstrates some of the tasks that can be done with GTK 4
+  <a id="gtk4-demo-application"></a><span class="command"><span class="term"><strong>gtk4-demo-application</strong></span></span>         is a simple GTK 4 application which is useful for testing
+  <a id="gtk4-encode-symbolic-svg"></a><span class="command"><span class="term"><strong>gtk4-encode-symbolic-svg</strong></span></span>   converts symbolic SVG icons into special PNG files. GTK 4 can load and recolor these PNGs, just like original SVGs, but loading them is much faster
+  <a id="gtk4-image-tool"></a><span class="command"><span class="term"><strong>gtk4-image-tool</strong></span></span>                     performs various operations on images, including comparisons, conversions, listing information on the images, relabeling the images, and showing the images
+  <a id="gtk4-launch"></a><span class="command"><span class="term"><strong>gtk4-launch</strong></span></span>                             launches an application using the given name. The name should match the application .desktop file name (as seen in <code class="filename">/usr/share/applications</code>), with or without the '.desktop' extension
+  <a id="gtk4-node-editor"></a><span class="command"><span class="term"><strong>gtk4-node-editor</strong></span></span>                   is a utility to show and edit render node files. Such render node files can be obtained e.g. from the GTK inspector
+  <a id="gtk4-path-tool"></a><span class="command"><span class="term"><strong>gtk4-path-tool</strong></span></span>                       performs various tasks on paths, including decompositions, reversals, restrictions, rendering, displaying the path, and listing information about the paths
+  <a id="gtk4-print-editor"></a><span class="command"><span class="term"><strong>gtk4-print-editor</strong></span></span>                 is a simple program to demonstrate printing using GTK 4 applications
+  <a id="gtk4-query-settings"></a><span class="command"><span class="term"><strong>gtk4-query-settings</strong></span></span>             provides a complete listing of all settings related to GTK 4
+  <a id="gtk4-rendernode-tool"></a><span class="command"><span class="term"><strong>gtk4-rendernode-tool</strong></span></span>           performs various tasks on GTK render nodes, including benchmarks, comparisons, extracting data URLs, displaying information about the nodes, displaying the nodes, and taking screenshots of nodes
+  <a id="gtk4-update-icon-cache"></a><span class="command"><span class="term"><strong>gtk4-update-icon-cache</strong></span></span>       is an icon theme caching utility that creates mmap()able cache files for icon themes
+  <a id="gtk4-widget-factory"></a><span class="command"><span class="term"><strong>gtk4-widget-factory</strong></span></span>             is a program to view GTK 4 themes and widgets
+  <a id="libgtk-4"></a><span class="term"><code class="filename">libgtk-4.so</code></span>                                   contains functions that provide an API to implement graphical user interfaces
   -------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gtk3.md "GTK-3.24.52"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gtk3.md "GTK-3.24.52")
 
     GTK-3.24.52
 
--   [Next](gtkmm3.md "Gtkmm-3.24.10"){accesskey="n"}
+-   [Next](gtkmm3.md "Gtkmm-3.24.10")
 
     Gtkmm-3.24.10
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

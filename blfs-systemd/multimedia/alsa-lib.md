@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](alsa.md "ALSA"){accesskey="p"}
+-   [Prev](alsa.md "ALSA")
 
     ALSA
 
--   [Next](alsa-plugins.md "alsa-plugins-1.2.12"){accesskey="n"}
+-   [Next](alsa-plugins.md "alsa-plugins-1.2.12")
 
     alsa-plugins-1.2.12
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#alsa-lib}alsa-lib-1.2.16 {#alsa-lib-1.2.16 .sect1}
+# alsa-lib-1.2.16 {#alsa-lib-1.2.16}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-::::::: {.package lang="en"}
-## Introduction to ALSA Library {#introduction-to-alsa-library .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to ALSA Library {#introduction-to-alsa-library}
 
-The [ALSA Library]{.application} package contains the ALSA library used by programs (including [ALSA Utilities]{.application}) requiring access to the ALSA sound interface.
+The <span class="application">ALSA Library</span> package contains the ALSA library used by programs (including <span class="application">ALSA Utilities</span>) requiring access to the ALSA sound interface.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.16.tar.bz2](https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.16.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.16.tar.bz2">https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.16.tar.bz2</a>
 
 -   Download MD5 sum: 2207974c4dec721779c01b2e1d43176d
 
@@ -44,39 +44,39 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 82 MB (with tests and docs)
 
 -   Estimated build time: 0.3 SBU (with tests and docs)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Recommended file: [https://www.alsa-project.org/files/pub/lib/alsa-ucm-conf-1.2.16.tar.bz2](https://www.alsa-project.org/files/pub/lib/alsa-ucm-conf-1.2.16.tar.bz2){.ulink}
-:::
+<div class="itemizedlist">
+-   Recommended file: <a class="ulink" href="https://www.alsa-project.org/files/pub/lib/alsa-ucm-conf-1.2.16.tar.bz2">https://www.alsa-project.org/files/pub/lib/alsa-ucm-conf-1.2.16.tar.bz2</a>
+</div>
 
 ### ALSA Library Dependencies
 
 #### Recommended (Runtime)
 
-[[Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref}]{.phrase}
+<a class="xref" href="../general/systemd.md" title="Systemd-260.2"><span class="phrase">Systemd-260.2</a></span>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If the recommended runtime dependency is not installed, you may need to run any application requiring ALSA library as the `root`{.systemitem} user or a user in the `audio`{.systemitem} group.
-:::
+If the recommended runtime dependency is not installed, you may need to run any application requiring ALSA library as the <code class="systemitem">root</code> user or a user in the <code class="systemitem">audio</code> group.
+</div>
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} and [Python2](https://www.python.org/downloads/release/python-2718/){.ulink}
-:::::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> and <a class="ulink" href="https://www.python.org/downloads/release/python-2718/">Python2</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#alsa-lib-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 If needed, enable the following options in the kernel configuration and recompile the kernel:
 
-``` screen
+```console
 Device Drivers --->
   <*/M> Sound card support --->                                          [SOUND]
     # Select settings and drivers appropriate for your hardware
@@ -85,101 +85,101 @@ Device Drivers --->
 ```
 
 In the Device Drivers ⇒ Sound card support ⇒ Advanced Linux Sound Architecture section of the kernel configuration, select the settings and drivers appropriate for your hardware. If necessary, recompile and install your new kernel.
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of ALSA Library {#installation-of-alsa-library .sect2}
+<div class="installation" lang="en">
+## Installation of ALSA Library {#installation-of-alsa-library}
 
-Install [ALSA Library]{.application} by running the following commands:
+Install <span class="application">ALSA Library</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure &&
 make
 ```
 
-If you have [Doxygen]{.application} installed and you wish to build the library API documentation, run the following commands from the top-level directory of the source tree:
+If you have <span class="application">Doxygen</span> installed and you wish to build the library API documentation, run the following commands from the top-level directory of the source tree:
 
-``` userinput
+```bash
 make doc
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user, install the package and recommended configuration files:
+Now, as the <code class="systemitem">root</code> user, install the package and recommended configuration files:
 
-``` root
+```bash
 make install &&
 tar -C /usr/share/alsa --strip-components=1 -xf ../alsa-ucm-conf-1.2.16.tar.bz2
 ```
 
-To install the API documentation, run the following command as the `root`{.systemitem} user:
+To install the API documentation, run the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -d -m755 /usr/share/doc/alsa-lib-1.2.16/html/search &&
 install -v -m644 doc/doxygen/html/*.* \
                 /usr/share/doc/alsa-lib-1.2.16/html &&
 install -v -m644 doc/doxygen/html/search/* \
                 /usr/share/doc/alsa-lib-1.2.16/html/search
 ```
-:::
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring ALSA Library {#configuring-alsa-library .sect2}
+<div class="configuration" lang="en">
+## Configuring ALSA Library {#configuring-alsa-library}
 
-::: {.sect3 lang="en"}
-### []{#alsa-lib-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`~/.asoundrc`{.filename} and `/etc/asound.conf`{.filename}
-:::
+<code class="filename">~/.asoundrc</code> and <code class="filename">/etc/asound.conf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-The default `alsa.conf`{.filename} is adequate for most installations. For extra functionality and/or advanced control of your sound device, you may need to create additional configuration files. For information on the available configuration parameters, visit [https://www.alsa-project.org/main/index.php/Asoundrc](https://www.alsa-project.org/main/index.php/Asoundrc){.ulink}.
-:::
-:::::
+The default <code class="filename">alsa.conf</code> is adequate for most installations. For extra functionality and/or advanced control of your sound device, you may need to create additional configuration files. For information on the available configuration parameters, visit <a class="ulink" href="https://www.alsa-project.org/main/index.php/Asoundrc">https://www.alsa-project.org/main/index.php/Asoundrc</a>.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [aserver]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">aserver</span>
+</div>
 
-::: seg
-**Installed Library:** [libasound.so and libatopology.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libasound.so and libatopology.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/alsa, /usr/share/alsa and /usr/share/doc/alsa-lib-1.2.16]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/alsa, /usr/share/alsa and /usr/share/doc/alsa-lib-1.2.16</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ------------------------------------------------
-  []{#aserver}[[**aserver**]{.command}]{.term}             is the ALSA server
-  []{#libasound}[`libasound.so`{.filename}]{.term}         contains the ALSA API functions
-  []{#libatopology}[`libatopology.so`{.filename}]{.term}   contains API functions for the ALSA topologies
+  <a id="aserver"></a><span class="command"><span class="term"><strong>aserver</strong></span></span>             is the ALSA server
+  <a id="libasound"></a><span class="term"><code class="filename">libasound.so</code></span>         contains the ALSA API functions
+  <a id="libatopology"></a><span class="term"><code class="filename">libatopology.so</code></span>   contains API functions for the ALSA topologies
   -------------------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](alsa.md "ALSA"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](alsa.md "ALSA")
 
     ALSA
 
--   [Next](alsa-plugins.md "alsa-plugins-1.2.12"){accesskey="n"}
+-   [Next](alsa-plugins.md "alsa-plugins-1.2.12")
 
     alsa-plugins-1.2.12
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

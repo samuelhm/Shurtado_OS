@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 38. LXQt Applications
 
--   [Prev](lxqt-notificationd.md "lxqt-notificationd-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-notificationd.md "lxqt-notificationd-2.4.0")
 
     lxqt-notificationd-2.4.0
 
--   [Next](qps.md "qps-2.13.0"){accesskey="n"}
+-   [Next](qps.md "qps-2.13.0")
 
     qps-2.13.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pavucontrol-qt}pavucontrol-qt-2.4.0 {#pavucontrol-qt-2.4.0 .sect1}
+# pavucontrol-qt-2.4.0 {#pavucontrol-qt-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to pavucontrol-qt {#introduction-to-pavucontrol-qt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to pavucontrol-qt {#introduction-to-pavucontrol-qt}
 
-[pavucontrol-qt]{.application} is the Qt port of the volume control utility pavucontrol, which is used to adjust audio levels in Pulseaudio. It is desktop environment agnostic.
+<span class="application">pavucontrol-qt</span> is the Qt port of the volume control utility pavucontrol, which is used to adjust audio levels in Pulseaudio. It is desktop environment agnostic.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/pavucontrol-qt/releases/download/2.4.0/pavucontrol-qt-2.4.0.tar.xz](https://github.com/lxqt/pavucontrol-qt/releases/download/2.4.0/pavucontrol-qt-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/pavucontrol-qt/releases/download/2.4.0/pavucontrol-qt-2.4.0.tar.xz">https://github.com/lxqt/pavucontrol-qt/releases/download/2.4.0/pavucontrol-qt-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 79ec4eb4247001df14eca73c437a446c
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.0 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### pavucontrol-qt Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref} and [PulseAudio-17.0](../multimedia/pulseaudio.md "PulseAudio-17.0"){.xref} (built with [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} support)
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a> and <a class="xref" href="../multimedia/pulseaudio.md" title="PulseAudio-17.0">PulseAudio-17.0</a> (built with <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> support)
+</div>
 
-::: {.installation lang="en"}
-## Installation of pavucontrol-qt {#installation-of-pavucontrol-qt .sect2}
+<div class="installation" lang="en">
+## Installation of pavucontrol-qt {#installation-of-pavucontrol-qt}
 
-Install [pavucontrol-qt]{.application} by running the following commands:
+Install <span class="application">pavucontrol-qt</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [pavucontrol-qt]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">pavucontrol-qt</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/pavucontrol-qt]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/pavucontrol-qt</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- ------------------------------------------------------------------------------------------
-  []{#pavucontrol-qt-prog}[[**pavucontrol-qt**]{.command}]{.term}   is a Qt based GUI configuration tool for sound settings using [pulseaudio]{.application}
+  <a id="pavucontrol-qt-prog"></a><span class="command"><span class="term"><strong>pavucontrol-qt</strong></span></span>   is a Qt based GUI configuration tool for sound settings using <span class="application">pulseaudio</span>
   ----------------------------------------------------------------- ------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-notificationd.md "lxqt-notificationd-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-notificationd.md "lxqt-notificationd-2.4.0")
 
     lxqt-notificationd-2.4.0
 
--   [Next](qps.md "qps-2.13.0"){accesskey="n"}
+-   [Next](qps.md "qps-2.13.0")
 
     qps-2.13.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

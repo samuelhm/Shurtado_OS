@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](geoclue2.md "GeoClue-2.8.1"){accesskey="p"}
+-   [Prev](geoclue2.md "GeoClue-2.8.1")
 
     GeoClue-2.8.1
 
--   [Next](kdsoap.md "kdsoap-2.3.0"){accesskey="n"}
+-   [Next](kdsoap.md "kdsoap-2.3.0")
 
     kdsoap-2.3.0
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#glib-networking}glib-networking-2.80.1 {#glib-networking-2.80.1 .sect1}
+# glib-networking-2.80.1 {#glib-networking-2.80.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GLib Networking {#introduction-to-glib-networking .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GLib Networking {#introduction-to-glib-networking}
 
-The [GLib Networking]{.application} package contains Network related gio modules for [GLib]{.application}.
+The <span class="application">GLib Networking</span> package contains Network related gio modules for <span class="application">GLib</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/glib-networking/2.80/glib-networking-2.80.1.tar.xz](https://download.gnome.org/sources/glib-networking/2.80/glib-networking-2.80.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/glib-networking/2.80/glib-networking-2.80.1.tar.xz">https://download.gnome.org/sources/glib-networking/2.80/glib-networking-2.80.1.tar.xz</a>
 
 -   Download MD5 sum: 405e6c058723217a1307ba8415615f9d
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.9 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
+</div>
 
 ### GLib Networking Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} and [GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> and <a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a>
 
 #### Recommended
 
-[gsettings-desktop-schemas-50.1](../gnome/gsettings-desktop-schemas.md "gsettings-desktop-schemas-50.1"){.xref} (for the applications using this package to use proxy server settings in GNOME) and [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref}
+<a class="xref" href="../gnome/gsettings-desktop-schemas.md" title="gsettings-desktop-schemas-50.1">gsettings-desktop-schemas-50.1</a> (for the applications using this package to use proxy server settings in GNOME) and <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a>
 
 #### Optional
 
-[libproxy-0.5.12](../general/libproxy.md "libproxy-0.5.12"){.xref}
-:::::
+<a class="xref" href="../general/libproxy.md" title="libproxy-0.5.12">libproxy-0.5.12</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GLib Networking {#installation-of-glib-networking .sect2}
+<div class="installation" lang="en">
+## Installation of GLib Networking {#installation-of-glib-networking}
 
-Install [GLib Networking]{.application} by running the following commands:
+Install <span class="application">GLib Networking</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -78,54 +78,54 @@ meson setup             \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
 *`-D libproxy=disabled`*: This switch disables libproxy support. If you wish to build with libproxy to allow this package to retrieve proxy settings via it's API, remove this switch.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgiognomeproxy.so and libgiognutls.so (GIO Modules installed in `/usr/lib/gio/modules`{.filename})]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgiognomeproxy.so and libgiognutls.so (GIO Modules installed in <code class="filename">/usr/lib/gio/modules</code>)</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](geoclue2.md "GeoClue-2.8.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](geoclue2.md "GeoClue-2.8.1")
 
     GeoClue-2.8.1
 
--   [Next](kdsoap.md "kdsoap-2.3.0"){accesskey="n"}
+-   [Next](kdsoap.md "kdsoap-2.3.0")
 
     kdsoap-2.3.0
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

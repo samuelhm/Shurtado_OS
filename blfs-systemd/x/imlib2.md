@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](gtksourceview5.md "gtksourceview5-5.20.0"){accesskey="p"}
+-   [Prev](gtksourceview5.md "gtksourceview5-5.20.0")
 
     gtksourceview5-5.20.0
 
--   [Next](kcolorpicker.md "kColorPicker-0.3.1"){accesskey="n"}
+-   [Next](kcolorpicker.md "kColorPicker-0.3.1")
 
     kColorPicker-0.3.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#imlib2}imlib2-1.12.6 {#imlib2-1.12.6 .sect1}
+# imlib2-1.12.6 {#imlib2-1.12.6}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to imlib2 {#introduction-to-imlib2 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to imlib2 {#introduction-to-imlib2}
 
-[imlib2]{.application} is a graphics library for fast file loading, saving, rendering and manipulation.
+<span class="application">imlib2</span> is a graphics library for fast file loading, saving, rendering and manipulation.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/enlightenment/imlib2-1.12.6.tar.xz](https://downloads.sourceforge.net/enlightenment/imlib2-1.12.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/enlightenment/imlib2-1.12.6.tar.xz">https://downloads.sourceforge.net/enlightenment/imlib2-1.12.6.tar.xz</a>
 
 -   Download MD5 sum: 8c66b4dabc52225562324be5a994accf
 
@@ -44,105 +44,105 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 20 MB (with docs)
 
 -   Estimated build time: 0.2 SBU (with docs)
-:::
+</div>
 
 ### imlib2 Dependencies
 
 #### Required
 
-[Xorg Libraries](x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Recommended
 
-[giflib-6.1.3](../general/giflib.md "giflib-6.1.3"){.xref} and [librsvg-2.62.3](../general/librsvg.md "librsvg-2.62.3"){.xref}
+<a class="xref" href="../general/giflib.md" title="giflib-6.1.3">giflib-6.1.3</a> and <a class="xref" href="../general/librsvg.md" title="librsvg-2.62.3">librsvg-2.62.3</a>
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} (for API documentation), [highway-1.4.0](../general/highway.md "highway-1.4.0"){.xref}, [libheif-1.23.0](../general/libheif.md "libheif-1.23.0"){.xref}, [libjpeg-turbo-3.1.4.1](../general/libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [libjxl-0.11.2](../general/libjxl.md "libjxl-0.11.2"){.xref}, [libpng-1.6.58](../general/libpng.md "libpng-1.6.58"){.xref}, [libtiff-4.7.1](../general/libtiff.md "libtiff-4.7.1"){.xref}, [libwebp-1.6.0](../general/libwebp.md "libwebp-1.6.0"){.xref}, [libid3tag](https://sourceforge.net/projects/mad){.ulink}, [libspectre](https://www.freedesktop.org/wiki/Software/libspectre){.ulink}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (for API documentation), <a class="xref" href="../general/highway.md" title="highway-1.4.0">highway-1.4.0</a>, <a class="xref" href="../general/libheif.md" title="libheif-1.23.0">libheif-1.23.0</a>, <a class="xref" href="../general/libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="../general/libjxl.md" title="libjxl-0.11.2">libjxl-0.11.2</a>, <a class="xref" href="../general/libpng.md" title="libpng-1.6.58">libpng-1.6.58</a>, <a class="xref" href="../general/libtiff.md" title="libtiff-4.7.1">libtiff-4.7.1</a>, <a class="xref" href="../general/libwebp.md" title="libwebp-1.6.0">libwebp-1.6.0</a>, <a class="ulink" href="https://sourceforge.net/projects/mad">libid3tag</a>, <a class="ulink" href="https://www.freedesktop.org/wiki/Software/libspectre">libspectre</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of imlib2 {#installation-of-imlib2 .sect2}
+<div class="installation" lang="en">
+## Installation of imlib2 {#installation-of-imlib2}
 
-Install [imlib2]{.application} by running the following commands:
+Install <span class="application">imlib2</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you generated the API documentation, install it as the `root`{.systemitem} user:
+If you generated the API documentation, install it as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m755 -d            /usr/share/doc/imlib2-1.12.6/html &&
 install -v -m644    doc/html/* /usr/share/doc/imlib2-1.12.6/html
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-doc-build`{.option}: This switch generates the API documentation. [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} must be installed.
-:::
+<code class="option">--enable-doc-build</code>: This switch generates the API documentation. <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> must be installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [imlib2_bumpmap, imlib2_colorspace, imlib2_conv, imlib2_grab, imlib2_load, imlib2_poly, imlib2_show, imlib2_test, and imlib2_view]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">imlib2_bumpmap, imlib2_colorspace, imlib2_conv, imlib2_grab, imlib2_load, imlib2_poly, imlib2_show, imlib2_test, and imlib2_view</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libImlib2.so and various filters and image loader modules.]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libImlib2.so and various filters and image loader modules.</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/imlib2, /usr/share/doc/imlib2-1.12.6, and /usr/share/imlib2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/imlib2, /usr/share/doc/imlib2-1.12.6, and /usr/share/imlib2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ --------------------------------------------------------------------------
-  []{#imlib2_bumpmap}[[**imlib2_bumpmap**]{.command}]{.term}         is to test the [imlib2]{.application} bumpmap function
-  []{#imlib2_colorspace}[[**imlib2_colorspace**]{.command}]{.term}   is to test the [imlib2]{.application} colorspace function
-  []{#imlib2_conv}[[**imlib2_conv**]{.command}]{.term}               converts images between formats
-  []{#imlib2_grab}[[**imlib2_grab**]{.command}]{.term}               takes screenshots
-  []{#imlib2_load}[[**imlib2_load**]{.command}]{.term}               loads and caches images
-  []{#imlib2_poly}[[**imlib2_poly**]{.command}]{.term}               is to test the [imlib2]{.application} poly function
-  []{#imlib2_show}[[**imlib2_show**]{.command}]{.term}               is an [imlib2]{.application} program test
-  []{#imlib2_test}[[**imlib2_test**]{.command}]{.term}               is an [imlib2]{.application} program test
-  []{#imlib2_view}[[**imlib2_view**]{.command}]{.term}               displays image files
-  []{#libImlib2}[`libImlib2.so`{.filename}]{.term}                   provides the functions for programs to handle various image data formats
+  <a id="imlib2_bumpmap"></a><span class="command"><span class="term"><strong>imlib2_bumpmap</strong></span></span>         is to test the <span class="application">imlib2</span> bumpmap function
+  <a id="imlib2_colorspace"></a><span class="command"><span class="term"><strong>imlib2_colorspace</strong></span></span>   is to test the <span class="application">imlib2</span> colorspace function
+  <a id="imlib2_conv"></a><span class="command"><span class="term"><strong>imlib2_conv</strong></span></span>               converts images between formats
+  <a id="imlib2_grab"></a><span class="command"><span class="term"><strong>imlib2_grab</strong></span></span>               takes screenshots
+  <a id="imlib2_load"></a><span class="command"><span class="term"><strong>imlib2_load</strong></span></span>               loads and caches images
+  <a id="imlib2_poly"></a><span class="command"><span class="term"><strong>imlib2_poly</strong></span></span>               is to test the <span class="application">imlib2</span> poly function
+  <a id="imlib2_show"></a><span class="command"><span class="term"><strong>imlib2_show</strong></span></span>               is an <span class="application">imlib2</span> program test
+  <a id="imlib2_test"></a><span class="command"><span class="term"><strong>imlib2_test</strong></span></span>               is an <span class="application">imlib2</span> program test
+  <a id="imlib2_view"></a><span class="command"><span class="term"><strong>imlib2_view</strong></span></span>               displays image files
+  <a id="libImlib2"></a><span class="term"><code class="filename">libImlib2.so</code></span>                   provides the functions for programs to handle various image data formats
   ------------------------------------------------------------------ --------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gtksourceview5.md "gtksourceview5-5.20.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gtksourceview5.md "gtksourceview5-5.20.0")
 
     gtksourceview5-5.20.0
 
--   [Next](kcolorpicker.md "kColorPicker-0.3.1"){accesskey="n"}
+-   [Next](kcolorpicker.md "kColorPicker-0.3.1")
 
     kColorPicker-0.3.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

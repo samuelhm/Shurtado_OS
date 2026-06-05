@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 7. Shells
 
--   [Prev](dash.md "Dash-0.5.13.4"){accesskey="p"}
+-   [Prev](dash.md "Dash-0.5.13.4")
 
     Dash-0.5.13.4
 
--   [Next](zsh.md "zsh-5.9.1"){accesskey="n"}
+-   [Next](zsh.md "zsh-5.9.1")
 
     zsh-5.9.1
 
--   [Up](shells.md "Chapter 7. Shells"){accesskey="u"}
+-   [Up](shells.md "Chapter 7. Shells")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#tcsh}Tcsh-6.24.16 {#tcsh-6.24.16 .sect1}
+# Tcsh-6.24.16 {#tcsh-6.24.16}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Tcsh {#introduction-to-tcsh .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Tcsh {#introduction-to-tcsh}
 
-The [Tcsh]{.application} package contains [“[an enhanced but completely compatible version of the Berkeley Unix C shell ([**csh**]{.command}).]{.quote}”]{.quote} This is useful as an alternative shell for those who prefer C syntax to that of the [**bash**]{.command} shell, and also because some programs require the C shell in order to perform installation tasks.
+The <span class="application">Tcsh</span> package contains <span class="command">“<span class="quote">an enhanced but completely compatible version of the Berkeley Unix C shell (<span class="quote"><strong>csh</strong></span>).</span>”</span> This is useful as an alternative shell for those who prefer C syntax to that of the <span class="command"><strong>bash</strong></span> shell, and also because some programs require the C shell in order to perform installation tasks.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://astron.com/pub/tcsh/tcsh-6.24.16.tar.gz](https://astron.com/pub/tcsh/tcsh-6.24.16.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://astron.com/pub/tcsh/tcsh-6.24.16.tar.gz">https://astron.com/pub/tcsh/tcsh-6.24.16.tar.gz</a>
 
 -   Download MD5 sum: 448f53f12544abb627c9f078373b8ff5
 
@@ -44,61 +44,61 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Tcsh {#installation-of-tcsh .sect2}
+<div class="installation" lang="en">
+## Installation of Tcsh {#installation-of-tcsh}
 
-Install [Tcsh]{.application} by running the following commands:
+Install <span class="application">Tcsh</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install install.man &&
 
 ln -v -sf tcsh   /bin/csh &&
 ln -v -sf tcsh.1 /usr/share/man/man1/csh.1
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**ln -v -sf tcsh /bin/csh**]{.command}: The FHS states that if there is a [C]{.application} shell installed, there should be a symlink from `/bin/csh`{.filename} to it. This creates that symlink.
-:::
+<span class="command"><strong>ln -v -sf tcsh /bin/csh</strong></span>: The FHS states that if there is a <span class="application">C</span> shell installed, there should be a symlink from <code class="filename">/bin/csh</code> to it. This creates that symlink.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Tcsh {#configuring-tcsh .sect2}
+<div class="configuration" lang="en">
+## Configuring Tcsh {#configuring-tcsh}
 
-::: {.sect3 lang="en"}
-### []{#tcsh-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-There are numerous configuration files for the C shell. Examples of these are `/etc/csh.cshrc`{.filename}, `/etc/csh.login`{.filename}, `/etc/csh.logout`{.filename}, `~/.tcshrc`{.filename}, `~/.cshrc`{.filename}, `~/.history`{.filename}, `~/.cshdirs`{.filename}, `~/.login`{.filename}, and `~/.logout`{.filename}. More information on these files can be found in the [tcsh(1)](https://man.archlinux.org/man/tcsh.1){.ulink} man page.
-:::
+There are numerous configuration files for the C shell. Examples of these are <code class="filename">/etc/csh.cshrc</code>, <code class="filename">/etc/csh.login</code>, <code class="filename">/etc/csh.logout</code>, <code class="filename">~/.tcshrc</code>, <code class="filename">~/.cshrc</code>, <code class="filename">~/.history</code>, <code class="filename">~/.cshdirs</code>, <code class="filename">~/.login</code>, and <code class="filename">~/.logout</code>. More information on these files can be found in the <a class="ulink" href="https://man.archlinux.org/man/tcsh.1">tcsh(1)</a> man page.
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Update `/etc/shells`{.filename} to include the C shell program names (as the `root`{.systemitem} user):
+Update <code class="filename">/etc/shells</code> to include the C shell program names (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 cat >> /etc/shells << "EOF"
 /bin/tcsh
 /bin/csh
 EOF
 ```
 
-The following `~/.cshrc`{.filename} provides two alternative colour prompts and coloured [**ls**]{.command} output. If you prefer a global modification, issue the command as the `root`{.systemitem} user, replacing `~/.cshrc`{.filename} by `/etc/csh.cshrc`{.filename}.
+The following <code class="filename">~/.cshrc</code> provides two alternative colour prompts and coloured <span class="command"><strong>ls</strong></span> output. If you prefer a global modification, issue the command as the <code class="systemitem">root</code> user, replacing <code class="filename">~/.cshrc</code> by <code class="filename">/etc/csh.cshrc</code>.
 
-``` userinput
+```bash
 cat > ~/.cshrc << "EOF"
 # Original at:
 # https://www.cs.umd.edu/~srhuang/teaching/code_snippets/prompt_color.tcsh.md
@@ -119,7 +119,7 @@ set     end="%{\033[0m%}" # This is needed at the end...
 
 # Setting the actual prompt.  Two separate versions for you to try, pick
 # whichever one you like better, and change the colors as you want.
-# Just don't mess with the ${end} guy in either line...  Comment out or
+# Just don't mess with the $ guy in either line...  Comment out or
 # delete the prompt you don't use.
 
 set prompt="${green}%n${blue}@%m ${white}%~ ${green}%%${end} "
@@ -133,48 +133,48 @@ alias ls ls --color=always
 unset red green yellow blue magenta cyan yellow white end
 EOF
 ```
-:::
-:::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [tcsh]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">tcsh</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#tcsh-prog}[[**tcsh**]{.command}]{.term}   is an enhanced but completely compatible version of the Berkeley Unix C shell, [**csh**]{.command}. It is usable as both an interactive shell and a script processor
+  <a id="tcsh-prog"></a><span class="command"><span class="term"><strong>tcsh</strong></span></span>   is an enhanced but completely compatible version of the Berkeley Unix C shell, <span class="command"><strong>csh</strong></span>. It is usable as both an interactive shell and a script processor
   --------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](dash.md "Dash-0.5.13.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](dash.md "Dash-0.5.13.4")
 
     Dash-0.5.13.4
 
--   [Next](zsh.md "zsh-5.9.1"){accesskey="n"}
+-   [Next](zsh.md "zsh-5.9.1")
 
     zsh-5.9.1
 
--   [Up](shells.md "Chapter 7. Shells"){accesskey="u"}
+-   [Up](shells.md "Chapter 7. Shells")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

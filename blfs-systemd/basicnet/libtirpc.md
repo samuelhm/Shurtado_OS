@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libsoup3.md "libsoup-3.6.6"){accesskey="p"}
+-   [Prev](libsoup3.md "libsoup-3.6.6")
 
     libsoup-3.6.6
 
--   [Next](neon.md "neon-0.37.1"){accesskey="n"}
+-   [Next](neon.md "neon-0.37.1")
 
     neon-0.37.1
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libtirpc}libtirpc-1.3.7 {#libtirpc-1.3.7 .sect1}
+# libtirpc-1.3.7 {#libtirpc-1.3.7}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libtirpc {#introduction-to-libtirpc .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libtirpc {#introduction-to-libtirpc}
 
-The [libtirpc]{.application} package contains libraries that support programs that use the Remote Procedure Call (RPC) API. It replaces the RPC, but not the NIS library entries that used to be in glibc.
+The <span class="application">libtirpc</span> package contains libraries that support programs that use the Remote Procedure Call (RPC) API. It replaces the RPC, but not the NIS library entries that used to be in glibc.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/libtirpc/libtirpc-1.3.7.tar.bz2](https://downloads.sourceforge.net/libtirpc/libtirpc-1.3.7.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/libtirpc/libtirpc-1.3.7.tar.bz2">https://downloads.sourceforge.net/libtirpc/libtirpc-1.3.7.tar.bz2</a>
 
 -   Download MD5 sum: 74f97df306b8d6149d3d9898a1d44c6e
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.8 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libtirpc Dependencies
 
 #### Optional
 
-[MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} for GSSAPI support
-:::::
+<a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> for GSSAPI support
+</div>
 
-:::: {.installation lang="en"}
-## Installation of libtirpc {#installation-of-libtirpc .sect2}
+<div class="installation" lang="en">
+## Installation of libtirpc {#installation-of-libtirpc}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If updating this package, you will also need to update any existing version of [rpcbind-1.2.9](rpcbind.md "rpcbind-1.2.9"){.xref}
-:::
+If updating this package, you will also need to update any existing version of <a class="xref" href="rpcbind.md" title="rpcbind-1.2.9">rpcbind-1.2.9</a>
+</div>
 
-Install [libtirpc]{.application} by running the following commands:
+Install <span class="application">libtirpc</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr     \
             --sysconfdir=/etc \
             --disable-static  \
@@ -77,60 +77,60 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-*`--disable-gssapi`*: This switch is needed if no GSSAPI providers are installed, such as [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}. Remove this switch if you have installed [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} and you need to use the GSSAPI support.
-:::
+*`--disable-gssapi`*: This switch is needed if no GSSAPI providers are installed, such as <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>. Remove this switch if you have installed <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> and you need to use the GSSAPI support.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libtirpc.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libtirpc.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/tirpc]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/tirpc</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------------------------------------------
-  []{#libtirpc-lib}[`libtirpc.so`{.filename}]{.term}   provides the Remote Procedure Call (RPC) API functions required by other programs
+  <a id="libtirpc-lib"></a><span class="term"><code class="filename">libtirpc.so</code></span>   provides the Remote Procedure Call (RPC) API functions required by other programs
   ---------------------------------------------------- -----------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsoup3.md "libsoup-3.6.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsoup3.md "libsoup-3.6.6")
 
     libsoup-3.6.6
 
--   [Next](neon.md "neon-0.37.1"){accesskey="n"}
+-   [Next](neon.md "neon-0.37.1")
 
     neon-0.37.1
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

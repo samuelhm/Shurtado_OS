@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](acpid.md "acpid-2.0.34"){accesskey="p"}
+-   [Prev](acpid.md "acpid-2.0.34")
 
     acpid-2.0.34
 
--   [Next](autofs.md "autofs-5.1.9"){accesskey="n"}
+-   [Next](autofs.md "autofs-5.1.9")
 
     autofs-5.1.9
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#at}at-3.2.5 {#at-3.2.5 .sect1}
+# at-3.2.5 {#at-3.2.5}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to at {#introduction-to-at .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to at {#introduction-to-at}
 
-The [at]{.application} package provides delayed job execution and batch processing. It is required for Linux Standards Base (LSB) conformance.
+The <span class="application">at</span> package provides delayed job execution and batch processing. It is required for Linux Standards Base (LSB) conformance.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://anduin.linuxfromscratch.org/BLFS/at/at_3.2.5.orig.tar.gz](https://anduin.linuxfromscratch.org/BLFS/at/at_3.2.5.orig.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/at/at_3.2.5.orig.tar.gz">https://anduin.linuxfromscratch.org/BLFS/at/at_3.2.5.orig.tar.gz</a>
 
 -   Download MD5 sum: ca3657a1c90d7c3d252e0bc17feddc6e
 
@@ -44,32 +44,32 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.9 MB (including tests)
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### at Dependencies
 
 #### Required
 
-An [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref}
+An <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a>
 
 #### Optional
 
-[Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}
-:::::
+<a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of at {#installation-of-at .sect2}
+<div class="installation" lang="en">
+## Installation of at {#installation-of-at}
 
-Before building [at]{.application}, as the `root`{.systemitem} user you should create the group and user `atd`{.systemitem} which will run the [**atd**]{.command} daemon:
+Before building <span class="application">at</span>, as the <code class="systemitem">root</code> user you should create the group and user <code class="systemitem">atd</code> which will run the <span class="command"><strong>atd</strong></span> daemon:
 
-``` root
+```bash
 groupadd -g 17 atd                                                  &&
 useradd -d /dev/null -c "atd daemon" -g atd -s /bin/false -u 17 atd
 ```
 
-Install [at]{.application} with the following commands:
+Install <span class="application">at</span> with the following commands:
 
-``` userinput
+```bash
 ./configure --with-daemon_username=atd        \
             --with-daemon_groupname=atd       \
             SENDMAIL=/usr/sbin/sendmail       \
@@ -79,33 +79,33 @@ Install [at]{.application} with the following commands:
 make -j1
 ```
 
-To test the results, issue: [**make test**]{.command}.
+To test the results, issue: <span class="command"><strong>make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install docdir=/usr/share/doc/at-3.2.5 \
              atdocdir=/usr/share/doc/at-3.2.5
 ```
-:::
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring at {#configuring-at .sect2}
+<div class="configuration" lang="en">
+## Configuring at {#configuring-at}
 
-::: {.sect3 lang="en"}
-### []{#at-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/at.allow`{.filename} and `/etc/at.deny`{.filename} determines who can submit jobs via at or batch.
-:::
+<code class="filename">/etc/at.allow</code> and <code class="filename">/etc/at.deny</code> determines who can submit jobs via at or batch.
+</div>
 
-::: {.sect3 lang="en"}
-### Linux PAM Configuration {#linux-pam-configuration .sect3}
+<div class="sect3" lang="en">
+### Linux PAM Configuration {#linux-pam-configuration}
 
-If [At]{.application} has been built with [Linux PAM]{.application} support, you need to create a [PAM]{.application} configuration file, to get it working correctly with BLFS.
+If <span class="application">At</span> has been built with <span class="application">Linux PAM</span> support, you need to create a <span class="application">PAM</span> configuration file, to get it working correctly with BLFS.
 
-Issue the following commands as the `root`{.systemitem} user to create the configuration file for [Linux PAM]{.application}:
+Issue the following commands as the <code class="systemitem">root</code> user to create the configuration file for <span class="application">Linux PAM</span>:
 
-``` root
+```bash
 cat > /etc/pam.d/atd << "EOF"
 # Begin /etc/pam.d/atd
 
@@ -117,63 +117,63 @@ session  required pam_unix.so
 # End /etc/pam.d/atd
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#at-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-To start the [**atd**]{.command} daemon at boot, enable the previously installed systemd unit by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>atd</strong></span> daemon at boot, enable the previously installed systemd unit by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable atd
 ```
-:::
-::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [at, atd, atq (symlink), atrm (symlink), atrun, and batch]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">at, atd, atq (symlink), atrm (symlink), atrun, and batch</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/at-3.2.5]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/at-3.2.5</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------ -------------------------------------------------------------------
-  []{#at-prog}[[**at**]{.command}]{.term}    queues, examines or deletes jobs for later execution
-  []{#atd}[[**atd**]{.command}]{.term}       is the daemon that runs jobs queued for later execution
-  []{#atq}[[**atq**]{.command}]{.term}       lists the user's pending jobs, or all jobs, if superuser
-  []{#atrm}[[**atrm**]{.command}]{.term}     deletes jobs, identified by their job number
-  []{#atrun}[[**atrun**]{.command}]{.term}   runs jobs queued for later execution
-  []{#batch}[[**batch**]{.command}]{.term}   is a script that executes commands when system load levels permit
+  <a id="at-prog"></a><span class="command"><span class="term"><strong>at</strong></span></span>    queues, examines or deletes jobs for later execution
+  <a id="atd"></a><span class="command"><span class="term"><strong>atd</strong></span></span>       is the daemon that runs jobs queued for later execution
+  <a id="atq"></a><span class="command"><span class="term"><strong>atq</strong></span></span>       lists the user's pending jobs, or all jobs, if superuser
+  <a id="atrm"></a><span class="command"><span class="term"><strong>atrm</strong></span></span>     deletes jobs, identified by their job number
+  <a id="atrun"></a><span class="command"><span class="term"><strong>atrun</strong></span></span>   runs jobs queued for later execution
+  <a id="batch"></a><span class="command"><span class="term"><strong>batch</strong></span></span>   is a script that executes commands when system load levels permit
   ------------------------------------------ -------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](acpid.md "acpid-2.0.34"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](acpid.md "acpid-2.0.34")
 
     acpid-2.0.34
 
--   [Next](autofs.md "autofs-5.1.9"){accesskey="n"}
+-   [Next](autofs.md "autofs-5.1.9")
 
     autofs-5.1.9
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

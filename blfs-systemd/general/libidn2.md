@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libidn.md "libidn-1.43"){accesskey="p"}
+-   [Prev](libidn.md "libidn-1.43")
 
     libidn-1.43
 
--   [Next](libksba.md "libksba-1.8.0"){accesskey="n"}
+-   [Next](libksba.md "libksba-1.8.0")
 
     libksba-1.8.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libidn2}libidn2-2.3.8 {#libidn2-2.3.8 .sect1}
+# libidn2-2.3.8 {#libidn2-2.3.8}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libidn2 {#introduction-to-libidn2 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libidn2 {#introduction-to-libidn2}
 
-[libidn2]{.application} is a package designed for internationalized string handling based on standards from the Internet Engineering Task Force (IETF)'s IDN working group, designed for internationalized domain names.
+<span class="application">libidn2</span> is a package designed for internationalized string handling based on standards from the Internet Engineering Task Force (IETF)'s IDN working group, designed for internationalized domain names.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz](https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz">https://ftpmirror.gnu.org/libidn/libidn2-2.3.8.tar.gz</a>
 
 -   Download MD5 sum: a8e113e040d57a523684e141970eea7a
 
@@ -44,86 +44,86 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 21 MB (add 3 MB for tests)
 
 -   Estimated build time: 0.1 SBU (add 0.6 SBU for tests)
-:::
+</div>
 
 ### libidn2 Dependencies
 
 #### Recommended
 
-[libunistring-1.4.2](libunistring.md "libunistring-1.4.2"){.xref}
+<a class="xref" href="libunistring.md" title="libunistring-1.4.2">libunistring-1.4.2</a>
 
 #### Optional
 
-[git-2.54.0](git.md "Git-2.54.0"){.xref} and [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="git.md" title="Git-2.54.0">git-2.54.0</a> and <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libidn2 {#installation-of-libidn2 .sect2}
+<div class="installation" lang="en">
+## Installation of libidn2 {#installation-of-libidn2}
 
-Install [libidn2]{.application} by running the following commands:
+Install <span class="application">libidn2</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-gtk-doc`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
-:::
+<code class="option">--enable-gtk-doc</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [idn2]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">idn2</span>
+</div>
 
-::: seg
-**Installed Library:** [libidn2.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libidn2.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/gtk-doc/html/libidn2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/gtk-doc/html/libidn2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- -----------------------------------------------------------------------------------------
-  []{#idn2}[[**idn2**]{.command}]{.term}             is a command line interface to the internationalized domain library
-  []{#libidn2-lib}[`libidn2.so`{.filename}]{.term}   contains a generic Stringprep implementation used for internationalized string handling
+  <a id="idn2"></a><span class="command"><span class="term"><strong>idn2</strong></span></span>             is a command line interface to the internationalized domain library
+  <a id="libidn2-lib"></a><span class="term"><code class="filename">libidn2.so</code></span>   contains a generic Stringprep implementation used for internationalized string handling
   -------------------------------------------------- -----------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libidn.md "libidn-1.43"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libidn.md "libidn-1.43")
 
     libidn-1.43
 
--   [Next](libksba.md "libksba-1.8.0"){accesskey="n"}
+-   [Next](libksba.md "libksba-1.8.0")
 
     libksba-1.8.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

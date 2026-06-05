@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 10. Graphics and Font Libraries
 
--   [Prev](aalib.md "AAlib-1.4rc5"){accesskey="p"}
+-   [Prev](aalib.md "AAlib-1.4rc5")
 
     AAlib-1.4rc5
 
--   [Next](exiv2.md "Exiv2-0.28.8"){accesskey="n"}
+-   [Next](exiv2.md "Exiv2-0.28.8")
 
     Exiv2-0.28.8
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#babl}babl-0.1.126 {#babl-0.1.126 .sect1}
+# babl-0.1.126 {#babl-0.1.126}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Babl {#introduction-to-babl .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Babl {#introduction-to-babl}
 
-The [Babl]{.application} package is a dynamic, any to any, pixel format translation library.
+The <span class="application">Babl</span> package is a dynamic, any to any, pixel format translation library.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gimp.org/pub/babl/0.1/babl-0.1.126.tar.xz](https://download.gimp.org/pub/babl/0.1/babl-0.1.126.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gimp.org/pub/babl/0.1/babl-0.1.126.tar.xz">https://download.gimp.org/pub/babl/0.1/babl-0.1.126.tar.xz</a>
 
 -   Download MD5 sum: bfe3e2aecbbd419494723495aec586de
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 17 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### Babl Dependencies
 
 #### Recommended
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [librsvg-2.62.3](librsvg.md "librsvg-2.62.3"){.xref}, and [Little CMS-2.19.1](lcms2.md "Little CMS-2.19.1"){.xref}
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="librsvg.md" title="librsvg-2.62.3">librsvg-2.62.3</a>, and <a class="xref" href="lcms2.md" title="Little CMS-2.19.1">Little CMS-2.19.1</a>
 
 #### Optional
 
-[w3m](https://w3m.sourceforge.net/){.ulink}
-:::::
+<a class="ulink" href="https://w3m.sourceforge.net/">w3m</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Babl {#installation-of-babl .sect2}
+<div class="installation" lang="en">
+## Installation of Babl {#installation-of-babl}
 
-Install [Babl]{.application} by running the following commands:
+Install <span class="application">Babl</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir bld &&
 cd    bld &&
 
@@ -70,64 +70,64 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install &&
 
 install -v -m755 -d                         /usr/share/gtk-doc/html/babl/graphics &&
 install -v -m644 docs/*.{css,html}          /usr/share/gtk-doc/html/babl          &&
 install -v -m644 docs/graphics/*.{html,svg} /usr/share/gtk-doc/html/babl/graphics
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**install -v -m755 -d /usr/share/gtk-doc/html/babl/graphics**]{.command}: This and the subsequent commands install the library html documentation under `/usr/share/gtk-doc/html`{.filename} where other gtk packages put the programmer-oriented documentation.
-:::
+<span class="command"><strong>install -v -m755 -d /usr/share/gtk-doc/html/babl/graphics</strong></span>: This and the subsequent commands install the library html documentation under <code class="filename">/usr/share/gtk-doc/html</code> where other gtk packages put the programmer-oriented documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libbabl-0.1.so and libraries in /usr/lib/babl-0.1]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libbabl-0.1.so and libraries in /usr/lib/babl-0.1</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{include,lib}/babl-0.1 and /usr/share/gtk-doc/html/babl]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{include,lib}/babl-0.1 and /usr/share/gtk-doc/html/babl</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- --------------------------------------------------------------------
-  []{#libbabl}[`libbabl-0.1.so`{.filename}]{.term}   contains functions to access BablFishes to convert between formats
+  <a id="libbabl"></a><span class="term"><code class="filename">libbabl-0.1.so</code></span>   contains functions to access BablFishes to convert between formats
   -------------------------------------------------- --------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](aalib.md "AAlib-1.4rc5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](aalib.md "AAlib-1.4rc5")
 
     AAlib-1.4rc5
 
--   [Next](exiv2.md "Exiv2-0.28.8"){accesskey="n"}
+-   [Next](exiv2.md "Exiv2-0.28.8")
 
     Exiv2-0.28.8
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

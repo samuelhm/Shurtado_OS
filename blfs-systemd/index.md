@@ -1,18 +1,18 @@
-:::::::::::::::: book
-::::::::::::: titlepage
+<div class="book">
+<div class="titlepage">
 
 
-# []{#idm140011201582288}Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) {#beyond-linux-from-scratch-systemd-edition .title}
-
-
-
-## Version r13.0-790 {#version-r13.0-790 .subtitle}
+# Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) {#beyond-linux-from-scratch-systemd-edition}
 
 
 
-::: authorgroup
-### The BLFS Development Team {#the-blfs-development-team .corpauthor}
-:::
+## Version r13.0-790 {#version-r13.0-790}
+
+
+
+<div class="authorgroup">
+### The BLFS Development Team {#the-blfs-development-team}
+</div>
 
 
 
@@ -63,24 +63,24 @@ Published 2026-06-03
 
 
 
-::: abstract
+<div class="abstract">
 **Abstract**
 
 This book follows on from the Linux From Scratch book. It introduces and guides the reader through additions to the system including networking, graphical interfaces, sound support, and printer and scanner support.
-:::
+</div>
 
 
 
 ------------------------------------------------------------------------
-:::::::::::::
+</div>
 
-::: dedication
+<div class="dedication">
 ## Dedication
 
 This book is dedicated to the LFS community
-:::
+</div>
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   #### [Preface](preface/preface.md)
@@ -419,7 +419,7 @@ This book is dedicated to the LFS community
         -   [Which-2.25 and Alternatives](general/which.md)
         -   [xdotool-4.20260303.1](general/xdotool.md)
         -   [Zip-3.0](general/zip.md)
-        -   [Hardware Utilities]{.dummy}
+        -   <span class="dummy">Hardware Utilities</span>
         -   [Hdparm-9.65](general/hdparm.md)
         -   [lm-sensors-3-6-2](general/lm-sensors.md)
         -   [pciutils-3.15.0](general/pciutils.md)
@@ -468,7 +468,7 @@ This book is dedicated to the LFS community
         -   [Vala-0.56.19](general/vala.md)
         -   [Valgrind-3.27.1](general/valgrind.md)
         -   [yasm-1.3.0](general/yasm.md)
-        -   [Java]{.dummy}
+        -   <span class="dummy">Java</span>
         -   [Java-21.0.10](general/java.md)
         -   [OpenJDK-21.0.10](general/openjdk.md)
         -   [Configuring the Java environment](general/ojdk-conf.md)
@@ -729,7 +729,7 @@ This book is dedicated to the LFS community
 
     -   #### [33. GNOME Libraries and Desktop](gnome/core.md)
 
-        -   [Libraries]{.dummy}
+        -   <span class="dummy">Libraries</span>
         -   [Gcr-3.41.2](gnome/gcr.md)
         -   [Gcr-4.4.0.1](gnome/gcr4.md)
         -   [gsettings-desktop-schemas-50.1](gnome/gsettings-desktop-schemas.md)
@@ -755,7 +755,7 @@ This book is dedicated to the LFS community
         -   [localsearch-3.11.1](gnome/localsearch.md)
         -   [GSound-1.0.3](gnome/gsound.md)
         -   [xdg-desktop-portal-gnome-50.0](gnome/xdg-desktop-portal-gnome.md)
-        -   [GNOME Desktop Components]{.dummy}
+        -   <span class="dummy">GNOME Desktop Components</span>
         -   [DConf-0.49.0 / DConf-Editor-49.0](gnome/dconf.md)
         -   [gnome-backgrounds-50.0](gnome/gnome-backgrounds.md)
         -   [Gvfs-1.60.0](gnome/gvfs.md)
@@ -774,7 +774,7 @@ This book is dedicated to the LFS community
         -   [gnome-user-docs-50.2](gnome/gnome-user-docs.md)
         -   [Yelp-49.0](gnome/yelp.md)
 
-    -   #### [34. [GNOME Applications]{.phrase}](gnome/applications.md)
+    -   #### <span class="phrase">34. [GNOME Applications</span>](gnome/applications.md)
 
         -   [Baobab-50.0](gnome/baobab.md)
         -   [Brasero-3.12.3](gnome/brasero.md)
@@ -835,7 +835,7 @@ This book is dedicated to the LFS community
     -   #### [37. LXQt Desktop](lxqt/lxqt-desktop.md)
 
         -   [LXQt Desktop Pre-Install Instructions](lxqt/pre-install.md)
-        -   [KF6, Plasma, and Misc Dependencies]{.dummy}
+        -   <span class="dummy">KF6, Plasma, and Misc Dependencies</span>
         -   [kwindowsystem-6.26.0 for lxqt](lxqt/lxqt-kwindowsystem.md)
         -   [kconfig-6.26.0 for lxqt](lxqt/lxqt-kconfig.md)
         -   [solid-6.26.0 for lxqt](lxqt/lxqt-solid.md)
@@ -844,7 +844,7 @@ This book is dedicated to the LFS community
         -   [libkscreen-6.6.5 for lxqt](lxqt/lxqt-libkscreen.md)
         -   [layer-shell-qt-6.6.5 for lxqt](lxqt/lxqt-layer-shell-qt.md)
         -   [muparser-2.3.5](lxqt/muparser.md)
-        -   [LXQt Desktop Components]{.dummy}
+        -   <span class="dummy">LXQt Desktop Components</span>
         -   [lxqt-build-tools-2.4.0](lxqt/lxqt-build-tools.md)
         -   [libdbusmenu-lxqt-0.4.0](lxqt/libdbusmenu-lxqt.md)
         -   [libqtxdg-4.4.0](lxqt/libqtxdg.md)
@@ -1073,15 +1073,15 @@ This book is dedicated to the LFS community
 -   ### [Glossary](appendices/glossary.md)
 
 -   ### [Index](longindex.md)
-:::
-::::::::::::::::
+</div>
+</div>
 
-::: navfooter
--   [Next](preface/preface.md "Preface"){accesskey="n"}
+<div class="navfooter">
+-   [Next](preface/preface.md "Preface")
 
     Preface
 
 -   .
 
 -   .
-:::
+</div>

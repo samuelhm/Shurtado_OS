@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](loupe.md "Loupe-49.2"){accesskey="p"}
+-   [Prev](loupe.md "Loupe-49.2")
 
     Loupe-49.2
 
--   [Next](showtime.md "Showtime-49.1"){accesskey="n"}
+-   [Next](showtime.md "Showtime-49.1")
 
     Showtime-49.1
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#seahorse}Seahorse-47.0.1 {#seahorse-47.0.1 .sect1}
+# Seahorse-47.0.1 {#seahorse-47.0.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Seahorse {#introduction-to-seahorse .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Seahorse {#introduction-to-seahorse}
 
-[Seahorse]{.application} is a graphical interface for managing and using encryption keys. Currently it supports PGP keys (using GPG/GPGME) and SSH keys.
+<span class="application">Seahorse</span> is a graphical interface for managing and using encryption keys. Currently it supports PGP keys (using GPG/GPGME) and SSH keys.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/seahorse/47/seahorse-47.0.1.tar.xz](https://download.gnome.org/sources/seahorse/47/seahorse-47.0.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/seahorse/47/seahorse-47.0.1.tar.xz">https://download.gnome.org/sources/seahorse/47/seahorse-47.0.1.tar.xz</a>
 
 -   Download MD5 sum: 18cd36abd8d2e25c236934be64c8b916
 
@@ -44,39 +44,39 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 44 MB
 
 -   Estimated build time: 0.1 SBU (Using parallelism=4)
-:::
+</div>
 
 ### Seahorse Dependencies
 
 #### Required
 
-[Gcr-3.41.2](gcr.md "Gcr-3.41.2"){.xref}, [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref}, [gpgme-2.1.0](../postlfs/gpgme.md "gpgme-2.1.0"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libhandy-1.8.3](../x/libhandy1.md "libhandy-1.8.3"){.xref}, [libpwquality-1.4.5](../postlfs/libpwquality.md "libpwquality-1.4.5"){.xref}, [libsecret-0.21.7](libsecret.md "libsecret-0.21.7"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="gcr.md" title="Gcr-3.41.2">Gcr-3.41.2</a>, <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a>, <a class="xref" href="../postlfs/gpgme.md" title="gpgme-2.1.0">gpgme-2.1.0</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../x/libhandy1.md" title="libhandy-1.8.3">libhandy-1.8.3</a>, <a class="xref" href="../postlfs/libpwquality.md" title="libpwquality-1.4.5">libpwquality-1.4.5</a>, <a class="xref" href="libsecret.md" title="libsecret-0.21.7">libsecret-0.21.7</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Recommended
 
-[libsoup-3.6.6](../basicnet/libsoup3.md "libsoup-3.6.6"){.xref} and [OpenSSH-10.3p1](../postlfs/openssh.md "OpenSSH-10.3p1"){.xref} (for managing SSH keys)
+<a class="xref" href="../basicnet/libsoup3.md" title="libsoup-3.6.6">libsoup-3.6.6</a> and <a class="xref" href="../postlfs/openssh.md" title="OpenSSH-10.3p1">OpenSSH-10.3p1</a> (for managing SSH keys)
 
 #### Optional
 
-[Avahi-0.8](../basicnet/avahi.md "Avahi-0.8"){.xref}
+<a class="xref" href="../basicnet/avahi.md" title="Avahi-0.8">Avahi-0.8</a>
 
 #### Runtime Dependency
 
-[gnome-keyring-50.0](gnome-keyring.md "gnome-keyring-50.0"){.xref}
-:::::
+<a class="xref" href="gnome-keyring.md" title="gnome-keyring-50.0">gnome-keyring-50.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Seahorse {#installation-of-seahorse .sect2}
+<div class="installation" lang="en">
+## Installation of Seahorse {#installation-of-seahorse}
 
 First, fix a build failure that occurs with gpgme-2.x:
 
-``` userinput
+```bash
 sed -i "/GPGME_EVENT_NEXT_TRUSTITEM/d" pgp/seahorse-gpgme.c
 ```
 
-Install [Seahorse]{.application} by running the following commands:
+Install <span class="application">Seahorse</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i -r 's:"(/apps):"/org/gnome\1:' data/*.xml &&
 
 mkdir build &&
@@ -86,62 +86,62 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-[**sed ... data/\*.xml**]{.command}: This command fixes some deprecated entries in the schema templates.
-:::
+<span class="command"><strong>sed ... data/\*.xml</strong></span>: This command fixes some deprecated entries in the schema templates.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [seahorse]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">seahorse</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{libexec,share,share/help/\*}/seahorse]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{libexec,share,share/help/\*}/seahorse</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- -------------------------------------------------------------------
-  []{#seahorse-prog}[[**seahorse**]{.command}]{.term}   is the graphical interface for managing and using encryption keys
+  <a id="seahorse-prog"></a><span class="command"><span class="term"><strong>seahorse</strong></span></span>   is the graphical interface for managing and using encryption keys
   ----------------------------------------------------- -------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](loupe.md "Loupe-49.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](loupe.md "Loupe-49.2")
 
     Loupe-49.2
 
--   [Next](showtime.md "Showtime-49.1"){accesskey="n"}
+-   [Next](showtime.md "Showtime-49.1")
 
     Showtime-49.1
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

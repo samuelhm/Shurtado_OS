@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 22. Databases
 
--   [Prev](upgradedb.md "Important Notes About Upgrading Database Server Software"){accesskey="p"}
+-   [Prev](upgradedb.md "Important Notes About Upgrading Database Server Software")
 
     Important Notes About Upgrading Database Server Software
 
--   [Next](mariadb.md "MariaDB-12.3.2"){accesskey="n"}
+-   [Next](mariadb.md "MariaDB-12.3.2")
 
     MariaDB-12.3.2
 
--   [Up](databases.md "Chapter 22. Databases"){accesskey="u"}
+-   [Up](databases.md "Chapter 22. Databases")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lmdb}lmdb-0.9.35 {#lmdb-0.9.35 .sect1}
+# lmdb-0.9.35 {#lmdb-0.9.35}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lmdb {#introduction-to-lmdb .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lmdb {#introduction-to-lmdb}
 
-The [lmdb]{.application} package is a fast, compact, key-value embedded data store. It uses memory-mapped files, so it has the read performance of a pure in-memory database while still offering the persistence of standard disk-based databases, and is only limited to the size of the virtual address space
+The <span class="application">lmdb</span> package is a fast, compact, key-value embedded data store. It uses memory-mapped files, so it has the read performance of a pure in-memory database while still offering the persistence of standard disk-based databases, and is only limited to the size of the virtual address space
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.35/LMDB_0.9.35.tar.bz2](https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.35/LMDB_0.9.35.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.35/LMDB_0.9.35.tar.bz2">https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.35/LMDB_0.9.35.tar.bz2</a>
 
 -   Download MD5 sum: 2b09899a3ea43dbc9833c1325a492bbd
 
@@ -44,15 +44,15 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.6 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lmdb {#installation-of-lmdb .sect2}
+<div class="installation" lang="en">
+## Installation of lmdb {#installation-of-lmdb}
 
-Install [lmdb]{.application} by running the following commands:
+Install <span class="application">lmdb</span> by running the following commands:
 
-``` userinput
+```bash
 cd libraries/liblmdb &&
 make                 &&
 sed -i 's| liblmdb.a||' Makefile
@@ -60,62 +60,62 @@ sed -i 's| liblmdb.a||' Makefile
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make prefix=/usr install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed ... liblmdb.a ... Makefile**]{.command}: The package executables use a static library so it must be created. This command suppresses installation of the static library.
-:::
+<span class="command"><strong>sed ... liblmdb.a ... Makefile</strong></span>: The package executables use a static library so it must be created. This command suppresses installation of the static library.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [mdb_copy, mdb_dump, mdb_load, and mdb_stat]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">mdb_copy, mdb_dump, mdb_load, and mdb_stat</span>
+</div>
 
-::: seg
-**Installed Library:** [liblmdb.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">liblmdb.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------
-  []{#mdb_copy}[[**mdb_copy**]{.command}]{.term}   copies an LMDB environment from one database to another, including the option to compact the database
-  []{#mdb_dump}[[**mdb_dump**]{.command}]{.term}   reads a database and writes its contents to standard output using a portable flat-text format, which can be interpreted by mdb_load
-  []{#mdb_load}[[**mdb_load**]{.command}]{.term}   imports a database from standard input or from a file
-  []{#mdb_stat}[[**mdb_stat**]{.command}]{.term}   displays the status of a LMDB environment
-  []{#liblmdb}[`liblmdb.so`{.filename}]{.term}     provides functions for accessing a LMDB database
+  <a id="mdb_copy"></a><span class="command"><span class="term"><strong>mdb_copy</strong></span></span>   copies an LMDB environment from one database to another, including the option to compact the database
+  <a id="mdb_dump"></a><span class="command"><span class="term"><strong>mdb_dump</strong></span></span>   reads a database and writes its contents to standard output using a portable flat-text format, which can be interpreted by mdb_load
+  <a id="mdb_load"></a><span class="command"><span class="term"><strong>mdb_load</strong></span></span>   imports a database from standard input or from a file
+  <a id="mdb_stat"></a><span class="command"><span class="term"><strong>mdb_stat</strong></span></span>   displays the status of a LMDB environment
+  <a id="liblmdb"></a><span class="term"><code class="filename">liblmdb.so</code></span>     provides functions for accessing a LMDB database
   ------------------------------------------------ -------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](upgradedb.md "Important Notes About Upgrading Database Server Software"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](upgradedb.md "Important Notes About Upgrading Database Server Software")
 
     Important Notes About Upgrading Database Server Software
 
--   [Next](mariadb.md "MariaDB-12.3.2"){accesskey="n"}
+-   [Next](mariadb.md "MariaDB-12.3.2")
 
     MariaDB-12.3.2
 
--   [Up](databases.md "Chapter 22. Databases"){accesskey="u"}
+-   [Up](databases.md "Chapter 22. Databases")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 15. Networking Programs
 
--   [Prev](wireless-kernel.md "Configuring the Linux Kernel for Wireless"){accesskey="p"}
+-   [Prev](wireless-kernel.md "Configuring the Linux Kernel for Wireless")
 
     Configuring the Linux Kernel for Wireless
 
--   [Next](wireless_tools.md "Wireless Tools-29"){accesskey="n"}
+-   [Next](wireless_tools.md "Wireless Tools-29")
 
     Wireless Tools-29
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#iw}iw-6.17 {#iw-6.17 .sect1}
+# iw-6.17 {#iw-6.17}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to iw {#introduction-to-iw .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to iw {#introduction-to-iw}
 
-[iw]{.application} is a new nl80211 based CLI configuration utility for wireless devices. It supports all new drivers that have been added to the kernel recently. The old tool [iwconfig]{.application}, which uses Wireless Extensions interface, is deprecated and it's strongly recommended to switch to [iw]{.application} and nl80211.
+<span class="application">iw</span> is a new nl80211 based CLI configuration utility for wireless devices. It supports all new drivers that have been added to the kernel recently. The old tool <span class="application">iwconfig</span>, which uses Wireless Extensions interface, is deprecated and it's strongly recommended to switch to <span class="application">iw</span> and nl80211.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.kernel.org/pub/software/network/iw/iw-6.17.tar.xz](https://www.kernel.org/pub/software/network/iw/iw-6.17.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.kernel.org/pub/software/network/iw/iw-6.17.tar.xz">https://www.kernel.org/pub/software/network/iw/iw-6.17.tar.xz</a>
 
 -   Download MD5 sum: 7323e43843f30068ffb6079e15e8e11a
 
@@ -44,89 +44,89 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.0 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### iw Dependencies
 
 #### Required
 
-[libnl-3.12.0](libnl.md "libnl-3.12.0"){.xref}
+<a class="xref" href="libnl.md" title="libnl-3.12.0">libnl-3.12.0</a>
 
 #### Required (Runtime)
 
-[Configuring the Linux Kernel for Wireless](wireless-kernel.md "Configuring the Linux Kernel for Wireless"){.xref}
-:::::
+<a class="xref" href="wireless-kernel.md" title="Configuring the Linux Kernel for Wireless">Configuring the Linux Kernel for Wireless</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#iw-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-To use [iw]{.application}, the kernel must have the appropriate drivers and other support available. Read [Configuring the Linux Kernel for Wireless](wireless-kernel.md "Configuring the Linux Kernel for Wireless"){.xref} for details.
-:::
+To use <span class="application">iw</span>, the kernel must have the appropriate drivers and other support available. Read <a class="xref" href="wireless-kernel.md" title="Configuring the Linux Kernel for Wireless">Configuring the Linux Kernel for Wireless</a> for details.
+</div>
 
-::: {.installation lang="en"}
-## Installation of iw {#installation-of-iw .sect2}
+<div class="installation" lang="en">
+## Installation of iw {#installation-of-iw}
 
-To install [iw]{.application}, use the following commands:
+To install <span class="application">iw</span>, use the following commands:
 
-``` userinput
+```bash
 sed -i "/INSTALL.*gz/s/.gz//" Makefile &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed ...**]{.command}: Install uncompressed manual pages in accordance with other man pages.
-:::
+<span class="command"><strong>sed ...</strong></span>: Install uncompressed manual pages in accordance with other man pages.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [iw]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">iw</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------- --------------------------------------------------------------
-  []{#iw-prog}[[**iw**]{.command}]{.term}   shows / manipulates wireless devices and their configuration
+  <a id="iw-prog"></a><span class="command"><span class="term"><strong>iw</strong></span></span>   shows / manipulates wireless devices and their configuration
   ----------------------------------------- --------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](wireless-kernel.md "Configuring the Linux Kernel for Wireless"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](wireless-kernel.md "Configuring the Linux Kernel for Wireless")
 
     Configuring the Linux Kernel for Wireless
 
--   [Next](wireless_tools.md "Wireless Tools-29"){accesskey="n"}
+-   [Next](wireless_tools.md "Wireless Tools-29")
 
     Wireless Tools-29
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

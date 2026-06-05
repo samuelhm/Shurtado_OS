@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libidn2.md "libidn2-2.3.8"){accesskey="p"}
+-   [Prev](libidn2.md "libidn2-2.3.8")
 
     libidn2-2.3.8
 
--   [Next](liblinear.md "liblinear-250"){accesskey="n"}
+-   [Next](liblinear.md "liblinear-250")
 
     liblinear-250
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libksba}libksba-1.8.0 {#libksba-1.8.0 .sect1}
+# libksba-1.8.0 {#libksba-1.8.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Libksba {#introduction-to-libksba .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Libksba {#introduction-to-libksba}
 
-The [Libksba]{.application} package contains a library used to make X.509 certificates as well as making the CMS (Cryptographic Message Syntax) easily accessible by other applications. Both specifications are building blocks of S/MIME and TLS. The library does not rely on another cryptographic library but provides hooks for easy integration with [Libgcrypt]{.application}.
+The <span class="application">Libksba</span> package contains a library used to make X.509 certificates as well as making the CMS (Cryptographic Message Syntax) easily accessible by other applications. Both specifications are building blocks of S/MIME and TLS. The library does not rely on another cryptographic library but provides hooks for easy integration with <span class="application">Libgcrypt</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.gnupg.org/ftp/gcrypt/libksba/libksba-1.8.0.tar.bz2](https://www.gnupg.org/ftp/gcrypt/libksba/libksba-1.8.0.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.gnupg.org/ftp/gcrypt/libksba/libksba-1.8.0.tar.bz2">https://www.gnupg.org/ftp/gcrypt/libksba/libksba-1.8.0.tar.bz2</a>
 
 -   Download MD5 sum: 182951961170c12f6569454717a1383a
 
@@ -44,77 +44,77 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### Libksba Dependencies
 
 #### Required
 
-[libgpg-error-1.61](libgpg-error.md "libgpg-error-1.61"){.xref}
+<a class="xref" href="libgpg-error.md" title="libgpg-error-1.61">libgpg-error-1.61</a>
 
 #### Optional
 
-[Valgrind-3.27.1](valgrind.md "Valgrind-3.27.1"){.xref}
-:::::
+<a class="xref" href="valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Libksba {#installation-of-libksba .sect2}
+<div class="installation" lang="en">
+## Installation of Libksba {#installation-of-libksba}
 
-Install [Libksba]{.application} by running the following commands:
+Install <span class="application">Libksba</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libksba.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libksba.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ------------------------------------------
-  []{#libksba-lib}[`libksba.so`{.filename}]{.term}   contains the cryptographic API functions
+  <a id="libksba-lib"></a><span class="term"><code class="filename">libksba.so</code></span>   contains the cryptographic API functions
   -------------------------------------------------- ------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libidn2.md "libidn2-2.3.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libidn2.md "libidn2-2.3.8")
 
     libidn2-2.3.8
 
--   [Next](liblinear.md "liblinear-250"){accesskey="n"}
+-   [Next](liblinear.md "liblinear-250")
 
     liblinear-250
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

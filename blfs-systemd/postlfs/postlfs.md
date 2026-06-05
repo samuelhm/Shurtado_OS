@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../introduction/beyond.md "Going Beyond BLFS"){accesskey="p"}
+-   [Prev](../introduction/beyond.md "Going Beyond BLFS")
 
     Going Beyond BLFS
 
--   [Next](config.md "After LFS Configuration Issues"){accesskey="n"}
+-   [Next](config.md "After LFS Configuration Issues")
 
     After LFS Configuration Issues
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#postlfs}Post LFS Configuration and Extra Software {#post-lfs-configuration-and-extra-software .part}
+# Post LFS Configuration and Extra Software {#post-lfs-configuration-and-extra-software}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [3. After LFS Configuration Issues](config.md)
@@ -102,19 +102,19 @@
 -   #### [8. Virtualization](virtualization.md)
 
     -   [qemu-11.0.1](qemu.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../introduction/beyond.md "Going Beyond BLFS"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../introduction/beyond.md "Going Beyond BLFS")
 
     Going Beyond BLFS
 
--   [Next](config.md "After LFS Configuration Issues"){accesskey="n"}
+-   [Next](config.md "After LFS Configuration Issues")
 
     After LFS Configuration Issues
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

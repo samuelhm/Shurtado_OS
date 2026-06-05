@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 43. Audio Utilities
 
--   [Prev](pavucontrol.md "pavucontrol-6.2"){accesskey="p"}
+-   [Prev](pavucontrol.md "pavucontrol-6.2")
 
     pavucontrol-6.2
 
--   [Next](vorbistools.md "vorbis-tools-1.4.3"){accesskey="n"}
+-   [Next](vorbistools.md "vorbis-tools-1.4.3")
 
     vorbis-tools-1.4.3
 
--   [Up](audioutils.md "Chapter 43. Audio Utilities"){accesskey="u"}
+-   [Up](audioutils.md "Chapter 43. Audio Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pnmixer}pnmixer-0.7.2 {#pnmixer-0.7.2 .sect1}
+# pnmixer-0.7.2 {#pnmixer-0.7.2}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Pnmixer {#introduction-to-pnmixer .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Pnmixer {#introduction-to-pnmixer}
 
-The [Pnmixer]{.application} package provides a lightweight volume control with a tray icon.
+The <span class="application">Pnmixer</span> package provides a lightweight volume control with a tray icon.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/nicklan/pnmixer/releases/download/v0.7.2/pnmixer-v0.7.2.tar.gz](https://github.com/nicklan/pnmixer/releases/download/v0.7.2/pnmixer-v0.7.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/nicklan/pnmixer/releases/download/v0.7.2/pnmixer-v0.7.2.tar.gz">https://github.com/nicklan/pnmixer/releases/download/v0.7.2/pnmixer-v0.7.2.tar.gz</a>
 
 -   Download MD5 sum: e9f17f56c50de39393030a96e343427b
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.5 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Pnmixer Dependencies
 
 #### Required
 
-[alsa-utils-1.2.15.2](alsa-utils.md "alsa-utils-1.2.15.2"){.xref}, [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, and [libnotify-0.8.8](../x/libnotify.md "libnotify-0.8.8"){.xref}
-:::::
+<a class="xref" href="alsa-utils.md" title="alsa-utils-1.2.15.2">alsa-utils-1.2.15.2</a>, <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, and <a class="xref" href="../x/libnotify.md" title="libnotify-0.8.8">libnotify-0.8.8</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Pnmixer {#installation-of-pnmixer .sect2}
+<div class="installation" lang="en">
+## Installation of Pnmixer {#installation-of-pnmixer}
 
-Install [Pnmixer]{.application} by running the following commands:
+Install <span class="application">Pnmixer</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not have a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [pnmixer]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">pnmixer</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/pnmixer]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/pnmixer</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------- -----------------------------------------------------
-  []{#pnmixer-prog}[[**pnmixer**]{.command}]{.term}   is a lightweight volume control that sits in a tray
+  <a id="pnmixer-prog"></a><span class="command"><span class="term"><strong>pnmixer</strong></span></span>   is a lightweight volume control that sits in a tray
   --------------------------------------------------- -----------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](pavucontrol.md "pavucontrol-6.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](pavucontrol.md "pavucontrol-6.2")
 
     pavucontrol-6.2
 
--   [Next](vorbistools.md "vorbis-tools-1.4.3"){accesskey="n"}
+-   [Next](vorbistools.md "vorbis-tools-1.4.3")
 
     vorbis-tools-1.4.3
 
--   [Up](audioutils.md "Chapter 43. Audio Utilities"){accesskey="u"}
+-   [Up](audioutils.md "Chapter 43. Audio Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

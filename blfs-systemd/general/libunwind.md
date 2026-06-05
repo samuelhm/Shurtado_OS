@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libunistring.md "libunistring-1.4.2"){accesskey="p"}
+-   [Prev](libunistring.md "libunistring-1.4.2")
 
     libunistring-1.4.2
 
--   [Next](liburcu.md "liburcu-0.15.6"){accesskey="n"}
+-   [Next](liburcu.md "liburcu-0.15.6")
 
     liburcu-0.15.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libunwind}libunwind-1.8.3 {#libunwind-1.8.3 .sect1}
+# libunwind-1.8.3 {#libunwind-1.8.3}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libunwind {#introduction-to-libunwind .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libunwind {#introduction-to-libunwind}
 
-The [libunwind]{.application} package contains a portable and efficient C programming interface (API) to determine the call-chain of a program. The API additionally provides the means to manipulate the preserved (callee-saved) state of each call-frame and to resume execution at any point in the call-chain (non-local goto). The API supports both local (same-process) and remote (across-process) operation.
+The <span class="application">libunwind</span> package contains a portable and efficient C programming interface (API) to determine the call-chain of a program. The API additionally provides the means to manipulate the preserved (callee-saved) state of each call-frame and to resume execution at any point in the call-chain (non-local goto). The API supports both local (same-process) and remote (across-process) operation.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz](https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz">https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz</a>
 
 -   Download MD5 sum: 13bc7b41462ac6ea157d350eaf6c1503
 
@@ -44,77 +44,77 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 22 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (with tests)
-:::
+</div>
 
 ### libunwind Dependencies
 
 #### Optional
 
-[texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} (for latex2man)
-:::::
+<a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> (for latex2man)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libunwind {#installation-of-libunwind .sect2}
+<div class="installation" lang="en">
+## Installation of libunwind {#installation-of-libunwind}
 
 First, fix a problem when building with gcc-15:
 
-``` userinput
+```bash
 sed -i '/func.s/s/s//' tests/Gtest-nomalloc.c
 ```
 
-Install [libunwind]{.application} by running the following commands:
+Install <span class="application">libunwind</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libunwind.so, libunwind-coredump.so, libunwind-generic.so (symlink to libunwind-x86_64.so), libunwind-ptrace.so, libunwind-setjmp.so, and libunwind-x86_64.so (libunwind-x86.so on i686)]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libunwind.so, libunwind-coredump.so, libunwind-generic.so (symlink to libunwind-x86_64.so), libunwind-ptrace.so, libunwind-setjmp.so, and libunwind-x86_64.so (libunwind-x86.so on i686)</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/libexec/libunwind]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/libexec/libunwind</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libunistring.md "libunistring-1.4.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libunistring.md "libunistring-1.4.2")
 
     libunistring-1.4.2
 
--   [Next](liburcu.md "liburcu-0.15.6"){accesskey="n"}
+-   [Next](liburcu.md "liburcu-0.15.6")
 
     liburcu-0.15.6
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

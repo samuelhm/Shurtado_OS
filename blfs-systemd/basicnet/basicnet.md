@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../general/apache-ant.md "apache-ant-1.10.17"){accesskey="p"}
+-   [Prev](../general/apache-ant.md "apache-ant-1.10.17")
 
     apache-ant-1.10.17
 
--   [Next](connect.md "Connecting to a Network"){accesskey="n"}
+-   [Next](connect.md "Connecting to a Network")
 
     Connecting to a Network
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#basicnet}Networking {#networking .part}
+# Networking {#networking}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [14. Connecting to a Network](connect.md)
@@ -88,19 +88,19 @@
     -   [Mutt-2.3.2](mutt.md)
     -   [Procmail-3.24](procmail.md)
     -   [Other Mail and News Programs](othermn.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../general/apache-ant.md "apache-ant-1.10.17"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../general/apache-ant.md "apache-ant-1.10.17")
 
     apache-ant-1.10.17
 
--   [Next](connect.md "Connecting to a Network"){accesskey="n"}
+-   [Next](connect.md "Connecting to a Network")
 
     Connecting to a Network
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](gnome-terminal.md "gnome-terminal-3.60.0"){accesskey="p"}
+-   [Prev](gnome-terminal.md "gnome-terminal-3.60.0")
 
     gnome-terminal-3.60.0
 
--   [Next](gucharmap.md "Gucharmap-17.0.2"){accesskey="n"}
+-   [Next](gucharmap.md "Gucharmap-17.0.2")
 
     Gucharmap-17.0.2
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-weather}gnome-weather-48.0 {#gnome-weather-48.0 .sect1}
+# gnome-weather-48.0 {#gnome-weather-48.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Weather {#introduction-to-gnome-weather .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Weather {#introduction-to-gnome-weather}
 
-[GNOME Weather]{.application} is a small application that allows you to monitor the current weather conditions for your city, or anywhere in the world, and to access updated forecasts provided by various internet services.
+<span class="application">GNOME Weather</span> is a small application that allows you to monitor the current weather conditions for your city, or anywhere in the world, and to access updated forecasts provided by various internet services.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-weather/48/gnome-weather-48.0.tar.xz](https://download.gnome.org/sources/gnome-weather/48/gnome-weather-48.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-weather/48/gnome-weather-48.0.tar.xz">https://download.gnome.org/sources/gnome-weather/48/gnome-weather-48.0.tar.xz</a>
 
 -   Download MD5 sum: 35858b4f07ede013a835033b0b258d19
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.7 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### GNOME Weather Dependencies
 
 #### Required
 
-[GeoClue-2.8.1](../basicnet/geoclue2.md "GeoClue-2.8.1"){.xref}, [Gjs-1.88.0](gjs.md "Gjs-1.88.0"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, and [libgweather-4.6.0](libgweather.md "libgweather-4.6.0"){.xref}
+<a class="xref" href="../basicnet/geoclue2.md" title="GeoClue-2.8.1">GeoClue-2.8.1</a>, <a class="xref" href="gjs.md" title="Gjs-1.88.0">Gjs-1.88.0</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, and <a class="xref" href="libgweather.md" title="libgweather-4.6.0">libgweather-4.6.0</a>
 
 #### Optional
 
-[appstream-glib-0.8.3](../general/appstream-glib.md "appstream-glib-0.8.3"){.xref}
-:::::
+<a class="xref" href="../general/appstream-glib.md" title="appstream-glib-0.8.3">appstream-glib-0.8.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Weather {#installation-of-gnome-weather .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Weather {#installation-of-gnome-weather}
 
-Install [GNOME Weather]{.application} by running the following commands:
+Install <span class="application">GNOME Weather</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,60 +70,60 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-weather]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-weather</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/org.gnome.Weather]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/org.gnome.Weather</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------- --------------------------------------------------------------------------------------------------------
-  []{#gnome-weather-prog}[[**gnome-weather**]{.command}]{.term}   is a small application that allows you to monitor the current weather conditions anywhere in the world
+  <a id="gnome-weather-prog"></a><span class="command"><span class="term"><strong>gnome-weather</strong></span></span>   is a small application that allows you to monitor the current weather conditions anywhere in the world
   --------------------------------------------------------------- --------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-terminal.md "gnome-terminal-3.60.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-terminal.md "gnome-terminal-3.60.0")
 
     gnome-terminal-3.60.0
 
--   [Next](gucharmap.md "Gucharmap-17.0.2"){accesskey="n"}
+-   [Next](gucharmap.md "Gucharmap-17.0.2")
 
     Gucharmap-17.0.2
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

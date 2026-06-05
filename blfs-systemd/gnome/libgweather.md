@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gweather-locations.md "gweather-locations-2026.2"){accesskey="p"}
+-   [Prev](gweather-locations.md "gweather-locations-2026.2")
 
     gweather-locations-2026.2
 
--   [Next](libpeas.md "libpeas-1.38.1"){accesskey="n"}
+-   [Next](libpeas.md "libpeas-1.38.1")
 
     libpeas-1.38.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libgweather}libgweather-4.6.0 {#libgweather-4.6.0 .sect1}
+# libgweather-4.6.0 {#libgweather-4.6.0}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libgweather {#introduction-to-libgweather .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libgweather {#introduction-to-libgweather}
 
-The [libgweather]{.application} package is a library used to access weather information from online services for numerous locations.
+The <span class="application">libgweather</span> package is a library used to access weather information from online services for numerous locations.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz](https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz">https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz</a>
 
 -   Download MD5 sum: c52f40f2e6d6708763f15eb17ce45b97
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 13 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### libgweather Dependencies
 
 #### Required
 
-[geocode-glib-3.26.4](geocode-glib.md "geocode-glib-3.26.4"){.xref}, [gweather-locations-2026.2](gweather-locations.md "gweather-locations-2026.2"){.xref}, [libsoup-3.6.6](../basicnet/libsoup3.md "libsoup-3.6.6"){.xref}, and [PyGObject-3.56.3](../general/python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref}
+<a class="xref" href="geocode-glib.md" title="geocode-glib-3.26.4">geocode-glib-3.26.4</a>, <a class="xref" href="gweather-locations.md" title="gweather-locations-2026.2">gweather-locations-2026.2</a>, <a class="xref" href="../basicnet/libsoup3.md" title="libsoup-3.6.6">libsoup-3.6.6</a>, and <a class="xref" href="../general/python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} (gi-docgen is also provided as a meson subproject, which will be used if `-D gtk_doc=false`{.option} is not passed to [**meson**]{.command}), [LLVM-22.1.0](../general/llvm.md "LLVM-22.1.0"){.xref} (for clang-format), and [pylint](https://pypi.org/project/pylint/){.ulink}
+<a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> (gi-docgen is also provided as a meson subproject, which will be used if <code class="option">-D gtk_doc=false</code> is not passed to <span class="command"><strong>meson</strong></span>), <a class="xref" href="../general/llvm.md" title="LLVM-22.1.0">LLVM-22.1.0</a> (for clang-format), and <a class="ulink" href="https://pypi.org/project/pylint/">pylint</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libgweather {#installation-of-libgweather .sect2}
+<div class="installation" lang="en">
+## Installation of libgweather {#installation-of-libgweather}
 
-Install [libgweather]{.application} by running the following commands:
+Install <span class="application">libgweather</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -85,9 +85,9 @@ meson setup --prefix=/usr       \
 ninja
 ```
 
-If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to build the API documentation for this package, issue:
+If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to build the API documentation for this package, issue:
 
-``` userinput
+```bash
 sed "s/libgweather_full_version/'libgweather-4.6.0'/" \
     -i ../doc/meson.build                             &&
 meson configure -D gtk_doc=true                       &&
@@ -96,62 +96,62 @@ ninja
 
 One test needs that the locale files be installed on the system, so it is better to run the tests after installing the package.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-To test the results, issue: [**LC_ALL=C ninja test**]{.command}. One test, `metar`{.filename}, is known to fail due to some airport weather information being temporarily unavailable.
-:::
+To test the results, issue: <span class="command"><strong>LC_ALL=C ninja test</strong></span>. One test, <code class="filename">metar</code>, is known to fail due to some airport weather information being temporarily unavailable.
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D gtk_doc=false`*: Allow building this package without [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed. If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and you wish to rebuild and install the API documentation, a [**meson configure**]{.command} command will reset this option.
-:::
+*`-D gtk_doc=false`*: Allow building this package without <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed. If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and you wish to rebuild and install the API documentation, a <span class="command"><strong>meson configure</strong></span> command will reset this option.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgweather-4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgweather-4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/libgweather-4, /usr/include/libgweather-4.0, /usr/share/gtk-doc/html/libgweather-4.0 (optional), and /usr/share/libgweather-4]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/libgweather-4, /usr/include/libgweather-4.0, /usr/share/gtk-doc/html/libgweather-4.0 (optional), and /usr/share/libgweather-4</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- ------------------------------------------------------------------------
-  []{#libgweather-4}[`libgweather-4.so`{.filename}]{.term}   contains functions that allow for the retrieval of weather information
+  <a id="libgweather-4"></a><span class="term"><code class="filename">libgweather-4.so</code></span>   contains functions that allow for the retrieval of weather information
   ---------------------------------------------------------- ------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gweather-locations.md "gweather-locations-2026.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gweather-locations.md "gweather-locations-2026.2")
 
     gweather-locations-2026.2
 
--   [Next](libpeas.md "libpeas-1.38.1"){accesskey="n"}
+-   [Next](libpeas.md "libpeas-1.38.1")
 
     libpeas-1.38.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

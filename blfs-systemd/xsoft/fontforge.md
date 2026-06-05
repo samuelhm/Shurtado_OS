@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 41. Other X-based Programs
 
--   [Prev](feh.md "feh-3.12.2"){accesskey="p"}
+-   [Prev](feh.md "feh-3.12.2")
 
     feh-3.12.2
 
--   [Next](freerdp.md "FreeRDP-3.26.0"){accesskey="n"}
+-   [Next](freerdp.md "FreeRDP-3.26.0")
 
     FreeRDP-3.26.0
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#fontforge}FontForge-20251009 {#fontforge-20251009 .sect1}
+# FontForge-20251009 {#fontforge-20251009}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to FontForge {#introduction-to-fontforge .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to FontForge {#introduction-to-fontforge}
 
-The [FontForge]{.application} package contains an outline font editor that lets you create your own postscript, truetype, opentype, cid-keyed, multi-master, cff, svg and bitmap (bdf, FON, NFNT) fonts, or edit existing ones.
+The <span class="application">FontForge</span> package contains an outline font editor that lets you create your own postscript, truetype, opentype, cid-keyed, multi-master, cff, svg and bitmap (bdf, FON, NFNT) fonts, or edit existing ones.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz](https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz">https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz</a>
 
 -   Download MD5 sum: 9407db5126f937618f1f5f1f9ee8aab2
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 170 MB (add 51 MB for the tests)
 
 -   Estimated build time: 0.4 SBU (with parallelism=4, add 0.1 SBU for the tests)
-:::
+</div>
 
 ### FontForge Dependencies
 
 #### Required
 
-[Gtkmm-3.24.10](../x/gtkmm3.md "Gtkmm-3.24.10"){.xref}, [libspiro-20220722](../general/libspiro.md "Libspiro-20220722"){.xref}, and [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}
+<a class="xref" href="../x/gtkmm3.md" title="Gtkmm-3.24.10">Gtkmm-3.24.10</a>, <a class="xref" href="../general/libspiro.md" title="Libspiro-20220722">libspiro-20220722</a>, and <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>
 
 #### Optional
 
-[giflib-6.1.3](../general/giflib.md "giflib-6.1.3"){.xref}, [git-2.54.0](../general/git.md "Git-2.54.0"){.xref}, [libjpeg-turbo-3.1.4.1](../general/libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [libtiff-4.7.1](../general/libtiff.md "libtiff-4.7.1"){.xref}, [sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref} (to build html documentation), and [WOFF2-1.0.2](../general/woff2.md "woff2-1.0.2"){.xref}
-:::::
+<a class="xref" href="../general/giflib.md" title="giflib-6.1.3">giflib-6.1.3</a>, <a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a>, <a class="xref" href="../general/libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="../general/libtiff.md" title="libtiff-4.7.1">libtiff-4.7.1</a>, <a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a> (to build html documentation), and <a class="xref" href="../general/woff2.md" title="woff2-1.0.2">WOFF2-1.0.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of FontForge {#installation-of-fontforge .sect2}
+<div class="installation" lang="en">
+## Installation of FontForge {#installation-of-fontforge}
 
-Install [FontForge]{.application} by running the following commands:
+Install <span class="application">FontForge</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,71 +72,71 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have installed [**sphinx-build**]{.command}, HTML documentation was built and installed in `/usr/share/doc/fontforge`{.filename}. To be able to access it as a versioned directory, create a symlink as the `root`{.systemitem} user:
+If you have installed <span class="command"><strong>sphinx-build</strong></span>, HTML documentation was built and installed in <code class="filename">/usr/share/doc/fontforge</code>. To be able to access it as a versioned directory, create a symlink as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ln -sv fontforge /usr/share/doc/fontforge-20251009
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D CMAKE_BUILD_TYPE=Release`*: This switch is used to create an optimized release without debug information.
 
 *`-W no-dev`*: This switch is used to suppress warnings intended for the package's developers.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [fontforge, fontimage, fontlint and sfddiff]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">fontforge, fontimage, fontlint and sfddiff</span>
+</div>
 
-::: seg
-**Installed Library:** [libfontforge.so and /usr/lib/python3.14.5/site-packages/{fontforge,psMat}.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libfontforge.so and /usr/lib/python3.14.5/site-packages/{fontforge,psMat}.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/fontforge and optionally /usr/share/doc/fontforge{,-20251009}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/fontforge and optionally /usr/share/doc/fontforge{,-20251009}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------- -------------------------------------------------------------------------------
-  []{#fontforge-prog}[[**fontforge**]{.command}]{.term}   is a program that allows you to create and modify font files
-  []{#fontimage}[[**fontimage**]{.command}]{.term}        is a program that produces an image showing representative glyphs of the font
-  []{#fontlint}[[**fontlint**]{.command}]{.term}          is a program that checks the font for certain common errors
-  []{#sfddiff}[[**sfddiff**]{.command}]{.term}            is a program that compares two font files
+  <a id="fontforge-prog"></a><span class="command"><span class="term"><strong>fontforge</strong></span></span>   is a program that allows you to create and modify font files
+  <a id="fontimage"></a><span class="command"><span class="term"><strong>fontimage</strong></span></span>        is a program that produces an image showing representative glyphs of the font
+  <a id="fontlint"></a><span class="command"><span class="term"><strong>fontlint</strong></span></span>          is a program that checks the font for certain common errors
+  <a id="sfddiff"></a><span class="command"><span class="term"><strong>sfddiff</strong></span></span>            is a program that compares two font files
   ------------------------------------------------------- -------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](feh.md "feh-3.12.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](feh.md "feh-3.12.2")
 
     feh-3.12.2
 
--   [Next](freerdp.md "FreeRDP-3.26.0"){accesskey="n"}
+-   [Next](freerdp.md "FreeRDP-3.26.0")
 
     FreeRDP-3.26.0
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

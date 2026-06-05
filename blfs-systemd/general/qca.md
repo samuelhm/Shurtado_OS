@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](protobuf-c.md "Protobuf-c-1.5.2"){accesskey="p"}
+-   [Prev](protobuf-c.md "Protobuf-c-1.5.2")
 
     Protobuf-c-1.5.2
 
--   [Next](qcoro.md "qcoro-0.13.0"){accesskey="n"}
+-   [Next](qcoro.md "qcoro-0.13.0")
 
     qcoro-0.13.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#qca}Qca-2.3.10 {#qca-2.3.10 .sect1}
+# Qca-2.3.10 {#qca-2.3.10}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Qca {#introduction-to-qca .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Qca {#introduction-to-qca}
 
-[Qca]{.application} aims to provide a straightforward and cross-platform crypto API, using [Qt]{.application} datatypes and conventions. [Qca]{.application} separates the API from the implementation, using plugins known as Providers.
+<span class="application">Qca</span> aims to provide a straightforward and cross-platform crypto API, using <span class="application">Qt</span> datatypes and conventions. <span class="application">Qca</span> separates the API from the implementation, using plugins known as Providers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz](https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz">https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz</a>
 
 -   Download MD5 sum: c3ed3262c83c43bdeb610836769b1534
 
@@ -44,43 +44,43 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 56 MB (with tests)
 
 -   Estimated build time: 0.7 SBU (using parallelism=4; with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/qca-2.3.10-openssl4_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/qca-2.3.10-openssl4_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/qca-2.3.10-openssl4_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/qca-2.3.10-openssl4_fixes-1.patch</a>
+</div>
 
 ### Qca Dependencies
 
 #### Required
 
-[make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref}, [CMake-4.3.3](cmake.md "CMake-4.3.3"){.xref}, [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}, and [Which-2.25](which.md "Which-2.25 and Alternatives"){.xref}
+<a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a>, <a class="xref" href="cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>, <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>, and <a class="xref" href="which.md" title="Which-2.25 and Alternatives">Which-2.25</a>
 
 #### Optional
 
-[Cyrus SASL-2.1.28](../postlfs/cyrus-sasl.md "Cyrus SASL-2.1.28"){.xref}, [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref}, [libgcrypt-1.12.2](libgcrypt.md "libgcrypt-1.12.2"){.xref}, [libgpg-error-1.61](libgpg-error.md "libgpg-error-1.61"){.xref}, [nss-3.124](../postlfs/nss.md "NSS-3.124"){.xref}, [NSPR-4.39](nspr.md "NSPR-4.39"){.xref}, [p11-kit-0.26.2](../postlfs/p11-kit.md "p11-kit-0.26.2"){.xref}, [Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, and [Botan](https://botan.randombit.net/){.ulink}
-::::::
+<a class="xref" href="../postlfs/cyrus-sasl.md" title="Cyrus SASL-2.1.28">Cyrus SASL-2.1.28</a>, <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a>, <a class="xref" href="libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a>, <a class="xref" href="libgpg-error.md" title="libgpg-error-1.61">libgpg-error-1.61</a>, <a class="xref" href="../postlfs/nss.md" title="NSS-3.124">nss-3.124</a>, <a class="xref" href="nspr.md" title="NSPR-4.39">NSPR-4.39</a>, <a class="xref" href="../postlfs/p11-kit.md" title="p11-kit-0.26.2">p11-kit-0.26.2</a>, <a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, and <a class="ulink" href="https://botan.randombit.net/">Botan</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Qca {#installation-of-qca .sect2}
+<div class="installation" lang="en">
+## Installation of Qca {#installation-of-qca}
 
 First, modify the package to be compatible with OpenSSL4:
 
-``` userinput
+```bash
 patch -Np1 -i ../qca-2.3.10-openssl4_fixes-1.patch
 ```
 
 Now, fix the location of the CA certificates:
 
-``` userinput
+```bash
 sed -i 's@cert.pem@certs/ca-bundle.crt@' CMakeLists.txt
 ```
 
-Install [Qca]{.application} by running the following commands:
+Install <span class="application">Qca</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -93,66 +93,66 @@ cmake -D CMAKE_INSTALL_PREFIX=$QT6DIR            \
 make
 ```
 
-To test the results, issue: [**make test**]{.command}.
+To test the results, issue: <span class="command"><strong>make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D CMAKE_BUILD_TYPE=Release`*: This switch is used to apply a higher level of compiler optimizations.
 
-*`-D QT6=ON`*: This switch ensures that the package is built with [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}.
+*`-D QT6=ON`*: This switch ensures that the package is built with <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>.
 
 *`-D QCA_MAN_INSTALL_DIR:PATH=/usr/share/man`*: This switch installs the qca man page in the normal location.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [mozcerts-qt6 and qcatool-qt6]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">mozcerts-qt6 and qcatool-qt6</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libqca-qt6.so, libqca-cyrus-sasl.so, libqca-gcrypt.so, libqca-gnupg.so, libqca-logger.so, libqca-nss.so, libqca-ossl.so, and libqca-softstore.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libqca-qt6.so, libqca-cyrus-sasl.so, libqca-gcrypt.so, libqca-gnupg.so, libqca-logger.so, libqca-nss.so, libqca-ossl.so, and libqca-softstore.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$QT6DIR/include/Qca-qt6, \$QT6DIR/lib/cmake/Qca-qt6, and \$QT6DIR/lib/qca-qt6]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$QT6DIR/include/Qca-qt6, \$QT6DIR/lib/cmake/Qca-qt6, and \$QT6DIR/lib/qca-qt6</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ---------------------------------------------------------------------------------
-  []{#mozcerts}[[**mozcerts-qt6**]{.command}]{.term}   is a command line tool for converting certdata.txt into outfile.pem files
-  []{#qcatool}[[**qcatool-qt6**]{.command}]{.term}     is a command line tool for performing various cryptographic operations with Qca
-  []{#libqca}[`libqca-qt6.so`{.filename}]{.term}       is the Qt Cryptography Architecture (Qca) library
+  <a id="mozcerts"></a><span class="command"><span class="term"><strong>mozcerts-qt6</strong></span></span>   is a command line tool for converting certdata.txt into outfile.pem files
+  <a id="qcatool"></a><span class="command"><span class="term"><strong>qcatool-qt6</strong></span></span>     is a command line tool for performing various cryptographic operations with Qca
+  <a id="libqca"></a><span class="term"><code class="filename">libqca-qt6.so</code></span>       is the Qt Cryptography Architecture (Qca) library
   ---------------------------------------------------- ---------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](protobuf-c.md "Protobuf-c-1.5.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](protobuf-c.md "Protobuf-c-1.5.2")
 
     Protobuf-c-1.5.2
 
--   [Next](qcoro.md "qcoro-0.13.0"){accesskey="n"}
+-   [Next](qcoro.md "qcoro-0.13.0")
 
     qcoro-0.13.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

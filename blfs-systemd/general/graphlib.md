@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part III. General Libraries and Utilities
 
--   [Prev](xapian.md "Xapian-2.0.0"){accesskey="p"}
+-   [Prev](xapian.md "Xapian-2.0.0")
 
     Xapian-2.0.0
 
--   [Next](aalib.md "AAlib-1.4rc5"){accesskey="n"}
+-   [Next](aalib.md "AAlib-1.4rc5")
 
     AAlib-1.4rc5
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#general-graphlib}Graphics and Font Libraries {#graphics-and-font-libraries .chapter}
+# Graphics and Font Libraries {#graphics-and-font-libraries}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 Depending on what your system will be used for, you may or may not require the graphics and font libraries. Most desktop machines will want them for use with graphical applications. Most servers on the other hand, will not require them.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [AAlib-1.4rc5](aalib.md)
@@ -67,19 +67,19 @@ Depending on what your system will be used for, you may or may not require the g
 -   [sassc-3.6.2](sassc.md)
 -   [woff2-1.0.2](woff2.md)
 -   [zxing-cpp-3.0.2](zxing-cpp.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](xapian.md "Xapian-2.0.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xapian.md "Xapian-2.0.0")
 
     Xapian-2.0.0
 
--   [Next](aalib.md "AAlib-1.4rc5"){accesskey="n"}
+-   [Next](aalib.md "AAlib-1.4rc5")
 
     AAlib-1.4rc5
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

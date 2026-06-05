@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libnsl.md "libnsl-2.0.1"){accesskey="p"}
+-   [Prev](libnsl.md "libnsl-2.0.1")
 
     libnsl-2.0.1
 
--   [Next](libpsl.md "libpsl-0.21.5"){accesskey="n"}
+-   [Next](libpsl.md "libpsl-0.21.5")
 
     libpsl-0.21.5
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libpcap}libpcap-1.10.6 {#libpcap-1.10.6 .sect1}
+# libpcap-1.10.6 {#libpcap-1.10.6}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libpcap {#introduction-to-libpcap .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libpcap {#introduction-to-libpcap}
 
-[libpcap]{.application} provides functions for user-level packet capture, used in low-level network monitoring.
+<span class="application">libpcap</span> provides functions for user-level packet capture, used in low-level network monitoring.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.tcpdump.org/release/libpcap-1.10.6.tar.gz](https://www.tcpdump.org/release/libpcap-1.10.6.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.tcpdump.org/release/libpcap-1.10.6.tar.gz">https://www.tcpdump.org/release/libpcap-1.10.6.tar.gz</a>
 
 -   Download MD5 sum: f49b1c1877dcbb3b7f5147429aa047f9
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libpcap Dependencies
 
 #### Optional
 
-[BlueZ-5.86](../general/bluez.md "BlueZ-5.86"){.xref}, [libnl-3.12.0](libnl.md "libnl-3.12.0"){.xref}, [libusb-1.0.30](../general/libusb.md "libusb-1.0.30"){.xref}, Software distribution for the [DAG](https://www.endace.com/){.ulink}, and [Septel](https://www.intel.com/){.ulink} range of passive network monitoring cards.
-:::::
+<a class="xref" href="../general/bluez.md" title="BlueZ-5.86">BlueZ-5.86</a>, <a class="xref" href="libnl.md" title="libnl-3.12.0">libnl-3.12.0</a>, <a class="xref" href="../general/libusb.md" title="libusb-1.0.30">libusb-1.0.30</a>, Software distribution for the <a class="ulink" href="https://www.endace.com/">DAG</a>, and <a class="ulink" href="https://www.intel.com/">Septel</a> range of passive network monitoring cards.
+</div>
 
-::: {.installation lang="en"}
-## Installation of libpcap {#installation-of-libpcap .sect2}
+<div class="installation" lang="en">
+## Installation of libpcap {#installation-of-libpcap}
 
-Install [libpcap]{.application} by running the following commands:
+Install <span class="application">libpcap</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
@@ -67,57 +67,57 @@ This package does not come with a test suite.
 
 If you want to disable installing the static library, use this sed:
 
-``` userinput
+```bash
 sed -i '/INSTALL_DATA.*libpcap.a\|RANLIB.*libpcap.a/ s/^/#/' Makefile
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [pcap-config]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">pcap-config</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libpcap.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libpcap.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/pcap]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/pcap</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ----------------------------------------------------------------
-  []{#pcap-config}[[**pcap-config**]{.command}]{.term}   provides configuration information for [libpcap]{.application}
-  []{#libpcap-lib}[`libpcap.{a,so}`{.filename}]{.term}   are libraries used for user-level packet capture
+  <a id="pcap-config"></a><span class="command"><span class="term"><strong>pcap-config</strong></span></span>   provides configuration information for <span class="application">libpcap</span>
+  <a id="libpcap-lib"></a><span class="term"><code class="filename">libpcap.{a,so}</code></span>   are libraries used for user-level packet capture
   ------------------------------------------------------ ----------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libnsl.md "libnsl-2.0.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libnsl.md "libnsl-2.0.1")
 
     libnsl-2.0.1
 
--   [Next](libpsl.md "libpsl-0.21.5"){accesskey="n"}
+-   [Next](libpsl.md "libpsl-0.21.5")
 
     libpsl-0.21.5
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

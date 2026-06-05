@@ -1,25 +1,25 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part VII. KDE
 
--   [Prev](kde.md "KDE"){accesskey="p"}
+-   [Prev](kde.md "KDE")
 
     KDE
 
--   [Next](kdeintro.md "KDE Preliminaries"){accesskey="n"}
+-   [Next](kdeintro.md "KDE Preliminaries")
 
     KDE Preliminaries
 
--   [Up](kde.md "Part VII. KDE"){accesskey="u"}
+-   [Up](kde.md "Part VII. KDE")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kde-prereq}Introduction to KDE {#introduction-to-kde .chapter}
+# Introduction to KDE {#introduction-to-kde}
 
-:::: {.chapter lang="en"}
-::: toc
+<div class="chapter" lang="en">
+<div class="toc">
 ### Table of Contents
 
 -   [KDE Preliminaries](kdeintro.md)
@@ -29,19 +29,19 @@
 -   [Polkit-Qt-0.201.1](polkit-qt.md)
 -   [plasma-wayland-protocols-1.21.0](plasma-wayland-protocols.md)
 -   [libdmtx-0.7.8](libdmtx.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](kde.md "KDE"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kde.md "KDE")
 
     KDE
 
--   [Next](kdeintro.md "KDE Preliminaries"){accesskey="n"}
+-   [Next](kdeintro.md "KDE Preliminaries")
 
     KDE Preliminaries
 
--   [Up](kde.md "Part VII. KDE"){accesskey="u"}
+-   [Up](kde.md "Part VII. KDE")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

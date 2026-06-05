@@ -1,33 +1,33 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part III. General Libraries and Utilities
 
--   [Prev](general.md "General Libraries and Utilities"){accesskey="p"}
+-   [Prev](general.md "General Libraries and Utilities")
 
     General Libraries and Utilities
 
--   [Next](abseil-cpp.md "Abseil-cpp-20260107.1"){accesskey="n"}
+-   [Next](abseil-cpp.md "Abseil-cpp-20260107.1")
 
     Abseil-cpp-20260107.1
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#general-genlib}General Libraries {#general-libraries .chapter}
+# General Libraries {#general-libraries}
 
-:::: {.chapter lang="en"}
-Libraries contain code which is often required by more than one program. This has the advantage that each program doesn't need to duplicate code (and risk introducing bugs), it just has to call functions from the libraries installed on the system. The most obvious example of a set of libraries is [Glibc]{.application} which is installed during the LFS book. This contains all of the [C]{.application} library functions which programs use.
+<div class="chapter" lang="en">
+Libraries contain code which is often required by more than one program. This has the advantage that each program doesn't need to duplicate code (and risk introducing bugs), it just has to call functions from the libraries installed on the system. The most obvious example of a set of libraries is <span class="application">Glibc</span> which is installed during the LFS book. This contains all of the <span class="application">C</span> library functions which programs use.
 
-There are two types of libraries: static and shared. Shared libraries (usually `libXXX.so`{.filename}) are loaded into memory from the shared copy at runtime (hence the name). Static libraries ( `libXXX.a`{.filename}) are actually linked into the program executable file itself, thus making the program file larger. Quite often, you will find both static and shared copies of the same library on your system.
+There are two types of libraries: static and shared. Shared libraries (usually <code class="filename">libXXX.so</code>) are loaded into memory from the shared copy at runtime (hence the name). Static libraries ( <code class="filename">libXXX.a</code>) are actually linked into the program executable file itself, thus making the program file larger. Quite often, you will find both static and shared copies of the same library on your system.
 
-Generally, you only need to install libraries when you are installing software that needs the functionality they supply. In the BLFS book, each package is presented with a list of (known) dependencies. Thus, you can figure out which libraries you need to have before installing that program. If you are installing something without using BLFS instructions, usually the `README`{.filename} or `INSTALL`{.filename} file will contain details of the program's requirements.
+Generally, you only need to install libraries when you are installing software that needs the functionality they supply. In the BLFS book, each package is presented with a list of (known) dependencies. Thus, you can figure out which libraries you need to have before installing that program. If you are installing something without using BLFS instructions, usually the <code class="filename">README</code> or <code class="filename">INSTALL</code> file will contain details of the program's requirements.
 
-There are certain libraries which nearly [*everyone*]{.emphasis} will need at some point. In this chapter these and some others are listed and it is explained why you may want to install them.
+There are certain libraries which nearly <span class="emphasis"><em>everyone</em></span> will need at some point. In this chapter these and some others are listed and it is explained why you may want to install them.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Abseil-cpp-20260107.1](abseil-cpp.md)
@@ -134,19 +134,19 @@ There are certain libraries which nearly [*everyone*]{.emphasis} will need at so
 -   [Wayland-Protocols-1.48](wayland-protocols.md)
 -   [wv-1.2.9](wv.md)
 -   [Xapian-2.0.0](xapian.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](general.md "General Libraries and Utilities"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](general.md "General Libraries and Utilities")
 
     General Libraries and Utilities
 
--   [Next](abseil-cpp.md "Abseil-cpp-20260107.1"){accesskey="n"}
+-   [Next](abseil-cpp.md "Abseil-cpp-20260107.1")
 
     Abseil-cpp-20260107.1
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

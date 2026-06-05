@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-kwindowsystem.md "kwindowsystem-6.26.0 for lxqt"){accesskey="p"}
+-   [Prev](lxqt-kwindowsystem.md "kwindowsystem-6.26.0 for lxqt")
 
     kwindowsystem-6.26.0 for lxqt
 
--   [Next](lxqt-solid.md "solid-6.26.0 for lxqt"){accesskey="n"}
+-   [Next](lxqt-solid.md "solid-6.26.0 for lxqt")
 
     solid-6.26.0 for lxqt
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-kconfig}kconfig-6.26.0 for lxqt {#kconfig-6.26.0-for-lxqt .sect1}
+# kconfig-6.26.0 for lxqt {#kconfig-6.26.0-for-lxqt}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to kconfig {#introduction-to-kconfig .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to kconfig {#introduction-to-kconfig}
 
-The [kconfig]{.application} package provides access to configuration files.
+The <span class="application">kconfig</span> package provides access to configuration files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-This package is extracted from the KF6 set of packages. If [KDE Frameworks-6.26.0](../kde/frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref} is built, do [**NOT**]{.bold} also build this package as presented here.
-:::
+This package is extracted from the KF6 set of packages. If <a class="xref" href="../kde/frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a> is built, do <span class="bold"><strong>NOT</strong></span> also build this package as presented here.
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/frameworks/6.26/kconfig-6.26.0.tar.xz](https://download.kde.org/stable/frameworks/6.26/kconfig-6.26.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/frameworks/6.26/kconfig-6.26.0.tar.xz">https://download.kde.org/stable/frameworks/6.26/kconfig-6.26.0.tar.xz</a>
 
 -   Download MD5 sum: d184d34f565a550a57f894775d334031
 
@@ -52,21 +52,21 @@ This package is extracted from the KF6 set of packages. If [KDE Frameworks-6.26.
 -   Estimated disk space required: 29 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### kconfig Dependencies
 
 #### Required
 
-[Extra-CMake-Modules-6.26.0](../kde/extra-cmake-modules.md "Extra-CMake-Modules-6.26.0"){.xref} and [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
-::::::
+<a class="xref" href="../kde/extra-cmake-modules.md" title="Extra-CMake-Modules-6.26.0">Extra-CMake-Modules-6.26.0</a> and <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of kconfig {#installation-of-kconfig .sect2}
+<div class="installation" lang="en">
+## Installation of kconfig {#installation-of-kconfig}
 
-Install [kconfig]{.application} by running the following commands:
+Install <span class="application">kconfig</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -81,56 +81,56 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [kreadconfig6 and kwriteconfig6]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">kreadconfig6 and kwriteconfig6</span>
+</div>
 
-::: seg
-**Installed Library:** [libKF6ConfigCore.so, libKF6ConfigGui.so, and libKF6ConfigQml.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libKF6ConfigCore.so, libKF6ConfigGui.so, and libKF6ConfigQml.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/KF6/{KConfigCore,KConfig,KConfigQml,KConfigGui}, /usr/lib/cmake/KF6Config, /usr/libexec/kf6, and \$QT6DIR/qml/org/kde/config]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/KF6/{KConfigCore,KConfig,KConfigQml,KConfigGui}, /usr/lib/cmake/KF6Config, /usr/libexec/kf6, and \$QT6DIR/qml/org/kde/config</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------------------- -------------------------------------------------------------
-  []{#lxqt-kconfig-kreadconfig6}[[**kreadconfig6**]{.command}]{.term}           reads from a configuration file using the KConfig interface
-  []{#lxqt-kconfig-kwriteconfig6}[[**kwriteconfig6**]{.command}]{.term}         writes to a configuration file using the KConfig interface
-  []{#lxqt-kconfig-libKF6ConfigCore}[`libKF6ConfigCore.so`{.filename}]{.term}   contains the core configuration library for KF6
-  []{#lxqt-kconfig-libKF6ConfigGui}[`libKF6ConfigGui.so`{.filename}]{.term}     contains functions for a GUI to interface with KConfig
-  []{#lxqt-kconfig-libKF6ConfigQml}[`libKF6ConfigQml.so`{.filename}]{.term}     contains a QML interface to KConfig
+  <a id="lxqt-kconfig-kreadconfig6"></a><span class="command"><span class="term"><strong>kreadconfig6</strong></span></span>           reads from a configuration file using the KConfig interface
+  <a id="lxqt-kconfig-kwriteconfig6"></a><span class="command"><span class="term"><strong>kwriteconfig6</strong></span></span>         writes to a configuration file using the KConfig interface
+  <a id="lxqt-kconfig-libKF6ConfigCore"></a><span class="term"><code class="filename">libKF6ConfigCore.so</code></span>   contains the core configuration library for KF6
+  <a id="lxqt-kconfig-libKF6ConfigGui"></a><span class="term"><code class="filename">libKF6ConfigGui.so</code></span>     contains functions for a GUI to interface with KConfig
+  <a id="lxqt-kconfig-libKF6ConfigQml"></a><span class="term"><code class="filename">libKF6ConfigQml.so</code></span>     contains a QML interface to KConfig
   ----------------------------------------------------------------------------- -------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-kwindowsystem.md "kwindowsystem-6.26.0 for lxqt"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-kwindowsystem.md "kwindowsystem-6.26.0 for lxqt")
 
     kwindowsystem-6.26.0 for lxqt
 
--   [Next](lxqt-solid.md "solid-6.26.0 for lxqt"){accesskey="n"}
+-   [Next](lxqt-solid.md "solid-6.26.0 for lxqt")
 
     solid-6.26.0 for lxqt
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

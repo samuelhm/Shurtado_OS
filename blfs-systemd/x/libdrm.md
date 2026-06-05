@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](libhandy1.md "libhandy-1.8.3"){accesskey="p"}
+-   [Prev](libhandy1.md "libhandy-1.8.3")
 
     libhandy-1.8.3
 
--   [Next](libepoxy.md "libepoxy-1.5.10"){accesskey="n"}
+-   [Next](libepoxy.md "libepoxy-1.5.10")
 
     libepoxy-1.5.10
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libdrm}Libdrm-2.4.134 {#libdrm-2.4.134 .sect1}
+# Libdrm-2.4.134 {#libdrm-2.4.134}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Libdrm {#introduction-to-libdrm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Libdrm {#introduction-to-libdrm}
 
-[Libdrm]{.application} provides a userspace library for accessing the direct rendering manager (DRM) on operating systems that support the ioctl interface. Libdrm is a low-level library, typically used by graphics drivers such as the Mesa DRI drivers, the X drivers, libva and similar projects.
+<span class="application">Libdrm</span> provides a userspace library for accessing the direct rendering manager (DRM) on operating systems that support the ioctl interface. Libdrm is a low-level library, typically used by graphics drivers such as the Mesa DRI drivers, the X drivers, libva and similar projects.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz](https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz">https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz</a>
 
 -   Download MD5 sum: 0e70607bb5c2f7ecbc411e6a2fab8b22
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.8 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### libdrm Dependencies
 
 #### Recommended
 
-[Xorg Libraries](x7lib.md "Xorg Libraries"){.xref} (for Intel KMS API support required by Mesa)
+<a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a> (for Intel KMS API support required by Mesa)
 
 #### Optional
 
-[Cairo-1.18.4](cairo.md "Cairo-1.18.4"){.xref} (for tests), [CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref} (could be used to find dependencies without pkgconfig files), [docbook-xml-4.5](../pst/docbook.md "docbook-xml-4.5"){.xref}, [docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref}, [docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref}, and [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref} (to build manual pages), [libatomic_ops-7.10.0](../general/libatomic_ops.md "libatomic_ops-7.10.0"){.xref} (required by architectures without native atomic operations), [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}, and [CUnit](https://cunit.sourceforge.net/){.ulink} (for AMDGPU tests)
-:::::
+<a class="xref" href="cairo.md" title="Cairo-1.18.4">Cairo-1.18.4</a> (for tests), <a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a> (could be used to find dependencies without pkgconfig files), <a class="xref" href="../pst/docbook.md" title="docbook-xml-4.5">docbook-xml-4.5</a>, <a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a>, <a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a>, and <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> (to build manual pages), <a class="xref" href="../general/libatomic_ops.md" title="libatomic_ops-7.10.0">libatomic_ops-7.10.0</a> (required by architectures without native atomic operations), <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>, and <a class="ulink" href="https://cunit.sourceforge.net/">CUnit</a> (for AMDGPU tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Libdrm {#installation-of-libdrm .sect2}
+<div class="installation" lang="en">
+## Installation of Libdrm {#installation-of-libdrm}
 
-Install [libdrm]{.application} by running the following commands:
+Install <span class="application">libdrm</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -74,68 +74,68 @@ meson setup --prefix=$XORG_PREFIX \
 ninja
 ```
 
-To check the results, issue [**ninja test**]{.command}.
+To check the results, issue <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D udev=true`*: This parameter enables support for using [Udev]{.application} instead of [**mknod**]{.command}.
+*`-D udev=true`*: This parameter enables support for using <span class="application">Udev</span> instead of <span class="command"><strong>mknod</strong></span>.
 
 *`-D valgrind=disabled`*: This parameter disables building libdrm with valgrind support. This fixes building some packages that use libdrm. Change this parameter to "enabled" (or remove it) if you need support for valgrind.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libdrm_amdgpu.so, libdrm_intel.so, libdrm_nouveau.so, libdrm_radeon.so, and libdrm.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libdrm_amdgpu.so, libdrm_intel.so, libdrm_nouveau.so, libdrm_radeon.so, and libdrm.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libdrm and /usr/share/libdrm]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libdrm and /usr/share/libdrm</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ ---------------------------------------------------------------------------------------
-  []{#libdrm_amdgpu}[`libdrm_amdgpu.so`{.filename}]{.term}     contains the AMDGPU specific Direct Rendering Manager functions
-  []{#libdrm_intel}[`libdrm_intel.so`{.filename}]{.term}       contains the Intel specific Direct Rendering Manager functions
-  []{#libdrm_nouveau}[`libdrm_nouveau.so`{.filename}]{.term}   contains the open source nVidia (Nouveau) specific Direct Rendering Manager functions
-  []{#libdrm_radeon}[`libdrm_radeon.so`{.filename}]{.term}     contains the AMD Radeon specific Direct Rendering Manager functions
-  []{#libdrm-lib}[`libdrm.so`{.filename}]{.term}               contains the Direct Rendering Manager API functions
+  <a id="libdrm_amdgpu"></a><span class="term"><code class="filename">libdrm_amdgpu.so</code></span>     contains the AMDGPU specific Direct Rendering Manager functions
+  <a id="libdrm_intel"></a><span class="term"><code class="filename">libdrm_intel.so</code></span>       contains the Intel specific Direct Rendering Manager functions
+  <a id="libdrm_nouveau"></a><span class="term"><code class="filename">libdrm_nouveau.so</code></span>   contains the open source nVidia (Nouveau) specific Direct Rendering Manager functions
+  <a id="libdrm_radeon"></a><span class="term"><code class="filename">libdrm_radeon.so</code></span>     contains the AMD Radeon specific Direct Rendering Manager functions
+  <a id="libdrm-lib"></a><span class="term"><code class="filename">libdrm.so</code></span>               contains the Direct Rendering Manager API functions
   ------------------------------------------------------------ ---------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libhandy1.md "libhandy-1.8.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libhandy1.md "libhandy-1.8.3")
 
     libhandy-1.8.3
 
--   [Next](libepoxy.md "libepoxy-1.5.10"){accesskey="n"}
+-   [Next](libepoxy.md "libepoxy-1.5.10")
 
     libepoxy-1.5.10
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

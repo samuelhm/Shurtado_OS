@@ -1,87 +1,87 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](installing.md "Graphical Environments"){accesskey="p"}
+-   [Prev](installing.md "Graphical Environments")
 
     Graphical Environments
 
--   [Next](util-macros.md "util-macros-1.20.2"){accesskey="n"}
+-   [Next](util-macros.md "util-macros-1.20.2")
 
     util-macros-1.20.2
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xorg7}Introduction to Xorg-7 {#introduction-to-xorg-7 .sect1}
+# Introduction to Xorg-7 {#introduction-to-xorg-7}
 
-::::::::: {.sect1 lang="en"}
-[Xorg]{.application} is a freely redistributable, open-source implementation of the [X]{.application} Window System. This system provides a client/server interface between display hardware (the mouse, keyboard, and video displays) and the desktop environment, while also providing both the windowing infrastructure and a standardized application interface (API).
+<div class="sect1" lang="en">
+<span class="application">Xorg</span> is a freely redistributable, open-source implementation of the <span class="application">X</span> Window System. This system provides a client/server interface between display hardware (the mouse, keyboard, and video displays) and the desktop environment, while also providing both the windowing infrastructure and a standardized application interface (API).
 
 ### Xorg Download and Installation Instructions
 
-Xorg-7.0 introduced a completely auto-tooled, modular build system. With the new modular build system, it is no longer possible to download the entire package in a single file. In fact, there will be well over 100 packages that need to be fetched from the download location. To assist with such a large task, installing [Wget-1.25.0](../basicnet/wget.md "Wget-1.25.0"){.xref} is strongly recommended for downloading the needed files. A complete [wget]{.application} file list is provided for each page that includes multiple packages.
+Xorg-7.0 introduced a completely auto-tooled, modular build system. With the new modular build system, it is no longer possible to download the entire package in a single file. In fact, there will be well over 100 packages that need to be fetched from the download location. To assist with such a large task, installing <a class="xref" href="../basicnet/wget.md" title="Wget-1.25.0">Wget-1.25.0</a> is strongly recommended for downloading the needed files. A complete <span class="application">wget</span> file list is provided for each page that includes multiple packages.
 
-Given the number of packages available, deciding which packages you need to install for your particular setup may seem a bit overwhelming at first. Take a look at [this page](https://wiki.x.org/wiki/ModuleDescriptions){.ulink} and [this thread](https://lists.x.org/archives/xorg-modular/2005-November/000801.md){.ulink} to get an idea of what you will need. If you are unsure, you should install all packages at the cost of extra disk space.
+Given the number of packages available, deciding which packages you need to install for your particular setup may seem a bit overwhelming at first. Take a look at <a class="ulink" href="https://wiki.x.org/wiki/ModuleDescriptions">this page</a> and <a class="ulink" href="https://lists.x.org/archives/xorg-modular/2005-November/000801.md">this thread</a> to get an idea of what you will need. If you are unsure, you should install all packages at the cost of extra disk space.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Even if you intend to download only the necessary packages, you should download the wget file lists. The list of files are ordered by dependency, and the package versions listed in the files are known to work well with each other. Further, the wget file lists contain comments for specific packages that are deprecated or are not recommended to install. Newer packages are likely intended for the next release of [Xorg]{.application} and have already proved to be incompatible with current versions of software installed in BLFS. The installed size of [Xorg]{.application} can be reduced considerably by installing only the packages that you will need and use, however, the BLFS book cannot account for all dependencies and build options for the individual [Xorg]{.application} packages. The instructions assume that all packages have been built.
-:::
+Even if you intend to download only the necessary packages, you should download the wget file lists. The list of files are ordered by dependency, and the package versions listed in the files are known to work well with each other. Further, the wget file lists contain comments for specific packages that are deprecated or are not recommended to install. Newer packages are likely intended for the next release of <span class="application">Xorg</span> and have already proved to be incompatible with current versions of software installed in BLFS. The installed size of <span class="application">Xorg</span> can be reduced considerably by installing only the packages that you will need and use, however, the BLFS book cannot account for all dependencies and build options for the individual <span class="application">Xorg</span> packages. The instructions assume that all packages have been built.
+</div>
 
-Additionally, because of the large number of repetitive commands, you are encouraged to partially automate the build. Instructions have been given that utilize the [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} package. It is recommended that you use the *`:NOPASSWD`* configuration option for the user that will be building the xorg packages.
+Additionally, because of the large number of repetitive commands, you are encouraged to partially automate the build. Instructions have been given that utilize the <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> package. It is recommended that you use the *`:NOPASSWD`* configuration option for the user that will be building the xorg packages.
 
-::::::: {.sect2 lang="en"}
-## []{#xorg-env}Setting up the Xorg Build Environment {#setting-up-the-xorg-build-environment .sect2}
+<div class="sect2" lang="en">
+## Setting up the Xorg Build Environment {#setting-up-the-xorg-build-environment}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The following instructions assume that the shell startup files have been set up as described in [The Bash Shell Startup Files](../postlfs/profile.md "The Bash Shell Startup Files"){.xref}.
-:::
+The following instructions assume that the shell startup files have been set up as described in <a class="xref" href="../postlfs/profile.md" title="The Bash Shell Startup Files">The Bash Shell Startup Files</a>.
+</div>
 
-As with previous releases of the X Window System, it may be desirable to install [Xorg]{.application} into an alternate prefix. This is no longer common practice among Linux distributions. The common installation prefix for [Xorg]{.application} on Linux is `/usr`{.filename}. There is no standard alternate prefix, nor is there any exception in the current revision of the Filesystem Hierarchy Standard for Release 7 of the X Window System. Alan Coopersmith of Sun Microsystems, once stated "At Sun, we were using `/usr/X11`{.filename} and plan to stick with it." Only the `/opt/*`{.filename} prefix or the `/usr`{.filename} prefix adhere to the current FHS guidelines.
+As with previous releases of the X Window System, it may be desirable to install <span class="application">Xorg</span> into an alternate prefix. This is no longer common practice among Linux distributions. The common installation prefix for <span class="application">Xorg</span> on Linux is <code class="filename">/usr</code>. There is no standard alternate prefix, nor is there any exception in the current revision of the Filesystem Hierarchy Standard for Release 7 of the X Window System. Alan Coopersmith of Sun Microsystems, once stated "At Sun, we were using <code class="filename">/usr/X11</code> and plan to stick with it." Only the <code class="filename">/opt/*</code> prefix or the <code class="filename">/usr</code> prefix adhere to the current FHS guidelines.
 
-The BLFS editors recommend using the `/usr`{.filename} prefix.
+The BLFS editors recommend using the <code class="filename">/usr</code> prefix.
 
-Choose your installation prefix, and set the `XORG_PREFIX`{.envar} variable with the following command:
+Choose your installation prefix, and set the <code class="envar">XORG_PREFIX</code> variable with the following command:
 
-``` userinput
+```bash
 export XORG_PREFIX="<PREFIX>"
 ```
 
-Throughout these instructions, you will use the following [**configure**]{.command} switches for all of the packages. Create the `XORG_CONFIG`{.envar} variable to use for this parameter substitution:
+Throughout these instructions, you will use the following <span class="command"><strong>configure</strong></span> switches for all of the packages. Create the <code class="envar">XORG_CONFIG</code> variable to use for this parameter substitution:
 
-``` userinput
+```bash
 export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
     --localstatedir=/var --disable-static"
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-We will use `$XORG_CONFIG`{.envar} in the instructions for many packages belonging to or related to Xorg. These instructions won't work properly with the default behavior of [zsh-5.9.1](../postlfs/zsh.md "zsh-5.9.1"){.xref}. So if you are using [zsh-5.9.1](../postlfs/zsh.md "zsh-5.9.1"){.xref} as the interactive shell and building a package for which the instruction uses this variable, make [zsh-5.9.1](../postlfs/zsh.md "zsh-5.9.1"){.xref} behavior expanding `$XORG_CONFIG`{.envar} same as bash:
+We will use <code class="envar">$XORG_CONFIG</code> in the instructions for many packages belonging to or related to Xorg. These instructions won't work properly with the default behavior of <a class="xref" href="../postlfs/zsh.md" title="zsh-5.9.1">zsh-5.9.1</a>. So if you are using <a class="xref" href="../postlfs/zsh.md" title="zsh-5.9.1">zsh-5.9.1</a> as the interactive shell and building a package for which the instruction uses this variable, make <a class="xref" href="../postlfs/zsh.md" title="zsh-5.9.1">zsh-5.9.1</a> behavior expanding <code class="envar">$XORG_CONFIG</code> same as bash:
 
-``` userinput
+```bash
 set -o shwordsplit
 ```
 
 If you want to make this setting persistent, add this command into the zsh startup file.
-:::
+</div>
 
-Create an `/etc/profile.d/xorg.sh`{.filename} configuration file containing these variables as the `root`{.systemitem} user:
+Create an <code class="filename">/etc/profile.d/xorg.sh</code> configuration file containing these variables as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/profile.d/xorg.sh << EOF
 XORG_PREFIX="$XORG_PREFIX"
 XORG_CONFIG="--prefix=\$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static"
@@ -90,17 +90,17 @@ EOF
 chmod 644 /etc/profile.d/xorg.sh
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 There is some confusion about the above 'here' document. The backslash in front of the dollar sign is correct. Bash will remove it when creating /etc/profile.d/xorg.sh. However, if you are creating the file with an editor, a copy and paste operation will not remove the backslash. It must then be removed manually.
-:::
+</div>
 
-If you've installed [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref}, ensure that `XORG_PREFIX`{.envar} and `XORG_CONFIG`{.envar} are available in the [sudo]{.application} environment. As the `root`{.systemitem} user, run the following command:
+If you've installed <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a>, ensure that <code class="envar">XORG_PREFIX</code> and <code class="envar">XORG_CONFIG</code> are available in the <span class="application">sudo</span> environment. As the <code class="systemitem">root</code> user, run the following command:
 
-``` root
+```bash
 cat > /etc/sudoers.d/xorg << EOF
 Defaults env_keep += XORG_PREFIX
 Defaults env_keep += XORG_CONFIG
@@ -109,17 +109,17 @@ EOF
 
 ## If you are not using the standard Xorg prefix...
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
-If you've decided to use the standard `/usr`{.filename} prefix, you must omit the remainder of this page and continue at [util-macros-1.20.2](util-macros.md "util-macros-1.20.2"){.xref}.
-:::
+If you've decided to use the standard <code class="filename">/usr</code> prefix, you must omit the remainder of this page and continue at <a class="xref" href="util-macros.md" title="util-macros-1.20.2">util-macros-1.20.2</a>.
+</div>
 
-If you've decided to [*not*]{.emphasis} use the standard prefix, be sure to add `$XORG_PREFIX/bin`{.filename} to your `PATH`{.envar} environment variable, and `$XORG_PREFIX/lib/pkgconfig`{.filename} and `$XORG_PREFIX/share/pkgconfig`{.filename} to your `PKG_CONFIG_PATH`{.envar} variable. It is also helpful to specify additional search paths for [**gcc**]{.command} and an include directory for the [**aclocal**]{.command} program. Issue the following commands as the `root`{.systemitem} user:
+If you've decided to <span class="emphasis"><em>not</em></span> use the standard prefix, be sure to add <code class="filename">$XORG_PREFIX/bin</code> to your <code class="envar">PATH</code> environment variable, and <code class="filename">$XORG_PREFIX/lib/pkgconfig</code> and <code class="filename">$XORG_PREFIX/share/pkgconfig</code> to your <code class="envar">PKG_CONFIG_PATH</code> variable. It is also helpful to specify additional search paths for <span class="command"><strong>gcc</strong></span> and an include directory for the <span class="command"><strong>aclocal</strong></span> program. Issue the following commands as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 cat >> /etc/profile.d/xorg.sh << "EOF"
 
 pathappend $XORG_PREFIX/bin             PATH
@@ -138,48 +138,48 @@ EOF
 
 The script above needs to be activated. Normally it will be automatic at login, but to activate it now, as a regular user, run:
 
-``` userinput
+```bash
 source /etc/profile.d/xorg.sh
 ```
 
-You should also add `$XORG_PREFIX/lib`{.filename} to the `/etc/ld.so.conf`{.filename} file. Again, as the `root`{.systemitem} user, issue the following command:
+You should also add <code class="filename">$XORG_PREFIX/lib</code> to the <code class="filename">/etc/ld.so.conf</code> file. Again, as the <code class="systemitem">root</code> user, issue the following command:
 
-``` userinput
+```bash
 echo "$XORG_PREFIX/lib" >> /etc/ld.so.conf
 ```
 
-You should also modify `/etc/man_db.conf`{.filename}, adding appropriate MANDATORY_MANPATH, MANPATH_MAP, and MANDB_MAP entries following the examples for `/usr/X11R6`{.filename}. Issue the following command as the `root`{.systemitem} user:
+You should also modify <code class="filename">/etc/man_db.conf</code>, adding appropriate MANDATORY_MANPATH, MANPATH_MAP, and MANDB_MAP entries following the examples for <code class="filename">/usr/X11R6</code>. Issue the following command as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 sed -e "s@X11R6/man@X11R6/share/man@g" \
     -e "s@/usr/X11R6@$XORG_PREFIX@g"   \
     -i /etc/man_db.conf
 ```
 
-Some applications look for shared files in `/usr/share/X11`{.filename}. Create a symbolic link to the proper location as the `root`{.systemitem} user:
+Some applications look for shared files in <code class="filename">/usr/share/X11</code>. Create a symbolic link to the proper location as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 ln -svf $XORG_PREFIX/share/X11 /usr/share/X11
 ```
 
 If building KDE, some cmake files look for Xorg in places other than \$XORG_PREFIX. Allow cmake to find Xorg with:
 
-``` userinput
+```bash
 ln -svf $XORG_PREFIX /usr/X11R6
 ```
-:::::::
-:::::::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](installing.md "Graphical Environments"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](installing.md "Graphical Environments")
 
     Graphical Environments
 
--   [Next](util-macros.md "util-macros-1.20.2"){accesskey="n"}
+-   [Next](util-macros.md "util-macros-1.20.2")
 
     util-macros-1.20.2
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

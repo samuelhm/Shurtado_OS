@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 20. Major Servers
 
--   [Prev](bind.md "BIND-9.20.20"){accesskey="p"}
+-   [Prev](bind.md "BIND-9.20.20")
 
     BIND-9.20.20
 
--   [Next](proftpd.md "ProFTPD-1.3.9a"){accesskey="n"}
+-   [Next](proftpd.md "ProFTPD-1.3.9a")
 
     ProFTPD-1.3.9a
 
--   [Up](majorservers.md "Chapter 20. Major Servers"){accesskey="u"}
+-   [Up](majorservers.md "Chapter 20. Major Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kea}Kea 3.0.2 DHCP Server {#kea-3.0.2-dhcp-server .sect1}
+# Kea 3.0.2 DHCP Server {#kea-3.0.2-dhcp-server}
 
-::::::::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to ISC Kea DHCP Server {#introduction-to-isc-kea-dhcp-server .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to ISC Kea DHCP Server {#introduction-to-isc-kea-dhcp-server}
 
-The [ISC Kea]{.application} package contains the server programs for DHCP. This is the successor of the old ISC DHCP server which went out of support in December 2022.
+The <span class="application">ISC Kea</span> package contains the server programs for DHCP. This is the successor of the old ISC DHCP server which went out of support in December 2022.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.isc.org/isc/kea/3.0.2/kea-3.0.2.tar.xz](https://downloads.isc.org/isc/kea/3.0.2/kea-3.0.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.isc.org/isc/kea/3.0.2/kea-3.0.2.tar.xz">https://downloads.isc.org/isc/kea/3.0.2/kea-3.0.2.tar.xz</a>
 
 -   Download MD5 sum: a673e95637b708b3b1926c696cdf168b
 
@@ -44,47 +44,47 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 231 MB (47 MB installed; add 425 MB for tests)
 
 -   Estimated build time: 6.4 SBU (with parallelism=4; add 17 SBU for tests)
-:::
+</div>
 
 ### Kea Dependencies
 
 #### Required
 
-[Boost-1.91.0-1](../general/boost.md "boost-1.91.0-1"){.xref} and [log4cplus-2.1.2](../general/log4cplus.md "log4cplus-2.1.2"){.xref}
+<a class="xref" href="../general/boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a> and <a class="xref" href="../general/log4cplus.md" title="log4cplus-2.1.2">log4cplus-2.1.2</a>
 
 #### Optional
 
-[BIND-9.20.20](bind.md "BIND-9.20.20"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}, [Botan](https://botan.randombit.net/){.ulink}, [cppcheck](https://cppcheck.sourceforge.io/){.ulink}, [libyang](https://github.com/CESNET/libyang){.ulink}, and [plantuml](https://plantuml.com/){.ulink}
+<a class="xref" href="bind.md" title="BIND-9.20.20">BIND-9.20.20</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>, <a class="ulink" href="https://botan.randombit.net/">Botan</a>, <a class="ulink" href="https://cppcheck.sourceforge.io/">cppcheck</a>, <a class="ulink" href="https://github.com/CESNET/libyang">libyang</a>, and <a class="ulink" href="https://plantuml.com/">plantuml</a>
 
 #### Optional (for regenerating documentation)
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}, [Graphviz-15.0.0](../general/graphviz.md "Graphviz-15.0.0"){.xref}, [sphinx_rtd_theme-3.1.0](../general/python-modules.md#sphinx_rtd_theme "Sphinx_rtd_theme-3.1.0"){.xref}, and [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} (or [install-tl-unx](../pst/tl-installer.md "install-tl-unx"){.xref})
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../general/graphviz.md" title="Graphviz-15.0.0">Graphviz-15.0.0</a>, <a class="xref" href="../general/python-modules.md#sphinx_rtd_theme" title="Sphinx_rtd_theme-3.1.0">sphinx_rtd_theme-3.1.0</a>, and <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> (or <a class="xref" href="../pst/tl-installer.md" title="install-tl-unx">install-tl-unx</a>)
 
 #### Optional database backends
 
-[MariaDB-12.3.2](mariadb.md "MariaDB-12.3.2"){.xref} or [MySQL](https://www.mysql.com/){.ulink}, and [PostgreSQL-18.4](postgresql.md "PostgreSQL-18.4"){.xref}
-:::::
+<a class="xref" href="mariadb.md" title="MariaDB-12.3.2">MariaDB-12.3.2</a> or <a class="ulink" href="https://www.mysql.com/">MySQL</a>, and <a class="xref" href="postgresql.md" title="PostgreSQL-18.4">PostgreSQL-18.4</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#kea-dhcp-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 You must have Packet Socket support. IPv6 support is optional. Enable the following options in the kernel and reboot if necessary:
 
-``` screen
+```console
 [*] Networking support --->                                                [NET]
   Networking options --->
     <*/M> Packet socket                                                 [PACKET]
     [*]   TCP/IP networking                                               [INET]
     <*>     The IPv6 protocol --->                                        [IPV6]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of ISC Kea DHCP Server {#installation-of-isc-kea-dhcp-server .sect2}
+<div class="installation" lang="en">
+## Installation of ISC Kea DHCP Server {#installation-of-isc-kea-dhcp-server}
 
 First, apply a few fixes required for boost-1.91.0-1:
 
-``` userinput
+```bash
 sed -e "/asio_wrapper/a#include <boost/asio/deadline_timer.hpp>" \
     -i src/lib/asiolink/interval_timer.cc                        \
        src/lib/asiodns/io_fetch.cc                               \
@@ -93,9 +93,9 @@ sed -e "/lexical_cast.hpp/a #include <boost/static_assert.hpp>"  \
     -i src/lib/log/logger_level_impl.cc
 ```
 
-Now, install [ISC Kea DHCP Server]{.application} by running the following commands:
+Now, install <span class="application">ISC Kea DHCP Server</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -110,94 +110,94 @@ meson setup ..             \
 ninja
 ```
 
-If tests were enabled, run [**ninja test**]{.command} to test the results. There are tests which require a live database when any of the database hooks are built. Some tests may fail if IPv6 support is not functional.
+If tests were enabled, run <span class="command"><strong>ninja test</strong></span> to test the results. There are tests which require a live database when any of the database hooks are built. Some tests may fail if IPv6 support is not functional.
 
-To install the [ISC Kea DHCP Server]{.application} suite, issue the following commands as the `root`{.systemitem} user:
+To install the <span class="application">ISC Kea DHCP Server</span> suite, issue the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-Fix some hard coded paths in the [**keactrl**]{.command} script and in it's configuration file:
+Fix some hard coded paths in the <span class="command"><strong>keactrl</strong></span> script and in it's configuration file:
 
-``` root
+```bash
 sed -e "s:\${prefix}/::" -i /usr/sbin/keactrl             &&
 sed -e "s:\${prefix}//etc:/etc:" -i /etc/kea/keactrl.conf
 ```
 
-Create some directories and fix their permission settings as the `root`{.systemitem} user:
+Create some directories and fix their permission settings as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -dm0750 /var/lib/kea
 install -dm0750 /var/log/kea
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D crypto=openssl`*: Allows using OpenSSL for communicating with the control-agent and for DNS updates. Use `-D crypto=botan`{.option} if you want to use Botan. The default provider is OpenSSL.
+*`-D crypto=openssl`*: Allows using OpenSSL for communicating with the control-agent and for DNS updates. Use <code class="option">-D crypto=botan</code> if you want to use Botan. The default provider is OpenSSL.
 
-`-D postgresql=enabled`{.option} or `-D mysql=enabled`{.option}: [ISC Kea]{.application} can store the leases inside of a database. This might be useful in large environments running a cluster of DHCP servers. Using the [*memfile*]{.emphasis} backend (which is a CSV file stored locally) is possible, and this method is what the default configuration presented here uses.
+<code class="option">-D postgresql=enabled</code> or <code class="option">-D mysql=enabled</code>: <span class="application">ISC Kea</span> can store the leases inside of a database. This might be useful in large environments running a cluster of DHCP servers. Using the <span class="emphasis"><em>memfile</em></span> backend (which is a CSV file stored locally) is possible, and this method is what the default configuration presented here uses.
 
-`-D tests=enabled`{.option}: This option is required to build the test suite. Using this option causes the build size to increase significantly, so it should only be enabled if you are going to run the test suite.
+<code class="option">-D tests=enabled</code>: This option is required to build the test suite. Using this option causes the build size to increase significantly, so it should only be enabled if you are going to run the test suite.
 
-`-D krb5=enabled`{.option}: This switch enables integration with Kerberos for authenticating client computers in an enterprise environment.
-:::
+<code class="option">-D krb5=enabled</code>: This switch enables integration with Kerberos for authenticating client computers in an enterprise environment.
+</div>
 
-::::::::::: {.configuration lang="en"}
-## Configuring ISC Kea DHCP Server {#configuring-isc-kea-dhcp-server .sect2}
+<div class="configuration" lang="en">
+## Configuring ISC Kea DHCP Server {#configuring-isc-kea-dhcp-server}
 
 The support of IPv4, IPv6 and DDNS has been split into separate servers which run independently from each other. Each of them has its own configuration file.
 
-Note that the Kea Control Agent is deprecated since version 3.0.0. Do not confuse [kea-ctrl-agent]{.application} with [keactrl]{.application}.
+Note that the Kea Control Agent is deprecated since version 3.0.0. Do not confuse <span class="application">kea-ctrl-agent</span> with <span class="application">keactrl</span>.
 
-Consult the [Kea Administrator Reference Manual](https://kea.readthedocs.io/en/kea-3.0.2/){.ulink} for detailed information about the configuration of [ISC Kea]{.application} as it is a quite capable system. The configuration shown below is a bare minimum to get a DHCP server running but it already includes configuration for DDNS (Dynamic DNS). That setup is best for small networks with a few clients and low amounts of network traffic. For larger installations with thousands of clients, [ISC Kea]{.application} can be configured to use databases such as (mariadb or postgresql) to store the leases and build a cluster with multiple nodes. It can be integrated with [ISC Stork](https://www.isc.org/categories/stork/){.ulink}, which is a management dashboard to [ISC Kea]{.application}.
+Consult the <a class="ulink" href="https://kea.readthedocs.io/en/kea-3.0.2/">Kea Administrator Reference Manual</a> for detailed information about the configuration of <span class="application">ISC Kea</span> as it is a quite capable system. The configuration shown below is a bare minimum to get a DHCP server running but it already includes configuration for DDNS (Dynamic DNS). That setup is best for small networks with a few clients and low amounts of network traffic. For larger installations with thousands of clients, <span class="application">ISC Kea</span> can be configured to use databases such as (mariadb or postgresql) to store the leases and build a cluster with multiple nodes. It can be integrated with <a class="ulink" href="https://www.isc.org/categories/stork/">ISC Stork</a>, which is a management dashboard to <span class="application">ISC Kea</span>.
 
-If you want to start the DHCP Server at boot, install the [`kea-dhcpd.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package:
+If you want to start the DHCP Server at boot, install the <span class="phrase"><code class="filename">kea-dhcpd.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package:
 
-``` root
+```bash
 make install-kea-dhcpd
 ```
 
-::: {.sect3 lang="en"}
-### []{#kea-dhcp-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/kea/kea-ctrl-agent.conf`{.filename}, `/etc/kea/kea-dhcp4.conf`{.filename}, `/etc/kea/kea-dhcp6.conf`{.filename}, and `/etc/kea/kea-dhcp-ddns.conf`{.filename}
-:::
+<code class="filename">/etc/kea/kea-ctrl-agent.conf</code>, <code class="filename">/etc/kea/kea-dhcp4.conf</code>, <code class="filename">/etc/kea/kea-dhcp6.conf</code>, and <code class="filename">/etc/kea/kea-dhcp-ddns.conf</code>
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#kea-sysd-config}Kea Configuration Using Systemd Units {#kea-configuration-using-systemd-units .sect3}
+<div class="sect3" lang="en">
+### Kea Configuration Using Systemd Units {#kea-configuration-using-systemd-units}
 
 Four service units are used to start various daemons provided by Kea:
 
-::: itemizedlist
+<div class="itemizedlist">
 -   Control Agent
 
-    The Control Agent is a daemon which allows the (re)configuration of the Kea DHCP service via REST API. Run [**systemctl enable kea-ctrl-agent**]{.command} if this daemon is needed.
+    The Control Agent is a daemon which allows the (re)configuration of the Kea DHCP service via REST API. Run <span class="command"><strong>systemctl enable kea-ctrl-agent</strong></span> if this daemon is needed.
 
 -   IPv4 DHCP server
 
-    This daemon handles requests for IPv4 addresses. Run [**systemctl enable kea-dhcp4-server**]{.command} to have it started by systemd.
+    This daemon handles requests for IPv4 addresses. Run <span class="command"><strong>systemctl enable kea-dhcp4-server</strong></span> to have it started by systemd.
 
 -   IPv6 DHCP server
 
-    This daemon handles requests for IPv6 addresses. Run [**systemctl enable kea-dhcp6-server**]{.command} to have it started by systemd.
+    This daemon handles requests for IPv6 addresses. Run <span class="command"><strong>systemctl enable kea-dhcp6-server</strong></span> to have it started by systemd.
 
 -   Dynamic DNS
 
-    This daemon is used to update a DNS server dynamically when Kea assigns an IP address to a device. Run [**systemctl enable kea-ddns-server**]{.command} to have it started by systemd.
-:::
+    This daemon is used to update a DNS server dynamically when Kea assigns an IP address to a device. Run <span class="command"><strong>systemctl enable kea-ddns-server</strong></span> to have it started by systemd.
+</div>
 
 The Netconf service is not installed because the required dependencies are not installed by BLFS, and configuring it correctly is complicated.
-::::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#kea-ctrl-agent-config}Control Agent Configuration {#control-agent-configuration .sect3}
+<div class="sect3" lang="en">
+### Control Agent Configuration {#control-agent-configuration}
 
-The provided configuration could be used without changes. However, in BLFS, objects like sockets are stored in `/run`{.filename} rather than in `/tmp`{.filename}.
+The provided configuration could be used without changes. However, in BLFS, objects like sockets are stored in <code class="filename">/run</code> rather than in <code class="filename">/tmp</code>.
 
-``` root
+```bash
 cat > /etc/kea/kea-ctrl-agent.conf << "EOF"
 // Begin /etc/kea/kea-ctrl-agent.conf
 {
@@ -239,14 +239,14 @@ cat > /etc/kea/kea-ctrl-agent.conf << "EOF"
 // End /etc/kea/kea-ctrl-agent.conf
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#kea-dhcp4-config}IPv4 DHCP Server Configuration {#ipv4-dhcp-server-configuration .sect3}
+<div class="sect3" lang="en">
+### IPv4 DHCP Server Configuration {#ipv4-dhcp-server-configuration}
 
-A sample configuration file is created in `/etc/kea/kea-dhcp4.conf`{.filename}. Adjust the file to suit your needs or overwrite it by running the following command as the `root`{.systemitem} user (you'll need to edit this file anyway: at least the [*interfaces*]{.emphasis} field, the [*ddns-qualifying-suffix*]{.emphasis} field, and almost all the fields in [*Subnet4*]{.emphasis}):
+A sample configuration file is created in <code class="filename">/etc/kea/kea-dhcp4.conf</code>. Adjust the file to suit your needs or overwrite it by running the following command as the <code class="systemitem">root</code> user (you'll need to edit this file anyway: at least the <span class="emphasis"><em>interfaces</em></span> field, the <span class="emphasis"><em>ddns-qualifying-suffix</em></span> field, and almost all the fields in <span class="emphasis"><em>Subnet4</em></span>):
 
-``` root
+```bash
 cat > /etc/kea/kea-dhcp4.conf << "EOF"
 // Begin /etc/kea/kea-dhcp4.conf
 {
@@ -331,20 +331,20 @@ cat > /etc/kea/kea-dhcp4.conf << "EOF"
 // End /etc/kea/kea-dhcp4.conf
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#kea-dhcp6-config}IPv6 DHCP Server Configuration {#ipv6-dhcp-server-configuration .sect3}
+<div class="sect3" lang="en">
+### IPv6 DHCP Server Configuration {#ipv6-dhcp-server-configuration}
 
-The configuration for IPv6 is similar to the configuration of IPv4. The configuration file is `/etc/kea/kea-dhcp6.conf`{.filename}.
-:::
+The configuration for IPv6 is similar to the configuration of IPv4. The configuration file is <code class="filename">/etc/kea/kea-dhcp6.conf</code>.
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#kea-dhcp-ddns-config}Dynamic DNS Configuration {#dynamic-dns-configuration .sect3}
+<div class="sect3" lang="en">
+### Dynamic DNS Configuration {#dynamic-dns-configuration}
 
-If there is a [BIND-9.20.20](bind.md "BIND-9.20.20"){.xref} server running, [ISC Kea]{.application} can update the DNS records when it gives an IP address to a client. A sample configuration file is created in `/etc/kea/kea-dhcp-ddns.conf`{.filename}. Adjust the file to suit your needs or overwrite it by running the following command as the `root`{.systemitem} user:
+If there is a <a class="xref" href="bind.md" title="BIND-9.20.20">BIND-9.20.20</a> server running, <span class="application">ISC Kea</span> can update the DNS records when it gives an IP address to a client. A sample configuration file is created in <code class="filename">/etc/kea/kea-dhcp-ddns.conf</code>. Adjust the file to suit your needs or overwrite it by running the following command as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 cat > /etc/kea/kea-dhcp-ddns.conf << "EOF"
 // Begin /etc/kea/kea-dhcp-ddns.conf
 {
@@ -413,64 +413,64 @@ cat > /etc/kea/kea-dhcp-ddns.conf << "EOF"
 EOF
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The value of `secret`{.literal} is just an example. Generate the key for your installation by using the [**rndc-confgen -a**]{.command} command or the [**tsig-keygen**]{.command} command which both are provided by [BIND-9.20.20](bind.md "BIND-9.20.20"){.xref}.
+The value of <code class="literal">secret</code> is just an example. Generate the key for your installation by using the <span class="command"><strong>rndc-confgen -a</strong></span> command or the <span class="command"><strong>tsig-keygen</strong></span> command which both are provided by <a class="xref" href="bind.md" title="BIND-9.20.20">BIND-9.20.20</a>.
 
-In this example configuration, it is assumed that the DNS server runs on the same machine as Kea does (accessible via `127.0.0.1`{.literal}) and that this machine has the IP `192.168.56.2`{.literal}.
-:::
-::::
-:::::::::::
+In this example configuration, it is assumed that the DNS server runs on the same machine as Kea does (accessible via <code class="literal">127.0.0.1</code>) and that this machine has the IP <code class="literal">192.168.56.2</code>.
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [keactrl, kea-admin, kea-ctrl-agent, kea-dhcp4, kea-dhcp6, kea-dhcp-ddns, kea-lfc, kea-msg-compiler, and kea-shell]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">keactrl, kea-admin, kea-ctrl-agent, kea-dhcp4, kea-dhcp6, kea-dhcp-ddns, kea-lfc, kea-msg-compiler, and kea-shell</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libkea-asiodns.so, libkea-asiolink.so, libkea-cc.so, libkea-cfgrpt.so, libkea-config.so, libkea-cryptolink.so, libkea-d2srv.so, libkea-database.so, libkea-dhcp_ddns.so, libkea-dhcp.so, libkea-dhcpsrv.so, libkea-dns.so, libkea-eval.so, libkea-exceptions.so, libkea-hooks.so, libkea-http.so, libkea-log.so, libkea-log-interprocess.so, libkea-mysql.so, libkea-pgsql.so, libkea-process.so, libkea-stats.so, libkea-tcp.so, libkea-util.so, and libkea-util-io.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libkea-asiodns.so, libkea-asiolink.so, libkea-cc.so, libkea-cfgrpt.so, libkea-config.so, libkea-cryptolink.so, libkea-d2srv.so, libkea-database.so, libkea-dhcp_ddns.so, libkea-dhcp.so, libkea-dhcpsrv.so, libkea-dns.so, libkea-eval.so, libkea-exceptions.so, libkea-hooks.so, libkea-http.so, libkea-log.so, libkea-log-interprocess.so, libkea-mysql.so, libkea-pgsql.so, libkea-process.so, libkea-stats.so, libkea-tcp.so, libkea-util.so, and libkea-util-io.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/kea, /run/kea, /usr/include/kea, /usr/lib/kea, /usr/lib/python3.14/site-packages/kea, /usr/share/kea, /usr/share/doc/kea-3.0.2, /var/lib/kea, and /var/log/kea]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/kea, /run/kea, /usr/include/kea, /usr/lib/kea, /usr/lib/python3.14/site-packages/kea, /usr/share/kea, /usr/share/doc/kea-3.0.2, /var/lib/kea, and /var/log/kea</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#keactrl}[[**keactrl**]{.command}]{.term}                 is a tool to control (start/stop) the server processes
-  []{#kea-admin}[[**kea-admin**]{.command}]{.term}             is a shell script which performs DHCP database maintenance
-  []{#kea-ctrl-agent}[[**kea-ctrl-agent**]{.command}]{.term}   is a daemon which exposes a RESTful control interface for managing Kea servers
-  []{#kea-dhcp4}[[**kea-dhcp4**]{.command}]{.term}             is the DHCP server daemon providing IPv4 addresses
-  []{#kea-dhcp6}[[**kea-dhcp6**]{.command}]{.term}             is the DHCP server daemon providing IPv6 addresses
-  []{#kea-dhcp-ddns}[[**kea-dhcp-ddns**]{.command}]{.term}     is the DHCP server daemon that performs Dynamic DNS updates
-  []{#kea-lfc}[[**kea-lfc**]{.command}]{.term}                 is the service process that removes redundant information from the files used to provide persistent storage for the memfile database backend. It is run by the Kea DHCP server
-  []{#keashell}[[**keashell**]{.command}]{.term}               is a RESTful client to the [ISC Kea]{.application} DHCP services
+  <a id="keactrl"></a><span class="command"><span class="term"><strong>keactrl</strong></span></span>                 is a tool to control (start/stop) the server processes
+  <a id="kea-admin"></a><span class="command"><span class="term"><strong>kea-admin</strong></span></span>             is a shell script which performs DHCP database maintenance
+  <a id="kea-ctrl-agent"></a><span class="command"><span class="term"><strong>kea-ctrl-agent</strong></span></span>   is a daemon which exposes a RESTful control interface for managing Kea servers
+  <a id="kea-dhcp4"></a><span class="command"><span class="term"><strong>kea-dhcp4</strong></span></span>             is the DHCP server daemon providing IPv4 addresses
+  <a id="kea-dhcp6"></a><span class="command"><span class="term"><strong>kea-dhcp6</strong></span></span>             is the DHCP server daemon providing IPv6 addresses
+  <a id="kea-dhcp-ddns"></a><span class="command"><span class="term"><strong>kea-dhcp-ddns</strong></span></span>     is the DHCP server daemon that performs Dynamic DNS updates
+  <a id="kea-lfc"></a><span class="command"><span class="term"><strong>kea-lfc</strong></span></span>                 is the service process that removes redundant information from the files used to provide persistent storage for the memfile database backend. It is run by the Kea DHCP server
+  <a id="keashell"></a><span class="command"><span class="term"><strong>keashell</strong></span></span>               is a RESTful client to the <span class="application">ISC Kea</span> DHCP services
   ------------------------------------------------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](bind.md "BIND-9.20.20"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](bind.md "BIND-9.20.20")
 
     BIND-9.20.20
 
--   [Next](proftpd.md "ProFTPD-1.3.9a"){accesskey="n"}
+-   [Next](proftpd.md "ProFTPD-1.3.9a")
 
     ProFTPD-1.3.9a
 
--   [Up](majorservers.md "Chapter 20. Major Servers"){accesskey="u"}
+-   [Up](majorservers.md "Chapter 20. Major Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

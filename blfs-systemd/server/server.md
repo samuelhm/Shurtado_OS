@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../basicnet/othermn.md "Other Mail and News Programs"){accesskey="p"}
+-   [Prev](../basicnet/othermn.md "Other Mail and News Programs")
 
     Other Mail and News Programs
 
--   [Next](majorservers.md "Major Servers"){accesskey="n"}
+-   [Next](majorservers.md "Major Servers")
 
     Major Servers
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#server}Servers {#servers .part}
+# Servers {#servers}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [20. Major Servers](majorservers.md)
@@ -43,19 +43,19 @@
 -   #### [23. Other Server Software](other.md)
 
     -   [OpenLDAP-2.6.13](openldap.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../basicnet/othermn.md "Other Mail and News Programs"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../basicnet/othermn.md "Other Mail and News Programs")
 
     Other Mail and News Programs
 
--   [Next](majorservers.md "Major Servers"){accesskey="n"}
+-   [Next](majorservers.md "Major Servers")
 
     Major Servers
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

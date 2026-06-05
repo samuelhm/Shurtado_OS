@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](autofs.md "autofs-5.1.9"){accesskey="p"}
+-   [Prev](autofs.md "autofs-5.1.9")
 
     autofs-5.1.9
 
--   [Next](bubblewrap.md "Bubblewrap-0.11.2"){accesskey="n"}
+-   [Next](bubblewrap.md "Bubblewrap-0.11.2")
 
     Bubblewrap-0.11.2
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#bluez}BlueZ-5.86 {#bluez-5.86 .sect1}
+# BlueZ-5.86 {#bluez-5.86}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to BlueZ {#introduction-to-bluez .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to BlueZ {#introduction-to-bluez}
 
-The [BlueZ]{.application} package contains the Bluetooth protocol stack for Linux.
+The <span class="application">BlueZ</span> package contains the Bluetooth protocol stack for Linux.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz](https://www.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz">https://www.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz</a>
 
 -   Download MD5 sum: 8b5c680289e703dd2fd2a97b999d4e81
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 141 MB (with tests)
 
 -   Estimated build time: 0.8 SBU (using parallelism=4; with tests)
-:::
+</div>
 
 ### BlueZ Dependencies
 
 #### Required
 
-[dbus-1.16.2](dbus.md "dbus-1.16.2"){.xref}, [GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref}, and [libical-4.0.2](libical.md "libical-4.0.2"){.xref}
+<a class="xref" href="dbus.md" title="dbus-1.16.2">dbus-1.16.2</a>, <a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>, and <a class="xref" href="libical.md" title="libical-4.0.2">libical-4.0.2</a>
 
 #### Recommended
 
-[docutils-0.23](python-modules.md#docutils "docutils-0.23"){.xref} (to generate man pages)
-:::::
+<a class="xref" href="python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> (to generate man pages)
+</div>
 
-::: {.kernel lang="en"}
-## []{#bluez-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-If you are building this package to use bluetooth devices (rather than as a build dependency), enable the following options in the kernel configuration, also the options in the [“[Cryptographic API]{.quote}”]{.quote} section if you intend to run the tests, and recompile the kernel if necessary:
+If you are building this package to use bluetooth devices (rather than as a build dependency), enable the following options in the kernel configuration, also the options in the <span class="quote">“<span class="quote">Cryptographic API</span>”</span> section if you intend to run the tests, and recompile the kernel if necessary:
 
-``` screen
+```console
 General setup --->
   # If it is disabled, [TIMERFD] and [EVENTFD] will be hidden and
   # enabled implicitly.  We DO NOT recommend to enable [EXPERT]
@@ -102,20 +102,20 @@ General setup --->
     <*/M> Symmetric key cipher algorithms             [CRYPTO_USER_API_SKCIPHER]
     <*/M> AEAD cipher algorithms                          [CRYPTO_USER_API_AEAD]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of BlueZ {#installation-of-bluez .sect2}
+<div class="installation" lang="en">
+## Installation of BlueZ {#installation-of-bluez}
 
 First, fix a regression that prevents BlueZ from initializing adapters in the latest release:
 
-``` userinput
+```bash
 sed -i '4967,4968d' src/adapter.c
 ```
 
-Install [BlueZ]{.application} by running the following commands:
+Install <span class="application">BlueZ</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr         \
             --sysconfdir=/etc     \
             --localstatedir=/var  \
@@ -125,47 +125,47 @@ make ICAL_LIBS="-lical -licalvcal"
 
 To test the results, issue: **`make check`**.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 ln -svf ../libexec/bluetooth/bluetoothd /usr/sbin
 ```
 
-Install the main configuration file as the `root`{.systemitem} user:
+Install the main configuration file as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -dm555 /etc/bluetooth &&
 install -v -m644 src/main.conf /etc/bluetooth/main.conf
 ```
 
-If desired, install the API documentation as the `root`{.systemitem} user:
+If desired, install the API documentation as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -dm755 /usr/share/doc/bluez-5.86 &&
 install -v -m644 doc/*.txt /usr/share/doc/bluez-5.86
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--enable-library`*: This switch enables building the [BlueZ]{.application} 5 compatibility library which is required by some applications.
+*`--enable-library`*: This switch enables building the <span class="application">BlueZ</span> 5 compatibility library which is required by some applications.
 
-`--disable-manpages`{.option}: This switch disables generating the manual pages. Add this switch if you don't have [docutils-0.23](python-modules.md#docutils "docutils-0.23"){.xref} installed.
+<code class="option">--disable-manpages</code>: This switch disables generating the manual pages. Add this switch if you don't have <a class="xref" href="python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> installed.
 
-[**ln -svf ../libexec/bluetooth/bluetoothd /usr/sbin**]{.command}: This command makes access to the bluetooth daemon more convenient.
-:::
+<span class="command"><strong>ln -svf ../libexec/bluetooth/bluetoothd /usr/sbin</strong></span>: This command makes access to the bluetooth daemon more convenient.
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring BlueZ {#configuring-bluez .sect2}
+<div class="configuration" lang="en">
+## Configuring BlueZ {#configuring-bluez}
 
-::: {.sect3 lang="en"}
-### []{#bluez-config}Configuration Files {#configuration-files .sect3}
+<div class="sect3" lang="en">
+### Configuration Files {#configuration-files}
 
-`/etc/bluetooth/main.conf`{.filename} is installed automatically during the installation. Additionally, there are two supplementary configuration files. You can optionally install the following files as the `root`{.systemitem} user:
+<code class="filename">/etc/bluetooth/main.conf</code> is installed automatically during the installation. Additionally, there are two supplementary configuration files. You can optionally install the following files as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/bluetooth/rfcomm.conf << "EOF"
 # Start rfcomm.conf
 # Set up the RFCOMM configuration of the Bluetooth subsystem in the Linux kernel.
@@ -177,7 +177,7 @@ cat > /etc/bluetooth/rfcomm.conf << "EOF"
 EOF
 ```
 
-``` root
+```bash
 cat > /etc/bluetooth/uart.conf << "EOF"
 # Start uart.conf
 # Attach serial devices via UART HCI to BlueZ stack
@@ -187,80 +187,80 @@ cat > /etc/bluetooth/uart.conf << "EOF"
 # End of uart.conf
 EOF
 ```
-:::
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#bluez-init} Systemd Bluez Services {#systemd-bluez-services .sect3}
+<div class="sect3" lang="en">
+### Systemd Bluez Services {#systemd-bluez-services}
 
-To start the [**bluetoothd**]{.command} daemon at boot, enable the previously installed systemd unit by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>bluetoothd</strong></span> daemon at boot, enable the previously installed systemd unit by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable bluetooth
 ```
 
-To start the [**obexd**]{.command} daemon for a user session (to support some Bluetooth programs using it), enable the previously installed systemd unit for all users by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>obexd</strong></span> daemon for a user session (to support some Bluetooth programs using it), enable the previously installed systemd unit for all users by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable --global obex
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-[Systemd]{.application} will start the Bluetooth daemon only when a bluetooth device is detected on the system.
-:::
-::::
-::::::
+<span class="application">Systemd</span> will start the Bluetooth daemon only when a bluetooth device is detected on the system.
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [bluemoon, bluetoothctl, bluetoothd (symlink), btattach, btmon, hex2hcd, l2ping, l2test, mpris-proxy, and rctest]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">bluemoon, bluetoothctl, bluetoothd (symlink), btattach, btmon, hex2hcd, l2ping, l2test, mpris-proxy, and rctest</span>
+</div>
 
-::: seg
-**Installed Library:** [libbluetooth.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libbluetooth.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/bluetooth, /usr/{include,libexec}/bluetooth, and /usr/share/doc/bluez-5.86]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/bluetooth, /usr/{include,libexec}/bluetooth, and /usr/share/doc/bluez-5.86</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- --------------------------------------------------------------------------------------------------
-  []{#bluemoon}[[**bluemoon**]{.command}]{.term}           is a Bluetooth configuration utility
-  []{#bluetoothctl}[[**bluetoothctl**]{.command}]{.term}   is the interactive Bluetooth control program
-  []{#bluetoothd}[[**bluetoothd**]{.command}]{.term}       is the Bluetooth daemon
-  []{#btmon}[[**btmon**]{.command}]{.term}                 provides access to the Bluetooth subsystem monitor infrastructure for reading HCI traces
-  []{#hex2hcd}[[**hex2hcd**]{.command}]{.term}             is used to convert a file needed by Broadcom devices to hcd (Broadcom bluetooth firmware) format
-  []{#l2ping}[[**l2ping**]{.command}]{.term}               is used to send a L2CAP echo request to the Bluetooth MAC address given in dotted hex notation
-  []{#l2test}[[**l2test**]{.command}]{.term}               is a L2CAP testing program
-  []{#rctest}[[**rctest**]{.command}]{.term}               is used to test RFCOMM communications on the Bluetooth stack
-  []{#libbluetooth}[`libbluetooth.so`{.filename}]{.term}   contains the [BlueZ]{.application} 5 API functions
+  <a id="bluemoon"></a><span class="command"><span class="term"><strong>bluemoon</strong></span></span>           is a Bluetooth configuration utility
+  <a id="bluetoothctl"></a><span class="command"><span class="term"><strong>bluetoothctl</strong></span></span>   is the interactive Bluetooth control program
+  <a id="bluetoothd"></a><span class="command"><span class="term"><strong>bluetoothd</strong></span></span>       is the Bluetooth daemon
+  <a id="btmon"></a><span class="command"><span class="term"><strong>btmon</strong></span></span>                 provides access to the Bluetooth subsystem monitor infrastructure for reading HCI traces
+  <a id="hex2hcd"></a><span class="command"><span class="term"><strong>hex2hcd</strong></span></span>             is used to convert a file needed by Broadcom devices to hcd (Broadcom bluetooth firmware) format
+  <a id="l2ping"></a><span class="command"><span class="term"><strong>l2ping</strong></span></span>               is used to send a L2CAP echo request to the Bluetooth MAC address given in dotted hex notation
+  <a id="l2test"></a><span class="command"><span class="term"><strong>l2test</strong></span></span>               is a L2CAP testing program
+  <a id="rctest"></a><span class="command"><span class="term"><strong>rctest</strong></span></span>               is used to test RFCOMM communications on the Bluetooth stack
+  <a id="libbluetooth"></a><span class="term"><code class="filename">libbluetooth.so</code></span>   contains the <span class="application">BlueZ</span> 5 API functions
   -------------------------------------------------------- --------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](autofs.md "autofs-5.1.9"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](autofs.md "autofs-5.1.9")
 
     autofs-5.1.9
 
--   [Next](bubblewrap.md "Bubblewrap-0.11.2"){accesskey="n"}
+-   [Next](bubblewrap.md "Bubblewrap-0.11.2")
 
     Bubblewrap-0.11.2
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-admin.md "lxqt-admin-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-admin.md "lxqt-admin-2.4.0")
 
     lxqt-admin-2.4.0
 
--   [Next](lxqt-config.md "lxqt-config-2.4.0"){accesskey="n"}
+-   [Next](lxqt-config.md "lxqt-config-2.4.0")
 
     lxqt-config-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-about}lxqt-about-2.4.0 {#lxqt-about-2.4.0 .sect1}
+# lxqt-about-2.4.0 {#lxqt-about-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-about {#introduction-to-lxqt-about .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-about {#introduction-to-lxqt-about}
 
-The [lxqt-about]{.application} package provides the standalone [LXQt]{.application} [“[About]{.quote}”]{.quote} dialog.
+The <span class="application">lxqt-about</span> package provides the standalone <span class="application">LXQt</span> <span class="quote">“<span class="quote">About</span>”</span> dialog.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-about/releases/download/2.4.0/lxqt-about-2.4.0.tar.xz](https://github.com/lxqt/lxqt-about/releases/download/2.4.0/lxqt-about-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-about/releases/download/2.4.0/lxqt-about-2.4.0.tar.xz">https://github.com/lxqt/lxqt-about/releases/download/2.4.0/lxqt-about-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 12336bf5f198694c8a9736c4565c9a80
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.1 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### lxqt-about Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref}
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-about {#installation-of-lxqt-about .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-about {#installation-of-lxqt-about}
 
-Install [lxqt-about]{.application} by running the following commands:
+Install <span class="application">lxqt-about</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [lxqt-about]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">lxqt-about</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- ----------------------------------------------------------------
-  []{#lxqt-about-prog}[[**lxqt-about**]{.command}]{.term}   is the [LXQt]{.application} [“[About]{.quote}”]{.quote} dialog
+  <a id="lxqt-about-prog"></a><span class="command"><span class="term"><strong>lxqt-about</strong></span></span>   is the <span class="application">LXQt</span> <span class="quote">“<span class="quote">About</span>”</span> dialog
   --------------------------------------------------------- ----------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-admin.md "lxqt-admin-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-admin.md "lxqt-admin-2.4.0")
 
     lxqt-admin-2.4.0
 
--   [Next](lxqt-config.md "lxqt-config-2.4.0"){accesskey="n"}
+-   [Next](lxqt-config.md "lxqt-config-2.4.0")
 
     lxqt-config-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](libsecret.md "libsecret-0.21.7"){accesskey="p"}
+-   [Prev](libsecret.md "libsecret-0.21.7")
 
     libsecret-0.21.7
 
--   [Next](totem-pl-parser.md "totem-pl-parser-3.26.7"){accesskey="n"}
+-   [Next](totem-pl-parser.md "totem-pl-parser-3.26.7")
 
     totem-pl-parser-3.26.7
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#librest}librest-0.10.2 {#librest-0.10.2 .sect1}
+# librest-0.10.2 {#librest-0.10.2}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to librest {#introduction-to-librest .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to librest {#introduction-to-librest}
 
-The [librest]{.application} package contains a library that is designed to make it easier to access web services that claim to be "RESTful". It includes convenience wrappers for libsoup and libxml to make remote usage of the RESTful API easier.
+The <span class="application">librest</span> package contains a library that is designed to make it easier to access web services that claim to be "RESTful". It includes convenience wrappers for libsoup and libxml to make remote usage of the RESTful API easier.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/librest/0.10/librest-0.10.2.tar.xz](https://download.gnome.org/sources/librest/0.10/librest-0.10.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/librest/0.10/librest-0.10.2.tar.xz">https://download.gnome.org/sources/librest/0.10/librest-0.10.2.tar.xz</a>
 
 -   Download MD5 sum: 32b0ecf86932cd45b4e7078690c8306f
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.0 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### librest Dependencies
 
 #### Required
 
-[JSON-GLib-1.10.8](../general/json-glib.md "JSON-GLib-1.10.8"){.xref}, [libsoup-3.6.6](../basicnet/libsoup3.md "libsoup-3.6.6"){.xref}, and [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref}
+<a class="xref" href="../general/json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a>, <a class="xref" href="../basicnet/libsoup3.md" title="libsoup-3.6.6">libsoup-3.6.6</a>, and <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Optional
 
-[Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref} and [gtksourceview5-5.20.0](../x/gtksourceview5.md "gtksourceview5-5.20.0"){.xref} (to build the demo), and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a> and <a class="xref" href="../x/gtksourceview5.md" title="gtksourceview5-5.20.0">gtksourceview5-5.20.0</a> (to build the demo), and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of librest {#installation-of-librest .sect2}
+<div class="installation" lang="en">
+## Installation of librest {#installation-of-librest}
 
-Install [librest]{.application} by running the following commands:
+Install <span class="application">librest</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -86,76 +86,76 @@ meson setup --prefix=/usr       \
 ninja
 ```
 
-If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to build the API documentation for this package, issue:
+If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to build the API documentation for this package, issue:
 
-``` userinput
+```bash
 sed "/output/s/librest-1.0/librest-0.10.2/" -i ../docs/meson.build &&
 meson configure -D gtk_doc=true                                    &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D gtk_doc=false`*: Allow building this package without [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed. If you have [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and you wish to rebuild and install the API documentation, a [**meson configure**]{.command} command will reset this option.
+*`-D gtk_doc=false`*: Allow building this package without <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed. If you have <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and you wish to rebuild and install the API documentation, a <span class="command"><strong>meson configure</strong></span> command will reset this option.
 
-*`-D examples=false`*: Remove this option if [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref} and [gtksourceview5-5.20.0](../x/gtksourceview5.md "gtksourceview5-5.20.0"){.xref} are installed and you wish to build the demonstration application provided by this package.
+*`-D examples=false`*: Remove this option if <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a> and <a class="xref" href="../x/gtksourceview5.md" title="gtksourceview5-5.20.0">gtksourceview5-5.20.0</a> are installed and you wish to build the demonstration application provided by this package.
 
-`-D vapi=true`{.option}: Use this switch if [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref} is installed and you wish to build the Vala bindings provided by this package.
-:::
+<code class="option">-D vapi=true</code>: Use this switch if <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a> is installed and you wish to build the Vala bindings provided by this package.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [librest-demo (optional)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">librest-demo (optional)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [librest-1.0.so and librest-extras-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">librest-1.0.so and librest-extras-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/rest-1.0 and /usr/share/gtk-doc/html/librest-0.10.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/rest-1.0 and /usr/share/gtk-doc/html/librest-0.10.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- -----------------------------------------------------------------------
-  []{#librest-demo}[[**librest-demo**]{.command}]{.term}               provides an example of how to use the RESTful Web API Query functions
-  []{#librest-1.0}[`librest-1.0.so`{.filename}]{.term}                 contains the RESTful Web API Query functions
-  []{#librest-extras-1.0}[`librest-extras-1.0.so`{.filename}]{.term}   contains extra RESTful Web API Query functions
+  <a id="librest-demo"></a><span class="command"><span class="term"><strong>librest-demo</strong></span></span>               provides an example of how to use the RESTful Web API Query functions
+  <a id="librest-1.0"></a><span class="term"><code class="filename">librest-1.0.so</code></span>                 contains the RESTful Web API Query functions
+  <a id="librest-extras-1.0"></a><span class="term"><code class="filename">librest-extras-1.0.so</code></span>   contains extra RESTful Web API Query functions
   -------------------------------------------------------------------- -----------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsecret.md "libsecret-0.21.7"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsecret.md "libsecret-0.21.7")
 
     libsecret-0.21.7
 
--   [Next](totem-pl-parser.md "totem-pl-parser-3.26.7"){accesskey="n"}
+-   [Next](totem-pl-parser.md "totem-pl-parser-3.26.7")
 
     totem-pl-parser-3.26.7
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

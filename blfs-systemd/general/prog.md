@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part III. General Libraries and Utilities
 
--   [Prev](usbutils.md "usbutils-019"){accesskey="p"}
+-   [Prev](usbutils.md "usbutils-019")
 
     usbutils-019
 
--   [Next](cargo-c.md "cargo-c-0.10.23"){accesskey="n"}
+-   [Next](cargo-c.md "cargo-c-0.10.23")
 
     cargo-c-0.10.23
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#general-prog}Programming {#programming .chapter}
+# Programming {#programming}
 
-:::: {.chapter lang="en"}
-A base LFS system can be used as a development platform, however the base system only includes language support for [C]{.application}, [C++]{.application}, [Perl]{.application}, and [Python]{.application}. This chapter provides instructions to build many popular programming environments to greatly expand your system's development capabilities.
+<div class="chapter" lang="en">
+A base LFS system can be used as a development platform, however the base system only includes language support for <span class="application">C</span>, <span class="application">C++</span>, <span class="application">Perl</span>, and <span class="application">Python</span>. This chapter provides instructions to build many popular programming environments to greatly expand your system's development capabilities.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [cargo-c-0.10.23](cargo-c.md)
@@ -62,24 +62,24 @@ A base LFS system can be used as a development platform, however the base system
 -   [Vala-0.56.19](vala.md)
 -   [Valgrind-3.27.1](valgrind.md)
 -   [yasm-1.3.0](yasm.md)
--   [Java]{.dummy}
+-   <span class="dummy">Java</span>
 -   [Java-21.0.10](java.md)
 -   [OpenJDK-21.0.10](openjdk.md)
 -   [Configuring the Java environment](ojdk-conf.md)
 -   [apache-ant-1.10.17](apache-ant.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](usbutils.md "usbutils-019"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](usbutils.md "usbutils-019")
 
     usbutils-019
 
--   [Next](cargo-c.md "cargo-c-0.10.23"){accesskey="n"}
+-   [Next](cargo-c.md "cargo-c-0.10.23")
 
     cargo-c-0.10.23
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

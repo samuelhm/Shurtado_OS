@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 43. Audio Utilities
 
--   [Prev](kwave.md "kwave-26.04.1"){accesskey="p"}
+-   [Prev](kwave.md "kwave-26.04.1")
 
     kwave-26.04.1
 
--   [Next](mpg123.md "mpg123-1.33.5"){accesskey="n"}
+-   [Next](mpg123.md "mpg123-1.33.5")
 
     mpg123-1.33.5
 
--   [Up](audioutils.md "Chapter 43. Audio Utilities"){accesskey="u"}
+-   [Up](audioutils.md "Chapter 43. Audio Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lame}LAME-3.100 {#lame-3.100 .sect1}
+# LAME-3.100 {#lame-3.100}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to LAME {#introduction-to-lame .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to LAME {#introduction-to-lame}
 
-The [LAME]{.application} package contains an MP3 encoder and optionally, an MP3 frame analyzer. This is useful for creating and analyzing compressed audio files.
+The <span class="application">LAME</span> package contains an MP3 encoder and optionally, an MP3 frame analyzer. This is useful for creating and analyzing compressed audio files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/lame/lame-3.100.tar.gz](https://downloads.sourceforge.net/lame/lame-3.100.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/lame/lame-3.100.tar.gz">https://downloads.sourceforge.net/lame/lame-3.100.tar.gz</a>
 
 -   Download MD5 sum: 83e260acbe4389b54fe08e0bdbf7cddb
 
@@ -44,93 +44,93 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 9.7 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### LAME Dependencies
 
 #### Optional
 
-[Dmalloc](https://dmalloc.com/){.ulink}, [Electric Fence](https://linux.softpedia.com/get/Programming/Debuggers/Electric-Fence-3305.shtml/){.ulink}, [libsndfile-1.2.2](libsndfile.md "libsndfile-1.2.2"){.xref} and [NASM-3.01](../general/nasm.md "NASM-3.01"){.xref}
+<a class="ulink" href="https://dmalloc.com/">Dmalloc</a>, <a class="ulink" href="https://linux.softpedia.com/get/Programming/Debuggers/Electric-Fence-3305.shtml/">Electric Fence</a>, <a class="xref" href="libsndfile.md" title="libsndfile-1.2.2">libsndfile-1.2.2</a> and <a class="xref" href="../general/nasm.md" title="NASM-3.01">NASM-3.01</a>
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/lame](https://wiki.linuxfromscratch.org/blfs/wiki/lame){.ulink}
-:::::
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/lame">https://wiki.linuxfromscratch.org/blfs/wiki/lame</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of LAME {#installation-of-lame .sect2}
+<div class="installation" lang="en">
+## Installation of LAME {#installation-of-lame}
 
 Prevent the source code directory from being mistakenly hardcoded as a shared library search path in the installed programs:
 
-``` userinput
+```bash
 sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure
 ```
 
-Install [LAME]{.application} by running the following commands:
+Install <span class="application">LAME</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --enable-mp3rtp --disable-static &&
 make
 ```
 
-To test the results, issue: [**LD_LIBRARY_PATH=libmp3lame/.libs make test**]{.command}.
+To test the results, issue: <span class="command"><strong>LD_LIBRARY_PATH=libmp3lame/.libs make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make pkghtmldir=/usr/share/doc/lame-3.100 install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--enable-mp3rtp`*: This switch enables building the encode-to-RTP program.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-nasm`{.option}: This option enables the use of [NASM-3.01](../general/nasm.md "NASM-3.01"){.xref} to compile optimized assembly routines for 32-bit x86. Note that this has no effect on x86_64.
-:::
+<code class="option">--enable-nasm</code>: This option enables the use of <a class="xref" href="../general/nasm.md" title="NASM-3.01">NASM-3.01</a> to compile optimized assembly routines for 32-bit x86. Note that this has no effect on x86_64.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [lame and mp3rtp]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lame and mp3rtp</span>
+</div>
 
-::: seg
-**Installed Library:** [libmp3lame.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libmp3lame.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/lame and /usr/share/doc/lame-3.100]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/lame and /usr/share/doc/lame-3.100</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- --------------------------------------------------------------------------------
-  []{#lame-prog}[[**lame**]{.command}]{.term}          creates MP3 audio files from raw PCM or `.wav`{.filename} data
-  []{#mp3rtp}[[**mp3rtp**]{.command}]{.term}           is used to encode MP3 with RTP streaming of the output
-  []{#libmp3lame}[`libmp3lame.so`{.filename}]{.term}   provides the functions necessary to convert raw PCM and WAV files to MP3 files
+  <a id="lame-prog"></a><span class="command"><span class="term"><strong>lame</strong></span></span>          creates MP3 audio files from raw PCM or <code class="filename">.wav</code> data
+  <a id="mp3rtp"></a><span class="command"><span class="term"><strong>mp3rtp</strong></span></span>           is used to encode MP3 with RTP streaming of the output
+  <a id="libmp3lame"></a><span class="term"><code class="filename">libmp3lame.so</code></span>   provides the functions necessary to convert raw PCM and WAV files to MP3 files
   ---------------------------------------------------- --------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kwave.md "kwave-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kwave.md "kwave-26.04.1")
 
     kwave-26.04.1
 
--   [Next](mpg123.md "mpg123-1.33.5"){accesskey="n"}
+-   [Next](mpg123.md "mpg123-1.33.5")
 
     mpg123-1.33.5
 
--   [Up](audioutils.md "Chapter 43. Audio Utilities"){accesskey="u"}
+-   [Up](audioutils.md "Chapter 43. Audio Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

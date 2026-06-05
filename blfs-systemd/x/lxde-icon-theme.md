@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 28. Icons
 
--   [Prev](icon-naming-utils.md "icon-naming-utils-0.8.90"){accesskey="p"}
+-   [Prev](icon-naming-utils.md "icon-naming-utils-0.8.90")
 
     icon-naming-utils-0.8.90
 
--   [Next](oxygen-icons.md "oxygen-icons-6.1.0"){accesskey="n"}
+-   [Next](oxygen-icons.md "oxygen-icons-6.1.0")
 
     oxygen-icons-6.1.0
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxde-icon-theme}lxde-icon-theme-0.5.1 {#lxde-icon-theme-0.5.1 .sect1}
+# lxde-icon-theme-0.5.1 {#lxde-icon-theme-0.5.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to LXDE Icon Theme {#introduction-to-lxde-icon-theme .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to LXDE Icon Theme {#introduction-to-lxde-icon-theme}
 
-The [LXDE Icon Theme]{.application} package contains nuoveXT 2.2 Icon Theme for [LXDE]{.application}.
+The <span class="application">LXDE Icon Theme</span> package contains nuoveXT 2.2 Icon Theme for <span class="application">LXDE</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/lxde/lxde-icon-theme-0.5.1.tar.xz](https://downloads.sourceforge.net/lxde/lxde-icon-theme-0.5.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/lxde/lxde-icon-theme-0.5.1.tar.xz">https://downloads.sourceforge.net/lxde/lxde-icon-theme-0.5.1.tar.xz</a>
 
 -   Download MD5 sum: 7467133275edbbcc79349379235d4411
 
@@ -44,70 +44,70 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 18 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### LXDE Icon Theme Dependencies
 
 #### Optional
 
-[GTK-3.24.52](gtk3.md "GTK-3.24.52"){.xref} (for [**gtk-update-icon-cache**]{.command} command)
-:::::
+<a class="xref" href="gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> (for <span class="command"><strong>gtk-update-icon-cache</strong></span> command)
+</div>
 
-::: {.installation lang="en"}
-## Installation of LXDE Icon Theme {#installation-of-lxde-icon-theme .sect2}
+<div class="installation" lang="en">
+## Installation of LXDE Icon Theme {#installation-of-lxde-icon-theme}
 
-Install [LXDE Icon Theme]{.application} by running the following commands:
+Install <span class="application">LXDE Icon Theme</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have installed one of the optional dependencies, run the following command as the `root`{.systemitem} user:
+If you have installed one of the optional dependencies, run the following command as the <code class="systemitem">root</code> user:
 
-``` userinput
+```bash
 gtk-update-icon-cache -qf /usr/share/icons/nuoveXT2
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/icons/nuoveXT2]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/icons/nuoveXT2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](icon-naming-utils.md "icon-naming-utils-0.8.90"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](icon-naming-utils.md "icon-naming-utils-0.8.90")
 
     icon-naming-utils-0.8.90
 
--   [Next](oxygen-icons.md "oxygen-icons-6.1.0"){accesskey="n"}
+-   [Next](oxygen-icons.md "oxygen-icons-6.1.0")
 
     oxygen-icons-6.1.0
 
--   [Up](icons.md "Chapter 28. Icons"){accesskey="u"}
+-   [Up](icons.md "Chapter 28. Icons")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

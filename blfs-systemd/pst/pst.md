@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../multimedia/libisofs.md "libisofs-1.5.8.pl02"){accesskey="p"}
+-   [Prev](../multimedia/libisofs.md "libisofs-1.5.8.pl02")
 
     libisofs-1.5.8.pl02
 
--   [Next](printing.md "Printing"){accesskey="n"}
+-   [Next](printing.md "Printing")
 
     Printing
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pst}Printing, Scanning and Typesetting {#printing-scanning-and-typesetting .part}
+# Printing, Scanning and Typesetting {#printing-scanning-and-typesetting}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [46. Printing](printing.md)
@@ -71,19 +71,19 @@
     -   [biber-2.21](biber.md)
     -   [dvisvgm-3.6](dvisvgm.md)
     -   [xindy-2.5.1](xindy.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../multimedia/libisofs.md "libisofs-1.5.8.pl02"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../multimedia/libisofs.md "libisofs-1.5.8.pl02")
 
     libisofs-1.5.8.pl02
 
--   [Next](printing.md "Printing"){accesskey="n"}
+-   [Next](printing.md "Printing")
 
     Printing
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

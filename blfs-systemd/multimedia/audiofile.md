@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](alsa-firmware.md "alsa-firmware-1.2.4"){accesskey="p"}
+-   [Prev](alsa-firmware.md "alsa-firmware-1.2.4")
 
     alsa-firmware-1.2.4
 
--   [Next](dav1d.md "dav1d-1.5.3"){accesskey="n"}
+-   [Next](dav1d.md "dav1d-1.5.3")
 
     dav1d-1.5.3
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#audiofile}AudioFile-0.3.6 {#audiofile-0.3.6 .sect1}
+# AudioFile-0.3.6 {#audiofile-0.3.6}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to AudioFile {#introduction-to-audiofile .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to AudioFile {#introduction-to-audiofile}
 
-The [AudioFile]{.application} package contains the audio file libraries and two sound file support programs useful to support basic sound file formats.
+The <span class="application">AudioFile</span> package contains the audio file libraries and two sound file support programs useful to support basic sound file formats.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/audiofile/0.3/audiofile-0.3.6.tar.xz](https://download.gnome.org/sources/audiofile/0.3/audiofile-0.3.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/audiofile/0.3/audiofile-0.3.6.tar.xz">https://download.gnome.org/sources/audiofile/0.3/audiofile-0.3.6.tar.xz</a>
 
 -   Download MD5 sum: 235dde14742317328f0109e9866a8008
 
@@ -44,35 +44,35 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 18 MB
 
 -   Estimated build time: 0.6 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/audiofile-0.3.6-consolidated_patches-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/audiofile-0.3.6-consolidated_patches-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/audiofile-0.3.6-consolidated_patches-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/audiofile-0.3.6-consolidated_patches-1.patch</a>
+</div>
 
 ### AudioFile Dependencies
 
 #### Required
 
-[alsa-lib-1.2.16](alsa-lib.md "alsa-lib-1.2.16"){.xref}
+<a class="xref" href="alsa-lib.md" title="alsa-lib-1.2.16">alsa-lib-1.2.16</a>
 
 #### Recommended
 
-[FLAC-1.5.0](flac.md "FLAC-1.5.0"){.xref}
+<a class="xref" href="flac.md" title="FLAC-1.5.0">FLAC-1.5.0</a>
 
 #### Optional
 
-[asciidoc-10.2.1](../general/python-modules.md#asciidoc "Asciidoc-10.2.1"){.xref} and [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}
-::::::
+<a class="xref" href="../general/python-modules.md#asciidoc" title="Asciidoc-10.2.1">asciidoc-10.2.1</a> and <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of AudioFile {#installation-of-audiofile .sect2}
+<div class="installation" lang="en">
+## Installation of AudioFile {#installation-of-audiofile}
 
-Install [AudioFile]{.application} by running the following commands:
+Install <span class="application">AudioFile</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../audiofile-0.3.6-consolidated_patches-1.patch &&
 autoreconf -fiv                             &&
 
@@ -81,68 +81,68 @@ autoreconf -fiv                             &&
 make
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-To test the results, issue: [**make check**]{.command}. Note that the tests will fail if the --disable-static option is used and tests are executed before [**make install**]{.command}. You have three options:
+To test the results, issue: <span class="command"><strong>make check</strong></span>. Note that the tests will fail if the --disable-static option is used and tests are executed before <span class="command"><strong>make install</strong></span>. You have three options:
 
 \(a\) configure without --disable-static, run the tests, but do not install, then start a fresh build using --disable-static just for installing the package.
 
 \(b\) configure with --disable-static, but only run the tests after the package is installed.
 
 \(c\) configure with --disable-static, but only run the tests after a DESTDIR install.
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [sfconvert and sfinfo]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">sfconvert and sfinfo</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libaudiofile.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libaudiofile.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------
-  []{#sfinfo}[[**sfinfo**]{.command}]{.term}               displays the sound file format, audio encoding, sampling rate and duration for audio formats supported by this library
-  []{#sfconvert}[[**sfconvert**]{.command}]{.term}         converts sound file formats where the original format and destination format are supported by this library
-  []{#libaudiofile}[`libaudiofile.so`{.filename}]{.term}   contains functions used by programs to support AIFF, AIFF-compressed, Sun/NeXT, WAV and BIC audio formats
+  <a id="sfinfo"></a><span class="command"><span class="term"><strong>sfinfo</strong></span></span>               displays the sound file format, audio encoding, sampling rate and duration for audio formats supported by this library
+  <a id="sfconvert"></a><span class="command"><span class="term"><strong>sfconvert</strong></span></span>         converts sound file formats where the original format and destination format are supported by this library
+  <a id="libaudiofile"></a><span class="term"><code class="filename">libaudiofile.so</code></span>   contains functions used by programs to support AIFF, AIFF-compressed, Sun/NeXT, WAV and BIC audio formats
   -------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](alsa-firmware.md "alsa-firmware-1.2.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](alsa-firmware.md "alsa-firmware-1.2.4")
 
     alsa-firmware-1.2.4
 
--   [Next](dav1d.md "dav1d-1.5.3"){accesskey="n"}
+-   [Next](dav1d.md "dav1d-1.5.3")
 
     dav1d-1.5.3
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

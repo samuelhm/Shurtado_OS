@@ -1,43 +1,43 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](x7driver.md "Xorg Input Drivers"){accesskey="p"}
+-   [Prev](x7driver.md "Xorg Input Drivers")
 
     Xorg Input Drivers
 
--   [Next](xterm.md "xterm-410"){accesskey="n"}
+-   [Next](xterm.md "xterm-410")
 
     xterm-410
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#twm}twm-1.0.13.1 {#twm-1.0.13.1 .sect1}
+# twm-1.0.13.1 {#twm-1.0.13.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to twm {#introduction-to-twm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to twm {#introduction-to-twm}
 
-The [twm]{.application} package contains a very minimal window manager.
+The <span class="application">twm</span> package contains a very minimal window manager.
 
 This package is provided for testing the completed Xorg installation.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/app/twm-1.0.13.1.tar.xz](https://www.x.org/pub/individual/app/twm-1.0.13.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/app/twm-1.0.13.1.tar.xz">https://www.x.org/pub/individual/app/twm-1.0.13.1.tar.xz</a>
 
 -   Download MD5 sum: 2a337b776c904eab5b874eddc0124d4f
 
@@ -46,21 +46,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.8 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### twm Dependencies
 
 #### Required
 
-[Xorg-Server-21.1.23](xorg-server.md "Xorg-Server-21.1.23"){.xref}
-:::::
+<a class="xref" href="xorg-server.md" title="Xorg-Server-21.1.23">Xorg-Server-21.1.23</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of twm {#installation-of-twm .sect2}
+<div class="installation" lang="en">
+## Installation of twm {#installation-of-twm}
 
-Install [twm]{.application} by running the following commands:
+Install <span class="application">twm</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i -e '/^rcdir =/s,^\(rcdir = \).*,\1/etc/X11/app-defaults,' src/Makefile.in &&
 ./configure $XORG_CONFIG &&
 make
@@ -68,58 +68,58 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i -e '/\^rcdir =/s...**]{.command}: This command ensures the [twm]{.application} configuration file gets installed in the proper location.
-:::
+<span class="command"><strong>sed -i -e '/\^rcdir =/s...</strong></span>: This command ensures the <span class="application">twm</span> configuration file gets installed in the proper location.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [twm]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">twm</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/etc/X11/app-defaults]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/etc/X11/app-defaults</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------ ---------------------------------------------------
-  []{#twm-bin}[[**twm**]{.command}]{.term}   is the Tab Window Manager for the X Window System
+  <a id="twm-bin"></a><span class="command"><span class="term"><strong>twm</strong></span></span>   is the Tab Window Manager for the X Window System
   ------------------------------------------ ---------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](x7driver.md "Xorg Input Drivers"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](x7driver.md "Xorg Input Drivers")
 
     Xorg Input Drivers
 
--   [Next](xterm.md "xterm-410"){accesskey="n"}
+-   [Next](xterm.md "xterm-410")
 
     xterm-410
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

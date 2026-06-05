@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 16. Networking Utilities
 
--   [Prev](networkmanager.md "NetworkManager-1.56.1"){accesskey="p"}
+-   [Prev](networkmanager.md "NetworkManager-1.56.1")
 
     NetworkManager-1.56.1
 
--   [Next](nmap.md "Nmap-7.99"){accesskey="n"}
+-   [Next](nmap.md "Nmap-7.99")
 
     Nmap-7.99
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#network-manager-applet}network-manager-applet-1.34.0 {#network-manager-applet-1.34.0 .sect1}
+# network-manager-applet-1.34.0 {#network-manager-applet-1.34.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to NetworkManager Applet {#introduction-to-networkmanager-applet .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to NetworkManager Applet {#introduction-to-networkmanager-applet}
 
-The [NetworkManager Applet]{.application} provides a tool and a panel applet used to configure wired and wireless network connections through GUI. It's designed for use with any desktop environment that uses [GTK+]{.application}, such as [Xfce]{.application} and [LXDE]{.application}.
+The <span class="application">NetworkManager Applet</span> provides a tool and a panel applet used to configure wired and wireless network connections through GUI. It's designed for use with any desktop environment that uses <span class="application">GTK+</span>, such as <span class="application">Xfce</span> and <span class="application">LXDE</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/network-manager-applet/1.34/network-manager-applet-1.34.0.tar.xz](https://download.gnome.org/sources/network-manager-applet/1.34/network-manager-applet-1.34.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/network-manager-applet/1.34/network-manager-applet-1.34.0.tar.xz">https://download.gnome.org/sources/network-manager-applet/1.34/network-manager-applet-1.34.0.tar.xz</a>
 
 -   Download MD5 sum: 83ff059aff3a691766d5f0079209e5af
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 46 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (with tests)
-:::
+</div>
 
 ### NetworkManager Applet Dependencies
 
 #### Required
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [libnma-1.10.6](libnma.md "libnma-1.10.6"){.xref}, and [libsecret-0.21.7](../gnome/libsecret.md "libsecret-0.21.7"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="libnma.md" title="libnma-1.10.6">libnma-1.10.6</a>, and <a class="xref" href="../gnome/libsecret.md" title="libsecret-0.21.7">libsecret-0.21.7</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection) and [ModemManager-1.24.2](../general/ModemManager.md "ModemManager-1.24.2"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection) and <a class="xref" href="../general/ModemManager.md" title="ModemManager-1.24.2">ModemManager-1.24.2</a>
 
 #### Required (Runtime)
 
-Since this package uses [Polkit-127](../postlfs/polkit.md "Polkit-127"){.xref} for authorization, one [Polkit Authentication Agent](../postlfs/polkit.md#polkit-agent "Optional Runtime Dependencies"){.xref} should be running when the functionality of this package is used.
+Since this package uses <a class="xref" href="../postlfs/polkit.md" title="Polkit-127">Polkit-127</a> for authorization, one <a class="xref" href="../postlfs/polkit.md#polkit-agent" title="Optional Runtime Dependencies">Polkit Authentication Agent</a> should be running when the functionality of this package is used.
 
 #### Optional
 
-[gnome-bluetooth-47.2](../gnome/gnome-bluetooth.md "gnome-bluetooth-47.2"){.xref}, [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}, and [libindicator](https://launchpad.net/libappindicator){.ulink}
-:::::
+<a class="xref" href="../gnome/gnome-bluetooth.md" title="gnome-bluetooth-47.2">gnome-bluetooth-47.2</a>, <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>, and <a class="ulink" href="https://launchpad.net/libappindicator">libindicator</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of NetworkManager Applet {#installation-of-networkmanager-applet .sect2}
+<div class="installation" lang="en">
+## Installation of NetworkManager Applet {#installation-of-networkmanager-applet}
 
-Install [NetworkManager Applet]{.application} by running the following commands:
+Install <span class="application">NetworkManager Applet</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -83,66 +83,66 @@ meson setup ..            \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D appindicator=no`*: This switch disables AppIndicator support in network-manager-applet because it requires libindicator, which is not in BLFS. The build will fail without this option.
 
-*`-D selinux=false`*: This switch forcibly disables [SELinux]{.application} support since it is not currently in BLFS and the build will fail without it.
+*`-D selinux=false`*: This switch forcibly disables <span class="application">SELinux</span> support since it is not currently in BLFS and the build will fail without it.
 
-*`-D team=false`*: This switch disables the team configuration editor since it requires [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}. If you have Jansson installed, remove this option or set it to `true`{.literal}.
+*`-D team=false`*: This switch disables the team configuration editor since it requires <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>. If you have Jansson installed, remove this option or set it to <code class="literal">true</code>.
 
-`-D wwan=false`{.option}: This switch disables WWAN support. Use this if you do not have [ModemManager-1.24.2](../general/ModemManager.md "ModemManager-1.24.2"){.xref} installed.
-:::
+<code class="option">-D wwan=false</code>: This switch disables WWAN support. Use this if you do not have <a class="xref" href="../general/ModemManager.md" title="ModemManager-1.24.2">ModemManager-1.24.2</a> installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [nm-applet and nm-connection-editor]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">nm-applet and nm-connection-editor</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------ -----------------------------------------------------------
-  []{#nm-connection-editor}[[**nm-connection-editor**]{.command}]{.term}   allows users to view and edit network connection settings
+  <a id="nm-connection-editor"></a><span class="command"><span class="term"><strong>nm-connection-editor</strong></span></span>   allows users to view and edit network connection settings
   ------------------------------------------------------------------------ -----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](networkmanager.md "NetworkManager-1.56.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](networkmanager.md "NetworkManager-1.56.1")
 
     NetworkManager-1.56.1
 
--   [Next](nmap.md "Nmap-7.99"){accesskey="n"}
+-   [Next](nmap.md "Nmap-7.99")
 
     Nmap-7.99
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

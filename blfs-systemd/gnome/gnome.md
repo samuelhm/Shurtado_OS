@@ -1,28 +1,28 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../kde/plasma-all.md "Building Plasma"){accesskey="p"}
+-   [Prev](../kde/plasma-all.md "Building Plasma")
 
     Building Plasma
 
--   [Next](core.md "GNOME Libraries and Desktop"){accesskey="n"}
+-   [Next](core.md "GNOME Libraries and Desktop")
 
     GNOME Libraries and Desktop
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome}GNOME {#gnome .part}
+# GNOME {#gnome}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [33. GNOME Libraries and Desktop](core.md)
 
-    -   [Libraries]{.dummy}
+    -   <span class="dummy">Libraries</span>
     -   [Gcr-3.41.2](gcr.md)
     -   [Gcr-4.4.0.1](gcr4.md)
     -   [gsettings-desktop-schemas-50.1](gsettings-desktop-schemas.md)
@@ -48,7 +48,7 @@
     -   [localsearch-3.11.1](localsearch.md)
     -   [GSound-1.0.3](gsound.md)
     -   [xdg-desktop-portal-gnome-50.0](xdg-desktop-portal-gnome.md)
-    -   [GNOME Desktop Components]{.dummy}
+    -   <span class="dummy">GNOME Desktop Components</span>
     -   [DConf-0.49.0 / DConf-Editor-49.0](dconf.md)
     -   [gnome-backgrounds-50.0](gnome-backgrounds.md)
     -   [Gvfs-1.60.0](gvfs.md)
@@ -67,7 +67,7 @@
     -   [gnome-user-docs-50.2](gnome-user-docs.md)
     -   [Yelp-49.0](yelp.md)
 
--   #### [34. [GNOME Applications]{.phrase}](applications.md)
+-   #### <span class="phrase">34. [GNOME Applications</span>](applications.md)
 
     -   [Baobab-50.0](baobab.md)
     -   [Brasero-3.12.3](brasero.md)
@@ -90,19 +90,19 @@
     -   [Seahorse-47.0.1](seahorse.md)
     -   [Showtime-49.1](showtime.md)
     -   [Snapshot-50.0](snapshot.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../kde/plasma-all.md "Building Plasma"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../kde/plasma-all.md "Building Plasma")
 
     Building Plasma
 
--   [Next](core.md "GNOME Libraries and Desktop"){accesskey="n"}
+-   [Next](core.md "GNOME Libraries and Desktop")
 
     GNOME Libraries and Desktop
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

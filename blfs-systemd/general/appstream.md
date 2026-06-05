@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](abseil-cpp.md "Abseil-cpp-20260107.1"){accesskey="p"}
+-   [Prev](abseil-cpp.md "Abseil-cpp-20260107.1")
 
     Abseil-cpp-20260107.1
 
--   [Next](appstream-glib.md "appstream-glib-0.8.3"){accesskey="n"}
+-   [Next](appstream-glib.md "appstream-glib-0.8.3")
 
     appstream-glib-0.8.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#appstream}AppStream-1.1.2 {#appstream-1.1.2 .sect1}
+# AppStream-1.1.2 {#appstream-1.1.2}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to AppStream {#introduction-to-appstream .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to AppStream {#introduction-to-appstream}
 
-The [AppStream]{.application} package contains a library and tool that is useful for retrieving software metadata and making it easily accessible to programs which need it.
+The <span class="application">AppStream</span> package contains a library and tool that is useful for retrieving software metadata and making it easily accessible to programs which need it.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.2.tar.xz](https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.2.tar.xz">https://www.freedesktop.org/software/appstream/releases/AppStream-1.1.2.tar.xz</a>
 
 -   Download MD5 sum: 993cb6e1c6ab57ce59c5c3ba397f2b21
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 40 MB
 
 -   Estimated build time: less than 0.1 SBU (add 0.1 SBU for tests; both using parallelism=4)
-:::
+</div>
 
 ### AppStream Dependencies
 
 #### Required
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libfyaml-0.9.6](libfyaml.md "libfyaml-0.9.6"){.xref}, [libxml2-2.15.3](libxml2.md "libxml2-2.15.3"){.xref}, [libxmlb-0.3.27](libxmlb.md "libxmlb-0.3.27"){.xref}, and [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref}
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="libfyaml.md" title="libfyaml-0.9.6">libfyaml-0.9.6</a>, <a class="xref" href="libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, <a class="xref" href="libxmlb.md" title="libxmlb-0.3.27">libxmlb-0.3.27</a>, and <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>
 
 #### Recommended
 
-[docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref}
+<a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a>
 
 #### Optional
 
-[Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}, [DAPS](https://github.com/openSUSE/daps){.ulink}, and [libstemmer](https://github.com/zvelo/libstemmer){.ulink}
-:::::
+<a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>, <a class="ulink" href="https://github.com/openSUSE/daps">DAPS</a>, and <a class="ulink" href="https://github.com/zvelo/libstemmer">libstemmer</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of AppStream {#installation-of-appstream .sect2}
+<div class="installation" lang="en">
+## Installation of AppStream {#installation-of-appstream}
 
-Install [AppStream]{.application} by running the following commands:
+Install <span class="application">AppStream</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -78,47 +78,47 @@ meson setup --prefix=/usr            \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install &&
 mv -v /usr/share/doc/appstream{,-1.1.2}
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D apidocs=false`*: This switch disables building the API documentation. Remove it if you have [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} installed and wish to regenerate the API documentation. When the API documentation is not regenerated, a pre-built copy is installed anyway.
+*`-D apidocs=false`*: This switch disables building the API documentation. Remove it if you have <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> installed and wish to regenerate the API documentation. When the API documentation is not regenerated, a pre-built copy is installed anyway.
 
 *`-D bash-completion=false`*: This switch disables bash-completion support which is not in BLFS.
 
-*`-D stemming=false`*: This switch disables stemming support. Remove this switch if you have [libstemmer](https://github.com/zvelo/libstemmer){.ulink} installed and want faster searches.
+*`-D stemming=false`*: This switch disables stemming support. Remove this switch if you have <a class="ulink" href="https://github.com/zvelo/libstemmer">libstemmer</a> installed and want faster searches.
 
-`-D qt=true`{.option}: Use this option if you have [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref} installed and you want to build support for Qt6 applications into this package.
+<code class="option">-D qt=true</code>: Use this option if you have <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a> installed and you want to build support for Qt6 applications into this package.
 
-`-D man=false`{.option}: This switch disables building the manpages. Add it if you do not have [docbook-xsl-nons-1.79.2](../pst/docbook-xsl.md "docbook-xsl-nons-1.79.2"){.xref} installed.
-:::
+<code class="option">-D man=false</code>: This switch disables building the manpages. Add it if you do not have <a class="xref" href="../pst/docbook-xsl.md" title="docbook-xsl-nons-1.79.2">docbook-xsl-nons-1.79.2</a> installed.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring AppStream {#configuring-appstream .sect2}
+<div class="configuration" lang="en">
+## Configuring AppStream {#configuring-appstream}
 
-::: {.sect3 lang="en"}
-### []{#appstream-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/usr/share/metainfo/org.linuxfromscratch.lfs.xml`{.filename}
-:::
+<code class="filename">/usr/share/metainfo/org.linuxfromscratch.lfs.xml</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-[AppStream]{.application} expects an operating system metainfo file describing the GNU/Linux distribution. As the `root`{.systemitem} user, create the file describing LFS:
+<span class="application">AppStream</span> expects an operating system metainfo file describing the GNU/Linux distribution. As the <code class="systemitem">root</code> user, create the file describing LFS:
 
-``` root
+```bash
 install -vdm755 /usr/share/metainfo &&
 cat > /usr/share/metainfo/org.linuxfromscratch.lfs.xml << EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -164,50 +164,50 @@ cat > /usr/share/metainfo/org.linuxfromscratch.lfs.xml << EOF
 </component>
 EOF
 ```
-:::
-:::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [appstreamcli]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">appstreamcli</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libappstream.so and libAppStreamQt.so (if Qt6 support is enabled)]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libappstream.so and libAppStreamQt.so (if Qt6 support is enabled)</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/appstream, /usr/include/AppStreamQt (if Qt6 support is enabled), /usr/lib/cmake/AppStreamQt (if Qt6 support is enabled), /usr/share/doc/appstream-1.1.2, and /usr/share/installed-tests/appstream]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/appstream, /usr/include/AppStreamQt (if Qt6 support is enabled), /usr/lib/cmake/AppStreamQt (if Qt6 support is enabled), /usr/share/doc/appstream-1.1.2, and /usr/share/installed-tests/appstream</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#appstreamcli}[[**appstreamcli**]{.command}]{.term}       queries information from AppStream metadata and from the AppStream component index
-  []{#libappstream}[`libappstream.so`{.filename}]{.term}       contains functions that handle AppStream metadata queries and request information from the AppStream component index
-  []{#libAppStreamQt}[`libAppStreamQt.so`{.filename}]{.term}   contains functions that allow Qt6 applications to handle AppStream metadata queries and allows them to request information from the AppStream component index
+  <a id="appstreamcli"></a><span class="command"><span class="term"><strong>appstreamcli</strong></span></span>       queries information from AppStream metadata and from the AppStream component index
+  <a id="libappstream"></a><span class="term"><code class="filename">libappstream.so</code></span>       contains functions that handle AppStream metadata queries and request information from the AppStream component index
+  <a id="libAppStreamQt"></a><span class="term"><code class="filename">libAppStreamQt.so</code></span>   contains functions that allow Qt6 applications to handle AppStream metadata queries and allows them to request information from the AppStream component index
   ------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](abseil-cpp.md "Abseil-cpp-20260107.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](abseil-cpp.md "Abseil-cpp-20260107.1")
 
     Abseil-cpp-20260107.1
 
--   [Next](appstream-glib.md "appstream-glib-0.8.3"){accesskey="n"}
+-   [Next](appstream-glib.md "appstream-glib-0.8.3")
 
     appstream-glib-0.8.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

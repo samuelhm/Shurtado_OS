@@ -1,15 +1,15 @@
-::: legalnotice
+<div class="legalnotice">
 Copyright © 1999-2026, The BLFS Development Team
 
 All rights reserved.
 
-This book is licensed under a [Creative Commons License](appendices/creat-comm.md "Appendix A. Creative Commons License"){.xref}.
+This book is licensed under a <a class="xref" href="appendices/creat-comm.md" title="Appendix A. Creative Commons License">Creative Commons License</a>.
 
-Computer instructions may be extracted from the book under the [MIT License](mit.md "Appendix B. The MIT License"){.xref}.
+Computer instructions may be extracted from the book under the <a class="xref" href="mit.md" title="Appendix B. The MIT License">MIT License</a>.
 
-[Linux]{.trademark}® is a registered trademark of Linus Torvalds.
-:::
+<span class="trademark">Linux</span>® is a registered trademark of Linus Torvalds.
+</div>
 
-::: navfooter
--   [Home](index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+<div class="navfooter">
+-   [Home](index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

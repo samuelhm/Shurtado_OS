@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 36. Xfce Applications
 
--   [Prev](xfburn.md "Xfburn-0.8.0"){accesskey="p"}
+-   [Prev](xfburn.md "Xfburn-0.8.0")
 
     Xfburn-0.8.0
 
--   [Next](xfce4-notifyd.md "xfce4-notifyd-0.9.7"){accesskey="n"}
+-   [Next](xfce4-notifyd.md "xfce4-notifyd-0.9.7")
 
     xfce4-notifyd-0.9.7
 
--   [Up](xfce-apps.md "Chapter 36. Xfce Applications"){accesskey="u"}
+-   [Up](xfce-apps.md "Chapter 36. Xfce Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#ristretto}ristretto-0.14.0 {#ristretto-0.14.0 .sect1}
+# ristretto-0.14.0 {#ristretto-0.14.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Ristretto {#introduction-to-ristretto .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Ristretto {#introduction-to-ristretto}
 
-[Ristretto]{.application} is a fast and lightweight image viewer for the [Xfce]{.application} desktop.
+<span class="application">Ristretto</span> is a fast and lightweight image viewer for the <span class="application">Xfce</span> desktop.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/apps/ristretto/0.14/ristretto-0.14.0.tar.xz](https://archive.xfce.org/src/apps/ristretto/0.14/ristretto-0.14.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/apps/ristretto/0.14/ristretto-0.14.0.tar.xz">https://archive.xfce.org/src/apps/ristretto/0.14/ristretto-0.14.0.tar.xz</a>
 
 -   Download MD5 sum: 63b94c3e3fab28c4533697f36ee6caa2
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.5 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Ristretto Dependencies
 
 #### Required
 
-[libexif-0.6.26](../general/libexif.md "libexif-0.6.26"){.xref} and [libxfce4ui-4.20.2](libxfce4ui.md "libxfce4ui-4.20.2"){.xref}
+<a class="xref" href="../general/libexif.md" title="libexif-0.6.26">libexif-0.6.26</a> and <a class="xref" href="libxfce4ui.md" title="libxfce4ui-4.20.2">libxfce4ui-4.20.2</a>
 
 #### Optional
 
-[tumbler-4.20.1](tumbler.md "tumbler-4.20.1"){.xref} (runtime)
-:::::
+<a class="xref" href="tumbler.md" title="tumbler-4.20.1">tumbler-4.20.1</a> (runtime)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Ristretto {#installation-of-ristretto .sect2}
+<div class="installation" lang="en">
+## Installation of Ristretto {#installation-of-ristretto}
 
-Install [ristretto]{.application} by running the following commands:
+Install <span class="application">ristretto</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,52 +72,52 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [ristretto]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">ristretto</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------- ----------------------------------------
-  []{#ristretto-prog}[[**ristretto**]{.command}]{.term}   is a fast and lightweight image viewer
+  <a id="ristretto-prog"></a><span class="command"><span class="term"><strong>ristretto</strong></span></span>   is a fast and lightweight image viewer
   ------------------------------------------------------- ----------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xfburn.md "Xfburn-0.8.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xfburn.md "Xfburn-0.8.0")
 
     Xfburn-0.8.0
 
--   [Next](xfce4-notifyd.md "xfce4-notifyd-0.9.7"){accesskey="n"}
+-   [Next](xfce4-notifyd.md "xfce4-notifyd-0.9.7")
 
     xfce4-notifyd-0.9.7
 
--   [Up](xfce-apps.md "Chapter 36. Xfce Applications"){accesskey="u"}
+-   [Up](xfce-apps.md "Chapter 36. Xfce Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

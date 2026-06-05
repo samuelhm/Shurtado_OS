@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 48. Standard Generalized Markup Language (SGML)
 
--   [Prev](sgml-common.md "sgml-common-0.6.3"){accesskey="p"}
+-   [Prev](sgml-common.md "sgml-common-0.6.3")
 
     sgml-common-0.6.3
 
--   [Next](docbook-4.5-dtd.md "docbook-4.5-dtd"){accesskey="n"}
+-   [Next](docbook-4.5-dtd.md "docbook-4.5-dtd")
 
     docbook-4.5-dtd
 
--   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)"){accesskey="u"}
+-   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#sgml-dtd-3}docbook-3.1-dtd {#docbook-3.1-dtd .sect1}
+# docbook-3.1-dtd {#docbook-3.1-dtd}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to DocBook-3.1 SGML DTD {#introduction-to-docbook-3.1-sgml-dtd .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to DocBook-3.1 SGML DTD {#introduction-to-docbook-3.1-sgml-dtd}
 
-The [DocBook SGML DTD]{.application} package contains document type definitions for verification of SGML data files against the DocBook rule set. These are useful for structuring books and software documentation to a standard allowing you to utilize transformations already written for that standard.
+The <span class="application">DocBook SGML DTD</span> package contains document type definitions for verification of SGML data files against the DocBook rule set. These are useful for structuring books and software documentation to a standard allowing you to utilize transformations already written for that standard.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.docbook.org/sgml/3.1/docbk31.zip](https://archive.docbook.org/sgml/3.1/docbk31.zip){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.docbook.org/sgml/3.1/docbk31.zip">https://archive.docbook.org/sgml/3.1/docbk31.zip</a>
 
 -   Download MD5 sum: 432749c0c806dbae81c8bcb70da3b5d3
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 676 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### DocBook-3.1 SGML DTD Dependencies
 
 #### Required
 
-[libarchive-3.8.7](../general/libarchive.md "libarchive-3.8.7"){.xref} and [sgml-common-0.6.3](sgml-common.md "sgml-common-0.6.3"){.xref}
-:::::
+<a class="xref" href="../general/libarchive.md" title="libarchive-3.8.7">libarchive-3.8.7</a> and <a class="xref" href="sgml-common.md" title="sgml-common-0.6.3">sgml-common-0.6.3</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of DocBook-3.1 SGML DTD {#installation-of-docbook-3.1-sgml-dtd .sect2}
+<div class="installation" lang="en">
+## Installation of DocBook-3.1 SGML DTD {#installation-of-docbook-3.1-sgml-dtd}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The package source is distributed in `zip`{.filename} format and requires [**unzip**]{.command} (actually a symlink to [**bsdunzip**]{.command} from [libarchive]{.application}). You should create a directory and change to that directory before unzipping the file to ease the removal of the source files after the package has been installed.
-:::
+The package source is distributed in <code class="filename">zip</code> format and requires <span class="command"><strong>unzip</strong></span> (actually a symlink to <span class="command"><strong>bsdunzip</strong></span> from <span class="application">libarchive</span>). You should create a directory and change to that directory before unzipping the file to ease the removal of the source files after the package has been installed.
+</div>
 
-Install [DocBook-3.1 SGML DTD]{.application} by running the following commands:
+Install <span class="application">DocBook-3.1 SGML DTD</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i -e '/ISO 8879/d' \
        -e 's|DTDDECL "-//OASIS//DTD DocBook V3.1//EN"|SGMLDECL|g' \
        docbook.cat
@@ -74,9 +74,9 @@ sed -i -e '/ISO 8879/d' \
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -d -m755 /usr/share/sgml/docbook/sgml-dtd-3.1 &&
 chown -R root:root . &&
 install -v docbook.cat /usr/share/sgml/docbook/sgml-dtd-3.1/catalog &&
@@ -88,33 +88,33 @@ install-catalog --add /etc/sgml/sgml-docbook-dtd-3.1.cat \
 install-catalog --add /etc/sgml/sgml-docbook-dtd-3.1.cat \
     /etc/sgml/sgml-docbook.cat
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i -e '/ISO 8879/d' docbook.cat**]{.command}: This command removes the ENT definitions from the catalog file.
+<span class="command"><strong>sed -i -e '/ISO 8879/d' docbook.cat</strong></span>: This command removes the ENT definitions from the catalog file.
 
-[**sed -i -e 's\|DTDDECL "-//OASIS//DTD Docbook V3.1//EN"\|SGMLDECL\|g' docbook.cat**]{.command}: This command replaces the DTDDECL catalog entry, which is not supported by Linux SGML tools, with the SGMLDECL catalog entry.
-:::
+<span class="command"><strong>sed -i -e 's\|DTDDECL "-//OASIS//DTD Docbook V3.1//EN"\|SGMLDECL\|g' docbook.cat</strong></span>: This command replaces the DTDDECL catalog entry, which is not supported by Linux SGML tools, with the SGMLDECL catalog entry.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring DocBook-3.1 SGML DTD {#configuring-docbook-3.1-sgml-dtd .sect2}
+<div class="configuration" lang="en">
+## Configuring DocBook-3.1 SGML DTD {#configuring-docbook-3.1-sgml-dtd}
 
-::: {.sect3 lang="en"}
-### []{#sgml-dtd-3-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/sgml/catalog`{.filename}
-:::
+<code class="filename">/etc/sgml/catalog</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
 The above installation script updates the catalog.
 
-Using only the most current 3.x version of [DocBook SGML DTD]{.application} requires the following (perform as the `root`{.systemitem} user):
+Using only the most current 3.x version of <span class="application">DocBook SGML DTD</span> requires the following (perform as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 cat >> /usr/share/sgml/docbook/sgml-dtd-3.1/catalog << "EOF"
   -- Begin Single Major Version catalog changes --
 
@@ -123,53 +123,53 @@ PUBLIC "-//Davenport//DTD DocBook V3.0//EN" "docbook.dtd"
   -- End Single Major Version catalog changes --
 EOF
 ```
-:::
-:::::
+</div>
+</div>
 
-:::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-:::::::: segmentedlist
-::::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Files:** [SGML DTD and MOD files]{.segbody}
-:::
+<div class="seg">
+**Installed Files:** <span class="segbody">SGML DTD and MOD files</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/sgml/docbook/sgml-dtd-3.1]{.segbody}
-:::
-:::::::
-::::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/sgml/docbook/sgml-dtd-3.1</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------
-  []{#SGML-DTD-files}[`SGML DTD files`{.filename}]{.term}   contains a document type definition which defines the element types and the attribute lists that can be used in the corresponding SGML files
-  []{#SGML-MOD-files}[`SGML MOD files`{.filename}]{.term}   contains components of the document type definition that are sourced into the `DTD`{.filename} files
+  <a id="SGML-DTD-files"></a><span class="term"><code class="filename">SGML DTD files</code></span>   contains a document type definition which defines the element types and the attribute lists that can be used in the corresponding SGML files
+  <a id="SGML-MOD-files"></a><span class="term"><code class="filename">SGML MOD files</code></span>   contains components of the document type definition that are sourced into the <code class="filename">DTD</code> files
   --------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------
-:::
-::::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](sgml-common.md "sgml-common-0.6.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](sgml-common.md "sgml-common-0.6.3")
 
     sgml-common-0.6.3
 
--   [Next](docbook-4.5-dtd.md "docbook-4.5-dtd"){accesskey="n"}
+-   [Next](docbook-4.5-dtd.md "docbook-4.5-dtd")
 
     docbook-4.5-dtd
 
--   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)"){accesskey="u"}
+-   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

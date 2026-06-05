@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](iso-codes.md "ISO Codes-4.20.1"){accesskey="p"}
+-   [Prev](iso-codes.md "ISO Codes-4.20.1")
 
     ISO Codes-4.20.1
 
--   [Next](pinentry.md "pinentry-1.3.2"){accesskey="n"}
+-   [Next](pinentry.md "pinentry-1.3.2")
 
     pinentry-1.3.2
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lsof}lsof-4.99.6 {#lsof-4.99.6 .sect1}
+# lsof-4.99.6 {#lsof-4.99.6}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lsof {#introduction-to-lsof .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lsof {#introduction-to-lsof}
 
-The [lsof]{.application} package is useful to LiSt Open Files for a given running application or process.
+The <span class="application">lsof</span> package is useful to LiSt Open Files for a given running application or process.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lsof-org/lsof/releases/download/4.99.6/lsof-4.99.6.tar.gz](https://github.com/lsof-org/lsof/releases/download/4.99.6/lsof-4.99.6.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lsof-org/lsof/releases/download/4.99.6/lsof-4.99.6.tar.gz">https://github.com/lsof-org/lsof/releases/download/4.99.6/lsof-4.99.6.tar.gz</a>
 
 -   Download MD5 sum: cae73a994aa9c075252b99bb6a613eaa
 
@@ -44,99 +44,99 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 13 MB (with tests)
 
 -   Estimated build time: 0.6 SBU (with tests)
-:::
+</div>
 
 ### lsof Dependencies
 
 #### Required
 
-[libtirpc-1.3.7](../basicnet/libtirpc.md "libtirpc-1.3.7"){.xref}
+<a class="xref" href="../basicnet/libtirpc.md" title="libtirpc-1.3.7">libtirpc-1.3.7</a>
 
 #### Optional
 
-[Nmap-7.99](../basicnet/nmap.md "Nmap-7.99"){.xref} (with a symbolic link [**nc**]{.command} pointing to [**ncat**]{.command} in `/usr/bin`{.filename}; used in tests)
-:::::
+<a class="xref" href="../basicnet/nmap.md" title="Nmap-7.99">Nmap-7.99</a> (with a symbolic link <span class="command"><strong>nc</strong></span> pointing to <span class="command"><strong>ncat</strong></span> in <code class="filename">/usr/bin</code>; used in tests)
+</div>
 
-::: {.kernel lang="en"}
-## []{#lsof-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 To run the tests, the following option should be enabled in the kernel configuration:
 
-``` screen
+```console
 General setup --->
   [*] POSIX Message Queues                                        [POSIX_MQUEUE]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of lsof {#installation-of-lsof .sect2}
+<div class="installation" lang="en">
+## Installation of lsof {#installation-of-lsof}
 
-Install [lsof]{.application} by running the following commands:
+Install <span class="application">lsof</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-The tests should be run as the `root`{.systemitem} user. They require that the POSIX message queues are enabled in the kernel, and that [Nmap-7.99](../basicnet/nmap.md "Nmap-7.99"){.xref} be installed with a symbolic link `/usr/bin/nc`{.filename} pointing to [**ncat**]{.command}.
+The tests should be run as the <code class="systemitem">root</code> user. They require that the POSIX message queues are enabled in the kernel, and that <a class="xref" href="../basicnet/nmap.md" title="Nmap-7.99">Nmap-7.99</a> be installed with a symbolic link <code class="filename">/usr/bin/nc</code> pointing to <span class="command"><strong>ncat</strong></span>.
 
-``` root
+```bash
 make check
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [lsof]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">lsof</span>
+</div>
 
-::: seg
-**Installed Libraries:** [liblsof.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">liblsof.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------- -----------------------------------------------------------
-  []{#lsof-app}[[**lsof**]{.command}]{.term}     lists open files for running processes
-  []{#liblsof}[`liblsof.so`{.filename}]{.term}   contains an interface for applications to list open files
+  <a id="lsof-app"></a><span class="command"><span class="term"><strong>lsof</strong></span></span>     lists open files for running processes
+  <a id="liblsof"></a><span class="term"><code class="filename">liblsof.so</code></span>   contains an interface for applications to list open files
   ---------------------------------------------- -----------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](iso-codes.md "ISO Codes-4.20.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](iso-codes.md "ISO Codes-4.20.1")
 
     ISO Codes-4.20.1
 
--   [Next](pinentry.md "pinentry-1.3.2"){accesskey="n"}
+-   [Next](pinentry.md "pinentry-1.3.2")
 
     pinentry-1.3.2
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

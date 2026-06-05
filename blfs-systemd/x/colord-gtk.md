@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](cairomm-1.16.md "libcairomm-1.16 (cairomm-1.18.0)"){accesskey="p"}
+-   [Prev](cairomm-1.16.md "libcairomm-1.16 (cairomm-1.18.0)")
 
     libcairomm-1.16 (cairomm-1.18.0)
 
--   [Next](fltk.md "FLTK-1.4.5"){accesskey="n"}
+-   [Next](fltk.md "FLTK-1.4.5")
 
     FLTK-1.4.5
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#colord-gtk}colord-gtk-0.3.1 {#colord-gtk-0.3.1 .sect1}
+# colord-gtk-0.3.1 {#colord-gtk-0.3.1}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Colord GTK {#introduction-to-colord-gtk .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Colord GTK {#introduction-to-colord-gtk}
 
-The [Colord GTK]{.application} package contains [GTK+]{.application} bindings for [Colord]{.application}.
+The <span class="application">Colord GTK</span> package contains <span class="application">GTK+</span> bindings for <span class="application">Colord</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.freedesktop.org/software/colord/releases/colord-gtk-0.3.1.tar.xz](https://www.freedesktop.org/software/colord/releases/colord-gtk-0.3.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.freedesktop.org/software/colord/releases/colord-gtk-0.3.1.tar.xz">https://www.freedesktop.org/software/colord/releases/colord-gtk-0.3.1.tar.xz</a>
 
 -   Download MD5 sum: d436740c06e42af421384f16b2a9a0a7
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.1 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Colord GTK Dependencies
 
 #### Required
 
-[colord-1.4.8](../general/colord.md "Colord-1.4.8"){.xref} and [GTK-3.24.52](gtk3.md "GTK-3.24.52"){.xref}
+<a class="xref" href="../general/colord.md" title="Colord-1.4.8">colord-1.4.8</a> and <a class="xref" href="gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [GTK-4.22.4](gtk4.md "GTK-4.22.4"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[docbook-xml-5.0](../pst/docbook5.md "docbook-xml-5.0"){.xref}, [docbook-xsl-ns-1.79.2](../pst/docbook-xsl-ns.md "docbook-xsl-ns-1.79.2"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref} (to build the man page), and [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="../pst/docbook5.md" title="docbook-xml-5.0">docbook-xml-5.0</a>, <a class="xref" href="../pst/docbook-xsl-ns.md" title="docbook-xsl-ns-1.79.2">docbook-xsl-ns-1.79.2</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> (to build the man page), and <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Colord GTK {#installation-of-colord-gtk .sect2}
+<div class="installation" lang="en">
+## Installation of Colord GTK {#installation-of-colord-gtk}
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
-If building the documentation [**ninja -j1**]{.command} must be used.
-:::
+If building the documentation <span class="command"><strong>ninja -j1</strong></span> must be used.
+</div>
 
-Install [Colord GTK]{.application} by running the following commands:
+Install <span class="application">Colord GTK</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -88,9 +88,9 @@ meson setup --prefix=/usr       \
 ninja
 ```
 
-If [docbook-xml-5.0](../pst/docbook5.md "docbook-xml-5.0"){.xref}, [docbook-xsl-ns-1.79.2](../pst/docbook-xsl-ns.md "docbook-xsl-ns-1.79.2"){.xref}, and [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref} are installed, build the man page:
+If <a class="xref" href="../pst/docbook5.md" title="docbook-xml-5.0">docbook-xml-5.0</a>, <a class="xref" href="../pst/docbook-xsl-ns.md" title="docbook-xsl-ns-1.79.2">docbook-xsl-ns-1.79.2</a>, and <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> are installed, build the man page:
 
-``` userinput
+```bash
 sed '/class="manual"/i \
      <refmiscinfo class="source">colord-gtk</refmiscinfo>' \
     -i ../man/*.xml &&
@@ -98,68 +98,68 @@ meson configure -D man=true &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. The tests need to be run from an X session, and may require a color profile for your primary display.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. The tests need to be run from an X session, and may require a color profile for your primary display.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D vapi=true`*: This switch enables building of the Vala bindings. Remove this switch if you don't have [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref} installed.
+*`-D vapi=true`*: This switch enables building of the Vala bindings. Remove this switch if you don't have <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a> installed.
 
-*`-D gtk4=true`*: This switch enables building the GTK-4 bindings for colord. Set this option to 'false' if you do not have [GTK-4.22.4](gtk4.md "GTK-4.22.4"){.xref} installed.
+*`-D gtk4=true`*: This switch enables building the GTK-4 bindings for colord. Set this option to 'false' if you do not have <a class="xref" href="gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a> installed.
 
 *`-D docs=false`*: This switch disables building gtk-doc based documentation. Even if gtk-doc is installed, you will need the namespaced versions of the Docbook XSL stylesheets.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [cd-convert]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cd-convert</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libcolord-gtk.so and libcolord-gtk4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libcolord-gtk.so and libcolord-gtk4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/colord-1/colord-gtk and /usr/share/gtk-doc/html/colord-gtk]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/colord-1/colord-gtk and /usr/share/gtk-doc/html/colord-gtk</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------ --------------------------------------------------------------------
-  []{#cd-convert}[[**cd-convert**]{.command}]{.term}           is a Color Manager Testing Tool
-  []{#libcolord-gtk}[`libcolord-gtk.so`{.filename}]{.term}     contains the [Colord]{.application} [GTK+]{.application} bindings
-  []{#libcolord-gtk4}[`libcolord-gtk4.so`{.filename}]{.term}   contains the [Colord]{.application} [GTK-4]{.application} bindings
+  <a id="cd-convert"></a><span class="command"><span class="term"><strong>cd-convert</strong></span></span>           is a Color Manager Testing Tool
+  <a id="libcolord-gtk"></a><span class="term"><code class="filename">libcolord-gtk.so</code></span>     contains the <span class="application">Colord</span> <span class="application">GTK+</span> bindings
+  <a id="libcolord-gtk4"></a><span class="term"><code class="filename">libcolord-gtk4.so</code></span>   contains the <span class="application">Colord</span> <span class="application">GTK-4</span> bindings
   ------------------------------------------------------------ --------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](cairomm-1.16.md "libcairomm-1.16 (cairomm-1.18.0)"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](cairomm-1.16.md "libcairomm-1.16 (cairomm-1.18.0)")
 
     libcairomm-1.16 (cairomm-1.18.0)
 
--   [Next](fltk.md "FLTK-1.4.5"){accesskey="n"}
+-   [Next](fltk.md "FLTK-1.4.5")
 
     FLTK-1.4.5
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

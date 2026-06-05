@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](qtxdg-tools.md "qtxdg-tools-4.4.0"){accesskey="p"}
+-   [Prev](qtxdg-tools.md "qtxdg-tools-4.4.0")
 
     qtxdg-tools-4.4.0
 
--   [Next](menu-cache.md "menu-cache-1.1.1"){accesskey="n"}
+-   [Next](menu-cache.md "menu-cache-1.1.1")
 
     menu-cache-1.1.1
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libfm-extra}libfm-extra-1.3.2 {#libfm-extra-1.3.2 .sect1}
+# libfm-extra-1.3.2 {#libfm-extra-1.3.2}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libfm-extra {#introduction-to-libfm-extra .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libfm-extra {#introduction-to-libfm-extra}
 
-The [libfm-extra]{.application} package contains a library and other files required by the [**menu-cache-gen**]{.command} program in /usr/bin/libexec installed by [menu-cache-1.1.1](menu-cache.md "menu-cache-1.1.1"){.xref}.
+The <span class="application">libfm-extra</span> package contains a library and other files required by the <span class="command"><strong>menu-cache-gen</strong></span> program in /usr/bin/libexec installed by <a class="xref" href="menu-cache.md" title="menu-cache-1.1.1">menu-cache-1.1.1</a>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/pcmanfm/libfm-1.3.2.tar.xz](https://downloads.sourceforge.net/pcmanfm/libfm-1.3.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/pcmanfm/libfm-1.3.2.tar.xz">https://downloads.sourceforge.net/pcmanfm/libfm-1.3.2.tar.xz</a>
 
 -   Download MD5 sum: c87a0ff41ae77825079b2f785ec0741e
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libfm-extra Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} and [Intltool-0.51.0](../general/intltool.md "Intltool-0.51.0"){.xref}
-:::::
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> and <a class="xref" href="../general/intltool.md" title="Intltool-0.51.0">Intltool-0.51.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libfm-extra {#installation-of-libfm-extra .sect2}
+<div class="installation" lang="en">
+## Installation of libfm-extra {#installation-of-libfm-extra}
 
-Install [libfm-extra]{.application} by running the following commands:
+Install <span class="application">libfm-extra</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr     \
             --sysconfdir=/etc \
             --with-extra-only \
@@ -69,62 +69,62 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--with-extra-only`*: This switch disables all components except for the libfm-extra library.
 
-*`--with-gtk=no`*: This switch disables support for [GTK+]{.application} because it is not necessary for this package.
+*`--with-gtk=no`*: This switch disables support for <span class="application">GTK+</span> because it is not necessary for this package.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libfm-extra.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libfm-extra.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libfm (symlink) and /usr/include/libfm-1.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libfm (symlink) and /usr/include/libfm-1.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- --------------------------------------------------------
-  []{#libfm-extra-lib}[`libfm-extra.so`{.filename}]{.term}   contains the [libfm-extra]{.application} API functions
+  <a id="libfm-extra-lib"></a><span class="term"><code class="filename">libfm-extra.so</code></span>   contains the <span class="application">libfm-extra</span> API functions
   ---------------------------------------------------------- --------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qtxdg-tools.md "qtxdg-tools-4.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qtxdg-tools.md "qtxdg-tools-4.4.0")
 
     qtxdg-tools-4.4.0
 
--   [Next](menu-cache.md "menu-cache-1.1.1"){accesskey="n"}
+-   [Next](menu-cache.md "menu-cache-1.1.1")
 
     menu-cache-1.1.1
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

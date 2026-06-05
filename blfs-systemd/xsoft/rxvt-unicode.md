@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 41. Other X-based Programs
 
--   [Prev](inkscape.md "Inkscape-1.4.4"){accesskey="p"}
+-   [Prev](inkscape.md "Inkscape-1.4.4")
 
     Inkscape-1.4.4
 
--   [Next](thunderbird.md "Thunderbird-140.11.0esr"){accesskey="n"}
+-   [Next](thunderbird.md "Thunderbird-140.11.0esr")
 
     Thunderbird-140.11.0esr
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#rxvt-unicode}rxvt-unicode-9.31 {#rxvt-unicode-9.31 .sect1}
+# rxvt-unicode-9.31 {#rxvt-unicode-9.31}
 
-::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to rxvt-unicode {#introduction-to-rxvt-unicode .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to rxvt-unicode {#introduction-to-rxvt-unicode}
 
-[rxvt-unicode]{.application} is a clone of the terminal emulator [rxvt]{.application}, an X Window System terminal emulator which includes support for XFT and Unicode.
+<span class="application">rxvt-unicode</span> is a clone of the terminal emulator <span class="application">rxvt</span>, an X Window System terminal emulator which includes support for XFT and Unicode.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Please be aware that [rxvt-unicode]{.application} is affected by an issue in [perl]{.application} where the SIGFPE handler is set to SIG_IGN (i.e. the signal is ignored). If you are building an LFS system from within [**urxvt**]{.command} and running the test suites, tests in [bash]{.application} which test raising this signal will fail.
-:::
+Please be aware that <span class="application">rxvt-unicode</span> is affected by an issue in <span class="application">perl</span> where the SIGFPE handler is set to SIG_IGN (i.e. the signal is ignored). If you are building an LFS system from within <span class="command"><strong>urxvt</strong></span> and running the test suites, tests in <span class="application">bash</span> which test raising this signal will fail.
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.31.tar.bz2](http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.31.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.31.tar.bz2">http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.31.tar.bz2</a>
 
 -   Download MD5 sum: 3d0ec83705c9b9ff301a4b9965b3cd9f
 
@@ -52,56 +52,56 @@ Please be aware that [rxvt-unicode]{.application} is affected by an issue in [pe
 -   Estimated disk space required: 22 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### rxvt-unicode Dependencies
 
 #### Required
 
-[libptytty-2.0](../general/libptytty.md "libptytty-2.0"){.xref} and [a graphical environment](../x/installing.md "Chapter 24. Graphical Environments"){.xref}
+<a class="xref" href="../general/libptytty.md" title="libptytty-2.0">libptytty-2.0</a> and <a class="xref" href="../x/installing.md" title="Chapter 24. Graphical Environments">a graphical environment</a>
 
 #### Optional
 
-[gdk-pixbuf-2.44.6](../x/gdk-pixbuf.md "gdk-pixbuf-2.44.6"){.xref} (for background images) and [startup-notification-0.12](../x/startup-notification.md "startup-notification-0.12"){.xref}
-::::::
+<a class="xref" href="../x/gdk-pixbuf.md" title="gdk-pixbuf-2.44.6">gdk-pixbuf-2.44.6</a> (for background images) and <a class="xref" href="../x/startup-notification.md" title="startup-notification-0.12">startup-notification-0.12</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of rxvt-unicode {#installation-of-rxvt-unicode .sect2}
+<div class="installation" lang="en">
+## Installation of rxvt-unicode {#installation-of-rxvt-unicode}
 
-Install [rxvt-unicode]{.application} by running the following commands:
+Install <span class="application">rxvt-unicode</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --enable-everything &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--enable-everything`*: Add support for all non-multichoice options. Details about the different options can be found in the file `README.configure`{.filename}.
+*`--enable-everything`*: Add support for all non-multichoice options. Details about the different options can be found in the file <code class="filename">README.configure</code>.
 
-`--disable-xft`{.option}: Remove support for Xft fonts.
+<code class="option">--disable-xft</code>: Remove support for Xft fonts.
 
-`--disable-perl`{.option}: Disable the embedded [Perl]{.application} interpreter.
+<code class="option">--disable-perl</code>: Disable the embedded <span class="application">Perl</span> interpreter.
 
-`--disable-afterimage`{.option}: Remove support for libAfterImage.
-:::
+<code class="option">--disable-afterimage</code>: Remove support for libAfterImage.
+</div>
 
-::: {.configuration lang="en"}
-## Configuring rxvt-unicode {#configuring-rxvt-unicode .sect2}
+<div class="configuration" lang="en">
+## Configuring rxvt-unicode {#configuring-rxvt-unicode}
 
-The [rxvt-unicode]{.application} terminal emulator uses the resource class `URxvt`{.classname} and the resource name `urxvt`{.classname}. You can add X resource definitions to a user's `~/.Xresources`{.filename} or `~/.Xdefaults`{.filename} files or to the system-wide `/etc/X11/app-defaults/URxvt`{.filename} file. The following example will load the `matcher`{.classname} [Perl]{.application} extension (assuming [Perl]{.application} support wasn't disabled), which enables a left button click to open an underlined URL in the specified browser, sets a background and foreground color and loads an Xft font (as the `root`{.systemitem} user):
+The <span class="application">rxvt-unicode</span> terminal emulator uses the resource class <code class="classname">URxvt</code> and the resource name <code class="classname">urxvt</code>. You can add X resource definitions to a user's <code class="filename">~/.Xresources</code> or <code class="filename">~/.Xdefaults</code> files or to the system-wide <code class="filename">/etc/X11/app-defaults/URxvt</code> file. The following example will load the <code class="classname">matcher</code> <span class="application">Perl</span> extension (assuming <span class="application">Perl</span> support wasn't disabled), which enables a left button click to open an underlined URL in the specified browser, sets a background and foreground color and loads an Xft font (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 cat >> /etc/X11/app-defaults/URxvt << "EOF"
 ! Use the specified colour as the windows background colour [default white]
 URxvt*background: black
@@ -129,30 +129,30 @@ EOF
 
 In order to view the defined X resources, issue:
 
-``` userinput
+```bash
 xrdb -query
 ```
 
 In order to add the modifications of the new user configuration file, keeping previously X configurations (of course, unless you are changing any on previously define), issue:
 
-``` userinput
+```bash
 xrdb -merge ~/.Xresources
 ```
 
-The [rxvt-unicode]{.application} application can also run in a daemon mode, which makes it possible to open multiple terminal windows within the same process. The [**urxvtc**]{.command} client then connects to the [**urxvtd**]{.command} daemon and requests a new terminal window. Use this option with caution. If the daemon crashes, all the running processes in the terminal windows are terminated.
+The <span class="application">rxvt-unicode</span> application can also run in a daemon mode, which makes it possible to open multiple terminal windows within the same process. The <span class="command"><strong>urxvtc</strong></span> client then connects to the <span class="command"><strong>urxvtd</strong></span> daemon and requests a new terminal window. Use this option with caution. If the daemon crashes, all the running processes in the terminal windows are terminated.
 
-You can start the [**urxvtd**]{.command} daemon in the system or personal startup [**X**]{.command} session script (e.g., `~/.xinitrc`{.filename}) by adding the following lines near the top of the script:
+You can start the <span class="command"><strong>urxvtd</strong></span> daemon in the system or personal startup <span class="command"><strong>X</strong></span> session script (e.g., <code class="filename">~/.xinitrc</code>) by adding the following lines near the top of the script:
 
-``` userinput
+```bash
 # Start the urxvtd daemon
 urxvtd -q -f -o &
 ```
 
-For more information, examine the [**urxvt**]{.command}, [**urxvtd**]{.command}, [**urxvtc**]{.command}, and `urxvtperl`{.filename} man pages.
+For more information, examine the <span class="command"><strong>urxvt</strong></span>, <span class="command"><strong>urxvtd</strong></span>, <span class="command"><strong>urxvtc</strong></span>, and <code class="filename">urxvtperl</code> man pages.
 
-If you use a Desktop Environment, a menu entry can be included, issuing, as the `root`{.systemitem} user:
+If you use a Desktop Environment, a menu entry can be included, issuing, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /usr/share/applications/urxvt.desktop << "EOF" &&
 [Desktop Entry]
 Encoding=UTF-8
@@ -171,50 +171,50 @@ EOF
 update-desktop-database -q
 ```
 
-For that, you need [desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref} and at least one of [gnome-icon-theme-3.12.0](../x/gnome-icon-theme.md "gnome-icon-theme-3.12.0"){.xref}, [oxygen-icons-6.1.0](../x/oxygen-icons.md "oxygen-icons-6.1.0"){.xref} and [lxde-icon-theme-0.5.1](../x/lxde-icon-theme.md "lxde-icon-theme-0.5.1"){.xref}. Uncomment the line with [“[StartupNotify=true]{.quote}”]{.quote} if [startup-notification-0.12](../x/startup-notification.md "startup-notification-0.12"){.xref} is installed.
-:::
+For that, you need <a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a> and at least one of <a class="xref" href="../x/gnome-icon-theme.md" title="gnome-icon-theme-3.12.0">gnome-icon-theme-3.12.0</a>, <a class="xref" href="../x/oxygen-icons.md" title="oxygen-icons-6.1.0">oxygen-icons-6.1.0</a> and <a class="xref" href="../x/lxde-icon-theme.md" title="lxde-icon-theme-0.5.1">lxde-icon-theme-0.5.1</a>. Uncomment the line with <span class="quote">“<span class="quote">StartupNotify=true</span>”</span> if <a class="xref" href="../x/startup-notification.md" title="startup-notification-0.12">startup-notification-0.12</a> is installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [urxvt, urxvtd, and urxvtc]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">urxvt, urxvtd, and urxvtc</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Many [Perl]{.application} extensions located under `/usr/lib/urxvt/perl`{.filename}]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="application">Many <span class="segbody">Perl</span> extensions located under <code class="filename">/usr/lib/urxvt/perl</code></span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/lib/urxvt]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/lib/urxvt</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------- ------------------------------------------------
-  []{#urxvt-bin}[[**urxvt**]{.command}]{.term}   is a terminal emulator for the X Window System
-  []{#urxvtd}[[**urxvtd**]{.command}]{.term}     is the [**urxvt**]{.command} terminal daemon
-  []{#urxvtc}[[**urxvtc**]{.command}]{.term}     controls the [**urxvtd**]{.command} daemon
+  <a id="urxvt-bin"></a><span class="command"><span class="term"><strong>urxvt</strong></span></span>   is a terminal emulator for the X Window System
+  <a id="urxvtd"></a><span class="command"><span class="term"><strong>urxvtd</strong></span></span>     is the <span class="command"><strong>urxvt</strong></span> terminal daemon
+  <a id="urxvtc"></a><span class="command"><span class="term"><strong>urxvtc</strong></span></span>     controls the <span class="command"><strong>urxvtd</strong></span> daemon
   ---------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](inkscape.md "Inkscape-1.4.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](inkscape.md "Inkscape-1.4.4")
 
     Inkscape-1.4.4
 
--   [Next](thunderbird.md "Thunderbird-140.11.0esr"){accesskey="n"}
+-   [Next](thunderbird.md "Thunderbird-140.11.0esr")
 
     Thunderbird-140.11.0esr
 
--   [Up](other.md "Chapter 41. Other X-based Programs"){accesskey="u"}
+-   [Up](other.md "Chapter 41. Other X-based Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

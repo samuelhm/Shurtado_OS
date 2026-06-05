@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 6. Text Editors
 
--   [Prev](editors.md "Text Editors"){accesskey="p"}
+-   [Prev](editors.md "Text Editors")
 
     Text Editors
 
--   [Next](ed.md "Ed-1.22.5"){accesskey="n"}
+-   [Next](ed.md "Ed-1.22.5")
 
     Ed-1.22.5
 
--   [Up](editors.md "Chapter 6. Text Editors"){accesskey="u"}
+-   [Up](editors.md "Chapter 6. Text Editors")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#bluefish}Bluefish-2.4.1 {#bluefish-2.4.1 .sect1}
+# Bluefish-2.4.1 {#bluefish-2.4.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Bluefish {#introduction-to-bluefish .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Bluefish {#introduction-to-bluefish}
 
-[Bluefish]{.application} is a [GTK+]{.application} text editor targeted towards programmers and web designers, with many options to write websites, scripts and programming code. [Bluefish]{.application} supports many programming and markup languages, and it focuses on editing dynamic and interactive websites.
+<span class="application">Bluefish</span> is a <span class="application">GTK+</span> text editor targeted towards programmers and web designers, with many options to write websites, scripts and programming code. <span class="application">Bluefish</span> supports many programming and markup languages, and it focuses on editing dynamic and interactive websites.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.bennewitz.com/bluefish/stable/source/bluefish-2.4.1.tar.bz2](https://www.bennewitz.com/bluefish/stable/source/bluefish-2.4.1.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.bennewitz.com/bluefish/stable/source/bluefish-2.4.1.tar.bz2">https://www.bennewitz.com/bluefish/stable/source/bluefish-2.4.1.tar.bz2</a>
 
 -   Download MD5 sum: 69375f4002750d6b551713e5bbf67a1d
 
@@ -44,94 +44,94 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 52 MB
 
 -   Estimated build time: 0.3 SBU
-:::
+</div>
 
 ### Bluefish Dependencies
 
 #### Required
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>
 
 #### Recommended
 
-[desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref} (for updating the desktop database)
+<a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a> (for updating the desktop database)
 
 #### Optional
 
-[enchant-2.8.16](../general/enchant.md "enchant-2.8.16"){.xref} (for spell checking), [Gucharmap-17.0.2](../gnome/gucharmap.md "Gucharmap-17.0.2"){.xref}, and [Jing](https://github.com/relaxng/jing-trang){.ulink}
-:::::
+<a class="xref" href="../general/enchant.md" title="enchant-2.8.16">enchant-2.8.16</a> (for spell checking), <a class="xref" href="../gnome/gucharmap.md" title="Gucharmap-17.0.2">Gucharmap-17.0.2</a>, and <a class="ulink" href="https://github.com/relaxng/jing-trang">Jing</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Bluefish {#installation-of-bluefish .sect2}
+<div class="installation" lang="en">
+## Installation of Bluefish {#installation-of-bluefish}
 
-Install [Bluefish]{.application} by running the following commands:
+Install <span class="application">Bluefish</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --docdir=/usr/share/doc/bluefish-2.4.1 &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-This package installs icon files into the `/usr/share/icons/hicolor`{.filename} hierarchy and desktop files into the `/usr/share/applications`{.filename} hierarchy. You can improve system performance and memory usage by updating `/usr/share/icons/hicolor/icon-theme.cache`{.filename} and `/usr/share/applications/mimeinfo.cache`{.filename}. To perform the update you must have [desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref} (for the desktop cache) and issue the following commands as the `root`{.systemitem} user:
+This package installs icon files into the <code class="filename">/usr/share/icons/hicolor</code> hierarchy and desktop files into the <code class="filename">/usr/share/applications</code> hierarchy. You can improve system performance and memory usage by updating <code class="filename">/usr/share/icons/hicolor/icon-theme.cache</code> and <code class="filename">/usr/share/applications/mimeinfo.cache</code>. To perform the update you must have <a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a> (for the desktop cache) and issue the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor &&
 update-desktop-database
 ```
-:::
-::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [bluefish]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">bluefish</span>
+</div>
 
-::: seg
-**Installed Libraries:** [several under /usr/lib/bluefish/]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">several under /usr/lib/bluefish/</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/bluefish, /usr/share/bluefish, /usr/share/doc/bluefish-2.4.1, and /usr/share/xml/bluefish]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/bluefish, /usr/share/bluefish, /usr/share/doc/bluefish-2.4.1, and /usr/share/xml/bluefish</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- ------------------------------------------------------------------
-  []{#bluefish-prog}[[**bluefish**]{.command}]{.term}   is a [GTK+]{.application} text editor for markup and programming
+  <a id="bluefish-prog"></a><span class="command"><span class="term"><strong>bluefish</strong></span></span>   is a <span class="application">GTK+</span> text editor for markup and programming
   ----------------------------------------------------- ------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](editors.md "Text Editors"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](editors.md "Text Editors")
 
     Text Editors
 
--   [Next](ed.md "Ed-1.22.5"){accesskey="n"}
+-   [Next](ed.md "Ed-1.22.5")
 
     Ed-1.22.5
 
--   [Up](editors.md "Chapter 6. Text Editors"){accesskey="u"}
+-   [Up](editors.md "Chapter 6. Text Editors")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

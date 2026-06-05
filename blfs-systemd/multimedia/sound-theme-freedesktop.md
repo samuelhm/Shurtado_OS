@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](sdl3.md "SDL3-3.4.10"){accesskey="p"}
+-   [Prev](sdl3.md "SDL3-3.4.10")
 
     SDL3-3.4.10
 
--   [Next](soundtouch.md "SoundTouch-2.4.1"){accesskey="n"}
+-   [Next](soundtouch.md "SoundTouch-2.4.1")
 
     SoundTouch-2.4.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#sound-theme-freedesktop}sound-theme-freedesktop-0.8 {#sound-theme-freedesktop-0.8 .sect1}
+# sound-theme-freedesktop-0.8 {#sound-theme-freedesktop-0.8}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Sound Theme Freedesktop {#introduction-to-sound-theme-freedesktop .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Sound Theme Freedesktop {#introduction-to-sound-theme-freedesktop}
 
-The [Sound Theme Freedesktop]{.application} package contains sound themes for the desktop.
+The <span class="application">Sound Theme Freedesktop</span> package contains sound themes for the desktop.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://people.freedesktop.org/\~mccann/dist/sound-theme-freedesktop-0.8.tar.bz2](https://people.freedesktop.org/~mccann/dist/sound-theme-freedesktop-0.8.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://people.freedesktop.org/~mccann/dist/sound-theme-freedesktop-0.8.tar.bz2">https://people.freedesktop.org/\~mccann/dist/sound-theme-freedesktop-0.8.tar.bz2</a>
 
 -   Download MD5 sum: d7387912cfd275282d1ec94483cb2f62
 
@@ -44,65 +44,65 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### sound-theme-freedesktop Dependencies
 
 #### Required
 
-[Intltool-0.51.0](../general/intltool.md "Intltool-0.51.0"){.xref}
-:::::
+<a class="xref" href="../general/intltool.md" title="Intltool-0.51.0">Intltool-0.51.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Sound Theme Freedesktop {#installation-of-sound-theme-freedesktop .sect2}
+<div class="installation" lang="en">
+## Installation of Sound Theme Freedesktop {#installation-of-sound-theme-freedesktop}
 
-Install [Sound Theme Freedesktop]{.application} by running the following commands:
+Install <span class="application">Sound Theme Freedesktop</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/sounds/freedesktop]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/sounds/freedesktop</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](sdl3.md "SDL3-3.4.10"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](sdl3.md "SDL3-3.4.10")
 
     SDL3-3.4.10
 
--   [Next](soundtouch.md "SoundTouch-2.4.1"){accesskey="n"}
+-   [Next](soundtouch.md "SoundTouch-2.4.1")
 
     SoundTouch-2.4.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](libXau.md "libXau-1.0.12"){accesskey="p"}
+-   [Prev](libXau.md "libXau-1.0.12")
 
     libXau-1.0.12
 
--   [Next](xcb-proto.md "xcb-proto-1.17.0"){accesskey="n"}
+-   [Next](xcb-proto.md "xcb-proto-1.17.0")
 
     xcb-proto-1.17.0
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libXdmcp}libXdmcp-1.1.5 {#libxdmcp-1.1.5 .sect1}
+# libXdmcp-1.1.5 {#libxdmcp-1.1.5}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libXdmcp {#introduction-to-libxdmcp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libXdmcp {#introduction-to-libxdmcp}
 
-The [libXdmcp]{.application} package contains a library implementing the X Display Manager Control Protocol. This is useful for allowing clients to interact with the X Display Manager.
+The <span class="application">libXdmcp</span> package contains a library implementing the X Display Manager Control Protocol. This is useful for allowing clients to interact with the X Display Manager.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz](https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz">https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz</a>
 
 -   Download MD5 sum: ce0af51de211e4c99a111e64ae1df290
 
@@ -44,77 +44,77 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.0 MB (with test)
 
 -   Estimated build time: less than 0.1 SBU (with test)
-:::
+</div>
 
 ### libXdmcp Dependencies
 
 #### Required
 
-[xorgproto-2025.1](xorgproto.md "xorgproto-2025.1"){.xref}
+<a class="xref" href="xorgproto.md" title="xorgproto-2025.1">xorgproto-2025.1</a>
 
 #### Optional
 
-[xmlto-0.0.29](../pst/xmlto.md "xmlto-0.0.29"){.xref}, [fop-2.11](../pst/fop.md "fop-2.11"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref}, and [Xorg-SGML-doctools](https://gitlab.freedesktop.org/xorg/doc/xorg-sgml-doctools){.ulink} (for documentation)
-:::::
+<a class="xref" href="../pst/xmlto.md" title="xmlto-0.0.29">xmlto-0.0.29</a>, <a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, and <a class="ulink" href="https://gitlab.freedesktop.org/xorg/doc/xorg-sgml-doctools">Xorg-SGML-doctools</a> (for documentation)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libXdmcp {#installation-of-libxdmcp .sect2}
+<div class="installation" lang="en">
+## Installation of libXdmcp {#installation-of-libxdmcp}
 
-Install [libXdmcp]{.application} by running the following commands:
+Install <span class="application">libXdmcp</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure $XORG_CONFIG --docdir='${datadir}'/doc/libXdmcp-1.1.5 &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libXdmcp.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libXdmcp.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [`$XORG_PREFIX`{.envar}/share/doc/libXdmcp-1.1.5]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody"><code class="envar">$XORG_PREFIX</code>/share/doc/libXdmcp-1.1.5</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------- ---------------------------------------------------
-  []{#libXdmcp-x7}[`libXdmcp.so`{.filename}]{.term}   is the X Display Manager Control Protocol library
+  <a id="libXdmcp-x7"></a><span class="term"><code class="filename">libXdmcp.so</code></span>   is the X Display Manager Control Protocol library
   --------------------------------------------------- ---------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libXau.md "libXau-1.0.12"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libXau.md "libXau-1.0.12")
 
     libXau-1.0.12
 
--   [Next](xcb-proto.md "xcb-proto-1.17.0"){accesskey="n"}
+-   [Next](xcb-proto.md "xcb-proto-1.17.0")
 
     xcb-proto-1.17.0
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

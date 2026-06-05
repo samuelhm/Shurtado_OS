@@ -1,66 +1,66 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](xbitmaps.md "xbitmaps-1.1.4"){accesskey="p"}
+-   [Prev](xbitmaps.md "xbitmaps-1.1.4")
 
     xbitmaps-1.1.4
 
--   [Next](luit.md "luit-20250912"){accesskey="n"}
+-   [Next](luit.md "luit-20250912")
 
     luit-20250912
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xorg7-app}Xorg Applications {#xorg-applications .sect1}
+# Xorg Applications {#xorg-applications}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xorg Applications {#introduction-to-xorg-applications .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xorg Applications {#introduction-to-xorg-applications}
 
-The [Xorg]{.application} applications provide the expected applications available in previous X Window implementations.
+The <span class="application">Xorg</span> applications provide the expected applications available in previous X Window implementations.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/app/](https://www.x.org/pub/individual/app/){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/app/">https://www.x.org/pub/individual/app/</a>
 
 -   Download size: 4.9 MB
 
 -   Estimated disk space required: 48 MB
 
 -   Estimated build time: 1.5 SBU (ignoring the time to download)
-:::
+</div>
 
 ### Xorg Applications Dependencies
 
 #### Required
 
-[libpng-1.6.58](../general/libpng.md "libpng-1.6.58"){.xref}, [Mesa-26.0.7](mesa.md "Mesa-26.0.7"){.xref}, [xbitmaps-1.1.4](xbitmaps.md "xbitmaps-1.1.4"){.xref}, and [xcb-util-0.4.1](xcb-util.md "xcb-util-0.4.1"){.xref}
+<a class="xref" href="../general/libpng.md" title="libpng-1.6.58">libpng-1.6.58</a>, <a class="xref" href="mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a>, <a class="xref" href="xbitmaps.md" title="xbitmaps-1.1.4">xbitmaps-1.1.4</a>, and <a class="xref" href="xcb-util.md" title="xcb-util-0.4.1">xcb-util-0.4.1</a>
 
 #### Optional
 
-[Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref} and both [cairo-5c](https://www.cairographics.org/releases/){.ulink} and [Nickle](https://nickle.org/){.ulink} (only if you wish to try to run the undocumented [**xkeystone**]{.command} script).
-:::::
+<a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a> and both <a class="ulink" href="https://www.cairographics.org/releases/">cairo-5c</a> and <a class="ulink" href="https://nickle.org/">Nickle</a> (only if you wish to try to run the undocumented <span class="command"><strong>xkeystone</strong></span> script).
+</div>
 
-::: {.sect2 lang="en"}
-## Downloading Xorg Applications {#downloading-xorg-applications .sect2}
+<div class="sect2" lang="en">
+## Downloading Xorg Applications {#downloading-xorg-applications}
 
 First, create a list of files to be downloaded. This file will also be used to verify the integrity of the downloads when complete:
 
-``` userinput
+```bash
 cat > app-7.md5 << "EOF"
 36936e5bcf04b982ea87b4556d082061  iceauth-1.0.11.tar.xz
 83d943bbb0e3ab868cb0a7438e135544  mkfontscale-1.2.4.tar.xz
@@ -98,38 +98,38 @@ c91201bc1eb5e7b38933be8d0f7f16a8  xwininfo-1.1.6.tar.xz
 EOF
 ```
 
-To download the needed files using [Wget-1.25.0](../basicnet/wget.md "Wget-1.25.0"){.xref}, use the following commands:
+To download the needed files using <a class="xref" href="../basicnet/wget.md" title="Wget-1.25.0">Wget-1.25.0</a>, use the following commands:
 
-``` userinput
+```bash
 mkdir app &&
 cd app &&
 grep -v '^#' ../app-7.md5 | awk '{print $2}' | wget -i- -c \
     -B https://www.x.org/pub/individual/app/ &&
 md5sum -c ../app-7.md5
 ```
-:::
+</div>
 
-::::: {.installation lang="en"}
-## Installation of Xorg Applications {#installation-of-xorg-applications .sect2}
+<div class="installation" lang="en">
+## Installation of Xorg Applications {#installation-of-xorg-applications}
 
-:::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 When installing multiple packages in a script, the installation needs to be done as the root user. There are three general options that can be used to do this:
 
-::: orderedlist
+<div class="orderedlist">
 1.  Run the entire script as the root user (not recommended).
 
-2.  Use the [**sudo**]{.command} command from the [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} package.
+2.  Use the <span class="command"><strong>sudo</strong></span> command from the <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> package.
 
-3.  Use [**su -c "command arguments"**]{.command} (quotes required) which will ask for the root password for every iteration of the loop.
-:::
+3.  Use <span class="command"><strong>su -c "command arguments"</strong></span> (quotes required) which will ask for the root password for every iteration of the loop.
+</div>
 
-One way to handle this situation is to create a short [**bash**]{.command} function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
+One way to handle this situation is to create a short <span class="command"><strong>bash</strong></span> function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
 
-``` userinput
+```bash
 as_root()
 {
   if   [ $EUID = 0 ];        then $*
@@ -140,17 +140,17 @@ as_root()
 
 export -f as_root
 ```
-::::
+</div>
 
 First, start a subshell that will exit on error:
 
-``` userinput
+```bash
 bash -e
 ```
 
 Install all of the packages by running the following commands:
 
-``` userinput
+```bash
 for package in $(grep -v '^#' ../app-7.md5 | awk '{print $2}')
 do
   packagedir=${package%.tar.?z*}
@@ -166,92 +166,92 @@ done
 
 Finally, exit the shell that was started earlier:
 
-``` userinput
+```bash
 exit
 ```
 
-Unless you installed the optional dependencies, remove an undocumented script which is reported to be broken ([**xkeystone**]{.command} provided by the [xrandr]{.application} package).
+Unless you installed the optional dependencies, remove an undocumented script which is reported to be broken (<span class="command"><strong>xkeystone</strong></span> provided by the <span class="application">xrandr</span> package).
 
-``` userinput
+```bash
 as_root rm -f $XORG_PREFIX/bin/xkeystone
 ```
-:::::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [iceauth, mkfontdir, mkfontscale, sessreg, setxkbmap, smproxy, xauth, xcmsdb, xcursorgen, xdpr, xdpyinfo, xdriinfo, xev, xgamma, xhost, xinput, xkbbell, xkbcomp, xkbevd, xkbvleds, xkbwatch, xkill, xlsatoms, xlsclients, xmessage, xmodmap, xpr, xprop, xrandr, xrdb, xrefresh, xset, xsetroot, xvinfo, xwd, xwininfo, and xwud]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">iceauth, mkfontdir, mkfontscale, sessreg, setxkbmap, smproxy, xauth, xcmsdb, xcursorgen, xdpr, xdpyinfo, xdriinfo, xev, xgamma, xhost, xinput, xkbbell, xkbcomp, xkbevd, xkbvleds, xkbwatch, xkill, xlsatoms, xlsclients, xmessage, xmodmap, xpr, xprop, xrandr, xrdb, xrefresh, xset, xsetroot, xvinfo, xwd, xwininfo, and xwud</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- --------------------------------------------------------------------------------
-  []{#iceauth-x7}[[**iceauth**]{.command}]{.term}           is the ICE authority file utility
-  []{#mkfontdir-x7}[[**mkfontdir**]{.command}]{.term}       creates an index of X font files in a directory
-  []{#mkfontscale-x7}[[**mkfontscale**]{.command}]{.term}   creates an index of scalable font files for X
-  []{#sessreg-x7}[[**sessreg**]{.command}]{.term}           manages utmp/wtmp entries for non-init clients
-  []{#setxkbmap-x7}[[**setxkbmap**]{.command}]{.term}       sets the keyboard using the X Keyboard Extension
-  []{#smproxy-x7}[[**smproxy**]{.command}]{.term}           is the Session Manager Proxy
-  []{#xauth-x7}[[**xauth**]{.command}]{.term}               is the X authority file utility
-  []{#xcmsdb-x7}[[**xcmsdb**]{.command}]{.term}             is the Device Color Characterization utility for the X Color Management System
-  []{#xcursorgen-x7}[[**xcursorgen**]{.command}]{.term}     creates an X cursor file from a collection of PNG images
-  []{#xdpr-x7}[[**xdpr**]{.command}]{.term}                 dumps an X window directly to a printer
-  []{#xdpyinfo-x7}[[**xdpyinfo**]{.command}]{.term}         is a display information utility for X
-  []{#xdriinfo-x7}[[**xdriinfo**]{.command}]{.term}         queries configuration information of DRI drivers
-  []{#xev-x7}[[**xev**]{.command}]{.term}                   prints contents of X events
-  []{#xgamma-x7}[[**xgamma**]{.command}]{.term}             alters a monitor's gamma correction through the X server
-  []{#xhost-x7}[[**xhost**]{.command}]{.term}               is a server access control program for X
-  []{#xinput-x7}[[**xinput**]{.command}]{.term}             is a utility to configure and test X input devices
-  []{#xkbbell-x7}[[**xkbbell**]{.command}]{.term}           is an XKB utility program that raises a bell event
-  []{#xkbcomp-x7}[[**xkbcomp**]{.command}]{.term}           compiles an XKB keyboard description
-  []{#xkbevd-x7}[[**xkbevd**]{.command}]{.term}             is the XKB event daemon
-  []{#xkbvleds-x7}[[**xkbvleds**]{.command}]{.term}         shows the XKB status of keyboard LEDs
-  []{#xkbwatch-x7}[[**xkbwatch**]{.command}]{.term}         monitors modifier keys and LEDs
-  []{#xkill-x7}[[**xkill**]{.command}]{.term}               kills a client by its X resource
-  []{#xlsatoms-x7}[[**xlsatoms**]{.command}]{.term}         lists interned atoms defined on the server
-  []{#xlsclients-x7}[[**xlsclients**]{.command}]{.term}     lists client applications running on a display
-  []{#xmessage-x7}[[**xmessage**]{.command}]{.term}         displays a message or query in a window
-  []{#xmodmap-x7}[[**xmodmap**]{.command}]{.term}           is a utility for modifying keymaps and pointer button mappings in X
-  []{#xpr-x7}[[**xpr**]{.command}]{.term}                   prints an X window dump
-  []{#xprop-x7}[[**xprop**]{.command}]{.term}               is a property displayer for X
-  []{#xrandr-x7}[[**xrandr**]{.command}]{.term}             is a primitive command line interface to RandR extension
-  []{#xrdb-x7}[[**xrdb**]{.command}]{.term}                 is the X server resource database utility
-  []{#xrefresh-x7}[[**xrefresh**]{.command}]{.term}         refreshes all or part of an X screen
-  []{#xset-x7}[[**xset**]{.command}]{.term}                 is the user preference utility for X
-  []{#xsetroot-x7}[[**xsetroot**]{.command}]{.term}         is the root window parameter setting utility for X
-  []{#xvinfo-x7}[[**xvinfo**]{.command}]{.term}             prints out X-Video extension adaptor information
-  []{#xwd-x7}[[**xwd**]{.command}]{.term}                   dumps an image of an X window
-  []{#xwininfo-x7}[[**xwininfo**]{.command}]{.term}         is a window information utility for X
-  []{#xwud-x7}[[**xwud**]{.command}]{.term}                 is an image displayer for X
+  <a id="iceauth-x7"></a><span class="command"><span class="term"><strong>iceauth</strong></span></span>           is the ICE authority file utility
+  <a id="mkfontdir-x7"></a><span class="command"><span class="term"><strong>mkfontdir</strong></span></span>       creates an index of X font files in a directory
+  <a id="mkfontscale-x7"></a><span class="command"><span class="term"><strong>mkfontscale</strong></span></span>   creates an index of scalable font files for X
+  <a id="sessreg-x7"></a><span class="command"><span class="term"><strong>sessreg</strong></span></span>           manages utmp/wtmp entries for non-init clients
+  <a id="setxkbmap-x7"></a><span class="command"><span class="term"><strong>setxkbmap</strong></span></span>       sets the keyboard using the X Keyboard Extension
+  <a id="smproxy-x7"></a><span class="command"><span class="term"><strong>smproxy</strong></span></span>           is the Session Manager Proxy
+  <a id="xauth-x7"></a><span class="command"><span class="term"><strong>xauth</strong></span></span>               is the X authority file utility
+  <a id="xcmsdb-x7"></a><span class="command"><span class="term"><strong>xcmsdb</strong></span></span>             is the Device Color Characterization utility for the X Color Management System
+  <a id="xcursorgen-x7"></a><span class="command"><span class="term"><strong>xcursorgen</strong></span></span>     creates an X cursor file from a collection of PNG images
+  <a id="xdpr-x7"></a><span class="command"><span class="term"><strong>xdpr</strong></span></span>                 dumps an X window directly to a printer
+  <a id="xdpyinfo-x7"></a><span class="command"><span class="term"><strong>xdpyinfo</strong></span></span>         is a display information utility for X
+  <a id="xdriinfo-x7"></a><span class="command"><span class="term"><strong>xdriinfo</strong></span></span>         queries configuration information of DRI drivers
+  <a id="xev-x7"></a><span class="command"><span class="term"><strong>xev</strong></span></span>                   prints contents of X events
+  <a id="xgamma-x7"></a><span class="command"><span class="term"><strong>xgamma</strong></span></span>             alters a monitor's gamma correction through the X server
+  <a id="xhost-x7"></a><span class="command"><span class="term"><strong>xhost</strong></span></span>               is a server access control program for X
+  <a id="xinput-x7"></a><span class="command"><span class="term"><strong>xinput</strong></span></span>             is a utility to configure and test X input devices
+  <a id="xkbbell-x7"></a><span class="command"><span class="term"><strong>xkbbell</strong></span></span>           is an XKB utility program that raises a bell event
+  <a id="xkbcomp-x7"></a><span class="command"><span class="term"><strong>xkbcomp</strong></span></span>           compiles an XKB keyboard description
+  <a id="xkbevd-x7"></a><span class="command"><span class="term"><strong>xkbevd</strong></span></span>             is the XKB event daemon
+  <a id="xkbvleds-x7"></a><span class="command"><span class="term"><strong>xkbvleds</strong></span></span>         shows the XKB status of keyboard LEDs
+  <a id="xkbwatch-x7"></a><span class="command"><span class="term"><strong>xkbwatch</strong></span></span>         monitors modifier keys and LEDs
+  <a id="xkill-x7"></a><span class="command"><span class="term"><strong>xkill</strong></span></span>               kills a client by its X resource
+  <a id="xlsatoms-x7"></a><span class="command"><span class="term"><strong>xlsatoms</strong></span></span>         lists interned atoms defined on the server
+  <a id="xlsclients-x7"></a><span class="command"><span class="term"><strong>xlsclients</strong></span></span>     lists client applications running on a display
+  <a id="xmessage-x7"></a><span class="command"><span class="term"><strong>xmessage</strong></span></span>         displays a message or query in a window
+  <a id="xmodmap-x7"></a><span class="command"><span class="term"><strong>xmodmap</strong></span></span>           is a utility for modifying keymaps and pointer button mappings in X
+  <a id="xpr-x7"></a><span class="command"><span class="term"><strong>xpr</strong></span></span>                   prints an X window dump
+  <a id="xprop-x7"></a><span class="command"><span class="term"><strong>xprop</strong></span></span>               is a property displayer for X
+  <a id="xrandr-x7"></a><span class="command"><span class="term"><strong>xrandr</strong></span></span>             is a primitive command line interface to RandR extension
+  <a id="xrdb-x7"></a><span class="command"><span class="term"><strong>xrdb</strong></span></span>                 is the X server resource database utility
+  <a id="xrefresh-x7"></a><span class="command"><span class="term"><strong>xrefresh</strong></span></span>         refreshes all or part of an X screen
+  <a id="xset-x7"></a><span class="command"><span class="term"><strong>xset</strong></span></span>                 is the user preference utility for X
+  <a id="xsetroot-x7"></a><span class="command"><span class="term"><strong>xsetroot</strong></span></span>         is the root window parameter setting utility for X
+  <a id="xvinfo-x7"></a><span class="command"><span class="term"><strong>xvinfo</strong></span></span>             prints out X-Video extension adaptor information
+  <a id="xwd-x7"></a><span class="command"><span class="term"><strong>xwd</strong></span></span>                   dumps an image of an X window
+  <a id="xwininfo-x7"></a><span class="command"><span class="term"><strong>xwininfo</strong></span></span>         is a window information utility for X
+  <a id="xwud-x7"></a><span class="command"><span class="term"><strong>xwud</strong></span></span>                 is an image displayer for X
   --------------------------------------------------------- --------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xbitmaps.md "xbitmaps-1.1.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xbitmaps.md "xbitmaps-1.1.4")
 
     xbitmaps-1.1.4
 
--   [Next](luit.md "luit-20250912"){accesskey="n"}
+-   [Next](luit.md "luit-20250912")
 
     luit-20250912
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 10. Graphics and Font Libraries
 
--   [Prev](libgxps.md "libgxps-0.3.2"){accesskey="p"}
+-   [Prev](libgxps.md "libgxps-0.3.2")
 
     libgxps-0.3.2
 
--   [Next](libjpeg.md "libjpeg-turbo-3.1.4.1"){accesskey="n"}
+-   [Next](libjpeg.md "libjpeg-turbo-3.1.4.1")
 
     libjpeg-turbo-3.1.4.1
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libheif}libheif-1.23.0 {#libheif-1.23.0 .sect1}
+# libheif-1.23.0 {#libheif-1.23.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libheif {#introduction-to-libheif .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libheif {#introduction-to-libheif}
 
-The [libheif]{.application} package is an HEIF and AVIF file format decoder and encoder.
+The <span class="application">libheif</span> package is an HEIF and AVIF file format decoder and encoder.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/strukturag/libheif/releases/download/v1.23.0/libheif-1.23.0.tar.gz](https://github.com/strukturag/libheif/releases/download/v1.23.0/libheif-1.23.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/strukturag/libheif/releases/download/v1.23.0/libheif-1.23.0.tar.gz">https://github.com/strukturag/libheif/releases/download/v1.23.0/libheif-1.23.0.tar.gz</a>
 
 -   Download MD5 sum: 4da401e36c861c5adfe61225e0dcdd61
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 48 MB (with tests)
 
 -   Estimated build time: 0.6 SBU (with tests, parallelism=4)
-:::
+</div>
 
 ### libheif Dependencies
 
 #### Recommended
 
-[libaom-3.14.1](../multimedia/libaom.md "libaom-3.14.1"){.xref}, [libde265-1.1.0](../multimedia/libde265.md "libde265-1.1.0"){.xref}, and [x265-4.2](../multimedia/x265.md "x265-4.2"){.xref}
+<a class="xref" href="../multimedia/libaom.md" title="libaom-3.14.1">libaom-3.14.1</a>, <a class="xref" href="../multimedia/libde265.md" title="libde265-1.1.0">libde265-1.1.0</a>, and <a class="xref" href="../multimedia/x265.md" title="x265-4.2">x265-4.2</a>
 
 #### Optional
 
-[Brotli-1.2.0](brotli.md "brotli-1.2.0"){.xref}, [dav1d-1.5.3](../multimedia/dav1d.md "dav1d-1.5.3"){.xref}, [Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, [FFmpeg-8.1.1](../multimedia/ffmpeg.md "FFmpeg-8.1.1"){.xref}, [gdk-pixbuf-2.44.6](../x/gdk-pixbuf.md "gdk-pixbuf-2.44.6"){.xref}, [libjpeg-turbo-3.1.4.1](libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [libpng-1.6.58](libpng.md "libpng-1.6.58"){.xref}, [libtiff-4.7.1](libtiff.md "libtiff-4.7.1"){.xref}, [libwebp-1.6.0](libwebp.md "libwebp-1.6.0"){.xref}, [OpenJPEG-2.5.4](openjpeg2.md "OpenJPEG-2.5.4"){.xref}, [sdl2-compat-2.32.68](../multimedia/sdl2.md "sdl2-compat-2.32.68"){.xref}, [SVT-AV1-4.1.0](../multimedia/svt-av1.md "SVT-AV1-4.1.0"){.xref}, [x264-20250815](../multimedia/x264.md "x264-20250815"){.xref}, [kvaaar](https://github.com/ultravideo/kvazaar){.ulink}, [openh264](https://www.openh264.org/){.ulink}, [openjph](https://github.com/aous72/OpenJPH){.ulink}, [uvg266](https://github.com/ultravideo/uvg266){.ulink}, [vvdec](https://github.com/fraunhoferhhi/vvdec){.ulink}, [vvenc](https://github.com/fraunhoferhhi/vvenc){.ulink}, and [rav1e](https://github.com/xiph/rav1e){.ulink}
-:::::
+<a class="xref" href="brotli.md" title="brotli-1.2.0">Brotli-1.2.0</a>, <a class="xref" href="../multimedia/dav1d.md" title="dav1d-1.5.3">dav1d-1.5.3</a>, <a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../multimedia/ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a>, <a class="xref" href="../x/gdk-pixbuf.md" title="gdk-pixbuf-2.44.6">gdk-pixbuf-2.44.6</a>, <a class="xref" href="libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="libpng.md" title="libpng-1.6.58">libpng-1.6.58</a>, <a class="xref" href="libtiff.md" title="libtiff-4.7.1">libtiff-4.7.1</a>, <a class="xref" href="libwebp.md" title="libwebp-1.6.0">libwebp-1.6.0</a>, <a class="xref" href="openjpeg2.md" title="OpenJPEG-2.5.4">OpenJPEG-2.5.4</a>, <a class="xref" href="../multimedia/sdl2.md" title="sdl2-compat-2.32.68">sdl2-compat-2.32.68</a>, <a class="xref" href="../multimedia/svt-av1.md" title="SVT-AV1-4.1.0">SVT-AV1-4.1.0</a>, <a class="xref" href="../multimedia/x264.md" title="x264-20250815">x264-20250815</a>, <a class="ulink" href="https://github.com/ultravideo/kvazaar">kvaaar</a>, <a class="ulink" href="https://www.openh264.org/">openh264</a>, <a class="ulink" href="https://github.com/aous72/OpenJPH">openjph</a>, <a class="ulink" href="https://github.com/ultravideo/uvg266">uvg266</a>, <a class="ulink" href="https://github.com/fraunhoferhhi/vvdec">vvdec</a>, <a class="ulink" href="https://github.com/fraunhoferhhi/vvenc">vvenc</a>, and <a class="ulink" href="https://github.com/xiph/rav1e">rav1e</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libheif {#installation-of-libheif .sect2}
+<div class="installation" lang="en">
+## Installation of libheif {#installation-of-libheif}
 
-Install [libheif]{.application} by running the following commands:
+Install <span class="application">libheif</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -74,75 +74,75 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D WITH_GDK_PIXBUF=OFF`*: This option disables building the gdk-pixbuf loader, as [gdk-pixbuf-2.44.6](../x/gdk-pixbuf.md "gdk-pixbuf-2.44.6"){.xref} is supposed to use this package via [glycin-2.1.1](glycin.md "glycin-2.1.1"){.xref} instead of the loader.
+*`-D WITH_GDK_PIXBUF=OFF`*: This option disables building the gdk-pixbuf loader, as <a class="xref" href="../x/gdk-pixbuf.md" title="gdk-pixbuf-2.44.6">gdk-pixbuf-2.44.6</a> is supposed to use this package via <a class="xref" href="glycin.md" title="glycin-2.1.1">glycin-2.1.1</a> instead of the loader.
 
-`-D WITH_DAV1D=ON`{.option}: This option allows using [dav1d-1.5.3](../multimedia/dav1d.md "dav1d-1.5.3"){.xref} to decode AV1 data in AVIF files.
+<code class="option">-D WITH_DAV1D=ON</code>: This option allows using <a class="xref" href="../multimedia/dav1d.md" title="dav1d-1.5.3">dav1d-1.5.3</a> to decode AV1 data in AVIF files.
 
-`-D WITH_FFMPEG_DECODER=ON`{.option}: This option allows using [FFmpeg-8.1.1](../multimedia/ffmpeg.md "FFmpeg-8.1.1"){.xref} to decode H.265 data in HEIC files.
+<code class="option">-D WITH_FFMPEG_DECODER=ON</code>: This option allows using <a class="xref" href="../multimedia/ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a> to decode H.265 data in HEIC files.
 
-`-D WITH_JPEG_ENCODER=ON -D WITH_JPEG_DECODER=ON`{.option}: These options allow using [libjpeg-turbo-3.1.4.1](libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref} to encode and decode HEIF files with JPEG data.
+<code class="option">-D WITH_JPEG_ENCODER=ON -D WITH_JPEG_DECODER=ON</code>: These options allow using <a class="xref" href="libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a> to encode and decode HEIF files with JPEG data.
 
-`-D WITH_OpenJPEG_ENCODER=ON -D WITH_OpenJPEG_DECODER=ON`{.option}: These options allow using [OpenJPEG-2.5.4](openjpeg2.md "OpenJPEG-2.5.4"){.xref} to encode and decode HEIF files with JPEG 2000 data.
+<code class="option">-D WITH_OpenJPEG_ENCODER=ON -D WITH_OpenJPEG_DECODER=ON</code>: These options allow using <a class="xref" href="openjpeg2.md" title="OpenJPEG-2.5.4">OpenJPEG-2.5.4</a> to encode and decode HEIF files with JPEG 2000 data.
 
-`-D WITH_SvtEnc=ON`{.option}: This option allows using [SVT-AV1-4.1.0](../multimedia/svt-av1.md "SVT-AV1-4.1.0"){.xref} to encode AV1 data for AVIF files.
-:::
+<code class="option">-D WITH_SvtEnc=ON</code>: This option allows using <a class="xref" href="../multimedia/svt-av1.md" title="SVT-AV1-4.1.0">SVT-AV1-4.1.0</a> to encode AV1 data for AVIF files.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [heif-convert (symlink to heif-dec), heif-dec, heif-enc, heif-info, heif-thumbnailer (if libpng is available), and heif-view (if SDL2 is available)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">heif-convert (symlink to heif-dec), heif-dec, heif-enc, heif-info, heif-thumbnailer (if libpng is available), and heif-view (if SDL2 is available)</span>
+</div>
 
-::: seg
-**Installed Library:** [libheif.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libheif.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/libheif, /usr/lib/libheif, and /usr/lib/cmake/libheif]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/libheif, /usr/lib/libheif, and /usr/lib/cmake/libheif</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- ---------------------------------------------------------------------------------------------------
-  []{#heif-dec}[[**heif-dec**]{.command}]{.term}                   decodes a HEIC/HEIF image
-  []{#heif-enc}[[**heif-enc**]{.command}]{.term}                   converts an image to HEIC/HEIF
-  []{#heif-info}[[**heif-info**]{.command}]{.term}                 shows information about a HEIC/HEIF file
-  []{#heif-thumbnailer}[[**heif-thumbnailer**]{.command}]{.term}   creates thumbnails from HEIC/HEIF files
-  []{#heif-view}[[**heif-view**]{.command}]{.term}                 displays an image in HEIC/HEIF format with SDL2
-  []{#libheif-lib}[`libheif.so`{.filename}]{.term}                 is an ISO/IEC 23008-12:2017 HEIF and AVIF (AV1 Image File Format) file format decoder and encoder
+  <a id="heif-dec"></a><span class="command"><span class="term"><strong>heif-dec</strong></span></span>                   decodes a HEIC/HEIF image
+  <a id="heif-enc"></a><span class="command"><span class="term"><strong>heif-enc</strong></span></span>                   converts an image to HEIC/HEIF
+  <a id="heif-info"></a><span class="command"><span class="term"><strong>heif-info</strong></span></span>                 shows information about a HEIC/HEIF file
+  <a id="heif-thumbnailer"></a><span class="command"><span class="term"><strong>heif-thumbnailer</strong></span></span>   creates thumbnails from HEIC/HEIF files
+  <a id="heif-view"></a><span class="command"><span class="term"><strong>heif-view</strong></span></span>                 displays an image in HEIC/HEIF format with SDL2
+  <a id="libheif-lib"></a><span class="term"><code class="filename">libheif.so</code></span>                 is an ISO/IEC 23008-12:2017 HEIF and AVIF (AV1 Image File Format) file format decoder and encoder
   ---------------------------------------------------------------- ---------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libgxps.md "libgxps-0.3.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libgxps.md "libgxps-0.3.2")
 
     libgxps-0.3.2
 
--   [Next](libjpeg.md "libjpeg-turbo-3.1.4.1"){accesskey="n"}
+-   [Next](libjpeg.md "libjpeg-turbo-3.1.4.1")
 
     libjpeg-turbo-3.1.4.1
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

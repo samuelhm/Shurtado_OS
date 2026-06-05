@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](time.md "Time-1.10"){accesskey="p"}
+-   [Prev](time.md "Time-1.10")
 
     Time-1.10
 
--   [Next](unixodbc.md "unixODBC-2.3.14"){accesskey="n"}
+-   [Next](unixodbc.md "unixODBC-2.3.14")
 
     unixODBC-2.3.14
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#tree}tree-2.3.2 {#tree-2.3.2 .sect1}
+# tree-2.3.2 {#tree-2.3.2}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to tree {#introduction-to-tree .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to tree {#introduction-to-tree}
 
-The [tree]{.application} application is useful to display a directory tree's contents, including files, subdirectories, and links.
+The <span class="application">tree</span> application is useful to display a directory tree's contents, including files, subdirectories, and links.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.3.2/unix-tree-2.3.2.tar.bz2](https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.3.2/unix-tree-2.3.2.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.3.2/unix-tree-2.3.2.tar.bz2">https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.3.2/unix-tree-2.3.2.tar.bz2</a>
 
 -   Download MD5 sum: 1f87820af612c03bfcc0fe7800ce0c71
 
@@ -44,66 +44,66 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 832 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of tree {#installation-of-tree .sect2}
+<div class="installation" lang="en">
+## Installation of tree {#installation-of-tree}
 
-Install [tree]{.application} by running the following commands:
+Install <span class="application">tree</span> by running the following commands:
 
-``` userinput
+```bash
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make PREFIX=/usr MANDIR=/usr/share/man install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [tree]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">tree</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------- -----------------------------------------
-  []{#tree-app}[[**tree**]{.command}]{.term}   displays a directory tree in a terminal
+  <a id="tree-app"></a><span class="command"><span class="term"><strong>tree</strong></span></span>   displays a directory tree in a terminal
   -------------------------------------------- -----------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](time.md "Time-1.10"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](time.md "Time-1.10")
 
     Time-1.10
 
--   [Next](unixodbc.md "unixODBC-2.3.14"){accesskey="n"}
+-   [Next](unixodbc.md "unixODBC-2.3.14")
 
     unixODBC-2.3.14
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

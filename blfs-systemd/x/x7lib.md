@@ -1,70 +1,70 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](libxcb.md "libxcb-1.17.0"){accesskey="p"}
+-   [Prev](libxcb.md "libxcb-1.17.0")
 
     libxcb-1.17.0
 
--   [Next](libxcvt.md "libxcvt-0.1.3"){accesskey="n"}
+-   [Next](libxcvt.md "libxcvt-0.1.3")
 
     libxcvt-0.1.3
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xorg7-lib}Xorg Libraries {#xorg-libraries .sect1}
+# Xorg Libraries {#xorg-libraries}
 
-::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xorg Libraries {#introduction-to-xorg-libraries .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xorg Libraries {#introduction-to-xorg-libraries}
 
-The [Xorg]{.application} libraries provide library routines that are used within all X Window applications.
+The <span class="application">Xorg</span> libraries provide library routines that are used within all X Window applications.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/lib/](https://www.x.org/pub/individual/lib/){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/lib/">https://www.x.org/pub/individual/lib/</a>
 
 -   Download size: 12 MB
 
 -   Estimated disk space required: 274 MB (47 MB installed) - if source directories not deleted
 
 -   Estimated build time: 1.8 SBU
-:::
+</div>
 
 ### Xorg Libraries Dependencies
 
 #### Required
 
-[Fontconfig-2.18.1](../general/fontconfig.md "Fontconfig-2.18.1"){.xref} and [libxcb-1.17.0](libxcb.md "libxcb-1.17.0"){.xref}
+<a class="xref" href="../general/fontconfig.md" title="Fontconfig-2.18.1">Fontconfig-2.18.1</a> and <a class="xref" href="libxcb.md" title="libxcb-1.17.0">libxcb-1.17.0</a>
 
 #### Optional
 
-[asciidoc-10.2.1](../general/python-modules.md#asciidoc "Asciidoc-10.2.1"){.xref}, [xmlto-0.0.29](../pst/xmlto.md "xmlto-0.0.29"){.xref} with one or more of the following: [fop-2.11](../pst/fop.md "fop-2.11"){.xref}, [Links-2.30](../basicnet/links.md "Links-2.30"){.xref}, [Lynx-2.9.3](../basicnet/lynx.md "Lynx-2.9.3"){.xref}, [ncompress](https://github.com/vapier/ncompress){.ulink} (for some tests), and [W3m](https://w3m.sourceforge.net/){.ulink} (to generate additional PDF or text documentation for the libXfont package).
+<a class="xref" href="../general/python-modules.md#asciidoc" title="Asciidoc-10.2.1">asciidoc-10.2.1</a>, <a class="xref" href="../pst/xmlto.md" title="xmlto-0.0.29">xmlto-0.0.29</a> with one or more of the following: <a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a>, <a class="xref" href="../basicnet/links.md" title="Links-2.30">Links-2.30</a>, <a class="xref" href="../basicnet/lynx.md" title="Lynx-2.9.3">Lynx-2.9.3</a>, <a class="ulink" href="https://github.com/vapier/ncompress">ncompress</a> (for some tests), and <a class="ulink" href="https://w3m.sourceforge.net/">W3m</a> (to generate additional PDF or text documentation for the libXfont package).
 
 #### Recommended at runtime
 
-[dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref}
-:::::
+<a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a>
+</div>
 
-::: {.sect2 lang="en"}
-## Downloading Xorg Libraries {#downloading-xorg-libraries .sect2}
+<div class="sect2" lang="en">
+## Downloading Xorg Libraries {#downloading-xorg-libraries}
 
 First, create a list of files to be downloaded. This file will also be used to verify the integrity of the downloads when complete:
 
-``` userinput
+```bash
 cat > lib-7.md5 << "EOF"
 6ad67d4858814ac24e618b8072900664  xtrans-1.6.0.tar.xz
 b617a053d2003cc81309f4e13d01379c  libX11-1.8.13.tar.xz
@@ -101,38 +101,38 @@ fa0faa5b6a8e726186c535d73712ccea  libxkbfile-1.2.0.tar.xz
 EOF
 ```
 
-To download the needed files using [Wget-1.25.0](../basicnet/wget.md "Wget-1.25.0"){.xref}, use the following commands:
+To download the needed files using <a class="xref" href="../basicnet/wget.md" title="Wget-1.25.0">Wget-1.25.0</a>, use the following commands:
 
-``` userinput
+```bash
 mkdir lib &&
 cd lib &&
 grep -v '^#' ../lib-7.md5 | awk '{print $2}' | wget -i- -c \
     -B https://www.x.org/pub/individual/lib/ &&
 md5sum -c ../lib-7.md5
 ```
-:::
+</div>
 
-::::: {.installation lang="en"}
-## Installation of Xorg Libraries {#installation-of-xorg-libraries .sect2}
+<div class="installation" lang="en">
+## Installation of Xorg Libraries {#installation-of-xorg-libraries}
 
-:::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 When installing multiple packages in a script, the installation needs to be done as the root user. There are three general options that can be used to do this:
 
-::: orderedlist
+<div class="orderedlist">
 1.  Run the entire script as the root user (not recommended).
 
-2.  Use the [**sudo**]{.command} command from the [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} package.
+2.  Use the <span class="command"><strong>sudo</strong></span> command from the <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> package.
 
-3.  Use [**su -c "command arguments"**]{.command} (quotes required) which will ask for the root password for every iteration of the loop.
-:::
+3.  Use <span class="command"><strong>su -c "command arguments"</strong></span> (quotes required) which will ask for the root password for every iteration of the loop.
+</div>
 
-One way to handle this situation is to create a short [**bash**]{.command} function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
+One way to handle this situation is to create a short <span class="command"><strong>bash</strong></span> function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
 
-``` userinput
+```bash
 as_root()
 {
   if   [ $EUID = 0 ];        then $*
@@ -143,25 +143,25 @@ as_root()
 
 export -f as_root
 ```
-::::
+</div>
 
-Some libraries come with a test suite. If you wish to execute them, either comment out the [**rm -rf ...**]{.command} below, so that, after all libraries are installed, you can come back to the corresponding directory and run [**make check**]{.command}, or do individual builds, running the tests for each of those distributed with working test suites. Alternatively, you can uncomment the line \#[**make check ...**]{.command}, and at the end, check the test results with:
+Some libraries come with a test suite. If you wish to execute them, either comment out the <span class="command"><strong>rm -rf ...</strong></span> below, so that, after all libraries are installed, you can come back to the corresponding directory and run <span class="command"><strong>make check</strong></span>, or do individual builds, running the tests for each of those distributed with working test suites. Alternatively, you can uncomment the line \#<span class="command"><strong>make check ...</strong></span>, and at the end, check the test results with:
 
-``` userinput
+```bash
 grep -A9 summary *make_check.log
 ```
 
-BLFS developers have confirmed that [libX11]{.application}, [libXt]{.application}, [libXmu]{.application}, [libXpm]{.application}, and [libxshmfence]{.application} are distributed with working test suites.
+BLFS developers have confirmed that <span class="application">libX11</span>, <span class="application">libXt</span>, <span class="application">libXmu</span>, <span class="application">libXpm</span>, and <span class="application">libxshmfence</span> are distributed with working test suites.
 
 First, start a subshell that will exit on error:
 
-``` userinput
+```bash
 bash -e
 ```
 
 Install all of the packages by running the following commands:
 
-``` userinput
+```bash
 for package in $(grep -v '^#' ../lib-7.md5 | awk '{print $2}')
 do
   packagedir=${package%.tar.?z*}
@@ -214,107 +214,107 @@ done
 
 Finally, exit the shell that was started earlier:
 
-``` userinput
+```bash
 exit
 ```
-:::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--disable-open-zfile`*: Allow [libXpm]{.application} to build without the optional [**compress**]{.command} command present.
+*`--disable-open-zfile`*: Allow <span class="application">libXpm</span> to build without the optional <span class="command"><strong>compress</strong></span> command present.
 
-*`--disable-devel-docs`*: Disable generation of text documentation in the libXfont2 package if [xmlto-0.0.29](../pst/xmlto.md "xmlto-0.0.29"){.xref} is installed without a text browser. Omit this parameter (or the entire [**case**]{.command} statement) if a text browser is installed.
+*`--disable-devel-docs`*: Disable generation of text documentation in the libXfont2 package if <a class="xref" href="../pst/xmlto.md" title="xmlto-0.0.29">xmlto-0.0.29</a> is installed without a text browser. Omit this parameter (or the entire <span class="command"><strong>case</strong></span> statement) if a text browser is installed.
 
-`--with-fop`{.option}: Use [fop-2.11](../pst/fop.md "fop-2.11"){.xref} to generate PDF documentation (only for the libXfont package).
-:::
+<code class="option">--with-fop</code>: Use <a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a> to generate PDF documentation (only for the libXfont package).
+</div>
 
-::: {.configuration lang="en"}
-## Configuration of Xorg Libraries {#configuration-of-xorg-libraries .sect2}
+<div class="configuration" lang="en">
+## Configuration of Xorg Libraries {#configuration-of-xorg-libraries}
 
-If you've chosen to install [Xorg]{.application} into `/usr`{.filename}, then no further configuration is necessary and you can skip the rest of this section. If you've opted for an alternate prefix, you should create two symlinks to satisfy the expected environment of several packages. Execute the following commands as the root user:
+If you've chosen to install <span class="application">Xorg</span> into <code class="filename">/usr</code>, then no further configuration is necessary and you can skip the rest of this section. If you've opted for an alternate prefix, you should create two symlinks to satisfy the expected environment of several packages. Execute the following commands as the root user:
 
-``` root
+```bash
 ln -sv $XORG_PREFIX/lib/X11 /usr/lib/X11 &&
 ln -sv $XORG_PREFIX/include/X11 /usr/include/X11
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [cxpm and sxpm]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cxpm and sxpm</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libfontenc.so, libFS.so, libICE.so, libpciaccess.so, libSM.so, libX11.so, libX11-xcb, libXaw6.so, libXaw7.so, libXaw.so, libXcomposite.so, libXcursor.so, libXdamage.so, libXext.so, libXfixes.so, libXfont2.so, libXft.so, libXinerama.so, libXi.so, libxkbfile.so, libXmu.so, libXmuu.so, libXpm.so, libXpresent.so, libXrandr.so, libXrender.so, libXRes.so, libxshmfence.so, libXss.so, libXt.so, libXtst.so, libXvMC.so, libXvMCW.so, libXv.so, libXxf86dga.so and libXxf86vm.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libfontenc.so, libFS.so, libICE.so, libpciaccess.so, libSM.so, libX11.so, libX11-xcb, libXaw6.so, libXaw7.so, libXaw.so, libXcomposite.so, libXcursor.so, libXdamage.so, libXext.so, libXfixes.so, libXfont2.so, libXft.so, libXinerama.so, libXi.so, libxkbfile.so, libXmu.so, libXmuu.so, libXpm.so, libXpresent.so, libXrandr.so, libXrender.so, libXRes.so, libxshmfence.so, libXss.so, libXt.so, libXtst.so, libXvMC.so, libXvMCW.so, libXv.so, libXxf86dga.so and libXxf86vm.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [`$XORG_PREFIX`{.envar}/include/X11/fonts, `$XORG_PREFIX`{.envar}/include/X11/ICE, `$XORG_PREFIX`{.envar}/include/X11/SM, `$XORG_PREFIX`{.envar}/include/X11/Xmu, `$XORG_PREFIX`{.envar}/include/X11/Xtrans, `$XORG_PREFIX`{.envar}/share/doc/libFS, `$XORG_PREFIX`{.envar}/share/doc/libICE-1.1.2, `$XORG_PREFIX`{.envar}/share/doc/libSM-1.2.6, `$XORG_PREFIX`{.envar}/share/doc/libX11-1.8.13, `$XORG_PREFIX`{.envar}/share/doc/libXaw, `$XORG_PREFIX`{.envar}/share/doc/libXext, `$XORG_PREFIX`{.envar}/share/doc/libXi, `$XORG_PREFIX`{.envar}/share/doc/libXmu-1.3.1, `$XORG_PREFIX`{.envar}/share/doc/libXrender, `$XORG_PREFIX`{.envar}/share/doc/libXt, `$XORG_PREFIX`{.envar}/share/doc/libXtst, `$XORG_PREFIX`{.envar}/share/doc/libXvMC, `$XORG_PREFIX`{.envar}/share/doc/xtrans and `$XORG_PREFIX`{.envar}/share/X11/locale]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody"><code class="envar">$XORG_PREFIX</code>/include/X11/fonts, <code class="envar">$XORG_PREFIX</code>/include/X11/ICE, <code class="envar">$XORG_PREFIX</code>/include/X11/SM, <code class="envar">$XORG_PREFIX</code>/include/X11/Xmu, <code class="envar">$XORG_PREFIX</code>/include/X11/Xtrans, <code class="envar">$XORG_PREFIX</code>/share/doc/libFS, <code class="envar">$XORG_PREFIX</code>/share/doc/libICE-1.1.2, <code class="envar">$XORG_PREFIX</code>/share/doc/libSM-1.2.6, <code class="envar">$XORG_PREFIX</code>/share/doc/libX11-1.8.13, <code class="envar">$XORG_PREFIX</code>/share/doc/libXaw, <code class="envar">$XORG_PREFIX</code>/share/doc/libXext, <code class="envar">$XORG_PREFIX</code>/share/doc/libXi, <code class="envar">$XORG_PREFIX</code>/share/doc/libXmu-1.3.1, <code class="envar">$XORG_PREFIX</code>/share/doc/libXrender, <code class="envar">$XORG_PREFIX</code>/share/doc/libXt, <code class="envar">$XORG_PREFIX</code>/share/doc/libXtst, <code class="envar">$XORG_PREFIX</code>/share/doc/libXvMC, <code class="envar">$XORG_PREFIX</code>/share/doc/xtrans and <code class="envar">$XORG_PREFIX</code>/share/X11/locale</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- --------------------------------------------------------------------------------------
-  []{#cxpm}[[**cxpm**]{.command}]{.term}                     checks the format of an XPM file
-  []{#sxpm}[[**sxpm**]{.command}]{.term}                     shows an XPM file and/or converts XPM 1 or 2 files to XPM 3
-  []{#libfontenc}[`libfontenc.so`{.filename}]{.term}         is the X11 font encoding library
-  []{#libFS}[`libFS.so`{.filename}]{.term}                   is the library interface to the X Font Server
-  []{#libICE}[`libICE.so`{.filename}]{.term}                 is the X Inter Client Exchange Library
-  []{#libpciaccess}[`libpciaccess.so`{.filename}]{.term}     is the generic PCI Access library for X
-  []{#libSM}[`libSM.so`{.filename}]{.term}                   is the X Session Management Library
-  []{#libX11}[`libX11.so`{.filename}]{.term}                 is the Xlib Library
-  []{#libXaw6}[`libXaw6.so`{.filename}]{.term}               is the X Athena Widgets Library, version 6
-  []{#libXaw7}[`libXaw7.so`{.filename}]{.term}               is the X Athena Widgets Library, version 7
-  []{#libXaw}[`libXaw.so`{.filename}]{.term}                 are symbolic links to the current X Athena Widgets Library, version 7
-  []{#libXcomposite}[`libXcomposite.so`{.filename}]{.term}   is the X Composite Library
-  []{#libXcursor}[`libXcursor.so`{.filename}]{.term}         is the X Cursor management library
-  []{#libXdamage}[`libXdamage.so`{.filename}]{.term}         is the X Damage Library
-  []{#libXext}[`libXext.so`{.filename}]{.term}               is the Misc X Extension Library
-  []{#libXfixes}[`libXfixes.so`{.filename}]{.term}           provides augmented versions of core protocol requests
-  []{#libXfont2}[`libXfont2.so`{.filename}]{.term}           is the X font library
-  []{#libXft}[`libXft.so`{.filename}]{.term}                 is the X FreeType interface library
-  []{#libXinerama}[`libXinerama.so`{.filename}]{.term}       is the Xinerama Library
-  []{#libXi}[`libXi.so`{.filename}]{.term}                   is the X Input Extension Library
-  []{#libxkbfile}[`libxkbfile.so`{.filename}]{.term}         is the xkbfile Library
-  []{#libXmu}[`libXmu.so`{.filename}]{.term}                 is the X interface library for miscellaneous utilities not part of the Xlib standard
-  []{#libXmuu}[`libXmuu.so`{.filename}]{.term}               is the Mini Xmu Library
-  []{#libXpm}[`libXpm.so`{.filename}]{.term}                 is the X Pixmap Library
-  []{#libXpresent}[`libXpresent.so`{.filename}]{.term}       is the library interface to the X Present Extension
-  []{#libXrandr}[`libXrandr.so`{.filename}]{.term}           is the X Resize, Rotate and Reflection extension library
-  []{#libXrender}[`libXrender.so`{.filename}]{.term}         is the X Render Library
-  []{#libXRes}[`libXRes.so`{.filename}]{.term}               is the X-Resource extension client library
-  []{#libxshmfence}[`libxshmfence.so`{.filename}]{.term}     exposes an event API on top of Linux futexes
-  []{#libXss}[`libXss.so`{.filename}]{.term}                 is the X11 Screen Saver extension client library
-  []{#libXt}[`libXt.so`{.filename}]{.term}                   is the X Toolkit Library
-  []{#libXtst}[`libXtst.so`{.filename}]{.term}               is the Xtst Library
-  []{#libXvMC}[`libXvMC.so`{.filename}]{.term}               is the X-Video Motion Compensation Library
-  []{#libXvMCW}[`libXvMCW.so`{.filename}]{.term}             is the XvMC Wrapper including the Nonstandard VLD extension
-  []{#libXv}[`libXv.so`{.filename}]{.term}                   is the X Window System video extension library
-  []{#libXxf86dga}[`libXxf86dga.so`{.filename}]{.term}       is the client library for the XFree86-DGA extension
-  []{#libXxf86vm}[`libXxf86vm.so`{.filename}]{.term}         is the client library for the XFree86-VidMode X extension
+  <a id="cxpm"></a><span class="command"><span class="term"><strong>cxpm</strong></span></span>                     checks the format of an XPM file
+  <a id="sxpm"></a><span class="command"><span class="term"><strong>sxpm</strong></span></span>                     shows an XPM file and/or converts XPM 1 or 2 files to XPM 3
+  <a id="libfontenc"></a><span class="term"><code class="filename">libfontenc.so</code></span>         is the X11 font encoding library
+  <a id="libFS"></a><span class="term"><code class="filename">libFS.so</code></span>                   is the library interface to the X Font Server
+  <a id="libICE"></a><span class="term"><code class="filename">libICE.so</code></span>                 is the X Inter Client Exchange Library
+  <a id="libpciaccess"></a><span class="term"><code class="filename">libpciaccess.so</code></span>     is the generic PCI Access library for X
+  <a id="libSM"></a><span class="term"><code class="filename">libSM.so</code></span>                   is the X Session Management Library
+  <a id="libX11"></a><span class="term"><code class="filename">libX11.so</code></span>                 is the Xlib Library
+  <a id="libXaw6"></a><span class="term"><code class="filename">libXaw6.so</code></span>               is the X Athena Widgets Library, version 6
+  <a id="libXaw7"></a><span class="term"><code class="filename">libXaw7.so</code></span>               is the X Athena Widgets Library, version 7
+  <a id="libXaw"></a><span class="term"><code class="filename">libXaw.so</code></span>                 are symbolic links to the current X Athena Widgets Library, version 7
+  <a id="libXcomposite"></a><span class="term"><code class="filename">libXcomposite.so</code></span>   is the X Composite Library
+  <a id="libXcursor"></a><span class="term"><code class="filename">libXcursor.so</code></span>         is the X Cursor management library
+  <a id="libXdamage"></a><span class="term"><code class="filename">libXdamage.so</code></span>         is the X Damage Library
+  <a id="libXext"></a><span class="term"><code class="filename">libXext.so</code></span>               is the Misc X Extension Library
+  <a id="libXfixes"></a><span class="term"><code class="filename">libXfixes.so</code></span>           provides augmented versions of core protocol requests
+  <a id="libXfont2"></a><span class="term"><code class="filename">libXfont2.so</code></span>           is the X font library
+  <a id="libXft"></a><span class="term"><code class="filename">libXft.so</code></span>                 is the X FreeType interface library
+  <a id="libXinerama"></a><span class="term"><code class="filename">libXinerama.so</code></span>       is the Xinerama Library
+  <a id="libXi"></a><span class="term"><code class="filename">libXi.so</code></span>                   is the X Input Extension Library
+  <a id="libxkbfile"></a><span class="term"><code class="filename">libxkbfile.so</code></span>         is the xkbfile Library
+  <a id="libXmu"></a><span class="term"><code class="filename">libXmu.so</code></span>                 is the X interface library for miscellaneous utilities not part of the Xlib standard
+  <a id="libXmuu"></a><span class="term"><code class="filename">libXmuu.so</code></span>               is the Mini Xmu Library
+  <a id="libXpm"></a><span class="term"><code class="filename">libXpm.so</code></span>                 is the X Pixmap Library
+  <a id="libXpresent"></a><span class="term"><code class="filename">libXpresent.so</code></span>       is the library interface to the X Present Extension
+  <a id="libXrandr"></a><span class="term"><code class="filename">libXrandr.so</code></span>           is the X Resize, Rotate and Reflection extension library
+  <a id="libXrender"></a><span class="term"><code class="filename">libXrender.so</code></span>         is the X Render Library
+  <a id="libXRes"></a><span class="term"><code class="filename">libXRes.so</code></span>               is the X-Resource extension client library
+  <a id="libxshmfence"></a><span class="term"><code class="filename">libxshmfence.so</code></span>     exposes an event API on top of Linux futexes
+  <a id="libXss"></a><span class="term"><code class="filename">libXss.so</code></span>                 is the X11 Screen Saver extension client library
+  <a id="libXt"></a><span class="term"><code class="filename">libXt.so</code></span>                   is the X Toolkit Library
+  <a id="libXtst"></a><span class="term"><code class="filename">libXtst.so</code></span>               is the Xtst Library
+  <a id="libXvMC"></a><span class="term"><code class="filename">libXvMC.so</code></span>               is the X-Video Motion Compensation Library
+  <a id="libXvMCW"></a><span class="term"><code class="filename">libXvMCW.so</code></span>             is the XvMC Wrapper including the Nonstandard VLD extension
+  <a id="libXv"></a><span class="term"><code class="filename">libXv.so</code></span>                   is the X Window System video extension library
+  <a id="libXxf86dga"></a><span class="term"><code class="filename">libXxf86dga.so</code></span>       is the client library for the XFree86-DGA extension
+  <a id="libXxf86vm"></a><span class="term"><code class="filename">libXxf86vm.so</code></span>         is the client library for the XFree86-VidMode X extension
   ---------------------------------------------------------- --------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libxcb.md "libxcb-1.17.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libxcb.md "libxcb-1.17.0")
 
     libxcb-1.17.0
 
--   [Next](libxcvt.md "libxcvt-0.1.3"){accesskey="n"}
+-   [Next](libxcvt.md "libxcvt-0.1.3")
 
     libxcvt-0.1.3
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

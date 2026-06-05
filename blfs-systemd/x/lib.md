@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part VI. Graphical Components
 
--   [Prev](x7legacy.md "Xorg Legacy"){accesskey="p"}
+-   [Prev](x7legacy.md "Xorg Legacy")
 
     Xorg Legacy
 
--   [Next](atkmm.md "Atkmm-2.28.5"){accesskey="n"}
+-   [Next](atkmm.md "Atkmm-2.28.5")
 
     Atkmm-2.28.5
 
--   [Up](x.md "Part VI. Graphical Components"){accesskey="u"}
+-   [Up](x.md "Part VI. Graphical Components")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#x-lib}Graphical Environment Libraries {#graphical-environment-libraries .chapter}
+# Graphical Environment Libraries {#graphical-environment-libraries}
 
-:::: {.chapter lang="en"}
-This chapter does not contain libraries that are required to run [X]{.application}. It does contain libraries that enhance [X]{.application}. In some cases the enhancement is as simple as font support. In others it is as complex as libraries that sit between [X]{.application} and applications that run on [X]{.application} whose purpose is to standardize the look and feel and inter-process communications for different applications. They also assist programmers by supplying common elements.
+<div class="chapter" lang="en">
+This chapter does not contain libraries that are required to run <span class="application">X</span>. It does contain libraries that enhance <span class="application">X</span>. In some cases the enhancement is as simple as font support. In others it is as complex as libraries that sit between <span class="application">X</span> and applications that run on <span class="application">X</span> whose purpose is to standardize the look and feel and inter-process communications for different applications. They also assist programmers by supplying common elements.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Atkmm-2.28.5](atkmm.md)
@@ -68,19 +68,19 @@ This chapter does not contain libraries that are required to run [X]{.applicatio
 -   [WebKitGTK-2.52.0](webkitgtk.md)
 -   [xdg-desktop-portal-1.20.4](xdg-desktop-portal.md)
 -   [xdg-desktop-portal-gtk-1.15.3](xdg-desktop-portal-gtk.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](x7legacy.md "Xorg Legacy"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](x7legacy.md "Xorg Legacy")
 
     Xorg Legacy
 
--   [Next](atkmm.md "Atkmm-2.28.5"){accesskey="n"}
+-   [Next](atkmm.md "Atkmm-2.28.5")
 
     Atkmm-2.28.5
 
--   [Up](x.md "Part VI. Graphical Components"){accesskey="u"}
+-   [Up](x.md "Part VI. Graphical Components")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

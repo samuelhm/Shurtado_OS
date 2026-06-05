@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](spirv-tools.md "SPIRV-Tools-1.4.350.0"){accesskey="p"}
+-   [Prev](spirv-tools.md "SPIRV-Tools-1.4.350.0")
 
     SPIRV-Tools-1.4.350.0
 
--   [Next](talloc.md "Talloc-2.4.4"){accesskey="n"}
+-   [Next](talloc.md "Talloc-2.4.4")
 
     Talloc-2.4.4
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#spirv-llvm-translator}SPIRV-LLVM-Translator-22.1.2 {#spirv-llvm-translator-22.1.2 .sect1}
+# SPIRV-LLVM-Translator-22.1.2 {#spirv-llvm-translator-22.1.2}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to SPIRV-LLVM-Translator {#introduction-to-spirv-llvm-translator .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to SPIRV-LLVM-Translator {#introduction-to-spirv-llvm-translator}
 
-The [SPIRV-LLVM-Translator]{.application} package contains a library and utility for converting between LLVM IR and SPIR-V code. This package currently only supports the OpenCL/Compute version of SPIR-V.
+The <span class="application">SPIRV-LLVM-Translator</span> package contains a library and utility for converting between LLVM IR and SPIR-V code. This package currently only supports the OpenCL/Compute version of SPIR-V.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v22.1.2/SPIRV-LLVM-Translator-22.1.2.tar.gz](https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v22.1.2/SPIRV-LLVM-Translator-22.1.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v22.1.2/SPIRV-LLVM-Translator-22.1.2.tar.gz">https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v22.1.2/SPIRV-LLVM-Translator-22.1.2.tar.gz</a>
 
 -   Download MD5 sum: dce62f7bc40d7ff4e89d0d38fe62804a
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 47 MB
 
 -   Estimated build time: 0.5 SBU (with parallelism=4)
-:::
+</div>
 
 ### SPIRV-LLVM-Translator Dependencies
 
 #### Required
 
-[libxml2-2.15.3](libxml2.md "libxml2-2.15.3"){.xref}, [LLVM-22.1.0](llvm.md "LLVM-22.1.0"){.xref}, and [SPIRV-Tools-1.4.350.0](spirv-tools.md "SPIRV-Tools-1.4.350.0"){.xref}
-:::::
+<a class="xref" href="libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, <a class="xref" href="llvm.md" title="LLVM-22.1.0">LLVM-22.1.0</a>, and <a class="xref" href="spirv-tools.md" title="SPIRV-Tools-1.4.350.0">SPIRV-Tools-1.4.350.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of SPIRV-LLVM-Translator {#installation-of-spirv-llvm-translator .sect2}
+<div class="installation" lang="en">
+## Installation of SPIRV-LLVM-Translator {#installation-of-spirv-llvm-translator}
 
-Install [SPIRV-LLVM-Translator]{.application} by running the following commands:
+Install <span class="application">SPIRV-LLVM-Translator</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -73,63 +73,63 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D BUILD_SHARED_LIBS=ON`*: This parameter forces building shared versions of the libraries.
 
-*`-D CMAKE_SKIP_INSTALL_RPATH=ON`*: This switch makes [**cmake**]{.command} remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues.
+*`-D CMAKE_SKIP_INSTALL_RPATH=ON`*: This switch makes <span class="command"><strong>cmake</strong></span> remove hardcoded library search paths (rpath) when installing a binary executable file or a shared library. This package does not need rpath once it's installed into the standard location, and rpath may sometimes cause unwanted effects or even security issues.
 
 *`-D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr`*: This parameter allows the build system to use the version of SPIRV-Headers that should have been installed as a dependency of SPIRV-Tools, instead of redownloading an unnecessary copy of the headers.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [llvm-spirv]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">llvm-spirv</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libLLVMSPIRVLib.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libLLVMSPIRVLib.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/LLVMSPIRVLib]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/LLVMSPIRVLib</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- -----------------------------------------------------------------
-  []{#llvm-spirv}[[**llvm-spirv**]{.command}]{.term}             converts between LLVM IR and SPIR-V code
-  []{#libLLVMSPIRVLib}[`libLLVMSPIRVLib.so`{.filename}]{.term}   contains functions that convert between LLVM IR and SPIR-V code
+  <a id="llvm-spirv"></a><span class="command"><span class="term"><strong>llvm-spirv</strong></span></span>             converts between LLVM IR and SPIR-V code
+  <a id="libLLVMSPIRVLib"></a><span class="term"><code class="filename">libLLVMSPIRVLib.so</code></span>   contains functions that convert between LLVM IR and SPIR-V code
   -------------------------------------------------------------- -----------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](spirv-tools.md "SPIRV-Tools-1.4.350.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](spirv-tools.md "SPIRV-Tools-1.4.350.0")
 
     SPIRV-Tools-1.4.350.0
 
--   [Next](talloc.md "Talloc-2.4.4"){accesskey="n"}
+-   [Next](talloc.md "Talloc-2.4.4")
 
     Talloc-2.4.4
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

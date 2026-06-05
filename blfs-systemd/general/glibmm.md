@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](glib2.md "GLib-2.88.1"){accesskey="p"}
+-   [Prev](glib2.md "GLib-2.88.1")
 
     GLib-2.88.1
 
--   [Next](glibmm2.md "GLibmm-2.88.0"){accesskey="n"}
+-   [Next](glibmm2.md "GLibmm-2.88.0")
 
     GLibmm-2.88.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#glibmm}GLibmm-2.66.8 {#glibmm-2.66.8 .sect1}
+# GLibmm-2.66.8 {#glibmm-2.66.8}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GLibmm {#introduction-to-glibmm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GLibmm {#introduction-to-glibmm}
 
-The [GLibmm]{.application} package is a set of C++ bindings for [GLib]{.application}.
+The <span class="application">GLibmm</span> package is a set of C++ bindings for <span class="application">GLib</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz](https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz">https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz</a>
 
 -   Download MD5 sum: 4cdcd69c3af84e59dfd745a1b1cb9851
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 90 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### GLibmm Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} and [libsigc++-2.12.1](libsigc.md "libsigc++-2.12.1"){.xref}
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> and <a class="xref" href="libsigc.md" title="libsigc++-2.12.1">libsigc++-2.12.1</a>
 
 #### Optional
 
-[Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, [glib-networking-2.80.1](../basicnet/glib-networking.md "glib-networking-2.80.1"){.xref} (for tests), [GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref} (for tests), [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref}, and [mm-common](https://download.gnome.org/sources/mm-common){.ulink}
-:::::
+<a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../basicnet/glib-networking.md" title="glib-networking-2.80.1">glib-networking-2.80.1</a> (for tests), <a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a> (for tests), <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, and <a class="ulink" href="https://download.gnome.org/sources/mm-common">mm-common</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GLibmm {#installation-of-glibmm .sect2}
+<div class="installation" lang="en">
+## Installation of GLibmm {#installation-of-glibmm}
 
-Install [GLibmm]{.application} by running the following commands:
+Install <span class="application">GLibmm</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir bld &&
 cd    bld &&
 
@@ -70,55 +70,55 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgiomm-2.4.so, libglibmm-2.4.so and libglibmm_generate_extra_defs-2.4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgiomm-2.4.so, libglibmm-2.4.so and libglibmm_generate_extra_defs-2.4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/g{io,lib}mm-2.4 and /usr/include/g{io,lib}mm-2.4]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/g{io,lib}mm-2.4 and /usr/include/g{io,lib}mm-2.4</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- -----------------------------------------------
-  []{#libgiomm-2}[`libgiomm-2.4.so`{.filename}]{.term}     contains the GIO API classes
-  []{#libglibmm-2}[`libglibmm-2.4.so`{.filename}]{.term}   contains the [GLib]{.application} API classes
+  <a id="libgiomm-2"></a><span class="term"><code class="filename">libgiomm-2.4.so</code></span>     contains the GIO API classes
+  <a id="libglibmm-2"></a><span class="term"><code class="filename">libglibmm-2.4.so</code></span>   contains the <span class="application">GLib</span> API classes
   -------------------------------------------------------- -----------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](glib2.md "GLib-2.88.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](glib2.md "GLib-2.88.1")
 
     GLib-2.88.1
 
--   [Next](glibmm2.md "GLibmm-2.88.0"){accesskey="n"}
+-   [Next](glibmm2.md "GLibmm-2.88.0")
 
     GLibmm-2.88.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](liba52.md "Liba52-0.8.0"){accesskey="p"}
+-   [Prev](liba52.md "Liba52-0.8.0")
 
     Liba52-0.8.0
 
--   [Next](libaom.md "libaom-3.14.1"){accesskey="n"}
+-   [Next](libaom.md "libaom-3.14.1")
 
     libaom-3.14.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libao}Libao-1.2.0 {#libao-1.2.0 .sect1}
+# Libao-1.2.0 {#libao-1.2.0}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Libao {#introduction-to-libao .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Libao {#introduction-to-libao}
 
-The [libao]{.application} package contains a cross-platform audio library. This is useful to output audio on a wide variety of platforms. It currently supports WAV files, OSS (Open Sound System), ESD (Enlighten Sound Daemon), ALSA (Advanced Linux Sound Architecture), NAS (Network Audio system), aRTS (analog Real-Time Synthesizer), and PulseAudio (next generation [GNOME]{.application} sound architecture).
+The <span class="application">libao</span> package contains a cross-platform audio library. This is useful to output audio on a wide variety of platforms. It currently supports WAV files, OSS (Open Sound System), ESD (Enlighten Sound Daemon), ALSA (Advanced Linux Sound Architecture), NAS (Network Audio system), aRTS (analog Real-Time Synthesizer), and PulseAudio (next generation <span class="application">GNOME</span> sound architecture).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.xiph.org/releases/ao/libao-1.2.0.tar.gz](https://downloads.xiph.org/releases/ao/libao-1.2.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.xiph.org/releases/ao/libao-1.2.0.tar.gz">https://downloads.xiph.org/releases/ao/libao-1.2.0.tar.gz</a>
 
 -   Download MD5 sum: 9f5dd20d7e95fd0dd72df5353829f097
 
@@ -44,96 +44,96 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.9 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Libao Dependencies
 
 #### Optional
 
-[a graphical environment](../x/installing.md "Chapter 24. Graphical Environments"){.xref}, [alsa-lib-1.2.16](alsa-lib.md "alsa-lib-1.2.16"){.xref}, and [PulseAudio-17.0](pulseaudio.md "PulseAudio-17.0"){.xref}
-:::::
+<a class="xref" href="../x/installing.md" title="Chapter 24. Graphical Environments">a graphical environment</a>, <a class="xref" href="alsa-lib.md" title="alsa-lib-1.2.16">alsa-lib-1.2.16</a>, and <a class="xref" href="pulseaudio.md" title="PulseAudio-17.0">PulseAudio-17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Libao {#installation-of-libao .sect2}
+<div class="installation" lang="en">
+## Installation of Libao {#installation-of-libao}
 
 First, fix a gcc-14 issue:
 
-``` userinput
+```bash
 sed -i '/limits.h/a #include <time.h>' src/plugins/pulse/ao_pulse.c
 ```
 
-Install [libao]{.application} by running the following commands:
+Install <span class="application">libao</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -m644 README /usr/share/doc/libao-1.2.0
 ```
-:::
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Libao {#configuring-libao .sect2}
+<div class="configuration" lang="en">
+## Configuring Libao {#configuring-libao}
 
-::: {.sect3 lang="en"}
-### []{#libao-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/libao.conf`{.filename} and `~/.libao`{.filename}
-:::
+<code class="filename">/etc/libao.conf</code> and <code class="filename">~/.libao</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Currently, the only configuration option available is setting the default output device. Issue [**man libao.conf**]{.command} for details.
-:::
-:::::
+Currently, the only configuration option available is setting the default output device. Issue <span class="command"><strong>man libao.conf</strong></span> for details.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libao.so and plugins under /usr/lib/ao/plugins-4]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libao.so and plugins under /usr/lib/ao/plugins-4</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/ao, /usr/lib/ao and /usr/share/doc/libao-1.2.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/ao, /usr/lib/ao and /usr/share/doc/libao-1.2.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------- ----------------------------------------------------------------------------------
-  []{#libao-lib}[`libao.so`{.filename}]{.term}   provides functions for programs wishing to output sound over supported platforms
+  <a id="libao-lib"></a><span class="term"><code class="filename">libao.so</code></span>   provides functions for programs wishing to output sound over supported platforms
   ---------------------------------------------- ----------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](liba52.md "Liba52-0.8.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](liba52.md "Liba52-0.8.0")
 
     Liba52-0.8.0
 
--   [Next](libaom.md "libaom-3.14.1"){accesskey="n"}
+-   [Next](libaom.md "libaom-3.14.1")
 
     libaom-3.14.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

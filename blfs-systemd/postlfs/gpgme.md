@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](gnutls.md "GnuTLS-3.8.13"){accesskey="p"}
+-   [Prev](gnutls.md "GnuTLS-3.8.13")
 
     GnuTLS-3.8.13
 
--   [Next](gpgmepp.md "gpgmepp-2.1.0"){accesskey="n"}
+-   [Next](gpgmepp.md "gpgmepp-2.1.0")
 
     gpgmepp-2.1.0
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gpgme}gpgme-2.1.0 {#gpgme-2.1.0 .sect1}
+# gpgme-2.1.0 {#gpgme-2.1.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to gpgme {#introduction-to-gpgme .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to gpgme {#introduction-to-gpgme}
 
-The [gpgme]{.application} package is a C library that allows cryptography support to be added to a program. It is designed to make access to public key crypto engines like [GnuPG]{.application} or GpgSM easier for applications. [gpgme]{.application} provides a high-level crypto API for encryption, decryption, signing, signature verification and key management.
+The <span class="application">gpgme</span> package is a C library that allows cryptography support to be added to a program. It is designed to make access to public key crypto engines like <span class="application">GnuPG</span> or GpgSM easier for applications. <span class="application">gpgme</span> provides a high-level crypto API for encryption, decryption, signing, signature verification and key management.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.1.0.tar.bz2](https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.1.0.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.1.0.tar.bz2">https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.1.0.tar.bz2</a>
 
 -   Download MD5 sum: 0dd5144452ccc976f581c943d31e2b30
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 29 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests and parallelism=4)
-:::
+</div>
 
 ### gpgme Dependencies
 
 #### Required
 
-[libassuan-3.0.2](../general/libassuan.md "libassuan-3.0.2"){.xref}
+<a class="xref" href="../general/libassuan.md" title="libassuan-3.0.2">libassuan-3.0.2</a>
 
 #### Recommended
 
-[GnuPG-2.5.20](gnupg.md "GnuPG-2.5.20"){.xref} (as per upstream recommendation)
+<a class="xref" href="gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a> (as per upstream recommendation)
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of gpgme {#installation-of-gpgme .sect2}
+<div class="installation" lang="en">
+## Installation of gpgme {#installation-of-gpgme}
 
-Install [gpgme]{.application} by running the following commands:
+Install <span class="application">gpgme</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -74,69 +74,69 @@ cd    build &&
 make
 ```
 
-To test the results, you should have [GnuPG-2.5.20](gnupg.md "GnuPG-2.5.20"){.xref} installed. If so, run:
+To test the results, you should have <a class="xref" href="gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a> installed. If so, run:
 
-``` userinput
+```bash
 make -k check
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--disable-gpg-test`{.option}: Use this switch if [GnuPG-2.5.20](gnupg.md "GnuPG-2.5.20"){.xref} is not installed.
-:::
+<code class="option">--disable-gpg-test</code>: Use this switch if <a class="xref" href="gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a> is not installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [gnupg-key-manage, gpgme-json, and gpgme-tool]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">gnupg-key-manage, gpgme-json, and gpgme-tool</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgpgme.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgpgme.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/common-lisp/source/gpgme]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/common-lisp/source/gpgme</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------
-  []{#gnupg-key-manage}[[**gnupg-key-manage**]{.command}]{.term}   performs a variety of operations on GPG keys, including identifying keys and deleting them
-  []{#gpgme-json}[[**gpgme-json**]{.command}]{.term}               outputs [gpgme]{.application} commands in JSON format
-  []{#gpgme-tool}[[**gpgme-tool**]{.command}]{.term}               is an assuan server exposing [gpgme]{.application} operations, such as printing fingerprints and keyids with keyservers
-  []{#libgpgme}[`libgpgme.so`{.filename}]{.term}                   contains the [gpgme]{.application} API functions
+  <a id="gnupg-key-manage"></a><span class="command"><span class="term"><strong>gnupg-key-manage</strong></span></span>   performs a variety of operations on GPG keys, including identifying keys and deleting them
+  <a id="gpgme-json"></a><span class="command"><span class="term"><strong>gpgme-json</strong></span></span>               outputs <span class="application">gpgme</span> commands in JSON format
+  <a id="gpgme-tool"></a><span class="command"><span class="term"><strong>gpgme-tool</strong></span></span>               is an assuan server exposing <span class="application">gpgme</span> operations, such as printing fingerprints and keyids with keyservers
+  <a id="libgpgme"></a><span class="term"><code class="filename">libgpgme.so</code></span>                   contains the <span class="application">gpgme</span> API functions
   ---------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnutls.md "GnuTLS-3.8.13"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnutls.md "GnuTLS-3.8.13")
 
     GnuTLS-3.8.13
 
--   [Next](gpgmepp.md "gpgmepp-2.1.0"){accesskey="n"}
+-   [Next](gpgmepp.md "gpgmepp-2.1.0")
 
     gpgmepp-2.1.0
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

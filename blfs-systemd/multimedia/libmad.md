@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libdv.md "Libdv-1.0.0"){accesskey="p"}
+-   [Prev](libdv.md "Libdv-1.0.0")
 
     Libdv-1.0.0
 
--   [Next](libmpeg2.md "libmpeg2-0.5.1"){accesskey="n"}
+-   [Next](libmpeg2.md "libmpeg2-0.5.1")
 
     libmpeg2-0.5.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libmad}libmad-0.15.1b {#libmad-0.15.1b .sect1}
+# libmad-0.15.1b {#libmad-0.15.1b}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libmad {#introduction-to-libmad .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libmad {#introduction-to-libmad}
 
-[libmad]{.application} is a high-quality MPEG audio decoder capable of 24-bit output.
+<span class="application">libmad</span> is a high-quality MPEG audio decoder capable of 24-bit output.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz](https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz">https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz</a>
 
 -   Download MD5 sum: 1be543bc30c56fb6bea1d7bf6a64e66c
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.2 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/libmad-0.15.1b-fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/libmad-0.15.1b-fixes-1.patch){.ulink}
-:::
-::::::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/libmad-0.15.1b-fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/libmad-0.15.1b-fixes-1.patch</a>
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libmad {#installation-of-libmad .sect2}
+<div class="installation" lang="en">
+## Installation of libmad {#installation-of-libmad}
 
-Install [libmad]{.application} by running the following commands:
+Install <span class="application">libmad</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../libmad-0.15.1b-fixes-1.patch                &&
 sed "s@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@g" -i configure.ac &&
 touch NEWS AUTHORS ChangeLog                                 &&
@@ -70,17 +70,17 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-Some packages check for the [pkg-config]{.application} file for [libmad]{.application}. This file is particularly needed so that [Cdrdao]{.application} can recognize the installed [libmad]{.application}.
+Some packages check for the <span class="application">pkg-config</span> file for <span class="application">libmad</span>. This file is particularly needed so that <span class="application">Cdrdao</span> can recognize the installed <span class="application">libmad</span>.
 
-As the `root`{.systemitem} user:
+As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /usr/lib/pkgconfig/mad.pc << "EOF"
 prefix=/usr
 exec_prefix=${prefix}
@@ -95,55 +95,55 @@ Libs: -L${libdir} -lmad
 Cflags: -I${includedir}
 EOF
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**touch NEWS AUTHORS ChangeLog**]{.command}: Prevent autoreconf from returning an error.
+<span class="command"><strong>touch NEWS AUTHORS ChangeLog</strong></span>: Prevent autoreconf from returning an error.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libmad.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libmad.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ---------------------------------
-  []{#libmad-lib}[`libmad.so`{.filename}]{.term}   is a MPEG audio decoder library
+  <a id="libmad-lib"></a><span class="term"><code class="filename">libmad.so</code></span>   is a MPEG audio decoder library
   ------------------------------------------------ ---------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libdv.md "Libdv-1.0.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libdv.md "Libdv-1.0.0")
 
     Libdv-1.0.0
 
--   [Next](libmpeg2.md "libmpeg2-0.5.1"){accesskey="n"}
+-   [Next](libmpeg2.md "libmpeg2-0.5.1")
 
     libmpeg2-0.5.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

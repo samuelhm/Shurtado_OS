@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XIII. Printing, Scanning and Typesetting
 
--   [Prev](xmlto.md "xmlto-0.0.29"){accesskey="p"}
+-   [Prev](xmlto.md "xmlto-0.0.29")
 
     xmlto-0.0.29
 
--   [Next](enscript.md "Enscript-1.6.6"){accesskey="n"}
+-   [Next](enscript.md "Enscript-1.6.6")
 
     Enscript-1.6.6
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pst-ps}PostScript {#postscript .chapter}
+# PostScript {#postscript}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter includes applications that create, manipulate or view PostScript files and create or view Portable Document Format PDF files.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Enscript-1.6.6](enscript.md)
@@ -29,19 +29,19 @@ This chapter includes applications that create, manipulate or view PostScript fi
 -   [fop-2.11](fop.md)
 -   [MuPDF-1.26.12](mupdf.md)
 -   [paps-0.8.0](paps.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](xmlto.md "xmlto-0.0.29"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xmlto.md "xmlto-0.0.29")
 
     xmlto-0.0.29
 
--   [Next](enscript.md "Enscript-1.6.6"){accesskey="n"}
+-   [Next](enscript.md "Enscript-1.6.6")
 
     Enscript-1.6.6
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

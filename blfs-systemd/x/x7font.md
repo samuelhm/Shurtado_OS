@@ -1,62 +1,62 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](xcursor-themes.md "xcursor-themes-1.0.7"){accesskey="p"}
+-   [Prev](xcursor-themes.md "xcursor-themes-1.0.7")
 
     xcursor-themes-1.0.7
 
--   [Next](xkeyboard-config.md "XKeyboardConfig-2.47"){accesskey="n"}
+-   [Next](xkeyboard-config.md "XKeyboardConfig-2.47")
 
     XKeyboardConfig-2.47
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xorg7-font}Xorg Fonts {#xorg-fonts .sect1}
+# Xorg Fonts {#xorg-fonts}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xorg Fonts {#introduction-to-xorg-fonts .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xorg Fonts {#introduction-to-xorg-fonts}
 
-The [Xorg]{.application} font packages provide some scalable fonts and supporting packages for [Xorg]{.application} applications. Many people will want to install other TTF or OTF fonts in addition to, or instead of, these. Some are listed at [the section called “TTF and OTF fonts”](TTF-and-OTF-fonts.md "TTF and OTF fonts"){.xref}.
+The <span class="application">Xorg</span> font packages provide some scalable fonts and supporting packages for <span class="application">Xorg</span> applications. Many people will want to install other TTF or OTF fonts in addition to, or instead of, these. Some are listed at <a class="xref" href="TTF-and-OTF-fonts.md" title="TTF and OTF fonts">the section called “TTF and OTF fonts”</a>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/font/](https://www.x.org/pub/individual/font/){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/font/">https://www.x.org/pub/individual/font/</a>
 
 -   Download size: 3.0 MB
 
 -   Estimated disk space required: 8.8 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Xorg Fonts Dependencies
 
 #### Required
 
-[xcursor-themes-1.0.7](xcursor-themes.md "xcursor-themes-1.0.7"){.xref}
-:::::
+<a class="xref" href="xcursor-themes.md" title="xcursor-themes-1.0.7">xcursor-themes-1.0.7</a>
+</div>
 
-::: {.sect2 lang="en"}
-## Downloading Xorg Fonts {#downloading-xorg-fonts .sect2}
+<div class="sect2" lang="en">
+## Downloading Xorg Fonts {#downloading-xorg-fonts}
 
 First, create a list of files to be downloaded. This file will also be used to verify the integrity of the downloads when complete:
 
-``` userinput
+```bash
 cat > font-7.md5 << "EOF"
 42ea8cc91549e43e9251ccbd664e7864  font-util-1.4.2.tar.xz
 a56b1a7f2c14173f71f010225fa131f1  encodings-1.1.0.tar.xz
@@ -70,38 +70,38 @@ fe972eaf13176fa9aa7e74a12ecc801a  font-misc-ethiopic-1.0.5.tar.xz
 EOF
 ```
 
-To download the needed files using [Wget-1.25.0](../basicnet/wget.md "Wget-1.25.0"){.xref}, use the following commands:
+To download the needed files using <a class="xref" href="../basicnet/wget.md" title="Wget-1.25.0">Wget-1.25.0</a>, use the following commands:
 
-``` userinput
+```bash
 mkdir font &&
 cd font &&
 grep -v '^#' ../font-7.md5 | awk '{print $2}' | wget -i- -c \
     -B https://www.x.org/pub/individual/font/ &&
 md5sum -c ../font-7.md5
 ```
-:::
+</div>
 
-::::: {.installation lang="en"}
-## Installation of Xorg Fonts {#installation-of-xorg-fonts .sect2}
+<div class="installation" lang="en">
+## Installation of Xorg Fonts {#installation-of-xorg-fonts}
 
-:::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 When installing multiple packages in a script, the installation needs to be done as the root user. There are three general options that can be used to do this:
 
-::: orderedlist
+<div class="orderedlist">
 1.  Run the entire script as the root user (not recommended).
 
-2.  Use the [**sudo**]{.command} command from the [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} package.
+2.  Use the <span class="command"><strong>sudo</strong></span> command from the <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> package.
 
-3.  Use [**su -c "command arguments"**]{.command} (quotes required) which will ask for the root password for every iteration of the loop.
-:::
+3.  Use <span class="command"><strong>su -c "command arguments"</strong></span> (quotes required) which will ask for the root password for every iteration of the loop.
+</div>
 
-One way to handle this situation is to create a short [**bash**]{.command} function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
+One way to handle this situation is to create a short <span class="command"><strong>bash</strong></span> function that automatically selects the appropriate method. Once the command is set in the environment, it does not need to be set again.
 
-``` userinput
+```bash
 as_root()
 {
   if   [ $EUID = 0 ];        then $*
@@ -112,17 +112,17 @@ as_root()
 
 export -f as_root
 ```
-::::
+</div>
 
 First, start a subshell that will exit on error:
 
-``` userinput
+```bash
 bash -e
 ```
 
 Install all of the packages by running the following commands:
 
-``` userinput
+```bash
 for package in $(grep -v '^#' ../font-7.md5 | awk '{print $2}')
 do
   packagedir=${package%.tar.?z*}
@@ -138,59 +138,59 @@ done
 
 Finally, exit the shell that was started earlier:
 
-``` userinput
+```bash
 exit
 ```
 
-When all of the fonts have been installed, the system must be configured so that [Fontconfig]{.application} can find the TrueType fonts. Since the fonts are outside of the default search path of several packages [**if `XORG_PREFIX`{.envar} is not `/usr`{.filename}**]{.bold}, make symlinks to the [Xorg]{.application} TrueType font directories in `/usr/share/fonts`{.filename} by running the following commands as the `root`{.systemitem} user:
+When all of the fonts have been installed, the system must be configured so that <span class="application">Fontconfig</span> can find the TrueType fonts. Since the fonts are outside of the default search path of several packages <span class="bold"><strong>if <code class="envar">XORG_PREFIX</code> is not <code class="filename">/usr</code></strong></span>, make symlinks to the <span class="application">Xorg</span> TrueType font directories in <code class="filename">/usr/share/fonts</code> by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -d -m755 /usr/share/fonts                               &&
 ln -svfn $XORG_PREFIX/share/fonts/X11/OTF /usr/share/fonts/X11-OTF &&
 ln -svfn $XORG_PREFIX/share/fonts/X11/TTF /usr/share/fonts/X11-TTF
 ```
-:::::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [bdftruncate and ucs2any]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">bdftruncate and ucs2any</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [`$XORG_PREFIX`{.envar}/share/fonts]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody"><code class="envar">$XORG_PREFIX</code>/share/fonts</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------- --------------------------------------------------------------------------
-  []{#bdftruncate-x7}[[**bdftruncate**]{.command}]{.term}   generates a truncated BDF font from an ISO 10646-1 encoded BDF font
-  []{#ucs2any-x7}[[**ucs2any**]{.command}]{.term}           generates BDF fonts in any encoding from an ISO 10646-1 encoded BDF font
+  <a id="bdftruncate-x7"></a><span class="command"><span class="term"><strong>bdftruncate</strong></span></span>   generates a truncated BDF font from an ISO 10646-1 encoded BDF font
+  <a id="ucs2any-x7"></a><span class="command"><span class="term"><strong>ucs2any</strong></span></span>           generates BDF fonts in any encoding from an ISO 10646-1 encoded BDF font
   --------------------------------------------------------- --------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xcursor-themes.md "xcursor-themes-1.0.7"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xcursor-themes.md "xcursor-themes-1.0.7")
 
     xcursor-themes-1.0.7
 
--   [Next](xkeyboard-config.md "XKeyboardConfig-2.47"){accesskey="n"}
+-   [Next](xkeyboard-config.md "XKeyboardConfig-2.47")
 
     XKeyboardConfig-2.47
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

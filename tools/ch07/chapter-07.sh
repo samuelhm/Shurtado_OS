@@ -124,7 +124,7 @@ SCRIPTS=(
 )
 
 for s in "${SCRIPTS[@]}"; do
-    cp -v "$SCRIPT_DIR/ch07/$s" "$CHROOT_SCRIPTS/" || err "copy $s failed"
+    cp -v "$SCRIPT_DIR/$s" "$CHROOT_SCRIPTS/" || err "copy $s failed"
 done
 chmod +x "$CHROOT_SCRIPTS"/*.sh
 

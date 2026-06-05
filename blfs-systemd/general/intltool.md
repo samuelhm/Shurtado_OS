@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](imagemagick.md "ImageMagick-7.1.2-13"){accesskey="p"}
+-   [Prev](imagemagick.md "ImageMagick-7.1.2-13")
 
     ImageMagick-7.1.2-13
 
--   [Next](iso-codes.md "ISO Codes-4.20.1"){accesskey="n"}
+-   [Next](iso-codes.md "ISO Codes-4.20.1")
 
     ISO Codes-4.20.1
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#intltool}Intltool-0.51.0 {#intltool-0.51.0 .sect1}
+# Intltool-0.51.0 {#intltool-0.51.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Intltool {#introduction-to-intltool .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Intltool {#introduction-to-intltool}
 
-The [Intltool]{.application} package provides an internationalization tool used for extracting translatable strings from source files, collecting the extracted strings with messages from traditional source files (`<source directory>/<package>/po`{.filename}) and merging the translations into `.xml`{.filename}, `.desktop`{.filename} and `.oaf`{.filename} files.
+The <span class="application">Intltool</span> package provides an internationalization tool used for extracting translatable strings from source files, collecting the extracted strings with messages from traditional source files (<code class="filename"><source directory>/<package>/po</code>) and merging the translations into <code class="filename">.xml</code>, <code class="filename">.desktop</code> and <code class="filename">.oaf</code> files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [http://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz](http://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="http://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz">http://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz</a>
 
 -   Download MD5 sum: 12e517cac2b57a0121cda351570f1e63
 
@@ -44,92 +44,92 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.5 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Intltool Dependencies
 
 #### Required
 
-[XML-Parser-2.59](perl-modules.md#perl-xml-parser "XML::Parser-2.59"){.xref}
-:::::
+<a class="xref" href="perl-modules.md#perl-xml-parser" title="XML::Parser-2.59">XML-Parser-2.59</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Intltool {#installation-of-intltool .sect2}
+<div class="installation" lang="en">
+## Installation of Intltool {#installation-of-intltool}
 
 First fix a warning that is caused by perl-5.22 and later:
 
-``` userinput
+```bash
 sed -i 's:\\\${:\\\$\\{:' intltool-update.in
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 The above regular expression looks unusual because of all the backslashes. What it does is add a backslash before the right brace character in the sequence '\\\${' resulting in '\\\$\\{'.
-:::
+</div>
 
-Install [Intltool]{.application} by running the following commands:
+Install <span class="application">Intltool</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -m644 -D doc/I18N-HOWTO -t /usr/share/doc/intltool-0.51.0
 ```
-::::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [intltool-extract, intltool-merge, intltool-prepare, intltool-update, and intltoolize]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">intltool-extract, intltool-merge, intltool-prepare, intltool-update, and intltoolize</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/intltool-0.51.0 and /usr/share/intltool]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/intltool-0.51.0 and /usr/share/intltool</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- -----------------------------------------------------------------------------------
-  []{#intltoolize}[[**intltoolize**]{.command}]{.term}             prepares a package to use [intltool]{.application}.
-  []{#intltool-extract}[[**intltool-extract**]{.command}]{.term}   generates header files that can be read by [**gettext**]{.command}.
-  []{#intltool-merge}[[**intltool-merge**]{.command}]{.term}       merges translated strings into various file types.
-  []{#intltool-prepare}[[**intltool-prepare**]{.command}]{.term}   updates pot files and merges them with translation files.
-  []{#intltool-update}[[**intltool-update**]{.command}]{.term}     updates the `po`{.filename} template files and merges them with the translations.
+  <a id="intltoolize"></a><span class="command"><span class="term"><strong>intltoolize</strong></span></span>             prepares a package to use <span class="application">intltool</span>.
+  <a id="intltool-extract"></a><span class="command"><span class="term"><strong>intltool-extract</strong></span></span>   generates header files that can be read by <span class="command"><strong>gettext</strong></span>.
+  <a id="intltool-merge"></a><span class="command"><span class="term"><strong>intltool-merge</strong></span></span>       merges translated strings into various file types.
+  <a id="intltool-prepare"></a><span class="command"><span class="term"><strong>intltool-prepare</strong></span></span>   updates pot files and merges them with translation files.
+  <a id="intltool-update"></a><span class="command"><span class="term"><strong>intltool-update</strong></span></span>     updates the <code class="filename">po</code> template files and merges them with the translations.
   ---------------------------------------------------------------- -----------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](imagemagick.md "ImageMagick-7.1.2-13"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](imagemagick.md "ImageMagick-7.1.2-13")
 
     ImageMagick-7.1.2-13
 
--   [Next](iso-codes.md "ISO Codes-4.20.1"){accesskey="n"}
+-   [Next](iso-codes.md "ISO Codes-4.20.1")
 
     ISO Codes-4.20.1
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

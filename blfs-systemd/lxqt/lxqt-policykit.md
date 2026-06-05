@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-config.md "lxqt-config-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-config.md "lxqt-config-2.4.0")
 
     lxqt-config-2.4.0
 
--   [Next](lxqt-sudo.md "lxqt-sudo-2.4.0"){accesskey="n"}
+-   [Next](lxqt-sudo.md "lxqt-sudo-2.4.0")
 
     lxqt-sudo-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-policykit}lxqt-policykit-2.4.0 {#lxqt-policykit-2.4.0 .sect1}
+# lxqt-policykit-2.4.0 {#lxqt-policykit-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-policykit {#introduction-to-lxqt-policykit .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-policykit {#introduction-to-lxqt-policykit}
 
-The [lxqt-policykit]{.application} package is the [LXQt]{.application} PolicyKit agent.
+The <span class="application">lxqt-policykit</span> package is the <span class="application">LXQt</span> PolicyKit agent.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-policykit/releases/download/2.4.0/lxqt-policykit-2.4.0.tar.xz](https://github.com/lxqt/lxqt-policykit/releases/download/2.4.0/lxqt-policykit-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-policykit/releases/download/2.4.0/lxqt-policykit-2.4.0.tar.xz">https://github.com/lxqt/lxqt-policykit/releases/download/2.4.0/lxqt-policykit-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 407421121bd60292723424e7827fc45e
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.3 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### lxqt-policykit Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref} and [polkit-qt-0.201.1](../kde/polkit-qt.md "Polkit-Qt-0.201.1"){.xref}
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a> and <a class="xref" href="../kde/polkit-qt.md" title="Polkit-Qt-0.201.1">polkit-qt-0.201.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-policykit {#installation-of-lxqt-policykit .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-policykit {#installation-of-lxqt-policykit}
 
-Install [lxqt-policykit]{.application} by running the following commands:
+Install <span class="application">lxqt-policykit</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [lxqt-policykit-agent]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">lxqt-policykit-agent</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/lxqt/translations/lxqt-policykit-agent]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/lxqt/translations/lxqt-policykit-agent</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------------------- ---------------------------------------------
-  []{#lxqt-policykit-agent-prog}[[**lxqt-policykit-agent**]{.command}]{.term}   is the [LXQt]{.application} PolicyKit agent
+  <a id="lxqt-policykit-agent-prog"></a><span class="command"><span class="term"><strong>lxqt-policykit-agent</strong></span></span>   is the <span class="application">LXQt</span> PolicyKit agent
   ----------------------------------------------------------------------------- ---------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-config.md "lxqt-config-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-config.md "lxqt-config-2.4.0")
 
     lxqt-config-2.4.0
 
--   [Next](lxqt-sudo.md "lxqt-sudo-2.4.0"){accesskey="n"}
+-   [Next](lxqt-sudo.md "lxqt-sudo-2.4.0")
 
     lxqt-sudo-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part IV. Networking
 
--   [Prev](advanced-network.md "Advanced Network Setup"){accesskey="p"}
+-   [Prev](advanced-network.md "Advanced Network Setup")
 
     Advanced Network Setup
 
--   [Next](cifsutils.md "cifs-utils-7.5"){accesskey="n"}
+-   [Next](cifsutils.md "cifs-utils-7.5")
 
     cifs-utils-7.5
 
--   [Up](basicnet.md "Part IV. Networking"){accesskey="u"}
+-   [Up](basicnet.md "Part IV. Networking")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#netprogs}Networking Programs {#networking-programs .chapter}
+# Networking Programs {#networking-programs}
 
-:::: {.chapter lang="en"}
-These applications are generally client applications used to access the appropriate server across the building or across the world. [Tcpwrappers]{.application} and [portmap]{.application} are support programs for daemons that you may have running on your machine.
+<div class="chapter" lang="en">
+These applications are generally client applications used to access the appropriate server across the building or across the world. <span class="application">Tcpwrappers</span> and <span class="application">portmap</span> are support programs for daemons that you may have running on your machine.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [cifs-utils-7.5](cifsutils.md)
@@ -37,19 +37,19 @@ These applications are generally client applications used to access the appropri
 -   [iw-6.17](iw.md)
 -   [Wireless Tools-29](wireless_tools.md)
 -   [wpa_supplicant-2.11](wpa_supplicant.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](advanced-network.md "Advanced Network Setup"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](advanced-network.md "Advanced Network Setup")
 
     Advanced Network Setup
 
--   [Next](cifsutils.md "cifs-utils-7.5"){accesskey="n"}
+-   [Next](cifsutils.md "cifs-utils-7.5")
 
     cifs-utils-7.5
 
--   [Up](basicnet.md "Part IV. Networking"){accesskey="u"}
+-   [Up](basicnet.md "Part IV. Networking")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

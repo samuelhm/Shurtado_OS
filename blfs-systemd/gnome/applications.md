@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part VIII. GNOME
 
--   [Prev](yelp.md "Yelp-49.0"){accesskey="p"}
+-   [Prev](yelp.md "Yelp-49.0")
 
     Yelp-49.0
 
--   [Next](baobab.md "Baobab-50.0"){accesskey="n"}
+-   [Next](baobab.md "Baobab-50.0")
 
     Baobab-50.0
 
--   [Up](gnome.md "Part VIII. GNOME"){accesskey="u"}
+-   [Up](gnome.md "Part VIII. GNOME")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-applications}GNOME Applications {#gnome-applications .chapter}
+# GNOME Applications {#gnome-applications}
 
-:::: {.chapter lang="en"}
-These packages are desktop applications and assorted utilities from the [GNOME]{.application} project. Feel free to install them on an as needed or as desired basis.
+<div class="chapter" lang="en">
+These packages are desktop applications and assorted utilities from the <span class="application">GNOME</span> project. Feel free to install them on an as needed or as desired basis.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Baobab-50.0](baobab.md)
@@ -45,19 +45,19 @@ These packages are desktop applications and assorted utilities from the [GNOME]{
 -   [Seahorse-47.0.1](seahorse.md)
 -   [Showtime-49.1](showtime.md)
 -   [Snapshot-50.0](snapshot.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](yelp.md "Yelp-49.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](yelp.md "Yelp-49.0")
 
     Yelp-49.0
 
--   [Next](baobab.md "Baobab-50.0"){accesskey="n"}
+-   [Next](baobab.md "Baobab-50.0")
 
     Baobab-50.0
 
--   [Up](gnome.md "Part VIII. GNOME"){accesskey="u"}
+-   [Up](gnome.md "Part VIII. GNOME")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

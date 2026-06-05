@@ -1,28 +1,28 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../x/oxygen-icons.md "oxygen-icons-6.1.0"){accesskey="p"}
+-   [Prev](../x/oxygen-icons.md "oxygen-icons-6.1.0")
 
     oxygen-icons-6.1.0
 
--   [Next](introduction.md "Introduction to KDE"){accesskey="n"}
+-   [Next](introduction.md "Introduction to KDE")
 
     Introduction to KDE
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kde}KDE {#kde .part}
+# KDE {#kde}
 
-::::: part
-:::: partintro
-[KDE]{.application} is a comprehensive desktop environment with a huge number of applications written for it and a huge amount of users. It is based on the [Qt]{.application} framework.
+<div class="part">
+<div class="partintro">
+<span class="application">KDE</span> is a comprehensive desktop environment with a huge number of applications written for it and a huge amount of users. It is based on the <span class="application">Qt</span> framework.
 
-For more information visit the official KDE project site at [https://kde.org/](https://kde.org/){.ulink}.
+For more information visit the official KDE project site at <a class="ulink" href="https://kde.org/">https://kde.org/</a>.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   #### [29. Introduction to KDE](introduction.md)
@@ -70,20 +70,20 @@ For more information visit the official KDE project site at [https://kde.org/](h
     -   [kquickimageeditor-0.6.1](kquickimageeditor.md)
     -   [bolt-0.9.11](bolt.md)
     -   [Building Plasma](plasma-all.md)
-:::
-::::
-:::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](../x/oxygen-icons.md "oxygen-icons-6.1.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../x/oxygen-icons.md "oxygen-icons-6.1.0")
 
     oxygen-icons-6.1.0
 
--   [Next](introduction.md "Introduction to KDE"){accesskey="n"}
+-   [Next](introduction.md "Introduction to KDE")
 
     Introduction to KDE
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

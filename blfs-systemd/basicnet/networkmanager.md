@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 16. Networking Utilities
 
--   [Prev](bind-utils.md "BIND Utilities-9.20.20"){accesskey="p"}
+-   [Prev](bind-utils.md "BIND Utilities-9.20.20")
 
     BIND Utilities-9.20.20
 
--   [Next](network-manager-applet.md "network-manager-applet-1.34.0"){accesskey="n"}
+-   [Next](network-manager-applet.md "network-manager-applet-1.34.0")
 
     network-manager-applet-1.34.0
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#NetworkManager}NetworkManager-1.56.1 {#networkmanager-1.56.1 .sect1}
+# NetworkManager-1.56.1 {#networkmanager-1.56.1}
 
-:::::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to NetworkManager {#introduction-to-networkmanager .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to NetworkManager {#introduction-to-networkmanager}
 
-[NetworkManager]{.application} is a set of co-operative tools that make networking simple and straightforward. Whether you use WiFi, wired, 3G, or Bluetooth, NetworkManager allows you to quickly move from one network to another: Once a network has been configured and joined once, it can be detected and re-joined automatically the next time it's available.
+<span class="application">NetworkManager</span> is a set of co-operative tools that make networking simple and straightforward. Whether you use WiFi, wired, 3G, or Bluetooth, NetworkManager allows you to quickly move from one network to another: Once a network has been configured and joined once, it can be detected and re-joined automatically the next time it's available.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Make sure that you disable the [**systemd-networkd**]{.command} service or configure it not to manage the interfaces you want to manage with [NetworkManager]{.application}.
-:::
+Make sure that you disable the <span class="command"><strong>systemd-networkd</strong></span> service or configure it not to manage the interfaces you want to manage with <span class="application">NetworkManager</span>.
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.56.1/downloads/NetworkManager-1.56.1.tar.xz](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.56.1/downloads/NetworkManager-1.56.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.56.1/downloads/NetworkManager-1.56.1.tar.xz">https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.56.1/downloads/NetworkManager-1.56.1.tar.xz</a>
 
 -   Download MD5 sum: e21ec74b24f72a044e75c0ae92a9bb62
 
@@ -52,29 +52,29 @@ Make sure that you disable the [**systemd-networkd**]{.command} service or confi
 -   Estimated disk space required: 365 MB (with tests and documentation)
 
 -   Estimated build time: 0.8 SBU (with tests, using parallelism=4)
-:::
+</div>
 
 ### NetworkManager Dependencies
 
 #### Required
 
-[libndp-1.9](libndp.md "libndp-1.9"){.xref}
+<a class="xref" href="libndp.md" title="libndp-1.9">libndp-1.9</a>
 
 #### Recommended
 
-[cURL-8.20.0](curl.md "cURL-8.20.0"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [iptables-1.8.13](../postlfs/iptables.md "iptables-1.8.13"){.xref}, [libpsl-0.21.5](libpsl.md "libpsl-0.21.5"){.xref}, [newt-0.52.25](../general/newt.md "newt-0.52.25"){.xref} (for [**nmtui**]{.command}), [nss-3.124](../postlfs/nss.md "NSS-3.124"){.xref}, [Polkit-127](../postlfs/polkit.md "Polkit-127"){.xref} (runtime), [PyGObject-3.56.3](../general/python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref}, [[Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref},]{.phrase} [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}, and [wpa_supplicant-2.11](wpa_supplicant.md "wpa_supplicant-2.11"){.xref} (runtime, built with D-Bus support)
+<a class="xref" href="curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="../postlfs/iptables.md" title="iptables-1.8.13">iptables-1.8.13</a>, <a class="xref" href="libpsl.md" title="libpsl-0.21.5">libpsl-0.21.5</a>, <a class="xref" href="../general/newt.md" title="newt-0.52.25">newt-0.52.25</a> (for <span class="command"><strong>nmtui</strong></span>), <a class="xref" href="../postlfs/nss.md" title="NSS-3.124">nss-3.124</a>, <a class="xref" href="../postlfs/polkit.md" title="Polkit-127">Polkit-127</a> (runtime), <a class="xref" href="../general/python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a>, <a class="xref" href="../general/systemd.md" title="Systemd-260.2"><span class="phrase">Systemd-260.2</a>,</span> <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>, and <a class="xref" href="wpa_supplicant.md" title="wpa_supplicant-2.11">wpa_supplicant-2.11</a> (runtime, built with D-Bus support)
 
 #### Optional
 
-[BlueZ-5.86](../general/bluez.md "BlueZ-5.86"){.xref}, [D-Bus Python-1.4.0](../general/python-modules.md#dbus-python "D-Bus Python-1.4.0"){.xref} (for the test suite), [GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref} (can be used instead of [nss-3.124](../postlfs/nss.md "NSS-3.124"){.xref}), [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}, [libnvme-1.16.1](../general/libnvme.md "libnvme-1.16.1"){.xref}, [ModemManager-1.24.2](../general/ModemManager.md "ModemManager-1.24.2"){.xref}, [UPower-1.91.2](../general/upower.md "UPower-1.91.2"){.xref}, [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}, [dnsmasq](https://thekelleys.org.uk/dnsmasq/doc.md){.ulink}, [firewalld](https://firewalld.org/){.ulink}, [libaudit](https://github.com/Distrotech/libaudit){.ulink}, [libteam](https://github.com/jpirko/libteam){.ulink}, [mobile-broadband-provider-info](https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info/){.ulink}, [PPP](https://www.samba.org/ftp/ppp/){.ulink}, and [RP-PPPoE](https://dianne.skoll.ca/projects/rp-pppoe/){.ulink}
-::::::
+<a class="xref" href="../general/bluez.md" title="BlueZ-5.86">BlueZ-5.86</a>, <a class="xref" href="../general/python-modules.md#dbus-python" title="D-Bus Python-1.4.0">D-Bus Python-1.4.0</a> (for the test suite), <a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a> (can be used instead of <a class="xref" href="../postlfs/nss.md" title="NSS-3.124">nss-3.124</a>), <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>, <a class="xref" href="../general/libnvme.md" title="libnvme-1.16.1">libnvme-1.16.1</a>, <a class="xref" href="../general/ModemManager.md" title="ModemManager-1.24.2">ModemManager-1.24.2</a>, <a class="xref" href="../general/upower.md" title="UPower-1.91.2">UPower-1.91.2</a>, <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>, <a class="ulink" href="https://thekelleys.org.uk/dnsmasq/doc.md">dnsmasq</a>, <a class="ulink" href="https://firewalld.org/">firewalld</a>, <a class="ulink" href="https://github.com/Distrotech/libaudit">libaudit</a>, <a class="ulink" href="https://github.com/jpirko/libteam">libteam</a>, <a class="ulink" href="https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info/">mobile-broadband-provider-info</a>, <a class="ulink" href="https://www.samba.org/ftp/ppp/">PPP</a>, and <a class="ulink" href="https://dianne.skoll.ca/projects/rp-pppoe/">RP-PPPoE</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#NetworkManager-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
 If you wish to run the tests, check that at least the following options are enabled in the kernel configuration. Those options have been determined to be necessary, but may not be sufficient. Recompile the kernel if necessary:
 
-``` screen
+```console
 [*] Networking support --->                                                [NET]
   Networking options --->
     [*]   TCP/IP networking                                               [INET]
@@ -107,20 +107,20 @@ Device Drivers --->
     <*/M>   Virtual ethernet pair device                                  [VETH]
     <*/M>   Virtual Routing and Forwarding (Lite)                      [NET_VRF]
 ```
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of NetworkManager {#installation-of-networkmanager .sect2}
+<div class="installation" lang="en">
+## Installation of NetworkManager {#installation-of-networkmanager}
 
-Fix the python scripts so that they use [Python 3]{.application}:
+Fix the python scripts so that they use <span class="application">Python 3</span>:
 
-``` userinput
+```bash
 grep -rl '^#!.*python$' | xargs sed -i '1s/python/&3/'
 ```
 
-Install [NetworkManager]{.application} by running the following commands:
+Install <span class="application">NetworkManager</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -140,21 +140,21 @@ meson setup ..                    \
 ninja
 ```
 
-An already active graphical session with a bus address is necessary to run the tests. To test the results, issue [**ninja test**]{.command}.
+An already active graphical session with a bus address is necessary to run the tests. To test the results, issue <span class="command"><strong>ninja test</strong></span>.
 
 A few tests may fail, depending on enabled kernel options.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install &&
 rm -rf /usr/share/doc/NetworkManager-1.56.1 &&
 mv -v /usr/share/doc/NetworkManager{,-1.56.1}
 ```
 
-If you have not passed the `-D docs=true`{.option} option to [**meson**]{.command}, you can install the pregenerated manual pages with (as the `root`{.systemitem} user):
+If you have not passed the <code class="option">-D docs=true</code> option to <span class="command"><strong>meson</strong></span>, you can install the pregenerated manual pages with (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 for file in $(echo ../man/*.[1578]); do
     section=${file##*.} &&
     install -vdm 755 /usr/share/man/man$section
@@ -162,89 +162,89 @@ for file in $(echo ../man/*.[1578]); do
 done
 ```
 
-If you have not used `-D docs=true`{.option}, the pregenerated HTML documentation can also be installed with (as the `root`{.systemitem} user):
+If you have not used <code class="option">-D docs=true</code>, the pregenerated HTML documentation can also be installed with (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 cp -Rv ../docs/{api,libnm} /usr/share/doc/NetworkManager-1.56.1
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D docs=true`{.option}: Use this switch to enable building man pages and documentation if [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref} is installed.
+<code class="option">-D docs=true</code>: Use this switch to enable building man pages and documentation if <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> is installed.
 
-*`-D nmtui=true`*: This switch enables building [**nmtui**]{.command}.
+*`-D nmtui=true`*: This switch enables building <span class="command"><strong>nmtui</strong></span>.
 
-*`-D ovs=false`*: This switch disable the Open vSwitch integration because it needs [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}. Remove it if you have [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref} installed on your system.
+*`-D ovs=false`*: This switch disable the Open vSwitch integration because it needs <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>. Remove it if you have <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a> installed on your system.
 
-*`-D modem_manager=false`*: This switch is required if [ModemManager]{.application} is not installed. Omit this switch if you have built [ModemManager]{.application} and [mobile-broadband-provider-info]{.application}.
+*`-D modem_manager=false`*: This switch is required if <span class="application">ModemManager</span> is not installed. Omit this switch if you have built <span class="application">ModemManager</span> and <span class="application">mobile-broadband-provider-info</span>.
 
-*`-D nbft=false`*: This switch is required if [libnvme-1.16.1](../general/libnvme.md "libnvme-1.16.1"){.xref} is not installed, and disabled NBFT support in the initrd generator. Note that BLFS does not use the initrd generator provided from NetworkManager by default.
+*`-D nbft=false`*: This switch is required if <a class="xref" href="../general/libnvme.md" title="libnvme-1.16.1">libnvme-1.16.1</a> is not installed, and disabled NBFT support in the initrd generator. Note that BLFS does not use the initrd generator provided from NetworkManager by default.
 
-*`-D session_tracking=systemd`*: This switch is used to set [**systemd-logind**]{.command} as the default program for session tracking.
+*`-D session_tracking=systemd`*: This switch is used to set <span class="command"><strong>systemd-logind</strong></span> as the default program for session tracking.
 
-*`-D ppp=false`*: This switch disables [PPP]{.application} support in [NetworkManager]{.application} since the programs necessary for it are not installed. Remove this switch if you need PPP support and have [PPP]{.application} installed.
+*`-D ppp=false`*: This switch disables <span class="application">PPP</span> support in <span class="application">NetworkManager</span> since the programs necessary for it are not installed. Remove this switch if you need PPP support and have <span class="application">PPP</span> installed.
 
 *`-D libaudit=no`* and *`-D selinux=false`*: This switch disables support for libaudit and SELinux since they are not used in BLFS.
 
-*`-D qt=false`*: This switch disables the [Qt 5]{.application} examples.
+*`-D qt=false`*: This switch disables the <span class="application">Qt 5</span> examples.
 
-*`-D nm_cloud_setup=false`*: Use this switch if you have not installed [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}. This disables nm-cloud-setup which is used to automatically configure the network in a public cloud environment within a VM.
+*`-D nm_cloud_setup=false`*: Use this switch if you have not installed <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>. This disables nm-cloud-setup which is used to automatically configure the network in a public cloud environment within a VM.
 
-`-D crypto=gnutls`{.option}: Use this switch if you have GnuTLS installed and want to use it for certificate and key operations in NetworkManager, instead of using NSS (the default).
+<code class="option">-D crypto=gnutls</code>: Use this switch if you have GnuTLS installed and want to use it for certificate and key operations in NetworkManager, instead of using NSS (the default).
 
-`-D crypto=null`{.option}: Use this switch if neither NSS nor GnuTLS is installed but you want to build NetworkManager anyway. This switch will make NetworkManager lack some features (for example 802.1X).
-:::
+<code class="option">-D crypto=null</code>: Use this switch if neither NSS nor GnuTLS is installed but you want to build NetworkManager anyway. This switch will make NetworkManager lack some features (for example 802.1X).
+</div>
 
-::::::: {.configuration lang="en"}
-## Configuring NetworkManager {#configuring-networkmanager .sect2}
+<div class="configuration" lang="en">
+## Configuring NetworkManager {#configuring-networkmanager}
 
-::: {.sect3 lang="en"}
-### []{#NetworkManager-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/NetworkManager/NetworkManager.conf`{.filename}
-:::
+<code class="filename">/etc/NetworkManager/NetworkManager.conf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-For [NetworkManager]{.application} to work, at least a minimal configuration file must be present. Such a file is not installed with [**make install**]{.command}. Issue the following command as the `root`{.systemitem} user to create a minimal `NetworkManager.conf`{.filename} file:
+For <span class="application">NetworkManager</span> to work, at least a minimal configuration file must be present. Such a file is not installed with <span class="command"><strong>make install</strong></span>. Issue the following command as the <code class="systemitem">root</code> user to create a minimal <code class="filename">NetworkManager.conf</code> file:
 
-``` root
+```bash
 cat >> /etc/NetworkManager/NetworkManager.conf << "EOF"
 [main]
 plugins=keyfile
 EOF
 ```
 
-This file should not be modified directly by users of the system. Instead, system specific changes should be made using configuration files in the `/etc/NetworkManager/conf.d`{.filename} directory.
+This file should not be modified directly by users of the system. Instead, system specific changes should be made using configuration files in the <code class="filename">/etc/NetworkManager/conf.d</code> directory.
 
 To allow polkit to manage authorizations, add the following configuration file:
 
-``` root
+```bash
 cat > /etc/NetworkManager/conf.d/polkit.conf << "EOF"
 [main]
 auth-polkit=true
 EOF
 ```
 
-To prevent [NetworkManager]{.application} from updating the `/etc/resolv.conf`{.filename} file, add the following configuration file:
+To prevent <span class="application">NetworkManager</span> from updating the <code class="filename">/etc/resolv.conf</code> file, add the following configuration file:
 
-``` userinput
+```bash
 cat > /etc/NetworkManager/conf.d/no-dns-update.conf << "EOF"
 [main]
 dns=none
 EOF
 ```
 
-For additional configuration options, see [**man 5 NetworkManager.conf**]{.command}.
+For additional configuration options, see <span class="command"><strong>man 5 NetworkManager.conf</strong></span>.
 
-To allow regular users to configure network connections, you should add them to the `netdev`{.systemitem} group, and create a [polkit]{.application} rule that grants access. Run the following commands as the `root`{.systemitem} user:
+To allow regular users to configure network connections, you should add them to the <code class="systemitem">netdev</code> group, and create a <span class="application">polkit</span> rule that grants access. Run the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -fg 86 netdev &&
 /usr/sbin/usermod -a -G netdev <username>
 
@@ -256,79 +256,79 @@ polkit.addRule(function(action, subject) {
 });
 EOF
 ```
-:::
+</div>
 
-:::: {.sect3 lang="en"}
-### []{#NetworkManager-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-To start the [**NetworkManager**]{.command} daemon at boot, enable the previously installed systemd unit by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>NetworkManager</strong></span> daemon at boot, enable the previously installed systemd unit by running the following command as the <code class="systemitem">root</code> user:
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If using [Network Manager]{.application} to manage an interface, any previous configuration for that interface should be removed, and the interface brought down prior to starting [Network Manager]{.application}.
-:::
+If using <span class="application">Network Manager</span> to manage an interface, any previous configuration for that interface should be removed, and the interface brought down prior to starting <span class="application">Network Manager</span>.
+</div>
 
-``` root
+```bash
 systemctl enable NetworkManager
 ```
 
-Starting in version 1.11.2 of [NetworkManager]{.application}, a systemd unit named `NetworkManager-wait-online.service`{.filename} is enabled, which is used to prevent services that require network connectivity from starting until [NetworkManager]{.application} establishes a connection. To disable this behavior, run the following command as the `root`{.systemitem} user:
+Starting in version 1.11.2 of <span class="application">NetworkManager</span>, a systemd unit named <code class="filename">NetworkManager-wait-online.service</code> is enabled, which is used to prevent services that require network connectivity from starting until <span class="application">NetworkManager</span> establishes a connection. To disable this behavior, run the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl disable NetworkManager-wait-online
 ```
-::::
-:::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [NetworkManager, nmcli, nm-online, nmtui, and, symlinked to nmtui: nmtui-connect, nmtui-edit, and nmtui-hostname]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">NetworkManager, nmcli, nm-online, nmtui, and, symlinked to nmtui: nmtui-connect, nmtui-edit, and nmtui-hostname</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libnm.so and several modules under /usr/lib/NetworkManager]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libnm.so and several modules under /usr/lib/NetworkManager</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/NetworkManager, /usr/include/libnm, /usr/lib/NetworkManager, /usr/share/doc/NetworkManager-1.56.1, /usr/share/gtk-doc/html/{libnm,NetworkManager} (if the documentation is built), and /var/lib/NetworkManager]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/NetworkManager, /usr/include/libnm, /usr/lib/NetworkManager, /usr/share/doc/NetworkManager-1.56.1, /usr/share/gtk-doc/html/{libnm,NetworkManager} (if the documentation is built), and /var/lib/NetworkManager</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- ----------------------------------------------------------------------------------------------
-  []{#nmcli}[[**nmcli**]{.command}]{.term}                          is a command-line tool for controlling [NetworkManager]{.application} and getting its status
-  []{#nm-online}[[**nm-online**]{.command}]{.term}                  is a utility to determine whether you are online
-  []{#nmtui}[[**nmtui**]{.command}]{.term}                          is an interactive ncurses-based user interface for [nmcli]{.application}
-  []{#nmtui-connect}[[**nmtui-connect**]{.command}]{.term}          is an interactive ncurses-based user interface to activate/deactivate connections
-  []{#nmtui-edit}[[**nmtui-edit**]{.command}]{.term}                is an interactive ncurses-based user interface to edit connections
-  []{#nmtui-hostname}[[**nmtui-hostname**]{.command}]{.term}        is an interactive ncurses-based user interface to edit the hostname
-  []{#NetworkManager-prog}[[**NetworkManager**]{.command}]{.term}   is the network management daemon
-  []{#libnm}[`libnm.so`{.filename}]{.term}                          contains functions used by [NetworkManager]{.application}
+  <a id="nmcli"></a><span class="command"><span class="term"><strong>nmcli</strong></span></span>                          is a command-line tool for controlling <span class="application">NetworkManager</span> and getting its status
+  <a id="nm-online"></a><span class="command"><span class="term"><strong>nm-online</strong></span></span>                  is a utility to determine whether you are online
+  <a id="nmtui"></a><span class="command"><span class="term"><strong>nmtui</strong></span></span>                          is an interactive ncurses-based user interface for <span class="application">nmcli</span>
+  <a id="nmtui-connect"></a><span class="command"><span class="term"><strong>nmtui-connect</strong></span></span>          is an interactive ncurses-based user interface to activate/deactivate connections
+  <a id="nmtui-edit"></a><span class="command"><span class="term"><strong>nmtui-edit</strong></span></span>                is an interactive ncurses-based user interface to edit connections
+  <a id="nmtui-hostname"></a><span class="command"><span class="term"><strong>nmtui-hostname</strong></span></span>        is an interactive ncurses-based user interface to edit the hostname
+  <a id="NetworkManager-prog"></a><span class="command"><span class="term"><strong>NetworkManager</strong></span></span>   is the network management daemon
+  <a id="libnm"></a><span class="term"><code class="filename">libnm.so</code></span>                          contains functions used by <span class="application">NetworkManager</span>
   ----------------------------------------------------------------- ----------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](bind-utils.md "BIND Utilities-9.20.20"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](bind-utils.md "BIND Utilities-9.20.20")
 
     BIND Utilities-9.20.20
 
--   [Next](network-manager-applet.md "network-manager-applet-1.34.0"){accesskey="n"}
+-   [Next](network-manager-applet.md "network-manager-applet-1.34.0")
 
     network-manager-applet-1.34.0
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

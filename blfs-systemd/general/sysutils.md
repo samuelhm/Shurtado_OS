@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part III. General Libraries and Utilities
 
--   [Prev](xdg-user-dirs.md "Xdg-user-dirs-0.20"){accesskey="p"}
+-   [Prev](xdg-user-dirs.md "Xdg-user-dirs-0.20")
 
     Xdg-user-dirs-0.20
 
--   [Next](7zip.md "7zip-26.01"){accesskey="n"}
+-   [Next](7zip.md "7zip-26.01")
 
     7zip-26.01
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#general-sysutils}System Utilities {#system-utilities .chapter}
+# System Utilities {#system-utilities}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains mainly hardware utilities. It also contains some applications used by other applications in the book for installation or configuration purposes.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [7zip-26.01](7zip.md)
@@ -57,7 +57,7 @@ This chapter contains mainly hardware utilities. It also contains some applicati
 -   [Which-2.25 and Alternatives](which.md)
 -   [xdotool-4.20260303.1](xdotool.md)
 -   [Zip-3.0](zip.md)
--   [Hardware Utilities]{.dummy}
+-   <span class="dummy">Hardware Utilities</span>
 -   [Hdparm-9.65](hdparm.md)
 -   [lm-sensors-3-6-2](lm-sensors.md)
 -   [pciutils-3.15.0](pciutils.md)
@@ -65,19 +65,19 @@ This chapter contains mainly hardware utilities. It also contains some applicati
 -   [sysmond-1.0.1](sysmond.md)
 -   [sysmon3-3.0.3](sysmon3.md)
 -   [usbutils-019](usbutils.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](xdg-user-dirs.md "Xdg-user-dirs-0.20"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xdg-user-dirs.md "Xdg-user-dirs-0.20")
 
     Xdg-user-dirs-0.20
 
--   [Next](7zip.md "7zip-26.01"){accesskey="n"}
+-   [Next](7zip.md "7zip-26.01")
 
     7zip-26.01
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

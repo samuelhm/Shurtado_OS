@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](x7font.md "Xorg Fonts"){accesskey="p"}
+-   [Prev](x7font.md "Xorg Fonts")
 
     Xorg Fonts
 
--   [Next](xwayland.md "Xwayland-24.1.12"){accesskey="n"}
+-   [Next](xwayland.md "Xwayland-24.1.12")
 
     Xwayland-24.1.12
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xkeyboard-config}XKeyboardConfig-2.47 {#xkeyboardconfig-2.47 .sect1}
+# XKeyboardConfig-2.47 {#xkeyboardconfig-2.47}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to XKeyboardConfig {#introduction-to-xkeyboardconfig .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to XKeyboardConfig {#introduction-to-xkeyboardconfig}
 
-The [XKeyboardConfig]{.application} package contains the keyboard configuration database for the X Window System.
+The <span class="application">XKeyboardConfig</span> package contains the keyboard configuration database for the X Window System.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.47.tar.xz](https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.47.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.47.tar.xz">https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.47.tar.xz</a>
 
 -   Download MD5 sum: 01e92dfd1af2ac2cc2c808f0811d8f0c
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 35 MB
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### XKeyboardConfig Dependencies
 
 #### Required
 
-[Xorg Libraries](x7lib.md "Xorg Libraries"){.xref}
+<a class="xref" href="x7lib.md" title="Xorg Libraries">Xorg Libraries</a>
 
 #### Optional (required for tests)
 
-[libxkbcommon-1.13.2](../general/libxkbcommon.md "libxkbcommon-1.13.2"){.xref}, [pytest-9.0.3](../general/python-modules.md#pytest "Pytest-9.0.3"){.xref} with optionally [xdist](https://pypi.org/project/pytest-xdist/){.ulink} (speeds up the tests), and [Xorg Applications](x7app.md "Xorg Applications"){.xref}
-:::::
+<a class="xref" href="../general/libxkbcommon.md" title="libxkbcommon-1.13.2">libxkbcommon-1.13.2</a>, <a class="xref" href="../general/python-modules.md#pytest" title="Pytest-9.0.3">pytest-9.0.3</a> with optionally <a class="ulink" href="https://pypi.org/project/pytest-xdist/">xdist</a> (speeds up the tests), and <a class="xref" href="x7app.md" title="Xorg Applications">Xorg Applications</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of XKeyboardConfig {#installation-of-xkeyboardconfig .sect2}
+<div class="installation" lang="en">
+## Installation of XKeyboardConfig {#installation-of-xkeyboardconfig}
 
-Install [XKeyboardConfig]{.application} by running the following commands:
+Install <span class="application">XKeyboardConfig</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,68 +70,68 @@ meson setup --prefix=$XORG_PREFIX --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-If upgrading from version 2.44 or earlier, the installation will fail if some files are not symbolic links. To fix this, run as the `root`{.systemitem} user:
+If upgrading from version 2.44 or earlier, the installation will fail if some files are not symbolic links. To fix this, run as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 if [ -d $XORG_PREFIX/share/X11/xkb ]; then
   rm -rf $XORG_PREFIX/share/X11/xkb
   rm -f  $XORG_PREFIX/share/man/man7/xkeyboard-config.7
   rm -f  $XORG_PREFIX/share/pkgconfig/xkeyboard-config.pc
 fi
 ```
-:::
+</div>
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [`$XORG_PREFIX`{.envar}/share/X11/xkb]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody"><code class="envar">$XORG_PREFIX</code>/share/X11/xkb</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](x7font.md "Xorg Fonts"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](x7font.md "Xorg Fonts")
 
     Xorg Fonts
 
--   [Next](xwayland.md "Xwayland-24.1.12"){accesskey="n"}
+-   [Next](xwayland.md "Xwayland-24.1.12")
 
     Xwayland-24.1.12
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

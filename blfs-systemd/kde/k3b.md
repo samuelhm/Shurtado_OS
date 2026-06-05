@@ -1,43 +1,43 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](libkcddb.md "libkcddb-26.04.1"){accesskey="p"}
+-   [Prev](libkcddb.md "libkcddb-26.04.1")
 
     libkcddb-26.04.1
 
--   [Next](add-pkgs.md "Further KDE packages"){accesskey="n"}
+-   [Next](add-pkgs.md "Further KDE packages")
 
     Further KDE packages
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#k3b}k3b-26.04.1 {#k3b-26.04.1 .sect1}
+# k3b-26.04.1 {#k3b-26.04.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to K3b {#introduction-to-k3b .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to K3b {#introduction-to-k3b}
 
-The [K3b]{.application} package contains a KDE Frameworks-based graphical interface to the [Cdrtools]{.application} and [dvd+rw-tools]{.application} CD/DVD manipulation tools. It also combines the capabilities of many other multimedia packages into one central interface to provide a simple-to-operate application that can be used to handle many of your CD/DVD recording and formatting requirements. It is used for creating audio, data, video and mixed-mode CDs as well as copying, ripping and burning CDs and DVDs.
+The <span class="application">K3b</span> package contains a KDE Frameworks-based graphical interface to the <span class="application">Cdrtools</span> and <span class="application">dvd+rw-tools</span> CD/DVD manipulation tools. It also combines the capabilities of many other multimedia packages into one central interface to provide a simple-to-operate application that can be used to handle many of your CD/DVD recording and formatting requirements. It is used for creating audio, data, video and mixed-mode CDs as well as copying, ripping and burning CDs and DVDs.
 
-Though [k3b]{.application} can be used to copy almost any DVD to similar medium, it does not provide a way to copy, or reproduce a dual-layer DVD onto a single-layer disk. Of course, there is not a program anywhere on any platform that can make an exact duplicate of a dual-layer DVD onto a single-layer disk, but there are programs on some platforms that can compress the data on a dual-layer DVD to fit on a single-layer DVD producing a duplicate, but compressed, image. If you need to copy the contents of a double-layer DVD to a single-layer disk, you may want to look at the [RMLCopyDVD](http://www.mcmurchy.com/rmlcopydvd/){.ulink} package.
+Though <span class="application">k3b</span> can be used to copy almost any DVD to similar medium, it does not provide a way to copy, or reproduce a dual-layer DVD onto a single-layer disk. Of course, there is not a program anywhere on any platform that can make an exact duplicate of a dual-layer DVD onto a single-layer disk, but there are programs on some platforms that can compress the data on a dual-layer DVD to fit on a single-layer DVD producing a duplicate, but compressed, image. If you need to copy the contents of a double-layer DVD to a single-layer disk, you may want to look at the <a class="ulink" href="http://www.mcmurchy.com/rmlcopydvd/">RMLCopyDVD</a> package.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/k3b-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/k3b-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/k3b-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/k3b-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: a5d7f8014cebb01179636d7dc6a899c2
 
@@ -46,37 +46,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 145 MB
 
 -   Estimated build time: 1.3 SBU (using parallelism=4)
-:::
+</div>
 
 ### K3b Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}, [libkcddb-26.04.1](libkcddb.md "libkcddb-26.04.1"){.xref}, [libsamplerate-0.2.2](../multimedia/libsamplerate.md "libsamplerate-0.2.2"){.xref}, and [shared-mime-info-2.4](../general/shared-mime-info.md "shared-mime-info-2.4"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>, <a class="xref" href="libkcddb.md" title="libkcddb-26.04.1">libkcddb-26.04.1</a>, <a class="xref" href="../multimedia/libsamplerate.md" title="libsamplerate-0.2.2">libsamplerate-0.2.2</a>, and <a class="xref" href="../general/shared-mime-info.md" title="shared-mime-info-2.4">shared-mime-info-2.4</a>
 
-The CD/DVD drive is detected at run time using [UDisks-2.11.1](../general/udisks2.md "UDisks-2.11.1"){.xref}, which must therefore be installed before running [**k3b**]{.command}.
+The CD/DVD drive is detected at run time using <a class="xref" href="../general/udisks2.md" title="UDisks-2.11.1">UDisks-2.11.1</a>, which must therefore be installed before running <span class="command"><strong>k3b</strong></span>.
 
 #### Recommended
 
-[libburn-1.5.8](../multimedia/libburn.md "libburn-1.5.8"){.xref}, [libdvdread-7.0.1](../multimedia/libdvdread.md "libdvdread-7.0.1"){.xref}, and [taglib-2.3](../multimedia/taglib.md "Taglib-2.3"){.xref}
+<a class="xref" href="../multimedia/libburn.md" title="libburn-1.5.8">libburn-1.5.8</a>, <a class="xref" href="../multimedia/libdvdread.md" title="libdvdread-7.0.1">libdvdread-7.0.1</a>, and <a class="xref" href="../multimedia/taglib.md" title="Taglib-2.3">taglib-2.3</a>
 
-There are programs from three packages that [k3b]{.application} will look for at runtime: [Cdrtools-3.02a09](../multimedia/cdrtools.md "Cdrtools-3.02a09"){.xref} (required to burn CD-ROM media), [dvd+rw-tools-7.1](../multimedia/dvd-rw-tools.md "dvd+rw-tools-7.1"){.xref} (required to burn or format DVD media), and [Cdrdao-1.2.6](../multimedia/cdrdao.md "Cdrdao-1.2.6"){.xref} (required to burn CD-ROM media in DAO (Disk At Once) mode). If you don't need the capabilities provided by any of the three packages, you don't have to install them. However, a warning message will be generated every time you run the [**k3b**]{.command} program if any of them are not installed.
+There are programs from three packages that <span class="application">k3b</span> will look for at runtime: <a class="xref" href="../multimedia/cdrtools.md" title="Cdrtools-3.02a09">Cdrtools-3.02a09</a> (required to burn CD-ROM media), <a class="xref" href="../multimedia/dvd-rw-tools.md" title="dvd+rw-tools-7.1">dvd+rw-tools-7.1</a> (required to burn or format DVD media), and <a class="xref" href="../multimedia/cdrdao.md" title="Cdrdao-1.2.6">Cdrdao-1.2.6</a> (required to burn CD-ROM media in DAO (Disk At Once) mode). If you don't need the capabilities provided by any of the three packages, you don't have to install them. However, a warning message will be generated every time you run the <span class="command"><strong>k3b</strong></span> program if any of them are not installed.
 
 #### Optional Runtime
 
-[FFmpeg-8.1.1](../multimedia/ffmpeg.md "FFmpeg-8.1.1"){.xref}
+<a class="xref" href="../multimedia/ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a>
 
 #### Optional
 
-[FLAC-1.5.0](../multimedia/flac.md "FLAC-1.5.0"){.xref}, [LAME-3.100](../multimedia/lame.md "LAME-3.100"){.xref}, [libmad-0.15.1b](../multimedia/libmad.md "libmad-0.15.1b"){.xref}, [libsndfile-1.2.2](../multimedia/libsndfile.md "libsndfile-1.2.2"){.xref}, [libvorbis-1.3.7](../multimedia/libvorbis.md "libvorbis-1.3.7"){.xref}, and [Musepack (libmpcdec)](https://www.musepack.net/){.ulink}
-:::::
+<a class="xref" href="../multimedia/flac.md" title="FLAC-1.5.0">FLAC-1.5.0</a>, <a class="xref" href="../multimedia/lame.md" title="LAME-3.100">LAME-3.100</a>, <a class="xref" href="../multimedia/libmad.md" title="libmad-0.15.1b">libmad-0.15.1b</a>, <a class="xref" href="../multimedia/libsndfile.md" title="libsndfile-1.2.2">libsndfile-1.2.2</a>, <a class="xref" href="../multimedia/libvorbis.md" title="libvorbis-1.3.7">libvorbis-1.3.7</a>, and <a class="ulink" href="https://www.musepack.net/">Musepack (libmpcdec)</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of K3b {#installation-of-k3b .sect2}
+<div class="installation" lang="en">
+## Installation of K3b {#installation-of-k3b}
 
-Install [K3b]{.application} by running the following commands:
+Install <span class="application">K3b</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -89,52 +89,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [k3b]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">k3b</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libk3bdevice.so, libk3blib.so, and numerous plugin modules for the installed dependencies]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libk3bdevice.so, libk3blib.so, and numerous plugin modules for the installed dependencies</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/share/k3b and \$KF6_PREFIX/share/doc/HTML/\*/k3b]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/share/k3b and \$KF6_PREFIX/share/doc/HTML/\*/k3b</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------- --------------------------------------------
-  []{#k3b-prog}[[**k3b**]{.command}]{.term}   is a graphical CD/DVD manipulation program
+  <a id="k3b-prog"></a><span class="command"><span class="term"><strong>k3b</strong></span></span>   is a graphical CD/DVD manipulation program
   ------------------------------------------- --------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libkcddb.md "libkcddb-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libkcddb.md "libkcddb-26.04.1")
 
     libkcddb-26.04.1
 
--   [Next](add-pkgs.md "Further KDE packages"){accesskey="n"}
+-   [Next](add-pkgs.md "Further KDE packages")
 
     Further KDE packages
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

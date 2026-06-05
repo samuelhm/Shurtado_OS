@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](inih.md "inih-62"){accesskey="p"}
+-   [Prev](inih.md "inih-62")
 
     inih-62
 
--   [Next](json-c.md "JSON-C-0.18"){accesskey="n"}
+-   [Next](json-c.md "JSON-C-0.18")
 
     JSON-C-0.18
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#jansson}Jansson-2.15.0 {#jansson-2.15.0 .sect1}
+# Jansson-2.15.0 {#jansson-2.15.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Jansson {#introduction-to-jansson .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Jansson {#introduction-to-jansson}
 
-The [Jansson]{.application} package contains a library used to encode, decode, and manipulate JSON data.
+The <span class="application">Jansson</span> package contains a library used to encode, decode, and manipulate JSON data.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.bz2](https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.bz2">https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.bz2</a>
 
 -   Download MD5 sum: 6077c52677206a84304979b226322283
 
@@ -44,67 +44,67 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.4 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Jansson {#installation-of-jansson .sect2}
+<div class="installation" lang="en">
+## Installation of Jansson {#installation-of-jansson}
 
-Install [jansson]{.application} by running the following commands:
+Install <span class="application">jansson</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libjansson.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libjansson.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- --------------------------------------------------------------------
-  []{#libjansson}[`libjansson.so`{.filename}]{.term}   contains an API for encoding, decoding, and manipulating JSON data
+  <a id="libjansson"></a><span class="term"><code class="filename">libjansson.so</code></span>   contains an API for encoding, decoding, and manipulating JSON data
   ---------------------------------------------------- --------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](inih.md "inih-62"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](inih.md "inih-62")
 
     inih-62
 
--   [Next](json-c.md "JSON-C-0.18"){accesskey="n"}
+-   [Next](json-c.md "JSON-C-0.18")
 
     JSON-C-0.18
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

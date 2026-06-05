@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](brotli.md "brotli-1.2.0"){accesskey="p"}
+-   [Prev](brotli.md "brotli-1.2.0")
 
     brotli-1.2.0
 
--   [Next](dbus-glib.md "dbus-glib-0.114"){accesskey="n"}
+-   [Next](dbus-glib.md "dbus-glib-0.114")
 
     dbus-glib-0.114
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#clucene}CLucene-2.3.3.4 {#clucene-2.3.3.4 .sect1}
+# CLucene-2.3.3.4 {#clucene-2.3.3.4}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to CLucene {#introduction-to-clucene .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to CLucene {#introduction-to-clucene}
 
-[CLucene]{.application} is a C++ version of Lucene, a high performance text search engine.
+<span class="application">CLucene</span> is a C++ version of Lucene, a high performance text search engine.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/clucene/clucene-core-2.3.3.4.tar.gz](https://downloads.sourceforge.net/clucene/clucene-core-2.3.3.4.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/clucene/clucene-core-2.3.3.4.tar.gz">https://downloads.sourceforge.net/clucene/clucene-core-2.3.3.4.tar.gz</a>
 
 -   Download MD5 sum: 48d647fbd8ef8889e5a7f422c1bfda94
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 78 MB
 
 -   Estimated build time: 0.8 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/clucene-2.3.3.4-contribs_lib-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/clucene-2.3.3.4-contribs_lib-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/clucene-2.3.3.4-contribs_lib-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/clucene-2.3.3.4-contribs_lib-1.patch</a>
+</div>
 
 ### CLucene Dependencies
 
 #### Required
 
-[CMake-4.3.3](cmake.md "CMake-4.3.3"){.xref}
+<a class="xref" href="cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
 
 #### Recommended
 
-[Boost-1.91.0-1](boost.md "boost-1.91.0-1"){.xref}
-::::::
+<a class="xref" href="boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of CLucene {#installation-of-clucene .sect2}
+<div class="installation" lang="en">
+## Installation of CLucene {#installation-of-clucene}
 
-Install [CLucene]{.application} by running the following commands:
+Install <span class="application">CLucene</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../clucene-2.3.3.4-contribs_lib-1.patch &&
 
 sed -i '/Misc.h/a #include <ctime>' src/core/CLucene/document/DateTools.cpp &&
@@ -83,54 +83,54 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 make
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D CMAKE_POLICY_VERSION_MINIMUM=3.5`*: This switch allows building this package with cmake-4.0 or newer.
 
 *`-D BUILD_CONTRIBS_LIB=ON`*: This cmake variable enables building the CLucene contribs library necessary for running applications that use language specific text analyzers like LibreOffice for example.
 
 *`-W no-dev`*: This parameter silences several warnings only intended for project developers.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libclucene-contribs-lib.so, libclucene-core.so, and libclucene-shared.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libclucene-contribs-lib.so, libclucene-core.so, and libclucene-shared.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/CLucene and /usr/lib/CLuceneConfig.cmake]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/CLucene and /usr/lib/CLuceneConfig.cmake</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](brotli.md "brotli-1.2.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](brotli.md "brotli-1.2.0")
 
     brotli-1.2.0
 
--   [Next](dbus-glib.md "dbus-glib-0.114"){accesskey="n"}
+-   [Next](dbus-glib.md "dbus-glib-0.114")
 
     dbus-glib-0.114
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

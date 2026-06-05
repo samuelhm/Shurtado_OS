@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 20. Major Servers
 
--   [Prev](majorservers.md "Major Servers"){accesskey="p"}
+-   [Prev](majorservers.md "Major Servers")
 
     Major Servers
 
--   [Next](bind.md "BIND-9.20.20"){accesskey="n"}
+-   [Next](bind.md "BIND-9.20.20")
 
     BIND-9.20.20
 
--   [Up](majorservers.md "Chapter 20. Major Servers"){accesskey="u"}
+-   [Up](majorservers.md "Chapter 20. Major Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#apache}Apache-2.4.67 {#apache-2.4.67 .sect1}
+# Apache-2.4.67 {#apache-2.4.67}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Apache HTTPD {#introduction-to-apache-httpd .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Apache HTTPD {#introduction-to-apache-httpd}
 
-The [Apache HTTPD]{.application} package contains an open-source HTTP server. It is useful for creating local intranet web sites or running huge web serving operations.
+The <span class="application">Apache HTTPD</span> package contains an open-source HTTP server. It is useful for creating local intranet web sites or running huge web serving operations.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.apache.org/dist/httpd/httpd-2.4.67.tar.bz2](https://archive.apache.org/dist/httpd/httpd-2.4.67.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.apache.org/dist/httpd/httpd-2.4.67.tar.bz2">https://archive.apache.org/dist/httpd/httpd-2.4.67.tar.bz2</a>
 
 -   Download MD5 sum: f7310cfdfc702cee625e9881049d5819
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 129 MB
 
 -   Estimated build time: 0.3 SBU (Using parallelism=4)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/httpd-blfs_layout-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/httpd-blfs_layout-1.patch){.ulink}
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/httpd-blfs_layout-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/httpd-blfs_layout-1.patch</a>
 
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/httpd-2.4.67-openssl4_fixes-2.patch](https://www.linuxfromscratch.org/patches/blfs/svn/httpd-2.4.67-openssl4_fixes-2.patch){.ulink}
-:::
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/httpd-2.4.67-openssl4_fixes-2.patch">https://www.linuxfromscratch.org/patches/blfs/svn/httpd-2.4.67-openssl4_fixes-2.patch</a>
+</div>
 
 ### Apache HTTPD Dependencies
 
 #### Required
 
-[Apr-Util-1.6.3](../general/apr-util.md "Apr-Util-1.6.3"){.xref}
+<a class="xref" href="../general/apr-util.md" title="Apr-Util-1.6.3">Apr-Util-1.6.3</a>
 
 #### Optional
 
-[Brotli-1.2.0](../general/brotli.md "brotli-1.2.0"){.xref}, [cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}, [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}, [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, [Lua-5.4.8](../general/lua.md "Lua-5.4.8"){.xref}, [Lynx-2.9.3](../basicnet/lynx.md "Lynx-2.9.3"){.xref} or [Links-2.30](../basicnet/links.md "Links-2.30"){.xref} or [ELinks](http://elinks.or.cz){.ulink}, [nghttp2-1.69.0](../basicnet/nghttp2.md "nghttp2-1.69.0"){.xref}, [OpenLDAP-2.6.13](openldap.md "OpenLDAP-2.6.13"){.xref} ([Apr-Util-1.6.3](../general/apr-util.md "Apr-Util-1.6.3"){.xref} needs to be installed with ldap support), [rsync-3.4.3](../basicnet/rsync.md "rsync-3.4.3"){.xref}, [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated), and [Distcache](https://sourceforge.net/projects/distcache){.ulink}
-::::::
+<a class="xref" href="../general/brotli.md" title="brotli-1.2.0">Brotli-1.2.0</a>, <a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, <a class="xref" href="../general/lua.md" title="Lua-5.4.8">Lua-5.4.8</a>, <a class="xref" href="../basicnet/lynx.md" title="Lynx-2.9.3">Lynx-2.9.3</a> or <a class="xref" href="../basicnet/links.md" title="Links-2.30">Links-2.30</a> or <a class="ulink" href="http://elinks.or.cz">ELinks</a>, <a class="xref" href="../basicnet/nghttp2.md" title="nghttp2-1.69.0">nghttp2-1.69.0</a>, <a class="xref" href="openldap.md" title="OpenLDAP-2.6.13">OpenLDAP-2.6.13</a> (<a class="xref" href="../general/apr-util.md" title="Apr-Util-1.6.3">Apr-Util-1.6.3</a> needs to be installed with ldap support), <a class="xref" href="../basicnet/rsync.md" title="rsync-3.4.3">rsync-3.4.3</a>, <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated), and <a class="ulink" href="https://sourceforge.net/projects/distcache">Distcache</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Apache HTTPD {#installation-of-apache-httpd .sect2}
+<div class="installation" lang="en">
+## Installation of Apache HTTPD {#installation-of-apache-httpd}
 
-For security reasons, running the server as an unprivileged user and group is strongly encouraged. Create the following group and user using the following commands as `root`{.systemitem}:
+For security reasons, running the server as an unprivileged user and group is strongly encouraged. Create the following group and user using the following commands as <code class="systemitem">root</code>:
 
-``` root
+```bash
 groupadd -g 25 apache &&
 useradd -c "Apache Server" -d /srv/www -g apache \
         -s /bin/false -u 25 apache
@@ -78,13 +78,13 @@ useradd -c "Apache Server" -d /srv/www -g apache \
 
 Now add a patch for compatibility with openssl4:
 
-``` userinput
+```bash
 patch -Np1 -i ../httpd-2.4.67-openssl4_fixes-2.patch
 ```
 
-Build and install [Apache HTTPD]{.application} by running the following commands:
+Build and install <span class="application">Apache HTTPD</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../httpd-blfs_layout-1.patch             &&
 
 sed '/dir.*CFG_PREFIX/s@^@#@' -i support/apxs.in       &&
@@ -112,9 +112,9 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install  &&
 
 mv -v /usr/sbin/suexec /usr/lib/httpd/suexec &&
@@ -123,14 +123,14 @@ chmod 4754             /usr/lib/httpd/suexec &&
 
 chown -v -R apache:apache /srv/www
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed '/dir.\*CFG_PREFIX/s@\^@#@'...**]{.command}: Forces the [apxs]{.application} utility to use absolute pathnames for modules, when instructed to do so.
+<span class="command"><strong>sed '/dir.\*CFG_PREFIX/s@\^@#@'...</strong></span>: Forces the <span class="application">apxs</span> utility to use absolute pathnames for modules, when instructed to do so.
 
-[**sed -e '/HTTPD_ROOT/s ...**]{.command}: Fixes some paths.
+<span class="command"><strong>sed -e '/HTTPD_ROOT/s ...</strong></span>: Fixes some paths.
 
 *`--enable-authnz-fcgi`*: Build FastCGI authorizer-based authentication and authorization (mod_authnz_fcgi.so fast CGI module).
 
@@ -138,96 +138,96 @@ chown -v -R apache:apache /srv/www
 
 *`--enable-mpms-shared=all`*: This switch ensures that all MPM (Multi Processing Modules) are built as Dynamic Shared Objects (DSOs), so the user can choose which one to use at runtime.
 
-*`--enable-suexec`*: This switch enables building of the [Apache]{.application} suEXEC module which can be used to allow users to run CGI and SSI scripts under user IDs different from the user ID of the calling web server.
+*`--enable-suexec`*: This switch enables building of the <span class="application">Apache</span> suEXEC module which can be used to allow users to run CGI and SSI scripts under user IDs different from the user ID of the calling web server.
 
-*`--with-suexec-*`*: These switches control suEXEC module behavior, such as default document root, minimal UID that can be used to run the script under the suEXEC. Please note that with minimal UID 100, you can't run CGI or SSI scripts under suEXEC as the `apache`{.systemitem} user.
+*`--with-suexec-*`*: These switches control suEXEC module behavior, such as default document root, minimal UID that can be used to run the script under the suEXEC. Please note that with minimal UID 100, you can't run CGI or SSI scripts under suEXEC as the <code class="systemitem">apache</code> user.
 
-[**... /usr/lib/httpd/suexec**]{.command}: These commands put [**suexec**]{.command} wrapper into proper location, since it is not meant to be run directly. They also adjust proper permissions of the binary, making it setgid `apache`{.systemitem}.
+<span class="command"><strong>... /usr/lib/httpd/suexec</strong></span>: These commands put <span class="command"><strong>suexec</strong></span> wrapper into proper location, since it is not meant to be run directly. They also adjust proper permissions of the binary, making it setgid <code class="systemitem">apache</code>.
 
-[**chown -R apache:apache /srv/www**]{.command}: By default, the installation process installs files (documentation, error messages, default icons, etc.) with the ownership of the user that extracted the files from the tar file. If you want to change the ownership to another user, you should do so at this point. The only requirement is that the document directories need to be accessible by the [**httpd**]{.command} process with (r-x) permissions and files need to be readable (r--) by the `apache`{.systemitem} user.
-:::
+<span class="command"><strong>chown -R apache:apache /srv/www</strong></span>: By default, the installation process installs files (documentation, error messages, default icons, etc.) with the ownership of the user that extracted the files from the tar file. If you want to change the ownership to another user, you should do so at this point. The only requirement is that the document directories need to be accessible by the <span class="command"><strong>httpd</strong></span> process with (r-x) permissions and files need to be readable (r--) by the <code class="systemitem">apache</code> user.
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring Apache {#configuring-apache .sect2}
+<div class="configuration" lang="en">
+## Configuring Apache {#configuring-apache}
 
-::: {.sect3 lang="en"}
-### []{#apache-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/httpd/httpd.conf`{.filename} and `/etc/httpd/extra/*`{.filename}
-:::
+<code class="filename">/etc/httpd/httpd.conf</code> and <code class="filename">/etc/httpd/extra/*</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-See [file:///usr/share/httpd/manual/configuring.html](file:///usr/share/httpd/manual/configuring.md){.ulink} for detailed instructions on customising your [Apache]{.application} HTTP server configuration file.
+See <a class="ulink" href="file:///usr/share/httpd/manual/configuring.md">file:///usr/share/httpd/manual/configuring.html</a> for detailed instructions on customising your <span class="application">Apache</span> HTTP server configuration file.
 
-There is no reason, at least for internet facing sites, not to use SSL encryption. Setting up a secured website does not cost anything except installing one additional small tool and a few minutes of configuration work. Use this guideline at [https://wiki.linuxfromscratch.org/blfs/wiki/Securing_a_website](https://wiki.linuxfromscratch.org/blfs/wiki/Securing_a_website){.ulink} to create world-wide accepted certificates and renew them on a regular basis.
-:::
+There is no reason, at least for internet facing sites, not to use SSL encryption. Setting up a secured website does not cost anything except installing one additional small tool and a few minutes of configuration work. Use this guideline at <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/Securing_a_website">https://wiki.linuxfromscratch.org/blfs/wiki/Securing_a_website</a> to create world-wide accepted certificates and renew them on a regular basis.
+</div>
 
-::: {.sect3 lang="en"}
-### []{#httpd-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-If you want the [Apache]{.application} server to start automatically when the system is booted, install the [`httpd.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package:
+If you want the <span class="application">Apache</span> server to start automatically when the system is booted, install the <span class="phrase"><code class="filename">httpd.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package:
 
-``` root
+```bash
 make install-httpd
 ```
-:::
-::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ab, apachectl, apxs, checkgid, dbmmanage, fcgistarter, htcacheclean, htdbm, htdigest, htpasswd, httpd, httxt2dbm, logresolve, and rotatelogs]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ab, apachectl, apxs, checkgid, dbmmanage, fcgistarter, htcacheclean, htdbm, htdigest, htpasswd, httpd, httxt2dbm, logresolve, and rotatelogs</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Several libraries under /usr/lib/httpd/modules/]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">Several libraries under /usr/lib/httpd/modules/</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/httpd, /srv/www, /usr/include/httpd, /usr/lib/httpd, /usr/share/httpd, /var/log/httpd, and /var/run/httpd]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/httpd, /srv/www, /usr/include/httpd, /usr/lib/httpd, /usr/share/httpd, /var/log/httpd, and /var/run/httpd</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#ab}[[**ab**]{.command}]{.term}                       is a tool for benchmarking your [Apache]{.application} HTTP server
-  []{#apachectl}[[**apachectl**]{.command}]{.term}         is a front end to the [Apache]{.application} HTTP server which is designed to help the administrator control the functioning of the [Apache]{.application} httpd daemon
-  []{#apxs}[[**apxs**]{.command}]{.term}                   is a tool for building and installing extension modules for the [Apache]{.application} HTTP server
-  []{#checkgid}[[**checkgid**]{.command}]{.term}           is a program that checks whether it can setgid to the group specified. This is to see if it is a valid group for Apache2 to use at runtime. If the user (should be run as superuser) is in that group, or can setgid to it, it will return 0
-  []{#dbmmanage}[[**dbmmanage**]{.command}]{.term}         is used to create and update the DBM format files used to store usernames and passwords for basic authentication of HTTP users
-  []{#fcgistarter}[[**fcgistarter**]{.command}]{.term}     is a tool to start a FastCGI program
-  []{#htcacheclean}[[**htcacheclean**]{.command}]{.term}   is used to clean up the disk cache
-  []{#htdbm}[[**htdbm**]{.command}]{.term}                 is used to manipulate the DBM password databases
-  []{#htdigest}[[**htdigest**]{.command}]{.term}           is used to create and update the flat-files used to store usernames, realms and passwords for digest authentication of HTTP users
-  []{#htpasswd}[[**htpasswd**]{.command}]{.term}           is used to create and update the flat-files used to store usernames and passwords for basic authentication of HTTP users
-  []{#httpd}[[**httpd**]{.command}]{.term}                 is the [Apache]{.application} HTTP server program
-  []{#httxt2dbm}[[**httxt2dbm**]{.command}]{.term}         is used to generate DBM files from text, for use in RewriteMap
-  []{#logresolve}[[**logresolve**]{.command}]{.term}       is a post-processing program to resolve IP-addresses in [Apache]{.application}'s access log files
-  []{#rotatelogs}[[**rotatelogs**]{.command}]{.term}       is a simple program for use in conjunction with [Apache]{.application}'s piped log file feature
-  []{#suexec}[[**suexec**]{.command}]{.term}               allows users to run CGI and SSI applications as a different user
+  <a id="ab"></a><span class="command"><span class="term"><strong>ab</strong></span></span>                       is a tool for benchmarking your <span class="application">Apache</span> HTTP server
+  <a id="apachectl"></a><span class="command"><span class="term"><strong>apachectl</strong></span></span>         is a front end to the <span class="application">Apache</span> HTTP server which is designed to help the administrator control the functioning of the <span class="application">Apache</span> httpd daemon
+  <a id="apxs"></a><span class="command"><span class="term"><strong>apxs</strong></span></span>                   is a tool for building and installing extension modules for the <span class="application">Apache</span> HTTP server
+  <a id="checkgid"></a><span class="command"><span class="term"><strong>checkgid</strong></span></span>           is a program that checks whether it can setgid to the group specified. This is to see if it is a valid group for Apache2 to use at runtime. If the user (should be run as superuser) is in that group, or can setgid to it, it will return 0
+  <a id="dbmmanage"></a><span class="command"><span class="term"><strong>dbmmanage</strong></span></span>         is used to create and update the DBM format files used to store usernames and passwords for basic authentication of HTTP users
+  <a id="fcgistarter"></a><span class="command"><span class="term"><strong>fcgistarter</strong></span></span>     is a tool to start a FastCGI program
+  <a id="htcacheclean"></a><span class="command"><span class="term"><strong>htcacheclean</strong></span></span>   is used to clean up the disk cache
+  <a id="htdbm"></a><span class="command"><span class="term"><strong>htdbm</strong></span></span>                 is used to manipulate the DBM password databases
+  <a id="htdigest"></a><span class="command"><span class="term"><strong>htdigest</strong></span></span>           is used to create and update the flat-files used to store usernames, realms and passwords for digest authentication of HTTP users
+  <a id="htpasswd"></a><span class="command"><span class="term"><strong>htpasswd</strong></span></span>           is used to create and update the flat-files used to store usernames and passwords for basic authentication of HTTP users
+  <a id="httpd"></a><span class="command"><span class="term"><strong>httpd</strong></span></span>                 is the <span class="application">Apache</span> HTTP server program
+  <a id="httxt2dbm"></a><span class="command"><span class="term"><strong>httxt2dbm</strong></span></span>         is used to generate DBM files from text, for use in RewriteMap
+  <a id="logresolve"></a><span class="command"><span class="term"><strong>logresolve</strong></span></span>       is a post-processing program to resolve IP-addresses in <span class="application">Apache</span>'s access log files
+  <a id="rotatelogs"></a><span class="command"><span class="term"><strong>rotatelogs</strong></span></span>       is a simple program for use in conjunction with <span class="application">Apache</span>'s piped log file feature
+  <a id="suexec"></a><span class="command"><span class="term"><strong>suexec</strong></span></span>               allows users to run CGI and SSI applications as a different user
   -------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](majorservers.md "Major Servers"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](majorservers.md "Major Servers")
 
     Major Servers
 
--   [Next](bind.md "BIND-9.20.20"){accesskey="n"}
+-   [Next](bind.md "BIND-9.20.20")
 
     BIND-9.20.20
 
--   [Up](majorservers.md "Chapter 20. Major Servers"){accesskey="u"}
+-   [Up](majorservers.md "Chapter 20. Major Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-bluetooth.md "gnome-bluetooth-47.2"){accesskey="p"}
+-   [Prev](gnome-bluetooth.md "gnome-bluetooth-47.2")
 
     gnome-bluetooth-47.2
 
--   [Next](gnome-settings-daemon.md "gnome-settings-daemon-50.1"){accesskey="n"}
+-   [Next](gnome-settings-daemon.md "gnome-settings-daemon-50.1")
 
     gnome-settings-daemon-50.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-keyring}gnome-keyring-50.0 {#gnome-keyring-50.0 .sect1}
+# gnome-keyring-50.0 {#gnome-keyring-50.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Keyring {#introduction-to-gnome-keyring .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Keyring {#introduction-to-gnome-keyring}
 
-The [GNOME Keyring]{.application} package contains a daemon that keeps passwords and other secrets for users.
+The <span class="application">GNOME Keyring</span> package contains a daemon that keeps passwords and other secrets for users.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-keyring/50/gnome-keyring-50.0.tar.xz](https://download.gnome.org/sources/gnome-keyring/50/gnome-keyring-50.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-keyring/50/gnome-keyring-50.0.tar.xz">https://download.gnome.org/sources/gnome-keyring/50/gnome-keyring-50.0.tar.xz</a>
 
 -   Download MD5 sum: 406fb764c664de580a091527af059750
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 38 MB
 
 -   Estimated build time: 0.1 SBU (Using parallelism=4; add 0.2 SBU for tests)
-:::
+</div>
 
 ### GNOME Keyring Dependencies
 
 #### Required
 
-[dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref} and [Gcr-3.41.2](gcr.md "Gcr-3.41.2"){.xref}
+<a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a> and <a class="xref" href="gcr.md" title="Gcr-3.41.2">Gcr-3.41.2</a>
 
 #### Recommended
 
-[Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref}, and [OpenSSH-10.3p1](../postlfs/openssh.md "OpenSSH-10.3p1"){.xref}
+<a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, and <a class="xref" href="../postlfs/openssh.md" title="OpenSSH-10.3p1">OpenSSH-10.3p1</a>
 
 #### Optional
 
-[libcap-ng](https://people.redhat.com/sgrubb/libcap-ng/){.ulink}
-:::::
+<a class="ulink" href="https://people.redhat.com/sgrubb/libcap-ng/">libcap-ng</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Keyring {#installation-of-gnome-keyring .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Keyring {#installation-of-gnome-keyring}
 
-Install [GNOME Keyring]{.application} by running the following commands:
+Install <span class="application">GNOME Keyring</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i 's:"/desktop:"/org:' schema/*.xml &&
 
 mkdir build-gkr &&
@@ -76,60 +76,60 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-A session bus address is necessary to run the tests. To test the results, issue: [**ninja test**]{.command}.
+A session bus address is necessary to run the tests. To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed ... schema/\*.xml**]{.command}: This command fixes a deprecated entry in the schema template.
-:::
+<span class="command"><strong>sed ... schema/\*.xml</strong></span>: This command fixes a deprecated entry in the schema template.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-keyring (symlink), gnome-keyring-3, and gnome-keyring-daemon]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-keyring (symlink), gnome-keyring-3, and gnome-keyring-daemon</span>
+</div>
 
-::: seg
-**Installed Libraries:** [gnome-keyring-pkcs11.so (PKCS#11 module) and pam_gnome_keyring.so (PAM module)]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">gnome-keyring-pkcs11.so (PKCS#11 module) and pam_gnome_keyring.so (PAM module)</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/lib/gnome-keyring and /usr/share/xdg-desktop-portal]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/lib/gnome-keyring and /usr/share/xdg-desktop-portal</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------ ----------------------------------------------------
-  []{#gnome-keyring-daemon}[[**gnome-keyring-daemon**]{.command}]{.term}   is a session daemon that keeps passwords for users
+  <a id="gnome-keyring-daemon"></a><span class="command"><span class="term"><strong>gnome-keyring-daemon</strong></span></span>   is a session daemon that keeps passwords for users
   ------------------------------------------------------------------------ ----------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-bluetooth.md "gnome-bluetooth-47.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-bluetooth.md "gnome-bluetooth-47.2")
 
     gnome-bluetooth-47.2
 
--   [Next](gnome-settings-daemon.md "gnome-settings-daemon-50.1"){accesskey="n"}
+-   [Next](gnome-settings-daemon.md "gnome-settings-daemon-50.1")
 
     gnome-settings-daemon-50.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

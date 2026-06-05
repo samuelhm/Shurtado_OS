@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](lsof.md "lsof-4.99.6"){accesskey="p"}
+-   [Prev](lsof.md "lsof-4.99.6")
 
     lsof-4.99.6
 
--   [Next](screen.md "Screen-5.0.1"){accesskey="n"}
+-   [Next](screen.md "Screen-5.0.1")
 
     Screen-5.0.1
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pinentry}pinentry-1.3.2 {#pinentry-1.3.2 .sect1}
+# pinentry-1.3.2 {#pinentry-1.3.2}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to PIN-Entry {#introduction-to-pin-entry .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to PIN-Entry {#introduction-to-pin-entry}
 
-The [PIN-Entry]{.application} package contains a collection of simple PIN or pass-phrase entry dialogs which utilize the Assuan protocol as described by the [Ägypten project](https://www.gnupg.org/aegypten/){.ulink}. [PIN-Entry]{.application} programs are usually invoked by the [**gpg-agent**]{.command} daemon, but can be run from the command line as well. There are programs for various text-based and GUI environments, including interfaces designed for [Ncurses]{.application} (text-based), and for the common [GTK]{.application} and [Qt]{.application} toolkits.
+The <span class="application">PIN-Entry</span> package contains a collection of simple PIN or pass-phrase entry dialogs which utilize the Assuan protocol as described by the <a class="ulink" href="https://www.gnupg.org/aegypten/">Ägypten project</a>. <span class="application">PIN-Entry</span> programs are usually invoked by the <span class="command"><strong>gpg-agent</strong></span> daemon, but can be run from the command line as well. There are programs for various text-based and GUI environments, including interfaces designed for <span class="application">Ncurses</span> (text-based), and for the common <span class="application">GTK</span> and <span class="application">Qt</span> toolkits.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.2.tar.bz2](https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.2.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.2.tar.bz2">https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.2.tar.bz2</a>
 
 -   Download MD5 sum: 5247373d2e9ac73b1ea662bd270e58a4
 
@@ -44,32 +44,32 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 17 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### PIN-Entry Dependencies
 
 #### Required
 
-[libassuan-3.0.2](libassuan.md "libassuan-3.0.2"){.xref} and [libgpg-error-1.61](libgpg-error.md "libgpg-error-1.61"){.xref}
+<a class="xref" href="libassuan.md" title="libassuan-3.0.2">libassuan-3.0.2</a> and <a class="xref" href="libgpg-error.md" title="libgpg-error-1.61">libgpg-error-1.61</a>
 
 #### Optional
 
-[Emacs-30.2](../postlfs/emacs.md "Emacs-30.2"){.xref}, [FLTK-1.4.5](../x/fltk.md "FLTK-1.4.5"){.xref}, [Gcr-4.4.0.1](../gnome/gcr4.md "Gcr-4.4.0.1"){.xref} (or [Gcr-3.41.2](../gnome/gcr.md "Gcr-3.41.2"){.xref}), [KDE Frameworks-6.26.0](../kde/frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}, [libsecret-0.21.7](../gnome/libsecret.md "libsecret-0.21.7"){.xref}, and [efl](https://www.enlightenment.org/about-efl){.ulink}
-:::::
+<a class="xref" href="../postlfs/emacs.md" title="Emacs-30.2">Emacs-30.2</a>, <a class="xref" href="../x/fltk.md" title="FLTK-1.4.5">FLTK-1.4.5</a>, <a class="xref" href="../gnome/gcr4.md" title="Gcr-4.4.0.1">Gcr-4.4.0.1</a> (or <a class="xref" href="../gnome/gcr.md" title="Gcr-3.41.2">Gcr-3.41.2</a>), <a class="xref" href="../kde/frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>, <a class="xref" href="../gnome/libsecret.md" title="libsecret-0.21.7">libsecret-0.21.7</a>, and <a class="ulink" href="https://www.enlightenment.org/about-efl">efl</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of PIN-Entry {#installation-of-pin-entry .sect2}
+<div class="installation" lang="en">
+## Installation of PIN-Entry {#installation-of-pin-entry}
 
-First, make [**configure**]{.command} consistent with fltk-1.4.1:
+First, make <span class="command"><strong>configure</strong></span> consistent with fltk-1.4.1:
 
-``` userinput
+```bash
 sed -i "/FLTK 1/s/3/4/" configure   &&
 sed -i '14456 s/1.3/1.4/' configure
 ```
 
-Install [PIN-Entry]{.application} by running the following commands:
+Install <span class="application">PIN-Entry</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr          \
             --enable-pinentry-tty  &&
 make
@@ -77,70 +77,70 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`--enable-inside-emacs=yes/no`{.option}: Default is no.
+<code class="option">--enable-inside-emacs=yes/no</code>: Default is no.
 
-`--enable-pinentry-qt=yes/no`{.option}: Default is yes.
+<code class="option">--enable-pinentry-qt=yes/no</code>: Default is yes.
 
-`--enable-pinentry-gnome3=yes/no`{.option}: Default is yes. This option uses [Gcr-4.4.0.1](../gnome/gcr4.md "Gcr-4.4.0.1"){.xref} (or [Gcr-3.41.2](../gnome/gcr.md "Gcr-3.41.2"){.xref} if the former is not installed) for the pinentry dialog.
+<code class="option">--enable-pinentry-gnome3=yes/no</code>: Default is yes. This option uses <a class="xref" href="../gnome/gcr4.md" title="Gcr-4.4.0.1">Gcr-4.4.0.1</a> (or <a class="xref" href="../gnome/gcr.md" title="Gcr-3.41.2">Gcr-3.41.2</a> if the former is not installed) for the pinentry dialog.
 
 *`--enable-pinentry-tty`*: Default is 'maybe'.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [pinentry (symlink), pinentry-curses, pinentry-emacs, pinentry-fltk, pinentry-gnome3, pinentry-qt, and pinentry-tty]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">pinentry (symlink), pinentry-curses, pinentry-emacs, pinentry-fltk, pinentry-gnome3, pinentry-qt, and pinentry-tty</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- -------------------------------------------------------------------------------------
-  []{#pinentry-prog}[[**pinentry**]{.command}]{.term}            is a symbolic link to the default [PIN-Entry]{.application} program
-  []{#pinentry-curses}[[**pinentry-curses**]{.command}]{.term}   is an [Ncurses]{.application} text-based [PIN-Entry]{.application} helper program
-  []{#pinentry-emacs}[[**pinentry-emacs**]{.command}]{.term}     is an [Emacs]{.application} version of the [PIN-Entry]{.application} helper program
-  []{#pinentry-fltk}[[**pinentry-fltk**]{.command}]{.term}       is a [FLTK]{.application} [PIN-Entry]{.application} helper program
-  []{#pinentry-gnome3}[[**pinentry-gnome3**]{.command}]{.term}   is a [GNOME-3]{.application} [PIN-Entry]{.application} helper program
-  []{#pinentry-qt}[[**pinentry-qt**]{.command}]{.term}           is a [Qt4 or 5]{.application} [PIN-Entry]{.application} helper program
-  []{#pinentry-tty}[[**pinentry-tty**]{.command}]{.term}         is a [tty]{.application} [PIN-Entry]{.application} helper program
+  <a id="pinentry-prog"></a><span class="command"><span class="term"><strong>pinentry</strong></span></span>            is a symbolic link to the default <span class="application">PIN-Entry</span> program
+  <a id="pinentry-curses"></a><span class="command"><span class="term"><strong>pinentry-curses</strong></span></span>   is an <span class="application">Ncurses</span> text-based <span class="application">PIN-Entry</span> helper program
+  <a id="pinentry-emacs"></a><span class="command"><span class="term"><strong>pinentry-emacs</strong></span></span>     is an <span class="application">Emacs</span> version of the <span class="application">PIN-Entry</span> helper program
+  <a id="pinentry-fltk"></a><span class="command"><span class="term"><strong>pinentry-fltk</strong></span></span>       is a <span class="application">FLTK</span> <span class="application">PIN-Entry</span> helper program
+  <a id="pinentry-gnome3"></a><span class="command"><span class="term"><strong>pinentry-gnome3</strong></span></span>   is a <span class="application">GNOME-3</span> <span class="application">PIN-Entry</span> helper program
+  <a id="pinentry-qt"></a><span class="command"><span class="term"><strong>pinentry-qt</strong></span></span>           is a <span class="application">Qt4 or 5</span> <span class="application">PIN-Entry</span> helper program
+  <a id="pinentry-tty"></a><span class="command"><span class="term"><strong>pinentry-tty</strong></span></span>         is a <span class="application">tty</span> <span class="application">PIN-Entry</span> helper program
   -------------------------------------------------------------- -------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lsof.md "lsof-4.99.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lsof.md "lsof-4.99.6")
 
     lsof-4.99.6
 
--   [Next](screen.md "Screen-5.0.1"){accesskey="n"}
+-   [Next](screen.md "Screen-5.0.1")
 
     Screen-5.0.1
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

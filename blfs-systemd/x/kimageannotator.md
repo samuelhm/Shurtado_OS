@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](kcolorpicker.md "kColorPicker-0.3.1"){accesskey="p"}
+-   [Prev](kcolorpicker.md "kColorPicker-0.3.1")
 
     kColorPicker-0.3.1
 
--   [Next](keybinder-3.md "keybinder-3.0-0.3.2"){accesskey="n"}
+-   [Next](keybinder-3.md "keybinder-3.0-0.3.2")
 
     keybinder-3.0-0.3.2
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kimageannotator}kImageAnnotator-0.7.2 {#kimageannotator-0.7.2 .sect1}
+# kImageAnnotator-0.7.2 {#kimageannotator-0.7.2}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to kImageAnnotator {#introduction-to-kimageannotator .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to kImageAnnotator {#introduction-to-kimageannotator}
 
 kImageAnnotator is a tool for annotating images.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/ksnip/kImageAnnotator/archive/v0.7.2/kImageAnnotator-0.7.2.tar.gz](https://github.com/ksnip/kImageAnnotator/archive/v0.7.2/kImageAnnotator-0.7.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/ksnip/kImageAnnotator/archive/v0.7.2/kImageAnnotator-0.7.2.tar.gz">https://github.com/ksnip/kImageAnnotator/archive/v0.7.2/kImageAnnotator-0.7.2.tar.gz</a>
 
 -   Download MD5 sum: 12811a2611613152b8dccc266a8f4804
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 32 MB
 
 -   Estimated build time: 0.5 SBU (Using parallelism=4)
-:::
+</div>
 
 ### kImageAnnotator Dependencies
 
 #### Required
 
-[kcolorpicker-0.3.1](kcolorpicker.md "kColorPicker-0.3.1"){.xref}
-:::::
+<a class="xref" href="kcolorpicker.md" title="kColorPicker-0.3.1">kcolorpicker-0.3.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of kImageAnnotator {#installation-of-kimageannotator .sect2}
+<div class="installation" lang="en">
+## Installation of kImageAnnotator {#installation-of-kimageannotator}
 
-Install [kImageAnnotator]{.application} by running the following commands:
+Install <span class="application">kImageAnnotator</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,44 +72,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libkImageAnnotator.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libkImageAnnotator.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/kImageAnnotator-Qt6, /usr/lib/cmake/kImageAnnotator-Qt6, and /usr/share/kImageAnnotator]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/kImageAnnotator-Qt6, /usr/lib/cmake/kImageAnnotator-Qt6, and /usr/share/kImageAnnotator</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kcolorpicker.md "kColorPicker-0.3.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kcolorpicker.md "kColorPicker-0.3.1")
 
     kColorPicker-0.3.1
 
--   [Next](keybinder-3.md "keybinder-3.0-0.3.2"){accesskey="n"}
+-   [Next](keybinder-3.md "keybinder-3.0-0.3.2")
 
     keybinder-3.0-0.3.2
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

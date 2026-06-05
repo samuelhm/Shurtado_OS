@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](mitkrb.md "MIT Kerberos V5-1.22.2"){accesskey="p"}
+-   [Prev](mitkrb.md "MIT Kerberos V5-1.22.2")
 
     MIT Kerberos V5-1.22.2
 
--   [Next](nss.md "NSS-3.124"){accesskey="n"}
+-   [Next](nss.md "NSS-3.124")
 
     NSS-3.124
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#nettle}Nettle-4.0 {#nettle-4.0 .sect1}
+# Nettle-4.0 {#nettle-4.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Nettle {#introduction-to-nettle .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Nettle {#introduction-to-nettle}
 
-The [Nettle]{.application} package contains a low-level cryptographic library that is designed to fit easily in many contexts.
+The <span class="application">Nettle</span> package contains a low-level cryptographic library that is designed to fit easily in many contexts.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftpmirror.gnu.org/nettle/nettle-4.0.tar.gz](https://ftpmirror.gnu.org/nettle/nettle-4.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftpmirror.gnu.org/nettle/nettle-4.0.tar.gz">https://ftpmirror.gnu.org/nettle/nettle-4.0.tar.gz</a>
 
 -   Download MD5 sum: 144401453f9f35e53938bcacfc59800e
 
@@ -44,86 +44,86 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 106 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (with tests; both using parallelism=4)
-:::
+</div>
 
 ### Nettle Dependencies
 
 #### Optional
 
-[Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref} (optional for the tests)
-:::::
+<a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a> (optional for the tests)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Nettle {#installation-of-nettle .sect2}
+<div class="installation" lang="en">
+## Installation of Nettle {#installation-of-nettle}
 
-Install [Nettle]{.application} by running the following commands:
+Install <span class="application">Nettle</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 chmod   -v   755 /usr/lib/lib{hogweed,nettle}.so &&
 install -v -m755 -d /usr/share/doc/nettle-4.0 &&
 install -v -m644 nettle.{html,pdf} /usr/share/doc/nettle-4.0
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [nettle-hash, nettle-lfib-stream, nettle-pbkdf2, pkcs1-conv, and sexp-conv]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">nettle-hash, nettle-lfib-stream, nettle-pbkdf2, pkcs1-conv, and sexp-conv</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libhogweed.so and libnettle.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libhogweed.so and libnettle.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/nettle and /usr/share/doc/nettle-4.0]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/nettle and /usr/share/doc/nettle-4.0</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#nettle-hash}[[**nettle-hash**]{.command}]{.term}                 calculates a hash value using a specified algorithm
-  []{#nettle-lfib-stream}[[**nettle-lfib-stream**]{.command}]{.term}   outputs a sequence of pseudorandom (non-cryptographic) bytes, using Knuth's lagged fibonacci generator. The stream is useful for testing, but should not be used to generate cryptographic keys or anything else that needs real randomness
-  []{#nettle-pbkdf2}[[**nettle-pbkdf2**]{.command}]{.term}             is a password-based key derivation function that takes a password or a passphrase as input and returns a strengthened password, which is protected against pre-computation attacks by using salting and other expensive computations.
-  []{#pkcs1-conv}[[**pkcs1-conv**]{.command}]{.term}                   converts private and public RSA keys from PKCS #1 format to sexp format
-  []{#sexp-conv}[[**sexp-conv**]{.command}]{.term}                     converts an s-expression to a different encoding
+  <a id="nettle-hash"></a><span class="command"><span class="term"><strong>nettle-hash</strong></span></span>                 calculates a hash value using a specified algorithm
+  <a id="nettle-lfib-stream"></a><span class="command"><span class="term"><strong>nettle-lfib-stream</strong></span></span>   outputs a sequence of pseudorandom (non-cryptographic) bytes, using Knuth's lagged fibonacci generator. The stream is useful for testing, but should not be used to generate cryptographic keys or anything else that needs real randomness
+  <a id="nettle-pbkdf2"></a><span class="command"><span class="term"><strong>nettle-pbkdf2</strong></span></span>             is a password-based key derivation function that takes a password or a passphrase as input and returns a strengthened password, which is protected against pre-computation attacks by using salting and other expensive computations.
+  <a id="pkcs1-conv"></a><span class="command"><span class="term"><strong>pkcs1-conv</strong></span></span>                   converts private and public RSA keys from PKCS #1 format to sexp format
+  <a id="sexp-conv"></a><span class="command"><span class="term"><strong>sexp-conv</strong></span></span>                     converts an s-expression to a different encoding
   -------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](mitkrb.md "MIT Kerberos V5-1.22.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](mitkrb.md "MIT Kerberos V5-1.22.2")
 
     MIT Kerberos V5-1.22.2
 
--   [Next](nss.md "NSS-3.124"){accesskey="n"}
+-   [Next](nss.md "NSS-3.124")
 
     NSS-3.124
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

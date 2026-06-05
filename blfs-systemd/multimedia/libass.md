@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libaom.md "libaom-3.14.1"){accesskey="p"}
+-   [Prev](libaom.md "libaom-3.14.1")
 
     libaom-3.14.1
 
--   [Next](libcanberra.md "libcanberra-0.30"){accesskey="n"}
+-   [Next](libcanberra.md "libcanberra-0.30")
 
     libcanberra-0.30
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libass}libass-0.17.4 {#libass-0.17.4 .sect1}
+# libass-0.17.4 {#libass-0.17.4}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libass {#introduction-to-libass .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libass {#introduction-to-libass}
 
-[libass]{.application} is a portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format that allows for more advanced subtitles than the conventional SRT and similar formats.
+<span class="application">libass</span> is a portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format that allows for more advanced subtitles than the conventional SRT and similar formats.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz](https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz">https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz</a>
 
 -   Download MD5 sum: 10963e702850fd888cb270abcbe852c3
 
@@ -44,89 +44,89 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.0 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### libass Dependencies
 
 #### Required
 
-[FreeType-2.14.3](../general/freetype2.md "FreeType-2.14.3"){.xref} and [FriBidi-1.0.16](../general/fribidi.md "FriBidi-1.0.16"){.xref}
+<a class="xref" href="../general/freetype2.md" title="FreeType-2.14.3">FreeType-2.14.3</a> and <a class="xref" href="../general/fribidi.md" title="FriBidi-1.0.16">FriBidi-1.0.16</a>
 
 #### Recommended
 
-[Fontconfig-2.18.1](../general/fontconfig.md "Fontconfig-2.18.1"){.xref} and [NASM-3.01](../general/nasm.md "NASM-3.01"){.xref}
+<a class="xref" href="../general/fontconfig.md" title="Fontconfig-2.18.1">Fontconfig-2.18.1</a> and <a class="xref" href="../general/nasm.md" title="NASM-3.01">NASM-3.01</a>
 
 #### Optional
 
-[harfBuzz-14.2.1](../general/harfbuzz.md "harfBuzz-14.2.1"){.xref} and [libunibreak](https://github.com/adah1972/libunibreak){.ulink}
-:::::
+<a class="xref" href="../general/harfbuzz.md" title="harfBuzz-14.2.1">harfBuzz-14.2.1</a> and <a class="ulink" href="https://github.com/adah1972/libunibreak">libunibreak</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libass {#installation-of-libass .sect2}
+<div class="installation" lang="en">
+## Installation of libass {#installation-of-libass}
 
-Install [libass]{.application} by running the following commands:
+Install <span class="application">libass</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--disable-fontconfig`{.option}: Use this switch if you didn't install [Fontconfig]{.application}.
-:::
+<code class="option">--disable-fontconfig</code>: Use this switch if you didn't install <span class="application">Fontconfig</span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libass.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libass.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/ass]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/ass</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ---------------------------------------------------------------
-  []{#libass-lib}[`libass.so`{.filename}]{.term}   provides the functions used to render ASS/SSA subtitle format
+  <a id="libass-lib"></a><span class="term"><code class="filename">libass.so</code></span>   provides the functions used to render ASS/SSA subtitle format
   ------------------------------------------------ ---------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libaom.md "libaom-3.14.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libaom.md "libaom-3.14.1")
 
     libaom-3.14.1
 
--   [Next](libcanberra.md "libcanberra-0.30"){accesskey="n"}
+-   [Next](libcanberra.md "libcanberra-0.30")
 
     libcanberra-0.30
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

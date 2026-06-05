@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 48. Standard Generalized Markup Language (SGML)
 
--   [Prev](opensp.md "OpenSP-1.5.2"){accesskey="p"}
+-   [Prev](opensp.md "OpenSP-1.5.2")
 
     OpenSP-1.5.2
 
--   [Next](docbook-dsssl.md "docbook-dsssl-1.79"){accesskey="n"}
+-   [Next](docbook-dsssl.md "docbook-dsssl-1.79")
 
     docbook-dsssl-1.79
 
--   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)"){accesskey="u"}
+-   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#openjade}OpenJade-1.3.2 {#openjade-1.3.2 .sect1}
+# OpenJade-1.3.2 {#openjade-1.3.2}
 
-:::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to OpenJade {#introduction-to-openjade .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to OpenJade {#introduction-to-openjade}
 
-The [OpenJade]{.application} package contains a DSSSL engine. This is useful for SGML and XML transformations into RTF, TeX, SGML and XML.
+The <span class="application">OpenJade</span> package contains a DSSSL engine. This is useful for SGML and XML transformations into RTF, TeX, SGML and XML.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/openjade/openjade-1.3.2.tar.gz](https://downloads.sourceforge.net/openjade/openjade-1.3.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/openjade/openjade-1.3.2.tar.gz">https://downloads.sourceforge.net/openjade/openjade-1.3.2.tar.gz</a>
 
 -   Download MD5 sum: 7df692e3186109cc00db6825b777201e
 
@@ -44,40 +44,40 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 19.2 MB
 
 -   Estimated build time: 0.7 SBU
-:::
+</div>
 
 ### Additional Download
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/openjade-1.3.2-upstream-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/openjade-1.3.2-upstream-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/openjade-1.3.2-upstream-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/openjade-1.3.2-upstream-1.patch</a>
+</div>
 
 ### OpenJade Dependencies
 
 #### Required
 
-[OpenSP-1.5.2](opensp.md "OpenSP-1.5.2"){.xref}
-::::::
+<a class="xref" href="opensp.md" title="OpenSP-1.5.2">OpenSP-1.5.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of OpenJade {#installation-of-openjade .sect2}
+<div class="installation" lang="en">
+## Installation of OpenJade {#installation-of-openjade}
 
 First fix problems when building with newer compilers:
 
-``` userinput
+```bash
 patch -Np1 -i ../openjade-1.3.2-upstream-1.patch
 ```
 
 Now fix a compilation problem with perl-5.16 and later:
 
-``` userinput
+```bash
 sed -i -e '/getopts/{N;s#&G#g#;s#do .getopts.pl.;##;}' \
        -e '/use POSIX/ause Getopt::Std;' msggen.pl
 ```
 
-Install [OpenJade]{.application} by running the following commands:
+Install <span class="application">OpenJade</span> by running the following commands:
 
-``` userinput
+```bash
 export CXXFLAGS="${CXXFLAGS:--O2 -g} -fno-lifetime-dse"            &&
 ./configure --prefix=/usr                                \
             --mandir=/usr/share/man                      \
@@ -91,9 +91,9 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install                                                   &&
 make install-man                                               &&
 ln -v -sf openjade /usr/bin/jade                               &&
@@ -112,14 +112,14 @@ install-catalog --add /etc/sgml/openjade-1.3.2.cat  \
 install-catalog --add /etc/sgml/sgml-docbook.cat    \
     /etc/sgml/openjade-1.3.2.cat
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**export CXXFLAGS=...**]{.command}: This command prevents segmentation faults when the package is compiled with [gcc-6.1]{.application}.
+<span class="command"><strong>export CXXFLAGS=...</strong></span>: This command prevents segmentation faults when the package is compiled with <span class="application">gcc-6.1</span>.
 
-[**make install-man**]{.command}: This command installs the [**openjade**]{.command} man page.
+<span class="command"><strong>make install-man</strong></span>: This command installs the <span class="command"><strong>openjade</strong></span> man page.
 
 *`--disable-static`*: This switch prevents the building of the static library.
 
@@ -127,71 +127,71 @@ install-catalog --add /etc/sgml/sgml-docbook.cat    \
 
 *`--enable-default-catalog=/etc/sgml/catalog`*: This switch sets the path to the centralized catalog.
 
-*`--enable-default-search-path`*: This switch sets the default value of `SGML_SEARCH_PATH`{.envar}.
+*`--enable-default-search-path`*: This switch sets the default value of <code class="envar">SGML_SEARCH_PATH</code>.
 
-*`--datadir=/usr/share/sgml/openjade-1.3.2`*: This switch puts data files in `/usr/share/sgml/openjade-1.3.2`{.filename} instead of `/usr/share`{.filename}.
+*`--datadir=/usr/share/sgml/openjade-1.3.2`*: This switch puts data files in <code class="filename">/usr/share/sgml/openjade-1.3.2</code> instead of <code class="filename">/usr/share</code>.
 
-[**ln -v -sf ...**]{.command}: These commands create the [Jade]{.application} equivalents of [OpenJade]{.application} executables and libraries.
-:::
+<span class="command"><strong>ln -v -sf ...</strong></span>: These commands create the <span class="application">Jade</span> equivalents of <span class="application">OpenJade</span> executables and libraries.
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring OpenJade {#configuring-openjade .sect2}
+<div class="configuration" lang="en">
+## Configuring OpenJade {#configuring-openjade}
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-As the `root`{.systemitem} user:
+As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 echo "SYSTEM \"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd\" \
     \"/usr/share/xml/docbook/xml-dtd-4.5/docbookx.dtd\"" >> \
     /usr/share/sgml/openjade-1.3.2/catalog
 ```
 
-This configuration is only necessary if you intend to use [OpenJade]{.application} to process the BLFS XML files through DSSSL Stylesheets.
-:::
-::::
+This configuration is only necessary if you intend to use <span class="application">OpenJade</span> to process the BLFS XML files through DSSSL Stylesheets.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [openjade and the [Jade]{.application} equivalent symlink, jade]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="application">openjade and the <span class="segbody">Jade</span> equivalent symlink, jade</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libogrove.so, libospgrove.so, libostyle.so, and the [Jade]{.application} equivalent symlinks: libgrove.so, libspgrove.so, and libstyle.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="application">libogrove.so, libospgrove.so, libostyle.so, and the <span class="segbody">Jade</span> equivalent symlinks: libgrove.so, libspgrove.so, and libstyle.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/sgml/openjade-1.3.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/sgml/openjade-1.3.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- --------------------------------------------
-  []{#openjade-prog}[[**openjade**]{.command}]{.term}   is a DSSSL engine used for transformations
-  []{#jade}[[**jade**]{.command}]{.term}                is a symlink to [**openjade**]{.command}
+  <a id="openjade-prog"></a><span class="command"><span class="term"><strong>openjade</strong></span></span>   is a DSSSL engine used for transformations
+  <a id="jade"></a><span class="command"><span class="term"><strong>jade</strong></span></span>                is a symlink to <span class="command"><strong>openjade</strong></span>
   ----------------------------------------------------- --------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](opensp.md "OpenSP-1.5.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](opensp.md "OpenSP-1.5.2")
 
     OpenSP-1.5.2
 
--   [Next](docbook-dsssl.md "docbook-dsssl-1.79"){accesskey="n"}
+-   [Next](docbook-dsssl.md "docbook-dsssl-1.79")
 
     docbook-dsssl-1.79
 
--   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)"){accesskey="u"}
+-   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

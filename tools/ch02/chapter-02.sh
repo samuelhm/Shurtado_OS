@@ -12,7 +12,7 @@ step() { echo -e "${BLUE}[STEP]${NC} $*"; }
 check() { echo -e "${YELLOW}[CHECK]${NC} $*"; }
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-DISK_IMG="$SCRIPT_DIR/../ft_linux_disk.qcow2"
+DISK_IMG="$SCRIPT_DIR/../../ft_linux_disk.qcow2"
 LFS_MOUNT="/mnt/lfs"
 NBD_DEV="/dev/nbd0"
 ROOT_PART="4"

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](imlib2.md "imlib2-1.12.6"){accesskey="p"}
+-   [Prev](imlib2.md "imlib2-1.12.6")
 
     imlib2-1.12.6
 
--   [Next](kimageannotator.md "kImageAnnotator-0.7.2"){accesskey="n"}
+-   [Next](kimageannotator.md "kImageAnnotator-0.7.2")
 
     kImageAnnotator-0.7.2
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kcolorpicker}kColorPicker-0.3.1 {#kcolorpicker-0.3.1 .sect1}
+# kColorPicker-0.3.1 {#kcolorpicker-0.3.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to kColorPicker {#introduction-to-kcolorpicker .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to kColorPicker {#introduction-to-kcolorpicker}
 
 kColorPicker is a QToolButton library with a color popup menu, which lets you select colors. The popup menu features a color dialog button which can be used to add custom colors to the popup menu.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/ksnip/kColorPicker/archive/v0.3.1/kColorPicker-0.3.1.tar.gz](https://github.com/ksnip/kColorPicker/archive/v0.3.1/kColorPicker-0.3.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/ksnip/kColorPicker/archive/v0.3.1/kColorPicker-0.3.1.tar.gz">https://github.com/ksnip/kColorPicker/archive/v0.3.1/kColorPicker-0.3.1.tar.gz</a>
 
 -   Download MD5 sum: 1efc91252446af0d7e5c467ea7d517e7
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.4 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### kColorPicker Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref} and [Qt-6.11.1](qt6.md "Qt-6.11.1"){.xref}
-:::::
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a> and <a class="xref" href="qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of kColorPicker {#installation-of-kcolorpicker .sect2}
+<div class="installation" lang="en">
+## Installation of kColorPicker {#installation-of-kcolorpicker}
 
-Install [kColorPicker]{.application} by running the following commands:
+Install <span class="application">kColorPicker</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,44 +72,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libkColorPicker.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libkColorPicker.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/cmake/kColorPicker]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/cmake/kColorPicker</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](imlib2.md "imlib2-1.12.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](imlib2.md "imlib2-1.12.6")
 
     imlib2-1.12.6
 
--   [Next](kimageannotator.md "kImageAnnotator-0.7.2"){accesskey="n"}
+-   [Next](kimageannotator.md "kImageAnnotator-0.7.2")
 
     kImageAnnotator-0.7.2
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

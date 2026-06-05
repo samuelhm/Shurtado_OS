@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-autoar.md "gnome-autoar-0.4.5"){accesskey="p"}
+-   [Prev](gnome-autoar.md "gnome-autoar-0.4.5")
 
     gnome-autoar-0.4.5
 
--   [Next](gnome-menus.md "gnome-menus-3.38.1"){accesskey="n"}
+-   [Next](gnome-menus.md "gnome-menus-3.38.1")
 
     gnome-menus-3.38.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-desktop}gnome-desktop-44.5 {#gnome-desktop-44.5 .sect1}
+# gnome-desktop-44.5 {#gnome-desktop-44.5}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Desktop {#introduction-to-gnome-desktop .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Desktop {#introduction-to-gnome-desktop}
 
-The [GNOME Desktop]{.application} package contains a library that provides an API shared by several applications on the [GNOME]{.application} Desktop.
+The <span class="application">GNOME Desktop</span> package contains a library that provides an API shared by several applications on the <span class="application">GNOME</span> Desktop.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-desktop/44/gnome-desktop-44.5.tar.xz](https://download.gnome.org/sources/gnome-desktop/44/gnome-desktop-44.5.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-desktop/44/gnome-desktop-44.5.tar.xz">https://download.gnome.org/sources/gnome-desktop/44/gnome-desktop-44.5.tar.xz</a>
 
 -   Download MD5 sum: d99550c41db721f4a7f302bd95eef5c2
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 19 MB
 
 -   Estimated build time: 0.3 SBU
-:::
+</div>
 
 ### GNOME Desktop Dependencies
 
 #### Required
 
-[gsettings-desktop-schemas-50.1](gsettings-desktop-schemas.md "gsettings-desktop-schemas-50.1"){.xref}, [ISO Codes-4.20.1](../general/iso-codes.md "ISO Codes-4.20.1"){.xref}, [libseccomp-2.6.0](../general/libseccomp.md "libseccomp-2.6.0"){.xref}, and [xkeyboard-config-2.47](../x/xkeyboard-config.md "XKeyboardConfig-2.47"){.xref}
+<a class="xref" href="gsettings-desktop-schemas.md" title="gsettings-desktop-schemas-50.1">gsettings-desktop-schemas-50.1</a>, <a class="xref" href="../general/iso-codes.md" title="ISO Codes-4.20.1">ISO Codes-4.20.1</a>, <a class="xref" href="../general/libseccomp.md" title="libseccomp-2.6.0">libseccomp-2.6.0</a>, and <a class="xref" href="../x/xkeyboard-config.md" title="XKeyboardConfig-2.47">xkeyboard-config-2.47</a>
 
 #### Recommended
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, [bubblewrap-0.11.2](../general/bubblewrap.md "Bubblewrap-0.11.2"){.xref} (needed for thumbnailers in Nautilus), and [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, <a class="xref" href="../general/bubblewrap.md" title="Bubblewrap-0.11.2">bubblewrap-0.11.2</a> (needed for thumbnailers in Nautilus), and <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Optional
 
-[itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}, and [libxkbcommon-1.13.2](../general/libxkbcommon.md "libxkbcommon-1.13.2"){.xref}
-:::::
+<a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, and <a class="xref" href="../general/libxkbcommon.md" title="libxkbcommon-1.13.2">libxkbcommon-1.13.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Desktop {#installation-of-gnome-desktop .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Desktop {#installation-of-gnome-desktop}
 
-Install [GNOME Desktop]{.application} by running the following commands:
+Install <span class="application">GNOME Desktop</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -79,68 +79,68 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D desktop_docs=false`*: This allows building the package without [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref} by disabling the installation of the copies and translations of the GNU FDL, GPL, and LGPL licenses.
+*`-D desktop_docs=false`*: This allows building the package without <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a> by disabling the installation of the copies and translations of the GNU FDL, GPL, and LGPL licenses.
 
-`-D build_gtk4=false`{.option}: Use this option if you wish to build this package without [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref} installed. Note that it will likely cause GTK-4 applications depending on this package fail to build.
+<code class="option">-D build_gtk4=false</code>: Use this option if you wish to build this package without <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a> installed. Note that it will likely cause GTK-4 applications depending on this package fail to build.
 
-`-D legacy_library=false`{.option}: Use this option if you wish to build this package without [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} installed. Note that it will likely cause GTK-3 applications depending on this package fail to build.
+<code class="option">-D legacy_library=false</code>: Use this option if you wish to build this package without <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> installed. Note that it will likely cause GTK-3 applications depending on this package fail to build.
 
-`-D gtk_doc=true`{.option}: Use this parameter if you wish to build the API documentation.
+<code class="option">-D gtk_doc=true</code>: Use this parameter if you wish to build the API documentation.
 
-`-D installed_tests=true`{.option}: Use this parameter you wish to enable the installed tests.
-:::
+<code class="option">-D installed_tests=true</code>: Use this parameter you wish to enable the installed tests.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libgnome-bg-4.so, libgnome-desktop-3.so, libgnome-desktop-4.so, and libgnome-rr-4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgnome-bg-4.so, libgnome-desktop-3.so, libgnome-desktop-4.so, and libgnome-rr-4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gnome-desktop-3.0, /usr/include/gnome-desktop-4.0, /usr/libexec/gnome-desktop-debug, /usr/share/gtk-doc/html/gnome-desktop3 (optional), and /usr/share/help/\*/{fdl,gpl,lgpl} (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gnome-desktop-3.0, /usr/include/gnome-desktop-4.0, /usr/libexec/gnome-desktop-debug, /usr/share/gtk-doc/html/gnome-desktop3 (optional), and /usr/share/help/\*/{fdl,gpl,lgpl} (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- -------------------------------------------------------------------------
-  []{#libgnome-desktop-3}[`libgnome-desktop-3.so`{.filename}]{.term}   contains functions shared by several [GNOME]{.application} applications
+  <a id="libgnome-desktop-3"></a><span class="term"><code class="filename">libgnome-desktop-3.so</code></span>   contains functions shared by several <span class="application">GNOME</span> applications
   -------------------------------------------------------------------- -------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-autoar.md "gnome-autoar-0.4.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-autoar.md "gnome-autoar-0.4.5")
 
     gnome-autoar-0.4.5
 
--   [Next](gnome-menus.md "gnome-menus-3.38.1"){accesskey="n"}
+-   [Next](gnome-menus.md "gnome-menus-3.38.1")
 
     gnome-menus-3.38.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

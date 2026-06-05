@@ -1,43 +1,43 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 16. Networking Utilities
 
--   [Prev](whois.md "Whois-5.6.6"){accesskey="p"}
+-   [Prev](whois.md "Whois-5.6.6")
 
     Whois-5.6.6
 
--   [Next](netlibs.md "Networking Libraries"){accesskey="n"}
+-   [Next](netlibs.md "Networking Libraries")
 
     Networking Libraries
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#wireshark}Wireshark-4.6.6 {#wireshark-4.6.6 .sect1}
+# Wireshark-4.6.6 {#wireshark-4.6.6}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Wireshark {#introduction-to-wireshark .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Wireshark {#introduction-to-wireshark}
 
-The [Wireshark]{.application} package contains a network protocol analyzer, also known as a [“[sniffer.]{.quote}”]{.quote} This is useful for analyzing data captured [“[off the wire]{.quote}”]{.quote} from a live network connection, or data read from a capture file.
+The <span class="application">Wireshark</span> package contains a network protocol analyzer, also known as a <span class="quote">“<span class="quote">sniffer.</span>”</span> This is useful for analyzing data captured <span class="quote">“<span class="quote">off the wire</span>”</span> from a live network connection, or data read from a capture file.
 
-[Wireshark]{.application} provides both a graphical and a TTY-mode front-end for examining captured network packets from over 500 protocols, as well as the capability to read capture files from many other popular network analyzers.
+<span class="application">Wireshark</span> provides both a graphical and a TTY-mode front-end for examining captured network packets from over 500 protocols, as well as the capability to read capture files from many other popular network analyzers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.wireshark.org/download/src/all-versions/wireshark-4.6.6.tar.xz](https://www.wireshark.org/download/src/all-versions/wireshark-4.6.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.wireshark.org/download/src/all-versions/wireshark-4.6.6.tar.xz">https://www.wireshark.org/download/src/all-versions/wireshark-4.6.6.tar.xz</a>
 
 -   Download MD5 sum: 435ae3d7595a2d82b1187eee3ff3774e
 
@@ -46,55 +46,55 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.1 GB (188 MB installed)
 
 -   Estimated build time: 2.5 SBU (with parallelism=4)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Additional Documentation: [https://www.wireshark.org/download/docs/](https://www.wireshark.org/download/docs/){.ulink} (contains links to several different docs in a variety of formats)
-:::
+<div class="itemizedlist">
+-   Additional Documentation: <a class="ulink" href="https://www.wireshark.org/download/docs/">https://www.wireshark.org/download/docs/</a> (contains links to several different docs in a variety of formats)
+</div>
 
 ### Wireshark dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}, [c-ares-1.34.6](c-ares.md "c-ares-1.34.6"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref}, [libgcrypt-1.12.2](../general/libgcrypt.md "libgcrypt-1.12.2"){.xref}, [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}, and [Speex-1.2.1](../multimedia/speex.md "Speex-1.2.1"){.xref}
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>, <a class="xref" href="c-ares.md" title="c-ares-1.34.6">c-ares-1.34.6</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>, <a class="xref" href="../general/libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a>, <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>, and <a class="xref" href="../multimedia/speex.md" title="Speex-1.2.1">Speex-1.2.1</a>
 
 #### Recommended
 
-[libpcap-1.10.6](libpcap.md "libpcap-1.10.6"){.xref} (required to capture data)
+<a class="xref" href="libpcap.md" title="libpcap-1.10.6">libpcap-1.10.6</a> (required to capture data)
 
 #### Optional
 
-[asciidoctor-2.0.26](../general/asciidoctor.md "Asciidoctor-2.0.26"){.xref}, [Brotli-1.2.0](../general/brotli.md "brotli-1.2.0"){.xref}, [Cups-2.4.19](../pst/cups.md "Cups-2.4.19"){.xref}, [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}, [git-2.54.0](../general/git.md "Git-2.54.0"){.xref}, [GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref}, [libnl-3.12.0](libnl.md "libnl-3.12.0"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, [Lua-5.4.8](../general/lua.md "Lua-5.4.8"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, [nghttp2-1.69.0](nghttp2.md "nghttp2-1.69.0"){.xref}, [SBC-2.2](../multimedia/sbc.md "SBC-2.2"){.xref}, [Vulkan-Headers-1.4.350.0](../x/vulkan-headers.md "Vulkan-Headers-1.4.350.0"){.xref}, [BCG729](https://www.linphone.org/en/bcg729-implementation/){.ulink}, [libilbc](https://github.com/TimothyGu/libilbc){.ulink}, [libsmi](https://www.ibr.cs.tu-bs.de/projects/libsmi/){.ulink}, [libssh](https://www.libssh.org/){.ulink}, [MaxMindDB](https://github.com/maxmind/libmaxminddb){.ulink}, [Minizip](https://www.winimage.com/zLibDll/minizip.md){.ulink}, [nghttp3](https://github.com/ngtcp2/nghttp3){.ulink}, [Snappy](https://google.github.io/snappy/){.ulink}, and [Spandsp](https://github.com/freeswitch/spandsp){.ulink}
-::::::
+<a class="xref" href="../general/asciidoctor.md" title="Asciidoctor-2.0.26">asciidoctor-2.0.26</a>, <a class="xref" href="../general/brotli.md" title="brotli-1.2.0">Brotli-1.2.0</a>, <a class="xref" href="../pst/cups.md" title="Cups-2.4.19">Cups-2.4.19</a>, <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a>, <a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a>, <a class="xref" href="libnl.md" title="libnl-3.12.0">libnl-3.12.0</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, <a class="xref" href="../general/lua.md" title="Lua-5.4.8">Lua-5.4.8</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, <a class="xref" href="nghttp2.md" title="nghttp2-1.69.0">nghttp2-1.69.0</a>, <a class="xref" href="../multimedia/sbc.md" title="SBC-2.2">SBC-2.2</a>, <a class="xref" href="../x/vulkan-headers.md" title="Vulkan-Headers-1.4.350.0">Vulkan-Headers-1.4.350.0</a>, <a class="ulink" href="https://www.linphone.org/en/bcg729-implementation/">BCG729</a>, <a class="ulink" href="https://github.com/TimothyGu/libilbc">libilbc</a>, <a class="ulink" href="https://www.ibr.cs.tu-bs.de/projects/libsmi/">libsmi</a>, <a class="ulink" href="https://www.libssh.org/">libssh</a>, <a class="ulink" href="https://github.com/maxmind/libmaxminddb">MaxMindDB</a>, <a class="ulink" href="https://www.winimage.com/zLibDll/minizip.md">Minizip</a>, <a class="ulink" href="https://github.com/ngtcp2/nghttp3">nghttp3</a>, <a class="ulink" href="https://google.github.io/snappy/">Snappy</a>, and <a class="ulink" href="https://github.com/freeswitch/spandsp">Spandsp</a>
+</div>
 
-::: {.kernel lang="en"}
-## []{#wireshark-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-The kernel must have the Packet protocol enabled for [Wireshark]{.application} to capture live packets from the network:
+The kernel must have the Packet protocol enabled for <span class="application">Wireshark</span> to capture live packets from the network:
 
-``` screen
+```console
 [*] Networking support --->                                                [NET]
   Networking options --->
     <*/M> Packet socket                                                 [PACKET]
 ```
 
-If built as a module, the name is `af_packet.ko`{.filename}.
-:::
+If built as a module, the name is <code class="filename">af_packet.ko</code>.
+</div>
 
-::: {.installation lang="en"}
-## Installation of Wireshark {#installation-of-wireshark .sect2}
+<div class="installation" lang="en">
+## Installation of Wireshark {#installation-of-wireshark}
 
-[Wireshark]{.application} is a very large and complex application. These instructions provide additional security measures to ensure that only trusted users are allowed to view network traffic. First, set up a system group for wireshark. As the `root`{.systemitem} user:
+<span class="application">Wireshark</span> is a very large and complex application. These instructions provide additional security measures to ensure that only trusted users are allowed to view network traffic. First, set up a system group for wireshark. As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -g 62 wireshark
 ```
 
-Continue to install [Wireshark]{.application} by running the following commands:
+Continue to install <span class="application">Wireshark</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -108,9 +108,9 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install &&
 
 install -v -m755 -d /usr/share/doc/wireshark-4.6.6 &&
@@ -125,105 +125,105 @@ popd
 unset FILENAME
 ```
 
-If you downloaded any of the documentation files from the page listed in the 'Additional Downloads', install them by issuing the following commands as the `root`{.systemitem} user:
+If you downloaded any of the documentation files from the page listed in the 'Additional Downloads', install them by issuing the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m644 <Downloaded_Files> \
                  /usr/share/doc/wireshark-4.6.6
 ```
 
-Now, set ownership and permissions of sensitive applications to only allow authorized users. As the `root`{.systemitem} user:
+Now, set ownership and permissions of sensitive applications to only allow authorized users. As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 chown -v root:wireshark /usr/bin/tshark &&
 chmod -v 6550 /usr/bin/tshark
 ```
 
-Finally, add any users to the wireshark group (as `root`{.systemitem} user):
+Finally, add any users to the wireshark group (as <code class="systemitem">root</code> user):
 
-``` root
+```bash
 usermod -a -G wireshark <username>
 ```
 
 If you are installing wireshark for the first time, it will be necessary to logout of your session and login again. This will put wireshark in your groups, because otherwise Wireshark will not function properly.
-:::
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring Wireshark {#configuring-wireshark .sect2}
+<div class="configuration" lang="en">
+## Configuring Wireshark {#configuring-wireshark}
 
-::: {.sect3 lang="en"}
-### []{#wireshark-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/wireshark.conf`{.filename} and `~/.config/wireshark/*`{.filename} (unless there is already `~/.wireshark/*`{.filename} in the system)
-:::
+<code class="filename">/etc/wireshark.conf</code> and <code class="filename">~/.config/wireshark/*</code> (unless there is already <code class="filename">~/.wireshark/*</code> in the system)
+</div>
 
-:::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Though the default configuration parameters are very sane, reference the configuration section of the [Wireshark User's Guide](https://www.wireshark.org/docs/wsug_html/){.ulink} for configuration information. Most of [Wireshark]{.application} 's configuration can be accomplished using the menu options of the [**wireshark**]{.command} graphical interfaces.
+Though the default configuration parameters are very sane, reference the configuration section of the <a class="ulink" href="https://www.wireshark.org/docs/wsug_html/">Wireshark User's Guide</a> for configuration information. Most of <span class="application">Wireshark</span> 's configuration can be accomplished using the menu options of the <span class="command"><strong>wireshark</strong></span> graphical interfaces.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you want to look at packets, make sure you don't filter them out with [iptables-1.8.13](../postlfs/iptables.md "iptables-1.8.13"){.xref}. If you want to exclude certain classes of packets, it is more efficient to do it with [iptables]{.application} than it is with [Wireshark]{.application}.
-:::
-::::
-::::::
+If you want to look at packets, make sure you don't filter them out with <a class="xref" href="../postlfs/iptables.md" title="iptables-1.8.13">iptables-1.8.13</a>. If you want to exclude certain classes of packets, it is more efficient to do it with <span class="application">iptables</span> than it is with <span class="application">Wireshark</span>.
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [capinfos, captype, dumpcap, editcap, idl2wrs, mergecap, randpkt, rawshark, reordercap, sharkd, text2pcap, tshark, and wireshark]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">capinfos, captype, dumpcap, editcap, idl2wrs, mergecap, randpkt, rawshark, reordercap, sharkd, text2pcap, tshark, and wireshark</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libwireshark.so, libwiretap.so, libwsutil.so, and numerous modules under /usr/lib/wireshark/plugins]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libwireshark.so, libwiretap.so, libwsutil.so, and numerous modules under /usr/lib/wireshark/plugins</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{lib,share}/wireshark and /usr/share/doc/wireshark-4.6.6]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{lib,share}/wireshark and /usr/share/doc/wireshark-4.6.6</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#capinfos}[[**capinfos**]{.command}]{.term}           reads a saved capture file and returns any or all of several statistics about that file. It is able to detect and read any capture supported by the [Wireshark]{.application} package
-  []{#captype}[[**captype**]{.command}]{.term}             prints the file types of capture files
-  []{#editcap}[[**editcap**]{.command}]{.term}             edits and/or translates the format of capture files. It knows how to read [libpcap]{.application} capture files, including those of [**tcpdump**]{.command}, [Wireshark]{.application} and other tools that write captures in that format
-  []{#idl2wrs}[[**idl2wrs**]{.command}]{.term}             is a program that takes a user specified CORBA IDL file and generates [“[C]{.quote}”]{.quote} source code for a [Wireshark]{.application} [“[plugin.]{.quote}”]{.quote} It relies on two Python programs [**wireshark_be.py**]{.command} and [**wireshark_gen.py**]{.command}, which are not installed by default. They have to be copied manually from the `tools`{.filename} directory to the `$PYTHONPATH/site-packages/`{.filename} directory
-  []{#mergecap}[[**mergecap**]{.command}]{.term}           combines multiple saved capture files into a single output file
-  []{#randpkt}[[**randpkt**]{.command}]{.term}             creates random-packet capture files
-  []{#rawshark}[[**rawshark**]{.command}]{.term}           dumps and analyzes raw libpcap data
-  []{#reordercap}[[**reordercap**]{.command}]{.term}       reorders timestamps of input file frames into an output file
-  []{#sharkd}[[**sharkd**]{.command}]{.term}               is a daemon that listens on UNIX sockets
-  []{#text2pcap}[[**text2pcap**]{.command}]{.term}         reads in an ASCII hex dump and writes the data described into a [libpcap]{.application}-style capture file
-  []{#tshark}[[**tshark**]{.command}]{.term}               is a TTY-mode network protocol analyzer. It lets you capture packet data from a live network or read packets from a previously saved capture file
-  []{#wireshark-prog}[[**wireshark**]{.command}]{.term}    is the Qt GUI network protocol analyzer. It lets you interactively browse packet data from a live network or from a previously saved capture file
-  []{#libwireshark}[`libwireshark.so`{.filename}]{.term}   contains functions used by the [Wireshark]{.application} programs to perform filtering and packet capturing
-  []{#libwiretap}[`libwiretap.so`{.filename}]{.term}       is a library being developed as a future replacement for `libpcap`{.filename}, the current standard Unix library for packet capturing. For more information, see the `README`{.filename} file in the source `wiretap`{.filename} directory
+  <a id="capinfos"></a><span class="command"><span class="term"><strong>capinfos</strong></span></span>           reads a saved capture file and returns any or all of several statistics about that file. It is able to detect and read any capture supported by the <span class="application">Wireshark</span> package
+  <a id="captype"></a><span class="command"><span class="term"><strong>captype</strong></span></span>             prints the file types of capture files
+  <a id="editcap"></a><span class="command"><span class="term"><strong>editcap</strong></span></span>             edits and/or translates the format of capture files. It knows how to read <span class="application">libpcap</span> capture files, including those of <span class="command"><strong>tcpdump</strong></span>, <span class="application">Wireshark</span> and other tools that write captures in that format
+  <a id="idl2wrs"></a><span class="command"><span class="term"><strong>idl2wrs</strong></span></span>             is a program that takes a user specified CORBA IDL file and generates <span class="quote">“<span class="quote">C</span>”</span> source code for a <span class="application">Wireshark</span> <span class="quote">“<span class="quote">plugin.</span>”</span> It relies on two Python programs <span class="command"><strong>wireshark_be.py</strong></span> and <span class="command"><strong>wireshark_gen.py</strong></span>, which are not installed by default. They have to be copied manually from the <code class="filename">tools</code> directory to the <code class="filename">$PYTHONPATH/site-packages/</code> directory
+  <a id="mergecap"></a><span class="command"><span class="term"><strong>mergecap</strong></span></span>           combines multiple saved capture files into a single output file
+  <a id="randpkt"></a><span class="command"><span class="term"><strong>randpkt</strong></span></span>             creates random-packet capture files
+  <a id="rawshark"></a><span class="command"><span class="term"><strong>rawshark</strong></span></span>           dumps and analyzes raw libpcap data
+  <a id="reordercap"></a><span class="command"><span class="term"><strong>reordercap</strong></span></span>       reorders timestamps of input file frames into an output file
+  <a id="sharkd"></a><span class="command"><span class="term"><strong>sharkd</strong></span></span>               is a daemon that listens on UNIX sockets
+  <a id="text2pcap"></a><span class="command"><span class="term"><strong>text2pcap</strong></span></span>         reads in an ASCII hex dump and writes the data described into a <span class="application">libpcap</span>-style capture file
+  <a id="tshark"></a><span class="command"><span class="term"><strong>tshark</strong></span></span>               is a TTY-mode network protocol analyzer. It lets you capture packet data from a live network or read packets from a previously saved capture file
+  <a id="wireshark-prog"></a><span class="command"><span class="term"><strong>wireshark</strong></span></span>    is the Qt GUI network protocol analyzer. It lets you interactively browse packet data from a live network or from a previously saved capture file
+  <a id="libwireshark"></a><span class="term"><code class="filename">libwireshark.so</code></span>   contains functions used by the <span class="application">Wireshark</span> programs to perform filtering and packet capturing
+  <a id="libwiretap"></a><span class="term"><code class="filename">libwiretap.so</code></span>       is a library being developed as a future replacement for <code class="filename">libpcap</code>, the current standard Unix library for packet capturing. For more information, see the <code class="filename">README</code> file in the source <code class="filename">wiretap</code> directory
   -------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](whois.md "Whois-5.6.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](whois.md "Whois-5.6.6")
 
     Whois-5.6.6
 
--   [Next](netlibs.md "Networking Libraries"){accesskey="n"}
+-   [Next](netlibs.md "Networking Libraries")
 
     Networking Libraries
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

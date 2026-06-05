@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](shared-mime-info.md "shared-mime-info-2.4"){accesskey="p"}
+-   [Prev](shared-mime-info.md "shared-mime-info-2.4")
 
     shared-mime-info-2.4
 
--   [Next](tidy-html5.md "tidy-html5-5.8.0"){accesskey="n"}
+-   [Next](tidy-html5.md "tidy-html5-5.8.0")
 
     tidy-html5-5.8.0
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#sharutils}Sharutils-4.15.2 {#sharutils-4.15.2 .sect1}
+# Sharutils-4.15.2 {#sharutils-4.15.2}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Sharutils {#introduction-to-sharutils .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Sharutils {#introduction-to-sharutils}
 
-The [Sharutils]{.application} package contains utilities that can create 'shell' archives.
+The <span class="application">Sharutils</span> package contains utilities that can create 'shell' archives.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftpmirror.gnu.org/sharutils/sharutils-4.15.2.tar.xz](https://ftpmirror.gnu.org/sharutils/sharutils-4.15.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftpmirror.gnu.org/sharutils/sharutils-4.15.2.tar.xz">https://ftpmirror.gnu.org/sharutils/sharutils-4.15.2.tar.xz</a>
 
 -   Download MD5 sum: 5975ce21da36491d7aa6dc2b0d9788e0
 
@@ -44,91 +44,91 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 22 MB (with the test suite)
 
 -   Estimated build time: 0.4 SBU (with the test suite)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/sharutils-4.15.2-consolidated-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/sharutils-4.15.2-consolidated-1.patch){.ulink}
-:::
-::::::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/sharutils-4.15.2-consolidated-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/sharutils-4.15.2-consolidated-1.patch</a>
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Sharutils {#installation-of-sharutils .sect2}
+<div class="installation" lang="en">
+## Installation of Sharutils {#installation-of-sharutils}
 
 First, fix issues exposed by current GCC versions:
 
-``` userinput
+```bash
 patch -Np1 -i ../sharutils-4.15.2-consolidated-1.patch
 ```
 
-Install [Sharutils]{.application} by running the following commands:
+Install <span class="application">Sharutils</span> by running the following commands:
 
-``` userinput
+```bash
 autoreconf -fiv                                         &&
 ./configure --prefix=/usr --disable-dependency-tracking &&
 make
 ```
 
-To test the results, issue [**make check**]{.command}.
+To test the results, issue <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-dependency-tracking`*: This switch is used to disable unneeded code in the build system.
 
 *`--with-openssl`*: This optional switch is used to enable incorporation of integrity checks into the package's executable programs.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [shar, unshar, uudecode, and uuencode]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">shar, unshar, uudecode, and uuencode</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#shar}[[**shar**]{.command}]{.term}           creates "shell archives" (or shar files) which are in text format and can be mailed
-  []{#unshar}[[**unshar**]{.command}]{.term}       unpacks a shar file
-  []{#uudecode}[[**uudecode**]{.command}]{.term}   reads a file (or by default the standard input) and writes an encoded version to the standard output. The encoding uses only printing ASCII characters
-  []{#uuencode}[[**uuencode**]{.command}]{.term}   reads a file (or by default the standard input) and decodes the uuencoded version to the standard output
+  <a id="shar"></a><span class="command"><span class="term"><strong>shar</strong></span></span>           creates "shell archives" (or shar files) which are in text format and can be mailed
+  <a id="unshar"></a><span class="command"><span class="term"><strong>unshar</strong></span></span>       unpacks a shar file
+  <a id="uudecode"></a><span class="command"><span class="term"><strong>uudecode</strong></span></span>   reads a file (or by default the standard input) and writes an encoded version to the standard output. The encoding uses only printing ASCII characters
+  <a id="uuencode"></a><span class="command"><span class="term"><strong>uuencode</strong></span></span>   reads a file (or by default the standard input) and decodes the uuencoded version to the standard output
   ------------------------------------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](shared-mime-info.md "shared-mime-info-2.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](shared-mime-info.md "shared-mime-info-2.4")
 
     shared-mime-info-2.4
 
--   [Next](tidy-html5.md "tidy-html5-5.8.0"){accesskey="n"}
+-   [Next](tidy-html5.md "tidy-html5-5.8.0")
 
     tidy-html5-5.8.0
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

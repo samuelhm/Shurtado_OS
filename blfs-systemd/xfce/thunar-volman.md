@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 35. Xfce Desktop
 
--   [Prev](thunar.md "thunar-4.20.8"){accesskey="p"}
+-   [Prev](thunar.md "thunar-4.20.8")
 
     thunar-4.20.8
 
--   [Next](tumbler.md "tumbler-4.20.1"){accesskey="n"}
+-   [Next](tumbler.md "tumbler-4.20.1")
 
     tumbler-4.20.1
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#thunar-volman}thunar-volman-4.20.0 {#thunar-volman-4.20.0 .sect1}
+# thunar-volman-4.20.0 {#thunar-volman-4.20.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to the Thunar Volume Manager {#introduction-to-the-thunar-volume-manager .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to the Thunar Volume Manager {#introduction-to-the-thunar-volume-manager}
 
-The [Thunar Volume Manager]{.application} is an extension for the [Thunar]{.application} file manager, which enables automatic management of removable drives and media.
+The <span class="application">Thunar Volume Manager</span> is an extension for the <span class="application">Thunar</span> file manager, which enables automatic management of removable drives and media.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/xfce/thunar-volman/4.20/thunar-volman-4.20.0.tar.bz2](https://archive.xfce.org/src/xfce/thunar-volman/4.20/thunar-volman-4.20.0.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/xfce/thunar-volman/4.20/thunar-volman-4.20.0.tar.bz2">https://archive.xfce.org/src/xfce/thunar-volman/4.20/thunar-volman-4.20.0.tar.bz2</a>
 
 -   Download MD5 sum: 34c8e0af77ea3894db7e3d164998f9bf
 
@@ -44,82 +44,82 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.0 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Thunar Volume Manager Dependencies
 
 #### Required
 
-[Exo-4.20.0](exo.md "Exo-4.20.0"){.xref} and [libgudev-238](../general/libgudev.md "libgudev-238"){.xref}
+<a class="xref" href="exo.md" title="Exo-4.20.0">Exo-4.20.0</a> and <a class="xref" href="../general/libgudev.md" title="libgudev-238">libgudev-238</a>
 
 #### Recommended
 
-[libnotify-0.8.8](../x/libnotify.md "libnotify-0.8.8"){.xref}
+<a class="xref" href="../x/libnotify.md" title="libnotify-0.8.8">libnotify-0.8.8</a>
 
 #### Recommended Runtime Dependency
 
-[Gvfs-1.60.0](../gnome/gvfs.md "Gvfs-1.60.0"){.xref}
-:::::
+<a class="xref" href="../gnome/gvfs.md" title="Gvfs-1.60.0">Gvfs-1.60.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of the Thunar Volume Manager {#installation-of-the-thunar-volume-manager .sect2}
+<div class="installation" lang="en">
+## Installation of the Thunar Volume Manager {#installation-of-the-thunar-volume-manager}
 
-Install the [Thunar Volume Manager]{.application} by running the following commands:
+Install the <span class="application">Thunar Volume Manager</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [thunar-volman and thunar-volman-settings]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">thunar-volman and thunar-volman-settings</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------
-  []{#thunar-volman-prog}[[**thunar-volman**]{.command}]{.term}                is the [Thunar]{.application} Volume Manager, a command line utility to automatically mount or unmount removable media
-  []{#thunar-volman-settings}[[**thunar-volman-settings**]{.command}]{.term}   is a small [GTK+ 3]{.application} application for changing [Thunar Volume Manager]{.application} settings
+  <a id="thunar-volman-prog"></a><span class="command"><span class="term"><strong>thunar-volman</strong></span></span>                is the <span class="application">Thunar</span> Volume Manager, a command line utility to automatically mount or unmount removable media
+  <a id="thunar-volman-settings"></a><span class="command"><span class="term"><strong>thunar-volman-settings</strong></span></span>   is a small <span class="application">GTK+ 3</span> application for changing <span class="application">Thunar Volume Manager</span> settings
   ---------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](thunar.md "thunar-4.20.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](thunar.md "thunar-4.20.8")
 
     thunar-4.20.8
 
--   [Next](tumbler.md "tumbler-4.20.1"){accesskey="n"}
+-   [Next](tumbler.md "tumbler-4.20.1")
 
     tumbler-4.20.1
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

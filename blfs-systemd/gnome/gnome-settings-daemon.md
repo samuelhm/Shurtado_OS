@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-keyring.md "gnome-keyring-50.0"){accesskey="p"}
+-   [Prev](gnome-keyring.md "gnome-keyring-50.0")
 
     gnome-keyring-50.0
 
--   [Next](tecla.md "Tecla-50.0"){accesskey="n"}
+-   [Next](tecla.md "Tecla-50.0")
 
     Tecla-50.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-settings-daemon}gnome-settings-daemon-50.1 {#gnome-settings-daemon-50.1 .sect1}
+# gnome-settings-daemon-50.1 {#gnome-settings-daemon-50.1}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to GNOME Settings Daemon {#introduction-to-gnome-settings-daemon .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Settings Daemon {#introduction-to-gnome-settings-daemon}
 
-The [GNOME Settings Daemon]{.application} is responsible for setting various parameters of a [GNOME Session]{.application} and the applications that run under it.
+The <span class="application">GNOME Settings Daemon</span> is responsible for setting various parameters of a <span class="application">GNOME Session</span> and the applications that run under it.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.1.tar.xz](https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.1.tar.xz">https://download.gnome.org/sources/gnome-settings-daemon/50/gnome-settings-daemon-50.1.tar.xz</a>
 
 -   Download MD5 sum: 76c9f7b0a9ef25a3ade1afc77b32e04b
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 29 MB
 
 -   Estimated build time: 0.1 SBU (using parallelism=4, add 1.7 SBU for tests)
-:::
+</div>
 
 ### GNOME Settings Daemon Dependencies
 
 #### Required
 
-[alsa-lib-1.2.16](../multimedia/alsa-lib.md "alsa-lib-1.2.16"){.xref}, [Fontconfig-2.18.1](../general/fontconfig.md "Fontconfig-2.18.1"){.xref}, [Gcr-4.4.0.1](gcr4.md "Gcr-4.4.0.1"){.xref}, [GeoClue-2.8.1](../basicnet/geoclue2.md "GeoClue-2.8.1"){.xref}, [geocode-glib-3.26.4](geocode-glib.md "geocode-glib-3.26.4"){.xref}, [gnome-desktop-44.5](gnome-desktop.md "gnome-desktop-44.5"){.xref}, [libcanberra-0.30](../multimedia/libcanberra.md "libcanberra-0.30"){.xref}, [libgweather-4.6.0](libgweather.md "libgweather-4.6.0"){.xref}, [libnotify-0.8.8](../x/libnotify.md "libnotify-0.8.8"){.xref}, [libwacom-2.19.0](../general/libwacom.md "libwacom-2.19.0"){.xref}, [PulseAudio-17.0](../multimedia/pulseaudio.md "PulseAudio-17.0"){.xref}, and [UPower-1.91.2](../general/upower.md "UPower-1.91.2"){.xref}
+<a class="xref" href="../multimedia/alsa-lib.md" title="alsa-lib-1.2.16">alsa-lib-1.2.16</a>, <a class="xref" href="../general/fontconfig.md" title="Fontconfig-2.18.1">Fontconfig-2.18.1</a>, <a class="xref" href="gcr4.md" title="Gcr-4.4.0.1">Gcr-4.4.0.1</a>, <a class="xref" href="../basicnet/geoclue2.md" title="GeoClue-2.8.1">GeoClue-2.8.1</a>, <a class="xref" href="geocode-glib.md" title="geocode-glib-3.26.4">geocode-glib-3.26.4</a>, <a class="xref" href="gnome-desktop.md" title="gnome-desktop-44.5">gnome-desktop-44.5</a>, <a class="xref" href="../multimedia/libcanberra.md" title="libcanberra-0.30">libcanberra-0.30</a>, <a class="xref" href="libgweather.md" title="libgweather-4.6.0">libgweather-4.6.0</a>, <a class="xref" href="../x/libnotify.md" title="libnotify-0.8.8">libnotify-0.8.8</a>, <a class="xref" href="../general/libwacom.md" title="libwacom-2.19.0">libwacom-2.19.0</a>, <a class="xref" href="../multimedia/pulseaudio.md" title="PulseAudio-17.0">PulseAudio-17.0</a>, and <a class="xref" href="../general/upower.md" title="UPower-1.91.2">UPower-1.91.2</a>
 
 #### Recommended
 
-[colord-1.4.8](../general/colord.md "Colord-1.4.8"){.xref}, [Cups-2.4.19](../pst/cups.md "Cups-2.4.19"){.xref}, [NetworkManager-1.56.1](../basicnet/networkmanager.md "NetworkManager-1.56.1"){.xref}, [ModemManager-1.24.2](../general/ModemManager.md "ModemManager-1.24.2"){.xref}, [nss-3.124](../postlfs/nss.md "NSS-3.124"){.xref}, and [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref}
+<a class="xref" href="../general/colord.md" title="Colord-1.4.8">colord-1.4.8</a>, <a class="xref" href="../pst/cups.md" title="Cups-2.4.19">Cups-2.4.19</a>, <a class="xref" href="../basicnet/networkmanager.md" title="NetworkManager-1.56.1">NetworkManager-1.56.1</a>, <a class="xref" href="../general/ModemManager.md" title="ModemManager-1.24.2">ModemManager-1.24.2</a>, <a class="xref" href="../postlfs/nss.md" title="NSS-3.124">nss-3.124</a>, and <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Recommended dependencies are not strictly required for this package to build and function, but you may not get expected results at runtime if you don't install them.
-:::
-::::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Settings Daemon {#installation-of-gnome-settings-daemon .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Settings Daemon {#installation-of-gnome-settings-daemon}
 
-Install [GNOME Settings Daemon]{.application} by running the following commands:
+Install <span class="application">GNOME Settings Daemon</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -78,52 +78,52 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To check the results, execute: [**ninja test**]{.command}. Note that you must have [python-dbusmock]{.application} installed in order for the tests to complete successfully.
+To check the results, execute: <span class="command"><strong>ninja test</strong></span>. Note that you must have <span class="application">python-dbusmock</span> installed in order for the tests to complete successfully.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgsd.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgsd.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/xdg/Xwayland-session.d, /usr/include/gnome-settings-daemon-48, /usr/lib/gnome-settings-daemon-48, and /usr/share/gnome-settings-daemon]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/xdg/Xwayland-session.d, /usr/include/gnome-settings-daemon-48, /usr/lib/gnome-settings-daemon-48, and /usr/share/gnome-settings-daemon</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-keyring.md "gnome-keyring-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-keyring.md "gnome-keyring-50.0")
 
     gnome-keyring-50.0
 
--   [Next](tecla.md "Tecla-50.0"){accesskey="n"}
+-   [Next](tecla.md "Tecla-50.0")
 
     Tecla-50.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

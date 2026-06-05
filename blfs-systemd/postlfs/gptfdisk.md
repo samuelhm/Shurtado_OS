@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 5. File Systems and Disk Management
 
--   [Prev](ntfs-3g.md "ntfs-3g-2026.2.25"){accesskey="p"}
+-   [Prev](ntfs-3g.md "ntfs-3g-2026.2.25")
 
     ntfs-3g-2026.2.25
 
--   [Next](parted.md "parted-3.7"){accesskey="n"}
+-   [Next](parted.md "parted-3.7")
 
     parted-3.7
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gptfdisk}gptfdisk-1.0.10 {#gptfdisk-1.0.10 .sect1}
+# gptfdisk-1.0.10 {#gptfdisk-1.0.10}
 
-:::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to gptfdisk {#introduction-to-gptfdisk .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to gptfdisk {#introduction-to-gptfdisk}
 
-The [gptfdisk]{.application} package is a set of programs for creation and maintenance of GUID Partition Table (GPT) disk drives. A GPT partitioned disk is required for drives greater than 2 TB and is a modern replacement for legacy PC-BIOS partitioned disk drives that use a Master Boot Record (MBR). The main program, [**gdisk**]{.command}, has an interface similar to the classic [**fdisk**]{.command} program.
+The <span class="application">gptfdisk</span> package is a set of programs for creation and maintenance of GUID Partition Table (GPT) disk drives. A GPT partitioned disk is required for drives greater than 2 TB and is a modern replacement for legacy PC-BIOS partitioned disk drives that use a Master Boot Record (MBR). The main program, <span class="command"><strong>gdisk</strong></span>, has an interface similar to the classic <span class="command"><strong>fdisk</strong></span> program.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/gptfdisk/gptfdisk-1.0.10.tar.gz](https://downloads.sourceforge.net/gptfdisk/gptfdisk-1.0.10.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/gptfdisk/gptfdisk-1.0.10.tar.gz">https://downloads.sourceforge.net/gptfdisk/gptfdisk-1.0.10.tar.gz</a>
 
 -   Download MD5 sum: 1970269eb7a97560e238611524b7797a
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.4 MB
 
 -   Estimated build time: less than 0.1 SBU (add 0.2 SBU for tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Recommended patch: [https://www.linuxfromscratch.org/patches/blfs/svn/gptfdisk-1.0.10-convenience-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/gptfdisk-1.0.10-convenience-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Recommended patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/gptfdisk-1.0.10-convenience-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/gptfdisk-1.0.10-convenience-1.patch</a>
+</div>
 
 ### gptfdisk Dependencies
 
 #### Required
 
-[popt-1.19](../general/popt.md "Popt-1.19"){.xref}
+<a class="xref" href="../general/popt.md" title="Popt-1.19">popt-1.19</a>
 
 #### Optional
 
-[ICU-78.3](../general/icu.md "icu-78.3"){.xref}
-::::::
+<a class="xref" href="../general/icu.md" title="icu-78.3">ICU-78.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of gptfdisk {#installation-of-gptfdisk .sect2}
+<div class="installation" lang="en">
+## Installation of gptfdisk {#installation-of-gptfdisk}
 
-The [gptfdisk]{.application} package comes with a rudimentary `Makefile`{.filename}. First we update it to provide a simple build and install interface and fix the location of a header file and fix some minor location issues. Install [gptfdisk]{.application} by running the following commands:
+The <span class="application">gptfdisk</span> package comes with a rudimentary <code class="filename">Makefile</code>. First we update it to provide a simple build and install interface and fix the location of a header file and fix some minor location issues. Install <span class="application">gptfdisk</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../gptfdisk-1.0.10-convenience-1.patch &&
 sed -i 's|ncursesw/||' gptcurses.cc &&
 sed -i 's|sbin|usr/sbin|' Makefile  &&
@@ -76,55 +76,55 @@ sed -i 's|sbin|usr/sbin|' Makefile  &&
 make
 ```
 
-To test the results, issue: [**make test**]{.command}.
+To test the results, issue: <span class="command"><strong>make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**patch -Np1 ...**]{.command}: This patch modifies the `Makefile`{.filename} file so that it provides an [“[install]{.quote}”]{.quote} target.
-:::
+<span class="command"><strong>patch -Np1 ...</strong></span>: This patch modifies the <code class="filename">Makefile</code> file so that it provides an <span class="quote">“<span class="quote">install</span>”</span> target.
+</div>
 
-::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::: segmentedlist
-:::: seglistitem
-::: seg
-**Installed Programs:** [cgdisk, gdisk, fixparts, and sgdisk]{.segbody}
-:::
-::::
-:::::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cgdisk, gdisk, fixparts, and sgdisk</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------ ------------------------------------------------------------------------------------------
-  []{#cgdisk}[[**cgdisk**]{.command}]{.term}       is an ncurses-based tool for manipulating GPT partitions
-  []{#gdisk}[[**gdisk**]{.command}]{.term}         is an interactive text-mode tool for manipulating GPT partitions
-  []{#fixparts}[[**fixparts**]{.command}]{.term}   repairs mis-formatted MBR based disk partitions
-  []{#sgdisk}[[**sgdisk**]{.command}]{.term}       is a partition manipulation program for GPT partitions similar to [**sfdisk**]{.command}
+  <a id="cgdisk"></a><span class="command"><span class="term"><strong>cgdisk</strong></span></span>       is an ncurses-based tool for manipulating GPT partitions
+  <a id="gdisk"></a><span class="command"><span class="term"><strong>gdisk</strong></span></span>         is an interactive text-mode tool for manipulating GPT partitions
+  <a id="fixparts"></a><span class="command"><span class="term"><strong>fixparts</strong></span></span>   repairs mis-formatted MBR based disk partitions
+  <a id="sgdisk"></a><span class="command"><span class="term"><strong>sgdisk</strong></span></span>       is a partition manipulation program for GPT partitions similar to <span class="command"><strong>sfdisk</strong></span>
   ------------------------------------------------ ------------------------------------------------------------------------------------------
-:::
-:::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](ntfs-3g.md "ntfs-3g-2026.2.25"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](ntfs-3g.md "ntfs-3g-2026.2.25")
 
     ntfs-3g-2026.2.25
 
--   [Next](parted.md "parted-3.7"){accesskey="n"}
+-   [Next](parted.md "parted-3.7")
 
     parted-3.7
 
--   [Up](filesystems.md "Chapter 5. File Systems and Disk Management"){accesskey="u"}
+-   [Up](filesystems.md "Chapter 5. File Systems and Disk Management")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

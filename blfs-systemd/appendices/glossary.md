@@ -1,1059 +1,1059 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../mit.md "The MIT License"){accesskey="p"}
+-   [Prev](../mit.md "The MIT License")
 
     The MIT License
 
--   [Next](../longindex.md "Index"){accesskey="n"}
+-   [Next](../longindex.md "Index")
 
     Index
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-::::::: glossary
-::::: titlepage
-
-
-# []{#appendices-glossary}Glossary {#glossary .title}
+<div class="glossary">
+<div class="titlepage">
 
 
-:::::
+# Glossary {#glossary}
 
-::: glossdiv
-### Acronyms {#acronyms .title}
 
-[]{#g669} [669]{.glossterm}
+</div>
+
+<div class="glossdiv">
+### Acronyms {#acronyms}
+
+<a id="g669"></a> <span class="glossterm">669</span>
 
 :   UNIS/Composer 669 Module
 
-[]{#gABI} [ABI]{.glossterm}
+<a id="gABI"></a> <span class="glossterm">ABI</span>
 
 :   Application Binary Interface
 
-[]{#gADSL} [ADSL]{.glossterm}
+<a id="gADSL"></a> <span class="glossterm">ADSL</span>
 
 :   Asymmetric Digital Subscriber Line
 
-[]{#gAFS} [AFS]{.glossterm}
+<a id="gAFS"></a> <span class="glossterm">AFS</span>
 
 :   Andrew File System
 
-[]{#gAGESA} [AGESA]{.glossterm}
+<a id="gAGESA"></a> <span class="glossterm">AGESA</span>
 
 :   AMD Generic Encapsulated Software Architecture
 
-[]{#gAIFF} [AIFF]{.glossterm}
+<a id="gAIFF"></a> <span class="glossterm">AIFF</span>
 
 :   Audio Interchange File Format
 
-[]{#gALSA} [ALSA]{.glossterm}
+<a id="gALSA"></a> <span class="glossterm">ALSA</span>
 
 :   Advanced Linux Sound Architecture
 
-[]{#gANSI} [ANSI]{.glossterm}
+<a id="gANSI"></a> <span class="glossterm">ANSI</span>
 
 :   American National Standards Institute
 
-[]{#gAPI} [API]{.glossterm}
+<a id="gAPI"></a> <span class="glossterm">API</span>
 
 :   Application Programming Interface
 
-[]{#gAPR} [APR]{.glossterm}
+<a id="gAPR"></a> <span class="glossterm">APR</span>
 
 :   Apache Portable Runtime
 
-[]{#gARP} [ARP]{.glossterm}
+<a id="gARP"></a> <span class="glossterm">ARP</span>
 
 :   Address Resolution Protocol
 
-[]{#gASCII} [ASCII]{.glossterm}
+<a id="gASCII"></a> <span class="glossterm">ASCII</span>
 
 :   American Standard Code for Information Interchange
 
-[]{#gASLR} [ASLR]{.glossterm}
+<a id="gASLR"></a> <span class="glossterm">ASLR</span>
 
 :   Address Space Layout Randomization
 
-[]{#gASN} [ASN]{.glossterm}
+<a id="gASN"></a> <span class="glossterm">ASN</span>
 
 :   Abstract Syntax Notation
 
-[]{#gASF} [ASF]{.glossterm}
+<a id="gASF"></a> <span class="glossterm">ASF</span>
 
 :   Advanced Streaming Format
 
-[]{#gATA} [ATA]{.glossterm}
+<a id="gATA"></a> <span class="glossterm">ATA</span>
 
 :   Advanced Technology Attachment
 
-[]{#gATSC} [ATSC]{.glossterm}
+<a id="gATSC"></a> <span class="glossterm">ATSC</span>
 
 :   Advanced Television Systems Committee
 
-[]{#gATK} [ATK]{.glossterm}
+<a id="gATK"></a> <span class="glossterm">ATK</span>
 
 :   Accessibility ToolKit
 
-[]{#gAVI} [AVI]{.glossterm}
+<a id="gAVI"></a> <span class="glossterm">AVI</span>
 
 :   Audio Video Interleave
 
-[]{#gAWT} [AWT]{.glossterm}
+<a id="gAWT"></a> <span class="glossterm">AWT</span>
 
 :   Abstract Window Toolkit
 
-[]{#gBER} [BER]{.glossterm}
+<a id="gBER"></a> <span class="glossterm">BER</span>
 
 :   Basic Encoding Rules
 
-[]{#gBIND} [BIND]{.glossterm}
+<a id="gBIND"></a> <span class="glossterm">BIND</span>
 
 :   Berkeley Internet Name Domain
 
-[]{#gBIOS} [BIOS]{.glossterm}
+<a id="gBIOS"></a> <span class="glossterm">BIOS</span>
 
 :   Basic Input/Output System
 
-[]{#gBLFS} [BLFS]{.glossterm}
+<a id="gBLFS"></a> <span class="glossterm">BLFS</span>
 
 :   Beyond Linux From Scratch
 
-[]{#gBMP} [BMP]{.glossterm}
+<a id="gBMP"></a> <span class="glossterm">BMP</span>
 
 :   Bit MaP
 
-[]{#gCD} [CD]{.glossterm}
+<a id="gCD"></a> <span class="glossterm">CD</span>
 
 :   Compact Disk
 
-[]{#gCDDA} [CDDA]{.glossterm}
+<a id="gCDDA"></a> <span class="glossterm">CDDA</span>
 
 :   Compact Disc Digital Audio
 
-[]{#gCIFS} [CIFS]{.glossterm}
+<a id="gCIFS"></a> <span class="glossterm">CIFS</span>
 
 :   Common Internet File System
 
-    See Also [SMB](glossary.md#gSMB){.glossseealso} .
+    See Also <a class="glossseealso" href="glossary.md#gSMB">SMB</a> .
 
-[]{#gCMS} [CMS]{.glossterm}
+<a id="gCMS"></a> <span class="glossterm">CMS</span>
 
 :   Cryptographic Message Syntax
 
-[]{#gCODEC} [CODEC]{.glossterm}
+<a id="gCODEC"></a> <span class="glossterm">CODEC</span>
 
 :   COmpression/DECompression module
 
-[]{#gCORBA} [CORBA]{.glossterm}
+<a id="gCORBA"></a> <span class="glossterm">CORBA</span>
 
 :   Common Object Request Broker Architecture
 
-[]{#gCPU} [CPU]{.glossterm}
+<a id="gCPU"></a> <span class="glossterm">CPU</span>
 
 :   Central Processing Unit
 
-[]{#gCRD} [CRD]{.glossterm}
+<a id="gCRD"></a> <span class="glossterm">CRD</span>
 
 :   Color Rendering Dictionary
 
-[]{#gCSA} [CSA]{.glossterm}
+<a id="gCSA"></a> <span class="glossterm">CSA</span>
 
 :   Color Space Array
 
-[]{#gCSSdvd} [CSS (on DVD)]{.glossterm}
+<a id="gCSSdvd"></a> <span class="glossterm">CSS (on DVD)</span>
 
 :   Contents Scrambling System
 
-[]{#gCSS} [CSS]{.glossterm}
+<a id="gCSS"></a> <span class="glossterm">CSS</span>
 
 :   Cascading Style Sheets
 
-[]{#gCUPS} [CUPS]{.glossterm}
+<a id="gCUPS"></a> <span class="glossterm">CUPS</span>
 
 :   Common Unix Printing System
 
-[]{#gCVS} [CVS]{.glossterm}
+<a id="gCVS"></a> <span class="glossterm">CVS</span>
 
 :   Concurrent Versions System
 
-[]{#gDAO} [DAO]{.glossterm}
+<a id="gDAO"></a> <span class="glossterm">DAO</span>
 
 :   Disc At Once
 
-[]{#gDARPA} [DARPA]{.glossterm}
+<a id="gDARPA"></a> <span class="glossterm">DARPA</span>
 
 :   Directory Address Resolution Protocol Allocation
 
-[]{#gDEC} [DEC]{.glossterm}
+<a id="gDEC"></a> <span class="glossterm">DEC</span>
 
 :   Digital Equipment Corporation
 
-[]{#gDER} [DER]{.glossterm}
+<a id="gDER"></a> <span class="glossterm">DER</span>
 
 :   Distinguished Encoding Rules
 
-[]{#gDES} [DES]{.glossterm}
+<a id="gDES"></a> <span class="glossterm">DES</span>
 
 :   Data Encryption Standard
 
-[]{#gDHCP} [DHCP]{.glossterm}
+<a id="gDHCP"></a> <span class="glossterm">DHCP</span>
 
 :   Dynamic Host Configuration Protocol
 
-[]{#gDICT} [DICT]{.glossterm}
+<a id="gDICT"></a> <span class="glossterm">DICT</span>
 
 :   Dictionary Server Protocol (RFC 2229)
 
-[]{#gDIN} [DIN]{.glossterm}
+<a id="gDIN"></a> <span class="glossterm">DIN</span>
 
 :   German Industrial Norm
 
-[]{#gDNS} [DNS]{.glossterm}
+<a id="gDNS"></a> <span class="glossterm">DNS</span>
 
 :   Domain Name Service
 
-[]{#gDOS} [DOS]{.glossterm}
+<a id="gDOS"></a> <span class="glossterm">DOS</span>
 
 :   Disk Operating System
 
-[]{#gDRI} [DRI]{.glossterm}
+<a id="gDRI"></a> <span class="glossterm">DRI</span>
 
 :   Direct Rendering Infrastructure
 
-[]{#gDSC} [DSC]{.glossterm}
+<a id="gDSC"></a> <span class="glossterm">DSC</span>
 
 :   Document Structuring Conventions
 
-[]{#gDSO} [DSO]{.glossterm}
+<a id="gDSO"></a> <span class="glossterm">DSO</span>
 
 :   Dynamic Shared Objects
 
-[]{#gDSSSL} [DSSSL]{.glossterm}
+<a id="gDSSSL"></a> <span class="glossterm">DSSSL</span>
 
 :   Document Style Semantics and Specification Language
 
-[]{#gDV} [DV]{.glossterm}
+<a id="gDV"></a> <span class="glossterm">DV</span>
 
 :   Digital Video
 
-[]{#gDVD} [DVD]{.glossterm}
+<a id="gDVD"></a> <span class="glossterm">DVD</span>
 
 :   Digital Versatile Disk (also Digital Video Disk)
 
-[]{#gDVI} [DVI]{.glossterm}
+<a id="gDVI"></a> <span class="glossterm">DVI</span>
 
 :   DeVice Independent
 
-[]{#gELF} [ELF]{.glossterm}
+<a id="gELF"></a> <span class="glossterm">ELF</span>
 
 :   Executable and Linking Format
 
-[]{#gEPP} [EPP]{.glossterm}
+<a id="gEPP"></a> <span class="glossterm">EPP</span>
 
 :   Enhanced Parallel Port
 
-[]{#gEPS} [EPS]{.glossterm}
+<a id="gEPS"></a> <span class="glossterm">EPS</span>
 
 :   Encapsulated PostScript
 
-[]{#gESD} [ESD]{.glossterm}
+<a id="gESD"></a> <span class="glossterm">ESD</span>
 
 :   Enlighten Sound Daemon
 
-[]{#gESMTP} [ESMTP]{.glossterm}
+<a id="gESMTP"></a> <span class="glossterm">ESMTP</span>
 
 :   Extended Simple Mail Transfer Protocol
 
-[]{#gFAM} [FAM]{.glossterm}
+<a id="gFAM"></a> <span class="glossterm">FAM</span>
 
 :   File Alteration Monitor
 
-[]{#gFAME} [FAME]{.glossterm}
+<a id="gFAME"></a> <span class="glossterm">FAME</span>
 
 :   Fast Assembly Mpeg Encoder
 
-[]{#gFAQ} [FAQ]{.glossterm}
+<a id="gFAQ"></a> <span class="glossterm">FAQ</span>
 
 :   Frequently Asked Questions
 
-[]{#gFAX} [FAX]{.glossterm}
+<a id="gFAX"></a> <span class="glossterm">FAX</span>
 
 :   Facsimile
 
-[]{#gFB} [FB]{.glossterm}
+<a id="gFB"></a> <span class="glossterm">FB</span>
 
 :   Frame Buffer
 
-[]{#gFHS} [FHS]{.glossterm}
+<a id="gFHS"></a> <span class="glossterm">FHS</span>
 
 :   File Hierarchy Standard
 
-[]{#gFLAC} [FLAC]{.glossterm}
+<a id="gFLAC"></a> <span class="glossterm">FLAC</span>
 
 :   Free Lossless Audio CODEC
 
-[]{#gFO} [FO]{.glossterm}
+<a id="gFO"></a> <span class="glossterm">FO</span>
 
 :   Formatted Objects
 
-[]{#gFTP} [FTP]{.glossterm}
+<a id="gFTP"></a> <span class="glossterm">FTP</span>
 
 :   File Transfer Protocol
 
-[]{#gGCC} [GCC]{.glossterm}
+<a id="gGCC"></a> <span class="glossterm">GCC</span>
 
 :   GNU Compiler Collection
 
-[]{#gGDBM} [GDBM]{.glossterm}
+<a id="gGDBM"></a> <span class="glossterm">GDBM</span>
 
 :   GNU DataBase Manager
 
-[]{#gGDK} [GDK]{.glossterm}
+<a id="gGDK"></a> <span class="glossterm">GDK</span>
 
 :   GTK+ Drawing Kit
 
-[]{#gGDM} [GDM]{.glossterm}
+<a id="gGDM"></a> <span class="glossterm">GDM</span>
 
 :   GNOME Display Manager
 
-[]{#gGID} [GID]{.glossterm}
+<a id="gGID"></a> <span class="glossterm">GID</span>
 
 :   Group IDentity
 
-[]{#gGIF} [GIF]{.glossterm}
+<a id="gGIF"></a> <span class="glossterm">GIF</span>
 
 :   Graphics Interchange Format
 
-[]{#gGLUT} [GLUT]{.glossterm}
+<a id="gGLUT"></a> <span class="glossterm">GLUT</span>
 
 :   OpenGL Utility Toolkit
 
-[]{#gGMP} [GMP]{.glossterm}
+<a id="gGMP"></a> <span class="glossterm">GMP</span>
 
 :   GNU Multiple Precision Arithmetic
 
-[]{#gGNAT} [GNAT]{.glossterm}
+<a id="gGNAT"></a> <span class="glossterm">GNAT</span>
 
 :   GNU NYU Ada 9x Translator
 
-[]{#gGNOME} [GNOME]{.glossterm}
+<a id="gGNOME"></a> <span class="glossterm">GNOME</span>
 
 :   GNU Network Object Model Environment
 
-[]{#gGNU} [GNU]{.glossterm}
+<a id="gGNU"></a> <span class="glossterm">GNU</span>
 
 :   GNU's Not Unix
 
-[]{#gGOT} [GOT]{.glossterm}
+<a id="gGOT"></a> <span class="glossterm">GOT</span>
 
 :   Global Offset Table
 
-[]{#gGPL} [GPL]{.glossterm}
+<a id="gGPL"></a> <span class="glossterm">GPL</span>
 
 :   General Public License
 
-[]{#gGPM} [GPM]{.glossterm}
+<a id="gGPM"></a> <span class="glossterm">GPM</span>
 
 :   General Purpose Mouse
 
-[]{#gGSS} [GSS]{.glossterm}
+<a id="gGSS"></a> <span class="glossterm">GSS</span>
 
 :   Generic Security Service
 
-[]{#gGSSAPI} [GSSAPI]{.glossterm}
+<a id="gGSSAPI"></a> <span class="glossterm">GSSAPI</span>
 
 :   Generic Security Service Application Programming Interface
 
-[]{#gGTK} [GTK]{.glossterm}
+<a id="gGTK"></a> <span class="glossterm">GTK</span>
 
 :   GIMP ToolKit
 
-[]{#gGUI} [GUI]{.glossterm}
+<a id="gGUI"></a> <span class="glossterm">GUI</span>
 
 :   Graphical User Interface
 
-[]{#gHFS} [HFS]{.glossterm}
+<a id="gHFS"></a> <span class="glossterm">HFS</span>
 
 :   Hierarchical File System
 
-[]{#gHTML} [HTML]{.glossterm}
+<a id="gHTML"></a> <span class="glossterm">HTML</span>
 
 :   HyperText Markup Language
 
-[]{#gHTTP} [HTTP]{.glossterm}
+<a id="gHTTP"></a> <span class="glossterm">HTTP</span>
 
 :   HyperText Transfer Protocol
 
-[]{#gHTTPS} [HTTPS]{.glossterm}
+<a id="gHTTPS"></a> <span class="glossterm">HTTPS</span>
 
 :   HyperText Transfer Protocol Secured
 
-[]{#gHUP} [HUP]{.glossterm}
+<a id="gHUP"></a> <span class="glossterm">HUP</span>
 
 :   Hang UP
 
-[]{#gIANA} [IANA]{.glossterm}
+<a id="gIANA"></a> <span class="glossterm">IANA</span>
 
 :   Internet Assigned Numbers Authority
 
-[]{#gICC} [ICC]{.glossterm}
+<a id="gICC"></a> <span class="glossterm">ICC</span>
 
 :   International Color Consortium
 
-[]{#gICMP} [ICMP]{.glossterm}
+<a id="gICMP"></a> <span class="glossterm">ICMP</span>
 
 :   Internet Control Message Protocol
 
-[]{#gIDE} [IDE]{.glossterm}
+<a id="gIDE"></a> <span class="glossterm">IDE</span>
 
 :   Integrated Drive Electronics
 
 :   Integrated Development Environment
 
-[]{#gIDL} [IDL]{.glossterm}
+<a id="gIDL"></a> <span class="glossterm">IDL</span>
 
 :   Interface Definition Language
 
-[]{#gIJS} [IJS]{.glossterm}
+<a id="gIJS"></a> <span class="glossterm">IJS</span>
 
 :   Ink Jet Systems
 
-[]{#gILS} [ILS]{.glossterm}
+<a id="gILS"></a> <span class="glossterm">ILS</span>
 
 :   Internet Location Server
 
-[]{#gIMAP} [IMAP]{.glossterm}
+<a id="gIMAP"></a> <span class="glossterm">IMAP</span>
 
 :   Internet Message Access Protocol
 
-[]{#IMON} [IMON]{.glossterm}
+<a id="IMON"></a> <span class="glossterm">IMON</span>
 
 :   Inode MONitor
 
-[]{#gIP} [IP]{.glossterm}
+<a id="gIP"></a> <span class="glossterm">IP</span>
 
 :   Internet Protocol
 
-    See Also [TCP](glossary.md#gTCP){.glossseealso} .
+    See Also <a class="glossseealso" href="glossary.md#gTCP">TCP</a> .
 
-[]{#gIPX} [IPX]{.glossterm}
+<a id="gIPX"></a> <span class="glossterm">IPX</span>
 
 :   Internetwork Packet eXchange
 
-[]{#gIRC} [IRC]{.glossterm}
+<a id="gIRC"></a> <span class="glossterm">IRC</span>
 
 :   Internet Relay Chat
 
-[]{#gISDN} [ISDN]{.glossterm}
+<a id="gISDN"></a> <span class="glossterm">ISDN</span>
 
 :   Integrated Services Digital Network
 
-[]{#gISO} [ISO]{.glossterm}
+<a id="gISO"></a> <span class="glossterm">ISO</span>
 
 :   International Standards Organisation
 
-[]{#gISP} [ISP]{.glossterm}
+<a id="gISP"></a> <span class="glossterm">ISP</span>
 
 :   Internet Service Provider
 
-[]{#gIT} [IT]{.glossterm}
+<a id="gIT"></a> <span class="glossterm">IT</span>
 
 :   ImpulseTracker Module
 
-[]{#gJAI} [JAI]{.glossterm}
+<a id="gJAI"></a> <span class="glossterm">JAI</span>
 
 :   Java Advanced Imaging
 
-[]{#gJAR} [JAR]{.glossterm}
+<a id="gJAR"></a> <span class="glossterm">JAR</span>
 
 :   Java ARchive
 
-[]{#gJDK} [JDK]{.glossterm}
+<a id="gJDK"></a> <span class="glossterm">JDK</span>
 
 :   Java Development Kit
 
-[]{#gJFIF} [JFIF]{.glossterm}
+<a id="gJFIF"></a> <span class="glossterm">JFIF</span>
 
 :   JPEG File Interchange Format
 
-[]{#gJPEG} [JPEG]{.glossterm}
+<a id="gJPEG"></a> <span class="glossterm">JPEG</span>
 
 :   Joint Photographic Experts Group
 
-[]{#gKDC} [KDC]{.glossterm}
+<a id="gKDC"></a> <span class="glossterm">KDC</span>
 
 :   Key Distribution Center
 
-[]{#gKDE} [KDE]{.glossterm}
+<a id="gKDE"></a> <span class="glossterm">KDE</span>
 
 :   KDesktop Environment
 
-[]{#gLAME} [LAME]{.glossterm}
+<a id="gLAME"></a> <span class="glossterm">LAME</span>
 
 :   Lame Ain't an MP3 Encoder
 
-[]{#gLAN} [LAN]{.glossterm}
+<a id="gLAN"></a> <span class="glossterm">LAN</span>
 
 :   Local Area Network
 
-[]{#gLDAP} [LDAP]{.glossterm}
+<a id="gLDAP"></a> <span class="glossterm">LDAP</span>
 
 :   Lightweight Directory Access Protocol
 
-[]{#gLDIF} [LDIF]{.glossterm}
+<a id="gLDIF"></a> <span class="glossterm">LDIF</span>
 
 :   Lightweight Data Interchange Format
 
-[]{#gLFS} [LFS]{.glossterm}
+<a id="gLFS"></a> <span class="glossterm">LFS</span>
 
 :   Linux From Scratch
 
-[]{#gLGPL} [LGPL]{.glossterm}
+<a id="gLGPL"></a> <span class="glossterm">LGPL</span>
 
 :   Library General Public License
 
-[]{#gLPR} [LPR]{.glossterm}
+<a id="gLPR"></a> <span class="glossterm">LPR</span>
 
 :   Line PRinter
 
-[]{#gLZO} [LZO]{.glossterm}
+<a id="gLZO"></a> <span class="glossterm">LZO</span>
 
 :   Lempel-Ziv-Oberhumer
 
-[]{#gLZW} [LZW]{.glossterm}
+<a id="gLZW"></a> <span class="glossterm">LZW</span>
 
 :   Lempel-Ziv-Welch
 
-[]{#gMAC} [MAC]{.glossterm}
+<a id="gMAC"></a> <span class="glossterm">MAC</span>
 
 :   Media Access Control
 
-[]{#gMCOP} [MCOP]{.glossterm}
+<a id="gMCOP"></a> <span class="glossterm">MCOP</span>
 
 :   Multimedia COmmunication Protocol
 
-[]{#gMCU} [MCU]{.glossterm}
+<a id="gMCU"></a> <span class="glossterm">MCU</span>
 
 :   Multipoint Control Unit
 
-[]{#gMD} [MD]{.glossterm}
+<a id="gMD"></a> <span class="glossterm">MD</span>
 
 :   Message-Digest
 
-[]{#gMDA} [MDA]{.glossterm}
+<a id="gMDA"></a> <span class="glossterm">MDA</span>
 
 :   Mail Delivery Agent
 
-[]{#gMED} [MED]{.glossterm}
+<a id="gMED"></a> <span class="glossterm">MED</span>
 
 :   MED/OctaMED Module
 
-[]{#gMIDI} [MIDI]{.glossterm}
+<a id="gMIDI"></a> <span class="glossterm">MIDI</span>
 
 :   Musical Instrument Digital Interface
 
-[]{#gMIF} [MIF]{.glossterm}
+<a id="gMIF"></a> <span class="glossterm">MIF</span>
 
 :   Maker Interchange Format
 
-[]{#gMII} [MII]{.glossterm}
+<a id="gMII"></a> <span class="glossterm">MII</span>
 
 :   Media Independent Interface
 
-[]{#gMIME} [MIME]{.glossterm}
+<a id="gMIME"></a> <span class="glossterm">MIME</span>
 
 :   Multipurpose Internet Mail Extensions
 
-[]{#gMIT} [MIT]{.glossterm}
+<a id="gMIT"></a> <span class="glossterm">MIT</span>
 
 :   Massachusetts Institute of Technology
 
-[]{#gMNG} [MNG]{.glossterm}
+<a id="gMNG"></a> <span class="glossterm">MNG</span>
 
 :   Multiple-image Network Graphics
 
-[]{#gMOD} [MOD]{.glossterm}
+<a id="gMOD"></a> <span class="glossterm">MOD</span>
 
 :   ProTracker Module
 
-[]{#gMP3} [MP3]{.glossterm}
+<a id="gMP3"></a> <span class="glossterm">MP3</span>
 
 :   MPEG-1 audio layer 3
 
-[]{#gMPEG} [MPEG]{.glossterm}
+<a id="gMPEG"></a> <span class="glossterm">MPEG</span>
 
 :   Moving Picture Experts Group
 
-[]{#gMSL} [MSL]{.glossterm}
+<a id="gMSL"></a> <span class="glossterm">MSL</span>
 
 :   Magick Scripting Language
 
-[]{#gMTA} [MTA]{.glossterm}
+<a id="gMTA"></a> <span class="glossterm">MTA</span>
 
 :   Mail Transport Agent
 
-[]{#gMTM} [MTM]{.glossterm}
+<a id="gMTM"></a> <span class="glossterm">MTM</span>
 
 :   MultiTracker Module
 
-[]{#gMUA} [MUA]{.glossterm}
+<a id="gMUA"></a> <span class="glossterm">MUA</span>
 
 :   Mail User Agent
 
-[]{#gNASM} [NASM]{.glossterm}
+<a id="gNASM"></a> <span class="glossterm">NASM</span>
 
 :   Netwide ASseMbler
 
-[]{#gNNTP} [NNTP]{.glossterm}
+<a id="gNNTP"></a> <span class="glossterm">NNTP</span>
 
 :   Network News Transfer Protocol
 
-[]{#gNFS} [NFS]{.glossterm}
+<a id="gNFS"></a> <span class="glossterm">NFS</span>
 
 :   Network File System
 
-[]{#gNIS} [NIS]{.glossterm}
+<a id="gNIS"></a> <span class="glossterm">NIS</span>
 
 :   Network Information Service
 
-[]{#gNPTL} [NPTL]{.glossterm}
+<a id="gNPTL"></a> <span class="glossterm">NPTL</span>
 
 :   Native Posix Thread Library
 
-[]{#gNSPR} [NSPR]{.glossterm}
+<a id="gNSPR"></a> <span class="glossterm">NSPR</span>
 
 :   Netscape Portable Runtime
 
-[]{#gNSS} [NSS]{.glossterm}
+<a id="gNSS"></a> <span class="glossterm">NSS</span>
 
 :   Network Security Services
 
-[]{#gNTP} [NTP]{.glossterm}
+<a id="gNTP"></a> <span class="glossterm">NTP</span>
 
 :   Network Time Protocol
 
-[]{#gOAF} [OAF]{.glossterm}
+<a id="gOAF"></a> <span class="glossterm">OAF</span>
 
 :   Object Activation Framework
 
-[]{#gODBC} [ODBC]{.glossterm}
+<a id="gODBC"></a> <span class="glossterm">ODBC</span>
 
 :   Open DataBase Connectivity
 
-[]{#gOMF} [OMF]{.glossterm}
+<a id="gOMF"></a> <span class="glossterm">OMF</span>
 
 :   Open Metadata Framework
 
-[]{#gORB} [ORB]{.glossterm}
+<a id="gORB"></a> <span class="glossterm">ORB</span>
 
 :   Object Request Broker
 
-    See Also [CORBA](glossary.md#gCORBA){.glossseealso} .
+    See Also <a class="glossseealso" href="glossary.md#gCORBA">CORBA</a> .
 
-[]{#gORDBMS} [ORDBMS]{.glossterm}
+<a id="gORDBMS"></a> <span class="glossterm">ORDBMS</span>
 
 :   Object Relational Database Management System
 
-[]{#gOS} [OS]{.glossterm}
+<a id="gOS"></a> <span class="glossterm">OS</span>
 
 :   Operating System
 
-[]{#gOSF} [OSF]{.glossterm}
+<a id="gOSF"></a> <span class="glossterm">OSF</span>
 
 :   Open Software Foundation
 
-[]{#gOSS} [OSS]{.glossterm}
+<a id="gOSS"></a> <span class="glossterm">OSS</span>
 
 :   Open Sound System
 
-[]{#gPAM} [PAM]{.glossterm}
+<a id="gPAM"></a> <span class="glossterm">PAM</span>
 
 :   Pluggable authentication Modules
 
-[]{#gPBM} [PBM]{.glossterm}
+<a id="gPBM"></a> <span class="glossterm">PBM</span>
 
 :   Portable BitMap
 
-[]{#gPCI} [PCI]{.glossterm}
+<a id="gPCI"></a> <span class="glossterm">PCI</span>
 
 :   Peripheral Component Interconnect
 
-[]{#gPCL} [PCL]{.glossterm}
+<a id="gPCL"></a> <span class="glossterm">PCL</span>
 
 :   Printer Control Language
 
-[]{#gPCM} [PCM]{.glossterm}
+<a id="gPCM"></a> <span class="glossterm">PCM</span>
 
 :   Pulse Code Modulation
 
-[]{#gPDC} [PDC]{.glossterm}
+<a id="gPDC"></a> <span class="glossterm">PDC</span>
 
 :   Primary Domain Controller
 
-[]{#gPDF} [PDF]{.glossterm}
+<a id="gPDF"></a> <span class="glossterm">PDF</span>
 
 :   Portable Document Format
 
-[]{#gPEAR} [PEAR]{.glossterm}
+<a id="gPEAR"></a> <span class="glossterm">PEAR</span>
 
 :   PHP Extension and Application Repository
 
-[]{#gPGM} [PGM]{.glossterm}
+<a id="gPGM"></a> <span class="glossterm">PGM</span>
 
 :   Portable Grey Map
 
-[]{#gPGP} [PGP]{.glossterm}
+<a id="gPGP"></a> <span class="glossterm">PGP</span>
 
 :   Pretty Good Privacy
 
-[]{#gPHP} [PHP]{.glossterm}
+<a id="gPHP"></a> <span class="glossterm">PHP</span>
 
 :   PHP Hypertext Preprocessor
 
-[]{#gPIE} [PIE]{.glossterm}
+<a id="gPIE"></a> <span class="glossterm">PIE</span>
 
 :   Position Independent Executable
 
-[]{#gPIM} [PIM]{.glossterm}
+<a id="gPIM"></a> <span class="glossterm">PIM</span>
 
 :   Personal Information Manager
 
-[]{#gPLIP} [PLIP]{.glossterm}
+<a id="gPLIP"></a> <span class="glossterm">PLIP</span>
 
 :   Parallel Line Internet Protocol
 
-[]{#gPNG} [PNG]{.glossterm}
+<a id="gPNG"></a> <span class="glossterm">PNG</span>
 
 :   Portable Network Graphics
 
-[]{#gPO} [PO]{.glossterm}
+<a id="gPO"></a> <span class="glossterm">PO</span>
 
 :   Portable Object
 
-[]{#gPOD} [POD]{.glossterm}
+<a id="gPOD"></a> <span class="glossterm">POD</span>
 
 :   Plain Old Documentation
 
-[]{#gPOP} [POP]{.glossterm}
+<a id="gPOP"></a> <span class="glossterm">POP</span>
 
 :   Post Office Protocol
 
-[]{#gPPD} [PPD]{.glossterm}
+<a id="gPPD"></a> <span class="glossterm">PPD</span>
 
 :   PostScript Printer Description
 
-[]{#gPPM} [PPM]{.glossterm}
+<a id="gPPM"></a> <span class="glossterm">PPM</span>
 
 :   Portable Pixel Map
 
-[]{#gPPP} [PPP]{.glossterm}
+<a id="gPPP"></a> <span class="glossterm">PPP</span>
 
 :   Point-to-Point Protocol
 
-[]{#gPPPoE} [PPPoE]{.glossterm}
+<a id="gPPPoE"></a> <span class="glossterm">PPPoE</span>
 
 :   Point-to-Point Protocol over Ethernet
 
-[]{#gPS} [PS]{.glossterm}
+<a id="gPS"></a> <span class="glossterm">PS</span>
 
 :   PostScript
 
-[]{#gRADIUS} [RADIUS]{.glossterm}
+<a id="gRADIUS"></a> <span class="glossterm">RADIUS</span>
 
 :   Remote Authentication Dial-In User Service
 
-[]{#gRAM} [RAM]{.glossterm}
+<a id="gRAM"></a> <span class="glossterm">RAM</span>
 
 :   Random Access Memory
 
-[]{#gRARP} [RARP]{.glossterm}
+<a id="gRARP"></a> <span class="glossterm">RARP</span>
 
 :   Reverse Address Resolution Protocol
 
-[]{#gRCS} [RCS]{.glossterm}
+<a id="gRCS"></a> <span class="glossterm">RCS</span>
 
 :   Revision Control System
 
-[]{#gRFC} [RFC]{.glossterm}
+<a id="gRFC"></a> <span class="glossterm">RFC</span>
 
 :   Request For Comments
 
-[]{#gRGB} [RGB]{.glossterm}
+<a id="gRGB"></a> <span class="glossterm">RGB</span>
 
 :   Red Green Blue
 
-[]{#gRGBA} [RGBA]{.glossterm}
+<a id="gRGBA"></a> <span class="glossterm">RGBA</span>
 
 :   Red Green Blue Alpha
 
-[]{#gROM} [ROM]{.glossterm}
+<a id="gROM"></a> <span class="glossterm">ROM</span>
 
 :   Read-Only Memory
 
-[]{#gRP} [RP]{.glossterm}
+<a id="gRP"></a> <span class="glossterm">RP</span>
 
 :   Roaring Penguin
 
-[]{#gRPC} [RPC]{.glossterm}
+<a id="gRPC"></a> <span class="glossterm">RPC</span>
 
 :   Remote Procedure Call
 
-[]{#gRTC} [RTC]{.glossterm}
+<a id="gRTC"></a> <span class="glossterm">RTC</span>
 
 :   Real Time Clock
 
-[]{#gRTP} [RTP]{.glossterm}
+<a id="gRTP"></a> <span class="glossterm">RTP</span>
 
 :   Real Time Protocol
 
-[]{#gRW} [RW]{.glossterm}
+<a id="gRW"></a> <span class="glossterm">RW</span>
 
 :   Read Write
 
-[]{#gS3M} [S3M]{.glossterm}
+<a id="gS3M"></a> <span class="glossterm">S3M</span>
 
 :   ScreamTracker Version 3 Module
 
-[]{#gSMIME} [S/MIME]{.glossterm}
+<a id="gSMIME"></a> <span class="glossterm">S/MIME</span>
 
 :   Secure/MIME
 
-[]{#gSANE} [SANE]{.glossterm}
+<a id="gSANE"></a> <span class="glossterm">SANE</span>
 
 :   Scanner Access Now Easy
 
-[]{#gSASL} [SASL]{.glossterm}
+<a id="gSASL"></a> <span class="glossterm">SASL</span>
 
 :   Simple Authentication and Security Layer
 
-[]{#gSATA} [SATA]{.glossterm}
+<a id="gSATA"></a> <span class="glossterm">SATA</span>
 
 :   Serial Advanced Technology Attachment
 
-[]{#gSBU} [SBU]{.glossterm}
+<a id="gSBU"></a> <span class="glossterm">SBU</span>
 
 :   Standard Build Unit
 
-[]{#gSCSI} [SCSI]{.glossterm}
+<a id="gSCSI"></a> <span class="glossterm">SCSI</span>
 
 :   Small Computer System Interface
 
-[]{#gSDK} [SDK]{.glossterm}
+<a id="gSDK"></a> <span class="glossterm">SDK</span>
 
 :   Software Development Kit
 
-[]{#gSGML} [SGML]{.glossterm}
+<a id="gSGML"></a> <span class="glossterm">SGML</span>
 
 :   Standard Generalized Markup Language
 
-[]{#gSMART} [SMART]{.glossterm}
+<a id="gSMART"></a> <span class="glossterm">SMART</span>
 
 :   Self Monitoring Analysis and Reporting Technology
 
-[]{#gSMB} [SMB]{.glossterm}
+<a id="gSMB"></a> <span class="glossterm">SMB</span>
 
 :   Server Message Block
 
-[]{#gSMIL} [SMIL]{.glossterm}
+<a id="gSMIL"></a> <span class="glossterm">SMIL</span>
 
 :   Synchronized Multimedia Integration Language
 
-[]{#gSMTP} [SMTP]{.glossterm}
+<a id="gSMTP"></a> <span class="glossterm">SMTP</span>
 
 :   Simple Mail Transfer Protocol
 
-[]{#gSQL} [SQL]{.glossterm}
+<a id="gSQL"></a> <span class="glossterm">SQL</span>
 
 :   Structured Query Language
 
-[]{#gSSH} [SSH]{.glossterm}
+<a id="gSSH"></a> <span class="glossterm">SSH</span>
 
 :   Secure SHell
 
-[]{#gSSL} [SSL]{.glossterm}
+<a id="gSSL"></a> <span class="glossterm">SSL</span>
 
 :   Secure Sockets Layer
 
-[]{#gSSP} [SSP]{.glossterm}
+<a id="gSSP"></a> <span class="glossterm">SSP</span>
 
 :   Stack Smash Protection
 
-[]{#gSUID} [SUID]{.glossterm}
+<a id="gSUID"></a> <span class="glossterm">SUID</span>
 
 :   Set User IDentity
 
-[]{#gSVG} [SVG]{.glossterm}
+<a id="gSVG"></a> <span class="glossterm">SVG</span>
 
 :   Scalable Vector Graphics
 
-[]{#gSVGA} [SVGA]{.glossterm}
+<a id="gSVGA"></a> <span class="glossterm">SVGA</span>
 
 :   Super Video Graphics Array
 
-[]{#gTCL} [TCL]{.glossterm}
+<a id="gTCL"></a> <span class="glossterm">TCL</span>
 
 :   Tool Command Language
 
-[]{#gTCP} [TCP]{.glossterm}
+<a id="gTCP"></a> <span class="glossterm">TCP</span>
 
 :   Transmission Control Protocol
 
-[]{#gTGT} [TGT]{.glossterm}
+<a id="gTGT"></a> <span class="glossterm">TGT</span>
 
 :   Ticket-Granting Ticket
 
-[]{#gTIFF} [TIFF]{.glossterm}
+<a id="gTIFF"></a> <span class="glossterm">TIFF</span>
 
 :   Tag(ged) Image File Format
 
-[]{#gTLS} [TLS]{.glossterm}
+<a id="gTLS"></a> <span class="glossterm">TLS</span>
 
 :   Transport Layer Security
 
-[]{#gTTF} [TTF]{.glossterm}
+<a id="gTTF"></a> <span class="glossterm">TTF</span>
 
 :   TrueType Font
 
-[]{#gTTS} [TTS]{.glossterm}
+<a id="gTTS"></a> <span class="glossterm">TTS</span>
 
 :   Text To Speech
 
-[]{#gUCS} [UCS]{.glossterm}
+<a id="gUCS"></a> <span class="glossterm">UCS</span>
 
 :   Universal Character Set
 
-[]{#gUDF} [UDF]{.glossterm}
+<a id="gUDF"></a> <span class="glossterm">UDF</span>
 
 :   Universal Disk Format
 
-[]{#gUID} [UID]{.glossterm}
+<a id="gUID"></a> <span class="glossterm">UID</span>
 
 :   User IDentity
 
-[]{#gUDP} [UDP]{.glossterm}
+<a id="gUDP"></a> <span class="glossterm">UDP</span>
 
 :   User Datagram Protocol
 
-[]{#gUI} [UI]{.glossterm}
+<a id="gUI"></a> <span class="glossterm">UI</span>
 
 :   User Interface
 
-[]{#gUML} [UML]{.glossterm}
+<a id="gUML"></a> <span class="glossterm">UML</span>
 
 :   Unified Modelling Language
 
-[]{#gURL} [URL]{.glossterm}
+<a id="gURL"></a> <span class="glossterm">URL</span>
 
 :   Uniform Resource Locator
 
-[]{#gUSB} [USB]{.glossterm}
+<a id="gUSB"></a> <span class="glossterm">USB</span>
 
 :   Universal Serial Bus
 
-[]{#gUSR} [USR]{.glossterm}
+<a id="gUSR"></a> <span class="glossterm">USR</span>
 
 :   Upstream Ready
 
-[]{#gUTF} [UTF]{.glossterm}
+<a id="gUTF"></a> <span class="glossterm">UTF</span>
 
 :   UCS Transformation Format
 
-[]{#gUUCP} [UUCP]{.glossterm}
+<a id="gUUCP"></a> <span class="glossterm">UUCP</span>
 
 :   Unix-to-Unix Copy Protocol
 
-[]{#gVCD} [VCD]{.glossterm}
+<a id="gVCD"></a> <span class="glossterm">VCD</span>
 
 :   Video Compact Disk
 
-[]{#gVCS} [VCS]{.glossterm}
+<a id="gVCS"></a> <span class="glossterm">VCS</span>
 
 :   Version Control System
 
-[]{#gVESA} [VESA]{.glossterm}
+<a id="gVESA"></a> <span class="glossterm">VESA</span>
 
 :   Video Electronics Standards Association
 
-[]{#gVGA} [VGA]{.glossterm}
+<a id="gVGA"></a> <span class="glossterm">VGA</span>
 
 :   Video Graphics Array
 
-[]{#gVNC} [VNC]{.glossterm}
+<a id="gVNC"></a> <span class="glossterm">VNC</span>
 
 :   Virtual Network Computer
 
-[]{#gVOB} [VOB]{.glossterm}
+<a id="gVOB"></a> <span class="glossterm">VOB</span>
 
 :   Video OBject
 
-[]{#gVOIP} [VOIP]{.glossterm}
+<a id="gVOIP"></a> <span class="glossterm">VOIP</span>
 
 :   Voice Over IP
 
-[]{#gW3C} [W3C]{.glossterm}
+<a id="gW3C"></a> <span class="glossterm">W3C</span>
 
 :   World Wide Web Consortium
 
-[]{#gWAV} [WAV]{.glossterm}
+<a id="gWAV"></a> <span class="glossterm">WAV</span>
 
 :   Waveform Audio
 
-[]{#gWWW} [WWW]{.glossterm}
+<a id="gWWW"></a> <span class="glossterm">WWW</span>
 
 :   World Wide Web
 
-[]{#gXDMCP} [XDMCP]{.glossterm}
+<a id="gXDMCP"></a> <span class="glossterm">XDMCP</span>
 
 :   XDisplay Manager Control Protocol
 
-[]{#gXM} [XM]{.glossterm}
+<a id="gXM"></a> <span class="glossterm">XM</span>
 
 :   FastTracker Module
 
-[]{#gXML} [XML]{.glossterm}
+<a id="gXML"></a> <span class="glossterm">XML</span>
 
 :   eXtensible Markup Language
 
-[]{#gXSL} [XSL]{.glossterm}
+<a id="gXSL"></a> <span class="glossterm">XSL</span>
 
 :   eXtensible Style Language
 
-[]{#gXSLT} [XSLT]{.glossterm}
+<a id="gXSLT"></a> <span class="glossterm">XSLT</span>
 
 :   eXtensible Style Language Transformation
 
-[]{#gXSM} [XSM]{.glossterm}
+<a id="gXSM"></a> <span class="glossterm">XSM</span>
 
 :   X/Open System Management
 
-[]{#gXMMS} [XMMS]{.glossterm}
+<a id="gXMMS"></a> <span class="glossterm">XMMS</span>
 
 :   XMultiMedia System
 
-[]{#gYP} [YP]{.glossterm}
+<a id="gYP"></a> <span class="glossterm">YP</span>
 
 :   Yellow Pages
 
-[]{#gYUV} [YUV]{.glossterm}
+<a id="gYUV"></a> <span class="glossterm">YUV</span>
 
 :   Luminance-Bandwidth-Chrominance
-:::
-:::::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../mit.md "The MIT License"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../mit.md "The MIT License")
 
     The MIT License
 
--   [Next](../longindex.md "Index"){accesskey="n"}
+-   [Next](../longindex.md "Index")
 
     Index
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

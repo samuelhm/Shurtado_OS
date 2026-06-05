@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-layer-shell-qt.md "layer-shell-qt-6.6.5 for lxqt"){accesskey="p"}
+-   [Prev](lxqt-layer-shell-qt.md "layer-shell-qt-6.6.5 for lxqt")
 
     layer-shell-qt-6.6.5 for lxqt
 
--   [Next](lxqt-build-tools.md "lxqt-build-tools-2.4.0"){accesskey="n"}
+-   [Next](lxqt-build-tools.md "lxqt-build-tools-2.4.0")
 
     lxqt-build-tools-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#muparser}muparser-2.3.5 {#muparser-2.3.5 .sect1}
+# muparser-2.3.5 {#muparser-2.3.5}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to muparser {#introduction-to-muparser .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to muparser {#introduction-to-muparser}
 
-The [muparser]{.application} package is a fast math parser library for C and C++.
+The <span class="application">muparser</span> package is a fast math parser library for C and C++.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/beltoforion/muparser/archive/v2.3.5/muparser-2.3.5.tar.gz](https://github.com/beltoforion/muparser/archive/v2.3.5/muparser-2.3.5.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/beltoforion/muparser/archive/v2.3.5/muparser-2.3.5.tar.gz">https://github.com/beltoforion/muparser/archive/v2.3.5/muparser-2.3.5.tar.gz</a>
 
 -   Download MD5 sum: 04d4224cb01712207b85af05a255b6fc
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.6 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### muparser Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}
-:::::
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of muparser {#installation-of-muparser .sect2}
+<div class="installation" lang="en">
+## Installation of muparser {#installation-of-muparser}
 
-Install [muparser]{.application} by running the following commands:
+Install <span class="application">muparser</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir -v build &&
 cd       build &&
 
@@ -68,54 +68,54 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 make
 ```
 
-To test the results, issue: [**make test**]{.command}.
+To test the results, issue: <span class="command"><strong>make test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libmuparser.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libmuparser.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/cmake/muparser]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/cmake/muparser</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ---------------------------------------------------
-  []{#muparser-lib}[`muparser.so`{.filename}]{.term}   provides a fast math parser library for C and C++
+  <a id="muparser-lib"></a><span class="term"><code class="filename">muparser.so</code></span>   provides a fast math parser library for C and C++
   ---------------------------------------------------- ---------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-layer-shell-qt.md "layer-shell-qt-6.6.5 for lxqt"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-layer-shell-qt.md "layer-shell-qt-6.6.5 for lxqt")
 
     layer-shell-qt-6.6.5 for lxqt
 
--   [Next](lxqt-build-tools.md "lxqt-build-tools-2.4.0"){accesskey="n"}
+-   [Next](lxqt-build-tools.md "lxqt-build-tools-2.4.0")
 
     lxqt-build-tools-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](konsole.md "Konsole-26.04.1"){accesskey="p"}
+-   [Prev](konsole.md "Konsole-26.04.1")
 
     Konsole-26.04.1
 
--   [Next](libkexiv2.md "libkexiv2-26.04.1"){accesskey="n"}
+-   [Next](libkexiv2.md "libkexiv2-26.04.1")
 
     libkexiv2-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#konversation}konversation-26.04.1 {#konversation-26.04.1 .sect1}
+# konversation-26.04.1 {#konversation-26.04.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to konversation {#introduction-to-konversation .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to konversation {#introduction-to-konversation}
 
-The [konversation]{.application} package is a KDE Frameworks-based IRC client.
+The <span class="application">konversation</span> package is a KDE Frameworks-based IRC client.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/konversation-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/konversation-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/konversation-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/konversation-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: 91e055f3cb0b05c7b808caf382b77c47
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 73 MB
 
 -   Estimated build time: 0.8 SBU (using parallelism=4)
-:::
+</div>
 
 ### konversation Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}
-:::::
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of konversation {#installation-of-konversation .sect2}
+<div class="installation" lang="en">
+## Installation of konversation {#installation-of-konversation}
 
-Install [konversation]{.application} by running the following commands:
+Install <span class="application">konversation</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -71,52 +71,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [konversation]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">konversation</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/share/doc/HTML/\*/konversation, and \$KF6_PREFIX/share/konversation]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/share/doc/HTML/\*/konversation, and \$KF6_PREFIX/share/konversation</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------- ------------------
-  []{#konversation-prog}[[**konversation**]{.command}]{.term}   is an IRC client
+  <a id="konversation-prog"></a><span class="command"><span class="term"><strong>konversation</strong></span></span>   is an IRC client
   ------------------------------------------------------------- ------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](konsole.md "Konsole-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](konsole.md "Konsole-26.04.1")
 
     Konsole-26.04.1
 
--   [Next](libkexiv2.md "libkexiv2-26.04.1"){accesskey="n"}
+-   [Next](libkexiv2.md "libkexiv2-26.04.1")
 
     libkexiv2-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

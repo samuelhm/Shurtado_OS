@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](kf-apps.md "KDE Frameworks 6 Based Applications"){accesskey="p"}
+-   [Prev](kf-apps.md "KDE Frameworks 6 Based Applications")
 
     KDE Frameworks 6 Based Applications
 
--   [Next](dolphin.md "dolphin-26.04.1"){accesskey="n"}
+-   [Next](dolphin.md "dolphin-26.04.1")
 
     dolphin-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#ark}ark-26.04.1 {#ark-26.04.1 .sect1}
+# ark-26.04.1 {#ark-26.04.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Ark {#introduction-to-ark .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Ark {#introduction-to-ark}
 
-The [Ark]{.application} package is a KDE Frameworks-based Archive Manager. It is a graphical front end to tar, 7zip, UnRar, and other similar tools.
+The <span class="application">Ark</span> package is a KDE Frameworks-based Archive Manager. It is a graphical front end to tar, 7zip, UnRar, and other similar tools.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/ark-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/ark-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/ark-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/ark-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: 69d58a69c2e812cd079b7cd6f366076a
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 45 MB
 
 -   Estimated build time: 0.4 SBU (using parallelism=4)
-:::
+</div>
 
 ### Ark Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref} and [libarchive-3.8.7](../general/libarchive.md "libarchive-3.8.7"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a> and <a class="xref" href="../general/libarchive.md" title="libarchive-3.8.7">libarchive-3.8.7</a>
 
 #### Recommended
 
-[7zip-26.01](../general/7zip.md "7zip-26.01"){.xref}, [cpio-2.15](../general/cpio.md "cpio-2.15"){.xref}, [UnRar-7.2.4](../general/unrar.md "UnRar-7.2.4"){.xref}, and [Zip-3.0](../general/zip.md "Zip-3.0"){.xref}
+<a class="xref" href="../general/7zip.md" title="7zip-26.01">7zip-26.01</a>, <a class="xref" href="../general/cpio.md" title="cpio-2.15">cpio-2.15</a>, <a class="xref" href="../general/unrar.md" title="UnRar-7.2.4">UnRar-7.2.4</a>, and <a class="xref" href="../general/zip.md" title="Zip-3.0">Zip-3.0</a>
 
 #### Optional
 
-[arj](https://arj.sourceforge.net/){.ulink}, [lrzip](https://github.com/ckolivas/lrzip){.ulink}, [lzop](https://www.lzop.org/){.ulink}, [rar](https://www.rarlab.com/){.ulink}, and [unar](https://theunarchiver.com/command-line){.ulink}
-:::::
+<a class="ulink" href="https://arj.sourceforge.net/">arj</a>, <a class="ulink" href="https://github.com/ckolivas/lrzip">lrzip</a>, <a class="ulink" href="https://www.lzop.org/">lzop</a>, <a class="ulink" href="https://www.rarlab.com/">rar</a>, and <a class="ulink" href="https://theunarchiver.com/command-line">unar</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Ark {#installation-of-ark .sect2}
+<div class="installation" lang="en">
+## Installation of Ark {#installation-of-ark}
 
-Install [Ark]{.application} by running the following commands:
+Install <span class="application">Ark</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -79,52 +79,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ark]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ark</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libkerfuffle.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libkerfuffle.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/lib/plugins/kerfuffle and \$KF6_PREFIX/share/doc/HTML/\*/ark]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/lib/plugins/kerfuffle and \$KF6_PREFIX/share/doc/HTML/\*/ark</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------- -------------------------------------------
-  []{#ark-prog}[[**ark**]{.command}]{.term}   is a KDE Frameworks-based Archive Manager
+  <a id="ark-prog"></a><span class="command"><span class="term"><strong>ark</strong></span></span>   is a KDE Frameworks-based Archive Manager
   ------------------------------------------- -------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kf-apps.md "KDE Frameworks 6 Based Applications"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kf-apps.md "KDE Frameworks 6 Based Applications")
 
     KDE Frameworks 6 Based Applications
 
--   [Next](dolphin.md "dolphin-26.04.1"){accesskey="n"}
+-   [Next](dolphin.md "dolphin-26.04.1")
 
     dolphin-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

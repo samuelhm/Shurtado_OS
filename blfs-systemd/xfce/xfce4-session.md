@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 35. Xfce Desktop
 
--   [Prev](xfwm4.md "Xfwm4-4.20.0"){accesskey="p"}
+-   [Prev](xfwm4.md "Xfwm4-4.20.0")
 
     Xfwm4-4.20.0
 
--   [Next](xfce-apps.md "Xfce Applications"){accesskey="n"}
+-   [Next](xfce-apps.md "Xfce Applications")
 
     Xfce Applications
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xfce4-session}xfce4-session-4.20.4 {#xfce4-session-4.20.4 .sect1}
+# xfce4-session-4.20.4 {#xfce4-session-4.20.4}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xfce4 Session {#introduction-to-xfce4-session .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xfce4 Session {#introduction-to-xfce4-session}
 
-[Xfce4 Session]{.application} is a session manager for [Xfce]{.application}. Its task is to save the state of your desktop (opened applications and their location) and restore it during a next startup. You can create several different sessions and choose one of them on startup.
+<span class="application">Xfce4 Session</span> is a session manager for <span class="application">Xfce</span>. Its task is to save the state of your desktop (opened applications and their location) and restore it during a next startup. You can create several different sessions and choose one of them on startup.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.4.tar.bz2](https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.4.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.4.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.4.tar.bz2</a>
 
 -   Download MD5 sum: 048a3f838449dd75d358779b528b0a63
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 20 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Xfce4 Session Dependencies
 
 #### Required
 
-[libwnck-43.3](libwnck.md "libwnck-43.3"){.xref}, [libxfce4windowing-4.20.6](libxfce4windowing.md "libxfce4windowing-4.20.6"){.xref}, and [libxfce4ui-4.20.2](libxfce4ui.md "libxfce4ui-4.20.2"){.xref}
+<a class="xref" href="libwnck.md" title="libwnck-43.3">libwnck-43.3</a>, <a class="xref" href="libxfce4windowing.md" title="libxfce4windowing-4.20.6">libxfce4windowing-4.20.6</a>, and <a class="xref" href="libxfce4ui.md" title="libxfce4ui-4.20.2">libxfce4ui-4.20.2</a>
 
 #### Recommended
 
-[desktop-file-utils-0.28](../general/desktop-file-utils.md "desktop-file-utils-0.28"){.xref}, [xfce4-screensaver](https://docs.xfce.org/apps/screensaver/start){.ulink} or [XScreenSaver-6.15](../xsoft/xscreensaver.md "XScreenSaver-6.15"){.xref}, [shared-mime-info-2.4](../general/shared-mime-info.md "shared-mime-info-2.4"){.xref} and [polkit-gnome-0.105](../postlfs/polkit-gnome.md "polkit-gnome-0.105"){.xref}
+<a class="xref" href="../general/desktop-file-utils.md" title="desktop-file-utils-0.28">desktop-file-utils-0.28</a>, <a class="ulink" href="https://docs.xfce.org/apps/screensaver/start">xfce4-screensaver</a> or <a class="xref" href="../xsoft/xscreensaver.md" title="XScreenSaver-6.15">XScreenSaver-6.15</a>, <a class="xref" href="../general/shared-mime-info.md" title="shared-mime-info-2.4">shared-mime-info-2.4</a> and <a class="xref" href="../postlfs/polkit-gnome.md" title="polkit-gnome-0.105">polkit-gnome-0.105</a>
 
 #### Required Runtime
 
-[Xfdesktop-4.20.2](xfdesktop.md "Xfdesktop-4.20.2"){.xref}
-:::::
+<a class="xref" href="xfdesktop.md" title="Xfdesktop-4.20.2">Xfdesktop-4.20.2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Xfce4 Session {#installation-of-xfce4-session .sect2}
+<div class="installation" lang="en">
+## Installation of Xfce4 Session {#installation-of-xfce4-session}
 
-Install [Xfce4 Session]{.application} by running the following commands:
+Install <span class="application">Xfce4 Session</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr       \
             --sysconfdir=/etc   \
             --disable-legacy-sm &&
@@ -75,40 +75,40 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-legacy-sm`*: This switch disables legacy session management which isn't necessary on modern system.
-:::
+</div>
 
-::: {.configuration lang="en"}
-## Configuring Xfce4 Session {#configuring-xfce4-session .sect2}
+<div class="configuration" lang="en">
+## Configuring Xfce4 Session {#configuring-xfce4-session}
 
-There are several optional run time dependencies for [Xfce4]{.application}: [dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref}, [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref}, [hicolor-icon-theme-0.18](../x/hicolor-icon-theme.md "hicolor-icon-theme-0.18"){.xref}, [OpenSSH-10.3p1](../postlfs/openssh.md "OpenSSH-10.3p1"){.xref}, and [xinit-1.4.4](../x/xinit.md "xinit-1.4.4"){.xref}
+There are several optional run time dependencies for <span class="application">Xfce4</span>: <a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a>, <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a>, <a class="xref" href="../x/hicolor-icon-theme.md" title="hicolor-icon-theme-0.18">hicolor-icon-theme-0.18</a>, <a class="xref" href="../postlfs/openssh.md" title="OpenSSH-10.3p1">OpenSSH-10.3p1</a>, and <a class="xref" href="../x/xinit.md" title="xinit-1.4.4">xinit-1.4.4</a>
 
-When building an [Xfce4]{.application} package, some configuration files are installed in `/usr/share/applications`{.filename}, `/usr/share/icons`{.filename}, and `/usr/share/mime`{.filename}. In order to use those files in your [Xfce4]{.application} session, you need to update various databases. Do that by running, as the `root`{.systemitem} user (you need to have the recommended dependencies installed):
+When building an <span class="application">Xfce4</span> package, some configuration files are installed in <code class="filename">/usr/share/applications</code>, <code class="filename">/usr/share/icons</code>, and <code class="filename">/usr/share/mime</code>. In order to use those files in your <span class="application">Xfce4</span> session, you need to update various databases. Do that by running, as the <code class="systemitem">root</code> user (you need to have the recommended dependencies installed):
 
-``` root
+```bash
 update-desktop-database &&
 update-mime-database /usr/share/mime
 ```
-:::
+</div>
 
-::: {.starting lang="en"}
-## Starting Xfce4 {#starting-xfce4 .sect2}
+<div class="starting" lang="en">
+## Starting Xfce4 {#starting-xfce4}
 
-You can start [Xfce4]{.application} from a TTY using [xinit-1.4.4](../x/xinit.md "xinit-1.4.4"){.xref}, or from a graphical display manager, such as [lightdm-1.32.0](../x/lightdm.md "lightdm-1.32.0"){.xref}.
+You can start <span class="application">Xfce4</span> from a TTY using <a class="xref" href="../x/xinit.md" title="xinit-1.4.4">xinit-1.4.4</a>, or from a graphical display manager, such as <a class="xref" href="../x/lightdm.md" title="lightdm-1.32.0">lightdm-1.32.0</a>.
 
-To start [Xfce4]{.application} using [xinit-1.4.4](../x/xinit.md "xinit-1.4.4"){.xref}, run the following commands:
+To start <span class="application">Xfce4</span> using <a class="xref" href="../x/xinit.md" title="xinit-1.4.4">xinit-1.4.4</a>, run the following commands:
 
-``` userinput
+```bash
 cat > ~/.xinitrc << "EOF"
 dbus-launch --exit-with-x11 startxfce4
 EOF
@@ -116,57 +116,57 @@ EOF
 startx
 ```
 
-The X session starts on the first unused virtual terminal, normally vt7. You can switch to another vt[*n*]{.emphasis} simultaneously pressing the keys Ctrl-Alt-F[*n*]{.emphasis} ([*n*]{.emphasis}=1, 2, ...). To switch back to the X session, normally started at vt7, use Ctrl-Alt-F7. The vt where the command [**startx**]{.command} was executed will display many messages, including X starting messages, applications automatically started with the session, and eventually, some warning and error messages. You may prefer to redirect those messages to a log file, which not only will keep the initial vt uncluttered, but can also be used for debugging purposes. This can be done starting X with:
+The X session starts on the first unused virtual terminal, normally vt7. You can switch to another vt<span class="emphasis"><em>n</em></span> simultaneously pressing the keys Ctrl-Alt-F<span class="emphasis"><em>n</em></span> (<span class="emphasis"><em>n</em></span>=1, 2, ...). To switch back to the X session, normally started at vt7, use Ctrl-Alt-F7. The vt where the command <span class="command"><strong>startx</strong></span> was executed will display many messages, including X starting messages, applications automatically started with the session, and eventually, some warning and error messages. You may prefer to redirect those messages to a log file, which not only will keep the initial vt uncluttered, but can also be used for debugging purposes. This can be done starting X with:
 
-``` userinput
+```bash
 startx &> ~/.x-session-errors
 ```
 
 When shutting down or rebooting, the shutdown messages appear on the vt where X was running. If you wish to see those messages, simultaneously press keys Alt-F7 (assuming that X was running on vt7).
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [startxfce4, xfce4-session, xfce4-session-logout, xfce4-session-settings, and xflock4]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">startxfce4, xfce4-session, xfce4-session-logout, xfce4-session-settings, and xflock4</span>
+</div>
 
-::: seg
-**Installed Library:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/xfce4/session]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/xfce4/session</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------
-  []{#startxfce4}[[**startxfce4**]{.command}]{.term}                           is a script responsible for starting an [Xfce]{.application} session.
-  []{#xfce4-session-prog}[[**xfce4-session**]{.command}]{.term}                starts up the [Xfce]{.application} Desktop Environment
-  []{#xfce4-session-logout}[[**xfce4-session-logout**]{.command}]{.term}       logs out from [Xfce]{.application}
-  []{#xfce4-session-settings}[[**xfce4-session-settings**]{.command}]{.term}   is a [GTK+ 3]{.application} GUI which allows you to alter your preferences for your [Xfce Session]{.application}
+  <a id="startxfce4"></a><span class="command"><span class="term"><strong>startxfce4</strong></span></span>                           is a script responsible for starting an <span class="application">Xfce</span> session.
+  <a id="xfce4-session-prog"></a><span class="command"><span class="term"><strong>xfce4-session</strong></span></span>                starts up the <span class="application">Xfce</span> Desktop Environment
+  <a id="xfce4-session-logout"></a><span class="command"><span class="term"><strong>xfce4-session-logout</strong></span></span>       logs out from <span class="application">Xfce</span>
+  <a id="xfce4-session-settings"></a><span class="command"><span class="term"><strong>xfce4-session-settings</strong></span></span>   is a <span class="application">GTK+ 3</span> GUI which allows you to alter your preferences for your <span class="application">Xfce Session</span>
   ---------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xfwm4.md "Xfwm4-4.20.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xfwm4.md "Xfwm4-4.20.0")
 
     Xfwm4-4.20.0
 
--   [Next](xfce-apps.md "Xfce Applications"){accesskey="n"}
+-   [Next](xfce-apps.md "Xfce Applications")
 
     Xfce Applications
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

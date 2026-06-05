@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){accesskey="p"}
+-   [Prev](xdg-desktop-portal.md "xdg-desktop-portal-1.20.4")
 
     xdg-desktop-portal-1.20.4
 
--   [Next](dm.md "Display Managers"){accesskey="n"}
+-   [Next](dm.md "Display Managers")
 
     Display Managers
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xdg-desktop-portal-gtk}xdg-desktop-portal-gtk-1.15.3 {#xdg-desktop-portal-gtk-1.15.3 .sect1}
+# xdg-desktop-portal-gtk-1.15.3 {#xdg-desktop-portal-gtk-1.15.3}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to xdg-desktop-portal-gtk {#introduction-to-xdg-desktop-portal-gtk .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to xdg-desktop-portal-gtk {#introduction-to-xdg-desktop-portal-gtk}
 
-[xdg-desktop-portal-gtk]{.application} is a backend for [xdg-desktop-portal]{.application}, that is using GTK and various pieces of GNOME infrastructure.
+<span class="application">xdg-desktop-portal-gtk</span> is a backend for <span class="application">xdg-desktop-portal</span>, that is using GTK and various pieces of GNOME infrastructure.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.15.3/xdg-desktop-portal-gtk-1.15.3.tar.xz](https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.15.3/xdg-desktop-portal-gtk-1.15.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.15.3/xdg-desktop-portal-gtk-1.15.3.tar.xz">https://github.com/flatpak/xdg-desktop-portal-gtk/releases/download/1.15.3/xdg-desktop-portal-gtk-1.15.3.tar.xz</a>
 
 -   Download MD5 sum: 2d6e2ad2953c386a1db11618fa3803b0
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.6 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### xdg-desktop-portal-gtk Dependencies
 
 #### Required
 
-[GTK-3.24.52](gtk3.md "GTK-3.24.52"){.xref} and [xdg-desktop-portal-1.20.4](xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){.xref}
+<a class="xref" href="gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> and <a class="xref" href="xdg-desktop-portal.md" title="xdg-desktop-portal-1.20.4">xdg-desktop-portal-1.20.4</a>
 
 #### Recommended
 
-[gnome-desktop-44.5](../gnome/gnome-desktop.md "gnome-desktop-44.5"){.xref} (for compiling more portal interfaces)
-:::::
+<a class="xref" href="../gnome/gnome-desktop.md" title="gnome-desktop-44.5">gnome-desktop-44.5</a> (for compiling more portal interfaces)
+</div>
 
-::: {.installation lang="en"}
-## Installation of xdg-desktop-portal-gtk {#installation-of-xdg-desktop-portal-gtk .sect2}
+<div class="installation" lang="en">
+## Installation of xdg-desktop-portal-gtk {#installation-of-xdg-desktop-portal-gtk}
 
-Install [xdg-desktop-portal-gtk]{.application} by running the following commands:
+Install <span class="application">xdg-desktop-portal-gtk</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,50 +72,50 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`-D wallpaper=disabled`{.option}: Use this option if you have not installed the recommended dependency [gnome-desktop-44.5](../gnome/gnome-desktop.md "gnome-desktop-44.5"){.xref}.
-:::
+<code class="option">-D wallpaper=disabled</code>: Use this option if you have not installed the recommended dependency <a class="xref" href="../gnome/gnome-desktop.md" title="gnome-desktop-44.5">gnome-desktop-44.5</a>.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [one daemon in /usr/libexec]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">one daemon in /usr/libexec</span>
+</div>
 
-::: seg
-**Installed Library:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/xdg-desktop-portal (if no other [xdg-desktop-portal]{.application} backend is installed)]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="application">/usr/share/xdg-desktop-portal (if no other <span class="segbody">xdg-desktop-portal</span> backend is installed)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xdg-desktop-portal.md "xdg-desktop-portal-1.20.4")
 
     xdg-desktop-portal-1.20.4
 
--   [Next](dm.md "Display Managers"){accesskey="n"}
+-   [Next](dm.md "Display Managers")
 
     Display Managers
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

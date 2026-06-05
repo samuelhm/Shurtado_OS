@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](gst10-plugins-bad.md "gst-plugins-bad-1.28.3"){accesskey="p"}
+-   [Prev](gst10-plugins-bad.md "gst-plugins-bad-1.28.3")
 
     gst-plugins-bad-1.28.3
 
--   [Next](gst-plugins-rs.md "gst-plugins-rs-1.28.3"){accesskey="n"}
+-   [Next](gst-plugins-rs.md "gst-plugins-rs-1.28.3")
 
     gst-plugins-rs-1.28.3
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gst10-plugins-ugly}gst-plugins-ugly-1.28.3 {#gst-plugins-ugly-1.28.3 .sect1}
+# gst-plugins-ugly-1.28.3 {#gst-plugins-ugly-1.28.3}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GStreamer Ugly Plug-ins {#introduction-to-gstreamer-ugly-plug-ins .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GStreamer Ugly Plug-ins {#introduction-to-gstreamer-ugly-plug-ins}
 
-The [GStreamer Ugly Plug-ins]{.application} is a set of plug-ins considered by the [GStreamer]{.application} developers to have good quality and correct functionality, but distributing them might pose problems. The license on either the plug-ins or the supporting libraries might not be how the [GStreamer]{.application} developers would like. The code might be widely known to present patent problems.
+The <span class="application">GStreamer Ugly Plug-ins</span> is a set of plug-ins considered by the <span class="application">GStreamer</span> developers to have good quality and correct functionality, but distributing them might pose problems. The license on either the plug-ins or the supporting libraries might not be how the <span class="application">GStreamer</span> developers would like. The code might be widely known to present patent problems.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.3.tar.xz](https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.3.tar.xz">https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.3.tar.xz</a>
 
 -   Download MD5 sum: 5206f9131dbafaa9758c878d2e43a00f
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 7.0 MB (with tests)
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
+</div>
 
 ### GStreamer Ugly Plug-ins Dependencies
 
 #### Required
 
-[gst-plugins-base-1.28.3](gst10-plugins-base.md "gst-plugins-base-1.28.3"){.xref}
+<a class="xref" href="gst10-plugins-base.md" title="gst-plugins-base-1.28.3">gst-plugins-base-1.28.3</a>
 
 #### Recommended
 
-[liba52-0.8.0](liba52.md "Liba52-0.8.0"){.xref} (needed to play DVD's), [libdvdread-7.0.1](libdvdread.md "libdvdread-7.0.1"){.xref}, and [x264-20250815](x264.md "x264-20250815"){.xref}
+<a class="xref" href="liba52.md" title="Liba52-0.8.0">liba52-0.8.0</a> (needed to play DVD's), <a class="xref" href="libdvdread.md" title="libdvdread-7.0.1">libdvdread-7.0.1</a>, and <a class="xref" href="x264.md" title="x264-20250815">x264-20250815</a>
 
 #### Optional
 
-[libmpeg2-0.5.1](libmpeg2.md "libmpeg2-0.5.1"){.xref}, [libcdio-2.1.0](libcdio.md "libcdio-2.1.0"){.xref} (for CD-ROM drive access), [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}, [hotdoc](https://pypi.org/project/hotdoc/){.ulink}, [libsidplay](https://packages.debian.org/source/sid/libsidplay){.ulink}, and [Orc](https://gstreamer.freedesktop.org/src/orc/){.ulink}
-:::::
+<a class="xref" href="libmpeg2.md" title="libmpeg2-0.5.1">libmpeg2-0.5.1</a>, <a class="xref" href="libcdio.md" title="libcdio-2.1.0">libcdio-2.1.0</a> (for CD-ROM drive access), <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>, <a class="ulink" href="https://pypi.org/project/hotdoc/">hotdoc</a>, <a class="ulink" href="https://packages.debian.org/source/sid/libsidplay">libsidplay</a>, and <a class="ulink" href="https://gstreamer.freedesktop.org/src/orc/">Orc</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of GStreamer Ugly Plug-ins {#installation-of-gstreamer-ugly-plug-ins .sect2}
+<div class="installation" lang="en">
+## Installation of GStreamer Ugly Plug-ins {#installation-of-gstreamer-ugly-plug-ins}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 If you need a plugin for a given dependency, that dependency needs to be installed before this package.
-:::
+</div>
 
-Install [GStreamer Ugly Plug-ins]{.application} by running the following commands:
+Install <span class="application">GStreamer Ugly Plug-ins</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -85,54 +85,54 @@ meson setup ..            \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
 *`-D gpl=enabled`*: Without this switch, plugins with dependencies on (A)GPL licensed libraries are not built.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Several plugins under /usr/lib/gstreamer-1.0]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">Several plugins under /usr/lib/gstreamer-1.0</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gst10-plugins-bad.md "gst-plugins-bad-1.28.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gst10-plugins-bad.md "gst-plugins-bad-1.28.3")
 
     gst-plugins-bad-1.28.3
 
--   [Next](gst-plugins-rs.md "gst-plugins-rs-1.28.3"){accesskey="n"}
+-   [Next](gst-plugins-rs.md "gst-plugins-rs-1.28.3")
 
     gst-plugins-rs-1.28.3
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

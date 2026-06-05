@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](geocode-glib.md "geocode-glib-3.26.4"){accesskey="p"}
+-   [Prev](geocode-glib.md "geocode-glib-3.26.4")
 
     geocode-glib-3.26.4
 
--   [Next](gnome-autoar.md "gnome-autoar-0.4.5"){accesskey="n"}
+-   [Next](gnome-autoar.md "gnome-autoar-0.4.5")
 
     gnome-autoar-0.4.5
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gjs}Gjs-1.88.0 {#gjs-1.88.0 .sect1}
+# Gjs-1.88.0 {#gjs-1.88.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Gjs {#introduction-to-gjs .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Gjs {#introduction-to-gjs}
 
-[Gjs]{.application} is a set of Javascript bindings for [GNOME]{.application}.
+<span class="application">Gjs</span> is a set of Javascript bindings for <span class="application">GNOME</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gjs/1.88/gjs-1.88.0.tar.xz](https://download.gnome.org/sources/gjs/1.88/gjs-1.88.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gjs/1.88/gjs-1.88.0.tar.xz">https://download.gnome.org/sources/gjs/1.88/gjs-1.88.0.tar.xz</a>
 
 -   Download MD5 sum: 475ce5d243713eb12d221a88fc6721de
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 331 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (with tests; with parallelism=4)
-:::
+</div>
 
 ### Gjs Dependencies
 
 #### Required
 
-[Cairo-1.18.4](../x/cairo.md "Cairo-1.18.4"){.xref}, [dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), and [SpiderMonkey from Firefox-140.11.0](../general/spidermonkey.md "SpiderMonkey from firefox-140.11.0"){.xref}
+<a class="xref" href="../x/cairo.md" title="Cairo-1.18.4">Cairo-1.18.4</a>, <a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), and <a class="xref" href="../general/spidermonkey.md" title="SpiderMonkey from firefox-140.11.0">SpiderMonkey from Firefox-140.11.0</a>
 
 #### Optional (for tests)
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, and [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, and <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>
 
 #### Optional
 
-[DTrace](https://dtrace.org/about/){.ulink}, [LCOV](https://github.com/linux-test-project/lcov){.ulink}, [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink}, and [Systemtap](https://sourceware.org/systemtap){.ulink}
-:::::
+<a class="ulink" href="https://dtrace.org/about/">DTrace</a>, <a class="ulink" href="https://github.com/linux-test-project/lcov">LCOV</a>, <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a>, and <a class="ulink" href="https://sourceware.org/systemtap">Systemtap</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Gjs {#installation-of-gjs .sect2}
+<div class="installation" lang="en">
+## Installation of Gjs {#installation-of-gjs}
 
-Install [Gjs]{.application} by running the following commands:
+Install <span class="application">Gjs</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir gjs-build &&
 cd    gjs-build &&
 
@@ -77,65 +77,65 @@ meson setup --prefix=/usr          \
 ninja
 ```
 
-To test the results, ensure both [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} and [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref} are installed and issue: [**ninja test**]{.command} in a graphical session.
+To test the results, ensure both <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> and <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a> are installed and issue: <span class="command"><strong>ninja test</strong></span> in a graphical session.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`--wrap-mode=nofallback`*: This switch prevents [**meson**]{.command} from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
+*`--wrap-mode=nofallback`*: This switch prevents <span class="command"><strong>meson</strong></span> from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
 
-`-D profiler=disabled`{.option}: This switch prevents building the profiler backend even if [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink} is installed.
-:::
+<code class="option">-D profiler=disabled</code>: This switch prevents building the profiler backend even if <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a> is installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gjs (symlink) and gjs-console]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gjs (symlink) and gjs-console</span>
+</div>
 
-::: seg
-**Installed Library:** [libgjs.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgjs.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gjs-1.0, /usr/lib/gjs, /usr/libexec/installed-tests/gjs, /usr/share/gjs-1.0, and /usr/share/installed-tests/gjs]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gjs-1.0, /usr/lib/gjs, /usr/libexec/installed-tests/gjs, /usr/share/gjs-1.0, and /usr/share/installed-tests/gjs</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ---------------------------------------------------------------
-  []{#gjs-console}[[**gjs-console**]{.command}]{.term}   contains a console to run [JavaScript]{.application} commands
-  []{#libgjs}[`libgjs.so`{.filename}]{.term}             contains the [GNOME]{.application} JavaScript bindings
+  <a id="gjs-console"></a><span class="command"><span class="term"><strong>gjs-console</strong></span></span>   contains a console to run <span class="application">JavaScript</span> commands
+  <a id="libgjs"></a><span class="term"><code class="filename">libgjs.so</code></span>             contains the <span class="application">GNOME</span> JavaScript bindings
   ------------------------------------------------------ ---------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](geocode-glib.md "geocode-glib-3.26.4"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](geocode-glib.md "geocode-glib-3.26.4")
 
     geocode-glib-3.26.4
 
--   [Next](gnome-autoar.md "gnome-autoar-0.4.5"){accesskey="n"}
+-   [Next](gnome-autoar.md "gnome-autoar-0.4.5")
 
     gnome-autoar-0.4.5
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](kmix.md "KMix-26.04.1"){accesskey="p"}
+-   [Prev](kmix.md "KMix-26.04.1")
 
     KMix-26.04.1
 
--   [Next](konsole.md "Konsole-26.04.1"){accesskey="n"}
+-   [Next](konsole.md "Konsole-26.04.1")
 
     Konsole-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#khelpcenter}khelpcenter-26.04.1 {#khelpcenter-26.04.1 .sect1}
+# khelpcenter-26.04.1 {#khelpcenter-26.04.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Khelpcenter {#introduction-to-khelpcenter .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Khelpcenter {#introduction-to-khelpcenter}
 
-[Khelpcenter]{.application} is an application that shows documentation for KDE Applications as well as displays manual and info pages.
+<span class="application">Khelpcenter</span> is an application that shows documentation for KDE Applications as well as displays manual and info pages.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/khelpcenter-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/khelpcenter-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/khelpcenter-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/khelpcenter-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: 63b4932a0a02bf34a6b49a75bf1732bc
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 26 MB
 
 -   Estimated build time: 0.2 SBU (using parallelism=4)
-:::
+</div>
 
 ### Khelpcenter Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, and [xapian-2.0.0](../general/xapian.md "Xapian-2.0.0"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, and <a class="xref" href="../general/xapian.md" title="Xapian-2.0.0">xapian-2.0.0</a>
 
 #### Recommended
 
-[qtwebengine-6.11.1](../x/qtwebengine.md "QtWebEngine-6.11.1"){.xref}
+<a class="xref" href="../x/qtwebengine.md" title="QtWebEngine-6.11.1">qtwebengine-6.11.1</a>
 
 #### Optional (Runtime)
 
-[kio-extras-26.04.1](kio-extras.md "kio-extras-26.04.1"){.xref} (for displaying man pages and info pages)
-:::::
+<a class="xref" href="kio-extras.md" title="kio-extras-26.04.1">kio-extras-26.04.1</a> (for displaying man pages and info pages)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Khelpcenter {#installation-of-khelpcenter .sect2}
+<div class="installation" lang="en">
+## Installation of Khelpcenter {#installation-of-khelpcenter}
 
-Install [khelpcenter]{.application} by running the following commands:
+Install <span class="application">khelpcenter</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -79,52 +79,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [khelpcenter]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">khelpcenter</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/share/khelpcenter, \$KF6_PREFIX/share/doc/HTML/\*/{khelpcenter,fundamentals,onlinehelp}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/share/khelpcenter, \$KF6_PREFIX/share/doc/HTML/\*/{khelpcenter,fundamentals,onlinehelp}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------- -----------------------------------------
-  []{#khelpcenter-prog}[[**khelpcenter**]{.command}]{.term}   is the help viewer for KDE applications
+  <a id="khelpcenter-prog"></a><span class="command"><span class="term"><strong>khelpcenter</strong></span></span>   is the help viewer for KDE applications
   ----------------------------------------------------------- -----------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kmix.md "KMix-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kmix.md "KMix-26.04.1")
 
     KMix-26.04.1
 
--   [Next](konsole.md "Konsole-26.04.1"){accesskey="n"}
+-   [Next](konsole.md "Konsole-26.04.1")
 
     Konsole-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

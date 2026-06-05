@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](glew.md "GLEW-2.3.1"){accesskey="p"}
+-   [Prev](glew.md "GLEW-2.3.1")
 
     GLEW-2.3.1
 
--   [Next](glu.md "GLU-9.0.3"){accesskey="n"}
+-   [Next](glu.md "GLU-9.0.3")
 
     GLU-9.0.3
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#glslang}glslang-16.3.0 {#glslang-16.3.0 .sect1}
+# glslang-16.3.0 {#glslang-16.3.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Glslang {#introduction-to-glslang .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Glslang {#introduction-to-glslang}
 
-The [Glslang]{.application} package contains an frontend and validator for OpenGL, OpenGL ES, and Vulkan shaders.
+The <span class="application">Glslang</span> package contains an frontend and validator for OpenGL, OpenGL ES, and Vulkan shaders.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/KhronosGroup/glslang/archive/16.3.0/glslang-16.3.0.tar.gz](https://github.com/KhronosGroup/glslang/archive/16.3.0/glslang-16.3.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/KhronosGroup/glslang/archive/16.3.0/glslang-16.3.0.tar.gz">https://github.com/KhronosGroup/glslang/archive/16.3.0/glslang-16.3.0.tar.gz</a>
 
 -   Download MD5 sum: 0349062b47bb09f153b748506740711b
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 186 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (with parallelism=4; with tests)
-:::
+</div>
 
 ### Glslang Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref} and [SPIRV-Tools-1.4.350.0](../general/spirv-tools.md "SPIRV-Tools-1.4.350.0"){.xref}
-:::::
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a> and <a class="xref" href="../general/spirv-tools.md" title="SPIRV-Tools-1.4.350.0">SPIRV-Tools-1.4.350.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Glslang {#installation-of-glslang .sect2}
+<div class="installation" lang="en">
+## Installation of Glslang {#installation-of-glslang}
 
-Install [Glslang]{.application} by running the following commands:
+Install <span class="application">Glslang</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -71,66 +71,66 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D ALLOW_EXTERNAL_SPIRV_TOOLS=ON`*: This switch allows the build system to use the system-installed copy of [SPIRV-Tools-1.4.350.0](../general/spirv-tools.md "SPIRV-Tools-1.4.350.0"){.xref}, instead of downloading and installing it's own copy.
+*`-D ALLOW_EXTERNAL_SPIRV_TOOLS=ON`*: This switch allows the build system to use the system-installed copy of <a class="xref" href="../general/spirv-tools.md" title="SPIRV-Tools-1.4.350.0">SPIRV-Tools-1.4.350.0</a>, instead of downloading and installing it's own copy.
 
 *`-D BUILD_SHARED_LIBS=ON`*: This switch builds shared versions of the libraries, and does not install static versions of them.
 
 *`-D GLSLANG_TESTS=ON`*: This switch builds the tests for the package.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [glslang and glslang-validator (symlink to glslang)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">glslang and glslang-validator (symlink to glslang)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libglslang.so, libglslang-default-resource-limits.so, and libSPIRV.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libglslang.so, libglslang-default-resource-limits.so, and libSPIRV.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/glslang and /usr/lib/cmake/glslang]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/glslang and /usr/lib/cmake/glslang</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------
-  []{#glslang-prog}[[**glslang**]{.command}]{.term}    provides a front end and validator for OpenGL, OpenGL ES, and Vulkan shaders
-  []{#libglslang}[`libglslang.so`{.filename}]{.term}   contains functions that provide a front-end and validator for OpenGL, OpenGL ES, and Vulkan shaders to other programs
-  []{#libSPIRV}[`libSPIRV.so`{.filename}]{.term}       provides a front-end and generator for SPIR-V binaries
+  <a id="glslang-prog"></a><span class="command"><span class="term"><strong>glslang</strong></span></span>    provides a front end and validator for OpenGL, OpenGL ES, and Vulkan shaders
+  <a id="libglslang"></a><span class="term"><code class="filename">libglslang.so</code></span>   contains functions that provide a front-end and validator for OpenGL, OpenGL ES, and Vulkan shaders to other programs
+  <a id="libSPIRV"></a><span class="term"><code class="filename">libSPIRV.so</code></span>       provides a front-end and generator for SPIR-V binaries
   ---------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](glew.md "GLEW-2.3.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](glew.md "GLEW-2.3.1")
 
     GLEW-2.3.1
 
--   [Next](glu.md "GLU-9.0.3"){accesskey="n"}
+-   [Next](glu.md "GLU-9.0.3")
 
     GLU-9.0.3
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

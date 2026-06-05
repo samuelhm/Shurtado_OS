@@ -1,31 +1,31 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part VI. Graphical Components
 
--   [Prev](x.md "Graphical Components"){accesskey="p"}
+-   [Prev](x.md "Graphical Components")
 
     Graphical Components
 
--   [Next](xorg7.md "Introduction to Xorg-7"){accesskey="n"}
+-   [Next](xorg7.md "Introduction to Xorg-7")
 
     Introduction to Xorg-7
 
--   [Up](x.md "Part VI. Graphical Components"){accesskey="u"}
+-   [Up](x.md "Part VI. Graphical Components")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#x-window-system}Graphical Environments {#graphical-environments .chapter}
+# Graphical Environments {#graphical-environments}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains instructions to build and configure a graphical user environment.
 
-For a long time the only graphical environment usable with GNU/Linux has been the [*X Window System*]{.emphasis}. It uses a client/server model which allows writing applications completely independent of the graphical hardware. This has the drawback that accessing modern hardware acceleration is difficult, so another approach named [*Wayland*]{.emphasis} is developed. It is a simpler replacement for X, easier to develop and maintain, using the OpenGL framework. The main desktop environments GNOME and KDE have been ported to it.
+For a long time the only graphical environment usable with GNU/Linux has been the <span class="emphasis"><em>X Window System</em></span>. It uses a client/server model which allows writing applications completely independent of the graphical hardware. This has the drawback that accessing modern hardware acceleration is difficult, so another approach named <span class="emphasis"><em>Wayland</em></span> is developed. It is a simpler replacement for X, easier to develop and maintain, using the OpenGL framework. The main desktop environments GNOME and KDE have been ported to it.
 
 This chapter provides the basic components of the X Window System and Wayland. For X, the chosen implementation is Xorg, which is a modular implementation and requires more than 100 packages to be installed. The distribution of Xorg is given a release number by the developers, in this case Xorg-7. Individual packages are updated as needed without changing this number.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Introduction to Xorg-7](xorg7.md)
@@ -57,19 +57,19 @@ This chapter provides the basic components of the X Window System and Wayland. F
 -   [Tuning Fontconfig](tuning-fontconfig.md)
 -   [TTF and OTF fonts](TTF-and-OTF-fonts.md)
 -   [Xorg Legacy](x7legacy.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](x.md "Graphical Components"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](x.md "Graphical Components")
 
     Graphical Components
 
--   [Next](xorg7.md "Introduction to Xorg-7"){accesskey="n"}
+-   [Next](xorg7.md "Introduction to Xorg-7")
 
     Introduction to Xorg-7
 
--   [Up](x.md "Part VI. Graphical Components"){accesskey="u"}
+-   [Up](x.md "Part VI. Graphical Components")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

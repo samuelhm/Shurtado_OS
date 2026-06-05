@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 16. Networking Utilities
 
--   [Prev](network-manager-applet.md "network-manager-applet-1.34.0"){accesskey="p"}
+-   [Prev](network-manager-applet.md "network-manager-applet-1.34.0")
 
     network-manager-applet-1.34.0
 
--   [Next](traceroute.md "Traceroute-2.1.6"){accesskey="n"}
+-   [Next](traceroute.md "Traceroute-2.1.6")
 
     Traceroute-2.1.6
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#nmap}Nmap-7.99 {#nmap-7.99 .sect1}
+# Nmap-7.99 {#nmap-7.99}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::::: {.package lang="en"}
-## Introduction to Nmap {#introduction-to-nmap .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Nmap {#introduction-to-nmap}
 
-[Nmap]{.application} is a utility for network exploration and security auditing. It supports ping scanning, port scanning and TCP/IP fingerprinting.
+<span class="application">Nmap</span> is a utility for network exploration and security auditing. It supports ping scanning, port scanning and TCP/IP fingerprinting.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://nmap.org/dist/nmap-7.99.tar.bz2](https://nmap.org/dist/nmap-7.99.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://nmap.org/dist/nmap-7.99.tar.bz2">https://nmap.org/dist/nmap-7.99.tar.bz2</a>
 
 -   Download MD5 sum: 187db52073c5a1bcbc579e0efbc2c0bd
 
@@ -44,43 +44,43 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 190 MB (with tests)
 
 -   Estimated build time: 0.5 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Recommended patch: [https://www.linuxfromscratch.org/patches/blfs/svn/nmap-7.99-openssl4_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/nmap-7.99-openssl4_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Recommended patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/nmap-7.99-openssl4_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/nmap-7.99-openssl4_fixes-1.patch</a>
+</div>
 
 ### Nmap Dependencies
 
 #### Required
 
-[build-1.5.0](../general/python-modules.md#pypa-build "build-1.5.0"){.xref}
+<a class="xref" href="../general/python-modules.md#pypa-build" title="build-1.5.0">build-1.5.0</a>
 
 #### Recommended
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If the [PyGObject3]{.application} module is not installed, you'd have to skip the command making the build system use the LFS [Setuptools]{.application} installation and then an Internet connection would be needed. The other packages are recommended because if they're not installed, the build process will compile and link against its own (often older) version.
-:::
+If the <span class="application">PyGObject3</span> module is not installed, you'd have to skip the command making the build system use the LFS <span class="application">Setuptools</span> installation and then an Internet connection would be needed. The other packages are recommended because if they're not installed, the build process will compile and link against its own (often older) version.
+</div>
 
-[liblinear-250](../general/liblinear.md "liblinear-250"){.xref}, [libpcap-1.10.6](libpcap.md "libpcap-1.10.6"){.xref}, [libssh2-1.11.1](../general/libssh2.md "libssh2-1.11.1"){.xref}, [Lua-5.4.8](../general/lua.md "Lua-5.4.8"){.xref}, and [PyGObject-3.56.3](../general/python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref}
+<a class="xref" href="../general/liblinear.md" title="liblinear-250">liblinear-250</a>, <a class="xref" href="libpcap.md" title="libpcap-1.10.6">libpcap-1.10.6</a>, <a class="xref" href="../general/libssh2.md" title="libssh2-1.11.1">libssh2-1.11.1</a>, <a class="xref" href="../general/lua.md" title="Lua-5.4.8">Lua-5.4.8</a>, and <a class="xref" href="../general/python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a>
 
 #### Optional
 
-[libdnet](http://code.google.com/p/libdnet/){.ulink} and [setuptools-gettext](https://pypi.org/project/setuptools-gettext/){.ulink} (currently [useless](https://github.com/pypa/build/issues/729){.ulink})
-:::::::
+<a class="ulink" href="http://code.google.com/p/libdnet/">libdnet</a> and <a class="ulink" href="https://pypi.org/project/setuptools-gettext/">setuptools-gettext</a> (currently <a class="ulink" href="https://github.com/pypa/build/issues/729">useless</a>)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Nmap {#installation-of-nmap .sect2}
+<div class="installation" lang="en">
+## Installation of Nmap {#installation-of-nmap}
 
-Make the build system use the [Setuptools]{.application} Python module from LFS instead of downloading a copy from the Internet, and install the Python wheels already created when running the [**make**]{.command} instead of rebuilding them again on [**make install**]{.command}:
+Make the build system use the <span class="application">Setuptools</span> Python module from LFS instead of downloading a copy from the Internet, and install the Python wheels already created when running the <span class="command"><strong>make</strong></span> instead of rebuilding them again on <span class="command"><strong>make install</strong></span>:
 
-``` userinput
+```bash
 sed -ri Makefile.in \
     -e 's#-m build#& --no-isolation#'  \
     -e '/pip install/s#(ZENMAP|NDIFF)DIR\)/#&dist/*.whl#'
@@ -88,95 +88,95 @@ sed -ri Makefile.in \
 
 Remove a useless dependency on setuptools-gettext:
 
-``` userinput
+```bash
 sed 's/, "setuptools-gettext"//' -i zenmap/pyproject.toml
 ```
 
 Fix a packaging error that makes the build fail:
 
-``` userinput
+```bash
 sed '/py-modules/s/f"/&, "Version"/' -i ndiff/pyproject.toml
 ```
 
 Fix compiling this package against OpenSSL-4:
 
-``` userinput
+```bash
 patch -Np1 -i ../nmap-7.99-openssl4_fixes-1.patch
 ```
 
-Install [Nmap]{.application} by running the following commands:
+Install <span class="application">Nmap</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
 If you wish to run the test suite, run the following command:
 
-``` userinput
+```bash
 sed -e '/import imp/d'                \
     -e 's/^ndiff = .*$/import ndiff/' \
     -i ndiff/ndifftest.py
 ```
 
-Tests need a graphical session and to be run as the `root`{.systemitem} user. To test the results, issue:
+Tests need a graphical session and to be run as the <code class="systemitem">root</code> user. To test the results, issue:
 
-``` root
+```bash
 make check
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ncat, ndiff, nmap, nping, zenmap, and 2 symlinks to zenmap: nmapfe and xnmap]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ncat, ndiff, nmap, nping, zenmap, and 2 symlinks to zenmap: nmapfe and xnmap</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/python3.14/site-packages/{radialnet,zenmapCore,zenmapGUI,zenmap-7.99.dist-info}, and /usr/share/{ncat,nmap,zenmap}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/python3.14/site-packages/{radialnet,zenmapCore,zenmapGUI,zenmap-7.99.dist-info}, and /usr/share/{ncat,nmap,zenmap}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
-  []{#ncat}[[**ncat**]{.command}]{.term}                           is a utility for reading and writing data across networks from the command line
-  []{#ndiff}[[**ndiff**]{.command}]{.term}                         is a tool to aid in the comparison of Nmap scans
-  []{#nmap-prog}[[**nmap**]{.command}]{.term}                      is a utility for network exploration and security auditing. It supports ping scanning, port scanning and TCP/IP fingerprinting
-  []{#nping}[[**nping**]{.command}]{.term}                         is an open-source tool for network packet generation, response analysis and response time measurement
-  []{#uninstall_ndiff}[[**uninstall_ndiff**]{.command}]{.term}     is a Python script to uninstall [**ndiff**]{.command}
-  []{#uninstall_zenmap}[[**uninstall_zenmap**]{.command}]{.term}   is a Python script to uninstall [**zenmap**]{.command}
-  []{#zenmap}[[**zenmap**]{.command}]{.term}                       is a Python based graphical nmap frontend viewer
+  <a id="ncat"></a><span class="command"><span class="term"><strong>ncat</strong></span></span>                           is a utility for reading and writing data across networks from the command line
+  <a id="ndiff"></a><span class="command"><span class="term"><strong>ndiff</strong></span></span>                         is a tool to aid in the comparison of Nmap scans
+  <a id="nmap-prog"></a><span class="command"><span class="term"><strong>nmap</strong></span></span>                      is a utility for network exploration and security auditing. It supports ping scanning, port scanning and TCP/IP fingerprinting
+  <a id="nping"></a><span class="command"><span class="term"><strong>nping</strong></span></span>                         is an open-source tool for network packet generation, response analysis and response time measurement
+  <a id="uninstall_ndiff"></a><span class="command"><span class="term"><strong>uninstall_ndiff</strong></span></span>     is a Python script to uninstall <span class="command"><strong>ndiff</strong></span>
+  <a id="uninstall_zenmap"></a><span class="command"><span class="term"><strong>uninstall_zenmap</strong></span></span>   is a Python script to uninstall <span class="command"><strong>zenmap</strong></span>
+  <a id="zenmap"></a><span class="command"><span class="term"><strong>zenmap</strong></span></span>                       is a Python based graphical nmap frontend viewer
   ---------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](network-manager-applet.md "network-manager-applet-1.34.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](network-manager-applet.md "network-manager-applet-1.34.0")
 
     network-manager-applet-1.34.0
 
--   [Next](traceroute.md "Traceroute-2.1.6"){accesskey="n"}
+-   [Next](traceroute.md "Traceroute-2.1.6")
 
     Traceroute-2.1.6
 
--   [Up](netutils.md "Chapter 16. Networking Utilities"){accesskey="u"}
+-   [Up](netutils.md "Chapter 16. Networking Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

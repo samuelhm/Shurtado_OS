@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](cbindgen.md "Cbindgen-0.29.3"){accesskey="p"}
+-   [Prev](cbindgen.md "Cbindgen-0.29.3")
 
     Cbindgen-0.29.3
 
--   [Next](cmake.md "CMake-4.3.3"){accesskey="n"}
+-   [Next](cmake.md "CMake-4.3.3")
 
     CMake-4.3.3
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#clisp}Clisp-2.49.95 {#clisp-2.49.95 .sect1}
+# Clisp-2.49.95 {#clisp-2.49.95}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Clisp {#introduction-to-clisp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Clisp {#introduction-to-clisp}
 
-[GNU Clisp]{.application} is a Common Lisp implementation which includes an interpreter, compiler, debugger, and many extensions.
+<span class="application">GNU Clisp</span> is a Common Lisp implementation which includes an interpreter, compiler, debugger, and many extensions.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-This package has not had a 'stable' release since 2010. The package here was created from the [upstream git repository](https://gitlab.com/gnu-clisp/clisp){.ulink} in order to enable it to be built with gcc-15. The most recent commit was May 2025.
-:::
+This package has not had a 'stable' release since 2010. The package here was created from the <a class="ulink" href="https://gitlab.com/gnu-clisp/clisp">upstream git repository</a> in order to enable it to be built with gcc-15. The most recent commit was May 2025.
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://anduin.linuxfromscratch.org/BLFS/clisp/clisp-2.49.95.tar.xz](https://anduin.linuxfromscratch.org/BLFS/clisp/clisp-2.49.95.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/clisp/clisp-2.49.95.tar.xz">https://anduin.linuxfromscratch.org/BLFS/clisp/clisp-2.49.95.tar.xz</a>
 
 -   Download MD5 sum: e3b3ba6b3432280e4d4a766404f02d6f
 
@@ -52,25 +52,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 146 MB (with tests; 34 MB installed)
 
 -   Estimated build time: 0.6 SBU (Using parallelism=4; add 0.3 SBU for tests)
-:::
+</div>
 
 ### Clisp Dependencies
 
 #### Recommended
 
-[libsigsegv-2.15](libsigsegv.md "libsigsegv-2.15"){.xref}
+<a class="xref" href="libsigsegv.md" title="libsigsegv-2.15">libsigsegv-2.15</a>
 
 #### Optional
 
-[libnsl-2.0.1](../basicnet/libnsl.md "libnsl-2.0.1"){.xref} and [libffcall](https://www.gnu.org/software/libffcall/){.ulink}
-::::::
+<a class="xref" href="../basicnet/libnsl.md" title="libnsl-2.0.1">libnsl-2.0.1</a> and <a class="ulink" href="https://www.gnu.org/software/libffcall/">libffcall</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Clisp {#installation-of-clisp .sect2}
+<div class="installation" lang="en">
+## Installation of Clisp {#installation-of-clisp}
 
-Install [Clisp]{.application} by running the following commands:
+Install <span class="application">Clisp</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -80,63 +80,63 @@ cd    build &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--docdir=/usr/share/doc/clisp-2.49.95`*: this switch forces the HTML documentation to be installed into a versioned directory.
 
-`--with-libffcall-prefix=/usr`{.option}: use this to tell [**configure**]{.command} that you have installed the optional [libffcall]{.package} package.
-:::
+<code class="option">--with-libffcall-prefix=/usr</code>: use this to tell <span class="command"><strong>configure</strong></span> that you have installed the optional <span class="package">libffcall</span> package.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [clisp and clisp-link]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">clisp and clisp-link</span>
+</div>
 
-::: seg
-**Installed Libraries:** [various static libraries in `/usr/lib/clisp-2.49.95+/base/`{.filename}]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">various static libraries in <code class="filename">/usr/lib/clisp-2.49.95+/base/</code></span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/clisp-2.49.95+, /usr/share/doc/clisp-2.49.95, and /usr/share/emacs/site-lisp]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/clisp-2.49.95+, /usr/share/doc/clisp-2.49.95, and /usr/share/emacs/site-lisp</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ------------------------------------------------------------
-  []{#clisp-prog}[[**clisp**]{.command}]{.term}        is an ANSI Common Lisp compiler, interpreter, and debugger
-  []{#clisp-link}[[**clisp-link**]{.command}]{.term}   is used to link an external module to clisp
+  <a id="clisp-prog"></a><span class="command"><span class="term"><strong>clisp</strong></span></span>        is an ANSI Common Lisp compiler, interpreter, and debugger
+  <a id="clisp-link"></a><span class="command"><span class="term"><strong>clisp-link</strong></span></span>   is used to link an external module to clisp
   ---------------------------------------------------- ------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](cbindgen.md "Cbindgen-0.29.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](cbindgen.md "Cbindgen-0.29.3")
 
     Cbindgen-0.29.3
 
--   [Next](cmake.md "CMake-4.3.3"){accesskey="n"}
+-   [Next](cmake.md "CMake-4.3.3")
 
     CMake-4.3.3
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](lib.md "Graphical Environment Libraries"){accesskey="p"}
+-   [Prev](lib.md "Graphical Environment Libraries")
 
     Graphical Environment Libraries
 
--   [Next](at-spi2-core.md "at-spi2-core-2.60.4"){accesskey="n"}
+-   [Next](at-spi2-core.md "at-spi2-core-2.60.4")
 
     at-spi2-core-2.60.4
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#atkmm}Atkmm-2.28.5 {#atkmm-2.28.5 .sect1}
+# Atkmm-2.28.5 {#atkmm-2.28.5}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Atkmm {#introduction-to-atkmm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Atkmm {#introduction-to-atkmm}
 
-[Atkmm]{.application} is the official C++ interface for the ATK accessibility toolkit library.
+<span class="application">Atkmm</span> is the official C++ interface for the ATK accessibility toolkit library.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.5.tar.xz](https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.5.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.5.tar.xz">https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.5.tar.xz</a>
 
 -   Download MD5 sum: c9bdc196eed368c274177b0c1caf140c
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### Atkmm Dependencies
 
 #### Required
 
-[at-spi2-core-2.60.4](at-spi2-core.md "at-spi2-core-2.60.4"){.xref} and [GLibmm-2.66.8](../general/glibmm.md "GLibmm-2.66.8"){.xref}
-:::::
+<a class="xref" href="at-spi2-core.md" title="at-spi2-core-2.60.4">at-spi2-core-2.60.4</a> and <a class="xref" href="../general/glibmm.md" title="GLibmm-2.66.8">GLibmm-2.66.8</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Atkmm {#installation-of-atkmm .sect2}
+<div class="installation" lang="en">
+## Installation of Atkmm {#installation-of-atkmm}
 
-Install [Atkmm]{.application} by running the following commands:
+Install <span class="application">Atkmm</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,52 +68,52 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libatkmm-1.6.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libatkmm-1.6.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{include,lib}/atkmm-1.6 and /usr/share/{devhelp/books/atkmm-1.6,doc/atkmm-2.28.5}]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{include,lib}/atkmm-1.6 and /usr/share/{devhelp/books/atkmm-1.6,doc/atkmm-2.28.5}</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ----------------------------------------------
-  []{#libatkmm-1}[`libatkmm-1.6.so`{.filename}]{.term}   contains the [ATK]{.application} API classes
+  <a id="libatkmm-1"></a><span class="term"><code class="filename">libatkmm-1.6.so</code></span>   contains the <span class="application">ATK</span> API classes
   ------------------------------------------------------ ----------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lib.md "Graphical Environment Libraries"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lib.md "Graphical Environment Libraries")
 
     Graphical Environment Libraries
 
--   [Next](at-spi2-core.md "at-spi2-core-2.60.4"){accesskey="n"}
+-   [Next](at-spi2-core.md "at-spi2-core-2.60.4")
 
     at-spi2-core-2.60.4
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

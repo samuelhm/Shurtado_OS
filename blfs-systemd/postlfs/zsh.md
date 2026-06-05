@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 7. Shells
 
--   [Prev](tcsh.md "Tcsh-6.24.16"){accesskey="p"}
+-   [Prev](tcsh.md "Tcsh-6.24.16")
 
     Tcsh-6.24.16
 
--   [Next](virtualization.md "Virtualization"){accesskey="n"}
+-   [Next](virtualization.md "Virtualization")
 
     Virtualization
 
--   [Up](shells.md "Chapter 7. Shells"){accesskey="u"}
+-   [Up](shells.md "Chapter 7. Shells")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#zsh}zsh-5.9.1 {#zsh-5.9.1 .sect1}
+# zsh-5.9.1 {#zsh-5.9.1}
 
-::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to zsh {#introduction-to-zsh .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to zsh {#introduction-to-zsh}
 
-The [zsh]{.application} package contains a command interpreter (shell) usable as an interactive login shell and as a shell script command processor. Of the standard shells, [zsh]{.application} most closely resembles [ksh]{.application} but includes many enhancements.
+The <span class="application">zsh</span> package contains a command interpreter (shell) usable as an interactive login shell and as a shell script command processor. Of the standard shells, <span class="application">zsh</span> most closely resembles <span class="application">ksh</span> but includes many enhancements.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.zsh.org/pub/zsh-5.9.1.tar.xz](https://www.zsh.org/pub/zsh-5.9.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.zsh.org/pub/zsh-5.9.1.tar.xz">https://www.zsh.org/pub/zsh-5.9.1.tar.xz</a>
 
 -   Download MD5 sum: 5492bfe9a4afacdb2d1d81c27a1d44fa
 
@@ -44,36 +44,36 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 48 MB (includes documentation and tests)
 
 -   Estimated build time: 1.6 SBU (Using parallelism=4; includes documentation and tests)
-:::
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-When there is a new [zsh]{.application} release, the old files shown above are moved to a new server directory: [https://www.zsh.org/pub/old/](https://www.zsh.org/pub/old/){.ulink}.
-:::
+When there is a new <span class="application">zsh</span> release, the old files shown above are moved to a new server directory: <a class="ulink" href="https://www.zsh.org/pub/old/">https://www.zsh.org/pub/old/</a>.
+</div>
 
 ### zsh Dependencies
 
 #### Optional
 
-[Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref} and [yodl](https://fbb-git.gitlab.io/yodl/){.ulink}
-::::::
+<a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a> and <a class="ulink" href="https://fbb-git.gitlab.io/yodl/">yodl</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of zsh {#installation-of-zsh .sect2}
+<div class="installation" lang="en">
+## Installation of zsh {#installation-of-zsh}
 
-The documentation files contain references to zsh configuration files in `/etc`{.filename}, but we'll use `/etc/zsh`{.filename} to hold these configuration files instead. The build system will update those references if the [yodl]{.application} package is available, but it's out of the scope of BLFS. As a result, we need to fix the references manually:
+The documentation files contain references to zsh configuration files in <code class="filename">/etc</code>, but we'll use <code class="filename">/etc/zsh</code> to hold these configuration files instead. The build system will update those references if the <span class="application">yodl</span> package is available, but it's out of the scope of BLFS. As a result, we need to fix the references manually:
 
-``` userinput
+```bash
 sed -e 's|/etc/z|/etc/zsh/z|g' \
     -i Doc/*.*
 ```
 
-Install [zsh]{.application} by running the following commands:
+Install <span class="application">zsh</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr            \
             --sysconfdir=/etc/zsh    \
             --enable-etcdir=/etc/zsh \
@@ -87,107 +87,107 @@ makeinfo  Doc/zsh.texi --plaintext -o zsh.txt  &&
 makeinfo  Doc/zsh.texi --html --no-split --no-headers -o zsh.md
 ```
 
-If you have [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} installed, you can build the documentation in PDF format by issuing the following command:
+If you have <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> installed, you can build the documentation in PDF format by issuing the following command:
 
-``` userinput
+```bash
 texi2pdf  Doc/zsh.texi -o Doc/zsh.pdf
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install                                                    &&
 make infodir=/usr/share/info install.info                       &&
 make htmldir=/usr/share/doc/zsh-5.9.1/html install.md         &&
 install -v -m644 zsh.{html,txt} Etc/FAQ /usr/share/doc/zsh-5.9.1
 ```
 
-If you built the PDF format of the documentation, install it by issuing the following command as the `root`{.systemitem} user:
+If you built the PDF format of the documentation, install it by issuing the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m644 Doc/zsh.pdf /usr/share/doc/zsh-5.9.1
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--sysconfdir=/etc/zsh`* and *`--enable-etcdir=/etc/zsh`*: These parameters are used so that all the [zsh]{.application} configuration files are consolidated into the `/etc/zsh`{.filename} directory. Omit these parameters if you wish to retain historical compatibility by having all the files located in the `/etc`{.filename} directory.
+*`--sysconfdir=/etc/zsh`* and *`--enable-etcdir=/etc/zsh`*: These parameters are used so that all the <span class="application">zsh</span> configuration files are consolidated into the <code class="filename">/etc/zsh</code> directory. Omit these parameters if you wish to retain historical compatibility by having all the files located in the <code class="filename">/etc</code> directory.
 
 *`--enable-cap`*: This option enables POSIX capabilities.
 
-*`--enable-gdbm`*: This option enables the use of the [GDBM]{.application} library.
+*`--enable-gdbm`*: This option enables the use of the <span class="application">GDBM</span> library.
 
-*`--enable-pcre`*: This option allows zsh to use the [PCRE2]{.application} regular expression library in shell builtins.
-:::
+*`--enable-pcre`*: This option allows zsh to use the <span class="application">PCRE2</span> regular expression library in shell builtins.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring zsh {#configuring-zsh .sect2}
+<div class="configuration" lang="en">
+## Configuring zsh {#configuring-zsh}
 
-::: {.sect3 lang="en"}
-### []{#zsh-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-There are a whole host of configuration files for [zsh]{.application} including `/etc/zsh/zshenv`{.filename}, `/etc/zsh/zprofile`{.filename}, `/etc/zsh/zshrc`{.filename}, `/etc/zsh/zlogin`{.filename} and `/etc/zsh/zlogout`{.filename}. You can find more information on these in the [zsh(1)](https://man.archlinux.org/man/zsh.1){.ulink} and related manual pages.
+There are a whole host of configuration files for <span class="application">zsh</span> including <code class="filename">/etc/zsh/zshenv</code>, <code class="filename">/etc/zsh/zprofile</code>, <code class="filename">/etc/zsh/zshrc</code>, <code class="filename">/etc/zsh/zlogin</code> and <code class="filename">/etc/zsh/zlogout</code>. You can find more information on these in the <a class="ulink" href="https://man.archlinux.org/man/zsh.1">zsh(1)</a> and related manual pages.
 
-The first time zsh is executed, you will be prompted by messages asking several questions. The answers will be used to create a `~/.zshrc`{.filename} file. If you wish to run these questions again, run [**zsh /usr/share/zsh/5.9.1/functions/zsh-newuser-install -f**]{.command}.
+The first time zsh is executed, you will be prompted by messages asking several questions. The answers will be used to create a <code class="filename">~/.zshrc</code> file. If you wish to run these questions again, run <span class="command"><strong>zsh /usr/share/zsh/5.9.1/functions/zsh-newuser-install -f</strong></span>.
 
-There are several built-in advanced prompts. In the [**zsh**]{.command} shell, start advanced prompt support with [**autoload -U promptinit**]{.command}, then [**promptinit**]{.command}. Available prompt names are listed with [**prompt -l**]{.command}. Select a particular one with [**prompt `<prompt-name>`{.literal}**]{.command}. Display all available prompts with [**prompt -p**]{.command}. Except for the list and display commands above, you can insert the other ones in `~/.zshrc`{.filename} to be automatically executed when the shell starts, with the prompt you chose.
-:::
+There are several built-in advanced prompts. In the <span class="command"><strong>zsh</strong></span> shell, start advanced prompt support with <span class="command"><strong>autoload -U promptinit</strong></span>, then <span class="command"><strong>promptinit</strong></span>. Available prompt names are listed with <span class="command"><strong>prompt -l</strong></span>. Select a particular one with <span class="command"><strong>prompt <code class="literal"><prompt-name></code></strong></span>. Display all available prompts with <span class="command"><strong>prompt -p</strong></span>. Except for the list and display commands above, you can insert the other ones in <code class="filename">~/.zshrc</code> to be automatically executed when the shell starts, with the prompt you chose.
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Update `/etc/shells`{.filename} to include the [zsh]{.application} shell program names (as the `root`{.systemitem} user):
+Update <code class="filename">/etc/shells</code> to include the <span class="application">zsh</span> shell program names (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 cat >> /etc/shells << "EOF"
 /bin/zsh
 EOF
 ```
-:::
-:::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [zsh and zsh-5.9.1 (hardlinked to each other)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">zsh and zsh-5.9.1 (hardlinked to each other)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Numerous plugin helper modules under /usr/lib/zsh/5.9.1/]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">Numerous plugin helper modules under /usr/lib/zsh/5.9.1/</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{lib,share}/zsh and /usr/share/doc/zsh-5.9.1]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{lib,share}/zsh and /usr/share/doc/zsh-5.9.1</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Description
 
   ------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#zsh-prog}[[**zsh**]{.command}]{.term}   is a shell which has command-line editing, built-in spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and a host of other features
+  <a id="zsh-prog"></a><span class="command"><span class="term"><strong>zsh</strong></span></span>   is a shell which has command-line editing, built-in spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and a host of other features
   ------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](tcsh.md "Tcsh-6.24.16"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](tcsh.md "Tcsh-6.24.16")
 
     Tcsh-6.24.16
 
--   [Next](virtualization.md "Virtualization"){accesskey="n"}
+-   [Next](virtualization.md "Virtualization")
 
     Virtualization
 
--   [Up](shells.md "Chapter 7. Shells"){accesskey="u"}
+-   [Up](shells.md "Chapter 7. Shells")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

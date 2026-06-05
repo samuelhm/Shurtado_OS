@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](json-c.md "JSON-C-0.18"){accesskey="p"}
+-   [Prev](json-c.md "JSON-C-0.18")
 
     JSON-C-0.18
 
--   [Next](keyutils.md "keyutils-1.6.3"){accesskey="n"}
+-   [Next](keyutils.md "keyutils-1.6.3")
 
     keyutils-1.6.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#json-glib}JSON-GLib-1.10.8 {#json-glib-1.10.8 .sect1}
+# JSON-GLib-1.10.8 {#json-glib-1.10.8}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to JSON GLib {#introduction-to-json-glib .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to JSON GLib {#introduction-to-json-glib}
 
-The [JSON GLib]{.application} package is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format described by RFC 4627.
+The <span class="application">JSON GLib</span> package is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format described by RFC 4627.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/json-glib/1.10/json-glib-1.10.8.tar.xz](https://download.gnome.org/sources/json-glib/1.10/json-glib-1.10.8.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/json-glib/1.10/json-glib-1.10.8.tar.xz">https://download.gnome.org/sources/json-glib/1.10/json-glib-1.10.8.tar.xz</a>
 
 -   Download MD5 sum: 95c3d5dd56d4ada808480739889b75bc
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 15 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### JSON-GLib Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (GObject Introspection required if building GNOME)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection required if building GNOME)
 
 #### Optional
 
-[docutils-0.23](python-modules.md#docutils "docutils-0.23"){.xref} and [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}
-:::::
+<a class="xref" href="python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> and <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of JSON GLib {#installation-of-json-glib .sect2}
+<div class="installation" lang="en">
+## Installation of JSON GLib {#installation-of-json-glib}
 
-Install [JSON GLib]{.application} by running the following commands:
+Install <span class="application">JSON GLib</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,79 +70,79 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-If [docutils-0.23](python-modules.md#docutils "docutils-0.23"){.xref} is installed, build the man pages:
+If <a class="xref" href="python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> is installed, build the man pages:
 
-``` userinput
+```bash
 meson configure -D man=true &&
 ninja
 ```
 
-If [Gi-DocGen-2026.1](python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} is installed, build the API documentation:
+If <a class="xref" href="python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> is installed, build the API documentation:
 
-``` userinput
+```bash
 sed "/json_docdir =/s|$| / 'json-glib-1.10.8'|" -i ../doc/meson.build &&
 meson configure -D documentation=enabled &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. One test, node, is known to fail.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. One test, node, is known to fail.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D gtk_doc=disabled`{.option}: Add this option if you have [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref} installed and do not wish to generate the API documentation.
-:::
+<code class="option">-D gtk_doc=disabled</code>: Add this option if you have <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> installed and do not wish to generate the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [json-glib-format and json-glib-validate]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">json-glib-format and json-glib-validate</span>
+</div>
 
-::: seg
-**Installed Library:** [libjson-glib-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libjson-glib-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{include,libexec,share{,/installed-tests}/json-glib-1.0} and /usr/share/gtk-doc/html/json-glib]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{include,libexec,share{,/installed-tests}/json-glib-1.0} and /usr/share/gtk-doc/html/json-glib</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- ----------------------------------------------------------
-  []{#json-glib-format}[[**json-glib-format**]{.command}]{.term}       is a simple command line interface to format JSON data
-  []{#json-glib-validate}[[**json-glib-validate**]{.command}]{.term}   is a simple command line interface to validate JSON data
-  []{#libjson-glib-1}[`libjson-glib-1.0.so`{.filename}]{.term}         contains the [JSON GLib]{.application} API functions
+  <a id="json-glib-format"></a><span class="command"><span class="term"><strong>json-glib-format</strong></span></span>       is a simple command line interface to format JSON data
+  <a id="json-glib-validate"></a><span class="command"><span class="term"><strong>json-glib-validate</strong></span></span>   is a simple command line interface to validate JSON data
+  <a id="libjson-glib-1"></a><span class="term"><code class="filename">libjson-glib-1.0.so</code></span>         contains the <span class="application">JSON GLib</span> API functions
   -------------------------------------------------------------------- ----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](json-c.md "JSON-C-0.18"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](json-c.md "JSON-C-0.18")
 
     JSON-C-0.18
 
--   [Next](keyutils.md "keyutils-1.6.3"){accesskey="n"}
+-   [Next](keyutils.md "keyutils-1.6.3")
 
     keyutils-1.6.3
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

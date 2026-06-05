@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../preface/organization.md "Organization"){accesskey="p"}
+-   [Prev](../preface/organization.md "Organization")
 
     Organization
 
--   [Next](welcome.md "Welcome to BLFS"){accesskey="n"}
+-   [Next](welcome.md "Welcome to BLFS")
 
     Welcome to BLFS
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#introduction}Introduction {#introduction .part}
+# Introduction {#introduction}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [1. Welcome to BLFS](welcome.md)
@@ -44,19 +44,19 @@
     -   [Libraries: Static or shared?](libraries.md)
     -   [Locale Related Issues](locale-issues.md)
     -   [Going Beyond BLFS](beyond.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../preface/organization.md "Organization"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../preface/organization.md "Organization")
 
     Organization
 
--   [Next](welcome.md "Welcome to BLFS"){accesskey="n"}
+-   [Next](welcome.md "Welcome to BLFS")
 
     Welcome to BLFS
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

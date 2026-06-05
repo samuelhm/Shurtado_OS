@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 10. Graphics and Font Libraries
 
--   [Prev](mypaint-brushes.md "mypaint-brushes-2.0.2"){accesskey="p"}
+-   [Prev](mypaint-brushes.md "mypaint-brushes-2.0.2")
 
     mypaint-brushes-2.0.2
 
--   [Next](opencv.md "opencv-4.13.0"){accesskey="n"}
+-   [Next](opencv.md "opencv-4.13.0")
 
     opencv-4.13.0
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#newt}newt-0.52.25 {#newt-0.52.25 .sect1}
+# newt-0.52.25 {#newt-0.52.25}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to newt {#introduction-to-newt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to newt {#introduction-to-newt}
 
-[Newt]{.application} is a programming library for color text mode, widget based user interfaces. It can be used to add stacked windows, entry widgets, checkboxes, radio buttons, labels, plain text fields, scrollbars, etc., to text mode user interfaces. [Newt]{.application} is based on the S-Lang library.
+<span class="application">Newt</span> is a programming library for color text mode, widget based user interfaces. It can be used to add stacked windows, entry widgets, checkboxes, radio buttons, labels, plain text fields, scrollbars, etc., to text mode user interfaces. <span class="application">Newt</span> is based on the S-Lang library.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://releases.pagure.org/newt/newt-0.52.25.tar.gz](https://releases.pagure.org/newt/newt-0.52.25.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://releases.pagure.org/newt/newt-0.52.25.tar.gz">https://releases.pagure.org/newt/newt-0.52.25.tar.gz</a>
 
 -   Download MD5 sum: cca66ed1d8774fb9e3f6a33525de416d
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.0 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Newt Dependencies
 
 #### Required
 
-[popt-1.19](popt.md "Popt-1.19"){.xref} and [slang-2.3.3](slang.md "slang-2.3.3"){.xref}
+<a class="xref" href="popt.md" title="Popt-1.19">popt-1.19</a> and <a class="xref" href="slang.md" title="slang-2.3.3">slang-2.3.3</a>
 
 #### Recommended
 
-[GPM-1.20.7](gpm.md "GPM-1.20.7"){.xref} (runtime)
-:::::
+<a class="xref" href="gpm.md" title="GPM-1.20.7">GPM-1.20.7</a> (runtime)
+</div>
 
-::: {.installation lang="en"}
-## Installation of newt {#installation-of-newt .sect2}
+<div class="installation" lang="en">
+## Installation of newt {#installation-of-newt}
 
-Install [newt]{.application} by running the following command:
+Install <span class="application">newt</span> by running the following command:
 
-``` userinput
+```bash
 sed -e '/install -m 644 $(LIBNEWT)/ s/^/#/' \
     -e '/$(LIBNEWT):/,/rv/ s/^/#/'          \
     -e 's/$(LIBNEWT)/$(LIBNEWTSH)/g'        \
@@ -75,63 +75,63 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -e ... -i Makefile.in**]{.command}: Disables installation of a static library.
+<span class="command"><strong>sed -e ... -i Makefile.in</strong></span>: Disables installation of a static library.
 
 *`--with-gpm-support`*: This switch enables mouse support for newt applications through GPM.
 
 *`--with-python=python3.14`*: By giving explicitly the name of the directory where python modules reside, this switch prevents building the python2 module.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [whiptail]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">whiptail</span>
+</div>
 
-::: seg
-**Installed Library:** [libnewt.so, whiptcl.so, and /usr/lib/python3.14/site-packages/\_snack.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libnewt.so, whiptcl.so, and /usr/lib/python3.14/site-packages/\_snack.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------- ------------------------------------------------------------------
-  []{#whiptail-prog}[[**whiptail**]{.command}]{.term}   displays dialog boxes from shell scripts
-  []{#libnewt-lib}[`libnewt.so`{.filename}]{.term}      is the library for color text mode, widget based user interfaces
+  <a id="whiptail-prog"></a><span class="command"><span class="term"><strong>whiptail</strong></span></span>   displays dialog boxes from shell scripts
+  <a id="libnewt-lib"></a><span class="term"><code class="filename">libnewt.so</code></span>      is the library for color text mode, widget based user interfaces
   ----------------------------------------------------- ------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](mypaint-brushes.md "mypaint-brushes-2.0.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](mypaint-brushes.md "mypaint-brushes-2.0.2")
 
     mypaint-brushes-2.0.2
 
--   [Next](opencv.md "opencv-4.13.0"){accesskey="n"}
+-   [Next](opencv.md "opencv-4.13.0")
 
     opencv-4.13.0
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

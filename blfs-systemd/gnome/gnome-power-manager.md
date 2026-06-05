@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](gnome-nettool.md "gnome-nettool-42.0"){accesskey="p"}
+-   [Prev](gnome-nettool.md "gnome-nettool-42.0")
 
     gnome-nettool-42.0
 
--   [Next](gnome-system-monitor.md "gnome-system-monitor-50.0"){accesskey="n"}
+-   [Next](gnome-system-monitor.md "gnome-system-monitor-50.0")
 
     gnome-system-monitor-50.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-power-manager}gnome-power-manager-50.0 {#gnome-power-manager-50.0 .sect1}
+# gnome-power-manager-50.0 {#gnome-power-manager-50.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Power Manager {#introduction-to-gnome-power-manager .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Power Manager {#introduction-to-gnome-power-manager}
 
-The [GNOME Power Manager]{.application} package contains a tool used to report on power management on the system.
+The <span class="application">GNOME Power Manager</span> package contains a tool used to report on power management on the system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-power-manager/50/gnome-power-manager-50.0.tar.xz](https://download.gnome.org/sources/gnome-power-manager/50/gnome-power-manager-50.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-power-manager/50/gnome-power-manager-50.0.tar.xz">https://download.gnome.org/sources/gnome-power-manager/50/gnome-power-manager-50.0.tar.xz</a>
 
 -   Download MD5 sum: 541c76d6000fced2a3cc6bcc88f1d860
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.2 MB
 
 -   Estimated build time: less than 0.1 SBU (with tests)
-:::
+</div>
 
 ### GNOME Power Manager Dependencies
 
 #### Required
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} and [UPower-1.91.2](../general/upower.md "UPower-1.91.2"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> and <a class="xref" href="../general/upower.md" title="UPower-1.91.2">UPower-1.91.2</a>
 
 #### Optional
 
-[appstream-glib-0.8.3](../general/appstream-glib.md "appstream-glib-0.8.3"){.xref} and [DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}
-:::::
+<a class="xref" href="../general/appstream-glib.md" title="appstream-glib-0.8.3">appstream-glib-0.8.3</a> and <a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Power Manager {#installation-of-gnome-power-manager .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Power Manager {#installation-of-gnome-power-manager}
 
-Install [GNOME Power Manager]{.application} by running the following commands:
+Install <span class="application">GNOME Power Manager</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,60 +70,60 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gnome-power-statistics]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gnome-power-statistics</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------------- ---------------------------------------------------------------
-  []{#gnome-power-statistics}[[**gnome-power-statistics**]{.command}]{.term}   is used to visualize the power consumption of laptop hardware
+  <a id="gnome-power-statistics"></a><span class="command"><span class="term"><strong>gnome-power-statistics</strong></span></span>   is used to visualize the power consumption of laptop hardware
   ---------------------------------------------------------------------------- ---------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-nettool.md "gnome-nettool-42.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-nettool.md "gnome-nettool-42.0")
 
     gnome-nettool-42.0
 
--   [Next](gnome-system-monitor.md "gnome-system-monitor-50.0"){accesskey="n"}
+-   [Next](gnome-system-monitor.md "gnome-system-monitor-50.0")
 
     gnome-system-monitor-50.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

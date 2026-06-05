@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](wayland-protocols.md "Wayland-Protocols-1.48"){accesskey="p"}
+-   [Prev](wayland-protocols.md "Wayland-Protocols-1.48")
 
     Wayland-Protocols-1.48
 
--   [Next](xapian.md "Xapian-2.0.0"){accesskey="n"}
+-   [Next](xapian.md "Xapian-2.0.0")
 
     Xapian-2.0.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#wv}wv-1.2.9 {#wv-1.2.9 .sect1}
+# wv-1.2.9 {#wv-1.2.9}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to wv {#introduction-to-wv .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to wv {#introduction-to-wv}
 
-The [wv]{.application} package contains tools for reading information from an MS Word document.
+The <span class="application">wv</span> package contains tools for reading information from an MS Word document.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://anduin.linuxfromscratch.org/BLFS/wv/wv-1.2.9.tar.gz](https://anduin.linuxfromscratch.org/BLFS/wv/wv-1.2.9.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/wv/wv-1.2.9.tar.gz">https://anduin.linuxfromscratch.org/BLFS/wv/wv-1.2.9.tar.gz</a>
 
 -   Download MD5 sum: dbccf2e9f747e50c913b7e3d126b73f7
 
@@ -44,84 +44,84 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 25 MB
 
 -   Estimated build time: 0.4 SBU
-:::
+</div>
 
 ### wv Dependencies
 
 #### Required
 
-[libgsf-1.14.58](libgsf.md "libgsf-1.14.58"){.xref} and [libpng-1.6.58](libpng.md "libpng-1.6.58"){.xref}
+<a class="xref" href="libgsf.md" title="libgsf-1.14.58">libgsf-1.14.58</a> and <a class="xref" href="libpng.md" title="libpng-1.6.58">libpng-1.6.58</a>
 
 #### Optional
 
-[libwmf](https://wvware.sourceforge.net/libwmf.md){.ulink}
-:::::
+<a class="ulink" href="https://wvware.sourceforge.net/libwmf.md">libwmf</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of wv {#installation-of-wv .sect2}
+<div class="installation" lang="en">
+## Installation of wv {#installation-of-wv}
 
-Install [wv]{.application} by running the following commands:
+Install <span class="application">wv</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
 This package does not have a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [wvSummary and several other wv\* programs which are deprecated in favour of abiword: see [https://wvware.sourceforge.net/](https://wvware.sourceforge.net/){.ulink}]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <a class="ulink" href="https://wvware.sourceforge.net/">wvSummary and several other wv\* programs which are deprecated in favour of abiword: see <span class="segbody">https://wvware.sourceforge.net/</a></span>
+</div>
 
-::: seg
-**Installed Library:** [libwv-1.2.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libwv-1.2.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/wv]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/wv</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- -----------------------------------------------------------
-  []{#wv-prog}[[**wvSummary**]{.command}]{.term}     displays the summary information from an MS Word document
-  []{#libwv-1.2}[`libwv-1.2.so`{.filename}]{.term}   provides functions to access MS Word documents
+  <a id="wv-prog"></a><span class="command"><span class="term"><strong>wvSummary</strong></span></span>     displays the summary information from an MS Word document
+  <a id="libwv-1.2"></a><span class="term"><code class="filename">libwv-1.2.so</code></span>   provides functions to access MS Word documents
   -------------------------------------------------- -----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](wayland-protocols.md "Wayland-Protocols-1.48"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](wayland-protocols.md "Wayland-Protocols-1.48")
 
     Wayland-Protocols-1.48
 
--   [Next](xapian.md "Xapian-2.0.0"){accesskey="n"}
+-   [Next](xapian.md "Xapian-2.0.0")
 
     Xapian-2.0.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

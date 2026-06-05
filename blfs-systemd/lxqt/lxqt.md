@@ -1,29 +1,29 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../xfce/xfce4-pulseaudio-plugin.md "xfce4-pulseaudio-plugin-0.5.1"){accesskey="p"}
+-   [Prev](../xfce/xfce4-pulseaudio-plugin.md "xfce4-pulseaudio-plugin-0.5.1")
 
     xfce4-pulseaudio-plugin-0.5.1
 
--   [Next](lxqt-desktop.md "LXQt Desktop"){accesskey="n"}
+-   [Next](lxqt-desktop.md "LXQt Desktop")
 
     LXQt Desktop
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt}LXQt {#lxqt .part}
+# LXQt {#lxqt}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [37. LXQt Desktop](lxqt-desktop.md)
 
     -   [LXQt Desktop Pre-Install Instructions](pre-install.md)
-    -   [KF6, Plasma, and Misc Dependencies]{.dummy}
+    -   <span class="dummy">KF6, Plasma, and Misc Dependencies</span>
     -   [kwindowsystem-6.26.0 for lxqt](lxqt-kwindowsystem.md)
     -   [kconfig-6.26.0 for lxqt](lxqt-kconfig.md)
     -   [solid-6.26.0 for lxqt](lxqt-solid.md)
@@ -32,7 +32,7 @@
     -   [libkscreen-6.6.5 for lxqt](lxqt-libkscreen.md)
     -   [layer-shell-qt-6.6.5 for lxqt](lxqt-layer-shell-qt.md)
     -   [muparser-2.3.5](muparser.md)
-    -   [LXQt Desktop Components]{.dummy}
+    -   <span class="dummy">LXQt Desktop Components</span>
     -   [lxqt-build-tools-2.4.0](lxqt-build-tools.md)
     -   [libdbusmenu-lxqt-0.4.0](libdbusmenu-lxqt.md)
     -   [libqtxdg-4.4.0](libqtxdg.md)
@@ -72,19 +72,19 @@
     -   [qtermwidget-2.4.0](qtermwidget.md)
     -   [qterminal-2.4.0](qterminal.md)
     -   [screengrab-3.2.0](screengrab.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../xfce/xfce4-pulseaudio-plugin.md "xfce4-pulseaudio-plugin-0.5.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../xfce/xfce4-pulseaudio-plugin.md "xfce4-pulseaudio-plugin-0.5.1")
 
     xfce4-pulseaudio-plugin-0.5.1
 
--   [Next](lxqt-desktop.md "LXQt Desktop"){accesskey="n"}
+-   [Next](lxqt-desktop.md "LXQt Desktop")
 
     LXQt Desktop
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

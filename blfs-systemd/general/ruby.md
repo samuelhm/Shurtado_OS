@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](python-dependencies.md "Python Dependencies"){accesskey="p"}
+-   [Prev](python-dependencies.md "Python Dependencies")
 
     Python Dependencies
 
--   [Next](rust.md "Rustc-1.96.0"){accesskey="n"}
+-   [Next](rust.md "Rustc-1.96.0")
 
     Rustc-1.96.0
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#ruby}Ruby-4.0.5 {#ruby-4.0.5 .sect1}
+# Ruby-4.0.5 {#ruby-4.0.5}
 
-::::::::::::::::::: {.sect1 lang="en"}
-::::::: {.package lang="en"}
-## Introduction to Ruby {#introduction-to-ruby .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Ruby {#introduction-to-ruby}
 
-The [Ruby]{.application} package contains the [Ruby]{.application} development environment. This is useful for object-oriented scripting.
+The <span class="application">Ruby</span> package contains the <span class="application">Ruby</span> development environment. This is useful for object-oriented scripting.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.5.tar.xz](https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.5.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.5.tar.xz">https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.5.tar.xz</a>
 
 -   Download MD5 sum: 89be441b4ece4bda98b1d8deca3c63d6
 
@@ -44,53 +44,53 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.8 GB (with C API docs and tests)
 
 -   Estimated build time: 1.7 SBU (with C API docs; using parallelism=4; add 0.5 SBU for tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/ruby-4.0.5-openssl4_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/ruby-4.0.5-openssl4_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/ruby-4.0.5-openssl4_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/ruby-4.0.5-openssl4_fixes-1.patch</a>
+</div>
 
 ### Ruby Dependencies
 
 #### Required
 
-[libyaml-0.2.5](libyaml.md "libyaml-0.2.5"){.xref}
+<a class="xref" href="libyaml.md" title="libyaml-0.2.5">libyaml-0.2.5</a>
 
 #### Optional
 
-[Doxygen-1.17.0](doxygen.md "Doxygen-1.17.0"){.xref}, [Graphviz-15.0.0](graphviz.md "Graphviz-15.0.0"){.xref}, [rustc-1.96.0](rust.md "Rustc-1.96.0"){.xref}, [Tk-8.6.18](tk.md "Tk-8.6.18"){.xref}, [Valgrind-3.27.1](valgrind.md "Valgrind-3.27.1"){.xref}, [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated) and [DTrace](https://dtrace.org/about/){.ulink}
+<a class="xref" href="doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="graphviz.md" title="Graphviz-15.0.0">Graphviz-15.0.0</a>, <a class="xref" href="rust.md" title="Rustc-1.96.0">rustc-1.96.0</a>, <a class="xref" href="tk.md" title="Tk-8.6.18">Tk-8.6.18</a>, <a class="xref" href="valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>, <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated) and <a class="ulink" href="https://dtrace.org/about/">DTrace</a>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-:::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-::::: {.installation lang="en"}
-## Installation of Ruby {#installation-of-ruby .sect2}
+<div class="installation" lang="en">
+## Installation of Ruby {#installation-of-ruby}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you have installed a package that provides a ruby gem, such as [asciidoctor-2.0.26](asciidoctor.md "Asciidoctor-2.0.26"){.xref}, you must reinstall those packages when upgrading to a new minor version of Ruby.
-:::
+If you have installed a package that provides a ruby gem, such as <a class="xref" href="asciidoctor.md" title="Asciidoctor-2.0.26">asciidoctor-2.0.26</a>, you must reinstall those packages when upgrading to a new minor version of Ruby.
+</div>
 
 First, apply a patch for compatibility with openssl4:
 
-``` userinput
+```bash
 patch -Np1 -i ../ruby-4.0.5-openssl4_fixes-1.patch
 ```
 
-Install [Ruby]{.application} by running the following command:
+Install <span class="application">Ruby</span> by running the following command:
 
-``` userinput
+```bash
 ./configure --prefix=/usr         \
             --disable-rpath       \
             --enable-shared       \
@@ -103,103 +103,103 @@ make
 
 Optionally, build the CAPI documents by running the following commands:
 
-``` userinput
+```bash
 make capi
 ```
 
-To test the results, issue: [**make -k check**]{.command}. If the environment has variables related to proxy settings (`all_proxy`{.envar}, `ALL_PROXY`{.envar}, `http_proxy`{.envar}, and etc.) set, the test suite will bail out early with messages like `net/ftp is not found`{.computeroutput}. Make sure that you unset these variables for the test suite.
+To test the results, issue: <span class="command"><strong>make -k check</strong></span>. If the environment has variables related to proxy settings (<code class="envar">all_proxy</code>, <code class="envar">ALL_PROXY</code>, <code class="envar">http_proxy</code>, and etc.) set, the test suite will bail out early with messages like <code class="computeroutput">net/ftp is not found</code>. Make sure that you unset these variables for the test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 XDG_DATA_HOME=/tmp make install
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you have Ruby-On-Rails applications installed and did an upgrade of [Ruby]{.application} by installing this package, you might need to run an update there, too (as the `root`{.systemitem} user):
+If you have Ruby-On-Rails applications installed and did an upgrade of <span class="application">Ruby</span> by installing this package, you might need to run an update there, too (as the <code class="systemitem">root</code> user):
 
-``` userinput
+```bash
 cd /path/to/web/app
 bundle update rake
 ```
 
 and restart the webserver which serves the application.
-:::
-:::::
+</div>
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--disable-rpath`*: This switch disables embedding `/usr/lib`{.filename} as a library search path into the [**ruby**]{.command} program. Doing so is not needed (because `/usr/lib`{.filename} is a system library path) and it may cause the test suite running with the system `libruby.so`{.filename} instead of the just built one when Ruby has been installed.
+*`--disable-rpath`*: This switch disables embedding <code class="filename">/usr/lib</code> as a library search path into the <span class="command"><strong>ruby</strong></span> program. Doing so is not needed (because <code class="filename">/usr/lib</code> is a system library path) and it may cause the test suite running with the system <code class="filename">libruby.so</code> instead of the just built one when Ruby has been installed.
 
-*`--enable-shared`*: This switch enables building the `libruby`{.filename} shared library.
+*`--enable-shared`*: This switch enables building the <code class="filename">libruby</code> shared library.
 
-*`--without-baseruby`*: This switch prevents using the system [**ruby**]{.command} if it is already installed. The build system will use the newly built version instead.
+*`--without-baseruby`*: This switch prevents using the system <span class="command"><strong>ruby</strong></span> if it is already installed. The build system will use the newly built version instead.
 
-*`ac_cv_func_qsort_r=no`*: This switch prevents using the `qsort_r`{.function} function from Glibc. Ruby makes some aggressive optimization assuming some implementation details of the sorting algorithm, but the assumption is not true with the Glibc implementation. With this switch Ruby will use its own sort implementation instead.
+*`ac_cv_func_qsort_r=no`*: This switch prevents using the <code class="function">qsort_r</code> function from Glibc. Ruby makes some aggressive optimization assuming some implementation details of the sorting algorithm, but the assumption is not true with the Glibc implementation. With this switch Ruby will use its own sort implementation instead.
 
-`--disable-install-doc`{.option}: This switch disables building and installing rdoc indexes and C API documents.
+<code class="option">--disable-install-doc</code>: This switch disables building and installing rdoc indexes and C API documents.
 
-`--disable-install-rdoc`{.option}: This switch disables building and installing rdoc indexes.
+<code class="option">--disable-install-rdoc</code>: This switch disables building and installing rdoc indexes.
 
-`--disable-install-capi`{.option}: This switch disables building and installing C API documents.
+<code class="option">--disable-install-capi</code>: This switch disables building and installing C API documents.
 
-[**XDG_DATA_HOME=/tmp ...**]{.command}: If `XDG_DATA_HOME`{.envar} is not set, the installation process creates the `$HOME/.local/share`{.filename} directory if it does not exist. Depending on the way root privileges have been acquired, this may create files owned by `root`{.systemitem} in the user home directory, or in `/root`{.filename}, which is not desirable either.
-:::
+<span class="command"><strong>XDG_DATA_HOME=/tmp ...</strong></span>: If <code class="envar">XDG_DATA_HOME</code> is not set, the installation process creates the <code class="filename">$HOME/.local/share</code> directory if it does not exist. Depending on the way root privileges have been acquired, this may create files owned by <code class="systemitem">root</code> in the user home directory, or in <code class="filename">/root</code>, which is not desirable either.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [bundle, bundler, erb, gem, irb, racc, rake, rbs, rdbg, rdoc, ri, ruby, and typeprof]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">bundle, bundler, erb, gem, irb, racc, rake, rbs, rdbg, rdoc, ri, ruby, and typeprof</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libruby.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libruby.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/ruby-4.0.0, /usr/lib/ruby, /usr/share/doc/ruby-4.0.5 and /usr/share/ri]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/ruby-4.0.0, /usr/lib/ruby, /usr/share/doc/ruby-4.0.5 and /usr/share/ri</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------
-  []{#bundle}[[**bundle**]{.command}]{.term}     creates bundles of Ruby Gems
-  []{#bundler}[[**bundler**]{.command}]{.term}   manages an application's dependencies throughout its lifecycle
-  []{#erb}[[**erb**]{.command}]{.term}           is a command line front-end for eRuby, which provides a templating system for [Ruby]{.application}
-  []{#gem}[[**gem**]{.command}]{.term}           is the command for RubyGems, which is a sophisticated package manager for [Ruby]{.application}. This is similar to Python's 'pip' command
-  []{#irb}[[**irb**]{.command}]{.term}           is the interactive interface for [Ruby]{.application}
-  []{#rake}[[**rake**]{.command}]{.term}         is a make-like build utility for [Ruby]{.application}
-  []{#rdbg}[[**rdbg**]{.command}]{.term}         is an interactive debugger for [Ruby]{.application}
-  []{#rdoc}[[**rdoc**]{.command}]{.term}         generates [Ruby]{.application} documentation
-  []{#ri}[[**ri**]{.command}]{.term}             displays documentation from a database on [Ruby]{.application} classes, modules, and methods
-  []{#ruby-prog}[[**ruby**]{.command}]{.term}    is an interpreted scripting language for quick and easy object-oriented programming
-  []{#libruby}[`libruby.so`{.filename}]{.term}   contains the API functions required by [Ruby]{.application}
+  <a id="bundle"></a><span class="command"><span class="term"><strong>bundle</strong></span></span>     creates bundles of Ruby Gems
+  <a id="bundler"></a><span class="command"><span class="term"><strong>bundler</strong></span></span>   manages an application's dependencies throughout its lifecycle
+  <a id="erb"></a><span class="command"><span class="term"><strong>erb</strong></span></span>           is a command line front-end for eRuby, which provides a templating system for <span class="application">Ruby</span>
+  <a id="gem"></a><span class="command"><span class="term"><strong>gem</strong></span></span>           is the command for RubyGems, which is a sophisticated package manager for <span class="application">Ruby</span>. This is similar to Python's 'pip' command
+  <a id="irb"></a><span class="command"><span class="term"><strong>irb</strong></span></span>           is the interactive interface for <span class="application">Ruby</span>
+  <a id="rake"></a><span class="command"><span class="term"><strong>rake</strong></span></span>         is a make-like build utility for <span class="application">Ruby</span>
+  <a id="rdbg"></a><span class="command"><span class="term"><strong>rdbg</strong></span></span>         is an interactive debugger for <span class="application">Ruby</span>
+  <a id="rdoc"></a><span class="command"><span class="term"><strong>rdoc</strong></span></span>         generates <span class="application">Ruby</span> documentation
+  <a id="ri"></a><span class="command"><span class="term"><strong>ri</strong></span></span>             displays documentation from a database on <span class="application">Ruby</span> classes, modules, and methods
+  <a id="ruby-prog"></a><span class="command"><span class="term"><strong>ruby</strong></span></span>    is an interpreted scripting language for quick and easy object-oriented programming
+  <a id="libruby"></a><span class="term"><code class="filename">libruby.so</code></span>   contains the API functions required by <span class="application">Ruby</span>
   ---------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](python-dependencies.md "Python Dependencies"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](python-dependencies.md "Python Dependencies")
 
     Python Dependencies
 
--   [Next](rust.md "Rustc-1.96.0"){accesskey="n"}
+-   [Next](rust.md "Rustc-1.96.0")
 
     Rustc-1.96.0
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

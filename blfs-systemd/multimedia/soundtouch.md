@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](sound-theme-freedesktop.md "sound-theme-freedesktop-0.8"){accesskey="p"}
+-   [Prev](sound-theme-freedesktop.md "sound-theme-freedesktop-0.8")
 
     sound-theme-freedesktop-0.8
 
--   [Next](speex.md "Speex-1.2.1"){accesskey="n"}
+-   [Next](speex.md "Speex-1.2.1")
 
     Speex-1.2.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#soundtouch}SoundTouch-2.4.1 {#soundtouch-2.4.1 .sect1}
+# SoundTouch-2.4.1 {#soundtouch-2.4.1}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to SoundTouch {#introduction-to-soundtouch .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to SoundTouch {#introduction-to-soundtouch}
 
-The [SoundTouch]{.application} package contains an open-source audio processing library that allows changing the sound tempo, pitch and playback rate parameters independently from each other.
+The <span class="application">SoundTouch</span> package contains an open-source audio processing library that allows changing the sound tempo, pitch and playback rate parameters independently from each other.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.surina.net/soundtouch/soundtouch-2.4.1.tar.gz](https://www.surina.net/soundtouch/soundtouch-2.4.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.surina.net/soundtouch/soundtouch-2.4.1.tar.gz">https://www.surina.net/soundtouch/soundtouch-2.4.1.tar.gz</a>
 
 -   Download MD5 sum: 6e8732dea92b6e65fc4ee75528ab0524
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.4 MB
 
 -   Estimated build time: 0.2 SBU
-:::
-:::::
+</div>
+</div>
 
-::::: {.installation lang="en"}
-## Installation of SoundTouch {#installation-of-soundtouch .sect2}
+<div class="installation" lang="en">
+## Installation of SoundTouch {#installation-of-soundtouch}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 The tarball expands to 'soundtouch' instead of the expected 'soundtouch-2.4.1'
-:::
+</div>
 
-Install [SoundTouch]{.application} by running the following commands:
+Install <span class="application">SoundTouch</span> by running the following commands:
 
-::: {.admon .caution}
+<div class="admon caution">
 ![\[Caution\]](../images/caution.png)
 
 ### Caution
 
-The [**bootstrap**]{.command} command below fails if the ACLOCAL environment variable is set as specified in [Xorg-7](../x/xorg7.md "Introduction to Xorg-7"){.xref}. If it is used, ACLOCAL needs to be unset for this package and then reset for other packages.
-:::
+The <span class="command"><strong>bootstrap</strong></span> command below fails if the ACLOCAL environment variable is set as specified in <a class="xref" href="../x/xorg7.md" title="Introduction to Xorg-7">Xorg-7</a>. If it is used, ACLOCAL needs to be unset for this package and then reset for other packages.
+</div>
 
-``` userinput
+```bash
 ./bootstrap &&
 ./configure --prefix=/usr \
             --docdir=/usr/share/doc/soundtouch-2.4.1 &&
@@ -77,59 +77,59 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install 
 ```
-:::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`--enable-openmp`{.option}: This switch adds support for running the algorithms in parallel across several processor cores using OpenMP implementation provided by GCC.
-:::
+<code class="option">--enable-openmp</code>: This switch adds support for running the algorithms in parallel across several processor cores using OpenMP implementation provided by GCC.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [soundstretch]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">soundstretch</span>
+</div>
 
-::: seg
-**Installed Library:** [libSoundTouch.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libSoundTouch.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/soundtouch and /usr/share/doc/soundtouch-2.4.1]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/soundtouch and /usr/share/doc/soundtouch-2.4.1</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
-  []{#soundstretch}[[**soundstretch**]{.command}]{.term}     is a program for processing WAV audio files by modifying sound tempo, pitch and playback rate properties independently from each other
-  []{#libSoundTouch}[`libSoundTouch.so`{.filename}]{.term}   contains [SoundTouch]{.application} API functions
+  <a id="soundstretch"></a><span class="command"><span class="term"><strong>soundstretch</strong></span></span>     is a program for processing WAV audio files by modifying sound tempo, pitch and playback rate properties independently from each other
+  <a id="libSoundTouch"></a><span class="term"><code class="filename">libSoundTouch.so</code></span>   contains <span class="application">SoundTouch</span> API functions
   ---------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](sound-theme-freedesktop.md "sound-theme-freedesktop-0.8"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](sound-theme-freedesktop.md "sound-theme-freedesktop-0.8")
 
     sound-theme-freedesktop-0.8
 
--   [Next](speex.md "Speex-1.2.1"){accesskey="n"}
+-   [Next](speex.md "Speex-1.2.1")
 
     Speex-1.2.1
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

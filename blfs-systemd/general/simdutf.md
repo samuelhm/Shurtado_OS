@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](qcoro.md "qcoro-0.13.0"){accesskey="p"}
+-   [Prev](qcoro.md "qcoro-0.13.0")
 
     qcoro-0.13.0
 
--   [Next](spidermonkey.md "SpiderMonkey from firefox-140.11.0"){accesskey="n"}
+-   [Next](spidermonkey.md "SpiderMonkey from firefox-140.11.0")
 
     SpiderMonkey from firefox-140.11.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#simdutf}simdutf-9.0.0 {#simdutf-9.0.0 .sect1}
+# simdutf-9.0.0 {#simdutf-9.0.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to simdutf {#introduction-to-simdutf .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to simdutf {#introduction-to-simdutf}
 
-The [simdutf]{.application} package contains a library used for processing Unicode characters with SIMD optimizations. This includes the SSE2 and AVX2 instruction sets and more.
+The <span class="application">simdutf</span> package contains a library used for processing Unicode characters with SIMD optimizations. This includes the SSE2 and AVX2 instruction sets and more.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/simdutf/simdutf/archive/v9.0.0/simdutf-9.0.0.tar.gz](https://github.com/simdutf/simdutf/archive/v9.0.0/simdutf-9.0.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/simdutf/simdutf/archive/v9.0.0/simdutf-9.0.0.tar.gz">https://github.com/simdutf/simdutf/archive/v9.0.0/simdutf-9.0.0.tar.gz</a>
 
 -   Download MD5 sum: a20af35e2a7c9737d97b7beae96e7146
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 44 MB
 
 -   Estimated build time: 0.3 SBU (add 1.1 SBU for tests)
-:::
+</div>
 
 ### simdutf Dependencies
 
 #### Required
 
-[CMake-4.3.3](cmake.md "CMake-4.3.3"){.xref}
-:::::
+<a class="xref" href="cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of simdutf {#installation-of-simdutf .sect2}
+<div class="installation" lang="en">
+## Installation of simdutf {#installation-of-simdutf}
 
-Install [simdutf]{.application} by running the following commands:
+Install <span class="application">simdutf</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -69,56 +69,56 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr  \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [fastbase64 and sutf]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">fastbase64 and sutf</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libsimdutf.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libsimdutf.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/simdutf and /usr/lib/cmake/simdutf]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/simdutf and /usr/lib/cmake/simdutf</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------------------------------------------------------
-  []{#fastbase64}[[**fastbase64**]{.command}]{.term}   encodes and decodes base64 with optimizations
-  []{#sutf}[[**sutf**]{.command}]{.term}               converts the encoding of an input file from one encoding to another using the simdutf library
-  []{#libsimdutf}[`libsimdutf.so`{.filename}]{.term}   contains functions that process Unicode characters with SIMD optimizations
+  <a id="fastbase64"></a><span class="command"><span class="term"><strong>fastbase64</strong></span></span>   encodes and decodes base64 with optimizations
+  <a id="sutf"></a><span class="command"><span class="term"><strong>sutf</strong></span></span>               converts the encoding of an input file from one encoding to another using the simdutf library
+  <a id="libsimdutf"></a><span class="term"><code class="filename">libsimdutf.so</code></span>   contains functions that process Unicode characters with SIMD optimizations
   ---------------------------------------------------- -----------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qcoro.md "qcoro-0.13.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qcoro.md "qcoro-0.13.0")
 
     qcoro-0.13.0
 
--   [Next](spidermonkey.md "SpiderMonkey from firefox-140.11.0"){accesskey="n"}
+-   [Next](spidermonkey.md "SpiderMonkey from firefox-140.11.0")
 
     SpiderMonkey from firefox-140.11.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

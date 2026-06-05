@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](netlibs.md "Networking Libraries"){accesskey="p"}
+-   [Prev](netlibs.md "Networking Libraries")
 
     Networking Libraries
 
--   [Next](curl.md "cURL-8.20.0"){accesskey="n"}
+-   [Next](curl.md "cURL-8.20.0")
 
     cURL-8.20.0
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#c-ares}c-ares-1.34.6 {#c-ares-1.34.6 .sect1}
+# c-ares-1.34.6 {#c-ares-1.34.6}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to c-ares {#introduction-to-c-ares .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to c-ares {#introduction-to-c-ares}
 
-[c-ares]{.application} is a C library for asynchronous DNS requests.
+<span class="application">c-ares</span> is a C library for asynchronous DNS requests.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/c-ares/c-ares/releases/download/v1.34.6/c-ares-1.34.6.tar.gz](https://github.com/c-ares/c-ares/releases/download/v1.34.6/c-ares-1.34.6.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/c-ares/c-ares/releases/download/v1.34.6/c-ares-1.34.6.tar.gz">https://github.com/c-ares/c-ares/releases/download/v1.34.6/c-ares-1.34.6.tar.gz</a>
 
 -   Download MD5 sum: 85fda96ad3859edb262f68284d11b971
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### c-ares Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}
-:::::
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of c-ares {#installation-of-c-ares .sect2}
+<div class="installation" lang="en">
+## Installation of c-ares {#installation-of-c-ares}
 
-Install [c-ares]{.application} by running the following commands:
+Install <span class="application">c-ares</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,54 +68,54 @@ make
 
 This package does not include a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [adig and ahost]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">adig and ahost</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libcares.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libcares.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ----------------------------------------------------------------------
-  []{#adig}[[**adig**]{.command}]{.term}             queries information from DNS servers
-  []{#ahost}[[**ahost**]{.command}]{.term}           prints the A or AAAA record associated with a hostname or IP address
-  []{#c-ares-lib}[`libcares.so`{.filename}]{.term}   is a C library for asynchronous DNS requests
+  <a id="adig"></a><span class="command"><span class="term"><strong>adig</strong></span></span>             queries information from DNS servers
+  <a id="ahost"></a><span class="command"><span class="term"><strong>ahost</strong></span></span>           prints the A or AAAA record associated with a hostname or IP address
+  <a id="c-ares-lib"></a><span class="term"><code class="filename">libcares.so</code></span>   is a C library for asynchronous DNS requests
   -------------------------------------------------- ----------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](netlibs.md "Networking Libraries"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](netlibs.md "Networking Libraries")
 
     Networking Libraries
 
--   [Next](curl.md "cURL-8.20.0"){accesskey="n"}
+-   [Next](curl.md "cURL-8.20.0")
 
     cURL-8.20.0
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

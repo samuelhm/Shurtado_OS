@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](systemd.md "Systemd-260.2"){accesskey="p"}
+-   [Prev](systemd.md "Systemd-260.2")
 
     Systemd-260.2
 
--   [Next](unrar.md "UnRar-7.2.4"){accesskey="n"}
+-   [Next](unrar.md "UnRar-7.2.4")
 
     UnRar-7.2.4
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#udisks2}UDisks-2.11.1 {#udisks-2.11.1 .sect1}
+# UDisks-2.11.1 {#udisks-2.11.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to UDisks {#introduction-to-udisks .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to UDisks {#introduction-to-udisks}
 
-The [UDisks]{.application} package provides a daemon, tools and libraries to access and manipulate disks and storage devices.
+The <span class="application">UDisks</span> package provides a daemon, tools and libraries to access and manipulate disks and storage devices.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/storaged-project/udisks/releases/download/udisks-2.11.1/udisks-2.11.1.tar.bz2](https://github.com/storaged-project/udisks/releases/download/udisks-2.11.1/udisks-2.11.1.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/storaged-project/udisks/releases/download/udisks-2.11.1/udisks-2.11.1.tar.bz2">https://github.com/storaged-project/udisks/releases/download/udisks-2.11.1/udisks-2.11.1.tar.bz2</a>
 
 -   Download MD5 sum: 55f9f7bbb7986244bb4905c04f8c1542
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 68 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### UDisks Dependencies
 
 #### Required
 
-[libatasmart-0.19](libatasmart.md "libatasmart-0.19"){.xref}, [libblockdev-3.5.0](libblockdev.md "libblockdev-3.5.0"){.xref}, [libgudev-238](libgudev.md "libgudev-238"){.xref}, and [Polkit-127](../postlfs/polkit.md "Polkit-127"){.xref}
+<a class="xref" href="libatasmart.md" title="libatasmart-0.19">libatasmart-0.19</a>, <a class="xref" href="libblockdev.md" title="libblockdev-3.5.0">libblockdev-3.5.0</a>, <a class="xref" href="libgudev.md" title="libgudev-238">libgudev-238</a>, and <a class="xref" href="../postlfs/polkit.md" title="Polkit-127">Polkit-127</a>
 
 #### Recommended
 
-[[Systemd-260.2](systemd.md "Systemd-260.2"){.xref} (runtime)]{.phrase}
+<a class="xref" href="systemd.md" title="Systemd-260.2"><span class="phrase">Systemd-260.2</a> (runtime)</span>
 
 #### Optional (Required if building GNOME)
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Optional
 
-[D-Bus Python-1.4.0](python-modules.md#dbus-python "D-Bus Python-1.4.0"){.xref} (for the integration tests), [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref} (for the man pages), [LVM2-2.03.41](../postlfs/lvm2.md "LVM2-2.03.41"){.xref}, [PyGObject-3.56.3](python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref} (for the integration tests), [exFAT](https://github.com/relan/exfat){.ulink}, and [libiscsi](https://github.com/sahlberg/libiscsi){.ulink}
+<a class="xref" href="python-modules.md#dbus-python" title="D-Bus Python-1.4.0">D-Bus Python-1.4.0</a> (for the integration tests), <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> (for the man pages), <a class="xref" href="../postlfs/lvm2.md" title="LVM2-2.03.41">LVM2-2.03.41</a>, <a class="xref" href="python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a> (for the integration tests), <a class="ulink" href="https://github.com/relan/exfat">exFAT</a>, and <a class="ulink" href="https://github.com/sahlberg/libiscsi">libiscsi</a>
 
 #### Optional Runtime Dependencies
 
-[btrfs-progs-7.0](../postlfs/btrfs-progs.md "btrfs-progs-7.0"){.xref}, [dosfstools-4.2](../postlfs/dosfstools.md "dosfstools-4.2"){.xref}, [gptfdisk-1.0.10](../postlfs/gptfdisk.md "gptfdisk-1.0.10"){.xref}, [mdadm-4.6](../postlfs/mdadm.md "mdadm-4.6"){.xref}, and [xfsprogs-7.0.1](../postlfs/xfsprogs.md "xfsprogs-7.0.1"){.xref}
-:::::
+<a class="xref" href="../postlfs/btrfs-progs.md" title="btrfs-progs-7.0">btrfs-progs-7.0</a>, <a class="xref" href="../postlfs/dosfstools.md" title="dosfstools-4.2">dosfstools-4.2</a>, <a class="xref" href="../postlfs/gptfdisk.md" title="gptfdisk-1.0.10">gptfdisk-1.0.10</a>, <a class="xref" href="../postlfs/mdadm.md" title="mdadm-4.6">mdadm-4.6</a>, and <a class="xref" href="../postlfs/xfsprogs.md" title="xfsprogs-7.0.1">xfsprogs-7.0.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of UDisks {#installation-of-udisks .sect2}
+<div class="installation" lang="en">
+## Installation of UDisks {#installation-of-udisks}
 
-Install [UDisks]{.application} by running the following commands:
+Install <span class="application">UDisks</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr        \
             --sysconfdir=/etc    \
             --localstatedir=/var \
@@ -83,66 +83,66 @@ Install [UDisks]{.application} by running the following commands:
 make
 ```
 
-To test the results, issue: [**make check**]{.command}. A more thorough test can be run with [**make ci**]{.command}. You must first create the directories `/var/run/udisks2`{.filename} and `/var/lib/udisks2`{.filename}, and the optional python modules should be present.
+To test the results, issue: <span class="command"><strong>make check</strong></span>. A more thorough test can be run with <span class="command"><strong>make ci</strong></span>. You must first create the directories <code class="filename">/var/run/udisks2</code> and <code class="filename">/var/lib/udisks2</code>, and the optional python modules should be present.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-gtk-doc`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
+<code class="option">--enable-gtk-doc</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
 
-*`--enable-available-modules`*: This switch enables additional [UDisks2]{.application} functionalities if [libblockdev-3.5.0](libblockdev.md "libblockdev-3.5.0"){.xref} has been built with optional dependencies.
-:::
+*`--enable-available-modules`*: This switch enables additional <span class="application">UDisks2</span> functionalities if <a class="xref" href="libblockdev.md" title="libblockdev-3.5.0">libblockdev-3.5.0</a> has been built with optional dependencies.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [udisksctl and umount.udisks2]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">udisksctl and umount.udisks2</span>
+</div>
 
-::: seg
-**Installed Library:** [libudisks2.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libudisks2.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/udisks2, /usr/include/udisks2, /usr/libexec/udisks2, /usr/share/gtk-doc/html/udisks2, and /var/lib/udisks2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/udisks2, /usr/include/udisks2, /usr/libexec/udisks2, /usr/share/gtk-doc/html/udisks2, and /var/lib/udisks2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------
-  []{#udisksctl}[[**udisksctl**]{.command}]{.term}            is a command-line program used to interact with the [**udisksd**]{.command} daemon
-  []{#umountudisks2}[[**umount.udisks2**]{.command}]{.term}   is a command-line program used to unmount file systems that have been mounted by the [UDisks]{.application} daemon
-  []{#libudisks2}[`libudisks2.so`{.filename}]{.term}          contains the [UDisks]{.application} API functions
+  <a id="udisksctl"></a><span class="command"><span class="term"><strong>udisksctl</strong></span></span>            is a command-line program used to interact with the <span class="command"><strong>udisksd</strong></span> daemon
+  <a id="umountudisks2"></a><span class="command"><span class="term"><strong>umount.udisks2</strong></span></span>   is a command-line program used to unmount file systems that have been mounted by the <span class="application">UDisks</span> daemon
+  <a id="libudisks2"></a><span class="term"><code class="filename">libudisks2.so</code></span>          contains the <span class="application">UDisks</span> API functions
   ----------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](systemd.md "Systemd-260.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](systemd.md "Systemd-260.2")
 
     Systemd-260.2
 
--   [Next](unrar.md "UnRar-7.2.4"){accesskey="n"}
+-   [Next](unrar.md "UnRar-7.2.4")
 
     UnRar-7.2.4
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

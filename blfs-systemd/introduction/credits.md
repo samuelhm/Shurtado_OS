@@ -1,30 +1,30 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 1. Welcome to BLFS
 
--   [Prev](askhelp.md "Asking for Help and the FAQ"){accesskey="p"}
+-   [Prev](askhelp.md "Asking for Help and the FAQ")
 
     Asking for Help and the FAQ
 
--   [Next](contactinfo.md "Contact Information"){accesskey="n"}
+-   [Next](contactinfo.md "Contact Information")
 
     Contact Information
 
--   [Up](welcome.md "Chapter 1. Welcome to BLFS"){accesskey="u"}
+-   [Up](welcome.md "Chapter 1. Welcome to BLFS")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#credits}Credits {#credits .sect1}
+# Credits {#credits}
 
-::::::::: {.sect1 lang="en"}
+<div class="sect1" lang="en">
 Many people have contributed both directly and indirectly to BLFS. This page lists all of those we can think of. We may well have left people out and if you feel this is the case, drop us a line. Many thanks to all of the LFS community for their assistance with this project.
 
-:::: {.sect2 lang="en"}
-## Current Editors {#current-editors .sect2}
+<div class="sect2" lang="en">
+## Current Editors {#current-editors}
 
-::: itemizedlist
+<div class="itemizedlist">
 -   Rahul Chandra
 
 -   Bruce Dubbs
@@ -38,15 +38,15 @@ Many people have contributed both directly and indirectly to BLFS. This page lis
 -   Thomas Trepl
 
 -   Zeckma
-:::
-::::
+</div>
+</div>
 
-:::: {.sect2 lang="en"}
-## Contributors and Past Editors {#contributors-and-past-editors .sect2}
+<div class="sect2" lang="en">
+## Contributors and Past Editors {#contributors-and-past-editors}
 
 The list of contributors is far too large to provide detailed information about the contributions for each contributor. Over the years, the following individuals have provided significant inputs to the book:
 
-::: itemizedlist
+<div class="itemizedlist">
 -   Timothy Bauscher
 
 -   Daniel Bauman
@@ -138,13 +138,13 @@ The list of contributors is far too large to provide detailed information about 
 -   Christian Wurst
 
 -   Igor Živković
-:::
-::::
+</div>
+</div>
 
-:::: {.sect2 lang="en"}
-## General Acknowledgments {#general-acknowledgments .sect2}
+<div class="sect2" lang="en">
+## General Acknowledgments {#general-acknowledgments}
 
-::: itemizedlist
+<div class="itemizedlist">
 -   Fernando Arbeiza
 
 -   Miguel Bazdresch
@@ -172,20 +172,20 @@ The list of contributors is far too large to provide detailed information about 
 -   Scot McPherson
 
 -   Ted Riley
-:::
-::::
-:::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](askhelp.md "Asking for Help and the FAQ"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](askhelp.md "Asking for Help and the FAQ")
 
     Asking for Help and the FAQ
 
--   [Next](contactinfo.md "Contact Information"){accesskey="n"}
+-   [Next](contactinfo.md "Contact Information")
 
     Contact Information
 
--   [Up](welcome.md "Chapter 1. Welcome to BLFS"){accesskey="u"}
+-   [Up](welcome.md "Chapter 1. Welcome to BLFS")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

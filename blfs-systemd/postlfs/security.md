@@ -1,33 +1,33 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part II. Post LFS Configuration and Extra Software
 
--   [Prev](logon.md "Customizing your Logon with /etc/issue"){accesskey="p"}
+-   [Prev](logon.md "Customizing your Logon with /etc/issue")
 
     Customizing your Logon with /etc/issue
 
--   [Next](vulnerabilities.md "Vulnerabilities"){accesskey="n"}
+-   [Next](vulnerabilities.md "Vulnerabilities")
 
     Vulnerabilities
 
--   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software"){accesskey="u"}
+-   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#postlfs-security}Security {#security .chapter}
+# Security {#security}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 Security takes many forms in a computing environment. After some initial discussion, this chapter gives examples of three different types of security: access, prevention and detection.
 
-Access for users is usually handled by [**login**]{.command} or an application designed to handle the login function. In this chapter, we show how to enhance [**login**]{.command} by setting policies with [PAM]{.application} modules. Access via networks can also be secured by policies set by [iptables]{.application}, commonly referred to as a firewall. The Network Security Services (NSS) and Netscape Portable Runtime (NSPR) libraries can be installed and shared among the many applications requiring them. For applications that don't offer the best security, you can use the [Stunnel]{.application} package to wrap an application daemon inside an SSL tunnel.
+Access for users is usually handled by <span class="command"><strong>login</strong></span> or an application designed to handle the login function. In this chapter, we show how to enhance <span class="command"><strong>login</strong></span> by setting policies with <span class="application">PAM</span> modules. Access via networks can also be secured by policies set by <span class="application">iptables</span>, commonly referred to as a firewall. The Network Security Services (NSS) and Netscape Portable Runtime (NSPR) libraries can be installed and shared among the many applications requiring them. For applications that don't offer the best security, you can use the <span class="application">Stunnel</span> package to wrap an application daemon inside an SSL tunnel.
 
-Prevention of breaches, like a trojan, are assisted by applications like [GnuPG]{.application}, specifically the ability to confirm signed packages, which recognizes modifications of the tarball after the packager creates it.
+Prevention of breaches, like a trojan, are assisted by applications like <span class="application">GnuPG</span>, specifically the ability to confirm signed packages, which recognizes modifications of the tarball after the packager creates it.
 
 Finally, we touch on detection with a package that stores "signatures" of critical files (defined by the administrator) and then regenerates those "signatures" and compares for files that have been changed.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Vulnerabilities](vulnerabilities.md)
@@ -57,19 +57,19 @@ Finally, we touch on detection with a package that stores "signatures" of critic
 -   [stunnel-5.78](stunnel.md)
 -   [Sudo-1.9.17p2](sudo.md)
 -   [Tripwire-2.4.3.7](tripwire.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](logon.md "Customizing your Logon with /etc/issue"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](logon.md "Customizing your Logon with /etc/issue")
 
     Customizing your Logon with /etc/issue
 
--   [Next](vulnerabilities.md "Vulnerabilities"){accesskey="n"}
+-   [Next](vulnerabilities.md "Vulnerabilities")
 
     Vulnerabilities
 
--   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software"){accesskey="u"}
+-   [Up](postlfs.md "Part II. Post LFS Configuration and Extra Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

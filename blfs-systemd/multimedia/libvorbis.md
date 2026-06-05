@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libva.md "libva-2.23.0"){accesskey="p"}
+-   [Prev](libva.md "libva-2.23.0")
 
     libva-2.23.0
 
--   [Next](libvpx.md "libvpx-1.16.0"){accesskey="n"}
+-   [Next](libvpx.md "libvpx-1.16.0")
 
     libvpx-1.16.0
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libvorbis}libvorbis-1.3.7 {#libvorbis-1.3.7 .sect1}
+# libvorbis-1.3.7 {#libvorbis-1.3.7}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libvorbis {#introduction-to-libvorbis .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libvorbis {#introduction-to-libvorbis}
 
-The [libvorbis]{.application} package contains a general purpose audio and music encoding format. This is useful for creating (encoding) and playing (decoding) sound in an open (patent free) format.
+The <span class="application">libvorbis</span> package contains a general purpose audio and music encoding format. This is useful for creating (encoding) and playing (decoding) sound in an open (patent free) format.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz](https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz">https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz</a>
 
 -   Download MD5 sum: 50902641d358135f06a8392e61c9ac77
 
@@ -44,86 +44,86 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 15 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### libvorbis Dependencies
 
 #### Required
 
-[libogg-1.3.6](libogg.md "libogg-1.3.6"){.xref}
+<a class="xref" href="libogg.md" title="libogg-1.3.6">libogg-1.3.6</a>
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} and [texlive-20250308](../pst/texlive.md "texlive-20250308-source"){.xref} (or [install-tl-unx](../pst/tl-installer.md "install-tl-unx"){.xref}) (specifically, pdflatex and htlatex) to build the PDF documentation
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> and <a class="xref" href="../pst/texlive.md" title="texlive-20250308-source">texlive-20250308</a> (or <a class="xref" href="../pst/tl-installer.md" title="install-tl-unx">install-tl-unx</a>) (specifically, pdflatex and htlatex) to build the PDF documentation
+</div>
 
-::: {.installation lang="en"}
-## Installation of libvorbis {#installation-of-libvorbis .sect2}
+<div class="installation" lang="en">
+## Installation of libvorbis {#installation-of-libvorbis}
 
-Install [libvorbis]{.application} by running the following commands:
+Install <span class="application">libvorbis</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make -j1 check**]{.command}.
+To test the results, issue: <span class="command"><strong>make -j1 check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install &&
 install -v -m644 doc/Vorbis* /usr/share/doc/libvorbis-1.3.7
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
-`--enable-docs`{.option}: This switch enables building the documentation in formats other than the supplied html.
-:::
+<code class="option">--enable-docs</code>: This switch enables building the documentation in formats other than the supplied html.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libvorbis.so, libvorbisenc.so and libvorbisfile.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libvorbis.so, libvorbisenc.so and libvorbisfile.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/vorbis and /usr/share/doc/libvorbis-1.3.7]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/vorbis and /usr/share/doc/libvorbis-1.3.7</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -----------------------------------------------------------
-  []{#libvorbis-lib}[`libvorbis.so`{.filename}]{.term}   provides the functions used to read and write sound files
+  <a id="libvorbis-lib"></a><span class="term"><code class="filename">libvorbis.so</code></span>   provides the functions used to read and write sound files
   ------------------------------------------------------ -----------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libva.md "libva-2.23.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libva.md "libva-2.23.0")
 
     libva-2.23.0
 
--   [Next](libvpx.md "libvpx-1.16.0"){accesskey="n"}
+-   [Next](libvpx.md "libvpx-1.16.0")
 
     libvpx-1.16.0
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

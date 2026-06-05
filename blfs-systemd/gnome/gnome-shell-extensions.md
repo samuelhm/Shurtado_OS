@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-shell.md "gnome-shell-50.2"){accesskey="p"}
+-   [Prev](gnome-shell.md "gnome-shell-50.2")
 
     gnome-shell-50.2
 
--   [Next](gnome-session.md "gnome-session-50.1"){accesskey="n"}
+-   [Next](gnome-session.md "gnome-session-50.1")
 
     gnome-session-50.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-shell-extensions}gnome-shell-extensions-50.2 {#gnome-shell-extensions-50.2 .sect1}
+# gnome-shell-extensions-50.2 {#gnome-shell-extensions-50.2}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Shell Extensions {#introduction-to-gnome-shell-extensions .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Shell Extensions {#introduction-to-gnome-shell-extensions}
 
-The [GNOME Shell Extensions]{.application} package contains a collection of extensions providing additional and optional functionality to the [GNOME Shell]{.application}.
+The <span class="application">GNOME Shell Extensions</span> package contains a collection of extensions providing additional and optional functionality to the <span class="application">GNOME Shell</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-shell-extensions/50/gnome-shell-extensions-50.2.tar.xz](https://download.gnome.org/sources/gnome-shell-extensions/50/gnome-shell-extensions-50.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-shell-extensions/50/gnome-shell-extensions-50.2.tar.xz">https://download.gnome.org/sources/gnome-shell-extensions/50/gnome-shell-extensions-50.2.tar.xz</a>
 
 -   Download MD5 sum: 3a9305d5925c0ed257b92ccbced01999
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 6.2 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### GNOME Shell Extensions Dependencies
 
 #### Required
 
-[libgtop-2.41.3](libgtop.md "libgtop-2.41.3"){.xref}
-:::::
+<a class="xref" href="libgtop.md" title="libgtop-2.41.3">libgtop-2.41.3</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Shell Extensions {#installation-of-gnome-shell-extensions .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Shell Extensions {#installation-of-gnome-shell-extensions}
 
-Install [GNOME Shell Extensions]{.application} by running the following commands:
+Install <span class="application">GNOME Shell Extensions</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -67,50 +67,50 @@ meson setup --prefix=/usr ..
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`-D x11=true`{.option}: Enables X11 session support. This is deprecated and X11 support for GNOME will be removed in GNOME 50.
-:::
+<code class="option">-D x11=true</code>: Enables X11 session support. This is deprecated and X11 support for GNOME will be removed in GNOME 50.
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/gnome-shell/extensions]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/gnome-shell/extensions</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-shell.md "gnome-shell-50.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-shell.md "gnome-shell-50.2")
 
     gnome-shell-50.2
 
--   [Next](gnome-session.md "gnome-session-50.1"){accesskey="n"}
+-   [Next](gnome-session.md "gnome-session-50.1")
 
     gnome-session-50.1
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

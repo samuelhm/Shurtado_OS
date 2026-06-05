@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](applications.md "GNOME Applications"){accesskey="p"}
+-   [Prev](applications.md "GNOME Applications")
 
     GNOME Applications
 
--   [Next](brasero.md "Brasero-3.12.3"){accesskey="n"}
+-   [Next](brasero.md "Brasero-3.12.3")
 
     Brasero-3.12.3
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#baobab}Baobab-50.0 {#baobab-50.0 .sect1}
+# Baobab-50.0 {#baobab-50.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Baobab {#introduction-to-baobab .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Baobab {#introduction-to-baobab}
 
-The [Baobab]{.application} package contains a graphical directory tree analyzer.
+The <span class="application">Baobab</span> package contains a graphical directory tree analyzer.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz](https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz">https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz</a>
 
 -   Download MD5 sum: f6f4649a945ca419d8261236fa2c7de2
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 10 MB
 
 -   Estimated build time: less than 0.1 SBU (Using parallelism=4)
-:::
+</div>
 
 ### Baobab Dependencies
 
 #### Required
 
-[adwaita-icon-theme-50.0](../x/adwaita-icon-theme.md "adwaita-icon-theme-50.0"){.xref}, [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
-:::::
+<a class="xref" href="../x/adwaita-icon-theme.md" title="adwaita-icon-theme-50.0">adwaita-icon-theme-50.0</a>, <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Baobab {#installation-of-baobab .sect2}
+<div class="installation" lang="en">
+## Installation of Baobab {#installation-of-baobab}
 
-Install [Baobab]{.application} by running the following commands:
+Install <span class="application">Baobab</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,58 +68,58 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [baobab]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">baobab</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/help/\*/baobab]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/help/\*/baobab</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------- ------------------------------------------------
-  []{#baobab-prog}[[**baobab**]{.command}]{.term}   is a graphical tool used to analyze disk usage
+  <a id="baobab-prog"></a><span class="command"><span class="term"><strong>baobab</strong></span></span>   is a graphical tool used to analyze disk usage
   ------------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](applications.md "GNOME Applications"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](applications.md "GNOME Applications")
 
     GNOME Applications
 
--   [Next](brasero.md "Brasero-3.12.3"){accesskey="n"}
+-   [Next](brasero.md "Brasero-3.12.3")
 
     Brasero-3.12.3
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

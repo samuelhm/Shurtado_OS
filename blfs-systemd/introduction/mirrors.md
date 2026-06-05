@@ -1,37 +1,37 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 1. Welcome to BLFS
 
--   [Prev](version.md "Book Version"){accesskey="p"}
+-   [Prev](version.md "Book Version")
 
     Book Version
 
--   [Next](packages.md "Getting the Source Packages"){accesskey="n"}
+-   [Next](packages.md "Getting the Source Packages")
 
     Getting the Source Packages
 
--   [Up](welcome.md "Chapter 1. Welcome to BLFS"){accesskey="u"}
+-   [Up](welcome.md "Chapter 1. Welcome to BLFS")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#mirrors}Mirror Sites {#mirror-sites .sect1}
+# Mirror Sites {#mirror-sites}
 
-::: {.sect1 lang="en"}
-The BLFS project has a number of mirrors set up world-wide to make it easier and more convenient for you to access the website. Please visit the [https://www.linuxfromscratch.org/mirrors.html](https://www.linuxfromscratch.org/mirrors.md){.ulink} website for the list of current mirrors.
-:::
+<div class="sect1" lang="en">
+The BLFS project has a number of mirrors set up world-wide to make it easier and more convenient for you to access the website. Please visit the <a class="ulink" href="https://www.linuxfromscratch.org/mirrors.md">https://www.linuxfromscratch.org/mirrors.html</a> website for the list of current mirrors.
+</div>
 
-::: navfooter
--   [Prev](version.md "Book Version"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](version.md "Book Version")
 
     Book Version
 
--   [Next](packages.md "Getting the Source Packages"){accesskey="n"}
+-   [Next](packages.md "Getting the Source Packages")
 
     Getting the Source Packages
 
--   [Up](welcome.md "Chapter 1. Welcome to BLFS"){accesskey="u"}
+-   [Up](welcome.md "Chapter 1. Welcome to BLFS")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,27 +1,27 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part III. General Libraries and Utilities
 
--   [Prev](zxing-cpp.md "zxing-cpp-3.0.2"){accesskey="p"}
+-   [Prev](zxing-cpp.md "zxing-cpp-3.0.2")
 
     zxing-cpp-3.0.2
 
--   [Next](asciidoctor.md "Asciidoctor-2.0.26"){accesskey="n"}
+-   [Next](asciidoctor.md "Asciidoctor-2.0.26")
 
     Asciidoctor-2.0.26
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#general-genutils}General Utilities {#general-utilities .chapter}
+# General Utilities {#general-utilities}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains various utilities that do not fit conveniently into other chapters. Programs include some documentation generators, several utilities for manipulating text and graphics, programs for listing files, a program for entering PIN numbers and pass-phrases, and a connection manager.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Asciidoctor-2.0.26](asciidoctor.md)
@@ -49,19 +49,19 @@ This chapter contains various utilities that do not fit conveniently into other 
 -   [unixODBC-2.3.14](unixodbc.md)
 -   [xdg-dbus-proxy-0.1.7](xdg-dbus-proxy.md)
 -   [Xdg-user-dirs-0.20](xdg-user-dirs.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](zxing-cpp.md "zxing-cpp-3.0.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](zxing-cpp.md "zxing-cpp-3.0.2")
 
     zxing-cpp-3.0.2
 
--   [Next](asciidoctor.md "Asciidoctor-2.0.26"){accesskey="n"}
+-   [Next](asciidoctor.md "Asciidoctor-2.0.26")
 
     Asciidoctor-2.0.26
 
--   [Up](general.md "Part III. General Libraries and Utilities"){accesskey="u"}
+-   [Up](general.md "Part III. General Libraries and Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,46 +1,46 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XI. X Software
 
--   [Prev](libreoffice.md "LibreOffice-26.2.2"){accesskey="p"}
+-   [Prev](libreoffice.md "LibreOffice-26.2.2")
 
     LibreOffice-26.2.2
 
--   [Next](epiphany.md "Epiphany-50.4"){accesskey="n"}
+-   [Next](epiphany.md "Epiphany-50.4")
 
     Epiphany-50.4
 
--   [Up](xsoft.md "Part XI. X Software"){accesskey="u"}
+-   [Up](xsoft.md "Part XI. X Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xsoft-graphweb}Graphical Web Browsers {#graphical-web-browsers .chapter}
+# Graphical Web Browsers {#graphical-web-browsers}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains a wonderful selection of browsers. We hope you can find one you enjoy using or give them each a trial run.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Epiphany-50.4](epiphany.md)
 -   [falkon-26.04.1](falkon.md)
 -   [Firefox-140.11.0esr](firefox.md)
 -   [Seamonkey-2.53.23](seamonkey.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](libreoffice.md "LibreOffice-26.2.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libreoffice.md "LibreOffice-26.2.2")
 
     LibreOffice-26.2.2
 
--   [Next](epiphany.md "Epiphany-50.4"){accesskey="n"}
+-   [Next](epiphany.md "Epiphany-50.4")
 
     Epiphany-50.4
 
--   [Up](xsoft.md "Part XI. X Software"){accesskey="u"}
+-   [Up](xsoft.md "Part XI. X Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

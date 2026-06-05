@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](localsearch.md "localsearch-3.11.1"){accesskey="p"}
+-   [Prev](localsearch.md "localsearch-3.11.1")
 
     localsearch-3.11.1
 
--   [Next](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){accesskey="n"}
+-   [Next](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0")
 
     xdg-desktop-portal-gnome-50.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gsound}GSound-1.0.3 {#gsound-1.0.3 .sect1}
+# GSound-1.0.3 {#gsound-1.0.3}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GSound {#introduction-to-gsound .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GSound {#introduction-to-gsound}
 
-The [gsound]{.application} package contains a small library for playing system sounds.
+The <span class="application">gsound</span> package contains a small library for playing system sounds.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz](https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz">https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz</a>
 
 -   Download MD5 sum: 7338c295034432a6e782fd20b3d04b68
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 864 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### gsound Dependencies
 
 #### Required
 
-[libcanberra-0.30](../multimedia/libcanberra.md "libcanberra-0.30"){.xref}
+<a class="xref" href="../multimedia/libcanberra.md" title="libcanberra-0.30">libcanberra-0.30</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection) and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection) and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref} (for generating documentation)
-:::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> (for generating documentation)
+</div>
 
-::: {.installation lang="en"}
-## Installation of GSound {#installation-of-gsound .sect2}
+<div class="installation" lang="en">
+## Installation of GSound {#installation-of-gsound}
 
-Install [gsound]{.application} by running the following commands:
+Install <span class="application">gsound</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -76,59 +76,59 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gsound-play]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gsound-play</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgsound.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgsound.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/gtk-doc/html/gsound]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/gtk-doc/html/gsound</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ -----------------------------------------------------
-  []{#gsound-play}[[**gsound-play**]{.command}]{.term}   plays system sounds through the libgsound interface
-  []{#libgsound}[`libgsound.so`{.filename}]{.term}       contains API functions for playing system sounds
+  <a id="gsound-play"></a><span class="command"><span class="term"><strong>gsound-play</strong></span></span>   plays system sounds through the libgsound interface
+  <a id="libgsound"></a><span class="term"><code class="filename">libgsound.so</code></span>       contains API functions for playing system sounds
   ------------------------------------------------------ -----------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](localsearch.md "localsearch-3.11.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](localsearch.md "localsearch-3.11.1")
 
     localsearch-3.11.1
 
--   [Next](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){accesskey="n"}
+-   [Next](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0")
 
     xdg-desktop-portal-gnome-50.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

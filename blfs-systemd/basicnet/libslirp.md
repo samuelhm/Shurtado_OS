@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libpsl.md "libpsl-0.21.5"){accesskey="p"}
+-   [Prev](libpsl.md "libpsl-0.21.5")
 
     libpsl-0.21.5
 
--   [Next](libsoup3.md "libsoup-3.6.6"){accesskey="n"}
+-   [Next](libsoup3.md "libsoup-3.6.6")
 
     libsoup-3.6.6
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libslirp}libslirp-4.9.3 {#libslirp-4.9.3 .sect1}
+# libslirp-4.9.3 {#libslirp-4.9.3}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libslirp {#introduction-to-libslirp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libslirp {#introduction-to-libslirp}
 
-[Libslirp]{.application} is a user-mode networking library used by virtual machines, containers or various tools.
+<span class="application">Libslirp</span> is a user-mode networking library used by virtual machines, containers or various tools.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.3/libslirp-v4.9.3.tar.bz2](https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.3/libslirp-v4.9.3.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.3/libslirp-v4.9.3.tar.bz2">https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.3/libslirp-v4.9.3.tar.bz2</a>
 
 -   Download MD5 sum: bf2162cee75eef0faf0eb3fe60ec0da3
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.4 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libslirp Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref}
-:::::
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Libslirp {#installation-of-libslirp .sect2}
+<div class="installation" lang="en">
+## Installation of Libslirp {#installation-of-libslirp}
 
-Install [libslirp]{.application} by running the following commands:
+Install <span class="application">libslirp</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -67,60 +67,60 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libslirp.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libslirp.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/slirp]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/slirp</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -----------------------------------------------
-  []{#libslirp-lib}[`libclirp.so`{.filename}]{.term}   contains user-mode TCP-IP emulation functions
+  <a id="libslirp-lib"></a><span class="term"><code class="filename">libclirp.so</code></span>   contains user-mode TCP-IP emulation functions
   ---------------------------------------------------- -----------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libpsl.md "libpsl-0.21.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libpsl.md "libpsl-0.21.5")
 
     libpsl-0.21.5
 
--   [Next](libsoup3.md "libsoup-3.6.6"){accesskey="n"}
+-   [Next](libsoup3.md "libsoup-3.6.6")
 
     libsoup-3.6.6
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

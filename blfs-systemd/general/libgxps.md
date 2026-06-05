@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 10. Graphics and Font Libraries
 
--   [Prev](libexif.md "libexif-0.6.26"){accesskey="p"}
+-   [Prev](libexif.md "libexif-0.6.26")
 
     libexif-0.6.26
 
--   [Next](libheif.md "libheif-1.23.0"){accesskey="n"}
+-   [Next](libheif.md "libheif-1.23.0")
 
     libheif-1.23.0
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libgxps}libgxps-0.3.2 {#libgxps-0.3.2 .sect1}
+# libgxps-0.3.2 {#libgxps-0.3.2}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libgxps {#introduction-to-libgxps .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libgxps {#introduction-to-libgxps}
 
-The [libgxps]{.application} package provides an interface to manipulate XPS documents.
+The <span class="application">libgxps</span> package provides an interface to manipulate XPS documents.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.2.tar.xz](https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.2.tar.xz">https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.2.tar.xz</a>
 
 -   Download MD5 sum: 0527ac7c8c405445e96a5baa6019a0c3
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.4 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Libgxps Dependencies
 
 #### Required
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [Little CMS-2.19.1](lcms2.md "Little CMS-2.19.1"){.xref}, [libarchive-3.8.7](libarchive.md "libarchive-3.8.7"){.xref}, [libjpeg-turbo-3.1.4.1](libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [libtiff-4.7.1](libtiff.md "libtiff-4.7.1"){.xref}, and [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="lcms2.md" title="Little CMS-2.19.1">Little CMS-2.19.1</a>, <a class="xref" href="libarchive.md" title="libarchive-3.8.7">libarchive-3.8.7</a>, <a class="xref" href="libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="libtiff.md" title="libtiff-4.7.1">libtiff-4.7.1</a>, and <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>
 
 #### Optional
 
-[git-2.54.0](git.md "Git-2.54.0"){.xref} and [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}
-:::::
+<a class="xref" href="git.md" title="Git-2.54.0">git-2.54.0</a> and <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Libgxps {#installation-of-libgxps .sect2}
+<div class="installation" lang="en">
+## Installation of Libgxps {#installation-of-libgxps}
 
-Install [Libgxps]{.application} by running the following commands:
+Install <span class="application">Libgxps</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,63 +72,63 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [xpstojpeg, xpstopdf, xpstopng, xpstops, and xpstosvg]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">xpstojpeg, xpstopdf, xpstopng, xpstops, and xpstosvg</span>
+</div>
 
-::: seg
-**Installed Library:** [libgxps.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libgxps.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libgxps]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libgxps</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- -------------------------------------------------------
-  []{#xpstojpeg}[[**xpstojpeg**]{.command}]{.term}   converts XPS documents to a JPEG image
-  []{#xpstopdf}[[**xpstopdf**]{.command}]{.term}     converts XPS documents to PDF format
-  []{#xpstopng}[[**xpstopng**]{.command}]{.term}     converts XPS documents to a PNG image
-  []{#xpstops}[[**xpstops**]{.command}]{.term}       converts XPS documents to PostScript
-  []{#xpstosvg}[[**xpstosvg**]{.command}]{.term}     converts XPS documents to SVG images
-  []{#libgxps-lib}[`libgxps.so`{.filename}]{.term}   contains API functions for manipulating XPS documents
+  <a id="xpstojpeg"></a><span class="command"><span class="term"><strong>xpstojpeg</strong></span></span>   converts XPS documents to a JPEG image
+  <a id="xpstopdf"></a><span class="command"><span class="term"><strong>xpstopdf</strong></span></span>     converts XPS documents to PDF format
+  <a id="xpstopng"></a><span class="command"><span class="term"><strong>xpstopng</strong></span></span>     converts XPS documents to a PNG image
+  <a id="xpstops"></a><span class="command"><span class="term"><strong>xpstops</strong></span></span>       converts XPS documents to PostScript
+  <a id="xpstosvg"></a><span class="command"><span class="term"><strong>xpstosvg</strong></span></span>     converts XPS documents to SVG images
+  <a id="libgxps-lib"></a><span class="term"><code class="filename">libgxps.so</code></span>   contains API functions for manipulating XPS documents
   -------------------------------------------------- -------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libexif.md "libexif-0.6.26"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libexif.md "libexif-0.6.26")
 
     libexif-0.6.26
 
--   [Next](libheif.md "libheif-1.23.0"){accesskey="n"}
+-   [Next](libheif.md "libheif-1.23.0")
 
     libheif-1.23.0
 
--   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries"){accesskey="u"}
+-   [Up](graphlib.md "Chapter 10. Graphics and Font Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

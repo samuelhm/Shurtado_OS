@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-globalkeys.md "lxqt-globalkeys-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-globalkeys.md "lxqt-globalkeys-2.4.0")
 
     lxqt-globalkeys-2.4.0
 
--   [Next](lxqt-panel.md "lxqt-panel-2.4.1"){accesskey="n"}
+-   [Next](lxqt-panel.md "lxqt-panel-2.4.1")
 
     lxqt-panel-2.4.1
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-qtplugin}lxqt-qtplugin-2.4.0 {#lxqt-qtplugin-2.4.0 .sect1}
+# lxqt-qtplugin-2.4.0 {#lxqt-qtplugin-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-qtplugin {#introduction-to-lxqt-qtplugin .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-qtplugin {#introduction-to-lxqt-qtplugin}
 
-The [lxqt-qtplugin]{.application} package provides an [LXQt]{.application} [Qt]{.application} platform integration plugin.
+The <span class="application">lxqt-qtplugin</span> package provides an <span class="application">LXQt</span> <span class="application">Qt</span> platform integration plugin.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-qtplugin/releases/download/2.4.0/lxqt-qtplugin-2.4.0.tar.xz](https://github.com/lxqt/lxqt-qtplugin/releases/download/2.4.0/lxqt-qtplugin-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-qtplugin/releases/download/2.4.0/lxqt-qtplugin-2.4.0.tar.xz">https://github.com/lxqt/lxqt-qtplugin/releases/download/2.4.0/lxqt-qtplugin-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 679a8472698a88556622c3a4d3c1a524
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.7 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### lxqt-qtplugin Dependencies
 
 #### Required
 
-[libfm-qt-2.4.0](libfm-qt.md "libfm-qt-2.4.0"){.xref}, [liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref}, and [libdbusmenu-lxqt-0.4.0](libdbusmenu-lxqt.md "libdbusmenu-lxqt-0.4.0"){.xref}
-:::::
+<a class="xref" href="libfm-qt.md" title="libfm-qt-2.4.0">libfm-qt-2.4.0</a>, <a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a>, and <a class="xref" href="libdbusmenu-lxqt.md" title="libdbusmenu-lxqt-0.4.0">libdbusmenu-lxqt-0.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-qtplugin {#installation-of-lxqt-qtplugin .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-qtplugin {#installation-of-lxqt-qtplugin}
 
-Install [lxqt-qtplugin]{.application} by running the following commands:
+Install <span class="application">lxqt-qtplugin</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libqtlxqt.so (in \$QT6DIR/plugins/platformthemes)]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libqtlxqt.so (in \$QT6DIR/plugins/platformthemes)</span>
+</div>
 
-::: seg
-**Installed Directory:** [\$QT6DIR/plugins/platformthemes]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">\$QT6DIR/plugins/platformthemes</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ------------------------------------
-  []{#libqtlxqt-lib}[`libqtlxqt.so`{.filename}]{.term}   contains the LXQt QT plugin loader
+  <a id="libqtlxqt-lib"></a><span class="term"><code class="filename">libqtlxqt.so</code></span>   contains the LXQt QT plugin loader
   ------------------------------------------------------ ------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-globalkeys.md "lxqt-globalkeys-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-globalkeys.md "lxqt-globalkeys-2.4.0")
 
     lxqt-globalkeys-2.4.0
 
--   [Next](lxqt-panel.md "lxqt-panel-2.4.1"){accesskey="n"}
+-   [Next](lxqt-panel.md "lxqt-panel-2.4.1")
 
     lxqt-panel-2.4.1
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

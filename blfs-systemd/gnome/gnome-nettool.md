@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
-### Chapter 34. [GNOME Applications]{.phrase}
+### Chapter 34. <span class="phrase">GNOME Applications</span>
 
--   [Prev](gnome-maps.md "gnome-maps-50.1"){accesskey="p"}
+-   [Prev](gnome-maps.md "gnome-maps-50.1")
 
     gnome-maps-50.1
 
--   [Next](gnome-power-manager.md "gnome-power-manager-50.0"){accesskey="n"}
+-   [Next](gnome-power-manager.md "gnome-power-manager-50.0")
 
     gnome-power-manager-50.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-nettool}gnome-nettool-42.0 {#gnome-nettool-42.0 .sect1}
+# gnome-nettool-42.0 {#gnome-nettool-42.0}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to GNOME Nettool {#introduction-to-gnome-nettool .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Nettool {#introduction-to-gnome-nettool}
 
-The [GNOME Nettool]{.application} package is a network information tool which provides GUI interface for some of the most common command line network tools.
+The <span class="application">GNOME Nettool</span> package is a network information tool which provides GUI interface for some of the most common command line network tools.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-nettool/42/gnome-nettool-42.0.tar.xz](https://download.gnome.org/sources/gnome-nettool/42/gnome-nettool-42.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-nettool/42/gnome-nettool-42.0.tar.xz">https://download.gnome.org/sources/gnome-nettool/42/gnome-nettool-42.0.tar.xz</a>
 
 -   Download MD5 sum: ba99489e9e3a1af03e9f2719acac7beb
 
@@ -44,43 +44,43 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/gnome-nettool-42.0-ping_and_netstat_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/gnome-nettool-42.0-ping_and_netstat_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/gnome-nettool-42.0-ping_and_netstat_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/gnome-nettool-42.0-ping_and_netstat_fixes-1.patch</a>
+</div>
 
 ### GNOME Nettool Dependencies
 
 #### Required
 
-[GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [itstool-2.0.7](../pst/itstool.md "itstool-2.0.7"){.xref}, and [libgtop-2.41.3](libgtop.md "libgtop-2.41.3"){.xref}
+<a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="../pst/itstool.md" title="itstool-2.0.7">itstool-2.0.7</a>, and <a class="xref" href="libgtop.md" title="libgtop-2.41.3">libgtop-2.41.3</a>
 
 #### Runtime Dependencies
 
-[BIND Utilities-9.20.20](../basicnet/bind-utils.md "BIND Utilities-9.20.20"){.xref}, [Nmap-7.99](../basicnet/nmap.md "Nmap-7.99"){.xref}, [Net-tools-2.10](../basicnet/net-tools.md "Net-tools-2.10"){.xref}, [Traceroute-2.1.6](../basicnet/traceroute.md "Traceroute-2.1.6"){.xref}, and [Whois-5.6.6](../basicnet/whois.md "Whois-5.6.6"){.xref}
-::::::
+<a class="xref" href="../basicnet/bind-utils.md" title="BIND Utilities-9.20.20">BIND Utilities-9.20.20</a>, <a class="xref" href="../basicnet/nmap.md" title="Nmap-7.99">Nmap-7.99</a>, <a class="xref" href="../basicnet/net-tools.md" title="Net-tools-2.10">Net-tools-2.10</a>, <a class="xref" href="../basicnet/traceroute.md" title="Traceroute-2.1.6">Traceroute-2.1.6</a>, and <a class="xref" href="../basicnet/whois.md" title="Whois-5.6.6">Whois-5.6.6</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of GNOME Nettool {#installation-of-gnome-nettool .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Nettool {#installation-of-gnome-nettool}
 
-First, adapt [GNOME Nettool]{.application} to changes in the [ping]{.application}, [ping6]{.application}, and [netstat]{.application} utilities:
+First, adapt <span class="application">GNOME Nettool</span> to changes in the <span class="application">ping</span>, <span class="application">ping6</span>, and <span class="application">netstat</span> utilities:
 
-``` userinput
+```bash
 patch -Np1 -i ../gnome-nettool-42.0-ping_and_netstat_fixes-1.patch
 ```
 
 Then add a fix for newer versions of meson:
 
-``` userinput
+```bash
 sed -i '/merge_file/s/(.*/(/' data/meson.build
 ```
 
-Install [GNOME Nettool]{.application} by running the following commands:
+Install <span class="application">GNOME Nettool</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -90,52 +90,52 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [gnome-nettool]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">gnome-nettool</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/gnome-nettool and /usr/share/help/\*/gnome-nettool]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/gnome-nettool and /usr/share/help/\*/gnome-nettool</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------- -------------------------------
-  []{#gnome-nettool-prog}[[**gnome-nettool**]{.command}]{.term}   is a network information tool
+  <a id="gnome-nettool-prog"></a><span class="command"><span class="term"><strong>gnome-nettool</strong></span></span>   is a network information tool
   --------------------------------------------------------------- -------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-maps.md "gnome-maps-50.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-maps.md "gnome-maps-50.1")
 
     gnome-maps-50.1
 
--   [Next](gnome-power-manager.md "gnome-power-manager-50.0"){accesskey="n"}
+-   [Next](gnome-power-manager.md "gnome-power-manager-50.0")
 
     gnome-power-manager-50.0
 
--   [Up](applications.md "Chapter 34. GNOME Applications"){accesskey="u"}
+-   [Up](applications.md "Chapter 34. GNOME Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

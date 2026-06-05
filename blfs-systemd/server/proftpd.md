@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 20. Major Servers
 
--   [Prev](kea.md "Kea 3.0.2 DHCP Server"){accesskey="p"}
+-   [Prev](kea.md "Kea 3.0.2 DHCP Server")
 
     Kea 3.0.2 DHCP Server
 
--   [Next](mail.md "Mail Server Software"){accesskey="n"}
+-   [Next](mail.md "Mail Server Software")
 
     Mail Server Software
 
--   [Up](majorservers.md "Chapter 20. Major Servers"){accesskey="u"}
+-   [Up](majorservers.md "Chapter 20. Major Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#proftpd}ProFTPD-1.3.9a {#proftpd-1.3.9a .sect1}
+# ProFTPD-1.3.9a {#proftpd-1.3.9a}
 
-::::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to ProFTPD {#introduction-to-proftpd .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to ProFTPD {#introduction-to-proftpd}
 
-The [ProFTPD]{.application} package contains a secure and highly configurable FTP daemon. This is useful for serving large file archives over a network.
+The <span class="application">ProFTPD</span> package contains a secure and highly configurable FTP daemon. This is useful for serving large file archives over a network.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/proftpd/proftpd/archive/v1.3.9a/proftpd-1.3.9a.tar.gz](https://github.com/proftpd/proftpd/archive/v1.3.9a/proftpd-1.3.9a.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/proftpd/proftpd/archive/v1.3.9a/proftpd-1.3.9a.tar.gz">https://github.com/proftpd/proftpd/archive/v1.3.9a/proftpd-1.3.9a.tar.gz</a>
 
 -   Download MD5 sum: 9333020093faae6f02532c6e27078ebb
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 74 MB
 
 -   Estimated build time: 0.3 SBU
-:::
+</div>
 
 ### ProFTPD Dependencies
 
 #### Optional
 
-[libcap-2.78 with PAM](../postlfs/libcap.md "libcap-2.78 with PAM"){.xref}, [libssh2-1.11.1](../general/libssh2.md "libssh2-1.11.1"){.xref}, [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [MariaDB-12.3.2](mariadb.md "MariaDB-12.3.2"){.xref} or [MySQL](https://www.mysql.com/){.ulink}, [PostgreSQL-18.4](postgresql.md "PostgreSQL-18.4"){.xref}, and [Net::SSH2](https://metacpan.org/pod/Net::SSH2){.ulink}
-:::::
+<a class="xref" href="../postlfs/libcap.md" title="libcap-2.78 with PAM">libcap-2.78 with PAM</a>, <a class="xref" href="../general/libssh2.md" title="libssh2-1.11.1">libssh2-1.11.1</a>, <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="mariadb.md" title="MariaDB-12.3.2">MariaDB-12.3.2</a> or <a class="ulink" href="https://www.mysql.com/">MySQL</a>, <a class="xref" href="postgresql.md" title="PostgreSQL-18.4">PostgreSQL-18.4</a>, and <a class="ulink" href="https://metacpan.org/pod/Net::SSH2">Net::SSH2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of ProFTPD {#installation-of-proftpd .sect2}
+<div class="installation" lang="en">
+## Installation of ProFTPD {#installation-of-proftpd}
 
-For security reasons, you should install [ProFTPD]{.application} using an unprivileged user and group. As the `root`{.systemitem} user:
+For security reasons, you should install <span class="application">ProFTPD</span> using an unprivileged user and group. As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 groupadd -g 46 proftpd                             &&
 useradd -c proftpd -d /srv/ftp -g proftpd \
         -s /usr/bin/proftpdshell -u 46 proftpd     &&
@@ -68,71 +68,71 @@ ln -v -s /usr/bin/false /usr/bin/proftpdshell      &&
 echo /usr/bin/proftpdshell >> /etc/shells
 ```
 
-Install [ProFTPD]{.application} as an unprivileged user by running the following commands:
+Install <span class="application">ProFTPD</span> as an unprivileged user by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/run &&
 make
 ```
 
 This packages does not come with a usable test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install                                   &&
 install -d -m755 /usr/share/doc/proftpd-1.3.9a &&
 cp -Rv doc/*     /usr/share/doc/proftpd-1.3.9a
 ```
-:::
+</div>
 
-::::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**install -v -d -m775 -o proftpd -g proftpd /srv/ftp**]{.command}: Create the home directory for [ProFTPD]{.application}.
+<span class="command"><strong>install -v -d -m775 -o proftpd -g proftpd /srv/ftp</strong></span>: Create the home directory for <span class="application">ProFTPD</span>.
 
-[**ln -v -s /usr/bin/false /usr/bin/proftpdshell**]{.command}: Set the default shell as a link to an invalid shell.
+<span class="command"><strong>ln -v -s /usr/bin/false /usr/bin/proftpdshell</strong></span>: Set the default shell as a link to an invalid shell.
 
-[**echo /usr/bin/proftpdshell \>\> /etc/shells**]{.command}: Fake a valid shell for compatibility purposes.
+<span class="command"><strong>echo /usr/bin/proftpdshell \>\> /etc/shells</strong></span>: Fake a valid shell for compatibility purposes.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 The above two commands can be omitted if the following directive is placed in the configuration file:
 
-``` screen
+```console
 RequireValidShell off
 ```
 
 By default, proftpd will require that users logging in have valid shells. The RequireValidShell directive turns off this requirement. This is only recommended if you are setting up your FTP server exclusively for anonymous downloads.
-:::
+</div>
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Support for most of the dependency packages requires using options passed to the [**configure**]{.command} script. View the output from [**./configure --help**]{.command} for complete information about enabling dependency packages.
-:::
-:::::
+Support for most of the dependency packages requires using options passed to the <span class="command"><strong>configure</strong></span> script. View the output from <span class="command"><strong>./configure --help</strong></span> for complete information about enabling dependency packages.
+</div>
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring ProFTPD {#configuring-proftpd .sect2}
+<div class="configuration" lang="en">
+## Configuring ProFTPD {#configuring-proftpd}
 
-::: {.sect3 lang="en"}
-### []{#proftpd-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/proftpd.conf`{.filename}
-:::
+<code class="filename">/etc/proftpd.conf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-This is a simple, download-only sample configuration. See the [ProFTPD]{.application} documentation in `/usr/share/doc/proftpd`{.filename} and consult the website at [http://www.proftpd.org/](http://www.proftpd.org/){.ulink} for example configurations.
+This is a simple, download-only sample configuration. See the <span class="application">ProFTPD</span> documentation in <code class="filename">/usr/share/doc/proftpd</code> and consult the website at <a class="ulink" href="http://www.proftpd.org/">http://www.proftpd.org/</a> for example configurations.
 
-``` root
+```bash
 cat > /etc/proftpd.conf << "EOF"
 # This is a basic ProFTPD configuration file
 # It establishes a single server and a single anonymous login.
@@ -191,68 +191,68 @@ Group                           proftpd
 </Anonymous>
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#proftpd-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-Install the [`proftpd.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package:
+Install the <span class="phrase"><code class="filename">proftpd.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package:
 
-``` root
+```bash
 make install-proftpd
 ```
-:::
-::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ftpasswd, ftpcount, ftpdctl, ftpmail, ftpquota, ftpscrub, ftpshut, ftptop, ftpwho, in.proftpd (symlink to proftpd), proftpd, and prxs]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ftpasswd, ftpcount, ftpdctl, ftpmail, ftpquota, ftpscrub, ftpshut, ftptop, ftpwho, in.proftpd (symlink to proftpd), proftpd, and prxs</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/{include,lib}/proftpd, /usr/share/doc/proftpd-1.3.9a, and /srv/ftp]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/{include,lib}/proftpd, /usr/share/doc/proftpd-1.3.9a, and /srv/ftp</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------
-  []{#proftpd-prog}[[**proftpd**]{.command}]{.term}   is the FTP daemon
-  []{#ftpcount}[[**ftpcount**]{.command}]{.term}      shows the current number of connections
-  []{#ftpdctl}[[**ftpdctl**]{.command}]{.term}        is used to control the proftpd daemon while it is running
-  []{#ftpasswd}[[**ftpasswd**]{.command}]{.term}      is a Perl script designed to create and manage AuthUserFiles and AuthGroupFiles of the correct format for proftpd
-  []{#ftpmail}[[**ftpmail**]{.command}]{.term}        is a Perl script for sending email based on the proftpd TransferLog
-  []{#ftpquota}[[**ftpquota**]{.command}]{.term}      is a Perl script designed to create and manage limits and tally files for the mod_quotatab + mod_quotatab_file module combination for proftpd
-  []{#ftpscrub}[[**ftpscrub**]{.command}]{.term}      provides a way to scrub the scoreboard file on demand
-  []{#ftpshut}[[**ftpshut**]{.command}]{.term}        shuts down all [proftpd]{.application} servers at a given time
-  []{#ftptop}[[**ftptop**]{.command}]{.term}          displays running status on connections
-  []{#ftpwho}[[**ftpwho**]{.command}]{.term}          shows current process information for each session
-  []{#prxs}[[**prxs**]{.command}]{.term}              is a Perl script designed to compile and install third-party modules, from source code, as DSO modules for the installed proftpd
+  <a id="proftpd-prog"></a><span class="command"><span class="term"><strong>proftpd</strong></span></span>   is the FTP daemon
+  <a id="ftpcount"></a><span class="command"><span class="term"><strong>ftpcount</strong></span></span>      shows the current number of connections
+  <a id="ftpdctl"></a><span class="command"><span class="term"><strong>ftpdctl</strong></span></span>        is used to control the proftpd daemon while it is running
+  <a id="ftpasswd"></a><span class="command"><span class="term"><strong>ftpasswd</strong></span></span>      is a Perl script designed to create and manage AuthUserFiles and AuthGroupFiles of the correct format for proftpd
+  <a id="ftpmail"></a><span class="command"><span class="term"><strong>ftpmail</strong></span></span>        is a Perl script for sending email based on the proftpd TransferLog
+  <a id="ftpquota"></a><span class="command"><span class="term"><strong>ftpquota</strong></span></span>      is a Perl script designed to create and manage limits and tally files for the mod_quotatab + mod_quotatab_file module combination for proftpd
+  <a id="ftpscrub"></a><span class="command"><span class="term"><strong>ftpscrub</strong></span></span>      provides a way to scrub the scoreboard file on demand
+  <a id="ftpshut"></a><span class="command"><span class="term"><strong>ftpshut</strong></span></span>        shuts down all <span class="application">proftpd</span> servers at a given time
+  <a id="ftptop"></a><span class="command"><span class="term"><strong>ftptop</strong></span></span>          displays running status on connections
+  <a id="ftpwho"></a><span class="command"><span class="term"><strong>ftpwho</strong></span></span>          shows current process information for each session
+  <a id="prxs"></a><span class="command"><span class="term"><strong>prxs</strong></span></span>              is a Perl script designed to compile and install third-party modules, from source code, as DSO modules for the installed proftpd
   --------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kea.md "Kea 3.0.2 DHCP Server"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kea.md "Kea 3.0.2 DHCP Server")
 
     Kea 3.0.2 DHCP Server
 
--   [Next](mail.md "Mail Server Software"){accesskey="n"}
+-   [Next](mail.md "Mail Server Software")
 
     Mail Server Software
 
--   [Up](majorservers.md "Chapter 20. Major Servers"){accesskey="u"}
+-   [Up](majorservers.md "Chapter 20. Major Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

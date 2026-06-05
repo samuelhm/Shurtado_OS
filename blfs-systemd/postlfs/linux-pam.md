@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](libcap.md "libcap-2.78 with PAM"){accesskey="p"}
+-   [Prev](libcap.md "libcap-2.78 with PAM")
 
     libcap-2.78 with PAM
 
--   [Next](liboauth.md "liboauth-1.0.3"){accesskey="n"}
+-   [Next](liboauth.md "liboauth-1.0.3")
 
     liboauth-1.0.3
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#linux-pam}Linux-PAM-1.7.2 {#linux-pam-1.7.2 .sect1}
+# Linux-PAM-1.7.2 {#linux-pam-1.7.2}
 
-:::::::::::::::::::::: {.sect1 lang="en"}
-::::::: {.package lang="en"}
-## Introduction to Linux PAM {#introduction-to-linux-pam .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Linux PAM {#introduction-to-linux-pam}
 
-The [Linux PAM]{.application} package contains Pluggable Authentication Modules used by the local system administrator to control how application programs authenticate users.
+The <span class="application">Linux PAM</span> package contains Pluggable Authentication Modules used by the local system administrator to control how application programs authenticate users.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz](https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz">https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz</a>
 
 -   Download MD5 sum: 934c26eca3fada956356a30489e86291
 
@@ -44,67 +44,67 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 16 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
+<div class="itemizedlist">
 **Optional Documentation**
 
--   Download (HTTP): [https://anduin.linuxfromscratch.org/BLFS/Linux-PAM/Linux-PAM-1.7.2-docs.tar.xz](https://anduin.linuxfromscratch.org/BLFS/Linux-PAM/Linux-PAM-1.7.2-docs.tar.xz){.ulink}
+-   Download (HTTP): <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/Linux-PAM/Linux-PAM-1.7.2-docs.tar.xz">https://anduin.linuxfromscratch.org/BLFS/Linux-PAM/Linux-PAM-1.7.2-docs.tar.xz</a>
 
 -   Download MD5 sum: 8b0c69931e4805ee5c297192c46d0e28
 
 -   Download size: 500 KB
-:::
+</div>
 
 ### Linux PAM Dependencies
 
 #### Optional
 
-[libnsl-2.0.1](../basicnet/libnsl.md "libnsl-2.0.1"){.xref}, [libtirpc-1.3.7](../basicnet/libtirpc.md "libtirpc-1.3.7"){.xref}, [rpcsvc-proto-1.4.4](../basicnet/rpcsvc-proto.md "rpcsvc-proto-1.4.4"){.xref}, [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated), [libaudit](https://github.com/linux-audit/audit-userspace){.ulink}, and [libeconf](https://github.com/openSUSE/libeconf){.ulink}
+<a class="xref" href="../basicnet/libnsl.md" title="libnsl-2.0.1">libnsl-2.0.1</a>, <a class="xref" href="../basicnet/libtirpc.md" title="libtirpc-1.3.7">libtirpc-1.3.7</a>, <a class="xref" href="../basicnet/rpcsvc-proto.md" title="rpcsvc-proto-1.4.4">rpcsvc-proto-1.4.4</a>, <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated), <a class="ulink" href="https://github.com/linux-audit/audit-userspace">libaudit</a>, and <a class="ulink" href="https://github.com/openSUSE/libeconf">libeconf</a>
 
 #### Optional (To build the Documentation and Man Pages)
 
-[docbook-xml-5.0](../pst/docbook5.md "docbook-xml-5.0"){.xref}, [docbook-xsl-ns-1.79.2](../pst/docbook-xsl-ns.md "docbook-xsl-ns-1.79.2"){.xref}, [fop-2.11](../pst/fop.md "fop-2.11"){.xref} (for the PDF format), [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref}, and [Lynx-2.9.3](../basicnet/lynx.md "Lynx-2.9.3"){.xref} (for the plain text format)
+<a class="xref" href="../pst/docbook5.md" title="docbook-xml-5.0">docbook-xml-5.0</a>, <a class="xref" href="../pst/docbook-xsl-ns.md" title="docbook-xsl-ns-1.79.2">docbook-xsl-ns-1.79.2</a>, <a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a> (for the PDF format), <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, and <a class="xref" href="../basicnet/lynx.md" title="Lynx-2.9.3">Lynx-2.9.3</a> (for the plain text format)
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-[Shadow-4.19.4](shadow.md "Shadow-4.19.4"){.xref} [and [Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref} must]{.phrase} be reinstalled and reconfigured after installing and configuring [Linux PAM]{.application}.
+<a class="xref" href="shadow.md" title="Shadow-4.19.4">Shadow-4.19.4</a> <a class="xref" href="../general/systemd.md" title="Systemd-260.2">and <span class="phrase">Systemd-260.2</a> must</span> be reinstalled and reconfigured after installing and configuring <span class="application">Linux PAM</span>.
 
-With Linux-PAM-1.4.0 and higher, the pam_cracklib module is not installed by default. Use [libpwquality-1.4.5](libpwquality.md "libpwquality-1.4.5"){.xref} to enforce strong passwords.
-:::
-:::::::
+With Linux-PAM-1.4.0 and higher, the pam_cracklib module is not installed by default. Use <a class="xref" href="libpwquality.md" title="libpwquality-1.4.5">libpwquality-1.4.5</a> to enforce strong passwords.
+</div>
+</div>
 
-::: {.kernel lang="en"}
-## []{#linux-pam-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-For the PAM module `pam_loginuid.so`{.filename} (referred by the PAM configuration file `system-session`{.filename} if [[Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref} is rebuilt with PAM support]{.phrase} later) to work, a kernel configuration parameter need to be set or the module will just do nothing:
+For the PAM module <code class="filename">pam_loginuid.so</code> (referred by the PAM configuration file <code class="filename">system-session</code> if <a class="xref" href="../general/systemd.md" title="Systemd-260.2"><span class="phrase">Systemd-260.2</a> is rebuilt with PAM support</span> later) to work, a kernel configuration parameter need to be set or the module will just do nothing:
 
-``` screen
+```console
 General setup --->
   [*] Auditing support                                                   [AUDIT]
 ```
-:::
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Linux PAM {#installation-of-linux-pam .sect2}
+<div class="installation" lang="en">
+## Installation of Linux PAM {#installation-of-linux-pam}
 
-If you've installed [docbook-xml-5.0](../pst/docbook5.md "docbook-xml-5.0"){.xref}, [docbook-xsl-ns-1.79.2](../pst/docbook-xsl-ns.md "docbook-xsl-ns-1.79.2"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref}, and [Lynx-2.9.3](../basicnet/lynx.md "Lynx-2.9.3"){.xref} and you wish to generate the plain text format of the documentations, modify `meson.build`{.filename} to use [Lynx-2.9.3](../basicnet/lynx.md "Lynx-2.9.3"){.xref} instead of W3m or Elinks that BLFS does not provide:
+If you've installed <a class="xref" href="../pst/docbook5.md" title="docbook-xml-5.0">docbook-xml-5.0</a>, <a class="xref" href="../pst/docbook-xsl-ns.md" title="docbook-xsl-ns-1.79.2">docbook-xsl-ns-1.79.2</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>, and <a class="xref" href="../basicnet/lynx.md" title="Lynx-2.9.3">Lynx-2.9.3</a> and you wish to generate the plain text format of the documentations, modify <code class="filename">meson.build</code> to use <a class="xref" href="../basicnet/lynx.md" title="Lynx-2.9.3">Lynx-2.9.3</a> instead of W3m or Elinks that BLFS does not provide:
 
-``` userinput
+```bash
 sed -e "s/'elinks'/'lynx'/"                       \
     -e "s/'-no-numbering', '-no-references'/      \
           '-force-html', '-nonumbers', '-stdin'/" \
     -i meson.build
 ```
 
-Compile and link [Linux PAM]{.application} by running the following commands:
+Compile and link <span class="application">Linux PAM</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -116,19 +116,19 @@ meson setup ..        \
 ninja
 ```
 
-To test the results, a suitable `/etc/pam.d/other`{.filename} configuration file must exist.
+To test the results, a suitable <code class="filename">/etc/pam.d/other</code> configuration file must exist.
 
-::: {.admon .caution}
+<div class="admon caution">
 ![\[Caution\]](../images/caution.png)
 
 ### Reinstallation or Upgrade of Linux PAM
 
-If you have a system with Linux PAM installed and working, be careful when modifying the files in `/etc/pam.d`{.filename}, since your system may become totally unusable. If you want to run the tests, you do not need to create another `/etc/pam.d/other`{.filename} file. The existing file can be used for the tests.
-:::
+If you have a system with Linux PAM installed and working, be careful when modifying the files in <code class="filename">/etc/pam.d</code>, since your system may become totally unusable. If you want to run the tests, you do not need to create another <code class="filename">/etc/pam.d/other</code> file. The existing file can be used for the tests.
+</div>
 
-For a first-time installation, create a configuration file by issuing the following commands as the `root`{.systemitem} user:
+For a first-time installation, create a configuration file by issuing the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m755 -d /etc/pam.d &&
 
 cat > /etc/pam.d/other << "EOF"
@@ -139,43 +139,43 @@ session  required       pam_deny.so
 EOF
 ```
 
-Now run the tests by issuing [**ninja test**]{.command}. Be sure the tests produced no errors before continuing the installation.
+Now run the tests by issuing <span class="command"><strong>ninja test</strong></span>. Be sure the tests produced no errors before continuing the installation.
 
-For a first-time installation, remove the configuration file created earlier by issuing the following command as the `root`{.systemitem} user:
+For a first-time installation, remove the configuration file created earlier by issuing the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 rm -fv /etc/pam.d/other
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install &&
 chmod -v 4755 /usr/sbin/unix_chkpwd
 ```
 
-If you do not have the optional dependencies installed to build the documentation and downloaded the optional pre-built documentation, again as the `root`{.systemitem} user:
+If you do not have the optional dependencies installed to build the documentation and downloaded the optional pre-built documentation, again as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 tar -C / -xvf ../../Linux-PAM-1.7.2-docs.tar.xz
 ```
-::::
+</div>
 
-:::::: {.configuration lang="en"}
-## Configuring Linux-PAM {#configuring-linux-pam .sect2}
+<div class="configuration" lang="en">
+## Configuring Linux-PAM {#configuring-linux-pam}
 
-::: {.sect3 lang="en"}
-### []{#pam-config}Configuration Files {#configuration-files .sect3}
+<div class="sect3" lang="en">
+### Configuration Files {#configuration-files}
 
-`/etc/security/*`{.filename} and `/etc/pam.d/*`{.filename}
-:::
+<code class="filename">/etc/security/*</code> and <code class="filename">/etc/pam.d/*</code>
+</div>
 
-:::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Configuration information is placed in `/etc/pam.d/`{.filename}. Here is a sample file:
+Configuration information is placed in <code class="filename">/etc/pam.d/</code>. Here is a sample file:
 
-``` screen
+```console
 # Begin /etc/pam.d/other
 
 auth            required        pam_unix.so     nullok
@@ -186,9 +186,9 @@ password        required        pam_unix.so     nullok
 # End /etc/pam.d/other
 ```
 
-Now create some generic configuration files. As the `root`{.systemitem} user:
+Now create some generic configuration files. As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -vdm755 /etc/pam.d &&
 cat > /etc/pam.d/system-account << "EOF" &&
 # Begin /etc/pam.d/system-account
@@ -226,11 +226,11 @@ password  required    pam_unix.so       yescrypt shadow try_first_pass
 EOF
 ```
 
-If you wish to enable strong password support, install [libpwquality-1.4.5](libpwquality.md "libpwquality-1.4.5"){.xref}, and follow the instructions on that page to configure the pam_pwquality PAM module with strong password support.
+If you wish to enable strong password support, install <a class="xref" href="libpwquality.md" title="libpwquality-1.4.5">libpwquality-1.4.5</a>, and follow the instructions on that page to configure the pam_pwquality PAM module with strong password support.
 
-Next, add a restrictive `/etc/pam.d/other`{.filename} configuration file. With this file, programs that are PAM aware will not run unless a configuration file specifically for that application exists.
+Next, add a restrictive <code class="filename">/etc/pam.d/other</code> configuration file. With this file, programs that are PAM aware will not run unless a configuration file specifically for that application exists.
 
-``` root
+```bash
 cat > /etc/pam.d/other << "EOF"
 # Begin /etc/pam.d/other
 
@@ -247,63 +247,63 @@ session     required        pam_deny.so
 EOF
 ```
 
-The [PAM]{.application} man page ([**man pam**]{.command}) provides a good starting point to learn about the several fields, and allowable entries. The Linux-PAM System Administrators' Guide at `/usr/share/doc/Linux-PAM-1.7.0/Linux-PAM_SAG.txt`{.filename} is recommended for additional information.
+The <span class="application">PAM</span> man page (<span class="command"><strong>man pam</strong></span>) provides a good starting point to learn about the several fields, and allowable entries. The Linux-PAM System Administrators' Guide at <code class="filename">/usr/share/doc/Linux-PAM-1.7.0/Linux-PAM_SAG.txt</code> is recommended for additional information.
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-You should now reinstall the [Shadow-4.19.4](shadow.md "Shadow-4.19.4"){.xref} [and [Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref} packages.]{.phrase}
-:::
-::::
-::::::
+You should now reinstall the <a class="xref" href="shadow.md" title="Shadow-4.19.4">Shadow-4.19.4</a> <a class="xref" href="../general/systemd.md" title="Systemd-260.2">and <span class="phrase">Systemd-260.2</a> packages.</span>
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [faillock, mkhomedir_helper, pam_namespace_helper, pam_timestamp_check, pwhistory_helper, and unix_chkpwd]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">faillock, mkhomedir_helper, pam_namespace_helper, pam_timestamp_check, pwhistory_helper, and unix_chkpwd</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libpam.so, libpamc.so and libpam_misc.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libpam.so, libpamc.so and libpam_misc.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/security, /usr/lib/security, /usr/include/security and /usr/share/doc/Linux-PAM-1.7.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/security, /usr/lib/security, /usr/include/security and /usr/share/doc/Linux-PAM-1.7.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------ -------------------------------------------------------------------------------------
-  []{#faillock}[[**faillock**]{.command}]{.term}                           displays and modifies the authentication failure record files
-  []{#mkhomedir_helper}[[**mkhomedir_helper**]{.command}]{.term}           is a helper binary that creates home directories
-  []{#pam_namespace_helper}[[**pam_namespace_helper**]{.command}]{.term}   is a helper program used to configure a private namespace for a user session
-  []{#pwhistory_helper}[[**pwhistory_helper**]{.command}]{.term}           is a helper program that transfers password hashes from passwd or shadow to opasswd
-  []{#pam_timestamp_check}[[**pam_timestamp_check**]{.command}]{.term}     is used to check if the default timestamp is valid
-  []{#unix_chkpwd}[[**unix_chkpwd**]{.command}]{.term}                     is a helper binary that verifies the password of the current user
-  []{#libpam}[`libpam.so`{.filename}]{.term}                               provides the interfaces between applications and the PAM modules
+  <a id="faillock"></a><span class="command"><span class="term"><strong>faillock</strong></span></span>                           displays and modifies the authentication failure record files
+  <a id="mkhomedir_helper"></a><span class="command"><span class="term"><strong>mkhomedir_helper</strong></span></span>           is a helper binary that creates home directories
+  <a id="pam_namespace_helper"></a><span class="command"><span class="term"><strong>pam_namespace_helper</strong></span></span>   is a helper program used to configure a private namespace for a user session
+  <a id="pwhistory_helper"></a><span class="command"><span class="term"><strong>pwhistory_helper</strong></span></span>           is a helper program that transfers password hashes from passwd or shadow to opasswd
+  <a id="pam_timestamp_check"></a><span class="command"><span class="term"><strong>pam_timestamp_check</strong></span></span>     is used to check if the default timestamp is valid
+  <a id="unix_chkpwd"></a><span class="command"><span class="term"><strong>unix_chkpwd</strong></span></span>                     is a helper binary that verifies the password of the current user
+  <a id="libpam"></a><span class="term"><code class="filename">libpam.so</code></span>                               provides the interfaces between applications and the PAM modules
   ------------------------------------------------------------------------ -------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libcap.md "libcap-2.78 with PAM"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libcap.md "libcap-2.78 with PAM")
 
     libcap-2.78 with PAM
 
--   [Next](liboauth.md "liboauth-1.0.3"){accesskey="n"}
+-   [Next](liboauth.md "liboauth-1.0.3")
 
     liboauth-1.0.3
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

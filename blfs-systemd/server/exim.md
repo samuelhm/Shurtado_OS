@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 21. Mail Server Software
 
--   [Prev](dovecot.md "Dovecot-2.4.2"){accesskey="p"}
+-   [Prev](dovecot.md "Dovecot-2.4.2")
 
     Dovecot-2.4.2
 
--   [Next](postfix.md "Postfix-3.11.3"){accesskey="n"}
+-   [Next](postfix.md "Postfix-3.11.3")
 
     Postfix-3.11.3
 
--   [Up](mail.md "Chapter 21. Mail Server Software"){accesskey="u"}
+-   [Up](mail.md "Chapter 21. Mail Server Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#exim}Exim-4.99.1 {#exim-4.99.1 .sect1}
+# Exim-4.99.1 {#exim-4.99.1}
 
-::::::::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to Exim {#introduction-to-exim .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Exim {#introduction-to-exim}
 
-The [Exim]{.application} package contains a Mail Transport Agent written by the University of Cambridge, released under the GNU Public License.
+The <span class="application">Exim</span> package contains a Mail Transport Agent written by the University of Cambridge, released under the GNU Public License.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://ftp.exim.org/pub/exim/exim4/exim-4.99.1.tar.xz](https://ftp.exim.org/pub/exim/exim4/exim-4.99.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://ftp.exim.org/pub/exim/exim4/exim-4.99.1.tar.xz">https://ftp.exim.org/pub/exim/exim4/exim-4.99.1.tar.xz</a>
 
 -   Download MD5 sum: 281df763c79f1d68cb4f9ee9c9d8a2e1
 
@@ -44,38 +44,38 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 17 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Additional formats of the documentation (text-based docs are shipped with the sources) can be downloaded by following the links shown at [https://exim.org/docs.html](https://exim.org/docs.md){.ulink}.
-:::
+<div class="itemizedlist">
+-   Additional formats of the documentation (text-based docs are shipped with the sources) can be downloaded by following the links shown at <a class="ulink" href="https://exim.org/docs.md">https://exim.org/docs.html</a>.
+</div>
 
 ### Exim Dependencies
 
 #### Required
 
-[libnsl-2.0.1](../basicnet/libnsl.md "libnsl-2.0.1"){.xref} and [File-FcntlLock-0.22](../general/perl-modules.md#perl-file-fcntllock "File::FcntlLock-0.22"){.xref}
+<a class="xref" href="../basicnet/libnsl.md" title="libnsl-2.0.1">libnsl-2.0.1</a> and <a class="xref" href="../general/perl-modules.md#perl-file-fcntllock" title="File::FcntlLock-0.22">File-FcntlLock-0.22</a>
 
 #### Optional
 
-[TDB](https://sourceforge.net/projects/tdb){.ulink} (alternative to GDBM, built in LFS), [Cyrus SASL-2.1.28](../postlfs/cyrus-sasl.md "Cyrus SASL-2.1.28"){.xref}, [libidn-1.43](../general/libidn.md "libidn-1.43"){.xref}, [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [MariaDB-12.3.2](mariadb.md "MariaDB-12.3.2"){.xref} or [MySQL](https://www.mysql.com/){.ulink}, [OpenLDAP-2.6.13](openldap.md "OpenLDAP-2.6.13"){.xref}, [GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref}, [PostgreSQL-18.4](postgresql.md "PostgreSQL-18.4"){.xref}, [a graphical environment](../x/installing.md "Chapter 24. Graphical Environments"){.xref}, [Heimdal GSSAPI](https://github.com/heimdal/heimdal){.ulink}, [libspf2](https://github.com/shevek/libspf2/){.ulink}, and [OpenDMARC](http://www.trusteddomain.org/opendmarc/){.ulink}
-::::::
+<a class="ulink" href="https://sourceforge.net/projects/tdb">TDB</a> (alternative to GDBM, built in LFS), <a class="xref" href="../postlfs/cyrus-sasl.md" title="Cyrus SASL-2.1.28">Cyrus SASL-2.1.28</a>, <a class="xref" href="../general/libidn.md" title="libidn-1.43">libidn-1.43</a>, <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="mariadb.md" title="MariaDB-12.3.2">MariaDB-12.3.2</a> or <a class="ulink" href="https://www.mysql.com/">MySQL</a>, <a class="xref" href="openldap.md" title="OpenLDAP-2.6.13">OpenLDAP-2.6.13</a>, <a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a>, <a class="xref" href="postgresql.md" title="PostgreSQL-18.4">PostgreSQL-18.4</a>, <a class="xref" href="../x/installing.md" title="Chapter 24. Graphical Environments">a graphical environment</a>, <a class="ulink" href="https://github.com/heimdal/heimdal">Heimdal GSSAPI</a>, <a class="ulink" href="https://github.com/shevek/libspf2/">libspf2</a>, and <a class="ulink" href="http://www.trusteddomain.org/opendmarc/">OpenDMARC</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Exim {#installation-of-exim .sect2}
+<div class="installation" lang="en">
+## Installation of Exim {#installation-of-exim}
 
-Before building [Exim]{.application}, as the `root`{.systemitem} user you should create the group and user `exim`{.systemitem} which will run the [**exim**]{.command} daemon:
+Before building <span class="application">Exim</span>, as the <code class="systemitem">root</code> user you should create the group and user <code class="systemitem">exim</code> which will run the <span class="command"><strong>exim</strong></span> daemon:
 
-``` root
+```bash
 groupadd -g 31 exim &&
 useradd -d /dev/null -c "Exim Daemon" -g exim -s /bin/false -u 31 exim
 ```
 
-Configure [Exim]{.application} with the following commands:
+Configure <span class="application">Exim</span> with the following commands:
 
-``` userinput
+```bash
 sed -e 's,^BIN_DIR.*$,BIN_DIRECTORY=/usr/sbin,'    \
     -e 's,^CONF.*$,CONFIGURE_FILE=/etc/exim.conf,' \
     -e 's,^EXIM_USER.*$,EXIM_USER=exim,'           \
@@ -84,24 +84,24 @@ sed -e 's,^BIN_DIR.*$,BIN_DIRECTORY=/usr/sbin,'    \
 printf "USE_GDBM = yes\nDBMLIB = -lgdbm\n" >> Local/Makefile
 ```
 
-If you want to add [Linux PAM]{.application} support, also run the following commands:
+If you want to add <span class="application">Linux PAM</span> support, also run the following commands:
 
-``` userinput
+```bash
 sed -i '/# SUPPORT_PAM=yes/s,^#,,' Local/Makefile
 echo "EXTRALIBS=-lpam" >> Local/Makefile
 ```
 
-Build [Exim]{.application} with the following command:
+Build <span class="application">Exim</span> with the following command:
 
-``` userinput
+```bash
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install                                    &&
 install -v -m644 doc/exim.8 /usr/share/man/man8 &&
 
@@ -111,79 +111,79 @@ cp      -Rv doc/*   /usr/share/doc/exim-4.99.1 &&
 ln -sfv exim /usr/sbin/sendmail                 &&
 install -v -d -m750 -o exim -g exim /var/spool/exim
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -e ... \> Local/Makefile**]{.command}: Most of [Exim]{.application}'s configuration options are defined in `Local/Makefile`{.filename}, which is created from the `src/EDITME`{.filename} file. This command specifies the minimum set of options. Descriptions for the options are listed below.
+<span class="command"><strong>sed -e ... \> Local/Makefile</strong></span>: Most of <span class="application">Exim</span>'s configuration options are defined in <code class="filename">Local/Makefile</code>, which is created from the <code class="filename">src/EDITME</code> file. This command specifies the minimum set of options. Descriptions for the options are listed below.
 
-[**printf ... \> Local/Makefile**]{.command}: Setting those variables allows to use GDBM instead of the default Berkeley DB. Remove this command if you have installed [Berkeley DB](https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz){.ulink} (deprecated).
+<span class="command"><strong>printf ... \> Local/Makefile</strong></span>: Setting those variables allows to use GDBM instead of the default Berkeley DB. Remove this command if you have installed <a class="ulink" href="https://anduin.linuxfromscratch.org/BLFS/bdb/db-5.3.28.tar.gz">Berkeley DB</a> (deprecated).
 
-*`BIN_DIRECTORY=/usr/sbin`*: This installs all of [Exim]{.application}'s binaries and scripts in `/usr/sbin`{.filename}.
+*`BIN_DIRECTORY=/usr/sbin`*: This installs all of <span class="application">Exim</span>'s binaries and scripts in <code class="filename">/usr/sbin</code>.
 
-*`CONFIGURE_FILE=/etc/exim.conf`*: This installs [Exim]{.application}'s main configuration file in `/etc`{.filename}.
+*`CONFIGURE_FILE=/etc/exim.conf`*: This installs <span class="application">Exim</span>'s main configuration file in <code class="filename">/etc</code>.
 
-*`EXIM_USER=exim`*: This tells [Exim]{.application} that after the daemon no longer needs `root`{.systemitem} privileges, the process needs to hand off the daemon to the `exim`{.systemitem} user.
+*`EXIM_USER=exim`*: This tells <span class="application">Exim</span> that after the daemon no longer needs <code class="systemitem">root</code> privileges, the process needs to hand off the daemon to the <code class="systemitem">exim</code> user.
 
-*`USE_OPENSSL`*: uncommenting `USE_OPENSSL=yes`{.option} and `USE_OPNSSL_PC=yes`{.option} tells the build system to use [OpenSSL]{.application}, and to find the needed libraries with [pkg-config]{.application}.
+*`USE_OPENSSL`*: uncommenting <code class="option">USE_OPENSSL=yes</code> and <code class="option">USE_OPNSSL_PC=yes</code> tells the build system to use <span class="application">OpenSSL</span>, and to find the needed libraries with <span class="application">pkg-config</span>.
 
-Uncomment `EXIM_MONITOR`{.option}: This allows building the [Exim]{.application} monitor program, which requires [X Window System]{.application} support, and is commented out by default.
+Uncomment <code class="option">EXIM_MONITOR</code>: This allows building the <span class="application">Exim</span> monitor program, which requires <span class="application">X Window System</span> support, and is commented out by default.
 
-[**ln -sfv exim /usr/sbin/sendmail**]{.command}: Creates a link to [**sendmail**]{.command} for applications which need it. [Exim]{.application} will accept most [Sendmail]{.application} command-line options.
+<span class="command"><strong>ln -sfv exim /usr/sbin/sendmail</strong></span>: Creates a link to <span class="command"><strong>sendmail</strong></span> for applications which need it. <span class="application">Exim</span> will accept most <span class="application">Sendmail</span> command-line options.
 
-[**install -v -m750 -o exim -g exim /var/spool/exim**]{.command}: Since /var/spool is owned by root and this version of [**exim**]{.command} drops `root`{.systemitem} privileges early, to run as user `exim`{.systemitem}, it cannot create the `/var/spool/exim`{.filename} directory. As a work around, it is created manually.
-:::
+<span class="command"><strong>install -v -m750 -o exim -g exim /var/spool/exim</strong></span>: Since /var/spool is owned by root and this version of <span class="command"><strong>exim</strong></span> drops <code class="systemitem">root</code> privileges early, to run as user <code class="systemitem">exim</code>, it cannot create the <code class="filename">/var/spool/exim</code> directory. As a work around, it is created manually.
+</div>
 
-::: {.commands lang="en"}
-## Adding Additional Functionality {#adding-additional-functionality .sect2}
+<div class="commands" lang="en">
+## Adding Additional Functionality {#adding-additional-functionality}
 
-To utilize some or all of the dependency packages, you'll need to modify `Local/Makefile`{.filename} to include the appropriate directives and parameters to link additional libraries before you build [Exim]{.application}. `Local/Makefile`{.filename} is heavily commented with instructions on how to do this. Listed below is additional information to help you link these dependency packages or add additional functionality.
+To utilize some or all of the dependency packages, you'll need to modify <code class="filename">Local/Makefile</code> to include the appropriate directives and parameters to link additional libraries before you build <span class="application">Exim</span>. <code class="filename">Local/Makefile</code> is heavily commented with instructions on how to do this. Listed below is additional information to help you link these dependency packages or add additional functionality.
 
-If you wish to build and install the `.info`{.filename} documentation, refer to [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinsinfdoc](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinsinfdoc){.ulink}.
+If you wish to build and install the <code class="filename">.info</code> documentation, refer to <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinsinfdoc">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinsinfdoc</a>.
 
-If you wish to build in Exim's interfaces for calling virus and spam scanning software directly from access control lists, uncomment the `WITH_CONTENT_SCAN=yes`{.option} parameter and review the information found at [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch45.html](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch45.md){.ulink}.
+If you wish to build in Exim's interfaces for calling virus and spam scanning software directly from access control lists, uncomment the <code class="option">WITH_CONTENT_SCAN=yes</code> parameter and review the information found at <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch45.md">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch45.html</a>.
 
-To use a backend database other than [GDBM]{.application}, see the instructions at [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTdb](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTdb){.ulink}.
+To use a backend database other than <span class="application">GDBM</span>, see the instructions at <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTdb">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTdb</a>.
 
-For SSL functionality, see the instructions at [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinctlsssl](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinctlsssl){.ulink} and [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch42.html](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch42.md){.ulink}.
+For SSL functionality, see the instructions at <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinctlsssl">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECTinctlsssl</a> and <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch42.md">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch42.html</a>.
 
-For [tcpwrappers]{.application} functionality, see the instructions at [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECID27](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECID27){.ulink}.
+For <span class="application">tcpwrappers</span> functionality, see the instructions at <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECID27">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch04.md#SECID27</a>.
 
-For information about adding authentication mechanisms to the build, see chapters 33—41 of [https://exim.org/exim-html-4.99.1/doc/html/spec_html/index.html](https://exim.org/exim-html-4.99.1/doc/html/spec_html/index.md){.ulink}.
+For information about adding authentication mechanisms to the build, see chapters 33—41 of <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/index.md">https://exim.org/exim-html-4.99.1/doc/html/spec_html/index.html</a>.
 
-For information about linking [Linux-PAM]{.application}, refer to the instructions [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch11.md#SECTexpcond](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch11.md#SECTexpcond){.ulink}.
+For information about linking <span class="application">Linux-PAM</span>, refer to the instructions <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch11.md#SECTexpcond">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch11.md#SECTexpcond</a>.
 
-For information about linking database engine libraries used for [Exim]{.application} name lookups, see the instructions at [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch09.html](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch09.md){.ulink}.
+For information about linking database engine libraries used for <span class="application">Exim</span> name lookups, see the instructions at <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch09.md">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch09.html</a>.
 
-If you wish to add [Readline]{.application} support to [Exim]{.application} when invoked in [“[test expansion]{.quote}”]{.quote} (`-be`{.option}) mode, see the information in the `-be`{.option} section of [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch05.md#id2525974](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch05.md#id2525974){.ulink}.
+If you wish to add <span class="application">Readline</span> support to <span class="application">Exim</span> when invoked in <span class="quote">“<span class="quote">test expansion</span>”</span> (<code class="option">-be</code>) mode, see the information in the <code class="option">-be</code> section of <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch05.md#id2525974">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch05.md#id2525974</a>.
 
-You may wish to modify the default configuration and send log files to syslog instead of the default `/var/spool/exim/log`{.filename} directory. See the information at [https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch-log_files.html](https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch-log_files.md){.ulink}.
+You may wish to modify the default configuration and send log files to syslog instead of the default <code class="filename">/var/spool/exim/log</code> directory. See the information at <a class="ulink" href="https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch-log_files.md">https://exim.org/exim-html-4.99.1/doc/html/spec_html/ch-log_files.html</a>.
 
-A wealth of information can be also found at the [Exim Wiki](https://github.com/Exim/exim/wiki){.ulink}.
-:::
+A wealth of information can be also found at the <a class="ulink" href="https://github.com/Exim/exim/wiki">Exim Wiki</a>.
+</div>
 
-:::::::: {.configuration lang="en"}
-## Configuring Exim {#configuring-exim .sect2}
+<div class="configuration" lang="en">
+## Configuring Exim {#configuring-exim}
 
-::: {.sect3 lang="en"}
-### []{#exim-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/exim.conf`{.filename} and `/etc/aliases`{.filename}
-:::
+<code class="filename">/etc/exim.conf</code> and <code class="filename">/etc/aliases</code>
+</div>
 
-:::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Review the file `/etc/exim.conf`{.filename}, and modify any settings to suit your needs. Note that the default configuration assumes that the `/var/mail`{.filename} directory is world writable, but has the sticky bit set. If you want to use the default configuration, issue as the `root`{.systemitem} user:
+Review the file <code class="filename">/etc/exim.conf</code>, and modify any settings to suit your needs. Note that the default configuration assumes that the <code class="filename">/var/mail</code> directory is world writable, but has the sticky bit set. If you want to use the default configuration, issue as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 chmod -v a+wt /var/mail
 ```
 
-A default (nothing but comments) `/etc/aliases`{.filename} file is installed during the package installation if this file did not exist on your system. Create the necessary aliases and start the [Exim]{.application} daemon using the following commands:
+A default (nothing but comments) <code class="filename">/etc/aliases</code> file is installed during the package installation if this file did not exist on your system. Create the necessary aliases and start the <span class="application">Exim</span> daemon using the following commands:
 
-``` root
+```bash
 cat >> /etc/aliases << "EOF"
 postmaster: root
 MAILER-DAEMON: root
@@ -191,25 +191,25 @@ EOF
 /usr/sbin/exim -bd -q15m
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-To protect an existing `/etc/aliases`{.filename} file, the command above appends these aliases to it. This file should be checked and duplicate aliases removed, if present.
-:::
+To protect an existing <code class="filename">/etc/aliases</code> file, the command above appends these aliases to it. This file should be checked and duplicate aliases removed, if present.
+</div>
 
-The [**/usr/sbin/exim -bd -q15m**]{.command} command starts the [Exim]{.application} daemon with a 15 minute interval in processing the mail queue. Adjust this parameter to suit your desires.
-::::
+The <span class="command"><strong>/usr/sbin/exim -bd -q15m</strong></span> command starts the <span class="application">Exim</span> daemon with a 15 minute interval in processing the mail queue. Adjust this parameter to suit your desires.
+</div>
 
-::: {.sect3 lang="en"}
-### Linux PAM Configuration {#linux-pam-configuration .sect3}
+<div class="sect3" lang="en">
+### Linux PAM Configuration {#linux-pam-configuration}
 
-If you have built [Exim]{.application} with [Linux PAM]{.application} support, you need to create a [PAM]{.application} configuration file to get it working correctly with BLFS.
+If you have built <span class="application">Exim</span> with <span class="application">Linux PAM</span> support, you need to create a <span class="application">PAM</span> configuration file to get it working correctly with BLFS.
 
-Issue the following command as the `root`{.systemitem} user to create the configuration file for [Linux PAM]{.application}:
+Issue the following command as the <code class="systemitem">root</code> user to create the configuration file for <span class="application">Linux PAM</span>:
 
-``` root
+```bash
 cat > /etc/pam.d/exim << "EOF"
 # Begin /etc/pam.d/exim
 
@@ -220,77 +220,77 @@ session include system-session
 # End /etc/pam.d/exim
 EOF
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#exim-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-To automatically start [**exim**]{.command} at boot, install the [`exim.service`{.filename} unit]{.phrase} included in the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package:
+To automatically start <span class="command"><strong>exim</strong></span> at boot, install the <span class="phrase"><code class="filename">exim.service</code> unit</span> included in the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package:
 
-``` root
+```bash
 make install-exim
 ```
-:::
-::::::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [exicyclog, exigrep, exim, exim-4.99.1-2, exim_checkaccess, exim_dbmbuild, exim_dumpdb, exim_fixdb, exim_id_update, exim_lock, exim_msgdate, exim_tidydb, eximstats, exinext, exipick, exiqgrep, exiqsumm, exiwhat, and optionally, eximon, eximon.bin, and sendmail (symlink)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">exicyclog, exigrep, exim, exim-4.99.1-2, exim_checkaccess, exim_dbmbuild, exim_dumpdb, exim_fixdb, exim_id_update, exim_lock, exim_msgdate, exim_tidydb, eximstats, exinext, exipick, exiqgrep, exiqsumm, exiwhat, and optionally, eximon, eximon.bin, and sendmail (symlink)</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/exim-4.99.1 and /var/spool/exim]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/exim-4.99.1 and /var/spool/exim</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#exicyclog}[[**exicyclog**]{.command}]{.term}                  cycles [Exim]{.application} log files
-  []{#exigrep}[[**exigrep**]{.command}]{.term}                      searches [Exim]{.application} log files
-  []{#exim-prog}[[**exim**]{.command}]{.term}                       is a symlink to the [**exim-4.99.1-2**]{.command} MTA daemon
-  []{#exim-current_version}[[**exim-4.99.1-2**]{.command}]{.term}   is the [Exim]{.application} mail transport agent daemon
-  []{#exim_checkaccess}[[**exim_checkaccess**]{.command}]{.term}    states whether a given recipient address from a given host is acceptable or not
-  []{#exim_dbmbuild}[[**exim_dbmbuild**]{.command}]{.term}          creates and rebuilds [Exim]{.application} databases
-  []{#exim_dumpdb}[[**exim_dumpdb**]{.command}]{.term}              writes the contents of [Exim]{.application} databases to the standard output
-  []{#exim_fixdb}[[**exim_fixdb**]{.command}]{.term}                modifies data in [Exim]{.application} databases
-  []{#exim_update_id}[[**exim_update_id**]{.command}]{.term}        upgrades and downgrades Exim message-id formats in spool files
-  []{#exim_lock}[[**exim_lock**]{.command}]{.term}                  locks a mailbox file
-  []{#exim_msgdate}[[**exim_msgdate**]{.command}]{.term}            converts an Exim message-id to a human readable form
-  []{#exim_tidydb}[[**exim_tidydb**]{.command}]{.term}              removes old records from [Exim]{.application} databases
-  []{#eximstats}[[**eximstats**]{.command}]{.term}                  generates mail statistics from [Exim]{.application} log files
-  []{#exinext}[[**exinext**]{.command}]{.term}                      queries remote host retry times
-  []{#exipick}[[**exipick**]{.command}]{.term}                      selects messages based on various criteria
-  []{#exiqgrep}[[**exiqgrep**]{.command}]{.term}                    is a utility for selective queue listing
-  []{#exiqsumm}[[**exiqsumm**]{.command}]{.term}                    produces a summary of the messages in the mail queue
-  []{#exiwhat}[[**exiwhat**]{.command}]{.term}                      queries running [Exim]{.application} processes
-  []{#eximon}[[**eximon**]{.command}]{.term}                        is a start-up shell script for [**eximon.bin**]{.command} used to set the required environment variables before running the program
-  []{#eximon.bin}[[**eximon.bin**]{.command}]{.term}                is a monitor program which displays current information in an [X]{.application} window, and also contains a menu interface to [Exim]{.application}'s command line administration options
+  <a id="exicyclog"></a><span class="command"><span class="term"><strong>exicyclog</strong></span></span>                  cycles <span class="application">Exim</span> log files
+  <a id="exigrep"></a><span class="command"><span class="term"><strong>exigrep</strong></span></span>                      searches <span class="application">Exim</span> log files
+  <a id="exim-prog"></a><span class="command"><span class="term"><strong>exim</strong></span></span>                       is a symlink to the <span class="command"><strong>exim-4.99.1-2</strong></span> MTA daemon
+  <a id="exim-current_version"></a><span class="command"><span class="term"><strong>exim-4.99.1-2</strong></span></span>   is the <span class="application">Exim</span> mail transport agent daemon
+  <a id="exim_checkaccess"></a><span class="command"><span class="term"><strong>exim_checkaccess</strong></span></span>    states whether a given recipient address from a given host is acceptable or not
+  <a id="exim_dbmbuild"></a><span class="command"><span class="term"><strong>exim_dbmbuild</strong></span></span>          creates and rebuilds <span class="application">Exim</span> databases
+  <a id="exim_dumpdb"></a><span class="command"><span class="term"><strong>exim_dumpdb</strong></span></span>              writes the contents of <span class="application">Exim</span> databases to the standard output
+  <a id="exim_fixdb"></a><span class="command"><span class="term"><strong>exim_fixdb</strong></span></span>                modifies data in <span class="application">Exim</span> databases
+  <a id="exim_update_id"></a><span class="command"><span class="term"><strong>exim_update_id</strong></span></span>        upgrades and downgrades Exim message-id formats in spool files
+  <a id="exim_lock"></a><span class="command"><span class="term"><strong>exim_lock</strong></span></span>                  locks a mailbox file
+  <a id="exim_msgdate"></a><span class="command"><span class="term"><strong>exim_msgdate</strong></span></span>            converts an Exim message-id to a human readable form
+  <a id="exim_tidydb"></a><span class="command"><span class="term"><strong>exim_tidydb</strong></span></span>              removes old records from <span class="application">Exim</span> databases
+  <a id="eximstats"></a><span class="command"><span class="term"><strong>eximstats</strong></span></span>                  generates mail statistics from <span class="application">Exim</span> log files
+  <a id="exinext"></a><span class="command"><span class="term"><strong>exinext</strong></span></span>                      queries remote host retry times
+  <a id="exipick"></a><span class="command"><span class="term"><strong>exipick</strong></span></span>                      selects messages based on various criteria
+  <a id="exiqgrep"></a><span class="command"><span class="term"><strong>exiqgrep</strong></span></span>                    is a utility for selective queue listing
+  <a id="exiqsumm"></a><span class="command"><span class="term"><strong>exiqsumm</strong></span></span>                    produces a summary of the messages in the mail queue
+  <a id="exiwhat"></a><span class="command"><span class="term"><strong>exiwhat</strong></span></span>                      queries running <span class="application">Exim</span> processes
+  <a id="eximon"></a><span class="command"><span class="term"><strong>eximon</strong></span></span>                        is a start-up shell script for <span class="command"><strong>eximon.bin</strong></span> used to set the required environment variables before running the program
+  <a id="eximon.bin"></a><span class="command"><span class="term"><strong>eximon.bin</strong></span></span>                is a monitor program which displays current information in an <span class="application">X</span> window, and also contains a menu interface to <span class="application">Exim</span>'s command line administration options
   ----------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](dovecot.md "Dovecot-2.4.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](dovecot.md "Dovecot-2.4.2")
 
     Dovecot-2.4.2
 
--   [Next](postfix.md "Postfix-3.11.3"){accesskey="n"}
+-   [Next](postfix.md "Postfix-3.11.3")
 
     Postfix-3.11.3
 
--   [Up](mail.md "Chapter 21. Mail Server Software"){accesskey="u"}
+-   [Up](mail.md "Chapter 21. Mail Server Software")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

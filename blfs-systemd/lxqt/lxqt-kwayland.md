@@ -1,49 +1,49 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-kidletime.md "kidletime-6.26.0 for lxqt"){accesskey="p"}
+-   [Prev](lxqt-kidletime.md "kidletime-6.26.0 for lxqt")
 
     kidletime-6.26.0 for lxqt
 
--   [Next](lxqt-libkscreen.md "libkscreen-6.6.5 for lxqt"){accesskey="n"}
+-   [Next](lxqt-libkscreen.md "libkscreen-6.6.5 for lxqt")
 
     libkscreen-6.6.5 for lxqt
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-kwayland}kwayland-6.6.5 for lxqt {#kwayland-6.6.5-for-lxqt .sect1}
+# kwayland-6.6.5 for lxqt {#kwayland-6.6.5-for-lxqt}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to kwayland {#introduction-to-kwayland .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to kwayland {#introduction-to-kwayland}
 
-[kwayland]{.application} is a Qt-style API to interact with the [wayland-client]{.application} and [wayland-server]{.application} API.
+<span class="application">kwayland</span> is a Qt-style API to interact with the <span class="application">wayland-client</span> and <span class="application">wayland-server</span> API.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-This package is extracted from the KF6 set of packages. If [KDE Frameworks-6.26.0](../kde/frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref} is built, do [**NOT**]{.bold} also build this package as presented here.
-:::
+This package is extracted from the KF6 set of packages. If <a class="xref" href="../kde/frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a> is built, do <span class="bold"><strong>NOT</strong></span> also build this package as presented here.
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/plasma/6.6.5/kwayland-6.6.5.tar.xz](https://download.kde.org/stable/plasma/6.6.5/kwayland-6.6.5.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/plasma/6.6.5/kwayland-6.6.5.tar.xz">https://download.kde.org/stable/plasma/6.6.5/kwayland-6.6.5.tar.xz</a>
 
 -   Download MD5 sum: bdb0b9f18478d16b31246882fdcbc458
 
@@ -52,21 +52,21 @@ This package is extracted from the KF6 set of packages. If [KDE Frameworks-6.26.
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### kwayland Dependencies
 
 #### Required
 
-[Extra-CMake-Modules-6.26.0](../kde/extra-cmake-modules.md "Extra-CMake-Modules-6.26.0"){.xref}, [Mesa-26.0.7](../x/mesa.md "Mesa-26.0.7"){.xref} (built with [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref} support), [plasma-wayland-protocols-1.21.0](../kde/plasma-wayland-protocols.md "plasma-wayland-protocols-1.21.0"){.xref}, and [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
-::::::
+<a class="xref" href="../kde/extra-cmake-modules.md" title="Extra-CMake-Modules-6.26.0">Extra-CMake-Modules-6.26.0</a>, <a class="xref" href="../x/mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a> (built with <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a> support), <a class="xref" href="../kde/plasma-wayland-protocols.md" title="plasma-wayland-protocols-1.21.0">plasma-wayland-protocols-1.21.0</a>, and <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of kwayland {#installation-of-kwayland .sect2}
+<div class="installation" lang="en">
+## Installation of kwayland {#installation-of-kwayland}
 
-Install [kwayland]{.application} by running the following commands:
+Install <span class="application">kwayland</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -81,52 +81,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libKWaylandClient.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libKWaylandClient.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/KWayland and /usr/lib/cmake/KWayland]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/KWayland and /usr/lib/cmake/KWayland</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------------- ----------------------------------------------------------------------
-  []{#lxqt-kwayland-client}[`libKWaylandClient.so`{.filename}]{.term}   contains the [wayland-client]{.application} Qt-style wrapper library
+  <a id="lxqt-kwayland-client"></a><span class="term"><code class="filename">libKWaylandClient.so</code></span>   contains the <span class="application">wayland-client</span> Qt-style wrapper library
   --------------------------------------------------------------------- ----------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-kidletime.md "kidletime-6.26.0 for lxqt"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-kidletime.md "kidletime-6.26.0 for lxqt")
 
     kidletime-6.26.0 for lxqt
 
--   [Next](lxqt-libkscreen.md "libkscreen-6.6.5 for lxqt"){accesskey="n"}
+-   [Next](lxqt-libkscreen.md "libkscreen-6.6.5 for lxqt")
 
     libkscreen-6.6.5 for lxqt
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

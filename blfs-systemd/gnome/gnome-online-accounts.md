@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gnome-menus.md "gnome-menus-3.38.1"){accesskey="p"}
+-   [Prev](gnome-menus.md "gnome-menus-3.38.1")
 
     gnome-menus-3.38.1
 
--   [Next](libgee.md "libgee-0.20.8"){accesskey="n"}
+-   [Next](libgee.md "libgee-0.20.8")
 
     libgee-0.20.8
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#gnome-online-accounts}gnome-online-accounts-3.58.1 {#gnome-online-accounts-3.58.1 .sect1}
+# gnome-online-accounts-3.58.1 {#gnome-online-accounts-3.58.1}
 
-:::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to GNOME Online Accounts {#introduction-to-gnome-online-accounts .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to GNOME Online Accounts {#introduction-to-gnome-online-accounts}
 
-The [GNOME Online Accounts]{.application} package contains a framework used to access the user's online accounts.
+The <span class="application">GNOME Online Accounts</span> package contains a framework used to access the user's online accounts.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.1.tar.xz](https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.1.tar.xz">https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.1.tar.xz</a>
 
 -   Download MD5 sum: 9942aa191d657f7c39d3b5ec28b74f61
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### GNOME Online Accounts Dependencies
 
 #### Required
 
-[Gcr-4.4.0.1](gcr4.md "Gcr-4.4.0.1"){.xref}, [JSON-GLib-1.10.8](../general/json-glib.md "JSON-GLib-1.10.8"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, [librest-0.10.2](librest.md "librest-0.10.2"){.xref}, and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="gcr4.md" title="Gcr-4.4.0.1">Gcr-4.4.0.1</a>, <a class="xref" href="../general/json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, <a class="xref" href="librest.md" title="librest-0.10.2">librest-0.10.2</a>, and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Optional
 
-[Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, [keyutils-1.6.3](../general/keyutils.md "keyutils-1.6.3"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, and [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref}
-:::::
+<a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, <a class="xref" href="../general/keyutils.md" title="keyutils-1.6.3">keyutils-1.6.3</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, and <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of GNOME Online Accounts {#installation-of-gnome-online-accounts .sect2}
+<div class="installation" lang="en">
+## Installation of GNOME Online Accounts {#installation-of-gnome-online-accounts}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The Google API Key and OAuth tokens below are specific to LFS. If using these instructions for another distro, or if you intend to distribute binary copies of the software using these instructions, please obtain your own keys following the instructions located at [https://www.chromium.org/developers/how-tos/api-keys](https://www.chromium.org/developers/how-tos/api-keys){.ulink}.
-:::
+The Google API Key and OAuth tokens below are specific to LFS. If using these instructions for another distro, or if you intend to distribute binary copies of the software using these instructions, please obtain your own keys following the instructions located at <a class="ulink" href="https://www.chromium.org/developers/how-tos/api-keys">https://www.chromium.org/developers/how-tos/api-keys</a>.
+</div>
 
-Install [GNOME Online Accounts]{.application} by running the following commands:
+Install <span class="application">GNOME Online Accounts</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -89,9 +89,9 @@ meson setup                                            \
 ninja
 ```
 
-If you've installed [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} and you wish to build and install the API documentation of this package, issue:
+If you've installed <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> and you wish to build and install the API documentation of this package, issue:
 
-``` userinput
+```bash
 meson configure -D documentation=true &&
 sed "s/project_name()/& + '-' + meson.project_version()/" \
     -i ../doc/meson.build &&
@@ -100,63 +100,63 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
 *`-D google_*`*: These switches set the BLFS OAuth ID and secret for Google services.
 
-`-D kerberos=true`{.option}: Use this switch if you have installed [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} and wish to use it with [GNOME Online Accounts]{.application}.
-:::
+<code class="option">-D kerberos=true</code>: Use this switch if you have installed <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> and wish to use it with <span class="application">GNOME Online Accounts</span>.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgoa-1.0.so and libgoa-backend-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgoa-1.0.so and libgoa-backend-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/goa-1.0, /usr/lib/goa-1.0, and /usr/share/doc/gnome-online-accounts-3.58.1 (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/goa-1.0, /usr/lib/goa-1.0, and /usr/share/doc/gnome-online-accounts-3.58.1 (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------------- ---------------------------------------------------------------------------
-  []{#libgoa-1}[`libgoa-1.0.so`{.filename}]{.term}                     contains the [GNOME Online Accounts]{.application} API functions
-  []{#libgoa-backend-1.0}[`libgoa-backend-1.0.so`{.filename}]{.term}   contains functions used by [GNOME Online Accounts]{.application} backends
+  <a id="libgoa-1"></a><span class="term"><code class="filename">libgoa-1.0.so</code></span>                     contains the <span class="application">GNOME Online Accounts</span> API functions
+  <a id="libgoa-backend-1.0"></a><span class="term"><code class="filename">libgoa-backend-1.0.so</code></span>   contains functions used by <span class="application">GNOME Online Accounts</span> backends
   -------------------------------------------------------------------- ---------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gnome-menus.md "gnome-menus-3.38.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gnome-menus.md "gnome-menus-3.38.1")
 
     gnome-menus-3.38.1
 
--   [Next](libgee.md "libgee-0.20.8"){accesskey="n"}
+-   [Next](libgee.md "libgee-0.20.8")
 
     libgee-0.20.8
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

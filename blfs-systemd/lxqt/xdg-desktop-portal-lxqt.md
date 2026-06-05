@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1"){accesskey="p"}
+-   [Prev](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1")
 
     lxqt-wayland-session-0.4.1
 
--   [Next](obconf-qt.md "obconf-qt-0.16.5"){accesskey="n"}
+-   [Next](obconf-qt.md "obconf-qt-0.16.5")
 
     obconf-qt-0.16.5
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xdg-desktop-portal-lxqt}xdg-desktop-portal-lxqt-1.4.0 {#xdg-desktop-portal-lxqt-1.4.0 .sect1}
+# xdg-desktop-portal-lxqt-1.4.0 {#xdg-desktop-portal-lxqt-1.4.0}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to xdg-desktop-portal-lxqt {#introduction-to-xdg-desktop-portal-lxqt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to xdg-desktop-portal-lxqt {#introduction-to-xdg-desktop-portal-lxqt}
 
-[xdg-desktop-portal-lxqt]{.application} is a backend for [xdg-desktop-portal]{.application}, that is using the Qt library.
+<span class="application">xdg-desktop-portal-lxqt</span> is a backend for <span class="application">xdg-desktop-portal</span>, that is using the Qt library.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/xdg-desktop-portal-lxqt/releases/download/1.4.0/xdg-desktop-portal-lxqt-1.4.0.tar.xz](https://github.com/lxqt/xdg-desktop-portal-lxqt/releases/download/1.4.0/xdg-desktop-portal-lxqt-1.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/xdg-desktop-portal-lxqt/releases/download/1.4.0/xdg-desktop-portal-lxqt-1.4.0.tar.xz">https://github.com/lxqt/xdg-desktop-portal-lxqt/releases/download/1.4.0/xdg-desktop-portal-lxqt-1.4.0.tar.xz</a>
 
 -   Download MD5 sum: e624e0c130c2210a7e3a08ab6d9b6e04
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.3 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### xdg-desktop-portal-lxqt Dependencies
 
 #### Required
 
-[libfm-qt-2.4.0](libfm-qt.md "libfm-qt-2.4.0"){.xref}, [kwindowsystem-6.26.0 for lxqt](lxqt-kwindowsystem.md "kwindowsystem-6.26.0 for lxqt"){.xref}, and [xdg-desktop-portal-1.20.4](../x/xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){.xref} (at runtime)
-:::::
+<a class="xref" href="libfm-qt.md" title="libfm-qt-2.4.0">libfm-qt-2.4.0</a>, <a class="xref" href="lxqt-kwindowsystem.md" title="kwindowsystem-6.26.0 for lxqt">kwindowsystem-6.26.0 for lxqt</a>, and <a class="xref" href="../x/xdg-desktop-portal.md" title="xdg-desktop-portal-1.20.4">xdg-desktop-portal-1.20.4</a> (at runtime)
+</div>
 
-::: {.installation lang="en"}
-## Installation of xdg-desktop-portal-lxqt {#installation-of-xdg-desktop-portal-lxqt .sect2}
+<div class="installation" lang="en">
+## Installation of xdg-desktop-portal-lxqt {#installation-of-xdg-desktop-portal-lxqt}
 
-Install [xdg-desktop-portal-lxqt]{.application} by running the following commands:
+Install <span class="application">xdg-desktop-portal-lxqt</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,44 +70,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [xdg-desktop-portal-lxqt (in /usr/libexec)]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">xdg-desktop-portal-lxqt (in /usr/libexec)</span>
+</div>
 
-::: seg
-**Installed Library:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/xdg-desktop-portal (if no other [xdg-desktop-portal]{.application} backend is installed)]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="application">/usr/share/xdg-desktop-portal (if no other <span class="segbody">xdg-desktop-portal</span> backend is installed)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-wayland-session.md "lxqt-wayland-session-0.4.1")
 
     lxqt-wayland-session-0.4.1
 
--   [Next](obconf-qt.md "obconf-qt-0.16.5"){accesskey="n"}
+-   [Next](obconf-qt.md "obconf-qt-0.16.5")
 
     obconf-qt-0.16.5
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

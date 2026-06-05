@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 43. Audio Utilities
 
--   [Prev](pnmixer.md "pnmixer-0.7.2"){accesskey="p"}
+-   [Prev](pnmixer.md "pnmixer-0.7.2")
 
     pnmixer-0.7.2
 
--   [Next](videoutils.md "Video Utilities"){accesskey="n"}
+-   [Next](videoutils.md "Video Utilities")
 
     Video Utilities
 
--   [Up](audioutils.md "Chapter 43. Audio Utilities"){accesskey="u"}
+-   [Up](audioutils.md "Chapter 43. Audio Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#vorbistools}vorbis-tools-1.4.3 {#vorbis-tools-1.4.3 .sect1}
+# vorbis-tools-1.4.3 {#vorbis-tools-1.4.3}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Vorbis Tools {#introduction-to-vorbis-tools .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Vorbis Tools {#introduction-to-vorbis-tools}
 
-The [Vorbis Tools]{.application} package contains command-line tools useful for encoding, playing or editing files using the Ogg codec.
+The <span class="application">Vorbis Tools</span> package contains command-line tools useful for encoding, playing or editing files using the Ogg codec.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.3.tar.gz](https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.3.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.3.tar.gz">https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.3.tar.gz</a>
 
 -   Download MD5 sum: 2057a2f8778d4913ceb169268abf23d4
 
@@ -44,108 +44,108 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 14 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Vorbis Tools Dependencies
 
 #### Required
 
-[libvorbis-1.3.7](libvorbis.md "libvorbis-1.3.7"){.xref}
+<a class="xref" href="libvorbis.md" title="libvorbis-1.3.7">libvorbis-1.3.7</a>
 
-#### Optional (required to build the [**ogg123**]{.command} program)
+#### Optional (required to build the <span class="command"><strong>ogg123</strong></span> program)
 
-[libao-1.2.0](libao.md "Libao-1.2.0"){.xref}
+<a class="xref" href="libao.md" title="Libao-1.2.0">libao-1.2.0</a>
 
 #### Optional
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}, [FLAC-1.5.0](flac.md "FLAC-1.5.0"){.xref}, [Speex-1.2.1](speex.md "Speex-1.2.1"){.xref}, and [libkate](https://code.google.com/archive/p/libkate/){.ulink}
-:::::
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="flac.md" title="FLAC-1.5.0">FLAC-1.5.0</a>, <a class="xref" href="speex.md" title="Speex-1.2.1">Speex-1.2.1</a>, and <a class="ulink" href="https://code.google.com/archive/p/libkate/">libkate</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Vorbis Tools {#installation-of-vorbis-tools .sect2}
+<div class="installation" lang="en">
+## Installation of Vorbis Tools {#installation-of-vorbis-tools}
 
-Install [Vorbis Tools]{.application} by running the following commands:
+Install <span class="application">Vorbis Tools</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --enable-vcut &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--enable-vcut`*: This parameter is used so that the [**vcut**]{.command} program is built as it is not by default.
-:::
+*`--enable-vcut`*: This parameter is used so that the <span class="command"><strong>vcut</strong></span> program is built as it is not by default.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Vorbis Tools {#configuring-vorbis-tools .sect2}
+<div class="configuration" lang="en">
+## Configuring Vorbis Tools {#configuring-vorbis-tools}
 
-::: {.sect3 lang="en"}
-### []{#vorbistools-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/libao.conf`{.filename}, `~/.libao`{.filename} and `~/.ogg123rc`{.filename}
-:::
+<code class="filename">/etc/libao.conf</code>, <code class="filename">~/.libao</code> and <code class="filename">~/.ogg123rc</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Issue [**man libao.conf**]{.command} for information about setting the default output device. Also see `/usr/share/doc/vorbis-tools-1.4.3/ogg123rc-example`{.filename}.
-:::
-:::::
+Issue <span class="command"><strong>man libao.conf</strong></span> for information about setting the default output device. Also see <code class="filename">/usr/share/doc/vorbis-tools-1.4.3/ogg123rc-example</code>.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [ogg123, oggdec, oggenc, ogginfo, vcut, and vorbiscomment]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">ogg123, oggdec, oggenc, ogginfo, vcut, and vorbiscomment</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/doc/vorbis-tools-1.4.3]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/doc/vorbis-tools-1.4.3</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- ---------------------------------------------------------------------------------------
-  []{#ogg123}[[**ogg123**]{.command}]{.term}                 is a command-line audio player for Ogg Vorbis streams
-  []{#oggdec}[[**oggdec**]{.command}]{.term}                 is a simple decoder which converts Ogg Vorbis files into PCM audio files (WAV or raw)
-  []{#oggenc}[[**oggenc**]{.command}]{.term}                 is an encoder that turns raw, WAV or AIFF files into an Ogg Vorbis stream
-  []{#ogginfo}[[**ogginfo**]{.command}]{.term}               prints information stored in an audio file
-  []{#vcut}[[**vcut**]{.command}]{.term}                     splits a file into two files at a designated cut point
-  []{#vorbiscomment}[[**vorbiscomment**]{.command}]{.term}   is an editor that changes information in the audio file metadata tags
+  <a id="ogg123"></a><span class="command"><span class="term"><strong>ogg123</strong></span></span>                 is a command-line audio player for Ogg Vorbis streams
+  <a id="oggdec"></a><span class="command"><span class="term"><strong>oggdec</strong></span></span>                 is a simple decoder which converts Ogg Vorbis files into PCM audio files (WAV or raw)
+  <a id="oggenc"></a><span class="command"><span class="term"><strong>oggenc</strong></span></span>                 is an encoder that turns raw, WAV or AIFF files into an Ogg Vorbis stream
+  <a id="ogginfo"></a><span class="command"><span class="term"><strong>ogginfo</strong></span></span>               prints information stored in an audio file
+  <a id="vcut"></a><span class="command"><span class="term"><strong>vcut</strong></span></span>                     splits a file into two files at a designated cut point
+  <a id="vorbiscomment"></a><span class="command"><span class="term"><strong>vorbiscomment</strong></span></span>   is an editor that changes information in the audio file metadata tags
   ---------------------------------------------------------- ---------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](pnmixer.md "pnmixer-0.7.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](pnmixer.md "pnmixer-0.7.2")
 
     pnmixer-0.7.2
 
--   [Next](videoutils.md "Video Utilities"){accesskey="n"}
+-   [Next](videoutils.md "Video Utilities")
 
     Video Utilities
 
--   [Up](audioutils.md "Chapter 43. Audio Utilities"){accesskey="u"}
+-   [Up](audioutils.md "Chapter 43. Audio Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

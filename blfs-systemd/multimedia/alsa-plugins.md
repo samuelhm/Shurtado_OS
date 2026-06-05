@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](alsa-lib.md "alsa-lib-1.2.16"){accesskey="p"}
+-   [Prev](alsa-lib.md "alsa-lib-1.2.16")
 
     alsa-lib-1.2.16
 
--   [Next](alsa-utils.md "alsa-utils-1.2.15.2"){accesskey="n"}
+-   [Next](alsa-utils.md "alsa-utils-1.2.15.2")
 
     alsa-utils-1.2.15.2
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#alsa-plugins}alsa-plugins-1.2.12 {#alsa-plugins-1.2.12 .sect1}
+# alsa-plugins-1.2.12 {#alsa-plugins-1.2.12}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to ALSA Plugins {#introduction-to-alsa-plugins .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to ALSA Plugins {#introduction-to-alsa-plugins}
 
-The [ALSA Plugins]{.application} package contains plugins for various audio libraries and sound servers.
+The <span class="application">ALSA Plugins</span> package contains plugins for various audio libraries and sound servers.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.alsa-project.org/files/pub/plugins/alsa-plugins-1.2.12.tar.bz2](https://www.alsa-project.org/files/pub/plugins/alsa-plugins-1.2.12.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.alsa-project.org/files/pub/plugins/alsa-plugins-1.2.12.tar.bz2">https://www.alsa-project.org/files/pub/plugins/alsa-plugins-1.2.12.tar.bz2</a>
 
 -   Download MD5 sum: 71fce75baa38efab4e32e40db0a33716
 
@@ -44,83 +44,83 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.1 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### ALSA Plugins Dependencies
 
 #### Required
 
-[alsa-lib-1.2.16](alsa-lib.md "alsa-lib-1.2.16"){.xref}
+<a class="xref" href="alsa-lib.md" title="alsa-lib-1.2.16">alsa-lib-1.2.16</a>
 
 #### Optional
 
-[FFmpeg-8.1.1](ffmpeg.md "FFmpeg-8.1.1"){.xref}, [libsamplerate-0.2.2](libsamplerate.md "libsamplerate-0.2.2"){.xref}, [PulseAudio-17.0](pulseaudio.md "PulseAudio-17.0"){.xref}, [Speex-1.2.1](speex.md "Speex-1.2.1"){.xref}, [JACK](https://jackaudio.org/){.ulink}, and [libavtp](https://github.com/AVnu/libavtp/){.ulink}
-:::::
+<a class="xref" href="ffmpeg.md" title="FFmpeg-8.1.1">FFmpeg-8.1.1</a>, <a class="xref" href="libsamplerate.md" title="libsamplerate-0.2.2">libsamplerate-0.2.2</a>, <a class="xref" href="pulseaudio.md" title="PulseAudio-17.0">PulseAudio-17.0</a>, <a class="xref" href="speex.md" title="Speex-1.2.1">Speex-1.2.1</a>, <a class="ulink" href="https://jackaudio.org/">JACK</a>, and <a class="ulink" href="https://github.com/AVnu/libavtp/">libavtp</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of ALSA Plugins {#installation-of-alsa-plugins .sect2}
+<div class="installation" lang="en">
+## Installation of ALSA Plugins {#installation-of-alsa-plugins}
 
-Install [ALSA Plugins]{.application} by running the following commands:
+Install <span class="application">ALSA Plugins</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --sysconfdir=/etc &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [Numerous libasound_module\_*`<module>`*.so modules including conf_pulse, ctl_arcam_av, ctl_oss, ctl_pulse, pcm_a52, pcm_jack, pcm_oss, pcm_pulse, pcm_speex, pcm_upmix, pcm_usb_stream, pcm_vdownmix, rate_lavrate\*, rate_samplerate\*, and rate_speexrate\*]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">Numerous libasound_module\_<em>`<module>`</em>.so modules including conf_pulse, ctl_arcam_av, ctl_oss, ctl_pulse, pcm_a52, pcm_jack, pcm_oss, pcm_pulse, pcm_speex, pcm_upmix, pcm_usb_stream, pcm_vdownmix, rate_lavrate\<em>, rate_samplerate\</em>, and rate_speexrate\*</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/alsa-lib]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/alsa-lib</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
-  []{#libasound_module_pcm_oss.so}[`libasound_module_pcm_oss.so`{.filename}]{.term}                   Allows native [ALSA]{.application} applications to run on [OSS]{.application}
-  []{#libasound_module_pcm_upmix.so}[`libasound_module_pcm_upmix.so`{.filename}]{.term}               Allows upmixing sound to 4 or 6 channels
-  []{#libasound_module_pcm_vdownmix.so}[`libasound_module_pcm_vdownmix.so`{.filename}]{.term}         Allows downmixing sound from 4-6 channels to 2 channel stereo output
-  []{#libasound_module_pcm_jack.so}[`libasound_module_pcm_jack.so`{.filename}]{.term}                 Allows native [ALSA]{.application} applications to work with [**jackd**]{.command}
-  []{#libasound_module_pcm_pulse.so}[`libasound_module_pcm_pulse.so`{.filename}]{.term}               Allows native [ALSA]{.application} applications to access a [PulseAudio]{.application} sound daemon
-  []{#libasound_module_pcm_a52.so}[`libasound_module_pcm_a52.so`{.filename}]{.term}                   Converts S16 linear sound format to A52 compressed format and sends it to an SPDIF output
-  []{#libasound_module_rate_samplerate.so}[`libasound_module_rate_samplerate.so`{.filename}]{.term}   Provides an external rate converter through `libsamplerate`{.filename}
+  <a id="libasound_module_pcm_oss.so"></a><span class="term"><code class="filename">libasound_module_pcm_oss.so</code></span>                   Allows native <span class="application">ALSA</span> applications to run on <span class="application">OSS</span>
+  <a id="libasound_module_pcm_upmix.so"></a><span class="term"><code class="filename">libasound_module_pcm_upmix.so</code></span>               Allows upmixing sound to 4 or 6 channels
+  <a id="libasound_module_pcm_vdownmix.so"></a><span class="term"><code class="filename">libasound_module_pcm_vdownmix.so</code></span>         Allows downmixing sound from 4-6 channels to 2 channel stereo output
+  <a id="libasound_module_pcm_jack.so"></a><span class="term"><code class="filename">libasound_module_pcm_jack.so</code></span>                 Allows native <span class="application">ALSA</span> applications to work with <span class="command"><strong>jackd</strong></span>
+  <a id="libasound_module_pcm_pulse.so"></a><span class="term"><code class="filename">libasound_module_pcm_pulse.so</code></span>               Allows native <span class="application">ALSA</span> applications to access a <span class="application">PulseAudio</span> sound daemon
+  <a id="libasound_module_pcm_a52.so"></a><span class="term"><code class="filename">libasound_module_pcm_a52.so</code></span>                   Converts S16 linear sound format to A52 compressed format and sends it to an SPDIF output
+  <a id="libasound_module_rate_samplerate.so"></a><span class="term"><code class="filename">libasound_module_rate_samplerate.so</code></span>   Provides an external rate converter through <code class="filename">libsamplerate</code>
   --------------------------------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](alsa-lib.md "alsa-lib-1.2.16"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](alsa-lib.md "alsa-lib-1.2.16")
 
     alsa-lib-1.2.16
 
--   [Next](alsa-utils.md "alsa-utils-1.2.15.2"){accesskey="n"}
+-   [Next](alsa-utils.md "alsa-utils-1.2.15.2")
 
     alsa-utils-1.2.15.2
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

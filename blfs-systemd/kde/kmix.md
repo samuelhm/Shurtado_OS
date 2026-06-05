@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 31. KDE Frameworks 6 Based Applications
 
--   [Prev](kdenlive.md "kdenlive-26.04.1"){accesskey="p"}
+-   [Prev](kdenlive.md "kdenlive-26.04.1")
 
     kdenlive-26.04.1
 
--   [Next](khelpcenter.md "khelpcenter-26.04.1"){accesskey="n"}
+-   [Next](khelpcenter.md "khelpcenter-26.04.1")
 
     khelpcenter-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kmix}KMix-26.04.1 {#kmix-26.04.1 .sect1}
+# KMix-26.04.1 {#kmix-26.04.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to KMix {#introduction-to-kmix .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to KMix {#introduction-to-kmix}
 
-The [KMix]{.application} package contains a KDE Frameworks-based Sound Mixer that integrates nicely with [Plasma]{.application}.
+The <span class="application">KMix</span> package contains a KDE Frameworks-based Sound Mixer that integrates nicely with <span class="application">Plasma</span>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/release-service/26.04.1/src/kmix-26.04.1.tar.xz](https://download.kde.org/stable/release-service/26.04.1/src/kmix-26.04.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/release-service/26.04.1/src/kmix-26.04.1.tar.xz">https://download.kde.org/stable/release-service/26.04.1/src/kmix-26.04.1.tar.xz</a>
 
 -   Download MD5 sum: be4073a003b1f8d6f707549337cb158c
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 25 MB
 
 -   Estimated build time: 0.2 SBU (using parallelism=4)
-:::
+</div>
 
 ### KMix Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>
 
 #### Recommended
 
-[alsa-lib-1.2.16](../multimedia/alsa-lib.md "alsa-lib-1.2.16"){.xref}
+<a class="xref" href="../multimedia/alsa-lib.md" title="alsa-lib-1.2.16">alsa-lib-1.2.16</a>
 
 #### Optional
 
-[libcanberra-0.30](../multimedia/libcanberra.md "libcanberra-0.30"){.xref} and [PulseAudio-17.0](../multimedia/pulseaudio.md "PulseAudio-17.0"){.xref}
-:::::
+<a class="xref" href="../multimedia/libcanberra.md" title="libcanberra-0.30">libcanberra-0.30</a> and <a class="xref" href="../multimedia/pulseaudio.md" title="PulseAudio-17.0">PulseAudio-17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of KMix {#installation-of-kmix .sect2}
+<div class="installation" lang="en">
+## Installation of KMix {#installation-of-kmix}
 
-Install [KMix]{.application} by running the following commands:
+Install <span class="application">KMix</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -79,54 +79,54 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [kmix, kmixctrl, and kmixremote]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">kmix, kmixctrl, and kmixremote</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libkmixcore.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libkmixcore.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/share/kmix and \$KF6_PREFIX/share/doc/HTML/\*/kmix]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/share/kmix and \$KF6_PREFIX/share/doc/HTML/\*/kmix</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------
-  []{#kmix-prog}[[**kmix**]{.command}]{.term}          is a small audio mixer for KDE that integrates into Plasma
-  []{#kmixctrl}[[**kmixctrl**]{.command}]{.term}       is used to save and/or restore the settings that [**kmix**]{.command} has set
-  []{#kmixremote}[[**kmixremote**]{.command}]{.term}   is a utility to mute, get, or set volume levels on the system. It can be run over SSH to adjust the volume on a remote system
+  <a id="kmix-prog"></a><span class="command"><span class="term"><strong>kmix</strong></span></span>          is a small audio mixer for KDE that integrates into Plasma
+  <a id="kmixctrl"></a><span class="command"><span class="term"><strong>kmixctrl</strong></span></span>       is used to save and/or restore the settings that <span class="command"><strong>kmix</strong></span> has set
+  <a id="kmixremote"></a><span class="command"><span class="term"><strong>kmixremote</strong></span></span>   is a utility to mute, get, or set volume levels on the system. It can be run over SSH to adjust the volume on a remote system
   ---------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](kdenlive.md "kdenlive-26.04.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](kdenlive.md "kdenlive-26.04.1")
 
     kdenlive-26.04.1
 
--   [Next](khelpcenter.md "khelpcenter-26.04.1"){accesskey="n"}
+-   [Next](khelpcenter.md "khelpcenter-26.04.1")
 
     khelpcenter-26.04.1
 
--   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications"){accesskey="u"}
+-   [Up](kf-apps.md "Chapter 31. KDE Frameworks 6 Based Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

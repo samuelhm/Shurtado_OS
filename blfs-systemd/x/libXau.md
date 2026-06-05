@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](xorgproto.md "xorgproto-2025.1"){accesskey="p"}
+-   [Prev](xorgproto.md "xorgproto-2025.1")
 
     xorgproto-2025.1
 
--   [Next](libXdmcp.md "libXdmcp-1.1.5"){accesskey="n"}
+-   [Next](libXdmcp.md "libXdmcp-1.1.5")
 
     libXdmcp-1.1.5
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libXau}libXau-1.0.12 {#libxau-1.0.12 .sect1}
+# libXau-1.0.12 {#libxau-1.0.12}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libXau {#introduction-to-libxau .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libXau {#introduction-to-libxau}
 
-The [libXau]{.application} package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.
+The <span class="application">libXau</span> package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz](https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz">https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz</a>
 
 -   Download MD5 sum: 4c9f81acf00b62e5de56a912691bd737
 
@@ -44,73 +44,73 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.9 MB (with test)
 
 -   Estimated build time: less than 0.1 SBU (with test)
-:::
+</div>
 
 ### libXau Dependencies
 
 #### Required
 
-[xorgproto-2025.1](xorgproto.md "xorgproto-2025.1"){.xref}
-:::::
+<a class="xref" href="xorgproto.md" title="xorgproto-2025.1">xorgproto-2025.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libXau {#installation-of-libxau .sect2}
+<div class="installation" lang="en">
+## Installation of libXau {#installation-of-libxau}
 
-Install [libXau]{.application} by running the following commands:
+Install <span class="application">libXau</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure $XORG_CONFIG &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libXau.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libXau.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------- -------------------------------------------------
-  []{#libXau-x7}[`libXau.so`{.filename}]{.term}   is the library of X authority database routines
+  <a id="libXau-x7"></a><span class="term"><code class="filename">libXau.so</code></span>   is the library of X authority database routines
   ----------------------------------------------- -------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xorgproto.md "xorgproto-2025.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xorgproto.md "xorgproto-2025.1")
 
     xorgproto-2025.1
 
--   [Next](libXdmcp.md "libXdmcp-1.1.5"){accesskey="n"}
+-   [Next](libXdmcp.md "libXdmcp-1.1.5")
 
     libXdmcp-1.1.5
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

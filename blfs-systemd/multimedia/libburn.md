@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 45. CD/DVD-Writing Utilities
 
--   [Prev](dvd-rw-tools.md "dvd+rw-tools-7.1"){accesskey="p"}
+-   [Prev](dvd-rw-tools.md "dvd+rw-tools-7.1")
 
     dvd+rw-tools-7.1
 
--   [Next](libisoburn.md "libisoburn-1.5.8.pl02"){accesskey="n"}
+-   [Next](libisoburn.md "libisoburn-1.5.8.pl02")
 
     libisoburn-1.5.8.pl02
 
--   [Up](cdwriteutils.md "Chapter 45. CD/DVD-Writing Utilities"){accesskey="u"}
+-   [Up](cdwriteutils.md "Chapter 45. CD/DVD-Writing Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libburn}libburn-1.5.8 {#libburn-1.5.8 .sect1}
+# libburn-1.5.8 {#libburn-1.5.8}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libburn {#introduction-to-libburn .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libburn {#introduction-to-libburn}
 
-[libburn]{.application} is a library for writing preformatted data onto optical media: CD, DVD and BD (Blu-Ray).
+<span class="application">libburn</span> is a library for writing preformatted data onto optical media: CD, DVD and BD (Blu-Ray).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://files.libburnia-project.org/releases/libburn-1.5.8.tar.gz](https://files.libburnia-project.org/releases/libburn-1.5.8.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://files.libburnia-project.org/releases/libburn-1.5.8.tar.gz">https://files.libburnia-project.org/releases/libburn-1.5.8.tar.gz</a>
 
 -   Download MD5 sum: 4c8c786e88eb3e9f7c1d0ddc4d4a39e7
 
@@ -44,87 +44,87 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 22 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### libburn Dependencies
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} (to generate HTML documentation)
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (to generate HTML documentation)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libburn {#installation-of-libburn .sect2}
+<div class="installation" lang="en">
+## Installation of libburn {#installation-of-libburn}
 
-Install [libburn]{.application} by running the following commands:
+Install <span class="application">libburn</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-If you have installed [Doxygen]{.application} and wish to generate the HTML documentation, issue the following command:
+If you have installed <span class="application">Doxygen</span> and wish to generate the HTML documentation, issue the following command:
 
-``` userinput
+```bash
 doxygen doc/doxygen.conf
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you have built the HTML documentation, install it by running the following commands as the `root`{.systemitem} user:
+If you have built the HTML documentation, install it by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -dm755 /usr/share/doc/libburn-1.5.8 &&
 install -v -m644 doc/html/* /usr/share/doc/libburn-1.5.8
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [cdrskin]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">cdrskin</span>
+</div>
 
-::: seg
-**Installed Library:** [libburn.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libburn.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/libburn]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/libburn</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ------------------------------------------------------------------------
-  []{#cdrskin}[[**cdrskin**]{.command}]{.term}       burns preformatted data to CD, DVD, and BD via [libburn]{.application}
-  []{#libburn-lib}[`libburn.so`{.filename}]{.term}   contains the [libburn]{.application} API functions
+  <a id="cdrskin"></a><span class="command"><span class="term"><strong>cdrskin</strong></span></span>       burns preformatted data to CD, DVD, and BD via <span class="application">libburn</span>
+  <a id="libburn-lib"></a><span class="term"><code class="filename">libburn.so</code></span>   contains the <span class="application">libburn</span> API functions
   -------------------------------------------------- ------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](dvd-rw-tools.md "dvd+rw-tools-7.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](dvd-rw-tools.md "dvd+rw-tools-7.1")
 
     dvd+rw-tools-7.1
 
--   [Next](libisoburn.md "libisoburn-1.5.8.pl02"){accesskey="n"}
+-   [Next](libisoburn.md "libisoburn-1.5.8.pl02")
 
     libisoburn-1.5.8.pl02
 
--   [Up](cdwriteutils.md "Chapter 45. CD/DVD-Writing Utilities"){accesskey="u"}
+-   [Up](cdwriteutils.md "Chapter 45. CD/DVD-Writing Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

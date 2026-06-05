@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 36. Xfce Applications
 
--   [Prev](xfce4-terminal.md "xfce4-terminal-1.2.0"){accesskey="p"}
+-   [Prev](xfce4-terminal.md "xfce4-terminal-1.2.0")
 
     xfce4-terminal-1.2.0
 
--   [Next](ristretto.md "ristretto-0.14.0"){accesskey="n"}
+-   [Next](ristretto.md "ristretto-0.14.0")
 
     ristretto-0.14.0
 
--   [Up](xfce-apps.md "Chapter 36. Xfce Applications"){accesskey="u"}
+-   [Up](xfce-apps.md "Chapter 36. Xfce Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xfburn}Xfburn-0.8.0 {#xfburn-0.8.0 .sect1}
+# Xfburn-0.8.0 {#xfburn-0.8.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xfburn {#introduction-to-xfburn .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xfburn {#introduction-to-xfburn}
 
-[Xfburn]{.application} is a [GTK+ 3]{.application} GUI frontend for [Libisoburn]{.application}. This is useful for creating CDs and DVDs from files on your computer or ISO images downloaded from elsewhere.
+<span class="application">Xfburn</span> is a <span class="application">GTK+ 3</span> GUI frontend for <span class="application">Libisoburn</span>. This is useful for creating CDs and DVDs from files on your computer or ISO images downloaded from elsewhere.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/apps/xfburn/0.8/xfburn-0.8.0.tar.bz2](https://archive.xfce.org/src/apps/xfburn/0.8/xfburn-0.8.0.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/apps/xfburn/0.8/xfburn-0.8.0.tar.bz2">https://archive.xfce.org/src/apps/xfburn/0.8/xfburn-0.8.0.tar.bz2</a>
 
 -   Download MD5 sum: 0ae5e3e94c71857b7cd8555f9f18625f
 
@@ -44,83 +44,83 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 15 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Xfburn Dependencies
 
 #### Required
 
-[libburn-1.5.8](../multimedia/libburn.md "libburn-1.5.8"){.xref}, [libisofs-1.5.8.pl02](../multimedia/libisofs.md "libisofs-1.5.8.pl02"){.xref}, and [libxfce4ui-4.20.2](libxfce4ui.md "libxfce4ui-4.20.2"){.xref}
+<a class="xref" href="../multimedia/libburn.md" title="libburn-1.5.8">libburn-1.5.8</a>, <a class="xref" href="../multimedia/libisofs.md" title="libisofs-1.5.8.pl02">libisofs-1.5.8.pl02</a>, and <a class="xref" href="libxfce4ui.md" title="libxfce4ui-4.20.2">libxfce4ui-4.20.2</a>
 
 #### Optional
 
-[gst-plugins-base-1.28.3](../multimedia/gst10-plugins-base.md "gst-plugins-base-1.28.3"){.xref} and [Cdrdao-1.2.6](../multimedia/cdrdao.md "Cdrdao-1.2.6"){.xref} (runtime)
-:::::
+<a class="xref" href="../multimedia/gst10-plugins-base.md" title="gst-plugins-base-1.28.3">gst-plugins-base-1.28.3</a> and <a class="xref" href="../multimedia/cdrdao.md" title="Cdrdao-1.2.6">Cdrdao-1.2.6</a> (runtime)
+</div>
 
-::: {.installation lang="en"}
-## Installation of Xfburn {#installation-of-xfburn .sect2}
+<div class="installation" lang="en">
+## Installation of Xfburn {#installation-of-xfburn}
 
-Install [Xfburn]{.application} by running the following commands:
+Install <span class="application">Xfburn</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [xfburn]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">xfburn</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/xfburn]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/xfburn</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------- -------------------------------------------------------------------
-  []{#xfburn-prog}[[**xfburn**]{.command}]{.term}   is a [GTK+ 3]{.application} application for creating CDs and DVDs
+  <a id="xfburn-prog"></a><span class="command"><span class="term"><strong>xfburn</strong></span></span>   is a <span class="application">GTK+ 3</span> application for creating CDs and DVDs
   ------------------------------------------------- -------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xfce4-terminal.md "xfce4-terminal-1.2.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xfce4-terminal.md "xfce4-terminal-1.2.0")
 
     xfce4-terminal-1.2.0
 
--   [Next](ristretto.md "ristretto-0.14.0"){accesskey="n"}
+-   [Next](ristretto.md "ristretto-0.14.0")
 
     ristretto-0.14.0
 
--   [Up](xfce-apps.md "Chapter 36. Xfce Applications"){accesskey="u"}
+-   [Up](xfce-apps.md "Chapter 36. Xfce Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

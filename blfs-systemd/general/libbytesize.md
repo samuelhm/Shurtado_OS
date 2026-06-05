@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libblockdev.md "libblockdev-3.5.0"){accesskey="p"}
+-   [Prev](libblockdev.md "libblockdev-3.5.0")
 
     libblockdev-3.5.0
 
--   [Next](libclc.md "libclc-22.1.0"){accesskey="n"}
+-   [Next](libclc.md "libclc-22.1.0")
 
     libclc-22.1.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libbytesize}libbytesize-2.12 {#libbytesize-2.12 .sect1}
+# libbytesize-2.12 {#libbytesize-2.12}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libbytesize {#introduction-to-libbytesize .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libbytesize {#introduction-to-libbytesize}
 
-The [libbytesize]{.application} package is a library which facilitates the common operations with sizes in bytes.
+The <span class="application">libbytesize</span> package is a library which facilitates the common operations with sizes in bytes.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/storaged-project/libbytesize/releases/download/2.12/libbytesize-2.12.tar.gz](https://github.com/storaged-project/libbytesize/releases/download/2.12/libbytesize-2.12.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/storaged-project/libbytesize/releases/download/2.12/libbytesize-2.12.tar.gz">https://github.com/storaged-project/libbytesize/releases/download/2.12/libbytesize-2.12.tar.gz</a>
 
 -   Download MD5 sum: 5314b773b20d1f3acdf3b2bf0c92549f
 
@@ -44,78 +44,78 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.6 MB
 
 -   Estimated build time: less than 0.1 SBU (including tests)
-:::
+</div>
 
 ### libbytesize Dependencies
 
 #### Required
 
-[Pygments-2.20.0](python-modules.md#pygments "Pygments-2.20.0"){.xref}
+<a class="xref" href="python-modules.md#pygments" title="Pygments-2.20.0">Pygments-2.20.0</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [pocketlint](https://github.com/rhinstaller/pocketlint/releases){.ulink} (python module for one test), and [polib](https://pypi.python.org/pypi/polib){.ulink} (python module for one test)
-:::::
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="ulink" href="https://github.com/rhinstaller/pocketlint/releases">pocketlint</a> (python module for one test), and <a class="ulink" href="https://pypi.python.org/pypi/polib">polib</a> (python module for one test)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libbytesize {#installation-of-libbytesize .sect2}
+<div class="installation" lang="en">
+## Installation of libbytesize {#installation-of-libbytesize}
 
-Install [libbytesize]{.application} by running the following commands:
+Install <span class="application">libbytesize</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
-If you have the optional python modules installed, the regression tests can be run with: [**make check**]{.command}.
+If you have the optional python modules installed, the regression tests can be run with: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [bscalc]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">bscalc</span>
+</div>
 
-::: seg
-**Installed Library:** [libbytesize.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libbytesize.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/bytesize and /usr/lib/python3.14/site-packages/bytesize]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/bytesize and /usr/lib/python3.14/site-packages/bytesize</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------- ------------------------------------------------------------------------------------
-  []{#bscalc}[[**bscalc**]{.command}]{.term}                 converts from a larger unit, such as MB or TB, back to a value in bytes
-  []{#libbytesize-lib}[`libbytesize.so`{.filename}]{.term}   contains functions used to handle common read/write operations with sizes in bytes
+  <a id="bscalc"></a><span class="command"><span class="term"><strong>bscalc</strong></span></span>                 converts from a larger unit, such as MB or TB, back to a value in bytes
+  <a id="libbytesize-lib"></a><span class="term"><code class="filename">libbytesize.so</code></span>   contains functions used to handle common read/write operations with sizes in bytes
   ---------------------------------------------------------- ------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libblockdev.md "libblockdev-3.5.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libblockdev.md "libblockdev-3.5.0")
 
     libblockdev-3.5.0
 
--   [Next](libclc.md "libclc-22.1.0"){accesskey="n"}
+-   [Next](libclc.md "libclc-22.1.0")
 
     libclc-22.1.0
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

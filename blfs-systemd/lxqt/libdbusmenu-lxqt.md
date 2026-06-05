@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-build-tools.md "lxqt-build-tools-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-build-tools.md "lxqt-build-tools-2.4.0")
 
     lxqt-build-tools-2.4.0
 
--   [Next](libqtxdg.md "libqtxdg-4.4.0"){accesskey="n"}
+-   [Next](libqtxdg.md "libqtxdg-4.4.0")
 
     libqtxdg-4.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libdbusmenu-lxqt}libdbusmenu-lxqt-0.4.0 {#libdbusmenu-lxqt-0.4.0 .sect1}
+# libdbusmenu-lxqt-0.4.0 {#libdbusmenu-lxqt-0.4.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libdbusmenu-lxqt {#introduction-to-libdbusmenu-lxqt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libdbusmenu-lxqt {#introduction-to-libdbusmenu-lxqt}
 
-The [libdbusmenu-lxqt]{.application} package provides a Qt implementation of the DBusMenu protocol.
+The <span class="application">libdbusmenu-lxqt</span> package provides a Qt implementation of the DBusMenu protocol.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/libdbusmenu-lxqt/releases/download/0.4.0/libdbusmenu-lxqt-0.4.0.tar.xz](https://github.com/lxqt/libdbusmenu-lxqt/releases/download/0.4.0/libdbusmenu-lxqt-0.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/libdbusmenu-lxqt/releases/download/0.4.0/libdbusmenu-lxqt-0.4.0.tar.xz">https://github.com/lxqt/libdbusmenu-lxqt/releases/download/0.4.0/libdbusmenu-lxqt-0.4.0.tar.xz</a>
 
 -   Download MD5 sum: f2aef1535a2ed37da8e5983d001ec194
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 8.5 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### libdbusmenu-lxqt Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref}
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a>
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} and [qjson](https://qjson.sourceforge.net/){.ulink}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> and <a class="ulink" href="https://qjson.sourceforge.net/">qjson</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libdbusmenu-lxqt {#installation-of-libdbusmenu-lxqt .sect2}
+<div class="installation" lang="en">
+## Installation of libdbusmenu-lxqt {#installation-of-libdbusmenu-lxqt}
 
-Install [libdbusmenu-lxqt]{.application} by running the following commands:
+Install <span class="application">libdbusmenu-lxqt</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -74,58 +74,58 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D WITH_DOC=ON`*: Use this switch if you've installed [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} and want to build the optional documentation.
-:::
+*`-D WITH_DOC=ON`*: Use this switch if you've installed <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> and want to build the optional documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libdbusmenu-lxqt.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libdbusmenu-lxqt.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/dbusmenu-lxqt and /usr/lib/cmake/dbusmenu-lxqt]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/dbusmenu-lxqt and /usr/lib/cmake/dbusmenu-lxqt</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------- ----------------------------------------------------------------------------
-  []{#libdbusmenu-lxqt-lib}[`libdbusmen-lxqt.so`{.filename}]{.term}   contains a Qt implementation of the DBusMenu protocol, customized for LXQt
+  <a id="libdbusmenu-lxqt-lib"></a><span class="term"><code class="filename">libdbusmen-lxqt.so</code></span>   contains a Qt implementation of the DBusMenu protocol, customized for LXQt
   ------------------------------------------------------------------- ----------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-build-tools.md "lxqt-build-tools-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-build-tools.md "lxqt-build-tools-2.4.0")
 
     lxqt-build-tools-2.4.0
 
--   [Next](libqtxdg.md "libqtxdg-4.4.0"){accesskey="n"}
+-   [Next](libqtxdg.md "libqtxdg-4.4.0")
 
     libqtxdg-4.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,37 +1,37 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XII. Multimedia
 
--   [Prev](xine-ui.md "xine-ui-0.99.14"){accesskey="p"}
+-   [Prev](xine-ui.md "xine-ui-0.99.14")
 
     xine-ui-0.99.14
 
--   [Next](cdrdao.md "Cdrdao-1.2.6"){accesskey="n"}
+-   [Next](cdrdao.md "Cdrdao-1.2.6")
 
     Cdrdao-1.2.6
 
--   [Up](multimedia.md "Part XII. Multimedia"){accesskey="u"}
+-   [Up](multimedia.md "Part XII. Multimedia")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#multimedia-cdwriteutils}CD/DVD-Writing Utilities {#cddvd-writing-utilities .chapter}
+# CD/DVD-Writing Utilities {#cddvd-writing-utilities}
 
-::::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains information on CD/DVD-writing utilities in Linux.
 
 Additional sources of information include:
 
-::: itemizedlist
--   [CD-Writing HOWTO](https://www.tldp.org/HOWTO/CD-Writing-HOWTO.md){.ulink}
+<div class="itemizedlist">
+-   <a class="ulink" href="https://www.tldp.org/HOWTO/CD-Writing-HOWTO.md">CD-Writing HOWTO</a>
 
--   [CD-Recordable FAQ](https://www.cdrfaq.org){.ulink}
+-   <a class="ulink" href="https://www.cdrfaq.org">CD-Recordable FAQ</a>
 
--   [The dvd+rw-tools Website](http://fy.chalmers.se/~appro/linux/DVD+RW/){.ulink}
-:::
+-   <a class="ulink" href="http://fy.chalmers.se/~appro/linux/DVD+RW/">The dvd+rw-tools Website</a>
+</div>
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Cdrdao-1.2.6](cdrdao.md)
@@ -40,19 +40,19 @@ Additional sources of information include:
 -   [libburn-1.5.8](libburn.md)
 -   [libisoburn-1.5.8.pl02](libisoburn.md)
 -   [libisofs-1.5.8.pl02](libisofs.md)
-:::
-:::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](xine-ui.md "xine-ui-0.99.14"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xine-ui.md "xine-ui-0.99.14")
 
     xine-ui-0.99.14
 
--   [Next](cdrdao.md "Cdrdao-1.2.6"){accesskey="n"}
+-   [Next](cdrdao.md "Cdrdao-1.2.6")
 
     Cdrdao-1.2.6
 
--   [Up](multimedia.md "Part XII. Multimedia"){accesskey="u"}
+-   [Up](multimedia.md "Part XII. Multimedia")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

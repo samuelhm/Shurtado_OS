@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 15. Networking Programs
 
--   [Prev](rsync.md "rsync-3.4.3"){accesskey="p"}
+-   [Prev](rsync.md "rsync-3.4.3")
 
     rsync-3.4.3
 
--   [Next](wget.md "Wget-1.25.0"){accesskey="n"}
+-   [Next](wget.md "Wget-1.25.0")
 
     Wget-1.25.0
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#samba}Samba-4.24.0 {#samba-4.24.0 .sect1}
+# Samba-4.24.0 {#samba-4.24.0}
 
-:::::::::::::::::::::::::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Samba {#introduction-to-samba .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Samba {#introduction-to-samba}
 
-The [Samba]{.application} package provides file and print services to SMB/CIFS clients and Windows networking to Linux clients. [Samba]{.application} can also be configured as a Windows Domain Controller replacement, a file/print server acting as a member of a Windows Active Directory domain and a NetBIOS (RFC1001/1002) nameserver (which among other things provides LAN browsing support).
+The <span class="application">Samba</span> package provides file and print services to SMB/CIFS clients and Windows networking to Linux clients. <span class="application">Samba</span> can also be configured as a Windows Domain Controller replacement, a file/print server acting as a member of a Windows Active Directory domain and a NetBIOS (RFC1001/1002) nameserver (which among other things provides LAN browsing support).
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.samba.org/pub/samba/stable/samba-4.24.0.tar.gz](https://download.samba.org/pub/samba/stable/samba-4.24.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.samba.org/pub/samba/stable/samba-4.24.0.tar.gz">https://download.samba.org/pub/samba/stable/samba-4.24.0.tar.gz</a>
 
 -   Download MD5 sum: 70fbbd0189ee6e9dc92b5a2cb2fcfb1d
 
@@ -44,42 +44,42 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 744 MB (add 46 MB for quicktest)
 
 -   Estimated build time: 1.7 SBU (using parallelism=4; add 0.4 SBU for quicktest)
-:::
+</div>
 
 ### Samba Dependencies
 
 #### Required
 
-[GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref}, [libtirpc-1.3.7](libtirpc.md "libtirpc-1.3.7"){.xref}, [Parse-Yapp-1.21](../general/perl-modules.md#perl-parse-yapp "Parse::Yapp-1.21"){.xref}, and [rpcsvc-proto-1.4.4](rpcsvc-proto.md "rpcsvc-proto-1.4.4"){.xref}
+<a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a>, <a class="xref" href="libtirpc.md" title="libtirpc-1.3.7">libtirpc-1.3.7</a>, <a class="xref" href="../general/perl-modules.md#perl-parse-yapp" title="Parse::Yapp-1.21">Parse-Yapp-1.21</a>, and <a class="xref" href="rpcsvc-proto.md" title="rpcsvc-proto-1.4.4">rpcsvc-proto-1.4.4</a>
 
 #### Recommended
 
-[Fuse-3.18.2](../postlfs/fuse.md "Fuse-3.18.2"){.xref}, [gpgme-2.1.0](../postlfs/gpgme.md "gpgme-2.1.0"){.xref}, [ICU-78.3](../general/icu.md "icu-78.3"){.xref}, [jansson-2.15.0](../general/jansson.md "Jansson-2.15.0"){.xref}, [libtasn1-4.21.0](../general/libtasn1.md "libtasn1-4.21.0"){.xref}, [libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref} (for documentation), [Linux-PAM-1.7.2](../postlfs/linux-pam.md "Linux-PAM-1.7.2"){.xref}, [lmdb-0.9.35](../server/lmdb.md "lmdb-0.9.35"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, and [OpenLDAP-2.6.13](../server/openldap.md "OpenLDAP-2.6.13"){.xref}
+<a class="xref" href="../postlfs/fuse.md" title="Fuse-3.18.2">Fuse-3.18.2</a>, <a class="xref" href="../postlfs/gpgme.md" title="gpgme-2.1.0">gpgme-2.1.0</a>, <a class="xref" href="../general/icu.md" title="icu-78.3">ICU-78.3</a>, <a class="xref" href="../general/jansson.md" title="Jansson-2.15.0">jansson-2.15.0</a>, <a class="xref" href="../general/libtasn1.md" title="libtasn1-4.21.0">libtasn1-4.21.0</a>, <a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> (for documentation), <a class="xref" href="../postlfs/linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>, <a class="xref" href="../server/lmdb.md" title="lmdb-0.9.35">lmdb-0.9.35</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, and <a class="xref" href="../server/openldap.md" title="OpenLDAP-2.6.13">OpenLDAP-2.6.13</a>
 
 #### Optional
 
-[Avahi-0.8](avahi.md "Avahi-0.8"){.xref}, [BIND-9.20.20](../server/bind.md "BIND-9.20.20"){.xref}, [Cups-2.4.19](../pst/cups.md "Cups-2.4.19"){.xref}, [Cyrus SASL-2.1.28](../postlfs/cyrus-sasl.md "Cyrus SASL-2.1.28"){.xref}, [GDB-17.2](../general/gdb.md "GDB-17.2"){.xref}, [git-2.54.0](../general/git.md "Git-2.54.0"){.xref}, [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref} (required for ADS and the test suite), [libaio-0.3.113](../general/libaio.md "libaio-0.3.113"){.xref}, [libarchive-3.8.7](../general/libarchive.md "libarchive-3.8.7"){.xref} (for tar in smbclient), [libcap-2.78 with PAM](../postlfs/libcap.md "libcap-2.78 with PAM"){.xref}, [libgcrypt-1.12.2](../general/libgcrypt.md "libgcrypt-1.12.2"){.xref}, [libnsl-2.0.1](libnsl.md "libnsl-2.0.1"){.xref}, [libunwind-1.8.3](../general/libunwind.md "libunwind-1.8.3"){.xref}, [Markdown-3.10.2](../general/python-dependencies.md#markdown "Markdown-3.10.2"){.xref}, [nss-3.124](../postlfs/nss.md "NSS-3.124"){.xref}, [popt-1.19](../general/popt.md "Popt-1.19"){.xref}, [Talloc-2.4.4](../general/talloc.md "Talloc-2.4.4"){.xref} (used by the test suite), [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}, [Valgrind-3.27.1](../general/valgrind.md "Valgrind-3.27.1"){.xref} (optionally used by the test suite), [xfsprogs-7.0.1](../postlfs/xfsprogs.md "xfsprogs-7.0.1"){.xref}, [cmocka](https://cmocka.org/){.ulink}, [cryptography](https://cryptography.io/en/latest/){.ulink}, [ctdb](https://ctdb.samba.org/){.ulink} (included), [cwrap](https://cwrap.org/){.ulink}, [dnspython](https://pypi.python.org/pypi/dnspython/){.ulink}, [FAM](https://packages.debian.org/bullseye/fam){.ulink}, [GlusterFS](https://www.gluster.org/){.ulink}, [Heimdal](https://github.com/heimdal/){.ulink} (included), [iso8601](https://pypi.org/project/iso8601/){.ulink}, [ldb](https://ldb.samba.org/){.ulink} (included), [ngtcp2](https://nghttp2.org/ngtcp2/){.ulink}, [OpenAFS](https://www.openafs.org/){.ulink}, [pyasn1](https://pypi.org/project/pyasn1/){.ulink}, [tevent](https://tevent.samba.org/){.ulink} (included), and [tdb](https://tdb.samba.org/){.ulink} (included)
+<a class="xref" href="avahi.md" title="Avahi-0.8">Avahi-0.8</a>, <a class="xref" href="../server/bind.md" title="BIND-9.20.20">BIND-9.20.20</a>, <a class="xref" href="../pst/cups.md" title="Cups-2.4.19">Cups-2.4.19</a>, <a class="xref" href="../postlfs/cyrus-sasl.md" title="Cyrus SASL-2.1.28">Cyrus SASL-2.1.28</a>, <a class="xref" href="../general/gdb.md" title="GDB-17.2">GDB-17.2</a>, <a class="xref" href="../general/git.md" title="Git-2.54.0">git-2.54.0</a>, <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a> (required for ADS and the test suite), <a class="xref" href="../general/libaio.md" title="libaio-0.3.113">libaio-0.3.113</a>, <a class="xref" href="../general/libarchive.md" title="libarchive-3.8.7">libarchive-3.8.7</a> (for tar in smbclient), <a class="xref" href="../postlfs/libcap.md" title="libcap-2.78 with PAM">libcap-2.78 with PAM</a>, <a class="xref" href="../general/libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a>, <a class="xref" href="libnsl.md" title="libnsl-2.0.1">libnsl-2.0.1</a>, <a class="xref" href="../general/libunwind.md" title="libunwind-1.8.3">libunwind-1.8.3</a>, <a class="xref" href="../general/python-dependencies.md#markdown" title="Markdown-3.10.2">Markdown-3.10.2</a>, <a class="xref" href="../postlfs/nss.md" title="NSS-3.124">nss-3.124</a>, <a class="xref" href="../general/popt.md" title="Popt-1.19">popt-1.19</a>, <a class="xref" href="../general/talloc.md" title="Talloc-2.4.4">Talloc-2.4.4</a> (used by the test suite), <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>, <a class="xref" href="../general/valgrind.md" title="Valgrind-3.27.1">Valgrind-3.27.1</a> (optionally used by the test suite), <a class="xref" href="../postlfs/xfsprogs.md" title="xfsprogs-7.0.1">xfsprogs-7.0.1</a>, <a class="ulink" href="https://cmocka.org/">cmocka</a>, <a class="ulink" href="https://cryptography.io/en/latest/">cryptography</a>, <a class="ulink" href="https://ctdb.samba.org/">ctdb</a> (included), <a class="ulink" href="https://cwrap.org/">cwrap</a>, <a class="ulink" href="https://pypi.python.org/pypi/dnspython/">dnspython</a>, <a class="ulink" href="https://packages.debian.org/bullseye/fam">FAM</a>, <a class="ulink" href="https://www.gluster.org/">GlusterFS</a>, <a class="ulink" href="https://github.com/heimdal/">Heimdal</a> (included), <a class="ulink" href="https://pypi.org/project/iso8601/">iso8601</a>, <a class="ulink" href="https://ldb.samba.org/">ldb</a> (included), <a class="ulink" href="https://nghttp2.org/ngtcp2/">ngtcp2</a>, <a class="ulink" href="https://www.openafs.org/">OpenAFS</a>, <a class="ulink" href="https://pypi.org/project/pyasn1/">pyasn1</a>, <a class="ulink" href="https://tevent.samba.org/">tevent</a> (included), and <a class="ulink" href="https://tdb.samba.org/">tdb</a> (included)
 
 #### Optional (for the Developer Test Suite)
 
-Install in listed order: [six-1.17.0](../general/python-modules.md#six "six-1.17.0"){.xref}, [pytest-9.0.3](../general/python-modules.md#pytest "Pytest-9.0.3"){.xref}, [argparse](https://pypi.python.org/pypi/argparse/){.ulink}, [testtools](https://pypi.python.org/pypi/testtools/){.ulink}, [testscenarios](https://pypi.python.org/pypi/testscenarios/){.ulink}, and [python-subunit](https://pypi.python.org/pypi/python-subunit/){.ulink}
+Install in listed order: <a class="xref" href="../general/python-modules.md#six" title="six-1.17.0">six-1.17.0</a>, <a class="xref" href="../general/python-modules.md#pytest" title="Pytest-9.0.3">pytest-9.0.3</a>, <a class="ulink" href="https://pypi.python.org/pypi/argparse/">argparse</a>, <a class="ulink" href="https://pypi.python.org/pypi/testtools/">testtools</a>, <a class="ulink" href="https://pypi.python.org/pypi/testscenarios/">testscenarios</a>, and <a class="ulink" href="https://pypi.python.org/pypi/python-subunit/">python-subunit</a>
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/samba4](https://wiki.linuxfromscratch.org/blfs/wiki/samba4){.ulink}
-:::::
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/samba4">https://wiki.linuxfromscratch.org/blfs/wiki/samba4</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Samba {#installation-of-samba .sect2}
+<div class="installation" lang="en">
+## Installation of Samba {#installation-of-samba}
 
 To support the test suite, set up a Python virtual environment for some Python modules outside of the scope of BLFS:
 
-``` userinput
+```bash
 python3 -m venv --system-site-packages pyvenv         &&
 ./pyvenv/bin/pip3 install cryptography pyasn1 iso8601
 ```
 
-Install [Samba]{.application} by running the following commands:
+Install <span class="application">Samba</span> by running the following commands:
 
-``` userinput
+```bash
 PYTHON=$PWD/pyvenv/bin/python3             \
 ./configure                                \
     --prefix=/usr                          \
@@ -95,32 +95,32 @@ PYTHON=$PWD/pyvenv/bin/python3             \
 make
 ```
 
-To test the results, issue: [**PATH=\$PWD/pyvenv/bin:\$PATH make quicktest**]{.command}. The test suite will produce lines that look like failures, but these are innocuous. The last few lines of output should report [*"ALL OK"*]{.emphasis} for a good test run. A summary of any failures can be found in `./st/summary`{.filename}.
+To test the results, issue: <span class="command"><strong>PATH=\$PWD/pyvenv/bin:\$PATH make quicktest</strong></span>. The test suite will produce lines that look like failures, but these are innocuous. The last few lines of output should report <span class="emphasis"><em>"ALL OK"</em></span> for a good test run. A summary of any failures can be found in <code class="filename">./st/summary</code>.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Additionally, developer test suites are available. If you've installed the optional python modules above in the Python virtual environment for building this package, you can run these tests with [**make test**]{.command}. It is not recommended for the average builder at around 290 SBU and over a gigabyte of disk space, and you should expect \~73 errors and \~30 failures from the 3000+ tests.
-:::
+Additionally, developer test suites are available. If you've installed the optional python modules above in the Python virtual environment for building this package, you can run these tests with <span class="command"><strong>make test</strong></span>. It is not recommended for the average builder at around 290 SBU and over a gigabyte of disk space, and you should expect \~73 errors and \~30 failures from the 3000+ tests.
+</div>
 
 Fix hard coded paths to Python 3 interpreter:
 
-``` userinput
+```bash
 sed '1s@^.*$@#!/usr/bin/python3@' \
     -i ./bin/default/source4/scripting/bin/*.inst
 ```
 
-If upgrading from an old version of samba, as the `root`{.systemitem} user, remove the old Python support files to prevent some issues:
+If upgrading from an old version of samba, as the <code class="systemitem">root</code> user, remove the old Python support files to prevent some issues:
 
-``` root
+```bash
 rm -rf /usr/lib/python3.14/site-packages/samba
 ```
 
-Still as the `root`{.systemitem} user, install the package:
+Still as the <code class="systemitem">root</code> user, install the package:
 
-``` root
+```bash
 make install &&
 
 install -v -m644 examples/smb.conf.default /etc/samba &&
@@ -140,102 +140,102 @@ install -v -m644    examples/LDAP/samba* \
 install -v -m755    examples/LDAP/{get*,ol*} \
                     /etc/openldap/schema
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`--system-site-packages`*: Allow the [Python3]{.application} venv module to access the system-installed `/usr/lib/python3.14/site-packages`{.filename} directory.
+*`--system-site-packages`*: Allow the <span class="application">Python3</span> venv module to access the system-installed <code class="filename">/usr/lib/python3.14/site-packages</code> directory.
 
 *`--enable-fhs`*: Assigns all other file paths in a manner compliant with the Filesystem Hierarchy Standard (FHS).
 
-*`--without-ad-dc`*: Disables Active Directory Domain Controller functionality. See [Set up a Samba Active Directory Domain Controller](https://wiki.samba.org/index.php/Setup_a_Samba_Active_Directory_Domain_Controller){.ulink} for detailed information. Remove this switch if you've installed the Python modules needed for ADS support. Note that BLFS does not provide a samba bootscript or systemd unit for an Active Directory domain controller.
+*`--without-ad-dc`*: Disables Active Directory Domain Controller functionality. See <a class="ulink" href="https://wiki.samba.org/index.php/Setup_a_Samba_Active_Directory_Domain_Controller">Set up a Samba Active Directory Domain Controller</a> for detailed information. Remove this switch if you've installed the Python modules needed for ADS support. Note that BLFS does not provide a samba bootscript or systemd unit for an Active Directory domain controller.
 
-*`--with-system-mitkrb5`*: Enables building with the system version of Kerberos. This mitigates security vulnerabilities and reduces build time. Remove this if you do not have [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} installed.
+*`--with-system-mitkrb5`*: Enables building with the system version of Kerberos. This mitigates security vulnerabilities and reduces build time. Remove this if you do not have <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> installed.
 
-*`--disable-rpath-install`*: Removes the library installation path from embedded shared library search paths in the installed binary executable files and shared libraries. When this package is installed into the standard location the library installation path is `/usr/lib`{.filename}. It's always searched by the dynamic linker, so there is no need to embed it into installed files.
+*`--disable-rpath-install`*: Removes the library installation path from embedded shared library search paths in the installed binary executable files and shared libraries. When this package is installed into the standard location the library installation path is <code class="filename">/usr/lib</code>. It's always searched by the dynamic linker, so there is no need to embed it into installed files.
 
-`--with-selftest-prefix=SELFTEST_PREFIX`{.option}: This option specifies the test suite work directory (default=./st).
+<code class="option">--with-selftest-prefix=SELFTEST_PREFIX</code>: This option specifies the test suite work directory (default=./st).
 
-[**install -v -m644 examples/LDAP/\* /etc/openldap/schema**]{.command}: These commands are used to copy sample Samba schemas to the OpenLDAP `schema`{.filename} directory.
+<span class="command"><strong>install -v -m644 examples/LDAP/\* /etc/openldap/schema</strong></span>: These commands are used to copy sample Samba schemas to the OpenLDAP <code class="filename">schema</code> directory.
 
-[**install -v -m644 ../examples/smb.conf.default /etc/samba**]{.command}: This copies a default `smb.conf`{.filename} file into `/etc/samba`{.filename}. This sample configuration will not work until you copy it to `/etc/samba/smb.conf`{.filename} and make the appropriate changes for your installation. See the configuration section for minimum values which must be set.
-:::
+<span class="command"><strong>install -v -m644 ../examples/smb.conf.default /etc/samba</strong></span>: This copies a default <code class="filename">smb.conf</code> file into <code class="filename">/etc/samba</code>. This sample configuration will not work until you copy it to <code class="filename">/etc/samba/smb.conf</code> and make the appropriate changes for your installation. See the configuration section for minimum values which must be set.
+</div>
 
-:::::::::::::::::::::::::::: {.configuration lang="en"}
-## Configuring Samba {#configuring-samba .sect2}
+<div class="configuration" lang="en">
+## Configuring Samba {#configuring-samba}
 
-::: {.sect3 lang="en"}
-### []{#samba-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
 /etc/samba/smb.conf
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### Printing to SMB Clients {#printing-to-smb-clients .sect3}
+<div class="sect3" lang="en">
+### Printing to SMB Clients {#printing-to-smb-clients}
 
-If you use [CUPS]{.application} for print services, and you wish to print to a printer attached to an SMB client, you need to create an SMB backend device. To create the device, issue the following command as the `root`{.systemitem} user:
+If you use <span class="application">CUPS</span> for print services, and you wish to print to a printer attached to an SMB client, you need to create an SMB backend device. To create the device, issue the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -dvm 755 /usr/lib/cups/backend &&
 ln -v -sf /usr/bin/smbspool /usr/lib/cups/backend/smb
 ```
-:::
+</div>
 
-::::::::::::::::::::::::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Due to the complexity and the many various uses for [Samba]{.application}, complete configuration for all the package's capabilities is well beyond the scope of the BLFS book. This section provides instructions to configure the `/etc/samba/smb.conf`{.filename} file for two common scenarios. The complete contents of `/etc/samba/smb.conf`{.filename} will depend on the purpose of [Samba]{.application} installation.
+Due to the complexity and the many various uses for <span class="application">Samba</span>, complete configuration for all the package's capabilities is well beyond the scope of the BLFS book. This section provides instructions to configure the <code class="filename">/etc/samba/smb.conf</code> file for two common scenarios. The complete contents of <code class="filename">/etc/samba/smb.conf</code> will depend on the purpose of <span class="application">Samba</span> installation.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-You may find it easier to copy the configuration parameters shown below into an empty `/etc/samba/smb.conf`{.filename} file instead of copying and editing the default file as mentioned in the [“[Command Explanations]{.quote}”]{.quote} section. How you create/edit the `/etc/samba/smb.conf`{.filename} file will be left up to you. Do ensure the file is only writable by the `root`{.systemitem} user (mode 644).
-:::
+You may find it easier to copy the configuration parameters shown below into an empty <code class="filename">/etc/samba/smb.conf</code> file instead of copying and editing the default file as mentioned in the <span class="quote">“<span class="quote">Command Explanations</span>”</span> section. How you create/edit the <code class="filename">/etc/samba/smb.conf</code> file will be left up to you. Do ensure the file is only writable by the <code class="systemitem">root</code> user (mode 644).
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011164159936}Scenario 1: Minimal Standalone Client-Only Installation {#scenario-1-minimal-standalone-client-only-installation .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Scenario 1: Minimal Standalone Client-Only Installation {#scenario-1-minimal-standalone-client-only-installation}
 
-Choose this variant if you only want to transfer files using [**smbclient**]{.command}, mount Windows shares and print to Windows printers, and don't want to share your files and printers to Windows machines.
 
-A `/etc/samba/smb.conf`{.filename} file with the following three parameters is sufficient:
+</div>
 
-``` root
+Choose this variant if you only want to transfer files using <span class="command"><strong>smbclient</strong></span>, mount Windows shares and print to Windows printers, and don't want to share your files and printers to Windows machines.
+
+A <code class="filename">/etc/samba/smb.conf</code> file with the following three parameters is sufficient:
+
+```bash
 [global]
     workgroup = WORKGROUP
     dos charset = cp850
     unix charset = ISO-8859-1
 ```
 
-The values in this example specify that the computer belongs to a Windows workgroup named *`WORKGROUP`*, uses the *`cp850`* character set on the wire when talking to MS-DOS and MS Windows 9x, and that the filenames are stored in the *`ISO-8859-1`* encoding on the disk. Adjust these values appropriately for your installation. The `unix charset`{.literal} value must be the same as the output of [**locale charmap**]{.command} when executed with the `LANG`{.envar} variable set to your preferred locale, otherwise the [**ls**]{.command} command may not display correct filenames of downloaded files.
+The values in this example specify that the computer belongs to a Windows workgroup named *`WORKGROUP`*, uses the *`cp850`* character set on the wire when talking to MS-DOS and MS Windows 9x, and that the filenames are stored in the *`ISO-8859-1`* encoding on the disk. Adjust these values appropriately for your installation. The <code class="literal">unix charset</code> value must be the same as the output of <span class="command"><strong>locale charmap</strong></span> when executed with the <code class="envar">LANG</code> variable set to your preferred locale, otherwise the <span class="command"><strong>ls</strong></span> command may not display correct filenames of downloaded files.
 
-There is no need to run any [Samba]{.application} servers in this scenario, thus you don't need to install the provided [systemd units.]{.phrase}
-::::::
+There is no need to run any <span class="application">Samba</span> servers in this scenario, thus you don't need to install the provided <span class="phrase">systemd units.</span>
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011164146080}Scenario 2: Standalone File/Print Server {#scenario-2-standalone-fileprint-server .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Scenario 2: Standalone File/Print Server {#scenario-2-standalone-fileprint-server}
+
+
+</div>
 
 Choose this variant if you want to share your files and printers to Windows machines in your workgroup in addition to the capabilities described in Scenario 1.
 
-In this case, the `/etc/samba/smb.conf.default`{.filename} file may be a good template to start from. Also, you should add the [“[dos charset]{.quote}”]{.quote} and [“[unix charset]{.quote}”]{.quote} parameters to the [“[\[global\]]{.quote}”]{.quote} section as described in Scenario 1 in order to prevent filename corruption. For security reasons, you may wish to define *`path = /home/alice/shared-files`*, assuming your user name is *`alice`* and you only want to share the files in that directory, instead of your entire home. Then, replace *`homes`* by *`shared-files`* and change also the [“[`comment`{.literal}]{.quote}”]{.quote} if used the configuration file below or the `/etc/samba/smb.conf.default`{.filename} to create yours.
+In this case, the <code class="filename">/etc/samba/smb.conf.default</code> file may be a good template to start from. Also, you should add the <span class="quote">“<span class="quote">dos charset</span>”</span> and <span class="quote">“<span class="quote">unix charset</span>”</span> parameters to the [“[\[global\]]{.quote}”]{.quote} section as described in Scenario 1 in order to prevent filename corruption. For security reasons, you may wish to define *`path = /home/alice/shared-files`*, assuming your user name is *`alice`* and you only want to share the files in that directory, instead of your entire home. Then, replace *`homes`* by *`shared-files`* and change also the <span class="quote">“<span class="quote"><code class="literal">comment</code></span>”</span> if used the configuration file below or the <code class="filename">/etc/samba/smb.conf.default</code> to create yours.
 
 The following configuration file creates a separate share for each user's home directory and also makes all printers available to Windows machines:
 
-``` root
+```bash
 [global]
     workgroup = WORKGROUP
     dos charset = cp850
@@ -256,7 +256,7 @@ The following configuration file creates a separate share for each user's home d
 
 Other parameters you may wish to customize in the [“[\[global\]]{.quote}”]{.quote} section include:
 
-``` root
+```bash
     server string =
     security =
     hosts allow =
@@ -267,66 +267,66 @@ Other parameters you may wish to customize in the [“[\[global\]]{.quote}”]{.
     local master =
 ```
 
-Reference the comments in the `/etc/samba/smb.conf.default`{.filename} file for information regarding these parameters.
+Reference the comments in the <code class="filename">/etc/samba/smb.conf.default</code> file for information regarding these parameters.
 
-Since the [**smbd**]{.command} and [**nmbd**]{.command} daemons are needed in this case, install the `samba`{.filename} [systemd unit.]{.phrase} Be sure to run [**smbpasswd**]{.command} (with the `-a`{.option} option to add users) to enable and set passwords for all accounts that need [Samba]{.application} access. Using the default [Samba]{.application} passdb backend, any user you attempt to add will also be required to exist in the `/etc/passwd`{.filename} file.
-::::::
+Since the <span class="command"><strong>smbd</strong></span> and <span class="command"><strong>nmbd</strong></span> daemons are needed in this case, install the <code class="filename">samba</code> <span class="phrase">systemd unit.</span> Be sure to run <span class="command"><strong>smbpasswd</strong></span> (with the <code class="option">-a</code> option to add users) to enable and set passwords for all accounts that need <span class="application">Samba</span> access. Using the default <span class="application">Samba</span> passdb backend, any user you attempt to add will also be required to exist in the <code class="filename">/etc/passwd</code> file.
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011164124384}Advanced Requirements {#advanced-requirements .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
-
-More complex scenarios involving domain control or membership are possible. Such setups are advanced topics and cannot be adequately covered in BLFS. Many complete books have been written on these topics alone. Note that in some domain membership scenarios, the [**winbindd**]{.command} daemon and the corresponding [systemd unit]{.phrase} are needed.
-::::::
-
-:::::: sect4
-::::: titlepage
+##### Advanced Requirements {#advanced-requirements}
 
 
-##### []{#idm140011164121728}Guest account {#guest-account .title}
+</div>
+
+More complex scenarios involving domain control or membership are possible. Such setups are advanced topics and cannot be adequately covered in BLFS. Many complete books have been written on these topics alone. Note that in some domain membership scenarios, the <span class="command"><strong>winbindd</strong></span> daemon and the corresponding <span class="phrase">systemd unit</span> are needed.
+</div>
+
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
-
-The default [Samba]{.application} installation uses the `nobody`{.systemitem} user for guest access to the server. This can be overridden by setting the `guest account =`{.option} parameter in the `/etc/samba/smb.conf`{.filename} file. If you utilize the `guest account =`{.option} parameter, ensure this user exists in the `/etc/passwd`{.filename} file.
-::::::
-
-::::::: sect4
-::::: titlepage
+##### Guest account {#guest-account}
 
 
-##### []{#samba-init-sysd}Systemd Units {#systemd-units .title}
+</div>
+
+The default <span class="application">Samba</span> installation uses the <code class="systemitem">nobody</code> user for guest access to the server. This can be overridden by setting the <code class="option">guest account =</code> parameter in the <code class="filename">/etc/samba/smb.conf</code> file. If you utilize the <code class="option">guest account =</code> parameter, ensure this user exists in the <code class="filename">/etc/passwd</code> file.
+</div>
+
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Systemd Units {#systemd-units}
 
-To start the [Samba]{.application} daemons at boot, install the systemd units from the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package by running the following command as the `root`{.systemitem} user:
 
-``` root
+</div>
+
+To start the <span class="application">Samba</span> daemons at boot, install the systemd units from the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package by running the following command as the <code class="systemitem">root</code> user:
+
+```bash
 make install-samba
 ```
 
-To start the [**winbindd**]{.command} daemon at boot, install the systemd unit from the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>winbindd</strong></span> daemon at boot, install the systemd unit from the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install-winbindd
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-This package comes with two types of units: A service file and a socket file. The service file will start the smbd daemon once at boot and it will keep running until the system shuts down. The socket file will make systemd listen on the smbd port (Default 445, needs to be edited for anything else) and will start the smbd daemon when something tries to connect to that port and stop the daemon when the connection is terminated. This is called socket activation and is analogous to using [{,x}inetd]{.application} on a SysVinit based system.
+This package comes with two types of units: A service file and a socket file. The service file will start the smbd daemon once at boot and it will keep running until the system shuts down. The socket file will make systemd listen on the smbd port (Default 445, needs to be edited for anything else) and will start the smbd daemon when something tries to connect to that port and stop the daemon when the connection is terminated. This is called socket activation and is analogous to using <span class="application">{,x}inetd</span> on a SysVinit based system.
 
-By default, the first method is used - the smbd daemon is started at boot and stopped at shutdown. If the socket method is desired, you need to run the following commands as the `root`{.systemitem} user:
+By default, the first method is used - the smbd daemon is started at boot and stopped at shutdown. If the socket method is desired, you need to run the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl stop smbd          &&
 systemctl disable smbd       &&
 systemctl enable smbd.socket &&
@@ -334,107 +334,107 @@ systemctl start smbd.socket
 ```
 
 Note that only the smbd daemon can be socket activated.
-:::
-:::::::
-:::::::::::::::::::::::::
-::::::::::::::::::::::::::::
+</div>
+</div>
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [cifsdd, dbwrap_tool, dumpmscat, eventlogadm, gentest, ldbadd, ldbdel, ldbedit, ldbmodify, ldbrename, ldbsearch, locktest, masktest, mdsearch, mvxattr, ndrdump, net, nmbd, nmblookup, ntlm_auth, oLschema2ldif, pdbedit, profiles, regdiff, regpatch, regshell, regtree, rpcclient, samba-log-parser, samba-gpupdate, samba-regedit, samba-tool, sharesec, smbcacls, smbclient, smbcontrol, smbcquotas, smbd, smbget, smbpasswd, smbspool, smbstatus, smbtar, smbtorture, smbtree, tdbbackup, tdbdump, tdbrestore, tdbtool, testparm, wbinfo, winbindd, and wspsearch]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cifsdd, dbwrap_tool, dumpmscat, eventlogadm, gentest, ldbadd, ldbdel, ldbedit, ldbmodify, ldbrename, ldbsearch, locktest, masktest, mdsearch, mvxattr, ndrdump, net, nmbd, nmblookup, ntlm_auth, oLschema2ldif, pdbedit, profiles, regdiff, regpatch, regshell, regtree, rpcclient, samba-log-parser, samba-gpupdate, samba-regedit, samba-tool, sharesec, smbcacls, smbclient, smbcontrol, smbcquotas, smbd, smbget, smbpasswd, smbspool, smbstatus, smbtar, smbtorture, smbtree, tdbbackup, tdbdump, tdbrestore, tdbtool, testparm, wbinfo, winbindd, and wspsearch</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libdcerpc-binding.so, libdcerpc-server-core.so, libndr-krb5pac.so, libndr-nbt.so, libndr.so, libndr-standard.so, libnetapi.so, libnss_winbind.so, libnss_wins.so, libsamba-errors.so, libsamba-passdb.so, libsamba-util.so, libsmbclient.so, libsmbconf.so, libsmbldap.so, libwbclient.so, and filesystem and support modules under /usr/lib/{python3.14,samba}]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libdcerpc-binding.so, libdcerpc-server-core.so, libndr-krb5pac.so, libndr-nbt.so, libndr.so, libndr-standard.so, libnetapi.so, libnss_winbind.so, libnss_wins.so, libsamba-errors.so, libsamba-passdb.so, libsamba-util.so, libsmbclient.so, libsmbconf.so, libsmbldap.so, libwbclient.so, and filesystem and support modules under /usr/lib/{python3.14,samba}</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/samba, /run/samba, /usr/include/samba-4.0, /usr/lib/python3.14/site-packages/samba, /usr/{lib,libexec,share}/samba, and /var/{cache,lib,lock,log,run}/samba]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/samba, /run/samba, /usr/include/samba-4.0, /usr/lib/python3.14/site-packages/samba, /usr/{lib,libexec,share}/samba, and /var/{cache,lib,lock,log,run}/samba</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#cifsdd}[[**cifsdd**]{.command}]{.term}                       is the dd command for SMB
-  []{#dbwrap_tool}[[**dbwrap_tool**]{.command}]{.term}             is used to read and manipulate TDB/CTDB databases using the dbwrap interface
-  []{#dumpmscat}[[**dumpmscat**]{.command}]{.term}                 dumps the content of MS catalog files
-  []{#eventlogadm}[[**eventlogadm**]{.command}]{.term}             is used to write records to eventlogs from STDIN, add the specified source and DLL eventlog registry entries and display the active eventlog names (from `smb.conf`{.filename})
-  []{#gentest}[[**gentest**]{.command}]{.term}                     is used to run random generic SMB operations against two SMB servers and show the differences in behavior
-  []{#ldbadd}[[**ldbadd**]{.command}]{.term}                       is a command-line utility for adding records to an LDB database
-  []{#ldbdel}[[**ldbdel**]{.command}]{.term}                       is a command-line utility for deleting LDB database records
-  []{#ldbedit}[[**ldbedit**]{.command}]{.term}                     allows you to edit LDB databases using your preferred editor
-  []{#ldbmodify}[[**ldbmodify**]{.command}]{.term}                 allows you to modify records in an LDB database
-  []{#ldbrename}[[**ldbrename**]{.command}]{.term}                 allows you to rename LDB databases
-  []{#ldbsearch}[[**ldbsearch**]{.command}]{.term}                 searches an LDB database for records matching a specified expression
-  []{#locktest}[[**locktest**]{.command}]{.term}                   is used to find differences in locking between two SMB servers
-  []{#masktest}[[**masktest**]{.command}]{.term}                   is used to find differences in wildcard matching between Samba's implementation and that of a remote server
-  []{#mdsearch}[[**mdsearch**]{.command}]{.term}                   runs [Spotlight]{.application} searches against a SMB server
-  []{#mvxattr}[[**mvxattr**]{.command}]{.term}                     is used to recursively rename extended attributes
-  []{#ndrdump}[[**ndrdump**]{.command}]{.term}                     is a DCE/RPC Packet Parser and Dumper
-  []{#net}[[**net**]{.command}]{.term}                             is a tool for administration of [Samba]{.application} and remote CIFS servers, similar to the [**net**]{.command} utility for DOS/Windows
-  []{#nmbd}[[**nmbd**]{.command}]{.term}                           is the [Samba]{.application} NetBIOS name server
-  []{#nmblookup}[[**nmblookup**]{.command}]{.term}                 is used to query NetBIOS names and map them to IP addresses
-  []{#ntlm_auth}[[**ntlm_auth**]{.command}]{.term}                 is a tool to allow external access to Winbind's NTLM authentication function
-  []{#oLschema2ldif}[[**oLschema2ldif**]{.command}]{.term}         converts LDAP schema's to LDB-compatible LDIF
-  []{#pdbedit}[[**pdbedit**]{.command}]{.term}                     is a tool used to manage the SAM database
-  []{#profiles}[[**profiles**]{.command}]{.term}                   is a utility that reports and changes SIDs in Windows registry files
-  []{#regdiff}[[**regdiff**]{.command}]{.term}                     is a Diff program for Windows registry files
-  []{#regpatch}[[**regpatch**]{.command}]{.term}                   applies registry patches to registry files
-  []{#regshell}[[**regshell**]{.command}]{.term}                   is a Windows registry file browser using readline
-  []{#regtree}[[**regtree**]{.command}]{.term}                     is a text-mode registry viewer
-  []{#rpcclient}[[**rpcclient**]{.command}]{.term}                 is used to execute MS-RPC client side functions
-  []{#samba-log-parser}[[**samba-log-parser**]{.command}]{.term}   parses winbind logs generated by Samba
-  []{#samba-gpupdate}[[**samba-gpupdate**]{.command}]{.term}       allows you to edit Microsoft Group Policy Objects (GPOs)
-  []{#samba-regedit}[[**samba-regedit**]{.command}]{.term}         is a ncurses based tool to manage the Samba registry
-  []{#samba-tool}[[**samba-tool**]{.command}]{.term}               is the main Samba administration tool
-  []{#sharesec}[[**sharesec**]{.command}]{.term}                   manipulates share ACL permissions on SMB file shares
-  []{#smbcacls}[[**smbcacls**]{.command}]{.term}                   is used to manipulate Windows NT access control lists
-  []{#smbclient}[[**smbclient**]{.command}]{.term}                 is a SMB/CIFS access utility, similar to FTP
-  []{#smbcontrol}[[**smbcontrol**]{.command}]{.term}               is used to control running [**smbd**]{.command}, [**nmbd**]{.command} and [**winbindd**]{.command} daemons
-  []{#smbcquotas}[[**smbcquotas**]{.command}]{.term}               is used to manipulate Windows NT quotas on SMB file shares
-  []{#smbd}[[**smbd**]{.command}]{.term}                           is the main [Samba]{.application} daemon which provides SMB/CIFS services to clients
-  []{#smbget}[[**smbget**]{.command}]{.term}                       is a simple utility with [**wget**]{.command}-like semantics, that can download files from SMB servers. You can specify the files you would like to download on the command-line
-  []{#smbpasswd}[[**smbpasswd**]{.command}]{.term}                 changes a user's [Samba]{.application} password
-  []{#smbspool}[[**smbspool**]{.command}]{.term}                   sends a print job to a SMB printer
-  []{#smbstatus}[[**smbstatus**]{.command}]{.term}                 reports current [Samba]{.application} connections
-  []{#smbtar}[[**smbtar**]{.command}]{.term}                       is a shell script used for backing up SMB/CIFS shares directly to Linux tape drives or to a file
-  []{#smbtorture}[[**smbtorture**]{.command}]{.term}               is a test suite that runs several tests against a SMB server
-  []{#smbtree}[[**smbtree**]{.command}]{.term}                     is a text-based SMB network browser
-  []{#tdbbackup}[[**tdbbackup**]{.command}]{.term}                 is a tool for backing up or validating the integrity of [Samba]{.application} `.tdb`{.filename} files
-  []{#tdbdump}[[**tdbdump**]{.command}]{.term}                     is a tool used to print the contents of a [Samba]{.application} `.tdb`{.filename} file
-  []{#tdbrestore}[[**tdbrestore**]{.command}]{.term}               is a tool for creating a [Samba]{.application} `.tdb`{.filename} file out of a ntdbdump
-  []{#tdbtool}[[**tdbtool**]{.command}]{.term}                     is a tool which allows simple database manipulation from the command line
-  []{#testparm}[[**testparm**]{.command}]{.term}                   checks a `smb.conf`{.filename} file for proper syntax
-  []{#wbinfo}[[**wbinfo**]{.command}]{.term}                       queries a running [**winbindd**]{.command} daemon
-  []{#winbindd}[[**winbindd**]{.command}]{.term}                   resolves names from Windows NT servers
-  []{#wspsearch}[[**wspsearch**]{.command}]{.term}                 runs Windows Search Protocol queries against a SMB server
-  []{#libnss_winbind}[`libnss_winbind.so`{.filename}]{.term}       provides Name Service Switch API functions for resolving names from NT servers
-  []{#libnss_wins}[`libnss_wins.so`{.filename}]{.term}             provides API functions for Samba's implementation of the Windows Internet Naming Service
-  []{#libnetapi}[`libnetapi.so`{.filename}]{.term}                 provides API functions for the administration tools used for Samba and remote CIFS servers
-  []{#libsmbclient}[`libsmbclient.so`{.filename}]{.term}           provides API functions for the Samba SMB client tools
-  []{#libwbclient}[`libwbclient.so`{.filename}]{.term}             provides API functions for Windows domain client services
+  <a id="cifsdd"></a><span class="command"><span class="term"><strong>cifsdd</strong></span></span>                       is the dd command for SMB
+  <a id="dbwrap_tool"></a><span class="command"><span class="term"><strong>dbwrap_tool</strong></span></span>             is used to read and manipulate TDB/CTDB databases using the dbwrap interface
+  <a id="dumpmscat"></a><span class="command"><span class="term"><strong>dumpmscat</strong></span></span>                 dumps the content of MS catalog files
+  <a id="eventlogadm"></a><span class="command"><span class="term"><strong>eventlogadm</strong></span></span>             is used to write records to eventlogs from STDIN, add the specified source and DLL eventlog registry entries and display the active eventlog names (from <code class="filename">smb.conf</code>)
+  <a id="gentest"></a><span class="command"><span class="term"><strong>gentest</strong></span></span>                     is used to run random generic SMB operations against two SMB servers and show the differences in behavior
+  <a id="ldbadd"></a><span class="command"><span class="term"><strong>ldbadd</strong></span></span>                       is a command-line utility for adding records to an LDB database
+  <a id="ldbdel"></a><span class="command"><span class="term"><strong>ldbdel</strong></span></span>                       is a command-line utility for deleting LDB database records
+  <a id="ldbedit"></a><span class="command"><span class="term"><strong>ldbedit</strong></span></span>                     allows you to edit LDB databases using your preferred editor
+  <a id="ldbmodify"></a><span class="command"><span class="term"><strong>ldbmodify</strong></span></span>                 allows you to modify records in an LDB database
+  <a id="ldbrename"></a><span class="command"><span class="term"><strong>ldbrename</strong></span></span>                 allows you to rename LDB databases
+  <a id="ldbsearch"></a><span class="command"><span class="term"><strong>ldbsearch</strong></span></span>                 searches an LDB database for records matching a specified expression
+  <a id="locktest"></a><span class="command"><span class="term"><strong>locktest</strong></span></span>                   is used to find differences in locking between two SMB servers
+  <a id="masktest"></a><span class="command"><span class="term"><strong>masktest</strong></span></span>                   is used to find differences in wildcard matching between Samba's implementation and that of a remote server
+  <a id="mdsearch"></a><span class="command"><span class="term"><strong>mdsearch</strong></span></span>                   runs <span class="application">Spotlight</span> searches against a SMB server
+  <a id="mvxattr"></a><span class="command"><span class="term"><strong>mvxattr</strong></span></span>                     is used to recursively rename extended attributes
+  <a id="ndrdump"></a><span class="command"><span class="term"><strong>ndrdump</strong></span></span>                     is a DCE/RPC Packet Parser and Dumper
+  <a id="net"></a><span class="command"><span class="term"><strong>net</strong></span></span>                             is a tool for administration of <span class="application">Samba</span> and remote CIFS servers, similar to the <span class="command"><strong>net</strong></span> utility for DOS/Windows
+  <a id="nmbd"></a><span class="command"><span class="term"><strong>nmbd</strong></span></span>                           is the <span class="application">Samba</span> NetBIOS name server
+  <a id="nmblookup"></a><span class="command"><span class="term"><strong>nmblookup</strong></span></span>                 is used to query NetBIOS names and map them to IP addresses
+  <a id="ntlm_auth"></a><span class="command"><span class="term"><strong>ntlm_auth</strong></span></span>                 is a tool to allow external access to Winbind's NTLM authentication function
+  <a id="oLschema2ldif"></a><span class="command"><span class="term"><strong>oLschema2ldif</strong></span></span>         converts LDAP schema's to LDB-compatible LDIF
+  <a id="pdbedit"></a><span class="command"><span class="term"><strong>pdbedit</strong></span></span>                     is a tool used to manage the SAM database
+  <a id="profiles"></a><span class="command"><span class="term"><strong>profiles</strong></span></span>                   is a utility that reports and changes SIDs in Windows registry files
+  <a id="regdiff"></a><span class="command"><span class="term"><strong>regdiff</strong></span></span>                     is a Diff program for Windows registry files
+  <a id="regpatch"></a><span class="command"><span class="term"><strong>regpatch</strong></span></span>                   applies registry patches to registry files
+  <a id="regshell"></a><span class="command"><span class="term"><strong>regshell</strong></span></span>                   is a Windows registry file browser using readline
+  <a id="regtree"></a><span class="command"><span class="term"><strong>regtree</strong></span></span>                     is a text-mode registry viewer
+  <a id="rpcclient"></a><span class="command"><span class="term"><strong>rpcclient</strong></span></span>                 is used to execute MS-RPC client side functions
+  <a id="samba-log-parser"></a><span class="command"><span class="term"><strong>samba-log-parser</strong></span></span>   parses winbind logs generated by Samba
+  <a id="samba-gpupdate"></a><span class="command"><span class="term"><strong>samba-gpupdate</strong></span></span>       allows you to edit Microsoft Group Policy Objects (GPOs)
+  <a id="samba-regedit"></a><span class="command"><span class="term"><strong>samba-regedit</strong></span></span>         is a ncurses based tool to manage the Samba registry
+  <a id="samba-tool"></a><span class="command"><span class="term"><strong>samba-tool</strong></span></span>               is the main Samba administration tool
+  <a id="sharesec"></a><span class="command"><span class="term"><strong>sharesec</strong></span></span>                   manipulates share ACL permissions on SMB file shares
+  <a id="smbcacls"></a><span class="command"><span class="term"><strong>smbcacls</strong></span></span>                   is used to manipulate Windows NT access control lists
+  <a id="smbclient"></a><span class="command"><span class="term"><strong>smbclient</strong></span></span>                 is a SMB/CIFS access utility, similar to FTP
+  <a id="smbcontrol"></a><span class="command"><span class="term"><strong>smbcontrol</strong></span></span>               is used to control running <span class="command"><strong>smbd</strong></span>, <span class="command"><strong>nmbd</strong></span> and <span class="command"><strong>winbindd</strong></span> daemons
+  <a id="smbcquotas"></a><span class="command"><span class="term"><strong>smbcquotas</strong></span></span>               is used to manipulate Windows NT quotas on SMB file shares
+  <a id="smbd"></a><span class="command"><span class="term"><strong>smbd</strong></span></span>                           is the main <span class="application">Samba</span> daemon which provides SMB/CIFS services to clients
+  <a id="smbget"></a><span class="command"><span class="term"><strong>smbget</strong></span></span>                       is a simple utility with <span class="command"><strong>wget</strong></span>-like semantics, that can download files from SMB servers. You can specify the files you would like to download on the command-line
+  <a id="smbpasswd"></a><span class="command"><span class="term"><strong>smbpasswd</strong></span></span>                 changes a user's <span class="application">Samba</span> password
+  <a id="smbspool"></a><span class="command"><span class="term"><strong>smbspool</strong></span></span>                   sends a print job to a SMB printer
+  <a id="smbstatus"></a><span class="command"><span class="term"><strong>smbstatus</strong></span></span>                 reports current <span class="application">Samba</span> connections
+  <a id="smbtar"></a><span class="command"><span class="term"><strong>smbtar</strong></span></span>                       is a shell script used for backing up SMB/CIFS shares directly to Linux tape drives or to a file
+  <a id="smbtorture"></a><span class="command"><span class="term"><strong>smbtorture</strong></span></span>               is a test suite that runs several tests against a SMB server
+  <a id="smbtree"></a><span class="command"><span class="term"><strong>smbtree</strong></span></span>                     is a text-based SMB network browser
+  <a id="tdbbackup"></a><span class="command"><span class="term"><strong>tdbbackup</strong></span></span>                 is a tool for backing up or validating the integrity of <span class="application">Samba</span> <code class="filename">.tdb</code> files
+  <a id="tdbdump"></a><span class="command"><span class="term"><strong>tdbdump</strong></span></span>                     is a tool used to print the contents of a <span class="application">Samba</span> <code class="filename">.tdb</code> file
+  <a id="tdbrestore"></a><span class="command"><span class="term"><strong>tdbrestore</strong></span></span>               is a tool for creating a <span class="application">Samba</span> <code class="filename">.tdb</code> file out of a ntdbdump
+  <a id="tdbtool"></a><span class="command"><span class="term"><strong>tdbtool</strong></span></span>                     is a tool which allows simple database manipulation from the command line
+  <a id="testparm"></a><span class="command"><span class="term"><strong>testparm</strong></span></span>                   checks a <code class="filename">smb.conf</code> file for proper syntax
+  <a id="wbinfo"></a><span class="command"><span class="term"><strong>wbinfo</strong></span></span>                       queries a running <span class="command"><strong>winbindd</strong></span> daemon
+  <a id="winbindd"></a><span class="command"><span class="term"><strong>winbindd</strong></span></span>                   resolves names from Windows NT servers
+  <a id="wspsearch"></a><span class="command"><span class="term"><strong>wspsearch</strong></span></span>                 runs Windows Search Protocol queries against a SMB server
+  <a id="libnss_winbind"></a><span class="term"><code class="filename">libnss_winbind.so</code></span>       provides Name Service Switch API functions for resolving names from NT servers
+  <a id="libnss_wins"></a><span class="term"><code class="filename">libnss_wins.so</code></span>             provides API functions for Samba's implementation of the Windows Internet Naming Service
+  <a id="libnetapi"></a><span class="term"><code class="filename">libnetapi.so</code></span>                 provides API functions for the administration tools used for Samba and remote CIFS servers
+  <a id="libsmbclient"></a><span class="term"><code class="filename">libsmbclient.so</code></span>           provides API functions for the Samba SMB client tools
+  <a id="libwbclient"></a><span class="term"><code class="filename">libwbclient.so</code></span>             provides API functions for Windows domain client services
   ---------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::::::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](rsync.md "rsync-3.4.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](rsync.md "rsync-3.4.3")
 
     rsync-3.4.3
 
--   [Next](wget.md "Wget-1.25.0"){accesskey="n"}
+-   [Next](wget.md "Wget-1.25.0")
 
     Wget-1.25.0
 
--   [Up](netprogs.md "Chapter 15. Networking Programs"){accesskey="u"}
+-   [Up](netprogs.md "Chapter 15. Networking Programs")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

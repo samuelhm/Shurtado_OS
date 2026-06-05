@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](ldns.md "ldns-1.9.0"){accesskey="p"}
+-   [Prev](ldns.md "ldns-1.9.0")
 
     ldns-1.9.0
 
--   [Next](libmnl.md "libmnl-1.0.5"){accesskey="n"}
+-   [Next](libmnl.md "libmnl-1.0.5")
 
     libmnl-1.0.5
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libevent}libevent-2.1.12 {#libevent-2.1.12 .sect1}
+# libevent-2.1.12 {#libevent-2.1.12}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libevent {#introduction-to-libevent .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libevent {#introduction-to-libevent}
 
-[libevent]{.application} is an asynchronous event notification software library. The [libevent]{.application} API provides a mechanism to execute a callback function when a specific event occurs on a file descriptor or after a timeout has been reached. Furthermore, [libevent]{.application} also supports callbacks due to signals or regular timeouts.
+<span class="application">libevent</span> is an asynchronous event notification software library. The <span class="application">libevent</span> API provides a mechanism to execute a callback function when a specific event occurs on a file descriptor or after a timeout has been reached. Furthermore, <span class="application">libevent</span> also supports callbacks due to signals or regular timeouts.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz](https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz">https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz</a>
 
 -   Download MD5 sum: b5333f021f880fe76490d8a799cd79f4
 
@@ -44,91 +44,91 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 20 MB (add 4 MB for tests and 4 MB for API docs)
 
 -   Estimated build time: 0.3 SBU (add 11 SBU for tests)
-:::
+</div>
 
 ### libevent Dependencies
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} (for API documentation)
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (for API documentation)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libevent {#installation-of-libevent .sect2}
+<div class="installation" lang="en">
+## Installation of libevent {#installation-of-libevent}
 
 First, fix an issue that prevents event_rpcgen.py from working:
 
-``` userinput
+```bash
 sed -i 's/python/&3/' event_rpcgen.py
 ```
 
-Install [libevent]{.application} by running the following commands:
+Install <span class="application">libevent</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-If you have [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} installed and wish to build API documentation, issue :
+If you have <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> installed and wish to build API documentation, issue :
 
-``` userinput
+```bash
 doxygen Doxyfile
 ```
 
-To test the results, issue: [**make verify**]{.command}. Seven tests in every suite related to `regress_ssl.c`{.filename} and `regress_http.c`{.filename} are known to fail due to incompatibilities with OpenSSL-3. Some tests that are related to `regress_dns.c`{.filename} are also known to fail intermittently due to insufficient test timeouts.
+To test the results, issue: <span class="command"><strong>make verify</strong></span>. Seven tests in every suite related to <code class="filename">regress_ssl.c</code> and <code class="filename">regress_http.c</code> are known to fail due to incompatibilities with OpenSSL-3. Some tests that are related to <code class="filename">regress_dns.c</code> are also known to fail intermittently due to insufficient test timeouts.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-If you built the API documentation, install it by issuing the following commands as the `root`{.systemitem} user:
+If you built the API documentation, install it by issuing the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m755 -d /usr/share/doc/libevent-2.1.12/api &&
 cp      -v -R       doxygen/html/* \
                     /usr/share/doc/libevent-2.1.12/api
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [event_rpcgen.py]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">event_rpcgen.py</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libevent_core.so, libevent_extra.so, libevent_openssl.so, libevent_pthreads.so and libevent.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libevent_core.so, libevent_extra.so, libevent_openssl.so, libevent_pthreads.so and libevent.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/event2 and /usr/share/doc/libevent-2.1.12]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/event2 and /usr/share/doc/libevent-2.1.12</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](ldns.md "ldns-1.9.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](ldns.md "ldns-1.9.0")
 
     ldns-1.9.0
 
--   [Next](libmnl.md "libmnl-1.0.5"){accesskey="n"}
+-   [Next](libmnl.md "libmnl-1.0.5")
 
     libmnl-1.0.5
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

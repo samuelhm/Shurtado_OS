@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](cairomm-1.0.md "libcairomm-1.0 (cairomm-1.14.5)"){accesskey="p"}
+-   [Prev](cairomm-1.0.md "libcairomm-1.0 (cairomm-1.14.5)")
 
     libcairomm-1.0 (cairomm-1.14.5)
 
--   [Next](colord-gtk.md "colord-gtk-0.3.1"){accesskey="n"}
+-   [Next](colord-gtk.md "colord-gtk-0.3.1")
 
     colord-gtk-0.3.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#cairomm-1.16}libcairomm-1.16 (cairomm-1.18.0) {#libcairomm-1.16-cairomm-1.18.0 .sect1}
+# libcairomm-1.16 (cairomm-1.18.0) {#libcairomm-1.16-cairomm-1.18.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libcairomm-1.16 {#introduction-to-libcairomm-1.16 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libcairomm-1.16 {#introduction-to-libcairomm-1.16}
 
-The [libcairomm-1.16]{.application} package provides a C++ interface to [Cairo]{.application}. This version of the API is needed to support gtkmm-4.
+The <span class="application">libcairomm-1.16</span> package provides a C++ interface to <span class="application">Cairo</span>. This version of the API is needed to support gtkmm-4.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.cairographics.org/releases/cairomm-1.18.0.tar.xz](https://www.cairographics.org/releases/cairomm-1.18.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.cairographics.org/releases/cairomm-1.18.0.tar.xz">https://www.cairographics.org/releases/cairomm-1.18.0.tar.xz</a>
 
 -   Download MD5 sum: 4c7afc4ab5177655724ea4b31794db30
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 25 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### libcairomm-1.16 Dependencies
 
 #### Required
 
-[Cairo-1.18.4](cairo.md "Cairo-1.18.4"){.xref} and [libsigc++-3.6.0](../general/libsigc3.md "libsigc++-3.6.0"){.xref}
+<a class="xref" href="cairo.md" title="Cairo-1.18.4">Cairo-1.18.4</a> and <a class="xref" href="../general/libsigc3.md" title="libsigc++-3.6.0">libsigc++-3.6.0</a>
 
 #### Recommended
 
-[Boost-1.91.0-1](../general/boost.md "boost-1.91.0-1"){.xref} (for tests)
+<a class="xref" href="../general/boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a> (for tests)
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libcairomm-1.16 {#installation-of-libcairomm-1.16 .sect2}
+<div class="installation" lang="en">
+## Installation of libcairomm-1.16 {#installation-of-libcairomm-1.16}
 
-Install [Cairomm-1.16]{.application} by running the following commands:
+Install <span class="application">Cairomm-1.16</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir bld &&
 cd    bld &&
 
@@ -78,64 +78,64 @@ meson setup ..             \
 ninja
 ```
 
-To run the test suite, run: [**ninja test**]{.command}.
+To run the test suite, run: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D build-tests=true`*: This switch is for building the unit tests. Remove if you have not installed [Boost-1.91.0-1](../general/boost.md "boost-1.91.0-1"){.xref}.
+*`-D build-tests=true`*: This switch is for building the unit tests. Remove if you have not installed <a class="xref" href="../general/boost.md" title="boost-1.91.0-1">Boost-1.91.0-1</a>.
 
 *`-D boost-shared=true`*: This switch has the package use the shared version of boost libraries. It is required if you have not installed the boost static libraries, and you have passed *`-D build-tests=true`*.
 
-`-D build-documentation=true`{.option}: This switch builds the html documentation if doxygen is installed.
-:::
+<code class="option">-D build-documentation=true</code>: This switch builds the html documentation if doxygen is installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libcairomm-1.16.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libcairomm-1.16.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{lib,include}/cairomm-1.16 and /usr/share/{devhelp/books,doc}/cairomm-1.16 (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{lib,include}/cairomm-1.16 and /usr/share/{devhelp/books,doc}/cairomm-1.16 (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------------- ------------------------------------------------
-  []{#libcairomm-1.16}[`libcairomm-1.16.so`{.filename}]{.term}   contains the [Cairo]{.application} API classes
+  <a id="libcairomm-1.16"></a><span class="term"><code class="filename">libcairomm-1.16.so</code></span>   contains the <span class="application">Cairo</span> API classes
   -------------------------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](cairomm-1.0.md "libcairomm-1.0 (cairomm-1.14.5)"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](cairomm-1.0.md "libcairomm-1.0 (cairomm-1.14.5)")
 
     libcairomm-1.0 (cairomm-1.14.5)
 
--   [Next](colord-gtk.md "colord-gtk-0.3.1"){accesskey="n"}
+-   [Next](colord-gtk.md "colord-gtk-0.3.1")
 
     colord-gtk-0.3.1
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

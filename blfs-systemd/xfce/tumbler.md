@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 35. Xfce Desktop
 
--   [Prev](thunar-volman.md "thunar-volman-4.20.0"){accesskey="p"}
+-   [Prev](thunar-volman.md "thunar-volman-4.20.0")
 
     thunar-volman-4.20.0
 
--   [Next](xfce4-appfinder.md "xfce4-appfinder-4.20.0"){accesskey="n"}
+-   [Next](xfce4-appfinder.md "xfce4-appfinder-4.20.0")
 
     xfce4-appfinder-4.20.0
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#tumbler}tumbler-4.20.1 {#tumbler-4.20.1 .sect1}
+# tumbler-4.20.1 {#tumbler-4.20.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to tumbler {#introduction-to-tumbler .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to tumbler {#introduction-to-tumbler}
 
-The [Tumbler]{.application} package contains a [D-Bus]{.application} thumbnailing service based on the thumbnail management [D-Bus]{.application} specification. This is useful for generating thumbnail images of files.
+The <span class="application">Tumbler</span> package contains a <span class="application">D-Bus</span> thumbnailing service based on the thumbnail management <span class="application">D-Bus</span> specification. This is useful for generating thumbnail images of files.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/xfce/tumbler/4.20/tumbler-4.20.1.tar.bz2](https://archive.xfce.org/src/xfce/tumbler/4.20/tumbler-4.20.1.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/xfce/tumbler/4.20/tumbler-4.20.1.tar.bz2">https://archive.xfce.org/src/xfce/tumbler/4.20/tumbler-4.20.1.tar.bz2</a>
 
 -   Download MD5 sum: 7d315af732b1232d663b03149d7c82a4
 
@@ -44,78 +44,78 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 14 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Tumbler Dependencies
 
 #### Required
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>
 
 #### Optional
 
-[cURL-8.20.0](../basicnet/curl.md "cURL-8.20.0"){.xref}, [FreeType-2.14.3](../general/freetype2.md "FreeType-2.14.3"){.xref}, [gdk-pixbuf-2.44.6](../x/gdk-pixbuf.md "gdk-pixbuf-2.44.6"){.xref}, [gst-plugins-base-1.28.3](../multimedia/gst10-plugins-base.md "gst-plugins-base-1.28.3"){.xref}, [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [libjpeg-turbo-3.1.4.1](../general/libjpeg.md "libjpeg-turbo-3.1.4.1"){.xref}, [libgsf-1.14.58](../general/libgsf.md "libgsf-1.14.58"){.xref}, [libpng-1.6.58](../general/libpng.md "libpng-1.6.58"){.xref}, [Poppler-26.06.0](../general/poppler.md "Poppler-26.06.0"){.xref}, [FFmpegThumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer){.ulink}, [libgepub](https://download.gnome.org/sources/libgepub/){.ulink}, and [libopenraw](https://libopenraw.freedesktop.org/){.ulink}
-:::::
+<a class="xref" href="../basicnet/curl.md" title="cURL-8.20.0">cURL-8.20.0</a>, <a class="xref" href="../general/freetype2.md" title="FreeType-2.14.3">FreeType-2.14.3</a>, <a class="xref" href="../x/gdk-pixbuf.md" title="gdk-pixbuf-2.44.6">gdk-pixbuf-2.44.6</a>, <a class="xref" href="../multimedia/gst10-plugins-base.md" title="gst-plugins-base-1.28.3">gst-plugins-base-1.28.3</a>, <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="xref" href="../general/libjpeg.md" title="libjpeg-turbo-3.1.4.1">libjpeg-turbo-3.1.4.1</a>, <a class="xref" href="../general/libgsf.md" title="libgsf-1.14.58">libgsf-1.14.58</a>, <a class="xref" href="../general/libpng.md" title="libpng-1.6.58">libpng-1.6.58</a>, <a class="xref" href="../general/poppler.md" title="Poppler-26.06.0">Poppler-26.06.0</a>, <a class="ulink" href="https://github.com/dirkvdb/ffmpegthumbnailer">FFmpegThumbnailer</a>, <a class="ulink" href="https://download.gnome.org/sources/libgepub/">libgepub</a>, and <a class="ulink" href="https://libopenraw.freedesktop.org/">libopenraw</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Tumbler {#installation-of-tumbler .sect2}
+<div class="installation" lang="en">
+## Installation of Tumbler {#installation-of-tumbler}
 
-Install [Tumbler]{.application} by running the following commands:
+Install <span class="application">Tumbler</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --sysconfdir=/etc &&
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [tumblerd]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">tumblerd</span>
+</div>
 
-::: seg
-**Installed Library:** [libtumbler-1.so and several under /usr/lib/tumbler-1/plugins/]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libtumbler-1.so and several under /usr/lib/tumbler-1/plugins/</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/xdg/tumbler, /usr/include/tumbler-1, /usr/lib/tumbler-1 and /usr/share/gtk-doc/html/tumbler]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/xdg/tumbler, /usr/include/tumbler-1, /usr/lib/tumbler-1 and /usr/share/gtk-doc/html/tumbler</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- --------------------------------------------------------------------------------------------
-  []{#tumblerd}[[**tumblerd**]{.command}]{.term}           is a D-Bus service for applications such as Thunar and Ristretto to use thumbnail images
-  []{#libtumbler-1}[`libtumbler-1.so`{.filename}]{.term}   contains functions that the [Tumbler]{.application} daemon uses to create thumbnail images
+  <a id="tumblerd"></a><span class="command"><span class="term"><strong>tumblerd</strong></span></span>           is a D-Bus service for applications such as Thunar and Ristretto to use thumbnail images
+  <a id="libtumbler-1"></a><span class="term"><code class="filename">libtumbler-1.so</code></span>   contains functions that the <span class="application">Tumbler</span> daemon uses to create thumbnail images
   -------------------------------------------------------- --------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](thunar-volman.md "thunar-volman-4.20.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](thunar-volman.md "thunar-volman-4.20.0")
 
     thunar-volman-4.20.0
 
--   [Next](xfce4-appfinder.md "xfce4-appfinder-4.20.0"){accesskey="n"}
+-   [Next](xfce4-appfinder.md "xfce4-appfinder-4.20.0")
 
     xfce4-appfinder-4.20.0
 
--   [Up](xfce-core.md "Chapter 35. Xfce Desktop"){accesskey="u"}
+-   [Up](xfce-core.md "Chapter 35. Xfce Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

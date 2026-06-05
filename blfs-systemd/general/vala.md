@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](unifdef.md "unifdef-2.12"){accesskey="p"}
+-   [Prev](unifdef.md "unifdef-2.12")
 
     unifdef-2.12
 
--   [Next](valgrind.md "Valgrind-3.27.1"){accesskey="n"}
+-   [Next](valgrind.md "Valgrind-3.27.1")
 
     Valgrind-3.27.1
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#vala}Vala-0.56.19 {#vala-0.56.19 .sect1}
+# Vala-0.56.19 {#vala-0.56.19}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Vala {#introduction-to-vala .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Vala {#introduction-to-vala}
 
-[Vala]{.application} is a new programming language that aims to bring modern programming language features to [GNOME]{.application} developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C.
+<span class="application">Vala</span> is a new programming language that aims to bring modern programming language features to <span class="application">GNOME</span> developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/vala/0.56/vala-0.56.19.tar.xz](https://download.gnome.org/sources/vala/0.56/vala-0.56.19.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/vala/0.56/vala-0.56.19.tar.xz">https://download.gnome.org/sources/vala/0.56/vala-0.56.19.tar.xz</a>
 
 -   Download MD5 sum: a2dc825de503fad703584cfb0ed50302
 
@@ -44,91 +44,91 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 160 MB (add 16 MB for tests)
 
 -   Estimated build time: 0.4 SBU (add 0.9 SBU for tests; both using parallelism=4)
-:::
+</div>
 
 ### Vala Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (GObject Introspection required for the tests)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection required for the tests)
 
 #### Recommended
 
-[Graphviz-15.0.0](graphviz.md "Graphviz-15.0.0"){.xref} (Required for valadoc)
+<a class="xref" href="graphviz.md" title="Graphviz-15.0.0">Graphviz-15.0.0</a> (Required for valadoc)
 
 #### Optional
 
-[dbus-1.16.2](dbus.md "dbus-1.16.2"){.xref} (Required for the tests), [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref} (Required for generating the documentation), [help2man](https://ftpmirror.gnu.org/gnu/help2man/){.ulink}, [jing](https://github.com/relaxng/jing-trang){.ulink}, and [weasyprint](https://weasyprint.org/){.ulink}
-:::::
+<a class="xref" href="dbus.md" title="dbus-1.16.2">dbus-1.16.2</a> (Required for the tests), <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> (Required for generating the documentation), <a class="ulink" href="https://ftpmirror.gnu.org/gnu/help2man/">help2man</a>, <a class="ulink" href="https://github.com/relaxng/jing-trang">jing</a>, and <a class="ulink" href="https://weasyprint.org/">weasyprint</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Vala {#installation-of-vala .sect2}
+<div class="installation" lang="en">
+## Installation of Vala {#installation-of-vala}
 
-Install [Vala]{.application} by running the following commands:
+Install <span class="application">Vala</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr &&
 make
 ```
 
-To test the results, issue: [**make check**]{.command}.
+To test the results, issue: <span class="command"><strong>make check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`--disable-valadoc`{.option}: This option is required if [Graphviz-15.0.0](graphviz.md "Graphviz-15.0.0"){.xref} is not installed.
-:::
+<code class="option">--disable-valadoc</code>: This option is required if <a class="xref" href="graphviz.md" title="Graphviz-15.0.0">Graphviz-15.0.0</a> is not installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [vala, vala-0.56, valac, valadoc, vala-gen-introspect, and vapigen (symlinks); valac-0.56, valadoc-0.56, vala-gen-introspect-0.56, and vapigen-0.56]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">vala, vala-0.56, valac, valadoc, vala-gen-introspect, and vapigen (symlinks); valac-0.56, valadoc-0.56, vala-gen-introspect-0.56, and vapigen-0.56</span>
+</div>
 
-::: seg
-**Installed Library:** [libvala-0.56.so and libvaladoc-0.56.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libvala-0.56.so and libvaladoc-0.56.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/vala-0.56, /usr/include/valadoc-0.56, /usr/lib/vala-0.56, /usr/lib/valadoc-0.56, /usr/share/vala, /usr/share/vala-0.56, /usr/share/valadoc-0.56, and /usr/share/devhelp/books/vala-0.56]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/vala-0.56, /usr/include/valadoc-0.56, /usr/lib/vala-0.56, /usr/lib/valadoc-0.56, /usr/share/vala, /usr/share/vala-0.56, /usr/share/valadoc-0.56, and /usr/share/devhelp/books/vala-0.56</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------
-  []{#valac}[[**valac**]{.command}]{.term}                               is a compiler that translates [Vala]{.application} source code into C source and header files
-  []{#valadoc}[[**valadoc**]{.command}]{.term}                           is a documentation generator for generating API documentation from [Vala]{.application} source code based on libvala
-  []{#vala-gen-introspect}[[**vala-gen-introspect**]{.command}]{.term}   generates a GI file for GObject and [GLib]{.application} based packages
-  []{#vapigen}[[**vapigen**]{.command}]{.term}                           is a utility which generates [Vala]{.application} API (VAPI) files from GI files
-  []{#libvala}[`libvala-0.56.so`{.filename}]{.term}                      contains the [Vala]{.application} API functions
+  <a id="valac"></a><span class="command"><span class="term"><strong>valac</strong></span></span>                               is a compiler that translates <span class="application">Vala</span> source code into C source and header files
+  <a id="valadoc"></a><span class="command"><span class="term"><strong>valadoc</strong></span></span>                           is a documentation generator for generating API documentation from <span class="application">Vala</span> source code based on libvala
+  <a id="vala-gen-introspect"></a><span class="command"><span class="term"><strong>vala-gen-introspect</strong></span></span>   generates a GI file for GObject and <span class="application">GLib</span> based packages
+  <a id="vapigen"></a><span class="command"><span class="term"><strong>vapigen</strong></span></span>                           is a utility which generates <span class="application">Vala</span> API (VAPI) files from GI files
+  <a id="libvala"></a><span class="term"><code class="filename">libvala-0.56.so</code></span>                      contains the <span class="application">Vala</span> API functions
   ---------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](unifdef.md "unifdef-2.12"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](unifdef.md "unifdef-2.12")
 
     unifdef-2.12
 
--   [Next](valgrind.md "Valgrind-3.27.1"){accesskey="n"}
+-   [Next](valgrind.md "Valgrind-3.27.1")
 
     Valgrind-3.27.1
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

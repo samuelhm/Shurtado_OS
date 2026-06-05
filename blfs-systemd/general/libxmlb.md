@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libxml2.md "libxml2-2.15.3"){accesskey="p"}
+-   [Prev](libxml2.md "libxml2-2.15.3")
 
     libxml2-2.15.3
 
--   [Next](libxslt.md "libxslt-1.1.45"){accesskey="n"}
+-   [Next](libxslt.md "libxslt-1.1.45")
 
     libxslt-1.1.45
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libxmlb}libxmlb-0.3.27 {#libxmlb-0.3.27 .sect1}
+# libxmlb-0.3.27 {#libxmlb-0.3.27}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libxmlb {#introduction-to-libxmlb .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libxmlb {#introduction-to-libxmlb}
 
-The [libxmlb]{.application} package contains a library and a tool which help create and query binary XML blobs.
+The <span class="application">libxmlb</span> package contains a library and a tool which help create and query binary XML blobs.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/hughsie/libxmlb/releases/download/0.3.27/libxmlb-0.3.27.tar.xz](https://github.com/hughsie/libxmlb/releases/download/0.3.27/libxmlb-0.3.27.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/hughsie/libxmlb/releases/download/0.3.27/libxmlb-0.3.27.tar.xz">https://github.com/hughsie/libxmlb/releases/download/0.3.27/libxmlb-0.3.27.tar.xz</a>
 
 -   Download MD5 sum: b0c73036693fed07383022a67264b5eb
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 5.5 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (With tests)
-:::
+</div>
 
 ### libxmlb Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (GObject Introspection recommended)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection recommended)
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref} and [libstemmer](https://github.com/zvelo/libstemmer){.ulink}
-:::::
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> and <a class="ulink" href="https://github.com/zvelo/libstemmer">libstemmer</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libxmlb {#installation-of-libxmlb .sect2}
+<div class="installation" lang="en">
+## Installation of libxmlb {#installation-of-libxmlb}
 
-Install [libxmlb]{.application} by running the following commands:
+Install <span class="application">libxmlb</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,67 +70,67 @@ meson setup --prefix=/usr --buildtype=release -D gtkdoc=false .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D gtkdoc=false`*: This switch disables building the API documentation. Remove it if you have [GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref} installed and wish to build the API documentation.
+*`-D gtkdoc=false`*: This switch disables building the API documentation. Remove it if you have <a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> installed and wish to build the API documentation.
 
-`-D introspection=false`{.option}: Use this switch if you have not built [GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} with GObject Introspection.
+<code class="option">-D introspection=false</code>: Use this switch if you have not built <a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> with GObject Introspection.
 
-`-D stemmer=true`{.option}: Use this switch if you have [libstemmer](https://github.com/zvelo/libstemmer){.ulink} installed and wish to build stemmer support.
-:::
+<code class="option">-D stemmer=true</code>: Use this switch if you have <a class="ulink" href="https://github.com/zvelo/libstemmer">libstemmer</a> installed and wish to build stemmer support.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [xb-tool]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">xb-tool</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libxmlb.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libxmlb.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libxmlb-2, /usr/libexec/installed-tests/libxmlb, and /usr/share/gtk-doc/html/libxmlb (if gtk-doc was enabled)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libxmlb-2, /usr/libexec/installed-tests/libxmlb, and /usr/share/gtk-doc/html/libxmlb (if gtk-doc was enabled)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- --------------------------------------------------------------------------
-  []{#xb-tool}[[**xb-tool**]{.command}]{.term}       is a tool used to create, dump, or query a binary XML blob
-  []{#libxmlb-lib}[`libxmlb.so`{.filename}]{.term}   contains functions that allow for creating and querying binary XML blobs
+  <a id="xb-tool"></a><span class="command"><span class="term"><strong>xb-tool</strong></span></span>       is a tool used to create, dump, or query a binary XML blob
+  <a id="libxmlb-lib"></a><span class="term"><code class="filename">libxmlb.so</code></span>   contains functions that allow for creating and querying binary XML blobs
   -------------------------------------------------- --------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libxml2.md "libxml2-2.15.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libxml2.md "libxml2-2.15.3")
 
     libxml2-2.15.3
 
--   [Next](libxslt.md "libxslt-1.1.45"){accesskey="n"}
+-   [Next](libxslt.md "libxslt-1.1.45")
 
     libxslt-1.1.45
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 19. Mail/News Clients
 
--   [Prev](mailx.md "mailx-12.5"){accesskey="p"}
+-   [Prev](mailx.md "mailx-12.5")
 
     mailx-12.5
 
--   [Next](procmail.md "Procmail-3.24"){accesskey="n"}
+-   [Next](procmail.md "Procmail-3.24")
 
     Procmail-3.24
 
--   [Up](mailnews.md "Chapter 19. Mail/News Clients"){accesskey="u"}
+-   [Up](mailnews.md "Chapter 19. Mail/News Clients")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#mutt}Mutt-2.3.2 {#mutt-2.3.2 .sect1}
+# Mutt-2.3.2 {#mutt-2.3.2}
 
-:::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Mutt {#introduction-to-mutt .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Mutt {#introduction-to-mutt}
 
-The [Mutt]{.application} package contains a Mail User Agent. This is useful for reading, writing, replying to, saving, and deleting your email.
+The <span class="application">Mutt</span> package contains a Mail User Agent. This is useful for reading, writing, replying to, saving, and deleting your email.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [http://ftp.mutt.org/pub/mutt/mutt-2.3.2.tar.gz](http://ftp.mutt.org/pub/mutt/mutt-2.3.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="http://ftp.mutt.org/pub/mutt/mutt-2.3.2.tar.gz">http://ftp.mutt.org/pub/mutt/mutt-2.3.2.tar.gz</a>
 
 -   Download MD5 sum: 50f395705c3da65d4592119e982a7a23
 
@@ -44,49 +44,49 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 39 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### Mutt Dependencies
 
 #### Recommended (for a text version of the manual)
 
-[Lynx-2.9.3](lynx.md "Lynx-2.9.3"){.xref}, or [Links-2.30](links.md "Links-2.30"){.xref} (or [W3m](https://w3m.sourceforge.net/){.ulink}, or [ELinks](http://elinks.or.cz){.ulink}) - please read the Note.
+<a class="xref" href="lynx.md" title="Lynx-2.9.3">Lynx-2.9.3</a>, or <a class="xref" href="links.md" title="Links-2.30">Links-2.30</a> (or <a class="ulink" href="https://w3m.sourceforge.net/">W3m</a>, or <a class="ulink" href="http://elinks.or.cz">ELinks</a>) - please read the Note.
 
 #### Optional
 
-[Aspell-0.60.8.2](../general/aspell.md "Aspell-0.60.8.2"){.xref}, [Cyrus SASL-2.1.28](../postlfs/cyrus-sasl.md "Cyrus SASL-2.1.28"){.xref}, [DocBook-utils-0.6.14](../pst/docbook-utils.md "DocBook-utils-0.6.14"){.xref}, [GDB-17.2](../general/gdb.md "GDB-17.2"){.xref}, [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref}, [GnuTLS-3.8.13](../postlfs/gnutls.md "GnuTLS-3.8.13"){.xref}, [gpgme-2.1.0](../postlfs/gpgme.md "gpgme-2.1.0"){.xref}, [libidn-1.43](../general/libidn.md "libidn-1.43"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref}, an [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref} (that provides a [**sendmail**]{.command} command), [slang-2.3.3](../general/slang.md "slang-2.3.3"){.xref}, [libgssapi](http://www.citi.umich.edu/projects/nfsv4/linux/){.ulink}, [Mixmaster](https://mixmaster.sourceforge.net/){.ulink}, [QDBM](https://dbmx.net/qdbm/){.ulink} or [Tokyo Cabinet](https://dbmx.net/tokyocabinet/){.ulink}
+<a class="xref" href="../general/aspell.md" title="Aspell-0.60.8.2">Aspell-0.60.8.2</a>, <a class="xref" href="../postlfs/cyrus-sasl.md" title="Cyrus SASL-2.1.28">Cyrus SASL-2.1.28</a>, <a class="xref" href="../pst/docbook-utils.md" title="DocBook-utils-0.6.14">DocBook-utils-0.6.14</a>, <a class="xref" href="../general/gdb.md" title="GDB-17.2">GDB-17.2</a>, <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a>, <a class="xref" href="../postlfs/gnutls.md" title="GnuTLS-3.8.13">GnuTLS-3.8.13</a>, <a class="xref" href="../postlfs/gpgme.md" title="gpgme-2.1.0">gpgme-2.1.0</a>, <a class="xref" href="../general/libidn.md" title="libidn-1.43">libidn-1.43</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a>, an <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a> (that provides a <span class="command"><strong>sendmail</strong></span> command), <a class="xref" href="../general/slang.md" title="slang-2.3.3">slang-2.3.3</a>, <a class="ulink" href="http://www.citi.umich.edu/projects/nfsv4/linux/">libgssapi</a>, <a class="ulink" href="https://mixmaster.sourceforge.net/">Mixmaster</a>, <a class="ulink" href="https://dbmx.net/qdbm/">QDBM</a> or <a class="ulink" href="https://dbmx.net/tokyocabinet/">Tokyo Cabinet</a>
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/mutt](https://wiki.linuxfromscratch.org/blfs/wiki/mutt){.ulink}
-:::::
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/mutt">https://wiki.linuxfromscratch.org/blfs/wiki/mutt</a>
+</div>
 
-::::: {.installation lang="en"}
-## Installation of Mutt {#installation-of-mutt .sect2}
+<div class="installation" lang="en">
+## Installation of Mutt {#installation-of-mutt}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-[Mutt]{.application} ships with an HTML version of its manual, but the text version is no longer provided because differences in the formatting from different text browsers compared to the shipped version caused complaints. To get a text file, the following are used in order of preference: [lynx]{.application} with overstriking (backspaces) for emphasis, [w3m]{.application} or [elinks]{.application}: the latter two apparently provide plain text. Plain text is generally preferred unless reading the HTML manual, so the instructions below use [lynx]{.application} if available, or else [links]{.application} to produce plain text.
-:::
+<span class="application">Mutt</span> ships with an HTML version of its manual, but the text version is no longer provided because differences in the formatting from different text browsers compared to the shipped version caused complaints. To get a text file, the following are used in order of preference: <span class="application">lynx</span> with overstriking (backspaces) for emphasis, <span class="application">w3m</span> or <span class="application">elinks</span>: the latter two apparently provide plain text. Plain text is generally preferred unless reading the HTML manual, so the instructions below use <span class="application">lynx</span> if available, or else <span class="application">links</span> to produce plain text.
+</div>
 
-[Mutt]{.application} requires a group named `mail`{.systemitem}. You can add this group, if it does not exist, with this command (as the `root`{.systemitem} user):
+<span class="application">Mutt</span> requires a group named <code class="systemitem">mail</code>. You can add this group, if it does not exist, with this command (as the <code class="systemitem">root</code> user):
 
-``` userinput
+```bash
 groupadd -g 34 mail
 ```
 
-If you did not install an [MTA](../server/mail.md "Chapter 21. Mail Server Software"){.xref}, you need to modify the ownership of `/var/mail`{.filename} with this command:
+If you did not install an <a class="xref" href="../server/mail.md" title="Chapter 21. Mail Server Software">MTA</a>, you need to modify the ownership of <code class="filename">/var/mail</code> with this command:
 
-``` root
+```bash
 chgrp -v mail /var/mail
 ```
 
-Install [Mutt]{.application} by running the following commands:
+Install <span class="application">Mutt</span> by running the following commands:
 
-To ensure that a plain text manual is created when using [lynx]{.application} or to otherwise use [links]{.application} to produce it (instead of [elinks]{.application}), run the following command:
+To ensure that a plain text manual is created when using <span class="application">lynx</span> or to otherwise use <span class="application">links</span> to produce it (instead of <span class="application">elinks</span>), run the following command:
 
-``` userinput
+```bash
 sed  -e 's/ -with_backspaces//' \
      -e 's/elinks/links/'       \
      -e 's/-no-numbering -no-references//' \
@@ -95,7 +95,7 @@ sed  -e 's/ -with_backspaces//' \
 
 Now configure and build the application:
 
-``` userinput
+```bash
 ./configure --prefix=/usr                           \
             --sysconfdir=/etc                       \
             --with-docdir=/usr/share/doc/mutt-2.3.2 \
@@ -110,36 +110,36 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you used a DESTDIR method to only install to a temporary location as a regular user (as part of a package management process), you will need to run the following as the `root`{.systemitem} user after completing the real install:
+If you used a DESTDIR method to only install to a temporary location as a regular user (as part of a package management process), you will need to run the following as the <code class="systemitem">root</code> user after completing the real install:
 
-``` userinput
+```bash
 chown root:mail /usr/bin/mutt_dotlock &&
 chmod -v 2755 /usr/bin/mutt_dotlock
 ```
 
-An info file is now installed, so you will also need to recreate the `/usr/share/info/dir`{.filename} as described when [Texinfo]{.application} was installed in LFS.
-:::
-:::::
+An info file is now installed, so you will also need to recreate the <code class="filename">/usr/share/info/dir</code> as described when <span class="application">Texinfo</span> was installed in LFS.
+</div>
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed ... -e 's/ -with_backspaces//' ...**]{.command}: This turns off the backspaces used for overstriking when [lynx]{.application} is used, resulting in readable plain text when using [**view**]{.command}.
+<span class="command"><strong>sed ... -e 's/ -with_backspaces//' ...</strong></span>: This turns off the backspaces used for overstriking when <span class="application">lynx</span> is used, resulting in readable plain text when using <span class="command"><strong>view</strong></span>.
 
-[**sed ... -e 's/elinks/links/' ...**]{.command}: This allows [**links**]{.command} to be run instead of [**elinks**]{.command} which is not in the book.
+<span class="command"><strong>sed ... -e 's/elinks/links/' ...</strong></span>: This allows <span class="command"><strong>links</strong></span> to be run instead of <span class="command"><strong>elinks</strong></span> which is not in the book.
 
-[**sed ... -e 's/-no-numbering -no-references//' ...**]{.command}: This removes switches which are not understood by [**links**]{.command}.
+<span class="command"><strong>sed ... -e 's/-no-numbering -no-references//' ...</strong></span>: This removes switches which are not understood by <span class="command"><strong>links</strong></span>.
 
 *`--enable-external-dotlock`*: In some circumstances the mutt-dotlock program is not created. This switch ensures it is always created.
 
@@ -149,90 +149,90 @@ An info file is now installed, so you will also need to recreate the `/usr/share
 
 *`--enable-hcache`*: This switch enables header caching.
 
-*`--enable-sidebar`*: This switch enables support for the sidebar (a list of mailboxes). It is off by default, but can be turned on by [**:set sidebar_visible**]{.command} in mutt (and off again with ':unset'), or it can be enabled in `~/.muttrc`{.filename}.
+*`--enable-sidebar`*: This switch enables support for the sidebar (a list of mailboxes). It is off by default, but can be turned on by <span class="command"><strong>:set sidebar_visible</strong></span> in mutt (and off again with ':unset'), or it can be enabled in <code class="filename">~/.muttrc</code>.
 
 *`--with-ssl`*: This parameter adds SSL/TLS support from openssl in POP3/IMAP/SMTP.
 
-`--enable-autocrypt --with-sqlite3`{.option}: These two switches add support for passive protection against data collection, using gnupg and gpgme (gpgme is enabled by autocrypt). See [The Manual](http://www.mutt.org/doc/manual/#autocryptdoc){.ulink}.
+<code class="option">--enable-autocrypt --with-sqlite3</code>: These two switches add support for passive protection against data collection, using gnupg and gpgme (gpgme is enabled by autocrypt). See <a class="ulink" href="http://www.mutt.org/doc/manual/#autocryptdoc">The Manual</a>.
 
-`--enable-gpgme`{.option}: This switch enables GPG support through the GPGME package. Use this switch if you want GPG support in Mutt.
+<code class="option">--enable-gpgme</code>: This switch enables GPG support through the GPGME package. Use this switch if you want GPG support in Mutt.
 
-`--enable-smtp`{.option}: This switch enables SMTP relay support.
+<code class="option">--enable-smtp</code>: This switch enables SMTP relay support.
 
-`--with-idn2`{.option}: Use this parameter if both libidn and libidn2 have been installed, and you wish to use libidn2 here.
+<code class="option">--with-idn2</code>: Use this parameter if both libidn and libidn2 have been installed, and you wish to use libidn2 here.
 
-`--with-sasl`{.option}: This parameter adds authentication support from [Cyrus SASL-2.1.28](../postlfs/cyrus-sasl.md "Cyrus SASL-2.1.28"){.xref} in POP3/IMAP/SMTP if they are enabled. Depending on the server configuration, this may not be needed for POP3 or IMAP. However, it is needed for SMTP authentication.
+<code class="option">--with-sasl</code>: This parameter adds authentication support from <a class="xref" href="../postlfs/cyrus-sasl.md" title="Cyrus SASL-2.1.28">Cyrus SASL-2.1.28</a> in POP3/IMAP/SMTP if they are enabled. Depending on the server configuration, this may not be needed for POP3 or IMAP. However, it is needed for SMTP authentication.
 
-`--with-gss`{.option}: This parameter adds authentication support for Kerberos. If you need to use this support, make sure that [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} is installed and configured correctly, and then use this option while building this package.
-:::
+<code class="option">--with-gss</code>: This parameter adds authentication support for Kerberos. If you need to use this support, make sure that <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> is installed and configured correctly, and then use this option while building this package.
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Mutt {#configuring-mutt .sect2}
+<div class="configuration" lang="en">
+## Configuring Mutt {#configuring-mutt}
 
-::: {.sect3 lang="en"}
-### []{#mutt-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/Muttrc`{.filename}, `~/.muttrc`{.filename}, `/etc/mime.types`{.filename}, and `~/.mime.types`{.filename}
-:::
+<code class="filename">/etc/Muttrc</code>, <code class="filename">~/.muttrc</code>, <code class="filename">/etc/mime.types</code>, and <code class="filename">~/.mime.types</code>
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-No changes in these files are necessary to begin using [Mutt]{.application}. When you are ready to make changes, the man page for `muttrc`{.filename} is a good starting place.
+No changes in these files are necessary to begin using <span class="application">Mutt</span>. When you are ready to make changes, the man page for <code class="filename">muttrc</code> is a good starting place.
 
-In order to utilize [GnuPG]{.application}, use the following command:
+In order to utilize <span class="application">GnuPG</span>, use the following command:
 
-``` userinput
+```bash
 cat /usr/share/doc/mutt-2.3.2/samples/gpg.rc >> ~/.muttrc
 ```
-:::
-:::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [flea, mutt, mutt_dotlock, muttbug, pgpewrap, mutt_pgpring, and smime_keys]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">flea, mutt, mutt_dotlock, muttbug, pgpewrap, mutt_pgpring, and smime_keys</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/doc/mutt-2.3.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/doc/mutt-2.3.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#flea}[[**flea**]{.command}]{.term}                   is a script showing where to report bugs
-  []{#mutt-prog}[[**mutt**]{.command}]{.term}              is a Mail User Agent (MUA) which enables you to read, write and delete your email
-  []{#mutt_dotlock}[[**mutt_dotlock**]{.command}]{.term}   implements the mail spool file lock
-  []{#muttbug}[[**muttbug**]{.command}]{.term}             is a script identical to [**flea**]{.command}
-  []{#pgpewrap}[[**pgpewrap**]{.command}]{.term}           prepares a command line for the [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref} utilities
-  []{#mutt_pgpring}[[**pgpring**]{.command}]{.term}        is a key ring dumper for [PGP](https://www.openpgp.org/about/){.ulink}. It is not needed for [GnuPG-2.5.20](../postlfs/gnupg.md "GnuPG-2.5.20"){.xref}
-  []{#smime_keys}[[**smime_keys**]{.command}]{.term}       manages a keystore for S/MIME certificates
+  <a id="flea"></a><span class="command"><span class="term"><strong>flea</strong></span></span>                   is a script showing where to report bugs
+  <a id="mutt-prog"></a><span class="command"><span class="term"><strong>mutt</strong></span></span>              is a Mail User Agent (MUA) which enables you to read, write and delete your email
+  <a id="mutt_dotlock"></a><span class="command"><span class="term"><strong>mutt_dotlock</strong></span></span>   implements the mail spool file lock
+  <a id="muttbug"></a><span class="command"><span class="term"><strong>muttbug</strong></span></span>             is a script identical to <span class="command"><strong>flea</strong></span>
+  <a id="pgpewrap"></a><span class="command"><span class="term"><strong>pgpewrap</strong></span></span>           prepares a command line for the <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a> utilities
+  <a id="mutt_pgpring"></a><span class="command"><span class="term"><strong>pgpring</strong></span></span>        is a key ring dumper for <a class="ulink" href="https://www.openpgp.org/about/">PGP</a>. It is not needed for <a class="xref" href="../postlfs/gnupg.md" title="GnuPG-2.5.20">GnuPG-2.5.20</a>
+  <a id="smime_keys"></a><span class="command"><span class="term"><strong>smime_keys</strong></span></span>       manages a keystore for S/MIME certificates
   -------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](mailx.md "mailx-12.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](mailx.md "mailx-12.5")
 
     mailx-12.5
 
--   [Next](procmail.md "Procmail-3.24"){accesskey="n"}
+-   [Next](procmail.md "Procmail-3.24")
 
     Procmail-3.24
 
--   [Up](mailnews.md "Chapter 19. Mail/News Clients"){accesskey="u"}
+-   [Up](mailnews.md "Chapter 19. Mail/News Clients")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

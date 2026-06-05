@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](valgrind.md "Valgrind-3.27.1"){accesskey="p"}
+-   [Prev](valgrind.md "Valgrind-3.27.1")
 
     Valgrind-3.27.1
 
--   [Next](java.md "Java-21.0.10"){accesskey="n"}
+-   [Next](java.md "Java-21.0.10")
 
     Java-21.0.10
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#yasm}yasm-1.3.0 {#yasm-1.3.0 .sect1}
+# yasm-1.3.0 {#yasm-1.3.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to yasm {#introduction-to-yasm .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to yasm {#introduction-to-yasm}
 
-[Yasm]{.application} is a complete rewrite of the [NASM-3.01](nasm.md "NASM-3.01"){.xref} assembler. It supports the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes and outputs binary, ELF32 and ELF64 object formats.
+<span class="application">Yasm</span> is a complete rewrite of the <a class="xref" href="nasm.md" title="NASM-3.01">NASM-3.01</a> assembler. It supports the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes and outputs binary, ELF32 and ELF64 object formats.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz](https://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz">https://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</a>
 
 -   Download MD5 sum: fc9e586751ff789b34b1f21d572d96af
 
@@ -44,89 +44,89 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 27 MB (additional 12 MB for the tests)
 
 -   Estimated build time: 0.1 SBU (additional 0.1 SBU for the tests)
-:::
+</div>
 
 ### yasm Dependencies
 
 #### Optional
 
-[cython-3.2.5](python-modules.md#cython "Cython-3.2.5"){.xref} and [Python2](https://www.python.org/downloads/release/python-2718/){.ulink}
-:::::
+<a class="xref" href="python-modules.md#cython" title="Cython-3.2.5">cython-3.2.5</a> and <a class="ulink" href="https://www.python.org/downloads/release/python-2718/">Python2</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of yasm {#installation-of-yasm .sect2}
+<div class="installation" lang="en">
+## Installation of yasm {#installation-of-yasm}
 
 First, fix a problem when building with gcc-15:
 
-``` userinput
+```bash
 sed -e 's/def __cplusplus/ defined(__cplusplus) || __STDC_VERSION__ >= 202311L/' \
     -i libyasm/bitvect.h
 ```
 
-Install [yasm]{.application} by running the following commands:
+Install <span class="application">yasm</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i 's#) ytasm.*#)#' Makefile.in &&
 
 ./configure --prefix=/usr &&
 make
 ```
 
-To test the results, issue: [**make -j1 check**]{.command}.
+To test the results, issue: <span class="command"><strong>make -j1 check</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i 's#) ytasm.\*#)#' Makefile.in**]{.command}: This sed prevents it compiling 2 programs (vsyasm and ytasm) that are only of use on Microsoft Windows.
-:::
+<span class="command"><strong>sed -i 's#) ytasm.\*#)#' Makefile.in</strong></span>: This sed prevents it compiling 2 programs (vsyasm and ytasm) that are only of use on Microsoft Windows.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [yasm]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">yasm</span>
+</div>
 
-::: seg
-**Installed Library:** [libyasm.a]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libyasm.a</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/include/libyasm]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/include/libyasm</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   --------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#yasm-prog}[[**yasm**]{.command}]{.term}   is a portable, retargetable assembler that supports the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes and outputs binaries in ELF32 and ELF64 object formats
-  []{#libyasm}[`libyasm.a`{.filename}]{.term}   provides all of the core functionality of [**yasm**]{.command}, for manipulating machine instructions and object file constructs
+  <a id="yasm-prog"></a><span class="command"><span class="term"><strong>yasm</strong></span></span>   is a portable, retargetable assembler that supports the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes and outputs binaries in ELF32 and ELF64 object formats
+  <a id="libyasm"></a><span class="term"><code class="filename">libyasm.a</code></span>   provides all of the core functionality of <span class="command"><strong>yasm</strong></span>, for manipulating machine instructions and object file constructs
   --------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](valgrind.md "Valgrind-3.27.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](valgrind.md "Valgrind-3.27.1")
 
     Valgrind-3.27.1
 
--   [Next](java.md "Java-21.0.10"){accesskey="n"}
+-   [Next](java.md "Java-21.0.10")
 
     Java-21.0.10
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

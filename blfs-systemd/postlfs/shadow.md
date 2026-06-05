@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 4. Security
 
--   [Prev](polkit-gnome.md "polkit-gnome-0.105"){accesskey="p"}
+-   [Prev](polkit-gnome.md "polkit-gnome-0.105")
 
     polkit-gnome-0.105
 
--   [Next](ssh-askpass.md "ssh-askpass-10.3p1"){accesskey="n"}
+-   [Next](ssh-askpass.md "ssh-askpass-10.3p1")
 
     ssh-askpass-10.3p1
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#shadow}Shadow-4.19.4 {#shadow-4.19.4 .sect1}
+# Shadow-4.19.4 {#shadow-4.19.4}
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Shadow {#introduction-to-shadow .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Shadow {#introduction-to-shadow}
 
-[Shadow]{.application} was indeed installed in LFS and there is no reason to reinstall it unless you installed [Linux-PAM]{.application} after your LFS system was completed. With [Linux-PAM]{.application} installed, reinstalling [Shadow]{.application} will allow programs such as [**login**]{.command} and [**su**]{.command} to utilize PAM.
+<span class="application">Shadow</span> was indeed installed in LFS and there is no reason to reinstall it unless you installed <span class="application">Linux-PAM</span> after your LFS system was completed. With <span class="application">Linux-PAM</span> installed, reinstalling <span class="application">Shadow</span> will allow programs such as <span class="command"><strong>login</strong></span> and <span class="command"><strong>su</strong></span> to utilize PAM.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/shadow-maint/shadow/releases/download/4.19.4/shadow-4.19.4.tar.xz](https://github.com/shadow-maint/shadow/releases/download/4.19.4/shadow-4.19.4.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/shadow-maint/shadow/releases/download/4.19.4/shadow-4.19.4.tar.xz">https://github.com/shadow-maint/shadow/releases/download/4.19.4/shadow-4.19.4.tar.xz</a>
 
 -   Download MD5 sum: ed0f3ff4940822ba75a3b0687a9ce93b
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 104 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### Shadow Dependencies
 
 #### Required
 
-[Linux-PAM-1.7.2](linux-pam.md "Linux-PAM-1.7.2"){.xref}
+<a class="xref" href="linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a>
 
 #### Optional
 
-[libbsd](https://libbsd.freedesktop.org/wiki/){.ulink} and [tcb](https://www.openwall.com/tcb/){.ulink}
-:::::
+<a class="ulink" href="https://libbsd.freedesktop.org/wiki/">libbsd</a> and <a class="ulink" href="https://www.openwall.com/tcb/">tcb</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Shadow {#installation-of-shadow .sect2}
+<div class="installation" lang="en">
+## Installation of Shadow {#installation-of-shadow}
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
-The installation commands shown below are for installations where [Linux-PAM]{.application} has been installed and [Shadow]{.application} is being reinstalled to support the [Linux-PAM]{.application} installation.
-:::
+The installation commands shown below are for installations where <span class="application">Linux-PAM</span> has been installed and <span class="application">Shadow</span> is being reinstalled to support the <span class="application">Linux-PAM</span> installation.
+</div>
 
-Reinstall [Shadow]{.application} by running the following commands:
+Reinstall <span class="application">Shadow</span> by running the following commands:
 
-``` userinput
+```bash
 find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \; &&
 find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \; &&
 
@@ -88,71 +88,71 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make exec_prefix=/usr pamddir= install
 ```
 
-The man pages were installed in LFS, but if reinstallation is desired, run (as the `root`{.systemitem} user):
+The man pages were installed in LFS, but if reinstallation is desired, run (as the <code class="systemitem">root</code> user):
 
-``` root
+```bash
 make -C man install-man
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i 's/groups\$(EXEEXT) //' src/Makefile.in**]{.command}: This sed is used to suppress the installation of the [**groups**]{.command} program as the version from the [Coreutils]{.application} package installed during LFS is preferred.
+<span class="command"><strong>sed -i 's/groups\$(EXEEXT) //' src/Makefile.in</strong></span>: This sed is used to suppress the installation of the <span class="command"><strong>groups</strong></span> program as the version from the <span class="application">Coreutils</span> package installed during LFS is preferred.
 
-[**find man -name Makefile.in -exec ... {} \\;**]{.command}: The first command is used to suppress the installation of the [**groups**]{.command} man pages so the existing ones installed from the [Coreutils]{.application} package are not replaced. The two other commands prevent installation of manual pages that are already installed by [Man-pages]{.application} in LFS.
+<span class="command"><strong>find man -name Makefile.in -exec ... {} \\;</strong></span>: The first command is used to suppress the installation of the <span class="command"><strong>groups</strong></span> man pages so the existing ones installed from the <span class="application">Coreutils</span> package are not replaced. The two other commands prevent installation of manual pages that are already installed by <span class="application">Man-pages</span> in LFS.
 
-[**sed -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD YESCRYPT@' -e 's@/var/spool/mail@/var/mail@' -e '/PATH=/{s@/sbin:@@;s@/bin:@@}' -i etc/login.defs**]{.command}: Instead of using the default 'DES' method, this command modifies the installation to use the much more secure 'YESCRYPT' method of hashing passwords, which also allows passwords longer than eight characters. The command also changes the obsolete `/var/spool/mail`{.filename} location for user mailboxes that [Shadow]{.application} uses by default to the `/var/mail`{.filename} location. It also changes the default path to be consistent with that set in LFS.
+<span class="command"><strong>sed -e 's@#ENCRYPT_METHOD DES@ENCRYPT_METHOD YESCRYPT@' -e 's@/var/spool/mail@/var/mail@' -e '/PATH=/{s@/sbin:@@;s@/bin:@@}' -i etc/login.defs</strong></span>: Instead of using the default 'DES' method, this command modifies the installation to use the much more secure 'YESCRYPT' method of hashing passwords, which also allows passwords longer than eight characters. The command also changes the obsolete <code class="filename">/var/spool/mail</code> location for user mailboxes that <span class="application">Shadow</span> uses by default to the <code class="filename">/var/mail</code> location. It also changes the default path to be consistent with that set in LFS.
 
-*`--without-libbsd`*: Prevents looking for the [**readpassphrase**]{.command} function, which can be found only in `libbsd`{.filename}, which we do not have in BLFS. An internal implementation of [**readpassphrase**]{.command} is used instead.
+*`--without-libbsd`*: Prevents looking for the <span class="command"><strong>readpassphrase</strong></span> function, which can be found only in <code class="filename">libbsd</code>, which we do not have in BLFS. An internal implementation of <span class="command"><strong>readpassphrase</strong></span> is used instead.
 
-*`pamddir=`*: Prevents installation of the shipped PAM configuration files into `/etc/pam.d`{.filename}. The shipped configuration does not work with the BLFS PAM configuration and we will create these configuration files explicitly.
-:::
+*`pamddir=`*: Prevents installation of the shipped PAM configuration files into <code class="filename">/etc/pam.d</code>. The shipped configuration does not work with the BLFS PAM configuration and we will create these configuration files explicitly.
+</div>
 
-::::::::::::::::::::::::::::::::::::::::::::::::: {.configuration lang="en"}
-## Configuring Linux-PAM to Work with Shadow {#configuring-linux-pam-to-work-with-shadow .sect2}
+<div class="configuration" lang="en">
+## Configuring Linux-PAM to Work with Shadow {#configuring-linux-pam-to-work-with-shadow}
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-The rest of this page is devoted to configuring [Shadow]{.application} to work properly with [Linux-PAM]{.application}.
-:::
+The rest of this page is devoted to configuring <span class="application">Shadow</span> to work properly with <span class="application">Linux-PAM</span>.
+</div>
 
-::: {.sect3 lang="en"}
-### []{#pam.d}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/pam.d/*`{.filename} or alternatively `/etc/pam.conf`{.filename}, `/etc/login.defs`{.filename} and `/etc/security/*`{.filename}
-:::
+<code class="filename">/etc/pam.d/*</code> or alternatively <code class="filename">/etc/pam.conf</code>, <code class="filename">/etc/login.defs</code> and <code class="filename">/etc/security/*</code>
+</div>
 
-:::::::::::::::::::::::::::::::::::::::::::::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-Configuring your system to use [Linux-PAM]{.application} can be a complex task. The information below will provide a basic setup so that [Shadow]{.application}'s login and password functionality will work effectively with [Linux-PAM]{.application}. Review the information and links on the [Linux-PAM-1.7.2](linux-pam.md "Linux-PAM-1.7.2"){.xref} page for further configuration information. For information specific to integrating [Shadow]{.application}, [Linux-PAM]{.application} and [libpwquality]{.application}, you can visit the following link:
+Configuring your system to use <span class="application">Linux-PAM</span> can be a complex task. The information below will provide a basic setup so that <span class="application">Shadow</span>'s login and password functionality will work effectively with <span class="application">Linux-PAM</span>. Review the information and links on the <a class="xref" href="linux-pam.md" title="Linux-PAM-1.7.2">Linux-PAM-1.7.2</a> page for further configuration information. For information specific to integrating <span class="application">Shadow</span>, <span class="application">Linux-PAM</span> and <span class="application">libpwquality</span>, you can visit the following link:
 
-::: itemizedlist
--   [http://web.archive.org/web/20240812102759/https://deer-run.com/users/hal/linux_passwords_pam.html](http://web.archive.org/web/20240812102759/https://deer-run.com/users/hal/linux_passwords_pam.md){.ulink}
-:::
+<div class="itemizedlist">
+-   <a class="ulink" href="http://web.archive.org/web/20240812102759/https://deer-run.com/users/hal/linux_passwords_pam.md">http://web.archive.org/web/20240812102759/https://deer-run.com/users/hal/linux_passwords_pam.html</a>
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#pam-login-defs}Configuring /etc/login.defs {#configuring-etclogin.defs .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Configuring /etc/login.defs {#configuring-etclogin.defs}
 
-The [**login**]{.command} program currently performs many functions which [Linux-PAM]{.application} modules should now handle. The following [**sed**]{.command} command will comment out the appropriate lines in `/etc/login.defs`{.filename}, and stop [**login**]{.command} from performing these functions (a backup file named `/etc/login.defs.orig`{.filename} is also created to preserve the original file's contents). Issue the following commands as the `root`{.systemitem} user:
 
-``` root
+</div>
+
+The <span class="command"><strong>login</strong></span> program currently performs many functions which <span class="application">Linux-PAM</span> modules should now handle. The following <span class="command"><strong>sed</strong></span> command will comment out the appropriate lines in <code class="filename">/etc/login.defs</code>, and stop <span class="command"><strong>login</strong></span> from performing these functions (a backup file named <code class="filename">/etc/login.defs.orig</code> is also created to preserve the original file's contents). Issue the following commands as the <code class="systemitem">root</code> user:
+
+```bash
 install -v -m644 /etc/login.defs /etc/login.defs.orig &&
 for FUNCTION in FAIL_DELAY               \
                 FAILLOG_ENAB             \
@@ -173,32 +173,32 @@ do
     sed -i "s/^${FUNCTION}/# &/" /etc/login.defs
 done
 ```
-::::::
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011192532848}Configuring the /etc/pam.d/ Files {#configuring-the-etcpam.d-files .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
-
-As mentioned previously in the [Linux-PAM]{.application} instructions, [Linux-PAM]{.application} has two supported methods for configuration. The commands below assume that you've chosen to use a directory based configuration, where each program has its own configuration file. You can optionally use a single `/etc/pam.conf`{.filename} configuration file by using the text from the files below, and supplying the program name as an additional first field for each line.
-
-As the `root`{.systemitem} user, create the following [Linux-PAM]{.application} configuration files in the `/etc/pam.d/`{.filename} directory (or add the contents to the `/etc/pam.conf`{.filename} file) using the following commands:
-::::::
-
-:::::: sect4
-::::: titlepage
+##### Configuring the /etc/pam.d/ Files {#configuring-the-etcpam.d-files}
 
 
-##### []{#idm140011192525088}'login' {#login .title}
+</div>
+
+As mentioned previously in the <span class="application">Linux-PAM</span> instructions, <span class="application">Linux-PAM</span> has two supported methods for configuration. The commands below assume that you've chosen to use a directory based configuration, where each program has its own configuration file. You can optionally use a single <code class="filename">/etc/pam.conf</code> configuration file by using the text from the files below, and supplying the program name as an additional first field for each line.
+
+As the <code class="systemitem">root</code> user, create the following <span class="application">Linux-PAM</span> configuration files in the <code class="filename">/etc/pam.d/</code> directory (or add the contents to the <code class="filename">/etc/pam.conf</code> file) using the following commands:
+</div>
+
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### 'login' {#login}
 
-``` root
+
+</div>
+
+```bash
 cat > /etc/pam.d/login << "EOF"
 # Begin /etc/pam.d/login
 
@@ -244,18 +244,18 @@ password  include     system-password
 # End /etc/pam.d/login
 EOF
 ```
-::::::
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011192520960}'passwd' {#passwd .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### 'passwd' {#passwd}
 
-``` root
+
+</div>
+
+```bash
 cat > /etc/pam.d/passwd << "EOF"
 # Begin /etc/pam.d/passwd
 
@@ -264,18 +264,18 @@ password  include     system-password
 # End /etc/pam.d/passwd
 EOF
 ```
-::::::
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011192517952}'su' {#su .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### 'su' {#su}
 
-``` root
+
+</div>
+
+```bash
 cat > /etc/pam.d/su << "EOF"
 # Begin /etc/pam.d/su
 
@@ -305,18 +305,18 @@ session   include     system-session
 # End /etc/pam.d/su
 EOF
 ```
-::::::
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011192515072}'chpasswd' and 'newusers' {#chpasswd-and-newusers .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### 'chpasswd' and 'newusers' {#chpasswd-and-newusers}
 
-``` root
+
+</div>
+
+```bash
 cat > /etc/pam.d/chpasswd << "EOF"
 # Begin /etc/pam.d/chpasswd
 
@@ -333,18 +333,18 @@ EOF
 
 sed -e s/chpasswd/newusers/ /etc/pam.d/chpasswd >/etc/pam.d/newusers
 ```
-::::::
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011192511776}'chage' {#chage .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### 'chage' {#chage}
 
-``` root
+
+</div>
+
+```bash
 cat > /etc/pam.d/chage << "EOF"
 # Begin /etc/pam.d/chage
 
@@ -358,18 +358,18 @@ account   include     system-account
 # End /etc/pam.d/chage
 EOF
 ```
-::::::
+</div>
 
-::::::: sect4
-::::: titlepage
-
-
-##### []{#idm140011192508640}Other shadow utilities {#other-shadow-utilities .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Other shadow utilities {#other-shadow-utilities}
 
-``` root
+
+</div>
+
+```bash
 for PROGRAM in chfn chgpasswd chsh groupadd groupdel \
                groupmems groupmod useradd userdel usermod
 do
@@ -378,74 +378,74 @@ do
 done
 ```
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
-At this point, you should do a simple test to see if [Shadow]{.application} is working as expected. Open another terminal and log in as `root`{.systemitem}, and then run [**login**]{.command} and login as another user. If you do not see any errors, then all is well and you should proceed with the rest of the configuration. If you did receive errors, stop now and double check the above configuration files manually. Any error is the sign of an error in the above procedure. You can also run the test suite from the [Linux-PAM]{.application} package to assist you in determining the problem. If you cannot find and fix the error, you should recompile [Shadow]{.application} adding the `--without-libpam`{.option} switch to the [**configure**]{.command} command in the above instructions (also move the `/etc/login.defs.orig`{.filename} backup file to `/etc/login.defs`{.filename}). If you fail to do this and the errors remain, you will be unable to log into your system.
-:::
-:::::::
+At this point, you should do a simple test to see if <span class="application">Shadow</span> is working as expected. Open another terminal and log in as <code class="systemitem">root</code>, and then run <span class="command"><strong>login</strong></span> and login as another user. If you do not see any errors, then all is well and you should proceed with the rest of the configuration. If you did receive errors, stop now and double check the above configuration files manually. Any error is the sign of an error in the above procedure. You can also run the test suite from the <span class="application">Linux-PAM</span> package to assist you in determining the problem. If you cannot find and fix the error, you should recompile <span class="application">Shadow</span> adding the <code class="option">--without-libpam</code> switch to the <span class="command"><strong>configure</strong></span> command in the above instructions (also move the <code class="filename">/etc/login.defs.orig</code> backup file to <code class="filename">/etc/login.defs</code>). If you fail to do this and the errors remain, you will be unable to log into your system.
+</div>
+</div>
 
-:::::: sect4
-::::: titlepage
-
-
-##### []{#pam-access}Configuring Login Access {#configuring-login-access .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Configuring Login Access {#configuring-login-access}
 
-Instead of using the `/etc/login.access`{.filename} file for controlling access to the system, [Linux-PAM]{.application} uses the `pam_access.so`{.filename} module along with the `/etc/security/access.conf`{.filename} file. Rename the `/etc/login.access`{.filename} file using the following command:
 
-``` root
+</div>
+
+Instead of using the <code class="filename">/etc/login.access</code> file for controlling access to the system, <span class="application">Linux-PAM</span> uses the <code class="filename">pam_access.so</code> module along with the <code class="filename">/etc/security/access.conf</code> file. Rename the <code class="filename">/etc/login.access</code> file using the following command:
+
+```bash
 if [ -f /etc/login.access ]; then mv -v /etc/login.access{,.NOUSE}; fi
 ```
-::::::
+</div>
 
-::::::: sect4
-::::: titlepage
-
-
-##### []{#pam-limits}Configuring Resource Limits {#configuring-resource-limits .title}
+<div class="sect4">
+<div class="titlepage">
 
 
-:::::
+##### Configuring Resource Limits {#configuring-resource-limits}
 
-Instead of using the `/etc/limits`{.filename} file for limiting usage of system resources, [Linux-PAM]{.application} uses the `pam_limits.so`{.filename} module along with the `/etc/security/limits.conf`{.filename} file. Rename the `/etc/limits`{.filename} file using the following command:
 
-``` root
+</div>
+
+Instead of using the <code class="filename">/etc/limits</code> file for limiting usage of system resources, <span class="application">Linux-PAM</span> uses the <code class="filename">pam_limits.so</code> module along with the <code class="filename">/etc/security/limits.conf</code> file. Rename the <code class="filename">/etc/limits</code> file using the following command:
+
+```bash
 if [ -f /etc/limits ]; then mv -v /etc/limits{,.NOUSE}; fi
 ```
 
-::: {.admon .caution}
+<div class="admon caution">
 ![\[Caution\]](../images/caution.png)
 
 ### Caution
 
 Be sure to test the login capabilities of the system before logging out. Errors in the configuration can cause a permanent lockout requiring a boot from an external source to correct the problem.
-:::
-:::::::
-::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::::
+</div>
+</div>
+</div>
+</div>
 
-::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-A list of the installed files, along with their short descriptions can be found at [../../../../lfs/view/systemd/chapter08/shadow.md#contents-shadow](../../../../lfs/view/systemd/chapter08/shadow.md#contents-shadow){.ulink}.
-:::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+A list of the installed files, along with their short descriptions can be found at <a class="ulink" href="../../../../lfs/view/systemd/chapter08/shadow.md#contents-shadow">../../../../lfs/view/systemd/chapter08/shadow.md#contents-shadow</a>.
+</div>
+</div>
 
-::: navfooter
--   [Prev](polkit-gnome.md "polkit-gnome-0.105"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](polkit-gnome.md "polkit-gnome-0.105")
 
     polkit-gnome-0.105
 
--   [Next](ssh-askpass.md "ssh-askpass-10.3p1"){accesskey="n"}
+-   [Next](ssh-askpass.md "ssh-askpass-10.3p1")
 
     ssh-askpass-10.3p1
 
--   [Up](security.md "Chapter 4. Security"){accesskey="u"}
+-   [Up](security.md "Chapter 4. Security")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

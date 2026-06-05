@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](liblinear.md "liblinear-250"){accesskey="p"}
+-   [Prev](liblinear.md "liblinear-250")
 
     liblinear-250
 
--   [Next](libnvme.md "libnvme-1.16.1"){accesskey="n"}
+-   [Next](libnvme.md "libnvme-1.16.1")
 
     libnvme-1.16.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libmbim}libmbim-1.34.0 {#libmbim-1.34.0 .sect1}
+# libmbim-1.34.0 {#libmbim-1.34.0}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libmbim {#introduction-to-libmbim .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libmbim {#introduction-to-libmbim}
 
-The [libmbim]{.application} package contains a GLib-based library for talking to WWAN modems and devices which speak the Mobile Interface Broadband Model (MBIM) protocol.
+The <span class="application">libmbim</span> package contains a GLib-based library for talking to WWAN modems and devices which speak the Mobile Interface Broadband Model (MBIM) protocol.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/1.34.0/libmbim-1.34.0.tar.gz](https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/1.34.0/libmbim-1.34.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/1.34.0/libmbim-1.34.0.tar.gz">https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/1.34.0/libmbim-1.34.0.tar.gz</a>
 
 -   Download MD5 sum: e5c2b38c6a79a047b93cb0c9510bd91f
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 23 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### libmbim Dependencies
 
 #### Recommended
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection)
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref}, [bash-completion](https://github.com/scop/bash-completion){.ulink}, and [help2man](https://ftpmirror.gnu.org/gnu/help2man/){.ulink}
-:::::
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a>, <a class="ulink" href="https://github.com/scop/bash-completion">bash-completion</a>, and <a class="ulink" href="https://ftpmirror.gnu.org/gnu/help2man/">help2man</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libmbim {#installation-of-libmbim .sect2}
+<div class="installation" lang="en">
+## Installation of libmbim {#installation-of-libmbim}
 
-Install [libmbim]{.application} by running the following commands:
+Install <span class="application">libmbim</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -75,66 +75,66 @@ meson setup ..                 \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D bash_completion=false`*: Use this option if the external [bash-completion](https://github.com/scop/bash-completion){.ulink} package is not installed.
+*`-D bash_completion=false`*: Use this option if the external <a class="ulink" href="https://github.com/scop/bash-completion">bash-completion</a> package is not installed.
 
-*`-D man=false`*: Use this option if the external [help2man](https://ftpmirror.gnu.org/gnu/help2man/){.ulink} package is not installed.
-:::
+*`-D man=false`*: Use this option if the external <a class="ulink" href="https://ftpmirror.gnu.org/gnu/help2man/">help2man</a> package is not installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [mbimcli and mbim-network]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">mbimcli and mbim-network</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libmbim-glib.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libmbim-glib.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libmbim-glib]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libmbim-glib</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
-  []{#mbimcli}[[**mbimcli**]{.command}]{.term}             is a utility used to control MBIM devices
-  []{#mbim-network}[[**mbim-network**]{.command}]{.term}   is a utility used for simple network management of MBIM devices
-  []{#libmbim-glib}[`libmbim-glib.so`{.filename}]{.term}   contains API functions for talking to WWAN modems and devices which speak the Mobile Interface Broadband Model (MBIM) protocol
+  <a id="mbimcli"></a><span class="command"><span class="term"><strong>mbimcli</strong></span></span>             is a utility used to control MBIM devices
+  <a id="mbim-network"></a><span class="command"><span class="term"><strong>mbim-network</strong></span></span>   is a utility used for simple network management of MBIM devices
+  <a id="libmbim-glib"></a><span class="term"><code class="filename">libmbim-glib.so</code></span>   contains API functions for talking to WWAN modems and devices which speak the Mobile Interface Broadband Model (MBIM) protocol
   -------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](liblinear.md "liblinear-250"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](liblinear.md "liblinear-250")
 
     liblinear-250
 
--   [Next](libnvme.md "libnvme-1.16.1"){accesskey="n"}
+-   [Next](libnvme.md "libnvme-1.16.1")
 
     libnvme-1.16.1
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

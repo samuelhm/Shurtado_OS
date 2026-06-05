@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](gsound.md "GSound-1.0.3"){accesskey="p"}
+-   [Prev](gsound.md "GSound-1.0.3")
 
     GSound-1.0.3
 
--   [Next](dconf.md "DConf-0.49.0 / DConf-Editor-49.0"){accesskey="n"}
+-   [Next](dconf.md "DConf-0.49.0 / DConf-Editor-49.0")
 
     DConf-0.49.0 / DConf-Editor-49.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xdg-desktop-portal-gnome}xdg-desktop-portal-gnome-50.0 {#xdg-desktop-portal-gnome-50.0 .sect1}
+# xdg-desktop-portal-gnome-50.0 {#xdg-desktop-portal-gnome-50.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to xdg-desktop-portal-gnome {#introduction-to-xdg-desktop-portal-gnome .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to xdg-desktop-portal-gnome {#introduction-to-xdg-desktop-portal-gnome}
 
-[xdg-desktop-portal-gnome]{.application} is a backend for [xdg-desktop-portal]{.application} which uses GTK and various pieces of GNOME infrastructure.
+<span class="application">xdg-desktop-portal-gnome</span> is a backend for <span class="application">xdg-desktop-portal</span> which uses GTK and various pieces of GNOME infrastructure.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/xdg-desktop-portal-gnome/50/xdg-desktop-portal-gnome-50.0.tar.xz](https://download.gnome.org/sources/xdg-desktop-portal-gnome/50/xdg-desktop-portal-gnome-50.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/xdg-desktop-portal-gnome/50/xdg-desktop-portal-gnome-50.0.tar.xz">https://download.gnome.org/sources/xdg-desktop-portal-gnome/50/xdg-desktop-portal-gnome-50.0.tar.xz</a>
 
 -   Download MD5 sum: 6ef350f31272babbb536cc745746adad
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 11 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### xdg-desktop-portal-gnome Dependencies
 
 #### Required
 
-[gnome-desktop-44.5](gnome-desktop.md "gnome-desktop-44.5"){.xref}, [GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref}, [libadwaita-1.9.1](../x/libadwaita.md "libadwaita-1.9.1"){.xref}, [xdg-desktop-portal-1.20.4](../x/xdg-desktop-portal.md "xdg-desktop-portal-1.20.4"){.xref}, and [xdg-desktop-portal-gtk-1.15.3](../x/xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3"){.xref} (at runtime)
+<a class="xref" href="gnome-desktop.md" title="gnome-desktop-44.5">gnome-desktop-44.5</a>, <a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a>, <a class="xref" href="../x/libadwaita.md" title="libadwaita-1.9.1">libadwaita-1.9.1</a>, <a class="xref" href="../x/xdg-desktop-portal.md" title="xdg-desktop-portal-1.20.4">xdg-desktop-portal-1.20.4</a>, and <a class="xref" href="../x/xdg-desktop-portal-gtk.md" title="xdg-desktop-portal-gtk-1.15.3">xdg-desktop-portal-gtk-1.15.3</a> (at runtime)
 
 #### Recommended at Runtime
 
-[Nautilus-50.2.2](nautilus.md "Nautilus-50.2.2"){.xref} (for the File Chooser portal)
-:::::
+<a class="xref" href="nautilus.md" title="Nautilus-50.2.2">Nautilus-50.2.2</a> (for the File Chooser portal)
+</div>
 
-:::: {.installation lang="en"}
-## Installation of xdg-desktop-portal-gnome {#installation-of-xdg-desktop-portal-gnome .sect2}
+<div class="installation" lang="en">
+## Installation of xdg-desktop-portal-gnome {#installation-of-xdg-desktop-portal-gnome}
 
-Install [xdg-desktop-portal-gnome]{.application} by running the following commands:
+Install <span class="application">xdg-desktop-portal-gnome</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -72,56 +72,56 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-If you installed the package to your system using a [“[DESTDIR]{.quote}”]{.quote} method, `/usr/share/glib-2.0/schemas/gschemas.compiled`{.filename} was not updated/created. Create (or update) the file using the following command as the `root`{.systemitem} user:
+If you installed the package to your system using a <span class="quote">“<span class="quote">DESTDIR</span>”</span> method, <code class="filename">/usr/share/glib-2.0/schemas/gschemas.compiled</code> was not updated/created. Create (or update) the file using the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 glib-compile-schemas /usr/share/glib-2.0/schemas
 ```
-:::
-::::
+</div>
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [one daemon in /usr/libexec]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">one daemon in /usr/libexec</span>
+</div>
 
-::: seg
-**Installed Library:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/xdg-desktop-portal (if no other [xdg-desktop-portal]{.application} backend is installed)]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::
+<div class="seg">
+**Installed Directory:** <span class="application">/usr/share/xdg-desktop-portal (if no other <span class="segbody">xdg-desktop-portal</span> backend is installed)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](gsound.md "GSound-1.0.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](gsound.md "GSound-1.0.3")
 
     GSound-1.0.3
 
--   [Next](dconf.md "DConf-0.49.0 / DConf-Editor-49.0"){accesskey="n"}
+-   [Next](dconf.md "DConf-0.49.0 / DConf-Editor-49.0")
 
     DConf-0.49.0 / DConf-Editor-49.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

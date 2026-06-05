@@ -1,46 +1,46 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part V. Servers
 
--   [Prev](postfix.md "Postfix-3.11.3"){accesskey="p"}
+-   [Prev](postfix.md "Postfix-3.11.3")
 
     Postfix-3.11.3
 
--   [Next](upgradedb.md "Important Notes About Upgrading Database Server Software"){accesskey="n"}
+-   [Next](upgradedb.md "Important Notes About Upgrading Database Server Software")
 
     Important Notes About Upgrading Database Server Software
 
--   [Up](server.md "Part V. Servers"){accesskey="u"}
+-   [Up](server.md "Part V. Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#server-databases}Databases {#databases .chapter}
+# Databases {#databases}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter includes databases that range from single-user read/write to industrial database servers with transaction support. Generally, you will be sent here to satisfy dependencies to other applications although building a SQL server on a base LFS system is entirely possible.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [Important Notes About Upgrading Database Server Software](upgradedb.md)
 -   [lmdb-0.9.35](lmdb.md)
 -   [MariaDB-12.3.2](mariadb.md)
 -   [PostgreSQL-18.4](postgresql.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](postfix.md "Postfix-3.11.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](postfix.md "Postfix-3.11.3")
 
     Postfix-3.11.3
 
--   [Next](upgradedb.md "Important Notes About Upgrading Database Server Software"){accesskey="n"}
+-   [Next](upgradedb.md "Important Notes About Upgrading Database Server Software")
 
     Important Notes About Upgrading Database Server Software
 
--   [Up](server.md "Part V. Servers"){accesskey="u"}
+-   [Up](server.md "Part V. Servers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

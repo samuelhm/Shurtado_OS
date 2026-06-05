@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 38. LXQt Applications
 
--   [Prev](qtermwidget.md "qtermwidget-2.4.0"){accesskey="p"}
+-   [Prev](qtermwidget.md "qtermwidget-2.4.0")
 
     qtermwidget-2.4.0
 
--   [Next](screengrab.md "screengrab-3.2.0"){accesskey="n"}
+-   [Next](screengrab.md "screengrab-3.2.0")
 
     screengrab-3.2.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#qterminal}qterminal-2.4.0 {#qterminal-2.4.0 .sect1}
+# qterminal-2.4.0 {#qterminal-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to qterminal {#introduction-to-qterminal .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to qterminal {#introduction-to-qterminal}
 
-The [qterminal]{.application} package contains a Qt widget based terminal emulator for [Qt]{.application} with support for multiple tabs.
+The <span class="application">qterminal</span> package contains a Qt widget based terminal emulator for <span class="application">Qt</span> with support for multiple tabs.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/qterminal/releases/download/2.4.0/qterminal-2.4.0.tar.xz](https://github.com/lxqt/qterminal/releases/download/2.4.0/qterminal-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/qterminal/releases/download/2.4.0/qterminal-2.4.0.tar.xz">https://github.com/lxqt/qterminal/releases/download/2.4.0/qterminal-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: d381d0aad8d9eb44368c5ddcd22dade5
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 12 MB
 
 -   Estimated build time: 0.2 SBU (Using parallelism=4)
-:::
+</div>
 
 ### qterminal Dependencies
 
 #### Required
 
-[qtermwidget-2.4.0](qtermwidget.md "qtermwidget-2.4.0"){.xref}
-:::::
+<a class="xref" href="qtermwidget.md" title="qtermwidget-2.4.0">qtermwidget-2.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of qterminal {#installation-of-qterminal .sect2}
+<div class="installation" lang="en">
+## Installation of qterminal {#installation-of-qterminal}
 
-Install [qterminal]{.application} by running the following commands:
+Install <span class="application">qterminal</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [qterminal]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">qterminal</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/qterminal]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/qterminal</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------- -------------------------------------------------------------
-  []{#qterminal-prog}[[**qterminal**]{.command}]{.term}   is a [Qt]{.application} based lightweight terminal emulator
+  <a id="qterminal-prog"></a><span class="command"><span class="term"><strong>qterminal</strong></span></span>   is a <span class="application">Qt</span> based lightweight terminal emulator
   ------------------------------------------------------- -------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](qtermwidget.md "qtermwidget-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](qtermwidget.md "qtermwidget-2.4.0")
 
     qtermwidget-2.4.0
 
--   [Next](screengrab.md "screengrab-3.2.0"){accesskey="n"}
+-   [Next](screengrab.md "screengrab-3.2.0")
 
     screengrab-3.2.0
 
--   [Up](lxqt-apps.md "Chapter 38. LXQt Applications"){accesskey="u"}
+-   [Up](lxqt-apps.md "Chapter 38. LXQt Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

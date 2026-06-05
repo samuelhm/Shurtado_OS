@@ -1,35 +1,35 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part X. LXQt
 
--   [Prev](lxqt.md "LXQt"){accesskey="p"}
+-   [Prev](lxqt.md "LXQt")
 
     LXQt
 
--   [Next](pre-install.md "LXQt Desktop Pre-Install Instructions"){accesskey="n"}
+-   [Next](pre-install.md "LXQt Desktop Pre-Install Instructions")
 
     LXQt Desktop Pre-Install Instructions
 
--   [Up](lxqt.md "Part X. LXQt"){accesskey="u"}
+-   [Up](lxqt.md "Part X. LXQt")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-desktop}LXQt Desktop {#lxqt-desktop .chapter}
+# LXQt Desktop {#lxqt-desktop}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 LXQt is an extremely fast-performing and energy-saving desktop environment.
 
-[LXQt]{.application} is a [Qt]{.application} based Desktop Environment. It is focused on being a classic desktop with a modern look and feel. It can customize appearance everywhere. The panel(s) have plugins and settings. It is Window Manager agnostic, has multi-language support and standard keyboard shortcuts. [LXQt]{.application} uses less CPU and less RAM than most other environments. It is especially useful for cloud computers with low hardware specifications, such as netbooks, mobile devices (e.g. MIDs) or older computers, but can be used with modern hardware.
+<span class="application">LXQt</span> is a <span class="application">Qt</span> based Desktop Environment. It is focused on being a classic desktop with a modern look and feel. It can customize appearance everywhere. The panel(s) have plugins and settings. It is Window Manager agnostic, has multi-language support and standard keyboard shortcuts. <span class="application">LXQt</span> uses less CPU and less RAM than most other environments. It is especially useful for cloud computers with low hardware specifications, such as netbooks, mobile devices (e.g. MIDs) or older computers, but can be used with modern hardware.
 
 Build LXQt core packages in the order presented in the book for the easiest resolution of dependencies.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [LXQt Desktop Pre-Install Instructions](pre-install.md)
--   [KF6, Plasma, and Misc Dependencies]{.dummy}
+-   <span class="dummy">KF6, Plasma, and Misc Dependencies</span>
 -   [kwindowsystem-6.26.0 for lxqt](lxqt-kwindowsystem.md)
 -   [kconfig-6.26.0 for lxqt](lxqt-kconfig.md)
 -   [solid-6.26.0 for lxqt](lxqt-solid.md)
@@ -38,7 +38,7 @@ Build LXQt core packages in the order presented in the book for the easiest reso
 -   [libkscreen-6.6.5 for lxqt](lxqt-libkscreen.md)
 -   [layer-shell-qt-6.6.5 for lxqt](lxqt-layer-shell-qt.md)
 -   [muparser-2.3.5](muparser.md)
--   [LXQt Desktop Components]{.dummy}
+-   <span class="dummy">LXQt Desktop Components</span>
 -   [lxqt-build-tools-2.4.0](lxqt-build-tools.md)
 -   [libdbusmenu-lxqt-0.4.0](libdbusmenu-lxqt.md)
 -   [libqtxdg-4.4.0](libqtxdg.md)
@@ -67,19 +67,19 @@ Build LXQt core packages in the order presented in the book for the easiest reso
 -   [xdg-desktop-portal-lxqt-1.4.0](xdg-desktop-portal-lxqt.md)
 -   [obconf-qt-0.16.5](obconf-qt.md)
 -   [LXQt Desktop Final Instructions](post-install.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt.md "LXQt"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt.md "LXQt")
 
     LXQt
 
--   [Next](pre-install.md "LXQt Desktop Pre-Install Instructions"){accesskey="n"}
+-   [Next](pre-install.md "LXQt Desktop Pre-Install Instructions")
 
     LXQt Desktop Pre-Install Instructions
 
--   [Up](lxqt.md "Part X. LXQt"){accesskey="u"}
+-   [Up](lxqt.md "Part X. LXQt")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

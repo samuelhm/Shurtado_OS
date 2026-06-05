@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 11. General Utilities
 
--   [Prev](compface.md "Compface-1.5.2"){accesskey="p"}
+-   [Prev](compface.md "Compface-1.5.2")
 
     Compface-1.5.2
 
--   [Next](dos2unix.md "dos2unix-7.5.6"){accesskey="n"}
+-   [Next](dos2unix.md "dos2unix-7.5.6")
 
     dos2unix-7.5.6
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#desktop-file-utils}desktop-file-utils-0.28 {#desktop-file-utils-0.28 .sect1}
+# desktop-file-utils-0.28 {#desktop-file-utils-0.28}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Desktop File Utils {#introduction-to-desktop-file-utils .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Desktop File Utils {#introduction-to-desktop-file-utils}
 
-The [Desktop File Utils]{.application} package contains command line utilities for working with [Desktop entries](https://standards.freedesktop.org/desktop-entry-spec/latest/){.ulink}. These utilities are used by Desktop Environments and other applications to manipulate the MIME-types application databases and help adhere to the Desktop Entry Specification.
+The <span class="application">Desktop File Utils</span> package contains command line utilities for working with <a class="ulink" href="https://standards.freedesktop.org/desktop-entry-spec/latest/">Desktop entries</a>. These utilities are used by Desktop Environments and other applications to manipulate the MIME-types application databases and help adhere to the Desktop Entry Specification.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz](https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz">https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.28.tar.xz</a>
 
 -   Download MD5 sum: dec5d7265c802db1fde3980356931b7b
 
@@ -44,37 +44,37 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 1.2 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### Desktop File Utils Dependencies
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref}
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>
 
 #### Optional
 
-[Emacs-30.2](../postlfs/emacs.md "Emacs-30.2"){.xref}
-:::::
+<a class="xref" href="../postlfs/emacs.md" title="Emacs-30.2">Emacs-30.2</a>
+</div>
 
-:::: {.installation lang="en"}
-## Installation of Desktop File Utils {#installation-of-desktop-file-utils .sect2}
+<div class="installation" lang="en">
+## Installation of Desktop File Utils {#installation-of-desktop-file-utils}
 
-::: {.admon .warning}
+<div class="admon warning">
 ![\[Warning\]](../images/warning.png)
 
 ### Warning
 
 If you are upgrading from a previous version of desktop-file-utils that used the Autotools method of installing and configuring the package, you must remove the desktop-file-edit symlink by using the following commands.
-:::
+</div>
 
-``` root
+```bash
 rm -fv /usr/bin/desktop-file-edit
 ```
 
-Install [Desktop File Utils]{.application} by running the following commands:
+Install <span class="application">Desktop File Utils</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -84,80 +84,80 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-::::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
-:::
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring Desktop File Utils {#configuring-desktop-file-utils .sect2}
+<div class="configuration" lang="en">
+## Configuring Desktop File Utils {#configuring-desktop-file-utils}
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-The [XDG Base Directory](https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.md){.ulink} specification defines the standard locations for applications to place data and configuration files. These files can be used, for instance, to define the menu structure and menu items in a desktop environment.
+The <a class="ulink" href="https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.md">XDG Base Directory</a> specification defines the standard locations for applications to place data and configuration files. These files can be used, for instance, to define the menu structure and menu items in a desktop environment.
 
-The default location for configuration files to be installed is `/etc/xdg`{.filename}, and the default locations for data files are `/usr/local/share`{.filename} and `/usr/share`{.filename}. These locations can be extended with the environment variables `XDG_CONFIG_DIRS`{.envar} and `XDG_DATA_DIRS`{.envar}, respectively. The [GNOME]{.application}, [KDE]{.application} and [XFCE]{.application} environments respect these settings.
+The default location for configuration files to be installed is <code class="filename">/etc/xdg</code>, and the default locations for data files are <code class="filename">/usr/local/share</code> and <code class="filename">/usr/share</code>. These locations can be extended with the environment variables <code class="envar">XDG_CONFIG_DIRS</code> and <code class="envar">XDG_DATA_DIRS</code>, respectively. The <span class="application">GNOME</span>, <span class="application">KDE</span> and <span class="application">XFCE</span> environments respect these settings.
 
-When a package installs a `.desktop`{.filename} file to a location in one of the base data directories, the database that maps MIME-types to available applications can be updated. For instance, the cache file at `/usr/share/applications/mimeinfo.cache`{.filename} can be rebuilt by executing the following command as the `root`{.systemitem} user:
+When a package installs a <code class="filename">.desktop</code> file to a location in one of the base data directories, the database that maps MIME-types to available applications can be updated. For instance, the cache file at <code class="filename">/usr/share/applications/mimeinfo.cache</code> can be rebuilt by executing the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -vdm755 /usr/share/applications &&
 update-desktop-database /usr/share/applications
 ```
-:::
-::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [desktop-file-edit, desktop-file-install, desktop-file-validate and update-desktop-database]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">desktop-file-edit, desktop-file-install, desktop-file-validate and update-desktop-database</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------
-  []{#desktop-file-edit}[[**desktop-file-edit**]{.command}]{.term}               is used to modify an existing desktop file entry
-  []{#desktop-file-install}[[**desktop-file-install**]{.command}]{.term}         is used to install a new desktop file entry. It is also used to rebuild or modify the MIME-types application database
-  []{#desktop-file-validate}[[**desktop-file-validate**]{.command}]{.term}       is used to verify the integrity of a desktop file
-  []{#update-desktop-database}[[**update-desktop-database**]{.command}]{.term}   is used to update the MIME-types application database
+  <a id="desktop-file-edit"></a><span class="command"><span class="term"><strong>desktop-file-edit</strong></span></span>               is used to modify an existing desktop file entry
+  <a id="desktop-file-install"></a><span class="command"><span class="term"><strong>desktop-file-install</strong></span></span>         is used to install a new desktop file entry. It is also used to rebuild or modify the MIME-types application database
+  <a id="desktop-file-validate"></a><span class="command"><span class="term"><strong>desktop-file-validate</strong></span></span>       is used to verify the integrity of a desktop file
+  <a id="update-desktop-database"></a><span class="command"><span class="term"><strong>update-desktop-database</strong></span></span>   is used to update the MIME-types application database
   ------------------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](compface.md "Compface-1.5.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](compface.md "Compface-1.5.2")
 
     Compface-1.5.2
 
--   [Next](dos2unix.md "dos2unix-7.5.6"){accesskey="n"}
+-   [Next](dos2unix.md "dos2unix-7.5.6")
 
     dos2unix-7.5.6
 
--   [Up](genutils.md "Chapter 11. General Utilities"){accesskey="u"}
+-   [Up](genutils.md "Chapter 11. General Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

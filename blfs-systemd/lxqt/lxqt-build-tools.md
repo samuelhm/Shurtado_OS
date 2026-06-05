@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](muparser.md "muparser-2.3.5"){accesskey="p"}
+-   [Prev](muparser.md "muparser-2.3.5")
 
     muparser-2.3.5
 
--   [Next](libdbusmenu-lxqt.md "libdbusmenu-lxqt-0.4.0"){accesskey="n"}
+-   [Next](libdbusmenu-lxqt.md "libdbusmenu-lxqt-0.4.0")
 
     libdbusmenu-lxqt-0.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-build-tools}lxqt-build-tools-2.4.0 {#lxqt-build-tools-2.4.0 .sect1}
+# lxqt-build-tools-2.4.0 {#lxqt-build-tools-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-build-tools {#introduction-to-lxqt-build-tools .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-build-tools {#introduction-to-lxqt-build-tools}
 
-The [lxqt-build-tools]{.application} package provides several tools needed to build LXQt itself as well as other components maintained by the LXQt project.
+The <span class="application">lxqt-build-tools</span> package provides several tools needed to build LXQt itself as well as other components maintained by the LXQt project.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-build-tools/releases/download/2.4.0/lxqt-build-tools-2.4.0.tar.xz](https://github.com/lxqt/lxqt-build-tools/releases/download/2.4.0/lxqt-build-tools-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-build-tools/releases/download/2.4.0/lxqt-build-tools-2.4.0.tar.xz">https://github.com/lxqt/lxqt-build-tools/releases/download/2.4.0/lxqt-build-tools-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: a480ab7ffadf032340d7b0a705585101
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 932 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### lxqt-build-tools Dependencies
 
 #### Required
 
-[CMake-4.3.3](../general/cmake.md "CMake-4.3.3"){.xref} and [Qt-6.11.1](../x/qt6.md "Qt-6.11.1"){.xref}
-:::::
+<a class="xref" href="../general/cmake.md" title="CMake-4.3.3">CMake-4.3.3</a> and <a class="xref" href="../x/qt6.md" title="Qt-6.11.1">Qt-6.11.1</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-build-tools {#installation-of-lxqt-build-tools .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-build-tools {#installation-of-lxqt-build-tools}
 
-Install [lxqt-build-tools]{.application} by running the following commands:
+Install <span class="application">lxqt-build-tools</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -71,52 +71,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [lxqt2-transupdate]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">lxqt2-transupdate</span>
+</div>
 
-::: seg
-**Installed Library:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/cmake/lxqt2-build-tools]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/cmake/lxqt2-build-tools</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------ ------------------------------------------
-  []{#lxqt2-transupdate}[[**lxqt2-transupdate**]{.command}]{.term}   updates translations for LXQt components
+  <a id="lxqt2-transupdate"></a><span class="command"><span class="term"><strong>lxqt2-transupdate</strong></span></span>   updates translations for LXQt components
   ------------------------------------------------------------------ ------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](muparser.md "muparser-2.3.5"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](muparser.md "muparser-2.3.5")
 
     muparser-2.3.5
 
--   [Next](libdbusmenu-lxqt.md "libdbusmenu-lxqt-0.4.0"){accesskey="n"}
+-   [Next](libdbusmenu-lxqt.md "libdbusmenu-lxqt-0.4.0")
 
     libdbusmenu-lxqt-0.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

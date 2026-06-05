@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libogg.md "libogg-1.3.6"){accesskey="p"}
+-   [Prev](libogg.md "libogg-1.3.6")
 
     libogg-1.3.6
 
--   [Next](libsamplerate.md "libsamplerate-0.2.2"){accesskey="n"}
+-   [Next](libsamplerate.md "libsamplerate-0.2.2")
 
     libsamplerate-0.2.2
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libplacebo}libplacebo-7.360.1 {#libplacebo-7.360.1 .sect1}
+# libplacebo-7.360.1 {#libplacebo-7.360.1}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libplacebo {#introduction-to-libplacebo .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libplacebo {#introduction-to-libplacebo}
 
-The [libplacebo]{.application} package contains a library for processing image and video primitives and shaders. It also includes a high quality rendering pipeline that supports OpenGL and Vulkan.
+The <span class="application">libplacebo</span> package contains a library for processing image and video primitives and shaders. It also includes a high quality rendering pipeline that supports OpenGL and Vulkan.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/haasn/libplacebo/archive/v7.360.1/libplacebo-7.360.1.tar.gz](https://github.com/haasn/libplacebo/archive/v7.360.1/libplacebo-7.360.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/haasn/libplacebo/archive/v7.360.1/libplacebo-7.360.1.tar.gz">https://github.com/haasn/libplacebo/archive/v7.360.1/libplacebo-7.360.1.tar.gz</a>
 
 -   Download MD5 sum: e0fa1b52f8d7b7ba51373e9a639ca966
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 38 MB
 
 -   Estimated build time: 0.2 SBU (With tests)
-:::
+</div>
 
 ### libplacebo Dependencies
 
 #### Required
 
-[Glad-2.0.8](../general/glad.md "Glad-2.0.8"){.xref}
+<a class="xref" href="../general/glad.md" title="Glad-2.0.8">Glad-2.0.8</a>
 
 #### Recommended
 
-[Glslang-16.3.0](../x/glslang.md "glslang-16.3.0"){.xref} and [Vulkan-Loader-1.4.350.0](../x/vulkan-loader.md "Vulkan-Loader-1.4.350.0"){.xref}
+<a class="xref" href="../x/glslang.md" title="glslang-16.3.0">Glslang-16.3.0</a> and <a class="xref" href="../x/vulkan-loader.md" title="Vulkan-Loader-1.4.350.0">Vulkan-Loader-1.4.350.0</a>
 
 #### Optional
 
-[Little CMS-2.19.1](../general/lcms2.md "Little CMS-2.19.1"){.xref} [libunwind-1.8.3](../general/libunwind.md "libunwind-1.8.3"){.xref}, [dovi_tool](https://github.com/quietvoid/dovi_tool/){.ulink}, [Nuklear](https://github.com/Immediate-Mode-UI/Nuklear){.ulink}, and [xxHash](https://github.com/Cyan4973/xxHash){.ulink}
-:::::
+<a class="xref" href="../general/lcms2.md" title="Little CMS-2.19.1">Little CMS-2.19.1</a> <a class="xref" href="../general/libunwind.md" title="libunwind-1.8.3">libunwind-1.8.3</a>, <a class="ulink" href="https://github.com/quietvoid/dovi_tool/">dovi_tool</a>, <a class="ulink" href="https://github.com/Immediate-Mode-UI/Nuklear">Nuklear</a>, and <a class="ulink" href="https://github.com/Cyan4973/xxHash">xxHash</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libplacebo {#installation-of-libplacebo .sect2}
+<div class="installation" lang="en">
+## Installation of libplacebo {#installation-of-libplacebo}
 
-Install [libplacebo]{.application} by running the following commands:
+Install <span class="application">libplacebo</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -78,64 +78,64 @@ meson setup ..            \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D demos=false`*: This switch disables building the demo programs because building [plplay]{.application} is currently broken.
+*`-D demos=false`*: This switch disables building the demo programs because building <span class="application">plplay</span> is currently broken.
 
 *`-D tests=true`*: This switch enables building the code necessary to run the tests.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libplacebo.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libplacebo.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libplacebo]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libplacebo</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------
-  []{#libplacebo-lib}[`libplacebo.so`{.filename}]{.term}   processes image and video primitives and shaders and provides a high quality rendering pipeline for OpenGL and Vulkan
+  <a id="libplacebo-lib"></a><span class="term"><code class="filename">libplacebo.so</code></span>   processes image and video primitives and shaders and provides a high quality rendering pipeline for OpenGL and Vulkan
   -------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libogg.md "libogg-1.3.6"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libogg.md "libogg-1.3.6")
 
     libogg-1.3.6
 
--   [Next](libsamplerate.md "libsamplerate-0.2.2"){accesskey="n"}
+-   [Next](libsamplerate.md "libsamplerate-0.2.2")
 
     libsamplerate-0.2.2
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

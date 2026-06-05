@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libgsf.md "libgsf-1.14.58"){accesskey="p"}
+-   [Prev](libgsf.md "libgsf-1.14.58")
 
     libgsf-1.14.58
 
--   [Next](libgusb.md "libgusb-0.4.9"){accesskey="n"}
+-   [Next](libgusb.md "libgusb-0.4.9")
 
     libgusb-0.4.9
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libgudev}libgudev-238 {#libgudev-238 .sect1}
+# libgudev-238 {#libgudev-238}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libgudev {#introduction-to-libgudev .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libgudev {#introduction-to-libgudev}
 
-The [libgudev]{.application} package contains GObject bindings for libudev.
+The <span class="application">libgudev</span> package contains GObject bindings for libudev.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libgudev/238/libgudev-238.tar.xz](https://download.gnome.org/sources/libgudev/238/libgudev-238.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libgudev/238/libgudev-238.tar.xz">https://download.gnome.org/sources/libgudev/238/libgudev-238.tar.xz</a>
 
 -   Download MD5 sum: 46da30a1c69101c3a13fa660d9ab7b73
 
@@ -44,23 +44,23 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.0 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 #### Required
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (GObject Introspection required for GNOME)
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (GObject Introspection required for GNOME)
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref} and [umockdev-0.19.7](umockdev.md "Umockdev-0.19.7"){.xref} (for testing)
-:::::
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> and <a class="xref" href="umockdev.md" title="Umockdev-0.19.7">umockdev-0.19.7</a> (for testing)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libgudev {#installation-of-libgudev .sect2}
+<div class="installation" lang="en">
+## Installation of libgudev {#installation-of-libgudev}
 
-Install [libgudev]{.application} by running the following commands:
+Install <span class="application">libgudev</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -68,62 +68,62 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. One test, `libgudev:test-gudevdevice`{.filename}, is known to fail with systemd-259.4 and later.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. One test, <code class="filename">libgudev:test-gudevdevice</code>, is known to fail with systemd-259.4 and later.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D gtk_doc=true`{.option}: Use this option if GTK-Doc is installed and you wish to build and install the API documentation.
-:::
+<code class="option">-D gtk_doc=true</code>: Use this option if GTK-Doc is installed and you wish to build and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libgudev-1.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libgudev-1.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/gudev-1.0 and /usr/share/gtk-doc/html/gudev]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/gudev-1.0 and /usr/share/gtk-doc/html/gudev</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- ------------------------------------------------
-  []{#libgudev-1.0}[`libgudev-1.0.so`{.filename}]{.term}   is a GObject-based wrapper library for libudev
+  <a id="libgudev-1.0"></a><span class="term"><code class="filename">libgudev-1.0.so</code></span>   is a GObject-based wrapper library for libudev
   -------------------------------------------------------- ------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libgsf.md "libgsf-1.14.58"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libgsf.md "libgsf-1.14.58")
 
     libgsf-1.14.58
 
--   [Next](libgusb.md "libgusb-0.4.9"){accesskey="n"}
+-   [Next](libgusb.md "libgusb-0.4.9")
 
     libgusb-0.4.9
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 37. LXQt Desktop
 
--   [Prev](lxqt-sudo.md "lxqt-sudo-2.4.0"){accesskey="p"}
+-   [Prev](lxqt-sudo.md "lxqt-sudo-2.4.0")
 
     lxqt-sudo-2.4.0
 
--   [Next](lxqt-session.md "lxqt-session-2.4.0"){accesskey="n"}
+-   [Next](lxqt-session.md "lxqt-session-2.4.0")
 
     lxqt-session-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#lxqt-openssh-askpass}lxqt-openssh-askpass-2.4.0 {#lxqt-openssh-askpass-2.4.0 .sect1}
+# lxqt-openssh-askpass-2.4.0 {#lxqt-openssh-askpass-2.4.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to lxqt-openssh-askpass {#introduction-to-lxqt-openssh-askpass .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to lxqt-openssh-askpass {#introduction-to-lxqt-openssh-askpass}
 
-The [lxqt-openssh-askpass]{.application} package is a GUI to query credentials on behalf of other programs.
+The <span class="application">lxqt-openssh-askpass</span> package is a GUI to query credentials on behalf of other programs.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lxqt/lxqt-openssh-askpass/releases/download/2.4.0/lxqt-openssh-askpass-2.4.0.tar.xz](https://github.com/lxqt/lxqt-openssh-askpass/releases/download/2.4.0/lxqt-openssh-askpass-2.4.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lxqt/lxqt-openssh-askpass/releases/download/2.4.0/lxqt-openssh-askpass-2.4.0.tar.xz">https://github.com/lxqt/lxqt-openssh-askpass/releases/download/2.4.0/lxqt-openssh-askpass-2.4.0.tar.xz</a>
 
 -   Download MD5 sum: 33cc903f04f9bf36b40074dd6c261e15
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 2.7 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### lxqt-openssh-askpass Dependencies
 
 #### Required
 
-[liblxqt-2.4.0](liblxqt.md "liblxqt-2.4.0"){.xref}
-:::::
+<a class="xref" href="liblxqt.md" title="liblxqt-2.4.0">liblxqt-2.4.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of lxqt-openssh-askpass {#installation-of-lxqt-openssh-askpass .sect2}
+<div class="installation" lang="en">
+## Installation of lxqt-openssh-askpass {#installation-of-lxqt-openssh-askpass}
 
-Install [lxqt-openssh-askpass]{.application} by running the following commands:
+Install <span class="application">lxqt-openssh-askpass</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -70,52 +70,52 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [lxqt-openssh-askpass]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">lxqt-openssh-askpass</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/share/lxqt/translations/lxqt-openssh-askpass]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/share/lxqt/translations/lxqt-openssh-askpass</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------------------------------ -------------------------------------------------------------
-  []{#lxqt-openssh-askpass-prog}[[**lxqt-config-openssh-askpass**]{.command}]{.term}   queries a user for credentials on behalf of another program
+  <a id="lxqt-openssh-askpass-prog"></a><span class="command"><span class="term"><strong>lxqt-config-openssh-askpass</strong></span></span>   queries a user for credentials on behalf of another program
   ------------------------------------------------------------------------------------ -------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](lxqt-sudo.md "lxqt-sudo-2.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](lxqt-sudo.md "lxqt-sudo-2.4.0")
 
     lxqt-sudo-2.4.0
 
--   [Next](lxqt-session.md "lxqt-session-2.4.0"){accesskey="n"}
+-   [Next](lxqt-session.md "lxqt-session-2.4.0")
 
     lxqt-session-2.4.0
 
--   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop"){accesskey="u"}
+-   [Up](lxqt-desktop.md "Chapter 37. LXQt Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

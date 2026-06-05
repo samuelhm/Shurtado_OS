@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libcanberra.md "libcanberra-0.30"){accesskey="p"}
+-   [Prev](libcanberra.md "libcanberra-0.30")
 
     libcanberra-0.30
 
--   [Next](libcdio.md "libcdio-2.1.0"){accesskey="n"}
+-   [Next](libcdio.md "libcdio-2.1.0")
 
     libcdio-2.1.0
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libcddb}libcddb-1.3.2 {#libcddb-1.3.2 .sect1}
+# libcddb-1.3.2 {#libcddb-1.3.2}
 
-::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libcddb {#introduction-to-libcddb .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libcddb {#introduction-to-libcddb}
 
-The [libcddb]{.application} is a library that implements the different protocols (CDDBP, HTTP, SMTP) to access data on a CDDB server.
+The <span class="application">libcddb</span> is a library that implements the different protocols (CDDBP, HTTP, SMTP) to access data on a CDDB server.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/libcddb/libcddb-1.3.2.tar.bz2](https://downloads.sourceforge.net/libcddb/libcddb-1.3.2.tar.bz2){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/libcddb/libcddb-1.3.2.tar.bz2">https://downloads.sourceforge.net/libcddb/libcddb-1.3.2.tar.bz2</a>
 
 -   Download MD5 sum: 8bb4a6f542197e8e9648ae597cd6bc8a
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 3.9 MB (with tests)
 
 -   Estimated build time: 0.2 SBU (with tests)
-:::
+</div>
 
 ### libcddb Dependencies
 
 #### Optional
 
-[libcdio-2.1.0](libcdio.md "libcdio-2.1.0"){.xref} (for [**cddb_query**]{.command} to read CDs)
+<a class="xref" href="libcdio.md" title="libcdio-2.1.0">libcdio-2.1.0</a> (for <span class="command"><strong>cddb_query</strong></span> to read CDs)
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} before testing this package.
-:::
-::::::
+An Internet connection is needed for some tests of this package. The system certificate store may need to be set up with <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> before testing this package.
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libcddb {#installation-of-libcddb .sect2}
+<div class="installation" lang="en">
+## Installation of libcddb {#installation-of-libcddb}
 
-By default this package accesses `freedb.org`{.systemitem}, which is already closed. Modify the default to use `gnudb.gnudb.org`{.systemitem} instead, and fix two stale test data files:
+By default this package accesses <code class="systemitem">freedb.org</code>, which is already closed. Modify the default to use <code class="systemitem">gnudb.gnudb.org</code> instead, and fix two stale test data files:
 
-``` userinput
+```bash
 sed -e '/DEFAULT_SERVER/s/freedb.org/gnudb.gnudb.org/' \
     -e '/DEFAULT_PORT/s/888/&0/'                       \
     -i include/cddb/cddb_ni.h                          &&
@@ -76,65 +76,65 @@ sed '/DISCID/i# Revision: 42'         -i tests/testcache/misc/12340000
 
 Fix a problem building with gcc-14 and later:
 
-``` userinput
+```bash
 sed -i 's/size_t l;/socklen_t l;/' lib/cddb_net.c
 ```
 
-Install [libcddb]{.application} by running the following commands:
+Install <span class="application">libcddb</span> by running the following commands:
 
-``` userinput
+```bash
 ./configure --prefix=/usr --disable-static &&
 make
 ```
 
-To test the results, issue: [**make check -k**]{.command}. The test suite needs an Internet connection. The test named [“[Check non-existing disc server read]{.quote}”]{.quote} fails because the test incorrectly assumes no discs have the ID `0x11111111`{.literal}. Another test fails due to an attempt to use the closed `freedb2.org`{.uri} server.
+To test the results, issue: <span class="command"><strong>make check -k</strong></span>. The test suite needs an Internet connection. The test named <span class="quote">“<span class="quote">Check non-existing disc server read</span>”</span> fails because the test incorrectly assumes no discs have the ID <code class="literal">0x11111111</code>. Another test fails due to an attempt to use the closed <code class="uri">freedb2.org</code> server.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [cddb_query]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cddb_query</span>
+</div>
 
-::: seg
-**Installed Library:** [libcddb.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libcddb.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/cddb]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/cddb</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- --------------------------------------------
-  []{#cddb_query}[[**cddb_query**]{.command}]{.term}   provides a user interface to a CDDB server
+  <a id="cddb_query"></a><span class="command"><span class="term"><strong>cddb_query</strong></span></span>   provides a user interface to a CDDB server
   ---------------------------------------------------- --------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libcanberra.md "libcanberra-0.30"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libcanberra.md "libcanberra-0.30")
 
     libcanberra-0.30
 
--   [Next](libcdio.md "libcdio-2.1.0"){accesskey="n"}
+-   [Next](libcdio.md "libcdio-2.1.0")
 
     libcdio-2.1.0
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

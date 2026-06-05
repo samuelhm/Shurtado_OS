@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 25. Graphical Environment Libraries
 
--   [Prev](webkitgtk.md "WebKitGTK-2.52.0"){accesskey="p"}
+-   [Prev](webkitgtk.md "WebKitGTK-2.52.0")
 
     WebKitGTK-2.52.0
 
--   [Next](xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3"){accesskey="n"}
+-   [Next](xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3")
 
     xdg-desktop-portal-gtk-1.15.3
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xdg-desktop-portal}xdg-desktop-portal-1.20.4 {#xdg-desktop-portal-1.20.4 .sect1}
+# xdg-desktop-portal-1.20.4 {#xdg-desktop-portal-1.20.4}
 
-:::::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to xdg-desktop-portal {#introduction-to-xdg-desktop-portal .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to xdg-desktop-portal {#introduction-to-xdg-desktop-portal}
 
-[xdg-desktop-portal]{.application} is a D-Bus service that allows applications to interact with the desktop in a safe way. Several aspects of desktop interaction, like file chooser, desktop style, etc are implemented in different D-Bus APIs, known as [*portals*]{.emphasis}. Sandboxed applications benefit the most from this service since they don't need special permissions to use the portal APIs, but any application can use it. [xdg-desktop-portal]{.application} safeguards many resources and features with a user-controlled permission system. This service needs a backend implementing desktop-specific portal interfaces.
+<span class="application">xdg-desktop-portal</span> is a D-Bus service that allows applications to interact with the desktop in a safe way. Several aspects of desktop interaction, like file chooser, desktop style, etc are implemented in different D-Bus APIs, known as <span class="emphasis"><em>portals</em></span>. Sandboxed applications benefit the most from this service since they don't need special permissions to use the portal APIs, but any application can use it. <span class="application">xdg-desktop-portal</span> safeguards many resources and features with a user-controlled permission system. This service needs a backend implementing desktop-specific portal interfaces.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.4/xdg-desktop-portal-1.20.4.tar.xz](https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.4/xdg-desktop-portal-1.20.4.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.4/xdg-desktop-portal-1.20.4.tar.xz">https://github.com/flatpak/xdg-desktop-portal/releases/download/1.20.4/xdg-desktop-portal-1.20.4.tar.xz</a>
 
 -   Download MD5 sum: d0ed229846b14d6c4cd252245f9a7970
 
@@ -44,41 +44,41 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 32 MB (add 3 MB for tests)
 
 -   Estimated build time: 0.1 SBU (add 0.1 SBU for tests; with parallelism=4)
-:::
+</div>
 
 ### xdg-desktop-portal Dependencies
 
 #### Required
 
-[Fuse-3.18.2](../postlfs/fuse.md "Fuse-3.18.2"){.xref}, [gdk-pixbuf-2.44.6](gdk-pixbuf.md "gdk-pixbuf-2.44.6"){.xref}, [JSON-GLib-1.10.8](../general/json-glib.md "JSON-GLib-1.10.8"){.xref}, [pipewire-1.6.6](../multimedia/pipewire.md "Pipewire-1.6.6"){.xref}, and [dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref} (at runtime). Furthermore, a backend is needed at runtime for this package to be of any use, either [xdg-desktop-portal-gtk-1.15.3](xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3"){.xref} or [xdg-desktop-portal-gnome-50.0](../gnome/xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){.xref} or [xdg-desktop-portal-lxqt-1.4.0](../lxqt/xdg-desktop-portal-lxqt.md "xdg-desktop-portal-lxqt-1.4.0"){.xref}
+<a class="xref" href="../postlfs/fuse.md" title="Fuse-3.18.2">Fuse-3.18.2</a>, <a class="xref" href="gdk-pixbuf.md" title="gdk-pixbuf-2.44.6">gdk-pixbuf-2.44.6</a>, <a class="xref" href="../general/json-glib.md" title="JSON-GLib-1.10.8">JSON-GLib-1.10.8</a>, <a class="xref" href="../multimedia/pipewire.md" title="Pipewire-1.6.6">pipewire-1.6.6</a>, and <a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a> (at runtime). Furthermore, a backend is needed at runtime for this package to be of any use, either <a class="xref" href="xdg-desktop-portal-gtk.md" title="xdg-desktop-portal-gtk-1.15.3">xdg-desktop-portal-gtk-1.15.3</a> or <a class="xref" href="../gnome/xdg-desktop-portal-gnome.md" title="xdg-desktop-portal-gnome-50.0">xdg-desktop-portal-gnome-50.0</a> or <a class="xref" href="../lxqt/xdg-desktop-portal-lxqt.md" title="xdg-desktop-portal-lxqt-1.4.0">xdg-desktop-portal-lxqt-1.4.0</a>
 
 #### Recommended
 
-[bubblewrap-0.11.2](../general/bubblewrap.md "Bubblewrap-0.11.2"){.xref} and [docutils-0.23](../general/python-modules.md#docutils "docutils-0.23"){.xref} (for building the manual pages)
+<a class="xref" href="../general/bubblewrap.md" title="Bubblewrap-0.11.2">bubblewrap-0.11.2</a> and <a class="xref" href="../general/python-modules.md#docutils" title="docutils-0.23">docutils-0.23</a> (for building the manual pages)
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Although there is an option to build the package without [bubblewrap]{.application}, upstream developers and LFS editors alike highly recommend to not use this possibility, as it will create a large security issue.
-:::
+Although there is an option to build the package without <span class="application">bubblewrap</span>, upstream developers and LFS editors alike highly recommend to not use this possibility, as it will create a large security issue.
+</div>
 
 #### Optional
 
-[GeoClue-2.8.1](../basicnet/geoclue2.md "GeoClue-2.8.1"){.xref} (for the [“[location]{.quote}”]{.quote} portal), and [pytest-9.0.3](../general/python-modules.md#pytest "Pytest-9.0.3"){.xref} with [libportal-0.9.1](../general/libportal.md "libportal-0.9.1"){.xref}, [dbusmock-0.38.1](../general/python-modules.md#python-dbusmock "dbusmock-0.38.1"){.xref}, and [umockdev-0.19.7](../general/umockdev.md "Umockdev-0.19.7"){.xref} (for running tests)
+<a class="xref" href="../basicnet/geoclue2.md" title="GeoClue-2.8.1">GeoClue-2.8.1</a> (for the <span class="quote">“<span class="quote">location</span>”</span> portal), and <a class="xref" href="../general/python-modules.md#pytest" title="Pytest-9.0.3">pytest-9.0.3</a> with <a class="xref" href="../general/libportal.md" title="libportal-0.9.1">libportal-0.9.1</a>, <a class="xref" href="../general/python-modules.md#python-dbusmock" title="dbusmock-0.38.1">dbusmock-0.38.1</a>, and <a class="xref" href="../general/umockdev.md" title="Umockdev-0.19.7">umockdev-0.19.7</a> (for running tests)
 
 #### Optional (for building the documentation)
 
-[sphinx-9.1.0](../general/python-modules.md#sphinx "Sphinx-9.1.0"){.xref} with [sphinxext.opengraph](https://pypi.org/project/sphinxext-opengraph/){.ulink}, [sphinx_copybutton](https://pypi.org/project/sphinx-copybutton/){.ulink}, [furo](https://pypi.org/project/furo/){.ulink}, and [flatpak](https://github.com/flatpak/flatpak){.ulink}
-::::::
+<a class="xref" href="../general/python-modules.md#sphinx" title="Sphinx-9.1.0">sphinx-9.1.0</a> with <a class="ulink" href="https://pypi.org/project/sphinxext-opengraph/">sphinxext.opengraph</a>, <a class="ulink" href="https://pypi.org/project/sphinx-copybutton/">sphinx_copybutton</a>, <a class="ulink" href="https://pypi.org/project/furo/">furo</a>, and <a class="ulink" href="https://github.com/flatpak/flatpak">flatpak</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of xdg-desktop-portal {#installation-of-xdg-desktop-portal .sect2}
+<div class="installation" lang="en">
+## Installation of xdg-desktop-portal {#installation-of-xdg-desktop-portal}
 
-Install [xdg-desktop-portal]{.application} by running the following commands:
+Install <span class="application">xdg-desktop-portal</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -88,73 +88,73 @@ ninja
 
 If the optional dependencies are installed, you can test the results by running:
 
-``` userinput
+```bash
 meson configure -D tests=enabled &&
 ninja test
 ```
 
 Without the external dependencies one test, integration/dynamiclauncher is known to fail.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`-D tests=disabled`*: Prevents requiring several optional dependencies that are only needed for tests.
-:::
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring xdg-desktop-portal {#configuring-xdg-desktop-portal .sect2}
+<div class="configuration" lang="en">
+## Configuring xdg-desktop-portal {#configuring-xdg-desktop-portal}
 
-::: {.sect3 lang="en"}
-### []{#xdg-desktop-portal-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-The main configuration files are `~/.config/xdg-desktop-portal/portals.conf`{.filename}, `/etc/xdg-desktop-portal/portals.conf`{.filename}, and `/usr/share/xdg-desktop-portal/portals.conf`{.filename}. Several other locations can be searched for configuration files. See [portals.conf(5)](https://man.archlinux.org/man/portals.conf.5){.ulink}.
-:::
+The main configuration files are <code class="filename">~/.config/xdg-desktop-portal/portals.conf</code>, <code class="filename">/etc/xdg-desktop-portal/portals.conf</code>, and <code class="filename">/usr/share/xdg-desktop-portal/portals.conf</code>. Several other locations can be searched for configuration files. See <a class="ulink" href="https://man.archlinux.org/man/portals.conf.5">portals.conf(5)</a>.
+</div>
 
-::: {.sect3 lang="en"}
-### Configuration Information {#configuration-information .sect3}
+<div class="sect3" lang="en">
+### Configuration Information {#configuration-information}
 
-The various configuration files are used to choose the backend depending of various conditions. See [portals.conf(5)](https://man.archlinux.org/man/portals.conf.5){.ulink} for details.
-:::
-:::::
+The various configuration files are used to choose the backend depending of various conditions. See <a class="ulink" href="https://man.archlinux.org/man/portals.conf.5">portals.conf(5)</a> for details.
+</div>
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [several daemons in /usr/libexec]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">several daemons in /usr/libexec</span>
+</div>
 
-::: seg
-**Installed Librar(y,ies):** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Librar(y,ies):** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Director(y,ies):** [None]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-::::::::::::::::::
+<div class="seg">
+**Installed Director(y,ies):** <span class="segbody">None</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](webkitgtk.md "WebKitGTK-2.52.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](webkitgtk.md "WebKitGTK-2.52.0")
 
     WebKitGTK-2.52.0
 
--   [Next](xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3"){accesskey="n"}
+-   [Next](xdg-desktop-portal-gtk.md "xdg-desktop-portal-gtk-1.15.3")
 
     xdg-desktop-portal-gtk-1.15.3
 
--   [Up](lib.md "Chapter 25. Graphical Environment Libraries"){accesskey="u"}
+-   [Up](lib.md "Chapter 25. Graphical Environment Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

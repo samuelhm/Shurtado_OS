@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](mc.md "MC-4.8.33"){accesskey="p"}
+-   [Prev](mc.md "MC-4.8.33")
 
     MC-4.8.33
 
--   [Next](notification-daemon.md "notification-daemon-3.20.0"){accesskey="n"}
+-   [Next](notification-daemon.md "notification-daemon-3.20.0")
 
     notification-daemon-3.20.0
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#ModemManager}ModemManager-1.24.2 {#modemmanager-1.24.2 .sect1}
+# ModemManager-1.24.2 {#modemmanager-1.24.2}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to ModemManager {#introduction-to-modemmanager .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to ModemManager {#introduction-to-modemmanager}
 
-[ModemManager]{.application} provides a unified high level API for communicating with mobile broadband modems, regardless of the protocol used to communicate with the actual device.
+<span class="application">ModemManager</span> provides a unified high level API for communicating with mobile broadband modems, regardless of the protocol used to communicate with the actual device.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.2/ModemManager-1.24.2.tar.gz](https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.2/ModemManager-1.24.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.2/ModemManager-1.24.2.tar.gz">https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.2/ModemManager-1.24.2.tar.gz</a>
 
 -   Download MD5 sum: b72860c54670f362e947edba160fa98e
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 59 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### ModemManager Dependencies
 
 #### Required
 
-[libgudev-238](libgudev.md "libgudev-238"){.xref} and [libxslt-1.1.45](libxslt.md "libxslt-1.1.45"){.xref}
+<a class="xref" href="libgudev.md" title="libgudev-238">libgudev-238</a> and <a class="xref" href="libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a>
 
 #### Recommended
 
-[GLib-2.88.1](glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection), [libmbim-1.34.0](libmbim.md "libmbim-1.34.0"){.xref}, [libqmi-1.38.0](libqmi.md "libqmi-1.38.0"){.xref}, [Polkit-127](../postlfs/polkit.md "Polkit-127"){.xref}, and [Vala-0.56.19](vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection), <a class="xref" href="libmbim.md" title="libmbim-1.34.0">libmbim-1.34.0</a>, <a class="xref" href="libqmi.md" title="libqmi-1.38.0">libqmi-1.38.0</a>, <a class="xref" href="../postlfs/polkit.md" title="Polkit-127">Polkit-127</a>, and <a class="xref" href="vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](gtk-doc.md "GTK-Doc-1.36.1"){.xref} and [PyGObject-3.56.3](python-modules.md#pygobject3 "PyGObject-3.56.3"){.xref} (for one test)
+<a class="xref" href="gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> and <a class="xref" href="python-modules.md#pygobject3" title="PyGObject-3.56.3">PyGObject-3.56.3</a> (for one test)
 
-Editor Notes: [https://wiki.linuxfromscratch.org/blfs/wiki/ModemManager](https://wiki.linuxfromscratch.org/blfs/wiki/ModemManager){.ulink}
-:::::
+Editor Notes: <a class="ulink" href="https://wiki.linuxfromscratch.org/blfs/wiki/ModemManager">https://wiki.linuxfromscratch.org/blfs/wiki/ModemManager</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of ModemManager {#installation-of-modemmanager .sect2}
+<div class="installation" lang="en">
+## Installation of ModemManager {#installation-of-modemmanager}
 
-Install [ModemManager]{.application} by running the following commands:
+Install <span class="application">ModemManager</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -80,80 +80,80 @@ meson setup ..                 \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D bash_completion=false`*: Use this option if the external [bash-completion](https://github.com/scop/bash-completion){.ulink} package is not installed.
+*`-D bash_completion=false`*: Use this option if the external <a class="ulink" href="https://github.com/scop/bash-completion">bash-completion</a> package is not installed.
 
-*`-D qrtr=false`*: This switch disables support for the QRTR protocol which needs the external [libqrtr-glib](https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib){.ulink} package.
-:::
+*`-D qrtr=false`*: This switch disables support for the QRTR protocol which needs the external <a class="ulink" href="https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib">libqrtr-glib</a> package.
+</div>
 
-:::: {.configuration lang="en"}
-## Configuring ModemManager {#configuring-modemmanager .sect2}
+<div class="configuration" lang="en">
+## Configuring ModemManager {#configuring-modemmanager}
 
-::: {.sect3 lang="en"}
-### []{#ModemManager-init}Systemd Units {#systemd-units .sect3}
+<div class="sect3" lang="en">
+### Systemd Units {#systemd-units}
 
-To start the [**ModemManager**]{.command} daemon at boot, enable the previously installed systemd unit by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>ModemManager</strong></span> daemon at boot, enable the previously installed systemd unit by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable ModemManager
 ```
-:::
-::::
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [mmcli and ModemManager]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">mmcli and ModemManager</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libmm-glib.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libmm-glib.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/ModemManager, /usr/include/libmm-glib, /usr/include/ModemManager, /usr/lib/ModemManager, /usr/share/ModemManager, /usr/share/gtk-doc/html/libmm-glib (optional), and /usr/share/gtk-doc/html/ModemManager (optional)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/ModemManager, /usr/include/libmm-glib, /usr/include/ModemManager, /usr/lib/ModemManager, /usr/share/ModemManager, /usr/share/gtk-doc/html/libmm-glib (optional), and /usr/share/gtk-doc/html/ModemManager (optional)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------
-  []{#mmcli}[[**mmcli**]{.command}]{.term}                      is a utility used to control and monitor the [ModemManager]{.application}
-  []{#ModemManager-prog}[[**ModemManager**]{.command}]{.term}   is a [D-Bus]{.application} service used to communicate with modems
-  []{#libmm-glib}[`libmm-glib.so`{.filename}]{.term}            contains API functions for communicating with mobile broadband modems, regardless of the protocol used to communicate with the actual device
+  <a id="mmcli"></a><span class="command"><span class="term"><strong>mmcli</strong></span></span>                      is a utility used to control and monitor the <span class="application">ModemManager</span>
+  <a id="ModemManager-prog"></a><span class="command"><span class="term"><strong>ModemManager</strong></span></span>   is a <span class="application">D-Bus</span> service used to communicate with modems
+  <a id="libmm-glib"></a><span class="term"><code class="filename">libmm-glib.so</code></span>            contains API functions for communicating with mobile broadband modems, regardless of the protocol used to communicate with the actual device
   ------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](mc.md "MC-4.8.33"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](mc.md "MC-4.8.33")
 
     MC-4.8.33
 
--   [Next](notification-daemon.md "notification-daemon-3.20.0"){accesskey="n"}
+-   [Next](notification-daemon.md "notification-daemon-3.20.0")
 
     notification-daemon-3.20.0
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

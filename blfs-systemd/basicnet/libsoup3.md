@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libslirp.md "libslirp-4.9.3"){accesskey="p"}
+-   [Prev](libslirp.md "libslirp-4.9.3")
 
     libslirp-4.9.3
 
--   [Next](libtirpc.md "libtirpc-1.3.7"){accesskey="n"}
+-   [Next](libtirpc.md "libtirpc-1.3.7")
 
     libtirpc-1.3.7
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libsoup3}libsoup-3.6.6 {#libsoup-3.6.6 .sect1}
+# libsoup-3.6.6 {#libsoup-3.6.6}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to libsoup3 {#introduction-to-libsoup3 .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libsoup3 {#introduction-to-libsoup3}
 
-The [libsoup3]{.application} is a HTTP client/server library for [GNOME]{.application}. It uses GObject and the GLib main loop to integrate with [GNOME]{.application} applications and it also has an asynchronous API for use in threaded applications.
+The <span class="application">libsoup3</span> is a HTTP client/server library for <span class="application">GNOME</span>. It uses GObject and the GLib main loop to integrate with <span class="application">GNOME</span> applications and it also has an asynchronous API for use in threaded applications.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libsoup/3.6/libsoup-3.6.6.tar.xz](https://download.gnome.org/sources/libsoup/3.6/libsoup-3.6.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libsoup/3.6/libsoup-3.6.6.tar.xz">https://download.gnome.org/sources/libsoup/3.6/libsoup-3.6.6.tar.xz</a>
 
 -   Download MD5 sum: 9e07742595800ecf301eafb52300dd89
 
@@ -44,47 +44,47 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 42 MB (with tests)
 
 -   Estimated build time: 0.4 SBU (Using parallelism=4; with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/libsoup-3.6.6-upstream_fixes-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/libsoup-3.6.6-upstream_fixes-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/libsoup-3.6.6-upstream_fixes-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/libsoup-3.6.6-upstream_fixes-1.patch</a>
+</div>
 
 ### libsoup3 Dependencies
 
 #### Required
 
-[glib-networking-2.80.1](glib-networking.md "glib-networking-2.80.1"){.xref}, [libpsl-0.21.5](libpsl.md "libpsl-0.21.5"){.xref}, [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref}, and [nghttp2-1.69.0](nghttp2.md "nghttp2-1.69.0"){.xref}
+<a class="xref" href="glib-networking.md" title="glib-networking-2.80.1">glib-networking-2.80.1</a>, <a class="xref" href="libpsl.md" title="libpsl-0.21.5">libpsl-0.21.5</a>, <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a>, and <a class="xref" href="nghttp2.md" title="nghttp2-1.69.0">nghttp2-1.69.0</a>
 
 #### Recommended
 
-[GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} (with GObject Introspection) and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> (with GObject Introspection) and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[Apache-2.4.67](../server/apache.md "Apache-2.4.67"){.xref} (required to run the test suite), [Brotli-1.2.0](../general/brotli.md "brotli-1.2.0"){.xref}, [cURL-8.20.0](curl.md "cURL-8.20.0"){.xref} (required to run the test suite), [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref}, [MIT Kerberos V5-1.22.2](../postlfs/mitkrb.md "MIT Kerberos V5-1.22.2"){.xref} (required to run the test suite), [PHP-8.5.6](../general/php.md "PHP-8.5.6"){.xref} compiled with XMLRPC-EPI support (only used for the XMLRPC regression tests), [Samba-4.24.0](samba.md "Samba-4.24.0"){.xref} (ntlm_auth is required to run the test suite), [sysprof](https://wiki.gnome.org/Apps/Sysprof){.ulink}, and [wstest](https://github.com/posener/wstest){.ulink}
-::::::
+<a class="xref" href="../server/apache.md" title="Apache-2.4.67">Apache-2.4.67</a> (required to run the test suite), <a class="xref" href="../general/brotli.md" title="brotli-1.2.0">Brotli-1.2.0</a>, <a class="xref" href="curl.md" title="cURL-8.20.0">cURL-8.20.0</a> (required to run the test suite), <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a>, <a class="xref" href="../postlfs/mitkrb.md" title="MIT Kerberos V5-1.22.2">MIT Kerberos V5-1.22.2</a> (required to run the test suite), <a class="xref" href="../general/php.md" title="PHP-8.5.6">PHP-8.5.6</a> compiled with XMLRPC-EPI support (only used for the XMLRPC regression tests), <a class="xref" href="samba.md" title="Samba-4.24.0">Samba-4.24.0</a> (ntlm_auth is required to run the test suite), <a class="ulink" href="https://wiki.gnome.org/Apps/Sysprof">sysprof</a>, and <a class="ulink" href="https://github.com/posener/wstest">wstest</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libsoup3 {#installation-of-libsoup3 .sect2}
+<div class="installation" lang="en">
+## Installation of libsoup3 {#installation-of-libsoup3}
 
 First, fix a security vulnerability that could lead to credential leakage:
 
-``` userinput
+```bash
 patch -Np1 -i ../libsoup-3.6.6-upstream_fixes-1.patch
 ```
 
 Fix the installation path of API documentation:
 
-``` userinput
+```bash
 sed 's/apiversion/soup_version/' -i docs/reference/meson.build
 ```
 
-Install [libsoup3]{.application} by running the following commands:
+Install <span class="application">libsoup3</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -95,64 +95,64 @@ meson setup --prefix=/usr          \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`--wrap-mode=nofallback`*: This switch prevents [**meson**]{.command} from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
+*`--wrap-mode=nofallback`*: This switch prevents <span class="command"><strong>meson</strong></span> from using subproject fallbacks for any dependency declarations in the build files, preventing it from downloading any optional dependencies which are not installed on the system.
 
-`-D docs=enabled`{.option}: If [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} is installed, the API documentation will be built and installed no matter if this option is used or not. This option causes the [**meson**]{.command} command to fail if [Gi-DocGen-2026.1](../general/python-modules.md#gi-docgen "Gi-DocGen-2026.1"){.xref} is not installed.
-:::
+<code class="option">-D docs=enabled</code>: If <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> is installed, the API documentation will be built and installed no matter if this option is used or not. This option causes the <span class="command"><strong>meson</strong></span> command to fail if <a class="xref" href="../general/python-modules.md#gi-docgen" title="Gi-DocGen-2026.1">Gi-DocGen-2026.1</a> is not installed.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libsoup-3.0.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libsoup-3.0.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libsoup-3.0, /usr/share/doc/libsoup-3.6.6 (only installed if gi-docgen is available)]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libsoup-3.0, /usr/share/doc/libsoup-3.6.6 (only installed if gi-docgen is available)</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- ------------------------------------------------------
-  []{#libsoup-3}[`libsoup-3.0.so`{.filename}]{.term}   provides functions for asynchronous HTTP connections
+  <a id="libsoup-3"></a><span class="term"><code class="filename">libsoup-3.0.so</code></span>   provides functions for asynchronous HTTP connections
   ---------------------------------------------------- ------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libslirp.md "libslirp-4.9.3"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libslirp.md "libslirp-4.9.3")
 
     libslirp-4.9.3
 
--   [Next](libtirpc.md "libtirpc-1.3.7"){accesskey="n"}
+-   [Next](libtirpc.md "libtirpc-1.3.7")
 
     libtirpc-1.3.7
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../xsoft/xscreensaver.md "XScreenSaver-6.15"){accesskey="p"}
+-   [Prev](../xsoft/xscreensaver.md "XScreenSaver-6.15")
 
     XScreenSaver-6.15
 
--   [Next](libdriv.md "Multimedia Libraries and Drivers"){accesskey="n"}
+-   [Next](libdriv.md "Multimedia Libraries and Drivers")
 
     Multimedia Libraries and Drivers
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#multimedia}Multimedia {#multimedia .part}
+# Multimedia {#multimedia}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [42. Multimedia Libraries and Drivers](libdriv.md)
@@ -113,19 +113,19 @@
     -   [libburn-1.5.8](libburn.md)
     -   [libisoburn-1.5.8.pl02](libisoburn.md)
     -   [libisofs-1.5.8.pl02](libisofs.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../xsoft/xscreensaver.md "XScreenSaver-6.15"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../xsoft/xscreensaver.md "XScreenSaver-6.15")
 
     XScreenSaver-6.15
 
--   [Next](libdriv.md "Multimedia Libraries and Drivers"){accesskey="n"}
+-   [Next](libdriv.md "Multimedia Libraries and Drivers")
 
     Multimedia Libraries and Drivers
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

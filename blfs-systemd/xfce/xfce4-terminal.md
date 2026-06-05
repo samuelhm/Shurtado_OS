@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 36. Xfce Applications
 
--   [Prev](parole.md "Parole-4.20.0"){accesskey="p"}
+-   [Prev](parole.md "Parole-4.20.0")
 
     Parole-4.20.0
 
--   [Next](xfburn.md "Xfburn-0.8.0"){accesskey="n"}
+-   [Next](xfburn.md "Xfburn-0.8.0")
 
     Xfburn-0.8.0
 
--   [Up](xfce-apps.md "Chapter 36. Xfce Applications"){accesskey="u"}
+-   [Up](xfce-apps.md "Chapter 36. Xfce Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xfce4-terminal}xfce4-terminal-1.2.0 {#xfce4-terminal-1.2.0 .sect1}
+# xfce4-terminal-1.2.0 {#xfce4-terminal-1.2.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Xfce4 Terminal {#introduction-to-xfce4-terminal .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xfce4 Terminal {#introduction-to-xfce4-terminal}
 
-[Xfce4 Terminal]{.application} is a [GTK+3]{.application} terminal emulator. This is useful for running commands or programs in the comfort of an Xorg window; you can drag and drop files into the [Xfce4 Terminal]{.application} or copy and paste text with your mouse.
+<span class="application">Xfce4 Terminal</span> is a <span class="application">GTK+3</span> terminal emulator. This is useful for running commands or programs in the comfort of an Xorg window; you can drag and drop files into the <span class="application">Xfce4 Terminal</span> or copy and paste text with your mouse.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://archive.xfce.org/src/apps/xfce4-terminal/1.2/xfce4-terminal-1.2.0.tar.xz](https://archive.xfce.org/src/apps/xfce4-terminal/1.2/xfce4-terminal-1.2.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://archive.xfce.org/src/apps/xfce4-terminal/1.2/xfce4-terminal-1.2.0.tar.xz">https://archive.xfce.org/src/apps/xfce4-terminal/1.2/xfce4-terminal-1.2.0.tar.xz</a>
 
 -   Download MD5 sum: 1662d52f7ffdcfde7c4ef76fd2358947
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 10 MB
 
 -   Estimated build time: 0.1 SBU
-:::
+</div>
 
 ### Xfce4 Terminal Dependencies
 
 #### Required
 
-[libxfce4ui-4.20.2](libxfce4ui.md "libxfce4ui-4.20.2"){.xref} and [VTE-0.84.0](../gnome/vte.md "VTE-0.84.0"){.xref}
+<a class="xref" href="libxfce4ui.md" title="libxfce4ui-4.20.2">libxfce4ui-4.20.2</a> and <a class="xref" href="../gnome/vte.md" title="VTE-0.84.0">VTE-0.84.0</a>
 
 #### Optional
 
-[gtk-layer-shell](https://github.com/wmww/gtk-layer-shell){.ulink}
-:::::
+<a class="ulink" href="https://github.com/wmww/gtk-layer-shell">gtk-layer-shell</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Xfce4 Terminal {#installation-of-xfce4-terminal .sect2}
+<div class="installation" lang="en">
+## Installation of Xfce4 Terminal {#installation-of-xfce4-terminal}
 
 First, work around a problem where functions from a package not in BLFS are used accidentally:
 
-``` userinput
+```bash
 sed -e '570i #ifdef HAVE_GTK_LAYER_SHELL' \
     -e '574a #endif'                      \
     -i  terminal/terminal-window-dropdown.c
 ```
 
-Install [Xfce4 Terminal]{.application} by running the following commands:
+Install <span class="application">Xfce4 Terminal</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -82,52 +82,52 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Program:** [xfce4-terminal]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Program:** <span class="segbody">xfce4-terminal</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directory:** [/usr/share/xfce4/terminal]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">/usr/share/xfce4/terminal</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- -----------------------------------------------
-  []{#xfce4-terminal-prog}[[**xfce4-terminal**]{.command}]{.term}   is a [GTK+ 3]{.application} terminal emulator
+  <a id="xfce4-terminal-prog"></a><span class="command"><span class="term"><strong>xfce4-terminal</strong></span></span>   is a <span class="application">GTK+ 3</span> terminal emulator
   ----------------------------------------------------------------- -----------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](parole.md "Parole-4.20.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](parole.md "Parole-4.20.0")
 
     Parole-4.20.0
 
--   [Next](xfburn.md "Xfburn-0.8.0"){accesskey="n"}
+-   [Next](xfburn.md "Xfburn-0.8.0")
 
     Xfburn-0.8.0
 
--   [Up](xfce-apps.md "Chapter 36. Xfce Applications"){accesskey="u"}
+-   [Up](xfce-apps.md "Chapter 36. Xfce Applications")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

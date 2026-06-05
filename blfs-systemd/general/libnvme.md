@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](libmbim.md "libmbim-1.34.0"){accesskey="p"}
+-   [Prev](libmbim.md "libmbim-1.34.0")
 
     libmbim-1.34.0
 
--   [Next](libpaper.md "libpaper-2.2.8"){accesskey="n"}
+-   [Next](libpaper.md "libpaper-2.2.8")
 
     libpaper-2.2.8
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libnvme}libnvme-1.16.1 {#libnvme-1.16.1 .sect1}
+# libnvme-1.16.1 {#libnvme-1.16.1}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libnvme {#introduction-to-libnvme .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libnvme {#introduction-to-libnvme}
 
-The [libnvme]{.application} package is a library which provides type definitions for NVMe specification structures, enumerations, and bit fields, helper functions to construct, dispatch, and decode commands and payloads, and utilities to connect, scan, and manage NVMe devices on a Linux system.
+The <span class="application">libnvme</span> package is a library which provides type definitions for NVMe specification structures, enumerations, and bit fields, helper functions to construct, dispatch, and decode commands and payloads, and utilities to connect, scan, and manage NVMe devices on a Linux system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/linux-nvme/libnvme/archive/v1.16.1/libnvme-1.16.1.tar.gz](https://github.com/linux-nvme/libnvme/archive/v1.16.1/libnvme-1.16.1.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/linux-nvme/libnvme/archive/v1.16.1/libnvme-1.16.1.tar.gz">https://github.com/linux-nvme/libnvme/archive/v1.16.1/libnvme-1.16.1.tar.gz</a>
 
 -   Download MD5 sum: 64207c770523f2817a6482d5103cf809
 
@@ -44,21 +44,21 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 32 MB
 
 -   Estimated build time: 0.1 SBU (including tests)
-:::
+</div>
 
 ### libnvme Dependencies
 
 #### Optional
 
-[JSON-C-0.18](json-c.md "JSON-C-0.18"){.xref}, [keyutils-1.6.3](keyutils.md "keyutils-1.6.3"){.xref}, and [SWIG-4.4.1](swig.md "SWIG-4.4.1"){.xref} (to generate the Python bindings)
-:::::
+<a class="xref" href="json-c.md" title="JSON-C-0.18">JSON-C-0.18</a>, <a class="xref" href="keyutils.md" title="keyutils-1.6.3">keyutils-1.6.3</a>, and <a class="xref" href="swig.md" title="SWIG-4.4.1">SWIG-4.4.1</a> (to generate the Python bindings)
+</div>
 
-::: {.installation lang="en"}
-## Installation of libnvme {#installation-of-libnvme .sect2}
+<div class="installation" lang="en">
+## Installation of libnvme {#installation-of-libnvme}
 
-Install [libnvme]{.application} by running the following commands:
+Install <span class="application">libnvme</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -66,54 +66,54 @@ meson setup --prefix=/usr --buildtype=release -D libdbus=auto .. &&
 ninja
 ```
 
-To run the tests, issue: [**ninja test**]{.command}.
+To run the tests, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Library:** [libnvme.so and libnvme-mi.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="segbody">libnvme.so and libnvme-mi.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/nvme and optionally /usr/lib/python3.14/site-packages/libnvme]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/nvme and optionally /usr/lib/python3.14/site-packages/libnvme</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- ------------------------------------------------------------------------
-  []{#libnvme-lib}[`libnvme.so`{.filename}]{.term}   contains functions used to handle operations relating to NVMe devices.
+  <a id="libnvme-lib"></a><span class="term"><code class="filename">libnvme.so</code></span>   contains functions used to handle operations relating to NVMe devices.
   -------------------------------------------------- ------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libmbim.md "libmbim-1.34.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libmbim.md "libmbim-1.34.0")
 
     libmbim-1.34.0
 
--   [Next](libpaper.md "libpaper-2.2.8"){accesskey="n"}
+-   [Next](libpaper.md "libpaper-2.2.8")
 
     libpaper-2.2.8
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

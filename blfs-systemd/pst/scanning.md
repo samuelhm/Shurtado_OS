@@ -1,44 +1,44 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Part XIII. Printing, Scanning and Typesetting
 
--   [Prev](libppd.md "libppd-2.1.1"){accesskey="p"}
+-   [Prev](libppd.md "libppd-2.1.1")
 
     libppd-2.1.1
 
--   [Next](sane.md "SANE-1.4.0"){accesskey="n"}
+-   [Next](sane.md "SANE-1.4.0")
 
     SANE-1.4.0
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#pst-scanning}Scanning {#scanning .chapter}
+# Scanning {#scanning}
 
-:::: {.chapter lang="en"}
+<div class="chapter" lang="en">
 This chapter contains scanning applications which allow you to convert printed documents into formatted documents readable by other applications.
 
-::: toc
+<div class="toc">
 ### Table of Contents
 
 -   [SANE-1.4.0](sane.md)
 -   [Simple-scan-50.0](simple-scan.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](libppd.md "libppd-2.1.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libppd.md "libppd-2.1.1")
 
     libppd-2.1.1
 
--   [Next](sane.md "SANE-1.4.0"){accesskey="n"}
+-   [Next](sane.md "SANE-1.4.0")
 
     SANE-1.4.0
 
--   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting"){accesskey="u"}
+-   [Up](pst.md "Part XIII. Printing, Scanning and Typesetting")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,33 +1,33 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../pst/xindy.md "xindy-2.5.1"){accesskey="p"}
+-   [Prev](../pst/xindy.md "xindy-2.5.1")
 
     xindy-2.5.1
 
--   [Next](../mit.md "The MIT License"){accesskey="n"}
+-   [Next](../mit.md "The MIT License")
 
     The MIT License
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#CC}Creative Commons License {#creative-commons-license .appendix}
+# Creative Commons License {#creative-commons-license}
 
-:::::: appendix
+<div class="appendix">
 Creative Commons Legal Code
 
 Attribution-NonCommercial-ShareAlike 2.0
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
 
 CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE INFORMATION PROVIDED, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM ITS USE.
-:::
+</div>
 
 License
 
@@ -35,7 +35,7 @@ THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS
 
 BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
 
-::: orderedlist
+<div class="orderedlist">
 1.  Definitions
 
     ::: orderedlist
@@ -119,9 +119,9 @@ BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE B
 
     5.  This License constitutes the entire agreement between the parties with respect to the Work licensed here. There are no understandings, agreements or representations with respect to the Work not specified here. Licensor shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Licensor and You.
     :::
-:::
+</div>
 
-::: {.admon .important}
+<div class="admon important">
 ![\[Important\]](../images/important.png)
 
 ### Important
@@ -130,20 +130,20 @@ Creative Commons is not a party to this License, and makes no warranty whatsoeve
 
 Except for the limited purpose of indicating to the public that the Work is licensed under the CCPL, neither party will use the trademark "Creative Commons" or any related trademark or logo of Creative Commons without the prior written consent of Creative Commons. Any permitted use will be in compliance with Creative Commons' then-current trademark usage guidelines, as may be published on its website or otherwise made available upon request from time to time.
 
-Creative Commons may be contacted at [http://creativecommons.org/](http://creativecommons.org/){.ulink}.
-:::
-::::::
+Creative Commons may be contacted at <a class="ulink" href="http://creativecommons.org/">http://creativecommons.org/</a>.
+</div>
+</div>
 
-::: navfooter
--   [Prev](../pst/xindy.md "xindy-2.5.1"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../pst/xindy.md "xindy-2.5.1")
 
     xindy-2.5.1
 
--   [Next](../mit.md "The MIT License"){accesskey="n"}
+-   [Next](../mit.md "The MIT License")
 
     The MIT License
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

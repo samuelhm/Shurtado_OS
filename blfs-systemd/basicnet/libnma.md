@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 17. Networking Libraries
 
--   [Prev](libnl.md "libnl-3.12.0"){accesskey="p"}
+-   [Prev](libnl.md "libnl-3.12.0")
 
     libnl-3.12.0
 
--   [Next](libnsl.md "libnsl-2.0.1"){accesskey="n"}
+-   [Next](libnsl.md "libnsl-2.0.1")
 
     libnsl-2.0.1
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libnma}libnma-1.10.6 {#libnma-1.10.6 .sect1}
+# libnma-1.10.6 {#libnma-1.10.6}
 
-::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libnma {#introduction-to-libnma .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libnma {#introduction-to-libnma}
 
-The [libnma]{.application} package contains an implementation of the [NetworkManager]{.application} GUI functions.
+The <span class="application">libnma</span> package contains an implementation of the <span class="application">NetworkManager</span> GUI functions.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/libnma/1.10/libnma-1.10.6.tar.xz](https://download.gnome.org/sources/libnma/1.10/libnma-1.10.6.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/libnma/1.10/libnma-1.10.6.tar.xz">https://download.gnome.org/sources/libnma/1.10/libnma-1.10.6.tar.xz</a>
 
 -   Download MD5 sum: 71c7ce674fea1fae8f1368a7fcb6ff43
 
@@ -44,29 +44,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 15 MB
 
 -   Estimated build time: 0.1 SBU (Using parallelism=4; with test)
-:::
+</div>
 
 ### libnma Dependencies
 
 #### Required
 
-[Gcr-3.41.2](../gnome/gcr.md "Gcr-3.41.2"){.xref}, [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref}, [ISO Codes-4.20.1](../general/iso-codes.md "ISO Codes-4.20.1"){.xref}, and [NetworkManager-1.56.1](networkmanager.md "NetworkManager-1.56.1"){.xref}
+<a class="xref" href="../gnome/gcr.md" title="Gcr-3.41.2">Gcr-3.41.2</a>, <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a>, <a class="xref" href="../general/iso-codes.md" title="ISO Codes-4.20.1">ISO Codes-4.20.1</a>, and <a class="xref" href="networkmanager.md" title="NetworkManager-1.56.1">NetworkManager-1.56.1</a>
 
 #### Recommended
 
-[GTK-4.22.4](../x/gtk4.md "GTK-4.22.4"){.xref} and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../x/gtk4.md" title="GTK-4.22.4">GTK-4.22.4</a> and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[mobile-broadband-provider-info](https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info){.ulink}
-:::::
+<a class="ulink" href="https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info">mobile-broadband-provider-info</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libnma {#installation-of-libnma .sect2}
+<div class="installation" lang="en">
+## Installation of libnma {#installation-of-libnma}
 
-Install [libnma]{.application} by running the following commands:
+Install <span class="application">libnma</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -79,67 +79,67 @@ meson setup ..            \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-*`-D gtk_doc=false`*: This parameter disables generating API documentation using gtk-doc. If you have [GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref} installed and wish to generate the API documentation, omit this switch.
+*`-D gtk_doc=false`*: This parameter disables generating API documentation using gtk-doc. If you have <a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> installed and wish to generate the API documentation, omit this switch.
 
-*`-D libnma_gtk4=true`*: This parameter builds the GTK-4 version of libnma. It is needed by [gnome-control-center-50.2](../gnome/gnome-control-center.md "gnome-control-center-50.2"){.xref}.
+*`-D libnma_gtk4=true`*: This parameter builds the GTK-4 version of libnma. It is needed by <a class="xref" href="../gnome/gnome-control-center.md" title="gnome-control-center-50.2">gnome-control-center-50.2</a>.
 
 *`-D mobile_broadband_provider_info=false`*: This switch disables WWAN support because mobile-broadband-provider-info is not in BLFS. Omit this switch if you have it installed and wish to enable WWAN support.
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libnma.so and libnma-gtk4.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libnma.so and libnma-gtk4.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/libnma]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/libnma</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ ------------------------------------------------------------------------------
-  []{#libnma-lib}[`libnma.so`{.filename}]{.term}         contains the [NetworkManager]{.application} GUI library
-  []{#libnma-gtk4}[`libnma-gtk4.so`{.filename}]{.term}   contains the GTK-4 version of the [NetworkManager]{.application} GUI library
+  <a id="libnma-lib"></a><span class="term"><code class="filename">libnma.so</code></span>         contains the <span class="application">NetworkManager</span> GUI library
+  <a id="libnma-gtk4"></a><span class="term"><code class="filename">libnma-gtk4.so</code></span>   contains the GTK-4 version of the <span class="application">NetworkManager</span> GUI library
   ------------------------------------------------------ ------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libnl.md "libnl-3.12.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libnl.md "libnl-3.12.0")
 
     libnl-3.12.0
 
--   [Next](libnsl.md "libnsl-2.0.1"){accesskey="n"}
+-   [Next](libnsl.md "libnsl-2.0.1")
 
     libnsl-2.0.1
 
--   [Up](netlibs.md "Chapter 17. Networking Libraries"){accesskey="u"}
+-   [Up](netlibs.md "Chapter 17. Networking Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,30 +1,30 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 13. Programming
 
--   [Prev](openjdk.md "OpenJDK-21.0.10"){accesskey="p"}
+-   [Prev](openjdk.md "OpenJDK-21.0.10")
 
     OpenJDK-21.0.10
 
--   [Next](apache-ant.md "apache-ant-1.10.17"){accesskey="n"}
+-   [Next](apache-ant.md "apache-ant-1.10.17")
 
     apache-ant-1.10.17
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#ojdk-conf}Configuring the Java environment {#configuring-the-java-environment .sect1}
+# Configuring the Java environment {#configuring-the-java-environment}
 
-::::: {.sect1 lang="en"}
-::: {.sect2 lang="en"}
-## []{#java-profile}Setting up the environment {#setting-up-the-environment .sect2}
+<div class="sect1" lang="en">
+<div class="sect2" lang="en">
+## Setting up the environment {#setting-up-the-environment}
 
-After the package installation is complete, the next step is to make sure that the system can properly find the files. If you set up your login scripts as recommended in [The Bash Shell Startup Files](../postlfs/profile.md "The Bash Shell Startup Files"){.xref}, update the environment by creating the `openjdk.sh`{.filename} script, as the `root`{.systemitem} user:
+After the package installation is complete, the next step is to make sure that the system can properly find the files. If you set up your login scripts as recommended in <a class="xref" href="../postlfs/profile.md" title="The Bash Shell Startup Files">The Bash Shell Startup Files</a>, update the environment by creating the <code class="filename">openjdk.sh</code> script, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/profile.d/openjdk.sh << "EOF"
 # Begin /etc/profile.d/openjdk.sh
 
@@ -65,9 +65,9 @@ unset AUTO_CLASSPATH_DIR dir jar _JAVA_OPTIONS
 EOF
 ```
 
-If [Sudo-1.9.17p2](../postlfs/sudo.md "Sudo-1.9.17p2"){.xref} is installed, the super user should have access to the above variables. Execute the following commands as the `root`{.systemitem} user:
+If <a class="xref" href="../postlfs/sudo.md" title="Sudo-1.9.17p2">Sudo-1.9.17p2</a> is installed, the super user should have access to the above variables. Execute the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat > /etc/sudoers.d/java << "EOF"
 Defaults env_keep += JAVA_HOME
 Defaults env_keep += CLASSPATH
@@ -75,9 +75,9 @@ Defaults env_keep += _JAVA_OPTIONS
 EOF
 ```
 
-To use [**mandb**]{.command} to include the OpenJDK man pages in its database, issue, as the `root`{.systemitem} user:
+To use <span class="command"><strong>mandb</strong></span> to include the OpenJDK man pages in its database, issue, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 cat >> /etc/man_db.conf << "EOF" &&
 # Begin Java addition
 MANDATORY_MANPATH     /opt/jdk/man
@@ -89,39 +89,39 @@ EOF
 mkdir -p /var/cache/man &&
 mandb -c /opt/jdk/man
 ```
-:::
+</div>
 
-::: {.sect2 lang="en"}
-## []{#ojdk-certs}Setting up the Certificate Authority Certificates for Java {#setting-up-the-certificate-authority-certificates-for-java .sect2}
+<div class="sect2" lang="en">
+## Setting up the Certificate Authority Certificates for Java {#setting-up-the-certificate-authority-certificates-for-java}
 
-[OpenJDK]{.application} uses its own format for the CA certificates. The Java security modules use `$JAVA_HOME`{.envar}`/lib/security/cacerts`{.filename} by default. In order to keep all the certificates in one place, we use `/etc/pki/tls/java/cacerts`{.filename}. The instructions on the [make-ca-1.16.1](../postlfs/make-ca.md "make-ca-1.16.1"){.xref} page previously created the file located in `/etc/pki/tls/java`{.filename}. Set up a symlink in the default location as the `root`{.systemitem} user:
+<span class="application">OpenJDK</span> uses its own format for the CA certificates. The Java security modules use <code class="envar">$JAVA_HOME</code><code class="filename">/lib/security/cacerts</code> by default. In order to keep all the certificates in one place, we use <code class="filename">/etc/pki/tls/java/cacerts</code>. The instructions on the <a class="xref" href="../postlfs/make-ca.md" title="make-ca-1.16.1">make-ca-1.16.1</a> page previously created the file located in <code class="filename">/etc/pki/tls/java</code>. Set up a symlink in the default location as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts
 ```
 
-Use the following command to check if the `cacerts`{.filename} file has been successfully installed:
+Use the following command to check if the <code class="filename">cacerts</code> file has been successfully installed:
 
-``` root
+```bash
 /opt/jdk/bin/keytool -list -cacerts
 ```
 
-At the prompt `Enter keystore password:`{.computeroutput}, enter **`changeit`** (the default) or just press the [“[Enter]{.quote}”]{.quote} key. If the `cacerts`{.filename} file was installed correctly, you will see a list of the certificates with related information for each one. If not, you need to reinstall them.
+At the prompt <code class="computeroutput">Enter keystore password:</code>, enter **`changeit`** (the default) or just press the <span class="quote">“<span class="quote">Enter</span>”</span> key. If the <code class="filename">cacerts</code> file was installed correctly, you will see a list of the certificates with related information for each one. If not, you need to reinstall them.
 
 If you later install a new JVM, you just have to create the symlink in the default location to be able to use the cacerts.
-:::
-:::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](openjdk.md "OpenJDK-21.0.10"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](openjdk.md "OpenJDK-21.0.10")
 
     OpenJDK-21.0.10
 
--   [Next](apache-ant.md "apache-ant-1.10.17"){accesskey="n"}
+-   [Next](apache-ant.md "apache-ant-1.10.17")
 
     apache-ant-1.10.17
 
--   [Up](prog.md "Chapter 13. Programming"){accesskey="u"}
+-   [Up](prog.md "Chapter 13. Programming")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](sg3_utils.md "sg3_utils-1.48"){accesskey="p"}
+-   [Prev](sg3_utils.md "sg3_utils-1.48")
 
     sg3_utils-1.48
 
--   [Next](sysmon3.md "sysmon3-3.0.3"){accesskey="n"}
+-   [Next](sysmon3.md "sysmon3-3.0.3")
 
     sysmon3-3.0.3
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#sysmond}sysmond-1.0.1 {#sysmond-1.0.1 .sect1}
+# sysmond-1.0.1 {#sysmond-1.0.1}
 
-::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to sysmond {#introduction-to-sysmond .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to sysmond {#introduction-to-sysmond}
 
-The [sysmond]{.application} package (pronounced sys-mon-d) is the daemon portion of the sysmond/sysmon3 client/server application that monitors system values including CPU usage, memory usage, and system temperatures in a compact screen window.
+The <span class="application">sysmond</span> package (pronounced sys-mon-d) is the daemon portion of the sysmond/sysmon3 client/server application that monitors system values including CPU usage, memory usage, and system temperatures in a compact screen window.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/lfs-book/sysmond/releases/download/sysmond-1.0.1/sysmond-1.0.1.tar.xz](https://github.com/lfs-book/sysmond/releases/download/sysmond-1.0.1/sysmond-1.0.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/lfs-book/sysmond/releases/download/sysmond-1.0.1/sysmond-1.0.1.tar.xz">https://github.com/lfs-book/sysmond/releases/download/sysmond-1.0.1/sysmond-1.0.1.tar.xz</a>
 
 -   Download MD5 sum: 8633f400cf9491f575fe419f1ed59d1a
 
@@ -44,93 +44,93 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 200 KB
 
 -   Estimated build time: less than 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.kernel lang="en"}
-## []{#sysmond-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-There are many different hardware devices that sense temperatures. The temperature readings are updated by kernel drivers that support specific devices. To determine what devices are present on a system the [lm-sensors-3-6-2](lm-sensors.md "lm-sensors-3-6-2"){.xref} package has a Perl script, [**sensors-detect**]{.command} that can look for specific devices that are in the current system.
+There are many different hardware devices that sense temperatures. The temperature readings are updated by kernel drivers that support specific devices. To determine what devices are present on a system the <a class="xref" href="lm-sensors.md" title="lm-sensors-3-6-2">lm-sensors-3-6-2</a> package has a Perl script, <span class="command"><strong>sensors-detect</strong></span> that can look for specific devices that are in the current system.
 
 After sensor devices are known, the appropriate kernel driver must be enabled. In many cases, but not all, the appropriate drivers are selected by default. The kernel configuration parameters are located at:
 
-``` screen
+```console
 Device Drivers --->                                    
   [*] Hardware Monitoring support --->        [CONFIG_HWMON]
 ```
 
 In most cases at least Intel Core/Core2/Atom temperature sensor (SENSORS_CORETEMP) should be enabled for Intel based systems or CONFIG_SENSORS_K10TEMP (AMD) should be enabled for AMD based systems.
-:::
+</div>
 
-::: {.installation lang="en"}
-## Installation of sysmond {#installation-of-sysmond .sect2}
+<div class="installation" lang="en">
+## Installation of sysmond {#installation-of-sysmond}
 
-Install [sysmond]{.application} by running the following commands:
+Install <span class="application">sysmond</span> by running the following commands:
 
-``` userinput
+```bash
 make
 ```
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring sysmond {#configuring-sysmond .sect2}
+<div class="configuration" lang="en">
+## Configuring sysmond {#configuring-sysmond}
 
-::: {.sect3 lang="en"}
-### []{#sysmond-init} Systemd Unit {#systemd-unit .sect3}
+<div class="sect3" lang="en">
+### Systemd Unit {#systemd-unit}
 
-To start the [**sysmond**]{.command} daemon at boot, install the systemd unit from the [blfs-systemd-units-20251204](../introduction/systemd-units.md "BLFS Systemd Units"){.xref} package by running the following command as the `root`{.systemitem} user:
+To start the <span class="command"><strong>sysmond</strong></span> daemon at boot, install the systemd unit from the <a class="xref" href="../introduction/systemd-units.md" title="BLFS Systemd Units">blfs-systemd-units-20251204</a> package by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install-sysmond
 ```
-:::
+</div>
 
-::: {.sect3 lang="en"}
-### []{#sysmond-config}Config File {#config-file .sect3}
+<div class="sect3" lang="en">
+### Config File {#config-file}
 
-By default the configuration file is `/etc/sysmond.conf`{.filename} but it can be changed by passing --config-file \<filename\> on the command line. Initially all of the configuration items are commented out and the defaults specified there are used.
-:::
-:::::
+By default the configuration file is <code class="filename">/etc/sysmond.conf</code> but it can be changed by passing --config-file \<filename\> on the command line. Initially all of the configuration items are commented out and the defaults specified there are used.
+</div>
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [sysmond]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">sysmond</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](sg3_utils.md "sg3_utils-1.48"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](sg3_utils.md "sg3_utils-1.48")
 
     sg3_utils-1.48
 
--   [Next](sysmon3.md "sysmon3-3.0.3"){accesskey="n"}
+-   [Next](sysmon3.md "sysmon3-3.0.3")
 
     sysmon3-3.0.3
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

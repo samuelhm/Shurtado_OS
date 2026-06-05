@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 48. Standard Generalized Markup Language (SGML)
 
--   [Prev](docbook-4.5-dtd.md "docbook-4.5-dtd"){accesskey="p"}
+-   [Prev](docbook-4.5-dtd.md "docbook-4.5-dtd")
 
     docbook-4.5-dtd
 
--   [Next](openjade.md "OpenJade-1.3.2"){accesskey="n"}
+-   [Next](openjade.md "OpenJade-1.3.2")
 
     OpenJade-1.3.2
 
--   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)"){accesskey="u"}
+-   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#opensp}OpenSP-1.5.2 {#opensp-1.5.2 .sect1}
+# OpenSP-1.5.2 {#opensp-1.5.2}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to OpenSP {#introduction-to-opensp .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to OpenSP {#introduction-to-opensp}
 
-The [OpenSP]{.application} package contains a [C++]{.application} library for using SGML/XML files. This is useful for validating, parsing and manipulating SGML and XML documents.
+The <span class="application">OpenSP</span> package contains a <span class="application">C++</span> library for using SGML/XML files. This is useful for validating, parsing and manipulating SGML and XML documents.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://downloads.sourceforge.net/openjade/OpenSP-1.5.2.tar.gz](https://downloads.sourceforge.net/openjade/OpenSP-1.5.2.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://downloads.sourceforge.net/openjade/OpenSP-1.5.2.tar.gz">https://downloads.sourceforge.net/openjade/OpenSP-1.5.2.tar.gz</a>
 
 -   Download MD5 sum: 670b223c5d12cee40c9137be86b6c39b
 
@@ -44,31 +44,31 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 32 MB
 
 -   Estimated build time: 1.0 SBU
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Required patch: [https://www.linuxfromscratch.org/patches/blfs/svn/OpenSP-1.5.2-gcc14-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/OpenSP-1.5.2-gcc14-1.patch){.ulink}
-:::
+<div class="itemizedlist">
+-   Required patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/OpenSP-1.5.2-gcc14-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/OpenSP-1.5.2-gcc14-1.patch</a>
+</div>
 
 ### OpenSP Dependencies
 
 #### Required
 
-[sgml-common-0.6.3](sgml-common.md "sgml-common-0.6.3"){.xref}
+<a class="xref" href="sgml-common.md" title="sgml-common-0.6.3">sgml-common-0.6.3</a>
 
 #### Optional
 
-[libnsl-2.0.1](../basicnet/libnsl.md "libnsl-2.0.1"){.xref} and [xmlto-0.0.29](xmlto.md "xmlto-0.0.29"){.xref}
-::::::
+<a class="xref" href="../basicnet/libnsl.md" title="libnsl-2.0.1">libnsl-2.0.1</a> and <a class="xref" href="xmlto.md" title="xmlto-0.0.29">xmlto-0.0.29</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of OpenSP {#installation-of-opensp .sect2}
+<div class="installation" lang="en">
+## Installation of OpenSP {#installation-of-opensp}
 
-Install [OpenSP]{.application} by running the following commands:
+Install <span class="application">OpenSP</span> by running the following commands:
 
-``` userinput
+```bash
 patch -Np1 -i ../OpenSP-1.5.2-gcc14-1.patch              &&
 sed -i 's/32,/253,/' lib/Syntax.cxx                      &&
 sed -i 's/LITLEN          240 /LITLEN          8092/'    \
@@ -84,11 +84,11 @@ sed -i 's/LITLEN          240 /LITLEN          8092/'    \
 make pkgdatadir=/usr/share/sgml/OpenSP-1.5.2
 ```
 
-To test the results, issue: [**make check**]{.command}. The `catalog-2`{.filename}, `af-7`{.filename}, `af-8`{.filename}, `af-9`{.filename}, `af-10`{.filename}, and `af-11`{.filename} tests are known to fail.
+To test the results, issue: <span class="command"><strong>make check</strong></span>. The <code class="filename">catalog-2</code>, <code class="filename">af-7</code>, <code class="filename">af-8</code>, <code class="filename">af-9</code>, <code class="filename">af-10</code>, and <code class="filename">af-11</code> tests are known to fail.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make pkgdatadir=/usr/share/sgml/OpenSP-1.5.2 \
      docdir=/usr/share/doc/OpenSP-1.5.2      \
      install &&
@@ -102,83 +102,83 @@ ln -v -sf osx       /usr/bin/sx       &&
 ln -v -sf osx       /usr/bin/sgml2xml &&
 ln -v -sf libosp.so /usr/lib/libsp.so
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-[**sed -i 's/32,/253,/...unicode.syn}**]{.command}: These seds prevent some annoying messages that may otherwise appear while running [**openjade**]{.command}.
+<span class="command"><strong>sed -i 's/32,/253,/...unicode.syn}</strong></span>: These seds prevent some annoying messages that may otherwise appear while running <span class="command"><strong>openjade</strong></span>.
 
 *`--disable-static`*: This switch prevents installation of static versions of the libraries.
 
 *`--enable-http`*: This switch adds support for HTTP.
 
-*`--disable-doc-build`*: This switch prevents the [**configure**]{.command} script checking if you have [xmlto]{.application} installed. If you have [xmlto]{.application}, you can remove this option.
+*`--disable-doc-build`*: This switch prevents the <span class="command"><strong>configure</strong></span> script checking if you have <span class="application">xmlto</span> installed. If you have <span class="application">xmlto</span>, you can remove this option.
 
 *`--enable-default-catalog=/etc/sgml/catalog`*: This switch sets the path to the centralized catalog.
 
-*`--enable-default-search-path`*: This switch sets the default value of `SGML_SEARCH_PATH`{.envar}.
+*`--enable-default-search-path`*: This switch sets the default value of <code class="envar">SGML_SEARCH_PATH</code>.
 
-`--enable-xml-messages`{.option}: This switch adds support for XML Formatted Messages.
+<code class="option">--enable-xml-messages</code>: This switch adds support for XML Formatted Messages.
 
-[**make pkgdatadir=/usr/share/sgml/OpenSP-1.5.2**]{.command} : This sets the pkgdatadir variable in the `Makefile`{.filename} from `/usr/share/OpenSP`{.filename} to `/usr/share/sgml/OpenSP-1.5.2`{.filename}.
+<span class="command"><strong>make pkgdatadir=/usr/share/sgml/OpenSP-1.5.2</strong></span> : This sets the pkgdatadir variable in the <code class="filename">Makefile</code> from <code class="filename">/usr/share/OpenSP</code> to <code class="filename">/usr/share/sgml/OpenSP-1.5.2</code>.
 
-[**ln -v -sf ...**]{.command}: These commands create the [SP]{.application} equivalents of [OpenSP]{.application} executables and libraries.
-:::
+<span class="command"><strong>ln -v -sf ...</strong></span>: These commands create the <span class="application">SP</span> equivalents of <span class="application">OpenSP</span> executables and libraries.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [onsgmls, osgmlnorm, ospam, ospcat, ospent, osx, and the [SP]{.application} equivalent symlinks: nsgmls, sgml2xml, sgmlnorm, spam, spcat, spent, and sx]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="application">onsgmls, osgmlnorm, ospam, ospcat, ospent, osx, and the <span class="segbody">SP</span> equivalent symlinks: nsgmls, sgml2xml, sgmlnorm, spam, spcat, spent, and sx</span>
+</div>
 
-::: seg
-**Installed Library:** [libosp.so and the [SP]{.application} equivalent symlink: libsp.so]{.segbody}
-:::
+<div class="seg">
+**Installed Library:** <span class="application">libosp.so and the <span class="segbody">SP</span> equivalent symlink: libsp.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/include/OpenSP, /usr/share/doc/OpenSP, and /usr/share/sgml/OpenSP-1.5.2]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/include/OpenSP, /usr/share/doc/OpenSP, and /usr/share/sgml/OpenSP-1.5.2</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#onsgmls}[[**onsgmls**]{.command}]{.term}       is used to process SGML files
-  []{#osgmlnorm}[[**osgmlnorm**]{.command}]{.term}   prints on the standard output a normalized document instance for the SGML document contained in the concatenation of the entities with system identifiers .nf and .fi
-  []{#ospam}[[**ospam**]{.command}]{.term}           is a markup stream editor
-  []{#ospcat}[[**ospcat**]{.command}]{.term}         prints effective system identifiers found in the catalogs
-  []{#ospent}[[**ospent**]{.command}]{.term}         provides access to [OpenSP]{.application}'s entity manager
-  []{#osx}[[**osx**]{.command}]{.term}               is an SGML normalizer or used to convert SGML files to XML files
-  []{#nsgmls}[[**nsgmls**]{.command}]{.term}         is a symlink to [**onsgmls**]{.command}
-  []{#sgml2xml}[[**sgml2xml**]{.command}]{.term}     is a symlink to [**osx**]{.command}
-  []{#sgmlnorm}[[**sgmlnorm**]{.command}]{.term}     is a symlink to [**osgmlnorm**]{.command}
-  []{#spam}[[**spam**]{.command}]{.term}             is a symlink to [**ospam**]{.command}
-  []{#spcat}[[**spcat**]{.command}]{.term}           is a symlink to [**ospcat**]{.command}
-  []{#spent}[[**spent**]{.command}]{.term}           is a symlink to [**ospent**]{.command}
-  []{#sx}[[**sx**]{.command}]{.term}                 is a symlink to [**osx**]{.command}
-  []{#libosp}[`libosp.so`{.filename}]{.term}         contains functions required by the [OpenSP]{.application} programs to parse, validate and manipulate SGML and XML files
-  []{#libsp}[`libsp.so`{.filename}]{.term}           is a symlink to `libosp.so`{.filename}
+  <a id="onsgmls"></a><span class="command"><span class="term"><strong>onsgmls</strong></span></span>       is used to process SGML files
+  <a id="osgmlnorm"></a><span class="command"><span class="term"><strong>osgmlnorm</strong></span></span>   prints on the standard output a normalized document instance for the SGML document contained in the concatenation of the entities with system identifiers .nf and .fi
+  <a id="ospam"></a><span class="command"><span class="term"><strong>ospam</strong></span></span>           is a markup stream editor
+  <a id="ospcat"></a><span class="command"><span class="term"><strong>ospcat</strong></span></span>         prints effective system identifiers found in the catalogs
+  <a id="ospent"></a><span class="command"><span class="term"><strong>ospent</strong></span></span>         provides access to <span class="application">OpenSP</span>'s entity manager
+  <a id="osx"></a><span class="command"><span class="term"><strong>osx</strong></span></span>               is an SGML normalizer or used to convert SGML files to XML files
+  <a id="nsgmls"></a><span class="command"><span class="term"><strong>nsgmls</strong></span></span>         is a symlink to <span class="command"><strong>onsgmls</strong></span>
+  <a id="sgml2xml"></a><span class="command"><span class="term"><strong>sgml2xml</strong></span></span>     is a symlink to <span class="command"><strong>osx</strong></span>
+  <a id="sgmlnorm"></a><span class="command"><span class="term"><strong>sgmlnorm</strong></span></span>     is a symlink to <span class="command"><strong>osgmlnorm</strong></span>
+  <a id="spam"></a><span class="command"><span class="term"><strong>spam</strong></span></span>             is a symlink to <span class="command"><strong>ospam</strong></span>
+  <a id="spcat"></a><span class="command"><span class="term"><strong>spcat</strong></span></span>           is a symlink to <span class="command"><strong>ospcat</strong></span>
+  <a id="spent"></a><span class="command"><span class="term"><strong>spent</strong></span></span>           is a symlink to <span class="command"><strong>ospent</strong></span>
+  <a id="sx"></a><span class="command"><span class="term"><strong>sx</strong></span></span>                 is a symlink to <span class="command"><strong>osx</strong></span>
+  <a id="libosp"></a><span class="term"><code class="filename">libosp.so</code></span>         contains functions required by the <span class="application">OpenSP</span> programs to parse, validate and manipulate SGML and XML files
+  <a id="libsp"></a><span class="term"><code class="filename">libsp.so</code></span>           is a symlink to <code class="filename">libosp.so</code>
   -------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](docbook-4.5-dtd.md "docbook-4.5-dtd"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](docbook-4.5-dtd.md "docbook-4.5-dtd")
 
     docbook-4.5-dtd
 
--   [Next](openjade.md "OpenJade-1.3.2"){accesskey="n"}
+-   [Next](openjade.md "OpenJade-1.3.2")
 
     OpenJade-1.3.2
 
--   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)"){accesskey="u"}
+-   [Up](sgml.md "Chapter 48. Standard Generalized Markup Language (SGML)")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

@@ -1,43 +1,43 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 33. GNOME Libraries and Desktop
 
--   [Prev](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){accesskey="p"}
+-   [Prev](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0")
 
     xdg-desktop-portal-gnome-50.0
 
--   [Next](gnome-backgrounds.md "gnome-backgrounds-50.0"){accesskey="n"}
+-   [Next](gnome-backgrounds.md "gnome-backgrounds-50.0")
 
     gnome-backgrounds-50.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#dconf}DConf-0.49.0 / DConf-Editor-49.0 {#dconf-0.49.0-dconf-editor-49.0 .sect1}
+# DConf-0.49.0 / DConf-Editor-49.0 {#dconf-0.49.0-dconf-editor-49.0}
 
-:::::::::::::::: {.sect1 lang="en"}
-:::::: {.package lang="en"}
-## Introduction to DConf {#introduction-to-dconf .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to DConf {#introduction-to-dconf}
 
-The [DConf]{.application} package contains a low-level configuration system. Its main purpose is to provide a backend to GSettings on platforms that don't already have configuration storage systems.
+The <span class="application">DConf</span> package contains a low-level configuration system. Its main purpose is to provide a backend to GSettings on platforms that don't already have configuration storage systems.
 
-The [DConf-Editor]{.application}, as the name suggests, is a graphical editor for the [DConf]{.application} database. Installation is optional, because [**gsettings**]{.command} from [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref} provides similar functionality on the commandline.
+The <span class="application">DConf-Editor</span>, as the name suggests, is a graphical editor for the <span class="application">DConf</span> database. Installation is optional, because <span class="command"><strong>gsettings</strong></span> from <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a> provides similar functionality on the commandline.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz](https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz">https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz</a>
 
 -   Download MD5 sum: 1a3ff8a464a4d9ebbaf112005bfed95a
 
@@ -46,12 +46,12 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 9.7 MB (with tests)
 
 -   Estimated build time: 0.1 SBU (with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
--   Download (HTTP): [https://download.gnome.org/sources/dconf-editor/49/dconf-editor-49.0.tar.xz](https://download.gnome.org/sources/dconf-editor/49/dconf-editor-49.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.gnome.org/sources/dconf-editor/49/dconf-editor-49.0.tar.xz">https://download.gnome.org/sources/dconf-editor/49/dconf-editor-49.0.tar.xz</a>
 
 -   Download MD5 sum: a1fa0f26ceffdcdb84d16c1b079a65a7
 
@@ -60,29 +60,29 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 23 MB
 
 -   Estimated build time: 0.2 SBU
-:::
+</div>
 
 ### DConf Dependencies
 
 #### Required
 
-[dbus-1.16.2](../general/dbus.md "dbus-1.16.2"){.xref}, [GLib-2.88.1](../general/glib2.md "GLib-2.88.1"){.xref}, [GTK-3.24.52](../x/gtk3.md "GTK-3.24.52"){.xref} (for the editor), [libhandy-1.8.3](../x/libhandy1.md "libhandy-1.8.3"){.xref} (for the editor), and [libxml2-2.15.3](../general/libxml2.md "libxml2-2.15.3"){.xref} (for the editor)
+<a class="xref" href="../general/dbus.md" title="dbus-1.16.2">dbus-1.16.2</a>, <a class="xref" href="../general/glib2.md" title="GLib-2.88.1">GLib-2.88.1</a>, <a class="xref" href="../x/gtk3.md" title="GTK-3.24.52">GTK-3.24.52</a> (for the editor), <a class="xref" href="../x/libhandy1.md" title="libhandy-1.8.3">libhandy-1.8.3</a> (for the editor), and <a class="xref" href="../general/libxml2.md" title="libxml2-2.15.3">libxml2-2.15.3</a> (for the editor)
 
 #### Recommended
 
-[libxslt-1.1.45](../general/libxslt.md "libxslt-1.1.45"){.xref} and [Vala-0.56.19](../general/vala.md "Vala-0.56.19"){.xref}
+<a class="xref" href="../general/libxslt.md" title="libxslt-1.1.45">libxslt-1.1.45</a> and <a class="xref" href="../general/vala.md" title="Vala-0.56.19">Vala-0.56.19</a>
 
 #### Optional
 
-[GTK-Doc-1.36.1](../general/gtk-doc.md "GTK-Doc-1.36.1"){.xref} and [bash-completion](https://github.com/scop/bash-completion){.ulink}
-::::::
+<a class="xref" href="../general/gtk-doc.md" title="GTK-Doc-1.36.1">GTK-Doc-1.36.1</a> and <a class="ulink" href="https://github.com/scop/bash-completion">bash-completion</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of DConf {#installation-of-dconf .sect2}
+<div class="installation" lang="en">
+## Installation of DConf {#installation-of-dconf}
 
-Install [DConf]{.application} by running the following commands:
+Install <span class="application">DConf</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -93,17 +93,17 @@ meson setup --prefix=/usr            \
 ninja
 ```
 
-To test the results, issue: [**dbus-run-session ninja test**]{.command}
+To test the results, issue: <span class="command"><strong>dbus-run-session ninja test</strong></span>
 
-As the `root`{.systemitem} user:
+As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
 
 Now, optionally install the editor:
 
-``` userinput
+```bash
 cd ..              &&
 tar -xf ../dconf-editor-49.0.tar.xz &&
 cd dconf-editor-49.0                &&
@@ -115,62 +115,62 @@ meson setup --prefix=/usr --buildtype=release .. &&
 ninja
 ```
 
-As the `root`{.systemitem} user:
+As the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
 *`--buildtype=release`*: Specify a buildtype suitable for stable releases of the package, as the default may produce unoptimized binaries.
 
-`-D gtk_doc=true`{.option}: Use this parameter if [GTK-Doc]{.application} is installed and you wish to rebuild and install the API documentation.
-:::
+<code class="option">-D gtk_doc=true</code>: Use this parameter if <span class="application">GTK-Doc</span> is installed and you wish to rebuild and install the API documentation.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [dconf and dconf-editor]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">dconf and dconf-editor</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libdconf.so and libdconfsettings.so (GIO Module installed in `/usr/lib/gio/modules`{.filename})]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libdconf.so and libdconfsettings.so (GIO Module installed in <code class="filename">/usr/lib/gio/modules</code>)</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/{include,share/gtk-doc/html}/dconf]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/{include,share/gtk-doc/html}/dconf</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   -------------------------------------------------------- -----------------------------------------------------------------------
-  []{#dconf-prog}[[**dconf**]{.command}]{.term}            is a simple tool for manipulating the [DConf]{.application} database
-  []{#dconf-editor}[[**dconf-editor**]{.command}]{.term}   is a graphical program for editing the [DConf]{.application} database
-  []{#libdconf}[`libdconf.so`{.filename}]{.term}           contains the [DConf]{.application} client API functions
+  <a id="dconf-prog"></a><span class="command"><span class="term"><strong>dconf</strong></span></span>            is a simple tool for manipulating the <span class="application">DConf</span> database
+  <a id="dconf-editor"></a><span class="command"><span class="term"><strong>dconf-editor</strong></span></span>   is a graphical program for editing the <span class="application">DConf</span> database
+  <a id="libdconf"></a><span class="term"><code class="filename">libdconf.so</code></span>           contains the <span class="application">DConf</span> client API functions
   -------------------------------------------------------- -----------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xdg-desktop-portal-gnome.md "xdg-desktop-portal-gnome-50.0")
 
     xdg-desktop-portal-gnome-50.0
 
--   [Next](gnome-backgrounds.md "gnome-backgrounds-50.0"){accesskey="n"}
+-   [Next](gnome-backgrounds.md "gnome-backgrounds-50.0")
 
     gnome-backgrounds-50.0
 
--   [Up](core.md "Chapter 33. GNOME Libraries and Desktop"){accesskey="u"}
+-   [Up](core.md "Chapter 33. GNOME Libraries and Desktop")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

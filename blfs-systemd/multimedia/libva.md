@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 42. Multimedia Libraries and Drivers
 
--   [Prev](libsndfile.md "libsndfile-1.2.2"){accesskey="p"}
+-   [Prev](libsndfile.md "libsndfile-1.2.2")
 
     libsndfile-1.2.2
 
--   [Next](libvorbis.md "libvorbis-1.3.7"){accesskey="n"}
+-   [Next](libvorbis.md "libvorbis-1.3.7")
 
     libvorbis-1.3.7
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#libva}libva-2.23.0 {#libva-2.23.0 .sect1}
+# libva-2.23.0 {#libva-2.23.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to libva {#introduction-to-libva .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to libva {#introduction-to-libva}
 
-The [libva]{.application} package contains a library which provides access to hardware accelerated video processing, using hardware to accelerate video processing in order to offload the central processing unit (CPU) to decode and encode compressed digital video. The VA API video decode/encode interface is platform and window system independent targeted at Direct Rendering Infrastructure (DRI) in the X Window System however it can potentially also be used with direct framebuffer and graphics sub-systems for video output. Accelerated processing includes support for video decoding, video encoding, subpicture blending, and rendering.
+The <span class="application">libva</span> package contains a library which provides access to hardware accelerated video processing, using hardware to accelerate video processing in order to offload the central processing unit (CPU) to decode and encode compressed digital video. The VA API video decode/encode interface is platform and window system independent targeted at Direct Rendering Infrastructure (DRI) in the X Window System however it can potentially also be used with direct framebuffer and graphics sub-systems for video output. Accelerated processing includes support for video decoding, video encoding, subpicture blending, and rendering.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://github.com/intel/libva/archive/2.23.0/libva-2.23.0.tar.gz](https://github.com/intel/libva/archive/2.23.0/libva-2.23.0.tar.gz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://github.com/intel/libva/archive/2.23.0/libva-2.23.0.tar.gz">https://github.com/intel/libva/archive/2.23.0/libva-2.23.0.tar.gz</a>
 
 -   Download MD5 sum: 826c08e6965d2059e7a6dc98e3292b88
 
@@ -44,33 +44,33 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 4.8 MB
 
 -   Estimated build time: less than 0.1 SBU
-:::
+</div>
 
 ### libva Dependencies
 
 #### Required
 
-[Xorg build environment](../x/xorg7.md#xorg-env "Setting up the Xorg Build Environment"){.xref} and [libdrm-2.4.134](../x/libdrm.md "Libdrm-2.4.134"){.xref}
+<a class="xref" href="../x/xorg7.md#xorg-env" title="Setting up the Xorg Build Environment">Xorg build environment</a> and <a class="xref" href="../x/libdrm.md" title="Libdrm-2.4.134">libdrm-2.4.134</a>
 
 #### Recommended
 
-[Mesa-26.0.7](../x/mesa.md "Mesa-26.0.7"){.xref}
+<a class="xref" href="../x/mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a>
 
 #### Recommended (Runtime)
 
-The VA API driver suitable for the hardware in your system: [intel-vaapi-driver-2.4.1](intel-vaapi-driver.md "intel-vaapi-driver-2.4.1"){.xref} (for Intel GPUs provided with Haswell CPUs or earlier), [intel-media-driver-26.1.5](intel-media-driver.md "intel-media-driver-26.1.5"){.xref} (for Intel GPUs provided with Broadwell CPUs or later and Intel Arc GPUs), and [Mesa-26.0.7](../x/mesa.md "Mesa-26.0.7"){.xref} (providing the `r600`{.literal}, `radeonsi`{.literal}, and `nouveau`{.literal} VA API drivers, for the ATI/AMD Radeon HD 2xxx GPUs and later, and [supported NVIDIA GPUs](https://nouveau.freedesktop.org/VideoAcceleration.md){.ulink}; there is a circular dependency, read the Mesa page for information on how to break it)
+The VA API driver suitable for the hardware in your system: <a class="xref" href="intel-vaapi-driver.md" title="intel-vaapi-driver-2.4.1">intel-vaapi-driver-2.4.1</a> (for Intel GPUs provided with Haswell CPUs or earlier), <a class="xref" href="intel-media-driver.md" title="intel-media-driver-26.1.5">intel-media-driver-26.1.5</a> (for Intel GPUs provided with Broadwell CPUs or later and Intel Arc GPUs), and <a class="xref" href="../x/mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a> (providing the <code class="literal">r600</code>, <code class="literal">radeonsi</code>, and <code class="literal">nouveau</code> VA API drivers, for the ATI/AMD Radeon HD 2xxx GPUs and later, and <a class="ulink" href="https://nouveau.freedesktop.org/VideoAcceleration.md">supported NVIDIA GPUs</a>; there is a circular dependency, read the Mesa page for information on how to break it)
 
 #### Optional
 
-[Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref}, [Wayland-1.25.0](../general/wayland.md "Wayland-1.25.0"){.xref}, and [intel-gpu-tools](https://gitlab.freedesktop.org/drm/igt-gpu-tools){.ulink}
-:::::
+<a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a>, <a class="xref" href="../general/wayland.md" title="Wayland-1.25.0">Wayland-1.25.0</a>, and <a class="ulink" href="https://gitlab.freedesktop.org/drm/igt-gpu-tools">intel-gpu-tools</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of libva {#installation-of-libva .sect2}
+<div class="installation" lang="en">
+## Installation of libva {#installation-of-libva}
 
-Install [libva]{.application} by running the following commands:
+Install <span class="application">libva</span> by running the following commands:
 
-``` userinput
+```bash
 cd build &&
 
 meson setup --prefix=$XORG_PREFIX --buildtype=release &&
@@ -79,52 +79,52 @@ ninja
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libva-drm.so, libva-glx.so, libva.so, libva-wayland.so, and libva-x11.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libva-drm.so, libva-glx.so, libva.so, libva-wayland.so, and libva-x11.so</span>
+</div>
 
-::: seg
-**Installed Directory:** [\$XORG_PREFIX/include/va]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directory:** <span class="segbody">\$XORG_PREFIX/include/va</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------- --------------------------------------------------------------------------------------
-  []{#libva-lib}[`libva.so`{.filename}]{.term}   contains API functions which provide access to hardware accelerated video processing
+  <a id="libva-lib"></a><span class="term"><code class="filename">libva.so</code></span>   contains API functions which provide access to hardware accelerated video processing
   ---------------------------------------------- --------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](libsndfile.md "libsndfile-1.2.2"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](libsndfile.md "libsndfile-1.2.2")
 
     libsndfile-1.2.2
 
--   [Next](libvorbis.md "libvorbis-1.3.7"){accesskey="n"}
+-   [Next](libvorbis.md "libvorbis-1.3.7")
 
     libvorbis-1.3.7
 
--   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers"){accesskey="u"}
+-   [Up](libdriv.md "Chapter 42. Multimedia Libraries and Drivers")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

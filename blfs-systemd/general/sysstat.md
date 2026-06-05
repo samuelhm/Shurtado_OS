@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 12. System Utilities
 
--   [Prev](redland.md "Redland-1.0.17"){accesskey="p"}
+-   [Prev](redland.md "Redland-1.0.17")
 
     Redland-1.0.17
 
--   [Next](systemd.md "Systemd-260.2"){accesskey="n"}
+-   [Next](systemd.md "Systemd-260.2")
 
     Systemd-260.2
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#sysstat}Sysstat-12.7.9 {#sysstat-12.7.9 .sect1}
+# Sysstat-12.7.9 {#sysstat-12.7.9}
 
-::::::::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to Sysstat {#introduction-to-sysstat .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Sysstat {#introduction-to-sysstat}
 
-The [Sysstat]{.application} package contains utilities to monitor system performance and usage activity. [Sysstat]{.application} contains the [**sar**]{.command} utility, common to many commercial Unixes, and tools you can schedule via cron to collect and historize performance and activity data.
+The <span class="application">Sysstat</span> package contains utilities to monitor system performance and usage activity. <span class="application">Sysstat</span> contains the <span class="command"><strong>sar</strong></span> utility, common to many commercial Unixes, and tools you can schedule via cron to collect and historize performance and activity data.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://sysstat.github.io/sysstat-packages/sysstat-12.7.9.tar.xz](https://sysstat.github.io/sysstat-packages/sysstat-12.7.9.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://sysstat.github.io/sysstat-packages/sysstat-12.7.9.tar.xz">https://sysstat.github.io/sysstat-packages/sysstat-12.7.9.tar.xz</a>
 
 -   Download MD5 sum: feded3c0171774a19c1efdb2dc43b68d
 
@@ -44,15 +44,15 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 29 MB
 
 -   Estimated build time: 0.1 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of Sysstat {#installation-of-sysstat .sect2}
+<div class="installation" lang="en">
+## Installation of Sysstat {#installation-of-sysstat}
 
-Install [Sysstat]{.application} by running the following commands:
+Install <span class="application">Sysstat</span> by running the following commands:
 
-``` userinput
+```bash
 sa_lib_dir=/usr/lib/sa    \
 sa_dir=/var/log/sa        \
 conf_dir=/etc/sysstat     \
@@ -63,15 +63,15 @@ make
 
 This package does not come with a working test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
 
-Install the systemd units and timers by running the following commands as the `root`{.systemitem} user:
+Install the systemd units and timers by running the following commands as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 install -v -m644 sysstat.service /usr/lib/systemd/system/sysstat.service                      &&
 install -v -m644 cron/sysstat-collect.service /usr/lib/systemd/system/sysstat-collect.service &&
 install -v -m644 cron/sysstat-collect.timer /usr/lib/systemd/system/sysstat-collect.timer     &&
@@ -81,100 +81,100 @@ install -v -m644 cron/sysstat-summary.service /usr/lib/systemd/system/sysstat-su
 install -v -m644 cron/sysstat-summary.timer /usr/lib/systemd/system/sysstat-summary.timer
 ```
 
-Fix one of the systemd units by running the following command as the `root`{.systemitem} user:
+Fix one of the systemd units by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 sed -i "/^Also=/d" /usr/lib/systemd/system/sysstat.service
 ```
-:::
+</div>
 
-:::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-`sa_lib_dir`{.envar}: This environment variable specifies the location of the package-specific library directory.
+<code class="envar">sa_lib_dir</code>: This environment variable specifies the location of the package-specific library directory.
 
-`sa_dir`{.envar}: This environment variable specifies the location of the directory containing the data files.
+<code class="envar">sa_dir</code>: This environment variable specifies the location of the directory containing the data files.
 
-`conf_dir`{.envar}: This environment variable specifies the location of the system configuration directory.
+<code class="envar">conf_dir</code>: This environment variable specifies the location of the system configuration directory.
 
-*`--disable-file-attr`*: Do not set attributes on files being installed. This parameter causes the installation to ignore the man group variable resulting in the man files having `root`{.systemitem}: `root`{.systemitem} ownership.
+*`--disable-file-attr`*: Do not set attributes on files being installed. This parameter causes the installation to ignore the man group variable resulting in the man files having <code class="systemitem">root</code>: <code class="systemitem">root</code> ownership.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Run [**./configure --help**]{.command} to see other influential environment variables you can pass to [**configure**]{.command}. You may want to use the `history`{.envar} and `compressafter`{.envar} variables to customize the amount of data files kept on the system.
-:::
-::::
+Run <span class="command"><strong>./configure --help</strong></span> to see other influential environment variables you can pass to <span class="command"><strong>configure</strong></span>. You may want to use the <code class="envar">history</code> and <code class="envar">compressafter</code> variables to customize the amount of data files kept on the system.
+</div>
+</div>
 
-::::: {.configuration lang="en"}
-## Configuring Sysstat {#configuring-sysstat .sect2}
+<div class="configuration" lang="en">
+## Configuring Sysstat {#configuring-sysstat}
 
-::: {.sect3 lang="en"}
-### []{#sysstat-config}Config Files {#config-files .sect3}
+<div class="sect3" lang="en">
+### Config Files {#config-files}
 
-`/etc/sysconfig/sysstat`{.filename} and `/etc/sysconfig/sysstat.ioconf`{.filename}
-:::
+<code class="filename">/etc/sysconfig/sysstat</code> and <code class="filename">/etc/sysconfig/sysstat.ioconf</code>
+</div>
 
-::: {.sect3 lang="en"}
-### []{#sysstat-init}System Startup Information {#system-startup-information .sect3}
+<div class="sect3" lang="en">
+### System Startup Information {#system-startup-information}
 
-At system startup, a LINUX RESTART message must be inserted in the daily data file to reinitialize the kernel counters. This can be automated by enabling the previously installed systemd unit by running the following command as the `root`{.systemitem} user:
+At system startup, a LINUX RESTART message must be inserted in the daily data file to reinitialize the kernel counters. This can be automated by enabling the previously installed systemd unit by running the following command as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 systemctl enable sysstat
 ```
 
-In addition to placing the LINUX RESTART message into the daily data file, there are systemd timers installed which will automatically capture the required history information for the [**sar**]{.command} command.
-:::
-:::::
+In addition to placing the LINUX RESTART message into the daily data file, there are systemd timers installed which will automatically capture the required history information for the <span class="command"><strong>sar</strong></span> command.
+</div>
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [cifsiostat, iostat, mpstat, pidstat, sadf, sar, and tapestat]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">cifsiostat, iostat, mpstat, pidstat, sadf, sar, and tapestat</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [/usr/lib/sa, /usr/share/doc/sysstat-12.7.9 and /var/log/sa]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/usr/lib/sa, /usr/share/doc/sysstat-12.7.9 and /var/log/sa</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ---------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#cifsiostat}[[**cifsiostat**]{.command}]{.term}   displays statistics about read and write operations on CIFS filesystems
-  []{#iostat}[[**iostat**]{.command}]{.term}           reports CPU statistics and input/output statistics for devices and partitions
-  []{#mpstat}[[**mpstat**]{.command}]{.term}           writes activities for each available processor
-  []{#pidstat}[[**pidstat**]{.command}]{.term}         is used for monitoring individual tasks currently being managed by the Linux kernel
-  []{#sadf}[[**sadf**]{.command}]{.term}               is used for displaying the contents of data files created by the [**sar**]{.command} command. But unlike [**sar**]{.command}, [**sadf**]{.command} can write its data in many different formats
-  []{#sar}[[**sar**]{.command}]{.term}                 is used for displaying the contents of elected cumulative activity counters in the operating system
-  []{#tapestat}[[**tapestat**]{.command}]{.term}       is used for monitoring the activity of tape drives connected to a system
+  <a id="cifsiostat"></a><span class="command"><span class="term"><strong>cifsiostat</strong></span></span>   displays statistics about read and write operations on CIFS filesystems
+  <a id="iostat"></a><span class="command"><span class="term"><strong>iostat</strong></span></span>           reports CPU statistics and input/output statistics for devices and partitions
+  <a id="mpstat"></a><span class="command"><span class="term"><strong>mpstat</strong></span></span>           writes activities for each available processor
+  <a id="pidstat"></a><span class="command"><span class="term"><strong>pidstat</strong></span></span>         is used for monitoring individual tasks currently being managed by the Linux kernel
+  <a id="sadf"></a><span class="command"><span class="term"><strong>sadf</strong></span></span>               is used for displaying the contents of data files created by the <span class="command"><strong>sar</strong></span> command. But unlike <span class="command"><strong>sar</strong></span>, <span class="command"><strong>sadf</strong></span> can write its data in many different formats
+  <a id="sar"></a><span class="command"><span class="term"><strong>sar</strong></span></span>                 is used for displaying the contents of elected cumulative activity counters in the operating system
+  <a id="tapestat"></a><span class="command"><span class="term"><strong>tapestat</strong></span></span>       is used for monitoring the activity of tape drives connected to a system
   ---------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-:::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](redland.md "Redland-1.0.17"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](redland.md "Redland-1.0.17")
 
     Redland-1.0.17
 
--   [Next](systemd.md "Systemd-260.2"){accesskey="n"}
+-   [Next](systemd.md "Systemd-260.2")
 
     Systemd-260.2
 
--   [Up](sysutils.md "Chapter 12. System Utilities"){accesskey="u"}
+-   [Up](sysutils.md "Chapter 12. System Utilities")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

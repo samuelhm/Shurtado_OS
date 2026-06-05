@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 32. KDE Plasma
 
--   [Prev](plasma.md "KDE Plasma"){accesskey="p"}
+-   [Prev](plasma.md "KDE Plasma")
 
     KDE Plasma
 
--   [Next](pulseaudio-qt.md "pulseaudio-qt-1.8.1"){accesskey="n"}
+-   [Next](pulseaudio-qt.md "pulseaudio-qt-1.8.1")
 
     pulseaudio-qt-1.8.1
 
--   [Up](plasma.md "Chapter 32. KDE Plasma"){accesskey="u"}
+-   [Up](plasma.md "Chapter 32. KDE Plasma")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#kirigami-addons}kirigami-addons-1.12.1 {#kirigami-addons-1.12.1 .sect1}
+# kirigami-addons-1.12.1 {#kirigami-addons-1.12.1}
 
-::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to kirigami-addons {#introduction-to-kirigami-addons .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to kirigami-addons {#introduction-to-kirigami-addons}
 
 This package provides additional QML files for the Kirigami framework.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.12.1.tar.xz](https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.12.1.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.12.1.tar.xz">https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.12.1.tar.xz</a>
 
 -   Download MD5 sum: cfc77067a7a30c1a45b47174754469f6
 
@@ -44,25 +44,25 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 71 MB
 
 -   Estimated build time: 0.7 SBU (Using parallelism=4)
-:::
+</div>
 
 ### kirigami-addons Dependencies
 
 #### Required
 
-[KDE Frameworks-6.26.0](frameworks6.md "Building KDE Frameworks 6.26.0 (KF6)"){.xref}
+<a class="xref" href="frameworks6.md" title="Building KDE Frameworks 6.26.0 (KF6)">KDE Frameworks-6.26.0</a>
 
 #### Recommended
 
-[Vulkan-Loader-1.4.350.0](../x/vulkan-loader.md "Vulkan-Loader-1.4.350.0"){.xref}
-:::::
+<a class="xref" href="../x/vulkan-loader.md" title="Vulkan-Loader-1.4.350.0">Vulkan-Loader-1.4.350.0</a>
+</div>
 
-::: {.installation lang="en"}
-## Installation of kirigami-addons {#installation-of-kirigami-addons .sect2}
+<div class="installation" lang="en">
+## Installation of kirigami-addons {#installation-of-kirigami-addons}
 
-Install [kirigami-addons]{.application} by running the following commands:
+Install <span class="application">kirigami-addons</span> by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -75,44 +75,44 @@ make
 
 This package does not come with a test suite.
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make install
 ```
-:::
+</div>
 
-:::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [None]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Directories:** [\$KF6_PREFIX/lib/qml/org/kde/kirigamiaddons and \$KF6_PREFIX/lib/cmake/KF6KirigamiAddons]{.segbody}
-:::
-::::::
-:::::::
-::::::::
-:::::::::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">\$KF6_PREFIX/lib/qml/org/kde/kirigamiaddons and \$KF6_PREFIX/lib/cmake/KF6KirigamiAddons</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](plasma.md "KDE Plasma"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](plasma.md "KDE Plasma")
 
     KDE Plasma
 
--   [Next](pulseaudio-qt.md "pulseaudio-qt-1.8.1"){accesskey="n"}
+-   [Next](pulseaudio-qt.md "pulseaudio-qt-1.8.1")
 
     pulseaudio-qt-1.8.1
 
--   [Up](plasma.md "Chapter 32. KDE Plasma"){accesskey="u"}
+-   [Up](plasma.md "Chapter 32. KDE Plasma")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

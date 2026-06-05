@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 24. Graphical Environments
 
--   [Prev](xwayland.md "Xwayland-24.1.12"){accesskey="p"}
+-   [Prev](xwayland.md "Xwayland-24.1.12")
 
     Xwayland-24.1.12
 
--   [Next](x7driver.md "Xorg Input Drivers"){accesskey="n"}
+-   [Next](x7driver.md "Xorg Input Drivers")
 
     Xorg Input Drivers
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xorg-server}Xorg-Server-21.1.23 {#xorg-server-21.1.23 .sect1}
+# Xorg-Server-21.1.23 {#xorg-server-21.1.23}
 
-:::::::::::::::::: {.sect1 lang="en"}
-::::::: {.package lang="en"}
-## Introduction to Xorg Server {#introduction-to-xorg-server .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to Xorg Server {#introduction-to-xorg-server}
 
-The [Xorg]{.application} Server is the core of the X Window system.
+The <span class="application">Xorg</span> Server is the core of the X Window system.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://www.x.org/pub/individual/xserver/xorg-server-21.1.23.tar.xz](https://www.x.org/pub/individual/xserver/xorg-server-21.1.23.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://www.x.org/pub/individual/xserver/xorg-server-21.1.23.tar.xz">https://www.x.org/pub/individual/xserver/xorg-server-21.1.23.tar.xz</a>
 
 -   Download MD5 sum: 3af3db8a16142f86490b17349beab67f
 
@@ -44,47 +44,47 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 153 MB (with tests)
 
 -   Estimated build time: 0.3 SBU (using parallelism=4; with tests)
-:::
+</div>
 
 ### Additional Downloads
 
-::: itemizedlist
+<div class="itemizedlist">
 -   With the removal of the xf86-video-\* drivers, the TearFree option is no longer functional. To work around this, upstream has added the TearFree option to the default modesetting driver. This patch backports this feature. Apply this patch if you are going to use Xorg in an environment without a compositor (such as TWM, IceWM, Openbox, or Fluxbox).
 
-    Optional patch: [https://www.linuxfromscratch.org/patches/blfs/svn/xorg-server-21.1.23-tearfree_backport-1.patch](https://www.linuxfromscratch.org/patches/blfs/svn/xorg-server-21.1.23-tearfree_backport-1.patch){.ulink}
-:::
+    Optional patch: <a class="ulink" href="https://www.linuxfromscratch.org/patches/blfs/svn/xorg-server-21.1.23-tearfree_backport-1.patch">https://www.linuxfromscratch.org/patches/blfs/svn/xorg-server-21.1.23-tearfree_backport-1.patch</a>
+</div>
 
 ### Xorg Server Dependencies
 
 #### Required
 
-[libxcvt-0.1.3](libxcvt.md "libxcvt-0.1.3"){.xref}, [Pixman-0.46.4](../general/pixman.md "Pixman-0.46.4"){.xref}, [Xorg Fonts](x7font.md "Xorg Fonts"){.xref} (only font-util), and at runtime: [xkeyboard-config-2.47](xkeyboard-config.md "XKeyboardConfig-2.47"){.xref}
+<a class="xref" href="libxcvt.md" title="libxcvt-0.1.3">libxcvt-0.1.3</a>, <a class="xref" href="../general/pixman.md" title="Pixman-0.46.4">Pixman-0.46.4</a>, <a class="xref" href="x7font.md" title="Xorg Fonts">Xorg Fonts</a> (only font-util), and at runtime: <a class="xref" href="xkeyboard-config.md" title="XKeyboardConfig-2.47">xkeyboard-config-2.47</a>
 
 #### Recommended
 
-[libepoxy-1.5.10](libepoxy.md "libepoxy-1.5.10"){.xref} (needed for glamor), [libtirpc-1.3.7](../basicnet/libtirpc.md "libtirpc-1.3.7"){.xref}, [[Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref} (runtime),]{.phrase} and [xorg-libinput-1.5.0](x7driver.md#xorg-libinput-driver "Xorg Libinput Driver-1.5.0"){.xref} (runtime)
+<a class="xref" href="libepoxy.md" title="libepoxy-1.5.10">libepoxy-1.5.10</a> (needed for glamor), <a class="xref" href="../basicnet/libtirpc.md" title="libtirpc-1.3.7">libtirpc-1.3.7</a>, <a class="xref" href="../general/systemd.md" title="Systemd-260.2"><span class="phrase">Systemd-260.2</a> (runtime),</span> and <a class="xref" href="x7driver.md#xorg-libinput-driver" title="Xorg Libinput Driver-1.5.0">xorg-libinput-1.5.0</a> (runtime)
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
-Although it's possible to run the Xorg server without [[Systemd-260.2](../general/systemd.md "Systemd-260.2"){.xref} (rebuilt with PAM)]{.phrase} functioning, it would require running the Xorg server as the `root`{.systemitem} user or Xorg server will malfunction or even fail to start. The BLFS editors strongly discourage skipping [this dependency]{.phrase}. Do not attempt to do so unless you really know what you are doing.
-:::
+Although it's possible to run the Xorg server without <a class="xref" href="../general/systemd.md" title="Systemd-260.2"><span class="phrase">Systemd-260.2</a> (rebuilt with PAM)</span> functioning, it would require running the Xorg server as the <code class="systemitem">root</code> user or Xorg server will malfunction or even fail to start. The BLFS editors strongly discourage skipping <span class="phrase">this dependency</span>. Do not attempt to do so unless you really know what you are doing.
+</div>
 
 #### Optional
 
-[acpid-2.0.34](../general/acpid.md "acpid-2.0.34"){.xref} (runtime), [Doxygen-1.17.0](../general/doxygen.md "Doxygen-1.17.0"){.xref} (to build API documentation), [fop-2.11](../pst/fop.md "fop-2.11"){.xref} (to build documentation), [libunwind-1.8.3](../general/libunwind.md "libunwind-1.8.3"){.xref}, [Nettle-4.0](../postlfs/nettle.md "Nettle-4.0"){.xref}, [libgcrypt-1.12.2](../general/libgcrypt.md "libgcrypt-1.12.2"){.xref}, [XCB Utilities](xcb-utilities.md "XCB Utilities"){.xref} (to build Xephyr), [xmlto-0.0.29](../pst/xmlto.md "xmlto-0.0.29"){.xref} (to build documentation), [xkeyboard-config-2.47](xkeyboard-config.md "XKeyboardConfig-2.47"){.xref} (for tests), [rendercheck](https://gitlab.freedesktop.org/xorg/test/rendercheck){.ulink} (for tests), and [xorg-sgml-doctools](https://www.x.org/archive/individual/doc/){.ulink} (to build documentation)
-:::::::
+<a class="xref" href="../general/acpid.md" title="acpid-2.0.34">acpid-2.0.34</a> (runtime), <a class="xref" href="../general/doxygen.md" title="Doxygen-1.17.0">Doxygen-1.17.0</a> (to build API documentation), <a class="xref" href="../pst/fop.md" title="fop-2.11">fop-2.11</a> (to build documentation), <a class="xref" href="../general/libunwind.md" title="libunwind-1.8.3">libunwind-1.8.3</a>, <a class="xref" href="../postlfs/nettle.md" title="Nettle-4.0">Nettle-4.0</a>, <a class="xref" href="../general/libgcrypt.md" title="libgcrypt-1.12.2">libgcrypt-1.12.2</a>, <a class="xref" href="xcb-utilities.md" title="XCB Utilities">XCB Utilities</a> (to build Xephyr), <a class="xref" href="../pst/xmlto.md" title="xmlto-0.0.29">xmlto-0.0.29</a> (to build documentation), <a class="xref" href="xkeyboard-config.md" title="XKeyboardConfig-2.47">xkeyboard-config-2.47</a> (for tests), <a class="ulink" href="https://gitlab.freedesktop.org/xorg/test/rendercheck">rendercheck</a> (for tests), and <a class="ulink" href="https://www.x.org/archive/individual/doc/">xorg-sgml-doctools</a> (to build documentation)
+</div>
 
-::: {.kernel lang="en"}
-## []{#xorg-server-kernel}Kernel Configuration {#kernel-configuration .sect2}
+<div class="kernel" lang="en">
+## Kernel Configuration {#kernel-configuration}
 
-The traditional Device Dependent X (DDX) drivers have been removed from BLFS in favor of the `modesetting_drv`{.filename} driver which will be built as a part of this package. To use the `modesetting_drv`{.filename} driver, the kernel must provide a Direct Rendering Manager (DRM) driver for your GPU.
+The traditional Device Dependent X (DDX) drivers have been removed from BLFS in favor of the <code class="filename">modesetting_drv</code> driver which will be built as a part of this package. To use the <code class="filename">modesetting_drv</code> driver, the kernel must provide a Direct Rendering Manager (DRM) driver for your GPU.
 
-If your GPU supports 3D acceleration and [Mesa-26.0.7](mesa.md "Mesa-26.0.7"){.xref} provides a Gallium3D driver for utilizing its 3D capability, you should have already enabled the necessary kernel configuration options in [Mesa Kernel Configuration](mesa.md#mesa-kernel "Kernel Configuration"){.xref}. Otherwise, you need to find the kernel configuration option of the DRM driver for the GPU and enable it. Notably, the virtual GPUs provided by some virtual machine managers:
+If your GPU supports 3D acceleration and <a class="xref" href="mesa.md" title="Mesa-26.0.7">Mesa-26.0.7</a> provides a Gallium3D driver for utilizing its 3D capability, you should have already enabled the necessary kernel configuration options in <a class="xref" href="mesa.md#mesa-kernel" title="Kernel Configuration">Mesa Kernel Configuration</a>. Otherwise, you need to find the kernel configuration option of the DRM driver for the GPU and enable it. Notably, the virtual GPUs provided by some virtual machine managers:
 
-``` screen
+```console
 Device Drivers --->
   Graphics support --->
     <*/M>   Direct Rendering Manager (XFree86 4.1.0 and higher DRI support) --->
@@ -94,9 +94,9 @@ Device Drivers --->
     < /*/M> Virtual Box Graphics Card                            [DRM_VBOXVIDEO]
 ```
 
-If the kernel does not provide a DRM driver for your GPU, on most x86 systems the [“[simple frame buffer]{.quote}”]{.quote} DRM driver running on VESA or UEFI frame buffer can be used as a fallback. Enable the following options in the kernel configurations if you don't have a dedicated DRM driver for the GPU, or you want to keep the simple frame buffer driver as a fallback in case the dedicated driver fails:
+If the kernel does not provide a DRM driver for your GPU, on most x86 systems the <span class="quote">“<span class="quote">simple frame buffer</span>”</span> DRM driver running on VESA or UEFI frame buffer can be used as a fallback. Enable the following options in the kernel configurations if you don't have a dedicated DRM driver for the GPU, or you want to keep the simple frame buffer driver as a fallback in case the dedicated driver fails:
 
-``` screen
+```console
 Device Drivers --->
   Firmware Drivers --->
     [*] Mark VGA/VBE/EFI FB as generic system framebuffer       [SYSFB_SIMPLEFB]
@@ -107,31 +107,31 @@ Device Drivers --->
       <*> Simple framebuffer driver                              [DRM_SIMPLEDRM]
 ```
 
-To allow the kernel to print debug messages at an early boot stage, `CONFIG_DRM`{.option} and `CONFIG_DRM_SIMPLEDRM`{.option} should not be built as kernel modules unless an initramfs will be used.
+To allow the kernel to print debug messages at an early boot stage, <code class="option">CONFIG_DRM</code> and <code class="option">CONFIG_DRM_SIMPLEDRM</code> should not be built as kernel modules unless an initramfs will be used.
 
-If you want to use the simple frame buffer driver on a system booted via BIOS (instead of UEFI), add the following line before the first `menuentry`{.literal} block in the `/boot/grub/grub.cfg`{.filename} file to initialize the VESA frame buffer:
+If you want to use the simple frame buffer driver on a system booted via BIOS (instead of UEFI), add the following line before the first <code class="literal">menuentry</code> block in the <code class="filename">/boot/grub/grub.cfg</code> file to initialize the VESA frame buffer:
 
-``` screen
+```console
 set gfxpayload=1024x768x32
 ```
 
-You may replace `1024`{.literal}, `768`{.literal}, and `32`{.literal} with a resolution and color depth setting suitable for your monitor.
+You may replace <code class="literal">1024</code>, <code class="literal">768</code>, and <code class="literal">32</code> with a resolution and color depth setting suitable for your monitor.
 
-If all of these DRM drivers do not work for you and you need to use a DDX driver with a non-DRM kernel GPU driver (usually named `CONFIG_FB_*`{.option} in the kernel configuration, or existing as out-tree kernel modules), or you need an device specific functionality requiring a DDX driver, consult [a prior version of BLFS](https://www.linuxfromscratch.org/blfs/view/11.3/x/x7driver.md){.ulink}, or [an even earlier prior version](https://www.linuxfromscratch.org/blfs/view/7.6/x/x7driver.md){.ulink} for more DDX drivers.
-:::
+If all of these DRM drivers do not work for you and you need to use a DDX driver with a non-DRM kernel GPU driver (usually named <code class="option">CONFIG_FB_*</code> in the kernel configuration, or existing as out-tree kernel modules), or you need an device specific functionality requiring a DDX driver, consult <a class="ulink" href="https://www.linuxfromscratch.org/blfs/view/11.3/x/x7driver.md">a prior version of BLFS</a>, or <a class="ulink" href="https://www.linuxfromscratch.org/blfs/view/7.6/x/x7driver.md">an even earlier prior version</a> for more DDX drivers.
+</div>
 
-::: {.installation lang="en"}
-## Installation of Xorg Server {#installation-of-xorg-server .sect2}
+<div class="installation" lang="en">
+## Installation of Xorg Server {#installation-of-xorg-server}
 
 First, if you need the TearFree option to work around screen tearing, apply the backported patch:
 
-``` userinput
+```bash
 patch -Np1 -i ../xorg-server-21.1.23-tearfree_backport-1.patch
 ```
 
 Install the server by running the following commands:
 
-``` userinput
+```bash
 mkdir build &&
 cd    build &&
 
@@ -143,73 +143,73 @@ meson setup ..              \
 ninja
 ```
 
-To test the results, issue: [**ninja test**]{.command}. You will need to run [**ldconfig**]{.command} as the `root`{.systemitem} user first or some tests may fail.
+To test the results, issue: <span class="command"><strong>ninja test</strong></span>. You will need to run <span class="command"><strong>ldconfig</strong></span> as the <code class="systemitem">root</code> user first or some tests may fail.
 
-Now as the `root`{.systemitem} user:
+Now as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 ninja install &&
 mkdir -pv /etc/X11/xorg.conf.d
 ```
-:::
+</div>
 
-::: {.commands lang="en"}
-## Command Explanations {#command-explanations .sect2}
+<div class="commands" lang="en">
+## Command Explanations {#command-explanations}
 
-*`-D glamor=true`*: Ensure building the Glamor module. It's needed to build the `modesetting_drv`{.filename} driver which replaces the traditional Device Dependent X (DDX) drivers.
+*`-D glamor=true`*: Ensure building the Glamor module. It's needed to build the <code class="filename">modesetting_drv</code> driver which replaces the traditional Device Dependent X (DDX) drivers.
 
-`-D secure-rpc=false`{.option}: This option disables building RPC support if [libtirpc-1.3.7](../basicnet/libtirpc.md "libtirpc-1.3.7"){.xref} is not installed.
+<code class="option">-D secure-rpc=false</code>: This option disables building RPC support if <a class="xref" href="../basicnet/libtirpc.md" title="libtirpc-1.3.7">libtirpc-1.3.7</a> is not installed.
 
-`-D suid_wrapper=true`{.option}: Builds the suid-root wrapper for legacy DDX driver support on rootless xserver systems.
+<code class="option">-D suid_wrapper=true</code>: Builds the suid-root wrapper for legacy DDX driver support on rootless xserver systems.
 
-`-D xephyr=true`{.option}: This option allows building Xephyr if its dependencies are met.
-:::
+<code class="option">-D xephyr=true</code>: This option allows building Xephyr if its dependencies are met.
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [gtf, X, Xnest, Xorg, Xvfb, and optionally Xephyr]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">gtf, X, Xnest, Xorg, Xvfb, and optionally Xephyr</span>
+</div>
 
-::: seg
-**Installed Libraries:** [several under \$XORG_PREFIX/lib/xorg/modules/ including the `modesetting_drv`{.filename} driver]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">several under \$XORG_PREFIX/lib/xorg/modules/ including the <code class="filename">modesetting_drv</code> driver</span>
+</div>
 
-::: seg
-**Installed Directories:** [/etc/X11/xorg.conf.d, \$XORG_PREFIX/include/xorg, \$XORG_PREFIX/lib/xorg, and \$XORG_PREFIX/share/X11/xorg.conf.d]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">/etc/X11/xorg.conf.d, \$XORG_PREFIX/include/xorg, \$XORG_PREFIX/lib/xorg, and \$XORG_PREFIX/share/X11/xorg.conf.d</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ----------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-  []{#gtf-x7}[[**gtf**]{.command}]{.term}                           calculates VESA GTF mode lines
-  []{#X-x7}[[**X**]{.command}]{.term}                               is a symbolic link to Xorg
-  []{#Xephyr-x7}[[**Xephyr**]{.command}]{.term}                     is a nested X server which supports modern X extensions
-  []{#Xnest-x7}[[**Xnest**]{.command}]{.term}                       is a nested X server
-  []{#Xorg-x7}[[**Xorg**]{.command}]{.term}                         is the X11R7 X Server
-  []{#Xvfb-x7}[[**Xvfb**]{.command}]{.term}                         is the virtual framebuffer X server for X Version 11
-  []{#modesetting_drv-x7}[`modesetting_drv.so`{.filename}]{.term}   provides a video driver for machines using Kernel Mode Setting (KMS). This will use glamor if that has been enabled and the hardware offers acceleration
+  <a id="gtf-x7"></a><span class="command"><span class="term"><strong>gtf</strong></span></span>                           calculates VESA GTF mode lines
+  <a id="X-x7"></a><span class="command"><span class="term"><strong>X</strong></span></span>                               is a symbolic link to Xorg
+  <a id="Xephyr-x7"></a><span class="command"><span class="term"><strong>Xephyr</strong></span></span>                     is a nested X server which supports modern X extensions
+  <a id="Xnest-x7"></a><span class="command"><span class="term"><strong>Xnest</strong></span></span>                       is a nested X server
+  <a id="Xorg-x7"></a><span class="command"><span class="term"><strong>Xorg</strong></span></span>                         is the X11R7 X Server
+  <a id="Xvfb-x7"></a><span class="command"><span class="term"><strong>Xvfb</strong></span></span>                         is the virtual framebuffer X server for X Version 11
+  <a id="modesetting_drv-x7"></a><span class="term"><code class="filename">modesetting_drv.so</code></span>   provides a video driver for machines using Kernel Mode Setting (KMS). This will use glamor if that has been enabled and the hardware offers acceleration
   ----------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::::::::
-::::::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](xwayland.md "Xwayland-24.1.12"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](xwayland.md "Xwayland-24.1.12")
 
     Xwayland-24.1.12
 
--   [Next](x7driver.md "Xorg Input Drivers"){accesskey="n"}
+-   [Next](x7driver.md "Xorg Input Drivers")
 
     Xorg Input Drivers
 
--   [Up](installing.md "Chapter 24. Graphical Environments"){accesskey="u"}
+-   [Up](installing.md "Chapter 24. Graphical Environments")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

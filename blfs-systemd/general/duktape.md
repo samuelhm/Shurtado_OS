@@ -1,41 +1,41 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
 ### Chapter 9. General Libraries
 
--   [Prev](double-conversion.md "Double-conversion-3.4.0"){accesskey="p"}
+-   [Prev](double-conversion.md "Double-conversion-3.4.0")
 
     Double-conversion-3.4.0
 
--   [Next](enchant.md "enchant-2.8.16"){accesskey="n"}
+-   [Next](enchant.md "enchant-2.8.16")
 
     enchant-2.8.16
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#duktape}duktape-2.7.0 {#duktape-2.7.0 .sect1}
+# duktape-2.7.0 {#duktape-2.7.0}
 
-:::::::::::::: {.sect1 lang="en"}
-::::: {.package lang="en"}
-## Introduction to duktape {#introduction-to-duktape .sect2}
+<div class="sect1" lang="en">
+<div class="package" lang="en">
+## Introduction to duktape {#introduction-to-duktape}
 
-[duktape]{.application} is an embeddable Javascript engine, with a focus on portability and compact footprint.
+<span class="application">duktape</span> is an embeddable Javascript engine, with a focus on portability and compact footprint.
 
-::: {.admon .note}
+<div class="admon note">
 ![\[Note\]](../images/note.png)
 
 ### Note
 
 Development versions of BLFS may not build or run some packages properly if LFS or dependencies have been updated since the most recent stable versions of the books.
-:::
+</div>
 
 ### Package Information
 
-::: itemizedlist
--   Download (HTTP): [https://duktape.org/duktape-2.7.0.tar.xz](https://duktape.org/duktape-2.7.0.tar.xz){.ulink}
+<div class="itemizedlist">
+-   Download (HTTP): <a class="ulink" href="https://duktape.org/duktape-2.7.0.tar.xz">https://duktape.org/duktape-2.7.0.tar.xz</a>
 
 -   Download MD5 sum: b3200b02ab80125b694bae887d7c1ca6
 
@@ -44,66 +44,66 @@ Development versions of BLFS may not build or run some packages properly if LFS 
 -   Estimated disk space required: 25 MB
 
 -   Estimated build time: 0.3 SBU
-:::
-:::::
+</div>
+</div>
 
-::: {.installation lang="en"}
-## Installation of duktape {#installation-of-duktape .sect2}
+<div class="installation" lang="en">
+## Installation of duktape {#installation-of-duktape}
 
-Install [duktape]{.application} by running the following commands:
+Install <span class="application">duktape</span> by running the following commands:
 
-``` userinput
+```bash
 sed -i 's/-Os/-O2/' Makefile.sharedlibrary
 make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
 ```
 
-Now, as the `root`{.systemitem} user:
+Now, as the <code class="systemitem">root</code> user:
 
-``` root
+```bash
 make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr install
 ```
-:::
+</div>
 
-::::::::: {.content lang="en"}
-## Contents {#contents .sect2}
+<div class="content" lang="en">
+## Contents {#contents}
 
-::::::: segmentedlist
-:::::: seglistitem
-::: seg
-**Installed Programs:** [None]{.segbody}
-:::
+<div class="segmentedlist">
+<div class="seglistitem">
+<div class="seg">
+**Installed Programs:** <span class="segbody">None</span>
+</div>
 
-::: seg
-**Installed Libraries:** [libduktape.so and libduktaped.so]{.segbody}
-:::
+<div class="seg">
+**Installed Libraries:** <span class="segbody">libduktape.so and libduktaped.so</span>
+</div>
 
-::: seg
-**Installed Directories:** [None]{.segbody}
-:::
-::::::
-:::::::
+<div class="seg">
+**Installed Directories:** <span class="segbody">None</span>
+</div>
+</div>
+</div>
 
-::: variablelist
+<div class="variablelist">
 ### Short Descriptions
 
   ------------------------------------------------------ --------------------------------------------------
-  []{#libduktape}[`libduktape.so`{.filename}]{.term}     is an embeddable Javascript engine
-  []{#libduktaped}[`libduktaped.so`{.filename}]{.term}   is a debug version of `libduktape.so`{.filename}
+  <a id="libduktape"></a><span class="term"><code class="filename">libduktape.so</code></span>     is an embeddable Javascript engine
+  <a id="libduktaped"></a><span class="term"><code class="filename">libduktaped.so</code></span>   is a debug version of <code class="filename">libduktape.so</code>
   ------------------------------------------------------ --------------------------------------------------
-:::
-:::::::::
-::::::::::::::
+</div>
+</div>
+</div>
 
-::: navfooter
--   [Prev](double-conversion.md "Double-conversion-3.4.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](double-conversion.md "Double-conversion-3.4.0")
 
     Double-conversion-3.4.0
 
--   [Next](enchant.md "enchant-2.8.16"){accesskey="n"}
+-   [Next](enchant.md "enchant-2.8.16")
 
     enchant-2.8.16
 
--   [Up](genlib.md "Chapter 9. General Libraries"){accesskey="u"}
+-   [Up](genlib.md "Chapter 9. General Libraries")
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>

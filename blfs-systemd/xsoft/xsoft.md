@@ -1,23 +1,23 @@
-::: navheader
-#### Beyond Linux^®^ From Scratch [(systemd]{.phrase} Edition) - Version r13.0-790
+<div class="navheader">
+#### Beyond Linux<sup>®</sup> From Scratch <span class="phrase">(systemd</span> Edition) - Version r13.0-790
 
--   [Prev](../lxqt/screengrab.md "screengrab-3.2.0"){accesskey="p"}
+-   [Prev](../lxqt/screengrab.md "screengrab-3.2.0")
 
     screengrab-3.2.0
 
--   [Next](office.md "Office Programs"){accesskey="n"}
+-   [Next](office.md "Office Programs")
 
     Office Programs
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
 
-# []{#xsoft}X Software {#x-software .part}
+# X Software {#x-software}
 
-:::: part
-::: toc
+<div class="part">
+<div class="toc">
 ### Table of Contents
 
 -   #### [39. Office Programs](office.md)
@@ -48,19 +48,19 @@
     -   [xarchiver-0.5.4.26](xarchiver.md)
     -   [xdg-utils-1.2.1](xdg-utils.md)
     -   [XScreenSaver-6.15](xscreensaver.md)
-:::
-::::
+</div>
+</div>
 
-::: navfooter
--   [Prev](../lxqt/screengrab.md "screengrab-3.2.0"){accesskey="p"}
+<div class="navfooter">
+-   [Prev](../lxqt/screengrab.md "screengrab-3.2.0")
 
     screengrab-3.2.0
 
--   [Next](office.md "Office Programs"){accesskey="n"}
+-   [Next](office.md "Office Programs")
 
     Office Programs
 
 -   .
 
--   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790"){accesskey="h"}
-:::
+-   [Home](../index.md "Beyond Linux® From Scratch  (systemd  Edition) - Version r13.0-790")
+</div>
