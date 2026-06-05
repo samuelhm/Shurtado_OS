@@ -6,4 +6,3 @@ en.subject.pdf
 *.tar.gz
 *.qcow2
 *.qcow2.compressed
-r13.0-131-systemd/*
