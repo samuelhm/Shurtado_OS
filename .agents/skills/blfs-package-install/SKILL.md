@@ -13,23 +13,34 @@ All work happens live on the VM via SSH — we never mount the disk.
 
 ## Installation Workflow (MANDATORY ORDER)
 
-### 1. Read BLFS Documentation First
+### 1. Read BLFS/LFS Documentation First
 
-If the package exists in `docs/blfs/`, read its `.md` file. Search with:
+If the package exists in `docs/blfs/` or `docs/lfs/`, read its `.md` file.
+Search with:
 
 ```
 glob docs/blfs/**/<package-name>.md
+glob docs/lfs/**/<package-name>.md
 ```
 
-The BLFS book is the single source of truth for configure flags, dependencies,
-patches, and post-install steps. **Never guess a flag, URL, or version.**
+The BLFS/LFS book is the single source of truth for configure flags,
+dependencies, patches, and post-install steps. **Never guess a flag, URL, or
+version.**
 
 If the package has dependencies not yet installed, read those pages too to
 understand the full chain.
 
-### 2. Check the Build System
+#### When the package IS documented in BLFS/LFS
 
-Before running configure, inspect the build system's help:
+The book's instructions are canonical — use them directly. No need to
+download and inspect the build system interactively before generating a
+script. The book has already verified the flags.
+
+#### When the package is NOT documented in BLFS/LFS
+
+The build system MUST be inspected interactively **before** writing any
+script. Download the tarball in the VM via SSH, extract it, and run the
+appropriate build system check:
 
 | Build System | Command |
 |---|---|
@@ -41,7 +52,14 @@ Before running configure, inspect the build system's help:
 | **Cargo (Rust)** | `cargo build --help` |
 | **Make-only** | Read `Makefile` or `GNUmakefile` |
 
-This ensures we know all available flags and don't miss important features.
+Only after checking the available flags and dependencies should the
+installation script be written. This ensures we know all available options and
+don't miss important features.
+
+### 2. Check the Build System (Non-BLFS packages only)
+
+Same as above — this step is **only required** for packages not covered by
+the BLFS/LFS book.
 
 ### 3. Determine Dependencies
 
@@ -200,11 +218,21 @@ ssh ... root@localhost 'cd /sources && tar xf pkg.tar.xz && cd pkg && ./configur
 
 ## Quick Checklist
 
+### If package IS in BLFS/LFS
+
 Before running ANY build command, verify:
-- [ ] Read the BLFS `.md` file for this package
-- [ ] Read dependency BLFS `.md` files (if any missing)
-- [ ] Checked `./configure --help` or equivalent
+- [ ] Read the BLFS/LFS `.md` file for this package
+- [ ] Read dependency `.md` files (if any missing)
 - [ ] Using `--prefix=/usr` and `--disable-static`
 - [ ] Not disabling important functionality to skip deps
-- [ ] Version is the BLFS-recommended one (or newer stable if unavailable)
+- [ ] Version matches the book (or newer stable if unavailable)
 - [ ] Will cleanup source tree after successful install
+
+### If package is NOT in BLFS/LFS
+
+Before writing a script, you MUST first:
+- [ ] Download the tarball in the VM via SSH
+- [ ] Extract and run `./configure --help` (or equivalent)
+- [ ] Identify all available flags, dependencies, and features
+- [ ] Then write the script using the discovered flags
+- [ ] Cleanup the extracted test directory
