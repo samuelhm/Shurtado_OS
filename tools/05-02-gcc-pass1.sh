@@ -26,6 +26,17 @@ tar -xf ../mpfr-4.2.2.tar.xz && mv -v mpfr-4.2.2 mpfr || err "mpfr extract faile
 tar -xf ../gmp-6.3.0.tar.xz   && mv -v gmp-6.3.0 gmp     || err "gmp extract failed"
 tar -xf ../mpc-1.4.1.tar.xz   && mv -v mpc-1.4.1 mpc     || err "mpc extract failed"
 
+# Los tarballs externos (mpfr, gmp, mpc) pueden traer timestamps
+# inconsistentes de fábrica: aclocal.m4 mas reciente que configure o
+# Makefile.in. make (incluso con -j1) detecta estos desfases y dispara
+# autoconf/automake para regenerar los archivos, fallando si automake
+# no esta instalado. Un solo find -exec ... + garantiza que todos los
+# archivos reciban el mismo nanosegundo, rompiendo la cadena de dependencias.
+step "Resetting timestamps on bundled libs (prevents autotools regeneration)..."
+for lib in mpfr gmp mpc; do
+    find $lib \( -name Makefile.in -o -name configure -o -name aclocal.m4 \) -exec touch {} +
+done
+
 step "Fixing lib64 -> lib on x86_64..."
 case $(uname -m) in
     x86_64) sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64 ;;
@@ -55,7 +66,7 @@ mkdir -v build && cd build
     --enable-languages=c,c++  || err "configure failed"
 
 step "Compiling GCC Pass 1 (this takes a while)..."
-make -j$(nproc) || err "make failed"
+make -j1 || err "make failed"
 
 step "Installing GCC Pass 1..."
 make install || err "make install failed"
