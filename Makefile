@@ -56,7 +56,9 @@ help:
 # Local targets
 # -----------------------------------------------
 run:
-	@bash $(QEMU_SCRIPT)
+	@setsid bash $(QEMU_SCRIPT) > /dev/null 2>&1 &
+	@sleep 1
+	@echo "VM started. SSH on localhost:2222"
 
 run_iso:
 	@if [ ! -f "$(ISO)" ]; then \

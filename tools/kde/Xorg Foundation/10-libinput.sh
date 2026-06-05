@@ -6,9 +6,9 @@ err() { echo -e "${RED}[ERROR]${NC} $*"; exit 1; }
 step() { echo -e "${BLUE}[STEP]${NC} $*"; }
 
 SOURCES="/sources"
-PKG="xf86-input-evdev-2.11.0"
-TAR="$PKG.tar.xz"
-URL="https://www.x.org/pub/individual/driver/$TAR"
+PKG="libinput-1.31.2"
+TAR="$PKG.tar.gz"
+URL="https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.31.2/$TAR"
 
 : "${XORG_PREFIX:=/usr}"
 : "${XORG_CONFIG:=--prefix=$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --disable-static}"
@@ -26,11 +26,18 @@ tar -xf "$TAR"
 cd "$PKG"
 
 step "Building $PKG..."
-./configure $XORG_CONFIG || err "configure failed"
-make -j$(nproc) || err "make failed"
+mkdir build && cd build
+meson setup .. \
+      --prefix="$XORG_PREFIX" \
+      --buildtype=release \
+      -D debug-gui=false \
+      -D tests=false \
+      -D libwacom=false \
+      -D udev-dir=/usr/lib/udev || err "meson setup failed"
+ninja || err "ninja failed"
 
 step "Installing $PKG..."
-make install || err "make install failed"
+ninja install || err "ninja install failed"
 
 step "Cleanup..."
 cd "$SOURCES"
@@ -41,9 +48,11 @@ echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}  $PKG - Instalacion completada${NC}"
 echo -e "${GREEN}========================================${NC}"
 echo ""
-echo -e "  Driver:     ${GREEN}evdev_drv.so${NC}"
-echo -e "  Ubicacion:  ${BLUE}$XORG_PREFIX/lib/xorg/modules/input/${NC}"
+echo -e "  Libreria:   ${GREEN}libinput.so${NC}"
+echo -e "  Programa:   ${GREEN}libinput${NC}"
+echo -e "  Ubicacion:  ${BLUE}$XORG_PREFIX/lib/${NC}"
+echo -e "  Udev dir:   ${BLUE}/usr/lib/udev/${NC}"
 echo ""
-echo -e "  Proposito: Driver generico de entrada Linux para Xorg."
-echo -e "  Maneja teclado, raton, touchpads y dispositivos wacom."
+echo -e "  Proposito: Libreria de entrada para Wayland y Xorg."
+echo -e "  Maneja teclado, raton, touchpad, touchscreen y tabletas."
 echo ""
