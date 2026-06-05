@@ -35,9 +35,9 @@ help:
 	@echo "                    Usa ISO=<path> para otra ISO."
 	@echo ""
 	@echo "--- Disco y Montaje ---"
-	@echo "  mount           - Monta el disco qcow2 en $(MOUNT_POINT)/."
+	@echo "  mount           - Monta el disco qcow2 en $(MOUNT_POINT)/ (FUSE, rapido)."
 	@echo "  umount          - Desmonta $(MOUNT_POINT)/ de forma segura."
-	@echo "  mount_lfs       - Monta el disco qcow2 en $(LFS_MOUNT)/ (LFS estándar)."
+	@echo "  mount_lfs       - Monta el disco qcow2 en $(LFS_MOUNT)/ (NBD, para builds)."
 	@echo "  umount_lfs      - Desmonta $(LFS_MOUNT)/ de forma segura."
 	@echo "  status          - Muestra si la VM está corriendo y el estado del disco."
 	@echo "  compress        - Comprime el disco qcow2 (qemu-img -c)."
@@ -84,28 +84,18 @@ mount:
 		exit 1; \
 	fi
 	@if mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
-		echo "Error: $(LFS_MOUNT) ya esta montado. Desmontalo primero."; \
-		exit 1; \
-	fi
-	@echo "Verificando NBD..."
-	@if lsmod | grep -q nbd; then :; else sudo modprobe nbd max_part=8; fi
-	@if lsblk -no NAME $(NBD_DEV) >/dev/null 2>&1 && [ "$$(lsblk -ndo SIZE $(NBD_DEV) 2>/dev/null)" != "0" ]; then \
-		echo "Error: $(NBD_DEV) ya esta en uso."; \
+		echo "Error: $(LFS_MOUNT) ya esta montado (via NBD). Desmontalo primero."; \
 		exit 1; \
 	fi
 	@mkdir -p $(MOUNT_POINT)
-	@echo "Conectando $(DISK_IMG) a $(NBD_DEV)..."
-	@sudo qemu-nbd -c $(NBD_DEV) "$(DISK_IMG)"
-	@sleep 0.5
-	@echo "Montando $(NBD_DEV)p$(ROOT_PART) en $(MOUNT_POINT)..."
-	@sudo mount $(NBD_DEV)p$(ROOT_PART) $(MOUNT_POINT)
+	@echo "Montando $(DISK_IMG) en $(MOUNT_POINT) via guestmount (FUSE)..."
+	@sudo guestmount --rw -a "$(DISK_IMG)" -m /dev/vda4 "$(MOUNT_POINT)"
 	@echo "Montado correctamente."
 
 umount:
 	@if mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
 		echo "Desmontando $(MOUNT_POINT)..."; \
-		sudo umount "$(MOUNT_POINT)"; \
-		sudo qemu-nbd -d $(NBD_DEV); \
+		sudo guestunmount "$(MOUNT_POINT)"; \
 		echo "Desmontado correctamente."; \
 	else \
 		echo "$(MOUNT_POINT) no esta montado."; \
