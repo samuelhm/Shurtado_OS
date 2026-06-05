@@ -5,6 +5,18 @@
 
 ---
 
+## Libros originales (convertidos a Markdown)
+
+| Libro | Version | Archivo |
+|-------|---------|---------|
+| [Linux From Scratch (systemd)](lfs/index.md) | r13.0-131-systemd | `docs/lfs/` — libro LFS completo convertido a `.md` |
+| [Beyond Linux From Scratch (systemd)](blfs/index.md) | r13.0-790 | `docs/blfs/` — libro BLFS completo convertido a `.md` |
+
+> Ambos libros han sido convertidos de su formato original (XML/HTML) a Markdown (.md)
+> para facilitar su consulta desde el repositorio.
+
+---
+
 ## Sistema Actual (ya instalado)
 
 | Archivo | Capa | Contenido |
