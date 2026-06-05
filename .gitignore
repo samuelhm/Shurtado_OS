@@ -1,0 +1,9 @@
+*.img
+*.iso
+en.subject.md
+en.subject.pdf
+*.tar.xz
+*.tar.gz
+*.qcow2
+*.qcow2.compressed
+r13.0-131-systemd/*
