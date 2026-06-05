@@ -7,6 +7,8 @@ LFS_MOUNT     := /mnt/lfs
 QEMU_SCRIPT   := run_qemu.sh
 BOOK_DIR      := r13.0-131-systemd
 ISO           ?= archlinux-2026.06.01-x86_64.iso
+NBD_DEV       ?= /dev/nbd0
+ROOT_PART     ?= 4
 
 # -----------------------------------------------
 # 42 School variables (untouched)
@@ -77,19 +79,33 @@ mount:
 		exit 1; \
 	fi
 	@echo "Verificando que no este ya montado..."
-	@if sudo mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
+	@if mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
 		echo "Error: $(MOUNT_POINT) ya esta montado."; \
 		exit 1; \
 	fi
+	@if mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
+		echo "Error: $(LFS_MOUNT) ya esta montado. Desmontalo primero."; \
+		exit 1; \
+	fi
+	@echo "Verificando NBD..."
+	@if lsmod | grep -q nbd; then :; else sudo modprobe nbd max_part=8; fi
+	@if lsblk -no NAME $(NBD_DEV) >/dev/null 2>&1 && [ "$$(lsblk -ndo SIZE $(NBD_DEV) 2>/dev/null)" != "0" ]; then \
+		echo "Error: $(NBD_DEV) ya esta en uso."; \
+		exit 1; \
+	fi
 	@mkdir -p $(MOUNT_POINT)
-	@echo "Montando $(DISK_IMG) en $(MOUNT_POINT)..."
-	@sudo guestmount --rw -a "$(DISK_IMG)" -m /dev/vda4 -o allow_other "$(MOUNT_POINT)"
+	@echo "Conectando $(DISK_IMG) a $(NBD_DEV)..."
+	@sudo qemu-nbd -c $(NBD_DEV) "$(DISK_IMG)"
+	@sleep 0.5
+	@echo "Montando $(NBD_DEV)p$(ROOT_PART) en $(MOUNT_POINT)..."
+	@sudo mount $(NBD_DEV)p$(ROOT_PART) $(MOUNT_POINT)
 	@echo "Montado correctamente."
 
 umount:
-	@if sudo mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
+	@if mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
 		echo "Desmontando $(MOUNT_POINT)..."; \
-		sudo guestunmount "$(MOUNT_POINT)"; \
+		sudo umount "$(MOUNT_POINT)"; \
+		sudo qemu-nbd -d $(NBD_DEV); \
 		echo "Desmontado correctamente."; \
 	else \
 		echo "$(MOUNT_POINT) no esta montado."; \
@@ -108,19 +124,33 @@ mount_lfs:
 		exit 1; \
 	fi
 	@echo "Verificando que no este ya montado..."
-	@if sudo mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
+	@if mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
 		echo "Error: $(LFS_MOUNT) ya esta montado."; \
 		exit 1; \
 	fi
+	@if mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
+		echo "Error: $(MOUNT_POINT) ya esta montado. Desmontalo primero."; \
+		exit 1; \
+	fi
+	@echo "Verificando NBD..."
+	@if lsmod | grep -q nbd; then :; else sudo modprobe nbd max_part=8; fi
+	@if lsblk -no NAME $(NBD_DEV) >/dev/null 2>&1 && [ "$$(lsblk -ndo SIZE $(NBD_DEV) 2>/dev/null)" != "0" ]; then \
+		echo "Error: $(NBD_DEV) ya esta en uso."; \
+		exit 1; \
+	fi
 	@sudo mkdir -pv $(LFS_MOUNT)
-	@echo "Montando $(DISK_IMG) en $(LFS_MOUNT)..."
-	@sudo guestmount --rw -a "$(DISK_IMG)" -m /dev/vda4 -o allow_other "$(LFS_MOUNT)"
+	@echo "Conectando $(DISK_IMG) a $(NBD_DEV)..."
+	@sudo qemu-nbd -c $(NBD_DEV) "$(DISK_IMG)"
+	@sleep 0.5
+	@echo "Montando $(NBD_DEV)p$(ROOT_PART) en $(LFS_MOUNT)..."
+	@sudo mount $(NBD_DEV)p$(ROOT_PART) $(LFS_MOUNT)
 	@echo "Montado correctamente en $(LFS_MOUNT)."
 
 umount_lfs:
-	@if sudo mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
+	@if mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
 		echo "Desmontando $(LFS_MOUNT)..."; \
-		sudo guestunmount "$(LFS_MOUNT)"; \
+		sudo umount "$(LFS_MOUNT)"; \
+		sudo qemu-nbd -d $(NBD_DEV); \
 		echo "Desmontado correctamente."; \
 	else \
 		echo "$(LFS_MOUNT) no esta montado."; \
@@ -148,12 +178,13 @@ status:
 	fi
 	@echo ""
 	@echo "=== Mount Status ==="
-	@if sudo mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
+	@echo "NBD device: $$(lsblk -ndo SIZE $(NBD_DEV) 2>/dev/null || echo 'free')"
+	@if mountpoint -q "$(MOUNT_POINT)" 2>/dev/null; then \
 		echo "$(MOUNT_POINT): MOUNTED"; \
 	else \
 		echo "$(MOUNT_POINT): NOT MOUNTED"; \
 	fi
-	@if sudo mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
+	@if mountpoint -q "$(LFS_MOUNT)" 2>/dev/null; then \
 		echo "$(LFS_MOUNT): MOUNTED"; \
 	else \
 		echo "$(LFS_MOUNT): NOT MOUNTED"; \
