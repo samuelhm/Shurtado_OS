@@ -1,6 +1,6 @@
 ---
 name: blfs-package-install
-description: Use when installing any package from source in the BLFS/LFS VM. Triggers on: "instalemos X", "install X", "compile X", "build X", "add package X", or any request to install software from source tarballs. Ensures BLFS docs are consulted, configure flags are proper, shared-only libs, cleanup, and dependency-first approach.
+description: Use when installing any package from source in the BLFS/LFS VM. Triggers on requests like "install X", "compile X", "build X", or "add package X". Ensures BLFS docs are consulted, configure flags are proper, shared-only libs, cleanup, and dependency-first approach.
 ---
 
 # BLFS Package Installation from Source
@@ -15,10 +15,10 @@ All work happens live on the VM via SSH — we never mount the disk.
 
 ### 1. Read BLFS Documentation First
 
-If the package exists in `blfs-systemd/`, read its `.md` file. Search with:
+If the package exists in `docs/blfs/`, read its `.md` file. Search with:
 
 ```
-glob blfs-systemd/**/<package-name>.md
+glob docs/blfs/**/<package-name>.md
 ```
 
 The BLFS book is the single source of truth for configure flags, dependencies,

@@ -4,8 +4,8 @@
 
 This project builds a Linux from Scratch system using the **systemd** variant.
 
-- **LFS Book**: `r13.0-131-systemd/` (version r13.0-131-systemd, June 2026)
-- **BLFS Book**: `blfs-systemd/` (version r13.0-790, June 2026)
+- **LFS Book**: `docs/lfs/` (version r13.0-131-systemd, June 2026)
+- **BLFS Book**: `docs/blfs/` (version r13.0-790, June 2026)
 - **Disk image**: `ft_linux_disk.qcow2`
 - **Disk layout**: GPT, 4 partitions: p1 BIOS boot (1M), p2 /boot (500M), p3 swap (4G), p4 / (55G)
 - **VM script**: `run_qemu.sh`
@@ -21,7 +21,7 @@ This project builds a Linux from Scratch system using the **systemd** variant.
 **Before ANY action that touches the VM (via SSH), you MUST:**
 
 1. Identify which BLFS package/chapter we are installing.
-2. Read the relevant Markdown file(s) from `blfs-systemd/` to understand
+2. Read the relevant Markdown file(s) from `docs/blfs/` to understand
    the exact commands, dependencies, and context.
 3. Only then proceed with the action.
 

@@ -6,12 +6,12 @@
 
 ---
 
-## Fase 0 — Recompilar Kernel
+## Fase 0 — Recompilar Kernel ✅
 
-- [ ] Anadir `CONFIG_DRM_VGEM=y` (obligatorio para llvmpipe/fallback)
-- [ ] Opcional: `CONFIG_SND_HDA_INTEL=y` (sonido QEMU)
-- [ ] Recompilar e instalar kernel `7.0.10-shurtado`
-- [ ] Reiniciar VM con nuevo kernel
+- [x] Anadir `CONFIG_DRM_VGEM=y` (obligatorio para llvmpipe/fallback)
+- [x] Opcional: `CONFIG_SND_HDA_INTEL=y` (sonido QEMU)
+- [x] Recompilar e instalar kernel `7.0.10-shurtado`
+- [x] Reiniciar VM con nuevo kernel
 
 ---
 
